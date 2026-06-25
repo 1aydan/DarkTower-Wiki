@@ -26,10 +26,14 @@ try {
     if (-not $origin) {
         throw "No 'origin' remote. Add it:  git remote add origin <your-github-repo-url>"
     }
+    if (-not (Test-Path "$Root/.venv/Scripts/ghp-import.exe")) {
+        throw "venv missing/broken (no ghp-import.exe). Recreate it: Remove-Item .venv -Recurse -Force; ./setup.ps1"
+    }
     Write-Host "== Publishing site/ -> $origin (branch: gh-pages) ==" -ForegroundColor Cyan
     # -n adds .nojekyll (so Doxygen/_-prefixed files aren't mangled by Jekyll),
     # -p pushes, -f forces, -m sets the commit message.
     & "$Root/.venv/Scripts/ghp-import.exe" -n -p -f -m $Message site
+    if ($LASTEXITCODE -ne 0) { throw "ghp-import push failed (exit $LASTEXITCODE)." }
 }
 finally { Pop-Location }
 

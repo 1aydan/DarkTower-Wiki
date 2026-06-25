@@ -15,7 +15,7 @@ GENERATE_HTML          = YES
 #---------------------------------------------------------------------------
 # Input — game source only. Plugins / Intermediate / Binaries are excluded.
 #---------------------------------------------------------------------------
-INPUT                  = ../Source/DarkTower ../Source/DarkTowerEditor
+INPUT                  = F:/Work/SecondShift/DarkTower/Source/DarkTower F:/Work/SecondShift/DarkTower/Source/DarkTowerEditor
 RECURSIVE              = YES
 FILE_PATTERNS          = *.h *.cpp
 EXCLUDE_PATTERNS       = */Intermediate/* *.generated.h
