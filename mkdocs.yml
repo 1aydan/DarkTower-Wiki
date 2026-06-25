@@ -1,5 +1,6 @@
 site_name: Dark Tower — Game Wiki
 site_description: Design & systems reference for the Dark Tower game
+site_url: https://1aydan.github.io/DarkTower-Wiki/
 docs_dir: docs
 site_dir: site
 use_directory_urls: true
