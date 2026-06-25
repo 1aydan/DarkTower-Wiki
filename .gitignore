@@ -1,0 +1,12 @@
+# Generated toolchain & output — never committed to the wiki git repo.
+.venv/
+doxygen-awesome-css/
+header.html
+doxygen-warnings.log
+
+# Generated content (rebuilt by build.ps1 from /Docs and /Source)
+docs/api/
+docs/design/
+
+# Built static site (published to the gh-pages branch, not main)
+site/

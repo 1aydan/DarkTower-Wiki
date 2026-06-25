@@ -1,0 +1,82 @@
+site_name: Dark Tower — Game Wiki
+site_description: Design & systems reference for the Dark Tower game
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+# Designers add a doc by dropping a .md into ../Docs and adding one line here.
+nav:
+  - Home: index.md
+  - Design:
+      - Combat Pipeline: design/CombatPipeline.md
+      - Ability Event System: design/AbilityEventSystem.md
+      - Stat System: design/StatSystem.md
+      - Loot & Combat Tuning: design/Loot_and_Combat_Tuning_Guide.md
+      - Quest System: design/QuestSystem.md
+      - Skill Tree — Tooltip Authoring: design/SkillTreeTooltipAuthoring.md
+      - Skill Tree — System Audit: design/SkillTreeSystemAudit.md
+  - Code Reference (C++): api/index.html
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+
+# The Doxygen output (thousands of static .html files under docs/api/) is
+# intentionally not part of the nav tree — silence the warnings for it.
+validation:
+  nav:
+    omitted_files: ignore
+    absolute_links: ignore
+    not_found: ignore
+  links:
+    not_found: warn

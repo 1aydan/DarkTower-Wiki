@@ -1,0 +1,3 @@
+# Dark Tower wiki — Python toolchain (installed into Wiki/.venv by setup.ps1)
+# Material for MkDocs pulls in mkdocs + pymdown-extensions automatically.
+mkdocs-material==9.*

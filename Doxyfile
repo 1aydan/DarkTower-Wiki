@@ -1,0 +1,90 @@
+# Dark Tower — Doxygen config (C++ code reference for the wiki)
+# Concise overlay: only non-default settings are listed; Doxygen fills the rest.
+# Run from the Wiki/ folder:  doxygen Doxyfile   (build.ps1 does this for you)
+
+#---------------------------------------------------------------------------
+# Project
+#---------------------------------------------------------------------------
+PROJECT_NAME           = "Dark Tower — Code Reference"
+PROJECT_BRIEF          = "C++ systems reference, generated from source comments"
+OUTPUT_DIRECTORY       = .
+HTML_OUTPUT            = docs/api
+GENERATE_LATEX         = NO
+GENERATE_HTML          = YES
+
+#---------------------------------------------------------------------------
+# Input — game source only. Plugins / Intermediate / Binaries are excluded.
+#---------------------------------------------------------------------------
+INPUT                  = ../Source/DarkTower ../Source/DarkTowerEditor
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.cpp
+EXCLUDE_PATTERNS       = */Intermediate/* *.generated.h
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = YES
+MARKDOWN_SUPPORT       = YES
+SOURCE_BROWSER         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+#---------------------------------------------------------------------------
+# Unreal Engine macro handling — without this, Doxygen mis-parses every class.
+#---------------------------------------------------------------------------
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+SKIP_FUNCTION_MACROS   = YES
+PREDEFINED             = "UCLASS(...)=" \
+                         "UPROPERTY(...)=" \
+                         "UFUNCTION(...)=" \
+                         "USTRUCT(...)=" \
+                         "UENUM(...)=" \
+                         "UMETA(...)=" \
+                         "UPARAM(...)=" \
+                         "UINTERFACE(...)=" \
+                         "GENERATED_BODY()=" \
+                         "GENERATED_UCLASS_BODY()=" \
+                         "GENERATED_USTRUCT_BODY()=" \
+                         "GENERATED_IINTERFACE_BODY()=" \
+                         "DARKTOWER_API=" \
+                         "DARKTOWEREDITOR_API=" \
+                         "FORCEINLINE=" \
+                         "PRAGMA_DISABLE_DEPRECATION_WARNINGS=" \
+                         "PRAGMA_ENABLE_DEPRECATION_WARNINGS="
+
+#---------------------------------------------------------------------------
+# Diagrams (needs Graphviz 'dot' on PATH — set HAVE_DOT=NO if not installed)
+#---------------------------------------------------------------------------
+HAVE_DOT               = NO
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = NO
+
+#---------------------------------------------------------------------------
+# Modern theme — doxygen-awesome-css (downloaded by setup.ps1).
+# Base stylesheet auto-respects the OS dark/light preference.
+#---------------------------------------------------------------------------
+GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+FULL_SIDEBAR           = NO
+HTML_COLORSTYLE        = LIGHT
+HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css \
+                         doxygen-awesome-css/doxygen-awesome-sidebar-only.css \
+                         doxygen-awesome-css/doxygen-awesome-sidebar-only-darkmode-toggle.css
+# header.html is generated+patched by ensure-doxygen-header.ps1 to add the
+# dark/light toggle, code copy button, and paragraph links.
+HTML_HEADER            = header.html
+HTML_EXTRA_FILES       = doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js \
+                         doxygen-awesome-css/doxygen-awesome-fragment-copy-button.js \
+                         doxygen-awesome-css/doxygen-awesome-paragraph-link.js
+
+#---------------------------------------------------------------------------
+# Noise control
+#---------------------------------------------------------------------------
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = NO
+# Route warnings to a file instead of the console. Most are the harmless UE
+# pattern: BlueprintNativeEvent '_Implementation' bodies in .cpp whose
+# declarations come from stripped UFUNCTION/GENERATED_BODY macros.
+WARN_LOGFILE           = doxygen-warnings.log
