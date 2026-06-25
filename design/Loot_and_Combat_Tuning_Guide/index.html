@@ -1,0 +1,1568 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Design & systems reference for the Dark Tower game">
+      
+      
+      
+        <link rel="canonical" href="https://1aydan.github.io/DarkTower-Wiki/design/Loot_and_Combat_Tuning_Guide/">
+      
+      
+        <link rel="prev" href="../StatSystem/">
+      
+      
+        <link rel="next" href="../QuestSystem/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Loot & Combat Tuning - Dark Tower — Game Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dark-tower-loot-combat-tuning-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Dark Tower — Game Wiki" class="md-header__button md-logo" aria-label="Dark Tower — Game Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dark Tower — Game Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Loot & Combat Tuning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../CombatPipeline/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Design
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Code Reference (C++)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Dark Tower — Game Wiki" class="md-nav__button md-logo" aria-label="Dark Tower — Game Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Dark Tower — Game Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CombatPipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combat Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AbilityEventSystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ability Event System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StatSystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stat System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loot & Combat Tuning
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loot & Combat Tuning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-master-dial-floor-itempower" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The master dial: Floor → ItemPower
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-base-stats-weapon-damage-armor-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Base Stats (weapon damage, armor, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-rarity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Rarity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Rarity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3a-rarity-drop-odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3a. Rarity drop odds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3b-rarity-stat-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3b. Rarity stat multiplier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3c-other-per-rarity-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3c. Other per-rarity fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-loot-quantity-bonus-drops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Loot Quantity (bonus drops)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-affixes-passives-tier-1n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Affixes / Passives (Tier 1–N)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-item-level-required-level-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Item Level, Required Level, Value
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-balance-levers-what-to-tune-what-to-leave-alone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Balance Levers — what to tune, what to leave alone
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Balance Levers — what to tune, what to leave alone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tune-freely-per-content-per-item-knobs-low-blast-radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 Tune freely (per-content / per-item knobs — low blast radius)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tune-carefully-global-curve-shape-affects-the-whole-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 Tune carefully (global curve shape — affects the whole game)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-unless-you-mean-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔴 Avoid unless you mean it
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#watch-outs-not-yet-finished" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Watch-outs / not-yet-finished
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-quick-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Quick recipes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QuestSystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quest System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SkillTreeTooltipAuthoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skill Tree — Tooltip Authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SkillTreeSystemAudit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skill Tree — System Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Reference (C++)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-master-dial-floor-itempower" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The master dial: Floor → ItemPower
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-base-stats-weapon-damage-armor-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Base Stats (weapon damage, armor, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-rarity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Rarity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Rarity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3a-rarity-drop-odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3a. Rarity drop odds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3b-rarity-stat-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3b. Rarity stat multiplier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3c-other-per-rarity-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3c. Other per-rarity fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-loot-quantity-bonus-drops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Loot Quantity (bonus drops)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-affixes-passives-tier-1n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Affixes / Passives (Tier 1–N)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-item-level-required-level-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Item Level, Required Level, Value
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-balance-levers-what-to-tune-what-to-leave-alone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Balance Levers — what to tune, what to leave alone
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Balance Levers — what to tune, what to leave alone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tune-freely-per-content-per-item-knobs-low-blast-radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 Tune freely (per-content / per-item knobs — low blast radius)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tune-carefully-global-curve-shape-affects-the-whole-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 Tune carefully (global curve shape — affects the whole game)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-unless-you-mean-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔴 Avoid unless you mean it
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#watch-outs-not-yet-finished" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Watch-outs / not-yet-finished
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-quick-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Quick recipes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dark-tower-loot-combat-tuning-guide">Dark Tower — Loot &amp; Combat Tuning Guide<a class="headerlink" href="#dark-tower-loot-combat-tuning-guide" title="Permanent link">&para;</a></h1>
+<p>A designer's guide to how loot scaling, rarity, affixes, item level —
+what every knob does, and which ones are safe to tune vs. which reshape the whole game.</p>
+<blockquote>
+<p><strong>Where the knobs live</strong>
+- <strong><code>DA_GlobalLootData</code></strong> (<code>Content/DarkTower/Inventory/_Shared/Data/</code>) — all loot scaling, rarity, affix-tier, and item-level values, plus the per-rarity table.
+- <strong>Base Stat Tables</strong> (per equipment type, referenced by <code>DA_GlobalLootData</code>) — each stat's Min/Max range.
+- <strong>Affix Definitions</strong> (<code>UDTAffixDefinition</code> assets) — each affix's Min/Max, weight, slot, level requirement.</p>
+</blockquote>
+<hr />
+<h2 id="1-the-master-dial-floor-itempower">1. The master dial: Floor → ItemPower<a class="headerlink" href="#1-the-master-dial-floor-itempower" title="Permanent link">&para;</a></h2>
+<p>Almost everything scales off the dungeon <strong>Floor</strong>. Floor is first run through a soft cap so power
+doesn't grow forever, producing <strong>EffectiveFloor</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>EffectiveFloor = Floor                                         (if Floor ≤ GlobalFloorSoftCap)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>               = SoftCap + (Floor − SoftCap) ^ GlobalFloorDR    (beyond the soft cap)
+</code></pre></div>
+<p>EffectiveFloor then drives <strong>ItemPower</strong> — a 0→1 "how strong should gear be here" value:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ItemPower = MinItemPower + (1 − MinItemPower) × (1 − EXP(−EffectiveFloor / GlobalItemPowerScalingRate))
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GlobalFloorSoftCap</code></td>
+<td>200</td>
+<td>Floor where power growth starts slowing. Below it, power scales straight with floor.</td>
+</tr>
+<tr>
+<td><code>GlobalFloorDR</code></td>
+<td>0.6</td>
+<td>How hard power is compressed past the soft cap. Lower = harder squeeze.</td>
+</tr>
+<tr>
+<td><code>GlobalItemPowerScalingRate</code></td>
+<td>150</td>
+<td>How fast ItemPower climbs. Smaller = faster early power; larger = slower, longer climb.</td>
+</tr>
+<tr>
+<td><code>MinItemPower</code></td>
+<td>0.02</td>
+<td>Power floor at Floor 1 (so floor-1 gear isn't literally zero).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Feel:</strong> ItemPower ≈ 0.03 at floor 1, ~0.5 at floor 100, ~0.74 at floor 200, and then <strong>plateaus around ~0.82</strong> even at floor 1000+.</p>
+<blockquote>
+<p>⚠️ <strong>Important consequence:</strong> because ItemPower tops out near ~0.82, a normal item's base stats and
+affixes only ever reach ~82% of their table Max. <strong>Author your stat/affix <code>Max</code> values as the
+"ultimate ceiling" the curve approaches, not the number you expect at end-game.</strong> (Rarity can push
+base stats past Max — see §3.)</p>
+</blockquote>
+<hr />
+<h2 id="2-base-stats-weapon-damage-armor-etc">2. Base Stats (weapon damage, armor, etc.)<a class="headerlink" href="#2-base-stats-weapon-damage-armor-etc" title="Permanent link">&para;</a></h2>
+<p>Each base stat rolls inside a window that grows with ItemPower. <code>MinStatScale</code> sets how <em>wide</em> that
+window is — i.e. how much two same-floor items vary.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Ceiling   = StatMin + (StatMax − StatMin) × ItemPower
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Floor     = StatMin + (StatMax − StatMin) × ItemPower × MinStatScale
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>RollFactor= random(0..1) ^ GlobalRollScalar
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Value     = Floor + RollFactor × (Ceiling − Floor)
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Value    ×= Rarity Stat Multiplier        (see §3)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Where</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stat <code>Min</code> / <code>Max</code></td>
+<td>Base Stat Tables</td>
+<td>per stat</td>
+<td>The stat's range. <code>Max</code> = the asymptotic ceiling (see §1 warning).</td>
+</tr>
+<tr>
+<td><code>MinStatScale</code></td>
+<td>DA_GlobalLootData</td>
+<td>0.70</td>
+<td><strong>Variance control.</strong> Higher = same-floor items roll closer together. 0.7 ≈ a ~1.4× spread at depth; 0.5 ≈ ~1.9×; 0.03 ≈ ~10× (wild).</td>
+</tr>
+<tr>
+<td><code>GlobalRollScalar</code></td>
+<td>DA_GlobalLootData</td>
+<td>1.0</td>
+<td>Distribution shape inside the window. 1.0 = even. &gt;1 biases low, &lt;1 biases high.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>
+- At low floors every item is near <code>Min</code> regardless of <code>MinStatScale</code> (ItemPower is tiny) — early gear is meant to feel uniform; the excitement early comes from rarity &amp; affixes.
+- A stat row with <code>Min ≥ Max</code> is treated as a config error: it logs a warning and rolls the Min.</p>
+<hr />
+<h2 id="3-rarity">3. Rarity<a class="headerlink" href="#3-rarity" title="Permanent link">&para;</a></h2>
+<p>Rarity is rolled per item from floor/budget-weighted odds, and affects three things: <strong>base-stat
+strength</strong>, <strong>affix count</strong>, and <strong>item value / item-level bonus</strong>. Each rarity tier is a row in
+<code>DA_GlobalLootData → LootRarityDataMap</code>.</p>
+<h3 id="3a-rarity-drop-odds">3a. Rarity drop odds<a class="headerlink" href="#3a-rarity-drop-odds" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Weight(rarity) = GlobalBaseRate × (1 + FinalLootBudget × GlobalWeightScalar)
+</code></pre></div>
+Common's <code>GlobalWeightScalar</code> is <strong>0</strong>, so it stays a flat weight while the others grow with depth/bonus — making Common <em>relatively</em> rarer the deeper you go.</p>
+<p><strong>Recommended starting values</strong> (set these on each rarity row):</p>
+<table>
+<thead>
+<tr>
+<th>Rarity</th>
+<th>GlobalBaseRate</th>
+<th>GlobalWeightScalar</th>
+<th>StatMultiplier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Common</td>
+<td>1000</td>
+<td>0</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Uncommon</td>
+<td>250</td>
+<td>5</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>Rare</td>
+<td>60</td>
+<td>3.5</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>Epic</td>
+<td>12</td>
+<td>4</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>Legendary</td>
+<td>2</td>
+<td>1.75</td>
+<td>1.4</td>
+</tr>
+<tr>
+<td>Artifact (Unique)</td>
+<td>0.25</td>
+<td>1</td>
+<td>1.4</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>If these are left at defaults (all base rate 1, scalar 0), every rarity is equally likely</strong> —
+you'll get ~17% Legendaries. The game logs a warning at startup if it detects this. Always populate them.</p>
+</blockquote>
+<h3 id="3b-rarity-stat-multiplier">3b. Rarity stat multiplier<a class="headerlink" href="#3b-rarity-stat-multiplier" title="Permanent link">&para;</a></h3>
+<p><code>StatMultiplier</code> multiplies the rolled base-stat value (§2). It <strong>can push a stat above its table Max</strong>
+(e.g. a Legendary's strength genuinely exceeds a Common's ceiling). Keep these gentle (1.0–1.5ish) — it
+compounds with everything else.</p>
+<h3 id="3c-other-per-rarity-fields">3c. Other per-rarity fields<a class="headerlink" href="#3c-other-per-rarity-fields" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>AffixConfig</strong> (Min/Max Prefixes &amp; Suffixes) — how <em>many</em> affixes each rarity rolls. This is rarity's
+  biggest power lever; bigger gaps here = rarity matters more.</li>
+<li><strong>ItemLevelBonus</strong> — flat item-level added (see §6).</li>
+<li><strong>ValueMultiplier</strong> — vendor value multiplier (see §6).</li>
+</ul>
+<hr />
+<h2 id="4-loot-quantity-bonus-drops">4. Loot Quantity (bonus drops)<a class="headerlink" href="#4-loot-quantity-bonus-drops" title="Permanent link">&para;</a></h2>
+<p>Higher floors / bonuses drop <em>more</em> items via "Loot Budget". This only applies to <strong>loot-table drops</strong>
+(not scripted/guaranteed item drops).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>LootBudget       = MinLoot + (1 − MinLoot) × (1 − EXP(−EffectiveFloor / LootBudgetScalingRate))
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>FinalLootBudget  = LootBudget × (1 + LootBonus)
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>ExtraLootRolls   = EffectiveFloor × FinalLootBudget × GlobalQuantityFactor   (capped at MaxExtraLootRolls)
+</code></pre></div>
+<p>The fractional part of <code>ExtraLootRolls</code> is a <strong>chance</strong>: 0.5 → 50% of a bonus drop; 1.5 → 1 guaranteed + 50% chance of a 2nd.</p>
+<table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GlobalQuantityFactor</code></td>
+<td>0.02</td>
+<td><strong>Main quantity dial.</strong> How many extra rolls each floor of budget grants. Raise for more drops.</td>
+</tr>
+<tr>
+<td><code>MinLoot</code></td>
+<td>0.02</td>
+<td>Budget floor at floor 1.</td>
+</tr>
+<tr>
+<td><code>LootBudgetScalingRate</code></td>
+<td>250</td>
+<td>How fast budget climbs with depth. Smaller = faster.</td>
+</tr>
+<tr>
+<td><code>MaxExtraLootRolls</code></td>
+<td>20</td>
+<td>Hard safety cap on bonus drops.</td>
+</tr>
+<tr>
+<td><code>LootBonus</code> (per enemy/chest tier)</td>
+<td>varies</td>
+<td>Map/enemy/chest bonus that boosts both quantity <em>and</em> rarity. Set in the Enemy/Chest Tier maps.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Feel at 0.02:</strong> ~20% bonus at floor 50, ~70% at floor 100, ~1 guaranteed at floor 150. Raise the factor if drops feel sparse.</p>
+<hr />
+<h2 id="5-affixes-passives-tier-1n">5. Affixes / Passives (Tier 1–N)<a class="headerlink" href="#5-affixes-passives-tier-1n" title="Permanent link">&para;</a></h2>
+<p>Each affix rolls a <strong>Tier</strong> (luck) whose magnitude is then <strong>scaled by floor</strong> (power). High tiers are
+always rare; the floor shifts the odds upward but never makes the top common. The magnitude maps onto the
+affix's own Min/Max (Tier 1 ≈ Min, top Tier ≈ Max — minus the ItemPower ceiling from §1).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>FloorPressure = clamp(EffectiveFloor / AffixTierFloorScale, 0, MaxFloorPressure)
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Decay         = BaseTierDecay × (1 − FloorPressure)
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>weight(tier)  = EXP(−(tier − 1) × Decay)        ← higher tiers always rarer
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>TierFraction  = (rolledTier − 1) / (TierCount − 1)
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Alpha         = ItemPower × TierFraction        ← floor scales the magnitude DOWN early
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>AffixValue    = Lerp(AffixMin, AffixMax, Alpha)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Where</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AffixTierCount</code></td>
+<td>DA_GlobalLootData</td>
+<td>10</td>
+<td>Number of tiers (the "/10" players see).</td>
+</tr>
+<tr>
+<td><code>BaseTierDecay</code></td>
+<td>DA_GlobalLootData</td>
+<td>0.9</td>
+<td>How rare high tiers are early. Higher = rarer top-tier rolls (bigger jackpots).</td>
+</tr>
+<tr>
+<td><code>AffixTierFloorScale</code></td>
+<td>DA_GlobalLootData</td>
+<td>300</td>
+<td>Over how many floors the odds shift toward high tiers.</td>
+</tr>
+<tr>
+<td><code>MaxFloorPressure</code></td>
+<td>DA_GlobalLootData</td>
+<td>0.8</td>
+<td>Cap on how flat the curve gets — keeps top tiers rare even deep.</td>
+</tr>
+<tr>
+<td>Affix <code>Min</code> / <code>Max</code></td>
+<td>Affix Definition</td>
+<td>per affix</td>
+<td>The affix's value range across tiers 1→N.</td>
+</tr>
+<tr>
+<td>Affix <code>Weight</code></td>
+<td>Affix Definition</td>
+<td>1</td>
+<td>How likely this affix is picked vs other affixes of its slot.</td>
+</tr>
+<tr>
+<td><code>RequiredItemLevel</code></td>
+<td>Affix Definition</td>
+<td>0</td>
+<td>Minimum item level before this affix can roll (good for gating powerful affixes to depth).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Design intent:</strong> a low-floor item can still <em>occasionally</em> roll a high tier ("Tier 10!" wow), but its
+<strong>number</strong> is floor-scaled, so it's the best item <em>for that floor</em> — not an end-game one-shot. Deeper
+floors shift the odds up <em>and</em> scale the numbers up.</p>
+<blockquote>
+<p>Note: an affix using a <strong>Scalable Float</strong> value (curve) scales off item level instead of the tier roll,
+so it ignores the tier system. Use Min/Max ranges for affixes you want tiered.</p>
+</blockquote>
+<hr />
+<h2 id="6-item-level-required-level-value">6. Item Level, Required Level, Value<a class="headerlink" href="#6-item-level-required-level-value" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>BaseItemLevel  = BaseItemLevel + EffectiveFloor × ItemLevelPerFloor + Rarity.ItemLevelBonus
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>FinalItemLevel = BaseItemLevel + (sum of rolled stat values) × StatContributionToItemLevel
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>RequiredLevel  = clamp( FinalItemLevel × ItemLevelToRequirementRatio, MinLevelRequirement, MaxCharacterLevel )
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>ItemValue      = FinalItemLevel × BaseValuePerItemLevel × Rarity.ValueMultiplier
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BaseItemLevel</code></td>
+<td>1</td>
+<td>Item level at floor 0.</td>
+</tr>
+<tr>
+<td><code>ItemLevelPerFloor</code></td>
+<td>3</td>
+<td>Item level gained per floor.</td>
+</tr>
+<tr>
+<td><code>StatContributionToItemLevel</code></td>
+<td>0.1</td>
+<td>How much rolled stats add to item level (see caveat).</td>
+</tr>
+<tr>
+<td><code>ItemLevelToRequirementRatio</code></td>
+<td>0.15</td>
+<td>Item level → required character level.</td>
+</tr>
+<tr>
+<td><code>MaxCharacterLevel</code></td>
+<td>60</td>
+<td>Caps required level.</td>
+</tr>
+<tr>
+<td><code>BaseValuePerItemLevel</code></td>
+<td>5</td>
+<td>Vendor value per item level.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Known caveats (talk to engineering before relying on these):</strong>
+- <strong>Item level currently changes with the roll</strong> (the stat-contribution term). Two same-floor items can
+  have different item levels based on how well they rolled. If you want item level to be a stable
+  "where it dropped" number, ask to drop the stat contribution.
+- <strong><code>RequiredLevel</code> is not yet enforced on equip</strong>, and <strong><code>ItemValue</code> has no shop consumer yet</strong> — they're
+  computed but currently cosmetic until those systems are wired.</p>
+</blockquote>
+<h2 id="7-balance-levers-what-to-tune-what-to-leave-alone">7. Balance Levers — what to tune, what to leave alone<a class="headerlink" href="#7-balance-levers-what-to-tune-what-to-leave-alone" title="Permanent link">&para;</a></h2>
+<h3 id="tune-freely-per-content-per-item-knobs-low-blast-radius">🟢 Tune freely (per-content / per-item knobs — low blast radius)<a class="headerlink" href="#tune-freely-per-content-per-item-knobs-low-blast-radius" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Base Stat <code>Min</code>/<code>Max</code></strong> per stat — the most direct power dial.</li>
+<li><strong>Affix <code>Min</code>/<code>Max</code>, <code>Weight</code>, <code>RequiredItemLevel</code></strong> — per-affix tuning and gating.</li>
+<li><strong>Per-rarity</strong> <code>GlobalBaseRate</code>, <code>GlobalWeightScalar</code>, <code>StatMultiplier</code>, <code>AffixConfig</code>, <code>ValueMultiplier</code>, <code>ItemLevelBonus</code>.</li>
+<li><strong><code>GlobalQuantityFactor</code></strong>, <strong><code>LootBonus</code></strong> (enemy/chest tiers) — drop quantity &amp; rarity boosts.</li>
+<li><strong><code>MinStatScale</code></strong> — base-stat variance (tightness). Great feel knob.</li>
+<li><strong><code>BaseTierDecay</code></strong>, <strong><code>AffixTierFloorScale</code></strong> — affix-tier rarity &amp; depth shift.</li>
+</ul>
+<h3 id="tune-carefully-global-curve-shape-affects-the-whole-game">🟡 Tune carefully (global curve shape — affects the whole game)<a class="headerlink" href="#tune-carefully-global-curve-shape-affects-the-whole-game" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>GlobalItemPowerScalingRate</code></strong>, <strong><code>GlobalFloorSoftCap</code></strong>, <strong><code>GlobalFloorDR</code></strong> — these reshape <em>every</em>
+  item's power curve at once. Move in small steps and re-test across floors 1 / 100 / 200 / 1000.</li>
+<li><strong><code>LootBudgetScalingRate</code></strong> — global drop-quantity ramp.</li>
+<li><strong><code>ItemLevelPerFloor</code></strong>, <strong><code>StatContributionToItemLevel</code></strong>, <strong><code>ItemLevelToRequirementRatio</code></strong> — change item
+  level / required level scaling globally (and see §6 caveats).</li>
+</ul>
+<h3 id="avoid-unless-you-mean-it">🔴 Avoid unless you mean it<a class="headerlink" href="#avoid-unless-you-mean-it" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>MaxFloorPressure</code></strong> near 1.0 — flattens the affix tier curve so <strong>top tiers become common</strong>. Keep ≤ ~0.85.</li>
+<li><strong><code>MinItemPower</code></strong> much above ~0.05 — makes floor-1 gear strong and squashes the whole early curve.</li>
+<li><strong><code>GlobalRollScalar</code></strong> far from 1.0 — heavily skews every base-stat roll; subtle and easy to misjudge.</li>
+<li><strong>Per-rarity <code>StatMultiplier</code></strong> much above ~1.5 — compounds with floor + tiers and can break scaling.</li>
+</ul>
+<h3 id="watch-outs-not-yet-finished">Watch-outs / not-yet-finished<a class="headerlink" href="#watch-outs-not-yet-finished" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Populate the rarity table</strong> (§3) — defaults give a broken uniform distribution.</li>
+<li><strong>ItemPower plateaus ~0.82</strong> — set stat/affix <code>Max</code> as the asymptote, not the literal end-game value (§1).</li>
+<li><strong>Item level is roll-dependent</strong>, and <strong>RequiredLevel / ItemValue aren't consumed yet</strong> (§6).</li>
+</ul>
+<hr />
+<h2 id="8-quick-recipes">8. Quick recipes<a class="headerlink" href="#8-quick-recipes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>I want…</th>
+<th>Do this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Higher floors to drop more items</td>
+<td>Raise <code>GlobalQuantityFactor</code>.</td>
+</tr>
+<tr>
+<td>Legendaries to feel rarer at depth</td>
+<td>Lower the rarer tiers' <code>GlobalWeightScalar</code> (or raise Common's <code>GlobalBaseRate</code>).</td>
+</tr>
+<tr>
+<td>Same-floor weapons to vary less</td>
+<td>Raise <code>MinStatScale</code> (toward 0.8).</td>
+</tr>
+<tr>
+<td>Bigger affix "jackpots" early</td>
+<td>Raise <code>BaseTierDecay</code> (rarer high tiers) — they hit less often but feel special.</td>
+</tr>
+<tr>
+<td>High-tier affixes more common deep</td>
+<td>Lower <code>AffixTierFloorScale</code> or raise <code>MaxFloorPressure</code> (carefully).</td>
+</tr>
+<tr>
+<td>Rarity to matter more</td>
+<td>Widen <code>AffixConfig</code> affix counts between tiers and/or raise <code>StatMultiplier</code> slightly.</td>
+</tr>
+<tr>
+<td>Faster overall power growth</td>
+<td>Lower <code>GlobalItemPowerScalingRate</code> (🟡 global).</td>
+</tr>
+<tr>
+<td>Powerful affixes gated to deep floors</td>
+<td>Set the affix's <code>RequiredItemLevel</code>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Maintained alongside the loot/combat systems in <code>UDTLootSubsystem</code>, <code>UDTGlobalLootData</code>,
+<code>UDTCombatSubsystem</code>, and <code>UDTCombatGlobalData</code>. If a number here disagrees with the data asset, the data
+asset wins — update this doc.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

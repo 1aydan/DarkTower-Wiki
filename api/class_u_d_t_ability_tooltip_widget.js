@@ -1,0 +1,25 @@
+var class_u_d_t_ability_tooltip_widget =
+[
+    [ "GetAbilityDefinition", "class_u_d_t_ability_tooltip_widget.html#ae931b93348769cc028067f750a4e3b80", null ],
+    [ "GetSourceAbility", "class_u_d_t_ability_tooltip_widget.html#a3fc2b9055748d713037d6ca43915b5f3", null ],
+    [ "GetTooltipAbilityTag", "class_u_d_t_ability_tooltip_widget.html#ae07752f0ff2257faec91ea7b2b4816ac", null ],
+    [ "GetTooltipDescription", "class_u_d_t_ability_tooltip_widget.html#a2c23e48c0629ebc63ad6835a81d4053e", null ],
+    [ "GetTooltipIcon", "class_u_d_t_ability_tooltip_widget.html#a5bb30f4e5410c1c91b8d22dd8af98380", null ],
+    [ "GetTooltipTitle", "class_u_d_t_ability_tooltip_widget.html#a4262c8d634be76f3cc385d597b142c94", null ],
+    [ "OnTooltipDataUpdated", "class_u_d_t_ability_tooltip_widget.html#a7aa3e9fceb71fe7e77c146b3b053c2c3", null ],
+    [ "RefreshTooltip", "class_u_d_t_ability_tooltip_widget.html#aa5898bd61174dd27e786101284a4f9a4", null ],
+    [ "SetAbility", "class_u_d_t_ability_tooltip_widget.html#a12d7724d539d55fda9ce5548a93e61e0", null ],
+    [ "SetAbilityClass", "class_u_d_t_ability_tooltip_widget.html#add0f95fde3389acc19456d927a58de4d", null ],
+    [ "SetAbilityClassComparison", "class_u_d_t_ability_tooltip_widget.html#acb8414a335ac9421bf9354fab0cf27d3", null ],
+    [ "SetAbilityComparison", "class_u_d_t_ability_tooltip_widget.html#ab549c1eec4fc58f9a38dcf8e283fd037", null ],
+    [ "SetAbilityDefinition", "class_u_d_t_ability_tooltip_widget.html#a4bd2dc25d0b0892c29406a8ddbd1610a", null ],
+    [ "AbilityDefinition", "class_u_d_t_ability_tooltip_widget.html#ae027eb8b3181f8c2ac02c54a2b57bf4d", null ],
+    [ "bShowUpgradePreview", "class_u_d_t_ability_tooltip_widget.html#a528d8ecbeccaa9fb443c90a3e8cd9d10", null ],
+    [ "CurrentUpgradeLevel", "class_u_d_t_ability_tooltip_widget.html#adcead35f48415906225ed78d313ec5c8", null ],
+    [ "EvaluationLevel", "class_u_d_t_ability_tooltip_widget.html#aa14c9a0ad73f812594b1f67c5691032c", null ],
+    [ "Img_Icon", "class_u_d_t_ability_tooltip_widget.html#a83c7788173179a3f08fdb732d73bc6e8", null ],
+    [ "NextUpgradeLevel", "class_u_d_t_ability_tooltip_widget.html#a210074ece738b829c78901207c08f9f3", null ],
+    [ "RTXT_Description", "class_u_d_t_ability_tooltip_widget.html#a964b5beda00b9e13c3a7c225f3aad37e", null ],
+    [ "SourceAbility", "class_u_d_t_ability_tooltip_widget.html#ab159503ea8d337e818c9fbef56cd343d", null ],
+    [ "TXT_AbilityName", "class_u_d_t_ability_tooltip_widget.html#a387ea151d97884989fa5140c06baa7e9", null ]
+];

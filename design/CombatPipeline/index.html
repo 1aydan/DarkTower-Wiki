@@ -1,0 +1,1723 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Design & systems reference for the Dark Tower game">
+      
+      
+      
+        <link rel="canonical" href="https://1aydan.github.io/DarkTower-Wiki/design/CombatPipeline/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../AbilityEventSystem/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Combat Pipeline - Dark Tower — Game Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#combat-pipeline" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Dark Tower — Game Wiki" class="md-header__button md-logo" aria-label="Dark Tower — Game Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dark Tower — Game Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Combat Pipeline
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Design
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Code Reference (C++)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Dark Tower — Game Wiki" class="md-nav__button md-logo" aria-label="Dark Tower — Game Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Dark Tower — Game Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combat Pipeline
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combat Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fdtdamagecontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FDTDamageContext
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fdtdamageresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FDTDamageResult
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damage-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage Events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authoring-declarative-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authoring Declarative Modifiers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authoring Declarative Modifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When To Apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How To Change Damage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-modifiers-in-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering Modifiers In C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blueprint-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blueprint Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blueprint Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blueprint-damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blueprint Damage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blueprint-modifier-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blueprint Modifier Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#item-affixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Item Affixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dagger-damage-bonus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dagger Damage Bonus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backstab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backstab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fire-penetration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fire Penetration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ability-specific-bonus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ability-Specific Bonus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-crit-and-mitigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-In Crit And Mitigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-new-damage-callers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing New Damage Callers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfalls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AbilityEventSystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ability Event System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StatSystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stat System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Loot_and_Combat_Tuning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loot & Combat Tuning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QuestSystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quest System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SkillTreeTooltipAuthoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skill Tree — Tooltip Authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SkillTreeSystemAudit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skill Tree — System Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Reference (C++)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fdtdamagecontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FDTDamageContext
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fdtdamageresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FDTDamageResult
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damage-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage Events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authoring-declarative-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authoring Declarative Modifiers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authoring Declarative Modifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When To Apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How To Change Damage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-modifiers-in-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering Modifiers In C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blueprint-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blueprint Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blueprint Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blueprint-damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blueprint Damage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blueprint-modifier-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blueprint Modifier Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#item-affixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Item Affixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dagger-damage-bonus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dagger Damage Bonus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backstab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backstab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fire-penetration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fire Penetration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ability-specific-bonus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ability-Specific Bonus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-crit-and-mitigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-In Crit And Mitigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-new-damage-callers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing New Damage Callers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfalls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="combat-pipeline">Combat Pipeline<a class="headerlink" href="#combat-pipeline" title="Permanent link">&para;</a></h1>
+<p>DarkTower damage is resolved through a centralized, server-authoritative combat pipeline. Abilities and projectiles submit explicit damage contexts; the combat subsystem gathers modifiers, resolves final damage, emits ability events, and then applies the existing GAS damage Gameplay Effect.</p>
+<p>Use this system for new hit damage, conditional damage scaling, item affix damage bonuses, passive damage modifiers, support-style modifiers, and custom mechanics such as backstab or execute effects.</p>
+<hr />
+<h2 id="core-flow">Core Flow<a class="headerlink" href="#core-flow" title="Permanent link">&para;</a></h2>
+<p>Runtime damage flow:</p>
+<ol>
+<li>Caller builds an <code>FDTDamageContext</code>.</li>
+<li><code>UDTCombatSubsystem::CalculateDamage(...)</code> snapshots tags, gathers modifiers, applies crit/mitigation/final math, and produces an <code>FDTDamageResult</code>.</li>
+<li><code>Event.Damage.PreResolve</code> is emitted before modifier resolution.</li>
+<li><code>Event.Damage.Resolved</code> is emitted after final damage is known, before health changes.</li>
+<li><code>UDTCombatSubsystem::ApplyDamage(...)</code> writes final damage into <code>SetByCaller.Data.Attribute.Damage</code>.</li>
+<li>Existing <code>GE_Damage_Base</code> / <code>UDamageExecutionCalculation</code> / <code>UDTAttributeSet::HandleDamageAttribute(...)</code> pass the resolved damage into the <code>Damage</code> meta attribute, apply health, and emit the existing post-damage events.</li>
+</ol>
+<p>For common Blueprint damage, call:</p>
+<ul>
+<li><code>Deal Damage To Target</code></li>
+</ul>
+<p>For richer Blueprint damage, use Unreal's built-in <code>Make FDTDamageContext</code> struct node and pass it to:</p>
+<ul>
+<li><code>Deal Damage With Context</code></li>
+</ul>
+<hr />
+<h2 id="key-types">Key Types<a class="headerlink" href="#key-types" title="Permanent link">&para;</a></h2>
+<h3 id="fdtdamagecontext"><code>FDTDamageContext</code><a class="headerlink" href="#fdtdamagecontext" title="Permanent link">&para;</a></h3>
+<p>The request object. It contains:</p>
+<ul>
+<li><code>SourceActor</code></li>
+<li><code>TargetActor</code></li>
+<li><code>EffectCauser</code></li>
+<li><code>SourceObject</code></li>
+<li><code>BaseDamage</code></li>
+<li><code>DamageType</code></li>
+<li><code>ContextTags</code></li>
+<li><code>AbilityTags</code></li>
+<li><code>WeaponTags</code></li>
+<li><code>HitResult</code></li>
+<li><code>bSkipBuiltInMitigation</code></li>
+</ul>
+<p>Most callers only need source, target, base damage, damage type, causer, hit result, and context tags. Source and target tag queries are evaluated from the source and target actors' current Ability System Component tags during resolution, not from caller-supplied context fields.</p>
+<h3 id="fdtdamageresult"><code>FDTDamageResult</code><a class="headerlink" href="#fdtdamageresult" title="Permanent link">&para;</a></h3>
+<p>The resolved output. It contains:</p>
+<ul>
+<li><code>BaseDamage</code></li>
+<li><code>PreMitigationDamage</code></li>
+<li><code>MitigatedDamage</code></li>
+<li><code>FinalDamage</code></li>
+<li><code>ResultTags</code></li>
+<li><code>AppliedModifiers</code></li>
+<li><code>ProcRecords</code></li>
+<li>cancellation state</li>
+</ul>
+<p><code>ResultTags</code> are appended back into <code>FDTGameplayEffectContext</code>. The tag that marks subsystem-resolved damage is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DTGameplayTags</span><span class="o">::</span><span class="n">TAG_EFFECT_RESULT_COMBAT_RESOLVED</span>
+</code></pre></div>
+<p><code>UDamageExecutionCalculation</code> is now a pass-through for <code>SetByCaller.Data.Attribute.Damage</code>; crit, mitigation, and combat modifiers are expected to have already run in <code>UDTCombatSubsystem</code>.</p>
+<p>Global combat tuning values live in <code>UDTCombatGlobalData</code>, referenced from <code>UDTGlobalData::CombatGlobalData</code>.</p>
+<hr />
+<h2 id="damage-events">Damage Events<a class="headerlink" href="#damage-events" title="Permanent link">&para;</a></h2>
+<p>The combat pipeline works with the existing ability event system.</p>
+<p>New lifecycle events:</p>
+<ul>
+<li><code>Event.Damage.PreResolve</code></li>
+<li><code>Event.Damage.Resolved</code></li>
+</ul>
+<p>Existing post-health events still fire:</p>
+<ul>
+<li><code>Event.Damage.Taken</code></li>
+<li><code>Event.Damage.Taken.Fatal</code></li>
+<li><code>Event.Damage.Dealt</code></li>
+<li><code>Event.Damage.Dealt.Kill</code></li>
+<li><code>Event.Death</code></li>
+</ul>
+<p>Use <code>PreResolve</code> and <code>Resolved</code> for combat-pipeline observers and debugging. Use the existing dealt/taken/kill events for passives that react after health has changed.</p>
+<hr />
+<h2 id="authoring-declarative-modifiers">Authoring Declarative Modifiers<a class="headerlink" href="#authoring-declarative-modifiers" title="Permanent link">&para;</a></h2>
+<p>Create a <code>UDTCombatModifierDefinition</code> for designer-authored modifiers.</p>
+<p>Important fields:</p>
+<ul>
+<li><code>SourceTag</code>: identifies where the modifier came from.</li>
+<li><code>DescriptionTag</code>: optional UI/debug identifier.</li>
+<li><code>When To Apply</code>: which step of damage calculation the modifier runs in.</li>
+<li><code>How To Change Damage</code>: how it changes the current damage value.</li>
+<li><code>Magnitude</code>: scalable value.</li>
+<li><code>Priority</code>: higher priority sorts first within a phase.</li>
+<li><code>bAffectsOutgoingDamage</code>: source-side modifier.</li>
+<li><code>bAffectsIncomingDamage</code>: target-side modifier.</li>
+<li><code>ContextTagQuery</code>, <code>SourceTagQuery</code>, <code>TargetTagQuery</code>, <code>AbilityTagQuery</code>, <code>WeaponTagQuery</code>: declarative gates.</li>
+<li><code>CustomLogic</code>: optional code hook for mechanics that cannot be expressed as tag queries.</li>
+<li><code>AffixMagnitudeModifierID</code>: optional link to a rolled affix value.</li>
+</ul>
+<h3 id="when-to-apply">When To Apply<a class="headerlink" href="#when-to-apply" title="Permanent link">&para;</a></h3>
+<p>Modifier phases resolve in this order:</p>
+<ol>
+<li><code>Start Of Damage</code> (<code>Base</code>): changes the starting damage amount.</li>
+<li><code>Attacker Bonuses</code> (<code>Outgoing</code>): source-side bonuses before crit and defenses.</li>
+<li><code>Critical Hit</code> (<code>Crit</code>): critical-hit calculation and crit-specific changes.</li>
+<li><code>Target Reactions</code> (<code>Incoming</code>): target-owned reactions before armor and resistance.</li>
+<li><code>Armor And Resistance</code> (<code>Mitigation</code>): armor, resistance, penetration, and damage reduction.</li>
+<li><code>Final Damage</code> (<code>Final</code>): final adjustments before rounding.</li>
+<li><code>After Damage Effects</code> (<code>Proc</code>): post-resolution proc records or secondary effects.</li>
+</ol>
+<p>Within each phase, modifiers sort by:</p>
+<ol>
+<li>phase</li>
+<li>descending priority</li>
+<li>stable registration id</li>
+</ol>
+<h3 id="how-to-change-damage">How To Change Damage<a class="headerlink" href="#how-to-change-damage" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>Add Damage</code> (<code>AddFlat</code>): adds flat damage.</li>
+<li><code>Add Percent Damage</code> (<code>IncreasedPct</code>): additive percentage bucket, flushed once per phase. Magnitude <code>50</code> means +50%.</li>
+<li><code>Multiply Damage Up</code> (<code>MoreMultiplier</code>): multiplicative scaling. Magnitude <code>1.30</code> means 30% more damage.</li>
+<li><code>Multiply Damage Down</code> (<code>LessMultiplier</code>): multiplicative reduction clamped to <code>0..1</code>. Magnitude <code>0.70</code> means 30% less damage.</li>
+<li><code>Set Damage</code> (<code>Override</code>): sets damage directly.</li>
+<li><code>Ignore Armor</code> (<code>Penetration</code>): contributes to armor penetration during mitigation. Magnitude <code>0.10</code> means ignore 10% of armor.</li>
+<li><code>Add Damage Reduction</code> (<code>Reduction</code>): contributes to extra resistance during mitigation. Magnitude <code>0.10</code> means 10% less damage taken.</li>
+</ul>
+<hr />
+<h2 id="registering-modifiers-in-c">Registering Modifiers In C++<a class="headerlink" href="#registering-modifiers-in-c" title="Permanent link">&para;</a></h2>
+<p>Use the ASC as the runtime modifier owner.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">FDTCombatModifierSpec</span><span class="w"> </span><span class="n">Spec</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">Spec</span><span class="p">.</span><span class="n">Phase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EDTCombatModifierPhase</span><span class="o">::</span><span class="n">Outgoing</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">Spec</span><span class="p">.</span><span class="n">Operation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EDTCombatModifierOp</span><span class="o">::</span><span class="n">MoreMultiplier</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">Spec</span><span class="p">.</span><span class="n">Magnitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.30f</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">Spec</span><span class="p">.</span><span class="n">SourceTag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyBackstabTag</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">Spec</span><span class="p">.</span><span class="n">DescriptionTag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyBackstabDescriptionTag</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">Spec</span><span class="p">.</span><span class="n">Priority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">Spec</span><span class="p">.</span><span class="n">bAffectsOutgoingDamage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">Spec</span><span class="p">.</span><span class="n">bAffectsIncomingDamage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">FDTCombatModifierHandle</span><span class="w"> </span><span class="n">Handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASC</span><span class="o">-&gt;</span><span class="n">RegisterCombatModifierSpec</span><span class="p">(</span><span class="n">Spec</span><span class="p">);</span>
+</code></pre></div>
+<p>Remove it when the owner is removed, unequipped, or deactivated:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ASC</span><span class="o">-&gt;</span><span class="n">UnregisterCombatModifier</span><span class="p">(</span><span class="n">Handle</span><span class="p">);</span>
+</code></pre></div>
+<p>For data assets:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">FDTCombatModifierHandle</span><span class="w"> </span><span class="n">Handle</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">ASC</span><span class="o">-&gt;</span><span class="n">RegisterCombatModifierDefinition</span><span class="p">(</span><span class="n">ModifierDefinition</span><span class="p">,</span><span class="w"> </span><span class="n">SourceObject</span><span class="p">,</span><span class="w"> </span><span class="n">EvaluationLevel</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="blueprint-workflows">Blueprint Workflows<a class="headerlink" href="#blueprint-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="blueprint-damage">Blueprint Damage<a class="headerlink" href="#blueprint-damage" title="Permanent link">&para;</a></h3>
+<p>Use this flow for simple single-target Blueprint damage:</p>
+<ol>
+<li>provide the source actor, target actor, base damage, and damage type</li>
+<li>optionally provide effect causer, context tags, hit result, damage effect, or effect context</li>
+<li><code>Deal Damage To Target</code></li>
+</ol>
+<p><code>Deal Damage To Target</code> builds an <code>FDTDamageContext</code> and routes through the same combat pipeline as <code>Deal Damage With Context</code>.</p>
+<p>Use this flow when a Blueprint needs full context control:</p>
+<ol>
+<li>Unreal's built-in <code>Make FDTDamageContext</code> struct node</li>
+<li>fill the source, target, base damage, damage type, and any optional tags</li>
+<li><code>Deal Damage With Context</code></li>
+</ol>
+<p><code>FDTDamageContext</code> exposes:</p>
+<ul>
+<li><code>SourceActor</code></li>
+<li><code>TargetActor</code></li>
+<li><code>BaseDamage</code></li>
+<li><code>DamageType</code></li>
+<li><code>EffectCauser</code></li>
+<li><code>SourceObject</code></li>
+<li><code>HitResult</code></li>
+<li><code>ContextTags</code></li>
+<li><code>AbilityTags</code></li>
+<li><code>WeaponTags</code></li>
+<li><code>bSkipBuiltInMitigation</code></li>
+</ul>
+<p><code>Deal Damage With Context</code> resolves the context through <code>UDTCombatSubsystem</code>, applies the existing damage Gameplay Effect, and returns both:</p>
+<ul>
+<li><code>OutEffectHandle</code>: the applied Gameplay Effect handle</li>
+<li><code>OutDamageResult</code>: the resolved combat result, including final damage, result tags, applied modifiers, proc records, and cancellation state</li>
+</ul>
+<p>Blueprint graphs should use <code>Deal Damage To Target</code> for simple hits, or build <code>FDTDamageContext</code> directly and call <code>Deal Damage With Context</code> when they need ability tags, weapon tags, source object, or mitigation overrides.</p>
+<h3 id="blueprint-modifier-registration">Blueprint Modifier Registration<a class="headerlink" href="#blueprint-modifier-registration" title="Permanent link">&para;</a></h3>
+<p>Blueprint passives can register data-asset modifiers with:</p>
+<ul>
+<li><code>RegisterCombatModifierDefinition</code></li>
+<li><code>UnregisterCombatModifier</code></li>
+</ul>
+<p>Store the returned <code>FDTCombatModifierHandle</code> on the passive or owning object and unregister it when the passive ends, the buff expires, or the item is removed.</p>
+<p>For item affixes, designers usually do not need Blueprint registration. Put modifier definitions in <code>UDTAffixDefinition::CombatModifiers</code>; equipment application registers and unregisters them automatically.</p>
+<hr />
+<h2 id="item-affixes">Item Affixes<a class="headerlink" href="#item-affixes" title="Permanent link">&para;</a></h2>
+<p><code>UDTAffixDefinition</code> has an optional <code>CombatModifiers</code> array.</p>
+<p>Use this for affixes that affect damage calculation but should not be permanent attributes.</p>
+<p>Examples:</p>
+<ul>
+<li><code>+50% increased damage with daggers</code></li>
+<li><code>30% more damage against poisoned targets</code></li>
+<li><code>fire damage penetrates 10% resistance</code></li>
+<li><code>+25% damage when hitting from behind</code></li>
+</ul>
+<p>Existing fields still work:</p>
+<ul>
+<li><code>AffixGameplayEffect</code> remains for attributes such as max health, crit chance, armor, or resistance.</li>
+<li><code>AffixAbilitySet</code> remains for granting abilities.</li>
+<li><code>CombatModifiers</code> are registered when the equipment stats are applied and unregistered when the item is unequipped or deactivated.</li>
+</ul>
+<p>If an affix roll should drive the combat modifier magnitude:</p>
+<ol>
+<li>Add an entry to <code>UDTAffixDefinition::StatModifiers</code>.</li>
+<li>Set its <code>ModifierID</code>, for example <code>DaggerDamageBonus</code>.</li>
+<li>Set <code>UDTCombatModifierDefinition::AffixMagnitudeModifierID</code> to the same name.</li>
+</ol>
+<p>At equip time, the rolled affix value overrides the modifier definition's default <code>Magnitude</code>.</p>
+<hr />
+<h2 id="common-examples">Common Examples<a class="headerlink" href="#common-examples" title="Permanent link">&para;</a></h2>
+<h3 id="dagger-damage-bonus">Dagger Damage Bonus<a class="headerlink" href="#dagger-damage-bonus" title="Permanent link">&para;</a></h3>
+<p>Goal: 50% increased damage when using dagger-tagged attacks.</p>
+<p>Definition setup:</p>
+<ul>
+<li><code>When To Apply</code>: <code>Attacker Bonuses</code></li>
+<li><code>How To Change Damage</code>: <code>Add Percent Damage</code></li>
+<li><code>Magnitude</code>: <code>50</code></li>
+<li><code>bAffectsOutgoingDamage</code>: true</li>
+<li><code>bAffectsIncomingDamage</code>: false</li>
+<li><code>WeaponTagQuery</code>: requires the dagger weapon tag</li>
+</ul>
+<p>Caller requirement:</p>
+<ul>
+<li>The ability or weapon code must add the dagger tag to <code>FDTDamageContext.WeaponTags</code>, or add an equivalent context tag used by the modifier query.</li>
+</ul>
+<h3 id="backstab">Backstab<a class="headerlink" href="#backstab" title="Permanent link">&para;</a></h3>
+<p>Goal: 30% more damage when source is behind target.</p>
+<p>Definition setup:</p>
+<ul>
+<li><code>When To Apply</code>: <code>Attacker Bonuses</code></li>
+<li><code>How To Change Damage</code>: <code>Multiply Damage Up</code></li>
+<li><code>Magnitude</code>: <code>1.30</code></li>
+<li><code>CustomLogic</code>: <code>UDTCombatModifierLogic_Backstab</code></li>
+<li><code>bAffectsOutgoingDamage</code>: true</li>
+</ul>
+<p><code>UDTCombatModifierLogic_Backstab</code> checks the source actor against the target actor's rear cone.</p>
+<h3 id="execute">Execute<a class="headerlink" href="#execute" title="Permanent link">&para;</a></h3>
+<p>Goal: 50% more damage when target is below 20% health.</p>
+<p>Definition setup:</p>
+<ul>
+<li><code>When To Apply</code>: <code>Attacker Bonuses</code></li>
+<li><code>How To Change Damage</code>: <code>Multiply Damage Up</code></li>
+<li><code>Magnitude</code>: <code>1.50</code></li>
+<li><code>CustomLogic</code>: <code>UDTCombatModifierLogic_TargetHealthRatio</code></li>
+<li><code>MaxRatio</code>: <code>0.20</code></li>
+<li><code>bAffectsOutgoingDamage</code>: true</li>
+</ul>
+<h3 id="fire-penetration">Fire Penetration<a class="headerlink" href="#fire-penetration" title="Permanent link">&para;</a></h3>
+<p>Goal: fire hits penetrate mitigation.</p>
+<p>Definition setup:</p>
+<ul>
+<li><code>When To Apply</code>: <code>Armor And Resistance</code></li>
+<li><code>How To Change Damage</code>: <code>Ignore Armor</code></li>
+<li><code>Magnitude</code>: <code>0.10</code></li>
+<li><code>ContextTagQuery</code>: requires the fire damage type tag</li>
+<li><code>bAffectsOutgoingDamage</code>: true</li>
+</ul>
+<h3 id="ability-specific-bonus">Ability-Specific Bonus<a class="headerlink" href="#ability-specific-bonus" title="Permanent link">&para;</a></h3>
+<p>Goal: one ability deals bonus damage only on a charged hit.</p>
+<p>Ability side:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">DamageContext</span><span class="p">.</span><span class="n">ContextTags</span><span class="p">.</span><span class="n">AddTag</span><span class="p">(</span><span class="n">TAG_DAMAGE_CONTEXT_CHARGED</span><span class="p">);</span>
+</code></pre></div>
+<p>Modifier definition:</p>
+<ul>
+<li><code>ContextTagQuery</code>: requires <code>Damage.Context.Charged</code></li>
+<li>phase/op/magnitude as needed</li>
+</ul>
+<p>This is preferred over adding special-case condition code to the ability.</p>
+<hr />
+<h2 id="built-in-crit-and-mitigation">Built-In Crit And Mitigation<a class="headerlink" href="#built-in-crit-and-mitigation" title="Permanent link">&para;</a></h2>
+<p>The pipeline currently handles:</p>
+<ul>
+<li>crits through <code>CritChance</code> and <code>CritDamage</code></li>
+<li>armor mitigation</li>
+<li>generic <code>DamageResistance</code></li>
+<li>physical penetration through <code>PhysicalPenetration</code></li>
+<li>true damage bypass through <code>Damage.Type.True</code></li>
+</ul>
+<p>The armor formula is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">ArmorReduction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Armor</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">Armor</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ArmorMitigationFactor</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Damage</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">Damage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Damage</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ArmorReduction</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">DamageResistance</span><span class="p">)</span>
+</code></pre></div>
+<p><code>ArmorMitigationFactor</code> is shown to designers as <code>Armor Damage Scale</code> on <code>Combat Tuning Data</code>. Higher values make armor less effective; lower values make armor stronger. If no combat global data asset is assigned yet, the subsystem falls back to the class default value.</p>
+<p>Crit eligibility is tag-driven. If the damage GE has <code>Effect.Condition.CanCrit</code> as an asset tag, <code>ApplyDamage</code> merges that tag into the context before resolving. Direct <code>CalculateDamage</code> callers can opt in by adding <code>Effect.Condition.CanCrit</code> to <code>FDTDamageContext::ContextTags</code>.</p>
+<hr />
+<h2 id="writing-new-damage-callers">Writing New Damage Callers<a class="headerlink" href="#writing-new-damage-callers" title="Permanent link">&para;</a></h2>
+<p>For common target damage, use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Deal Damage To Target
+</code></pre></div>
+<p>Use the full context flow when a Blueprint ability needs to provide advanced context:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Make FDTDamageContext -&gt; Deal Damage With Context
+</code></pre></div>
+<p>Use the full context flow when a Blueprint ability needs to provide:</p>
+<ul>
+<li><code>ContextTags</code></li>
+<li><code>AbilityTags</code></li>
+<li><code>WeaponTags</code></li>
+<li><code>bSkipBuiltInMitigation</code></li>
+</ul>
+<p>Blueprint examples:</p>
+<ul>
+<li>a dagger attack should pass a dagger tag through <code>WeaponTags</code></li>
+<li>a charged attack should pass <code>Damage.Context.Charged</code> through <code>ContextTags</code></li>
+<li>a spell should pass spell/source tags through <code>AbilityTags</code> or <code>ContextTags</code></li>
+</ul>
+<p>Use <code>UDTCombatSubsystem</code> directly in C++ when a caller needs richer context:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">UDTCombatSubsystem</span><span class="o">*</span><span class="w"> </span><span class="n">CombatSubsystem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">World</span><span class="o">-&gt;</span><span class="n">GetSubsystem</span><span class="o">&lt;</span><span class="n">UDTCombatSubsystem</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">FDTDamageContext</span><span class="w"> </span><span class="n">Context</span><span class="p">;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">Context</span><span class="p">.</span><span class="n">SourceActor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SourceActor</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">Context</span><span class="p">.</span><span class="n">TargetActor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TargetActor</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">Context</span><span class="p">.</span><span class="n">EffectCauser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Projectile</span><span class="p">;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">Context</span><span class="p">.</span><span class="n">BaseDamage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50.0f</span><span class="p">;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">Context</span><span class="p">.</span><span class="n">DamageType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DTGameplayTags</span><span class="o">::</span><span class="n">TAG_DAMAGE_TYPE_PHYSICAL</span><span class="p">;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">Context</span><span class="p">.</span><span class="n">ContextTags</span><span class="p">.</span><span class="n">AddTag</span><span class="p">(</span><span class="n">MyContextTag</span><span class="p">);</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="n">Context</span><span class="p">.</span><span class="n">WeaponTags</span><span class="p">.</span><span class="n">AddTag</span><span class="p">(</span><span class="n">MyWeaponTag</span><span class="p">);</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="n">Context</span><span class="p">.</span><span class="n">HitResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Hit</span><span class="p">;</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="n">FActiveGameplayEffectHandle</span><span class="w"> </span><span class="n">Handle</span><span class="p">;</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="n">FDTDamageResult</span><span class="w"> </span><span class="n">Result</span><span class="p">;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="n">CombatSubsystem</span><span class="o">-&gt;</span><span class="n">ApplyDamage</span><span class="p">(</span><span class="n">Context</span><span class="p">,</span><span class="w"> </span><span class="n">DamageEffectClass</span><span class="p">,</span><span class="w"> </span><span class="n">Handle</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Result</span><span class="p">);</span>
+</code></pre></div>
+<p>Only call this on authority. The subsystem rejects non-authority source actors.</p>
+<hr />
+<h2 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h2>
+<p>Use:</p>
+<ul>
+<li><code>LogDTCombat</code></li>
+<li><code>FDTDamageResult::AppliedModifiers</code></li>
+<li><code>FDTDamageResult::ResultTags</code></li>
+<li><code>Event.Damage.PreResolve</code></li>
+<li><code>Event.Damage.Resolved</code></li>
+</ul>
+<p>For a breakpoint-friendly path, start in:</p>
+<ul>
+<li><code>UDTCombatSubsystem::ApplyDamage</code></li>
+<li><code>UDTCombatSubsystem::CalculateDamage</code></li>
+<li><code>UDTCombatSubsystem::ApplyModifierPhase</code></li>
+<li><code>UDamageExecutionCalculation::Execute_Implementation</code></li>
+<li><code>UDTAttributeSet::HandleDamageAttribute</code></li>
+</ul>
+<hr />
+<h2 id="pitfalls">Pitfalls<a class="headerlink" href="#pitfalls" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Do not write final damage directly to <code>SetByCaller.Data.Attribute.Damage</code> for new code. Go through the combat subsystem.</li>
+<li>Do not apply <code>GE_Damage_Base</code> directly for new damage. Route damage through <code>UDTCombatSubsystem</code> so crit, mitigation, modifiers, and result tags are resolved before the damage Gameplay Effect is applied.</li>
+<li>Do not use combat modifiers for persistent attributes such as max health or armor. Use regular Gameplay Effects for those.</li>
+<li>Remove registered modifier handles when the source item/passive/buff is removed.</li>
+<li>Prefer tag queries for common conditions and custom logic only for conditions that truly need code.</li>
+<li>Keep modifiers data-driven when possible; avoid adding ability-local final damage math.</li>
+</ul>
+<hr />
+<h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
+<p>Current compile check:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Build.bat DarkTower Win64 Development -Project=DarkTower.uproject -WaitMutex -NoHotReload
+</code></pre></div>
+<p>Known limitation:</p>
+<ul>
+<li>The full editor target can be blocked if Live Coding is active in the running editor. Close the editor or disable Live Coding before compiling <code>DarkTowerEditor</code>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

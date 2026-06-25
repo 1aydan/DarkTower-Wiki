@@ -1,0 +1,25 @@
+var class_u_d_t_setting_value_discrete___resolution =
+[
+    [ "FScreenResolutionEntry", "struct_u_d_t_setting_value_discrete___resolution_1_1_f_screen_resolution_entry.html", "struct_u_d_t_setting_value_discrete___resolution_1_1_f_screen_resolution_entry" ],
+    [ "UDTSettingValueDiscrete_Resolution", "class_u_d_t_setting_value_discrete___resolution.html#ad74e425b52ef2d207d65db22a833d14a", null ],
+    [ "FindClosestResolutionIndex", "class_u_d_t_setting_value_discrete___resolution.html#a2c5028dad20b3cf398ca49cc94dda7c8", null ],
+    [ "FindIndexOfDisplayResolution", "class_u_d_t_setting_value_discrete___resolution.html#a6f6af22e266178dfa1f42b28314e1e8b", null ],
+    [ "FindIndexOfDisplayResolutionForceValid", "class_u_d_t_setting_value_discrete___resolution.html#a7f973469030480a594ca0baf76618895", null ],
+    [ "GetDiscreteOptionIndex", "class_u_d_t_setting_value_discrete___resolution.html#a3d9b89cf746f6f24ad73e99a11336461", null ],
+    [ "GetDiscreteOptions", "class_u_d_t_setting_value_discrete___resolution.html#a6941140f76eda124333751bad3b4f232", null ],
+    [ "GetStandardWindowResolutions", "class_u_d_t_setting_value_discrete___resolution.html#adad846d2cfe173ad8e2e07e81ac32e7a", null ],
+    [ "InitializeResolutions", "class_u_d_t_setting_value_discrete___resolution.html#a09f994ce2038a41bac394f0517aba38a", null ],
+    [ "OnDependencyChanged", "class_u_d_t_setting_value_discrete___resolution.html#a1add36a00f2b180b33f9e0a743f36f15", null ],
+    [ "OnInitialized", "class_u_d_t_setting_value_discrete___resolution.html#a9c540ba61b470cac0606c360368ea771", null ],
+    [ "ResetToDefault", "class_u_d_t_setting_value_discrete___resolution.html#a6aba25d11f1aa35e7ba8041c443872a7", null ],
+    [ "RestoreToInitial", "class_u_d_t_setting_value_discrete___resolution.html#ae737a878e422cd9d53e6feb43ca2f269", null ],
+    [ "SelectAppropriateResolutions", "class_u_d_t_setting_value_discrete___resolution.html#aa37ba2000ade1db31c7f43ef300e0d91", null ],
+    [ "SetDiscreteOptionByIndex", "class_u_d_t_setting_value_discrete___resolution.html#a5d3a0ec63d406730dc46ff7b84c248ac", null ],
+    [ "ShouldAllowFullScreenResolution", "class_u_d_t_setting_value_discrete___resolution.html#a8aa306e9051c0cd8f428730b643fdee1", null ],
+    [ "StoreInitial", "class_u_d_t_setting_value_discrete___resolution.html#a25dd854dd824d3ce7efe1bc0f2f5d43c", null ],
+    [ "LastWindowMode", "class_u_d_t_setting_value_discrete___resolution.html#a6ad50dc42c9ed18df955e6e7a763f1c4", null ],
+    [ "Resolutions", "class_u_d_t_setting_value_discrete___resolution.html#a311d82be1ebe63930a19bd24e9409548", null ],
+    [ "ResolutionsFullscreen", "class_u_d_t_setting_value_discrete___resolution.html#a300cc7174f2453db93951edefb59e4f0", null ],
+    [ "ResolutionsWindowed", "class_u_d_t_setting_value_discrete___resolution.html#ae3120d79e4246bf6d65f2860ee2344d1", null ],
+    [ "ResolutionsWindowedFullscreen", "class_u_d_t_setting_value_discrete___resolution.html#a173c487c7915cc4ad4eb652d5287fa35", null ]
+];
