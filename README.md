@@ -39,6 +39,26 @@ Installs into `Wiki/.venv` (MkDocs Material), installs **Doxygen** via winget, a
 
 `build.ps1` produces a fully static `Wiki/site/`. Drop it on any internal web share / IIS / S3-style static host. No server runtime needed.
 
+## Publishing to GitHub Pages
+
+> ⚠️ A public repo exposes the design docs and C++ source comments to anyone with the link. Only do this if that content is OK to be public.
+
+One-time (this folder is already a git repo with `main` committed):
+
+```powershell
+gh auth login                                              # browser flow, once
+gh repo create DarkTower-Wiki --public --source=. --remote=origin --push
+gh api --method POST repos/<user>/DarkTower-Wiki/pages -f "source[branch]=gh-pages" -f "source[path]=/"
+```
+
+Every update after that:
+
+```powershell
+./publish.ps1     # build.ps1 + ghp-import push to the gh-pages branch
+```
+
+Site lands at `https://<user>.github.io/DarkTower-Wiki/` (~1 min after each push). `site_url` in `mkdocs.yml` must match that URL. To take it down: make the repo private or delete it (`gh repo delete`).
+
 ## Keep generated output out of SVN
 
 ```powershell
