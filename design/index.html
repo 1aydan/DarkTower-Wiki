@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://1aydan.github.io/DarkTower-Wiki/">
+        <link rel="canonical" href="https://1aydan.github.io/DarkTower-Wiki/design/">
       
       
+        <link rel="prev" href="..">
       
-        <link rel="next" href="design/">
+      
+        <link rel="next" href="CombatPipeline/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Dark Tower — Game Wiki</title>
+        <title>Design systems - Dark Tower — Game Wiki</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dark-tower-game-wiki" class="md-skip">
+        <a href="#design-systems" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Dark Tower — Game Wiki" class="md-header__button md-logo" aria-label="Dark Tower — Game Wiki" data-md-component="logo">
+    <a href=".." title="Dark Tower — Game Wiki" class="md-header__button md-logo" aria-label="Dark Tower — Game Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Design systems
             
           </span>
         </div>
@@ -209,11 +211,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -230,11 +230,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="design/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -254,7 +256,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="api/" class="md-tabs__link">
+      <a href="../api/" class="md-tabs__link">
         
   
   
@@ -278,9 +280,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -291,7 +291,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Dark Tower — Game Wiki" class="md-nav__button md-logo" aria-label="Dark Tower — Game Wiki" data-md-component="logo">
+    <a href=".." title="Dark Tower — Game Wiki" class="md-nav__button md-logo" aria-label="Dark Tower — Game Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -306,37 +306,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -352,48 +325,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#design-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design systems
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Code reference
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -402,6 +333,8 @@
       
   
   
+    
+  
   
   
     
@@ -431,20 +364,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="design/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -462,13 +398,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -488,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="design/CombatPipeline/" class="md-nav__link">
+      <a href="CombatPipeline/" class="md-nav__link">
         
   
   
@@ -516,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="design/AbilityEventSystem/" class="md-nav__link">
+      <a href="AbilityEventSystem/" class="md-nav__link">
         
   
   
@@ -544,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="design/StatSystem/" class="md-nav__link">
+      <a href="StatSystem/" class="md-nav__link">
         
   
   
@@ -572,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="design/Loot_and_Combat_Tuning_Guide/" class="md-nav__link">
+      <a href="Loot_and_Combat_Tuning_Guide/" class="md-nav__link">
         
   
   
@@ -600,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="design/QuestSystem/" class="md-nav__link">
+      <a href="QuestSystem/" class="md-nav__link">
         
   
   
@@ -628,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="design/SkillTreeTooltipAuthoring/" class="md-nav__link">
+      <a href="SkillTreeTooltipAuthoring/" class="md-nav__link">
         
   
   
@@ -656,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="design/SkillTreeSystemAudit/" class="md-nav__link">
+      <a href="SkillTreeSystemAudit/" class="md-nav__link">
         
   
   
@@ -684,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="design/CheatCommands/" class="md-nav__link">
+      <a href="CheatCommands/" class="md-nav__link">
         
   
   
@@ -719,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         
   
   
@@ -747,9 +683,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -760,36 +694,6 @@
   
     
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#design-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design systems
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Code reference
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -803,63 +707,49 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
 
 
 
-
-<h1 id="dark-tower-game-wiki">Dark Tower — Game Wiki<a class="headerlink" href="#dark-tower-game-wiki" title="Permanent link">&para;</a></h1>
-<p>The living reference for how Dark Tower's systems work. Two layers:</p>
-<ul>
-<li><strong>Design docs</strong> — plain-English guides to each system and its tuning knobs. Start here.</li>
-<li><strong>Code Reference</strong> — the C++ API, generated straight from the source comments, for when you need the exact class, attribute, or tag a system uses.</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">How this wiki stays current</p>
-<p>Everything here is <strong>generated</strong> from the project. The design pages come from <code>Docs/*.md</code>; the code reference comes from the doc-comments in <code>Source/DarkTower</code>. Re-run the build (<code>build.ps1</code>) and both refresh. Nobody hand-maintains this site — edit the source, rebuild.</p>
-</div>
-<h2 id="design-systems">Design systems<a class="headerlink" href="#design-systems" title="Permanent link">&para;</a></h2>
+<h1 id="design-systems">Design systems<a class="headerlink" href="#design-systems" title="Permanent link">&para;</a></h1>
+<p>Plain-English guides to each Dark Tower system and the knobs designers can turn.
+For the exact classes, tags and attributes behind them, see the
+<a href="../api/">Code Reference</a>.</p>
 <div class="grid cards">
 <ul>
 <li>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m6.2 2.44 11.9 11.9 2.12-2.12 1.41 1.41-2.47 2.47 3.18 3.18c.39.39.39 1.02 0 1.41l-.71.71a.996.996 0 0 1-1.41 0L17 18.23l-2.44 2.47-1.41-1.41 2.12-2.12-11.9-11.9V2.44zM15.89 10l4.74-4.74V2.44H17.8l-4.74 4.74zm-4.95 5-2.83-2.87-2.21 2.21-2.12-2.12-1.41 1.41 2.47 2.47-3.18 3.19a.996.996 0 0 0 0 1.41l.71.71c.39.39 1.02.39 1.41 0L7 18.23l2.44 2.47 1.41-1.41-2.12-2.12z"/></svg></span> <strong><a href="design/CombatPipeline/">Combat Pipeline</a></strong></p>
-<p>The centralized server-authoritative damage path — how a hit becomes damage.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m6.2 2.44 11.9 11.9 2.12-2.12 1.41 1.41-2.47 2.47 3.18 3.18c.39.39.39 1.02 0 1.41l-.71.71a.996.996 0 0 1-1.41 0L17 18.23l-2.44 2.47-1.41-1.41 2.12-2.12-11.9-11.9V2.44zM15.89 10l4.74-4.74V2.44H17.8l-4.74 4.74zm-4.95 5-2.83-2.87-2.21 2.21-2.12-2.12-1.41 1.41 2.47 2.47-3.18 3.19a.996.996 0 0 0 0 1.41l.71.71c.39.39 1.02.39 1.41 0L7 18.23l2.44 2.47 1.41-1.41-2.12-2.12z"/></svg></span> <strong><a href="CombatPipeline/">Combat Pipeline</a></strong></p>
+<p>DarkTower damage is resolved through a centralized, server-authoritative combat pipeline. Abilities and projectiles submit explicit damage contexts; the combat subsystem…</p>
 </li>
 <li>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg></span> <strong><a href="design/AbilityEventSystem/">Ability Event System</a></strong></p>
-<p>The event vocabulary abilities broadcast and react to (combos, triggers).</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg></span> <strong><a href="AbilityEventSystem/">Ability Event System</a></strong></p>
+<p>This project uses a GAS-native modular event system built around…</p>
 </li>
 <li>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16 11.78 4.24-7.33 1.73 1-5.23 9.05-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"/></svg></span> <strong><a href="design/StatSystem/">Stat System</a></strong></p>
-<p>Attributes, how they're defined, and how they feed combat.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16 11.78 4.24-7.33 1.73 1-5.23 9.05-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"/></svg></span> <strong><a href="StatSystem/">Stat System</a></strong></p>
+<p><code>StatSystem</code> is a server-authoritative stat backend used for player and world state.</p>
 </li>
 <li>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 4h14a3 3 0 0 1 3 3v4h-7v-1H9v1H2V7a3 3 0 0 1 3-3m6 7h2v2h-2zm-9 1h7v1l2 2h2l2-2v-1h7v8H2z"/></svg></span> <strong><a href="design/Loot_and_Combat_Tuning_Guide/">Loot &amp; Combat Tuning</a></strong></p>
-<p>Designer's guide to loot scaling, rarity, affixes, item level — every knob.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 4h14a3 3 0 0 1 3 3v4h-7v-1H9v1H2V7a3 3 0 0 1 3-3m6 7h2v2h-2zm-9 1h7v1l2 2h2l2-2v-1h7v8H2z"/></svg></span> <strong><a href="Loot_and_Combat_Tuning_Guide/">Loot &amp; Combat Tuning</a></strong></p>
+<p>A designer's guide to how loot scaling, rarity, affixes, item level — what every knob does, and which ones are safe to tune vs. which reshape the whole game.</p>
 </li>
 <li>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.8 20c-.4 1.2-1.5 2-2.8 2H5c-1.7 0-3-1.3-3-3v-1h12.2c.4 1.2 1.5 2 2.8 2zM19 2c1.7 0 3 1.3 3 3v1h-2V5c0-.6-.4-1-1-1s-1 .4-1 1v13h-1c-.6 0-1-.4-1-1v-1H5V5c0-1.7 1.3-3 3-3zM8 6v2h7V6zm0 4v2h6v-2z"/></svg></span> <strong><a href="design/QuestSystem/">Quest System</a></strong></p>
-<p>How quests are structured and driven.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.8 20c-.4 1.2-1.5 2-2.8 2H5c-1.7 0-3-1.3-3-3v-1h12.2c.4 1.2 1.5 2 2.8 2zM19 2c1.7 0 3 1.3 3 3v1h-2V5c0-.6-.4-1-1-1s-1 .4-1 1v13h-1c-.6 0-1-.4-1-1v-1H5V5c0-1.7 1.3-3 3-3zM8 6v2h7V6zm0 4v2h6v-2z"/></svg></span> <strong><a href="QuestSystem/">Quest System</a></strong></p>
+<p><code>QuestSystem</code> is a data-driven, server-authoritative quest runtime built on top of <code>StatSystem</code> contexts.</p>
 </li>
 <li>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h6v4H3zm12 7h6v4h-6zm0 7h6v4h-6zm-2-4H7v5h6v2H5V9h2v2h6z"/></svg></span> <strong><a href="design/SkillTreeTooltipAuthoring/">Skill Tree — Tooltip Authoring</a></strong></p>
-<p>Authoring tooltips for skill-tree nodes.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h6v4H3zm12 7h6v4h-6zm0 7h6v4h-6zm-2-4H7v5h6v2H5V9h2v2h6z"/></svg></span> <strong><a href="SkillTreeTooltipAuthoring/">Skill Tree — Tooltip Authoring</a></strong></p>
+<p>This document shows the expected designer setup for skill tree node tooltip descriptions that use authored placeholders and automatic current-to-next upgrade previews.</p>
 </li>
 <li>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9m-6-6a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m7 0h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> <strong><a href="design/SkillTreeSystemAudit/">Skill Tree — System Audit</a></strong></p>
-<p>Findings and the phased plan for the skill-tree system.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9m-6-6a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m7 0h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> <strong><a href="SkillTreeSystemAudit/">Skill Tree — System Audit</a></strong></p>
+<p>This document captures known gaps and a phased improvement plan. Bugs already fixed in the 2026-06 component audit (passive GE stacking, client ability drag, OnRep,…</p>
 </li>
 <li>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg></span> <strong><a href="design/CheatCommands/">Cheat Commands</a></strong></p>
-<p>Every console cheat and debug CVar, and how to run them in PIE.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg></span> <strong><a href="CheatCommands/">Cheat Commands</a></strong></p>
+<p>All DarkTower cheats live on <code>UDTCheatManager</code> (<code>Source/DarkTower/Public/Core/DTCheatManager.h</code>, implementation in <code>Source/DarkTower/Private/Core/DTCheatManager.cpp</code>).…</p>
 </li>
 </ul>
 </div>
-<h2 id="code-reference">Code reference<a class="headerlink" href="#code-reference" title="Permanent link">&para;</a></h2>
-<p>The full C++ surface — classes, structs, gameplay tags, attribute sets, abilities — with cross-linked source.</p>
-<p><a class="md-button md-button--primary" href="api/">Open the Code Reference <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
-<hr />
-<p><em>Generated with <a href="https://squidfunk.github.io/mkdocs-material/">MkDocs Material</a> (design docs) and <a href="https://www.doxygen.nl/">Doxygen</a> (code reference).</em></p>
 
 
 
@@ -867,13 +757,8 @@
 
 
 
-  
-  
 
 
-
-
-  
 
 
 
@@ -920,10 +805,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
