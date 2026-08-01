@@ -1,3 +1,11 @@
+---
+# Landing page: the sidebar would only hold "Home", so drop both rails and
+# let the card grid use the full width.
+hide:
+  - navigation
+  - toc
+---
+
 # Dark Tower — Game Wiki
 
 The living reference for how Dark Tower's systems work. Two layers:
@@ -39,6 +47,10 @@ The living reference for how Dark Tower's systems work. Two layers:
 - :material-clipboard-check: **[Skill Tree — System Audit](design/SkillTreeSystemAudit.md)**
 
     Findings and the phased plan for the skill-tree system.
+
+- :material-console: **[Cheat Commands](design/CheatCommands.md)**
+
+    Every console cheat and debug CVar, and how to run them in PIE.
 
 </div>
 

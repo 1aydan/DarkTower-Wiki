@@ -4,17 +4,16 @@
 
 $ErrorActionPreference = 'Stop'
 $Root = $PSScriptRoot
-$Repo = Split-Path -Parent $Root
+
+# See build.ps1 — suppresses mkdocs-material's MkDocs 2.0 advocacy banner.
+$env:NO_MKDOCS_2_WARNING = 'true'
 
 # Make a freshly-installed Doxygen visible without opening a new terminal.
 $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' +
             [System.Environment]::GetEnvironmentVariable('Path','User')
 
 Write-Host "== Syncing design docs ==" -ForegroundColor Cyan
-$design = Join-Path $Root "docs/design"
-New-Item -ItemType Directory -Force -Path $design | Out-Null
-Get-ChildItem -Path $design -File | Where-Object Name -ne '.gitkeep' | Remove-Item -Force
-Copy-Item (Join-Path $Repo "Docs/*.md") $design
+& "$Root/sync-docs.ps1"
 
 Write-Host "== Generating C++ reference (Doxygen) ==" -ForegroundColor Cyan
 if (Get-Command doxygen -ErrorAction SilentlyContinue) {

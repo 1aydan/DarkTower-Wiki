@@ -1,3 +1,11 @@
 # Dark Tower wiki — Python toolchain (installed into Wiki/.venv by setup.ps1)
 # Material for MkDocs pulls in mkdocs + pymdown-extensions automatically.
+#
+# Keep the major pin. mkdocs-material 9.x requires "mkdocs<2", so the unreleased
+# MkDocs 2.0 can never land here. build.ps1/serve.ps1 set NO_MKDOCS_2_WARNING to
+# silence the banner Material prints about it.
+#
+# Material for MkDocs is EOL 2026-11-05 (maintenance-only since 9.7.0). Nothing
+# breaks that day — this just stops getting fixes. Successor options are in the
+# README; revisit around 2026-10.
 mkdocs-material==9.*
