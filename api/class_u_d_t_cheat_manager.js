@@ -12,6 +12,7 @@ var class_u_d_t_cheat_manager =
     [ "ClearStats", "class_u_d_t_cheat_manager.html#aeccc002263de48e6a33df6aa11fc0a91", null ],
     [ "CompleteDungeon", "class_u_d_t_cheat_manager.html#ab6bed0b16a078e26e73898a95b9c2aa0", null ],
     [ "DamageSelf", "class_u_d_t_cheat_manager.html#a155961fb96725060d641eea2b9ad1c0a", null ],
+    [ "DemiGod", "class_u_d_t_cheat_manager.html#a9031ce87ae48f1dc73ede2606dd66bba", null ],
     [ "GetPlayerCharacter", "class_u_d_t_cheat_manager.html#a07ae3388adc5757b8f12d433cdecd53c", null ],
     [ "God", "class_u_d_t_cheat_manager.html#a75ee1ba70b7b1e4ddc033a7cba16e456", null ],
     [ "KillAllEnemies", "class_u_d_t_cheat_manager.html#adb2fe972aafa644c42a0b6e1385d493d", null ],

@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_a_s_c_att
 </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_u_d_t_a_s_c_attribute_widget.html#a072e61735e050339654a45f2e4d55cd7">   47</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_a_s_c_attribute_widget.html#a072e61735e050339654a45f2e4d55cd7">UDTASCAttributeWidget::BindToAttribute</a>(<span class="keyword">const</span> FGameplayAttribute&amp; Attribute)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_u_d_t_a_s_c_attribute_widget.html#a072e61735e050339654a45f2e4d55cd7">   47</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_a_s_c_attribute_widget.html#a072e61735e050339654a45f2e4d55cd7">UDTASCAttributeWidget::BindToAttribute</a>(<span class="keyword">const</span> FGameplayAttribute&amp; <a class="code hl_enumvalue" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c">Attribute</a>)</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_d_t_a_s_c_widget.html#a1d903db361e36cda7d6d23d6540d31fb">AbilitySystemComponent</a>)</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    {</div>
@@ -197,15 +197,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_a_s_c_att
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// Don&#39;t bind if already bound</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (AttributeDelegateHandles.Contains(Attribute))</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (AttributeDelegateHandles.Contains(<a class="code hl_enumvalue" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c">Attribute</a>))</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    FDelegateHandle Handle = <a class="code hl_variable" href="class_u_d_t_a_s_c_widget.html#a1d903db361e36cda7d6d23d6540d31fb">AbilitySystemComponent</a>-&gt;GetGameplayAttributeValueChangeDelegate(Attribute).AddUObject(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_d_t_a_s_c_attribute_widget.html#a623420d7d39a4f4ea6805b06775f533e">UDTASCAttributeWidget::HandleAttributeChange</a>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    FDelegateHandle Handle = <a class="code hl_variable" href="class_u_d_t_a_s_c_widget.html#a1d903db361e36cda7d6d23d6540d31fb">AbilitySystemComponent</a>-&gt;GetGameplayAttributeValueChangeDelegate(<a class="code hl_enumvalue" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c">Attribute</a>).AddUObject(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_d_t_a_s_c_attribute_widget.html#a623420d7d39a4f4ea6805b06775f533e">UDTASCAttributeWidget::HandleAttributeChange</a>);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    AttributeDelegateHandles.Add(Attribute, Handle);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_variable" href="class_u_d_t_a_s_c_attribute_widget.html#a562ab6a0381ff6a13c9bdd0be29a1904">BoundAttributes</a>.Add(Attribute);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    AttributeDelegateHandles.Add(<a class="code hl_enumvalue" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c">Attribute</a>, Handle);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_variable" href="class_u_d_t_a_s_c_attribute_widget.html#a562ab6a0381ff6a13c9bdd0be29a1904">BoundAttributes</a>.Add(<a class="code hl_enumvalue" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c">Attribute</a>);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
 </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
@@ -220,18 +220,18 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_a_s_c_att
 </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_u_d_t_a_s_c_attribute_widget.html#a9f6b6ce44106698bd13489a08bd40ba1">   75</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_a_s_c_attribute_widget.html#a9f6b6ce44106698bd13489a08bd40ba1">UDTASCAttributeWidget::UnbindFromAttribute</a>(<span class="keyword">const</span> FGameplayAttribute&amp; Attribute)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_u_d_t_a_s_c_attribute_widget.html#a9f6b6ce44106698bd13489a08bd40ba1">   75</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_a_s_c_attribute_widget.html#a9f6b6ce44106698bd13489a08bd40ba1">UDTASCAttributeWidget::UnbindFromAttribute</a>(<span class="keyword">const</span> FGameplayAttribute&amp; <a class="code hl_enumvalue" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c">Attribute</a>)</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_d_t_a_s_c_widget.html#a1d903db361e36cda7d6d23d6540d31fb">AbilitySystemComponent</a>)</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> (FDelegateHandle* Handle = AttributeDelegateHandles.Find(Attribute))</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> (FDelegateHandle* Handle = AttributeDelegateHandles.Find(<a class="code hl_enumvalue" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c">Attribute</a>))</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_variable" href="class_u_d_t_a_s_c_widget.html#a1d903db361e36cda7d6d23d6540d31fb">AbilitySystemComponent</a>-&gt;GetGameplayAttributeValueChangeDelegate(Attribute).Remove(*Handle);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        AttributeDelegateHandles.Remove(Attribute);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="class_u_d_t_a_s_c_attribute_widget.html#a562ab6a0381ff6a13c9bdd0be29a1904">BoundAttributes</a>.Remove(Attribute);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_variable" href="class_u_d_t_a_s_c_widget.html#a1d903db361e36cda7d6d23d6540d31fb">AbilitySystemComponent</a>-&gt;GetGameplayAttributeValueChangeDelegate(<a class="code hl_enumvalue" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c">Attribute</a>).Remove(*Handle);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        AttributeDelegateHandles.Remove(<a class="code hl_enumvalue" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c">Attribute</a>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="class_u_d_t_a_s_c_attribute_widget.html#a562ab6a0381ff6a13c9bdd0be29a1904">BoundAttributes</a>.Remove(<a class="code hl_enumvalue" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c">Attribute</a>);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
 </div>
@@ -301,6 +301,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_a_s_c_att
 </div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
 <div class="ttc" id="a_d_t_a_s_c_attribute_widget_8h_html"><div class="ttname"><a href="_d_t_a_s_c_attribute_widget_8h.html">DTASCAttributeWidget.h</a></div></div>
+<div class="ttc" id="a_d_t_ability_types_8h_html_ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c"><div class="ttname"><a href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32adaf2bbdf9f72c085adc4d0404e370f0f4c">EDynamicDescriptionValueSource::Attribute</a></div><div class="ttdeci">@ Attribute</div><div class="ttdoc">Coefficient (ScalableValue) multiplied by a captured GAS attribute, e.g.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_ability_types_8h_source.html#l00130">DTAbilityTypes.h:130</a></div></div>
 <div class="ttc" id="a_d_t_attribute_set_8h_html"><div class="ttname"><a href="_d_t_attribute_set_8h.html">DTAttributeSet.h</a></div></div>
 <div class="ttc" id="aclass_u_d_t_a_s_c_attribute_widget_html_a028de42f8d1321b7a80c09fba6752026"><div class="ttname"><a href="class_u_d_t_a_s_c_attribute_widget.html#a028de42f8d1321b7a80c09fba6752026">UDTASCAttributeWidget::UpdateDisplay</a></div><div class="ttdeci">void UpdateDisplay()</div></div>
 <div class="ttc" id="aclass_u_d_t_a_s_c_attribute_widget_html_a072e61735e050339654a45f2e4d55cd7"><div class="ttname"><a href="class_u_d_t_a_s_c_attribute_widget.html#a072e61735e050339654a45f2e4d55cd7">UDTASCAttributeWidget::BindToAttribute</a></div><div class="ttdeci">void BindToAttribute(const FGameplayAttribute &amp;Attribute)</div><div class="ttdef"><b>Definition</b> <a href="#l00047">DTASCAttributeWidget.cpp:47</a></div></div>

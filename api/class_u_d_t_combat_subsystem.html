@@ -148,7 +148,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad2e0a7551d0fdd82f9224ce9f96f6df5" id="r_ad2e0a7551d0fdd82f9224ce9f96f6df5"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#ad2e0a7551d0fdd82f9224ce9f96f6df5">DealDamage</a> (const UObject *WorldContextObject, const <a class="el" href="struct_f_d_t_damage_context.html">FDTDamageContext</a> &amp;DamageContext, FActiveGameplayEffectHandle &amp;OutEffectHandle, <a class="el" href="struct_f_d_t_damage_result.html">FDTDamageResult</a> &amp;OutDamageResult, TSubclassOf&lt; UGameplayEffect &gt; DamageEffectClass=nullptr, FGameplayEffectContextHandle EffectContext=FGameplayEffectContextHandle())</td></tr>
-<tr class="memitem:a6686324367c9ca04bf20e7c8adbdbe7a" id="r_a6686324367c9ca04bf20e7c8adbdbe7a"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a6686324367c9ca04bf20e7c8adbdbe7a">DealDamageToTarget</a> (const UObject *WorldContextObject, AActor *SourceActor, AActor *TargetActor, float BaseDamage, FGameplayTag DamageType, FActiveGameplayEffectHandle &amp;OutEffectHandle, <a class="el" href="struct_f_d_t_damage_result.html">FDTDamageResult</a> &amp;OutDamageResult, AActor *EffectCauser, const FGameplayTagContainer &amp;ContextTags, const FHitResult &amp;HitResult, TSubclassOf&lt; UGameplayEffect &gt; DamageEffectClass=nullptr, FGameplayEffectContextHandle EffectContext=FGameplayEffectContextHandle())</td></tr>
+<tr class="memitem:a0cccae5e99132fcfd190d6ddce100ac5" id="r_a0cccae5e99132fcfd190d6ddce100ac5"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a0cccae5e99132fcfd190d6ddce100ac5">DealDamageToTarget</a> (const UObject *WorldContextObject, AActor *SourceActor, AActor *TargetActor, float BaseDamage, FGameplayTag DamageType, FActiveGameplayEffectHandle &amp;OutEffectHandle, <a class="el" href="struct_f_d_t_damage_result.html">FDTDamageResult</a> &amp;OutDamageResult, AActor *EffectCauser, const FGameplayTagContainer &amp;ContextTags, const FHitResult &amp;HitResult, TSubclassOf&lt; UGameplayEffect &gt; DamageEffectClass=nullptr, FGameplayEffectContextHandle EffectContext=FGameplayEffectContextHandle(), float HitReactMagnitude=0.0f, float KnockbackMagnitude=0.0f)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -163,9 +163,10 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a9063c2afe30ce88ca52326e84f2a1995" id="r_a9063c2afe30ce88ca52326e84f2a1995"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a9063c2afe30ce88ca52326e84f2a1995">SortModifiers</a> (TArray&lt; <a class="el" href="struct_f_d_t_combat_modifier_spec.html">FDTCombatModifierSpec</a> &gt; &amp;Modifiers)</td></tr>
 <tr class="memitem:a31174e03513a8ad76aa5c47ea4062468" id="r_a31174e03513a8ad76aa5c47ea4062468"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a31174e03513a8ad76aa5c47ea4062468">ApplyModifierPhase</a> (const <a class="el" href="struct_f_d_t_damage_context.html">FDTDamageContext</a> &amp;Context, <a class="el" href="_d_t_combat_types_8h.html#a97484017feb0b2da51a4ee2b219b8a8e">EDTCombatModifierPhase</a> Phase, const TArray&lt; <a class="el" href="struct_f_d_t_combat_modifier_spec.html">FDTCombatModifierSpec</a> &gt; &amp;Modifiers, <a class="el" href="struct_f_d_t_combat_accumulator.html">FDTCombatAccumulator</a> &amp;Accumulator, <a class="el" href="struct_f_d_t_damage_result.html">FDTDamageResult</a> &amp;Result, TArray&lt; <a class="el" href="struct_f_d_t_combat_modifier_spec.html">FDTCombatModifierSpec</a> &gt; &amp;OutConsumedSpecs)</td></tr>
 <tr class="memitem:aa0dfde53181191178af514691375ce30" id="r_aa0dfde53181191178af514691375ce30"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa0dfde53181191178af514691375ce30">UpdateContextTags</a> (<a class="el" href="struct_f_d_t_damage_context.html">FDTDamageContext</a> &amp;InOutContext, <a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> *SourceASC, <a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> *TargetASC)</td></tr>
-<tr class="memitem:a22f2729cdcc2840a66e729e4479ed26a" id="r_a22f2729cdcc2840a66e729e4479ed26a"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a22f2729cdcc2840a66e729e4479ed26a">GetArmorMitigationFactor</a> ()</td></tr>
-<tr class="memitem:a59a636802be9fd6481e91cffd5584b5e" id="r_a59a636802be9fd6481e91cffd5584b5e"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a59a636802be9fd6481e91cffd5584b5e">GetBaseBlockEffectiveness</a> ()</td></tr>
-<tr class="memitem:ae791801499307304c9df85dca5200c76" id="r_ae791801499307304c9df85dca5200c76"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#ae791801499307304c9df85dca5200c76">GetMaxBlockDamageReduction</a> ()</td></tr>
+<tr class="memitem:a7a96a24f189521290e574737ce791285" id="r_a7a96a24f189521290e574737ce791285"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a7a96a24f189521290e574737ce791285">GetArmorConstant</a> ()</td></tr>
+<tr class="memitem:a53a96d85002ba8627d7857002e8d13f1" id="r_a53a96d85002ba8627d7857002e8d13f1"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a53a96d85002ba8627d7857002e8d13f1">GetArmorExponent</a> ()</td></tr>
+<tr class="memitem:a07aec6eadbba50e61040039381117273" id="r_a07aec6eadbba50e61040039381117273"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a07aec6eadbba50e61040039381117273">GetBaseBlockEffectiveness</a> ()</td></tr>
+<tr class="memitem:a4dcdca18f190e941974950ccc3fdd01a" id="r_a4dcdca18f190e941974950ccc3fdd01a"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a4dcdca18f190e941974950ccc3fdd01a">GetMaxBlockDamageReduction</a> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -208,7 +209,11 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00421">BroadcastDamageEvent()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00487">487</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00225">FDTDamageResult::AppliedModifiers</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00238">FDTDamageResult::BlockHealAmount</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00243">FDTCombatAccumulator::Damage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00183">FDTCombatModifierRecord::DamageAfter</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00180">FDTCombatModifierRecord::DamageBefore</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00321">GetBaseBlockEffectiveness()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00333">GetMaxBlockDamageReduction()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00177">FDTCombatModifierRecord::Magnitude</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00021">Mitigation</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00174">FDTCombatModifierRecord::Operation</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00171">FDTCombatModifierRecord::Phase</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00035">Reduction</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00222">FDTDamageResult::ResultTags</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">CalculateDamage()</a>.</p>
 
 </div>
 </div>
@@ -244,11 +249,11 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00363">363</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00422">422</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_types_8cpp_source.html#l00015">FDTCombatAccumulator::ApplyModifier()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00019">Crit</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00125">FDTCombatModifierSpec::Magnitude</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00031">MoreMultiplier</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00122">FDTCombatModifierSpec::Operation</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00119">FDTCombatModifierSpec::Phase</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00212">FDTDamageResult::ResultTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00116">FDTCombatModifierSpec::SourceTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_types_8cpp_source.html#l00015">FDTCombatAccumulator::ApplyModifier()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00019">Crit</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00135">FDTCombatModifierSpec::Magnitude</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00031">MoreMultiplier</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00132">FDTCombatModifierSpec::Operation</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00129">FDTCombatModifierSpec::Phase</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00222">FDTDamageResult::ResultTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00126">FDTCombatModifierSpec::SourceTag</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">CalculateDamage()</a>, and <a class="el" href="#ae791801499307304c9df85dca5200c76">GetMaxBlockDamageReduction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">CalculateDamage()</a>.</p>
 
 </div>
 </div>
@@ -286,11 +291,11 @@ Static Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00147">147</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">154</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00147">ApplyDamage()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00221">FDTDamageResult::bCancelled</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">CalculateDamage()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00080">FDTDamageContext::DamageType</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00071">FDTDamageContext::EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00209">FDTDamageResult::FinalDamage</a>, <a class="el" href="_d_t_game_settings_8h_source.html#l00031">UDTGameSettings::GetDefaultDamageEffectClass()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00098">FDTDamageContext::HitResult</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00212">FDTDamageResult::ResultTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00068">FDTDamageContext::TargetActor</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00010">FDTGameplayEffectContext::AppendContextTags()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">ApplyDamage()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00231">FDTDamageResult::bCancelled</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00238">FDTDamageResult::BlockHealAmount</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00111">FDTDamageContext::bSuppressHitReact</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00777">UDTAbilitySystemComponent::BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">CalculateDamage()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00080">FDTDamageContext::DamageType</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00071">FDTDamageContext::EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00219">FDTDamageResult::FinalDamage</a>, <a class="el" href="_d_t_game_settings_8h_source.html#l00031">UDTGameSettings::GetDefaultDamageEffectClass()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00346">UDTBlueprintLibrary::GetDTEffectContextMutable()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00104">FDTDamageContext::HitReactMagnitude</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00098">FDTDamageContext::HitResult</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00107">FDTDamageContext::KnockbackMagnitude</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00222">FDTDamageResult::ResultTags</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00754">UDTAbilitySystemComponent::SendAbilityEvent()</a>, <a class="el" href="_d_t_ability_system_types_8h_source.html#l00031">FDTGameplayEffectContext::SetKnockbackMagnitude()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00068">FDTDamageContext::TargetActor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00147">ApplyDamage()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00021">DealDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">ApplyDamage()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00021">DealDamage()</a>.</p>
 
 </div>
 </div>
@@ -336,11 +341,11 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00395">395</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00454">454</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00215">FDTDamageResult::AppliedModifiers</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00233">FDTCombatAccumulator::Damage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00173">FDTCombatModifierRecord::DamageAfter</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00170">FDTCombatModifierRecord::DamageBefore</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00274">GetArmorMitigationFactor()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00167">FDTCombatModifierRecord::Magnitude</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00021">Mitigation</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00235">FDTCombatAccumulator::MitigationPenetration</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00236">FDTCombatAccumulator::MitigationReduction</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00164">FDTCombatModifierRecord::Operation</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00161">FDTCombatModifierRecord::Phase</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00035">Reduction</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00225">FDTDamageResult::AppliedModifiers</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00243">FDTCombatAccumulator::Damage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00183">FDTCombatModifierRecord::DamageAfter</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00180">FDTCombatModifierRecord::DamageBefore</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00297">GetArmorConstant()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00309">GetArmorExponent()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00177">FDTCombatModifierRecord::Magnitude</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00021">Mitigation</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00245">FDTCombatAccumulator::MitigationPenetration</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00246">FDTCombatAccumulator::MitigationReduction</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00174">FDTCombatModifierRecord::Operation</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00171">FDTCombatModifierRecord::Phase</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00035">Reduction</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">CalculateDamage()</a>, and <a class="el" href="#ae791801499307304c9df85dca5200c76">GetMaxBlockDamageReduction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">CalculateDamage()</a>.</p>
 
 </div>
 </div>
@@ -391,11 +396,11 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00320">320</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00379">379</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_types_8cpp_source.html#l00015">FDTCombatAccumulator::ApplyModifier()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00320">ApplyModifierPhase()</a>, and <a class="el" href="_d_t_combat_types_8cpp_source.html#l00060">FDTCombatAccumulator::FlushAdditiveBucket()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_types_8cpp_source.html#l00015">FDTCombatAccumulator::ApplyModifier()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00379">ApplyModifierPhase()</a>, and <a class="el" href="_d_t_combat_types_8cpp_source.html#l00060">FDTCombatAccumulator::FlushAdditiveBucket()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00320">ApplyModifierPhase()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">CalculateDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00379">ApplyModifierPhase()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">CalculateDamage()</a>.</p>
 
 </div>
 </div>
@@ -451,11 +456,11 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00421">421</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00531">531</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00678">UDTAbilitySystemComponent::BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00071">FDTDamageContext::EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00098">FDTDamageContext::HitResult</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00655">UDTAbilitySystemComponent::SendAbilityEvent()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00068">FDTDamageContext::TargetActor</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00777">UDTAbilitySystemComponent::BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00071">FDTDamageContext::EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00098">FDTDamageContext::HitResult</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00754">UDTAbilitySystemComponent::SendAbilityEvent()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00068">FDTDamageContext::TargetActor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a5360243c0967d06e980e6ab342273895">ApplyBlock()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">CalculateDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">CalculateDamage()</a>.</p>
 
 </div>
 </div>
@@ -478,11 +483,11 @@ Static Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">57</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">59</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00363">ApplyCrit()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00395">ApplyMitigation()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00320">ApplyModifierPhase()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00017">Base</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00077">FDTDamageContext::BaseDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00200">FDTDamageResult::BaseDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00221">FDTDamageResult::bCancelled</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00421">BroadcastDamageEvent()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00101">FDTDamageContext::bSkipBuiltInMitigation</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">CalculateDamage()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00019">Crit</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00233">FDTCombatAccumulator::Damage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00071">FDTDamageContext::EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00022">Final</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00209">FDTDamageResult::FinalDamage</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00286">GatherModifiers()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00098">FDTDamageContext::HitResult</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00044">FDTCombatModifierHandle::Id</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00020">Incoming</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00206">FDTDamageResult::MitigatedDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00021">Mitigation</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00018">Outgoing</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00203">FDTDamageResult::PreMitigationDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00023">Proc</a>, <a class="el" href="_d_t_combat_types_8cpp_source.html#l00005">FDTCombatAccumulator::Reset()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00212">FDTDamageResult::ResultTags</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00304">SortModifiers()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00068">FDTDamageContext::TargetActor</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00741">UDTAbilitySystemComponent::UnregisterCombatModifier()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00253">UpdateContextTags()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00487">ApplyBlock()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00422">ApplyCrit()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00454">ApplyMitigation()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00379">ApplyModifierPhase()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00017">Base</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00077">FDTDamageContext::BaseDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00210">FDTDamageResult::BaseDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00231">FDTDamageResult::bCancelled</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00531">BroadcastDamageEvent()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00101">FDTDamageContext::bSkipBuiltInMitigation</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">CalculateDamage()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00019">Crit</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00243">FDTCombatAccumulator::Damage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00071">FDTDamageContext::EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00022">Final</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00219">FDTDamageResult::FinalDamage</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00345">GatherModifiers()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00098">FDTDamageContext::HitResult</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00044">FDTCombatModifierHandle::Id</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00020">Incoming</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00216">FDTDamageResult::MitigatedDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00021">Mitigation</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00018">Outgoing</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00213">FDTDamageResult::PreMitigationDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00023">Proc</a>, <a class="el" href="_d_t_combat_types_8cpp_source.html#l00005">FDTCombatAccumulator::Reset()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00222">FDTDamageResult::ResultTags</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00363">SortModifiers()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00068">FDTDamageContext::TargetActor</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00840">UDTAbilitySystemComponent::UnregisterCombatModifier()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00276">UpdateContextTags()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00147">ApplyDamage()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">CalculateDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">ApplyDamage()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">CalculateDamage()</a>.</p>
 
 </div>
 </div>
@@ -535,14 +540,14 @@ Static Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00021">21</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00147">ApplyDamage()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">ApplyDamage()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">DealDamageToTarget()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00801">UDTCheatManager::KillAllEnemies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">DealDamageToTarget()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00815">UDTCheatManager::KillAllEnemies()</a>.</p>
 
 </div>
 </div>
-<a id="a6686324367c9ca04bf20e7c8adbdbe7a" name="a6686324367c9ca04bf20e7c8adbdbe7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6686324367c9ca04bf20e7c8adbdbe7a">&#9670;&#160;</a></span>DealDamageToTarget()</h2>
+<a id="a0cccae5e99132fcfd190d6ddce100ac5" name="a0cccae5e99132fcfd190d6ddce100ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cccae5e99132fcfd190d6ddce100ac5">&#9670;&#160;</a></span>DealDamageToTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -608,7 +613,17 @@ Static Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">FGameplayEffectContextHandle</td>          <td class="paramname"><span class="paramname"><em>EffectContext</em></span><span class="paramdefsep"> = </span><span class="paramdefval">FGameplayEffectContextHandle()</span>&#160;)</td>
+          <td class="paramtype">FGameplayEffectContextHandle</td>          <td class="paramname"><span class="paramname"><em>EffectContext</em></span><span class="paramdefsep"> = </span><span class="paramdefval">FGameplayEffectContextHandle()</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>HitReactMagnitude</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0f</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>KnockbackMagnitude</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0f</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -620,9 +635,9 @@ Static Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">37</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00077">FDTDamageContext::BaseDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00080">FDTDamageContext::DamageType</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00021">DealDamage()</a>, <a class="el" href="_d_t_combat_modifier_8h_source.html#l00017">EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00071">FDTDamageContext::EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00098">FDTDamageContext::HitResult</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00074">FDTDamageContext::SourceObject</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00068">FDTDamageContext::TargetActor</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00077">FDTDamageContext::BaseDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00080">FDTDamageContext::DamageType</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00021">DealDamage()</a>, <a class="el" href="_d_t_combat_modifier_8h_source.html#l00017">EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00071">FDTDamageContext::EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00104">FDTDamageContext::HitReactMagnitude</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00098">FDTDamageContext::HitResult</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00107">FDTDamageContext::KnockbackMagnitude</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00074">FDTDamageContext::SourceObject</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00068">FDTDamageContext::TargetActor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00288">UDTGameplayAbility_Melee::ApplyMeleeDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00281">UDTGameplayAbility_Melee::ApplyMeleeDamage()</a>.</p>
 
 </div>
 </div>
@@ -663,16 +678,16 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00286">286</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00345">345</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00756">UDTAbilitySystemComponent::AppendCombatModifierSpecs()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00286">GatherModifiers()</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00023">Proc</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00855">UDTAbilitySystemComponent::AppendCombatModifierSpecs()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00345">GatherModifiers()</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00023">Proc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">CalculateDamage()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00286">GatherModifiers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">CalculateDamage()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00345">GatherModifiers()</a>.</p>
 
 </div>
 </div>
-<a id="a22f2729cdcc2840a66e729e4479ed26a" name="a22f2729cdcc2840a66e729e4479ed26a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22f2729cdcc2840a66e729e4479ed26a">&#9670;&#160;</a></span>GetArmorMitigationFactor()</h2>
+<a id="a7a96a24f189521290e574737ce791285" name="a7a96a24f189521290e574737ce791285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a96a24f189521290e574737ce791285">&#9670;&#160;</a></span>GetArmorConstant()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -681,7 +696,7 @@ Static Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float UDTCombatSubsystem::GetArmorMitigationFactor </td>
+          <td class="memname">float UDTCombatSubsystem::GetArmorConstant </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -694,16 +709,47 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00274">274</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00297">297</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_global_data_8h_source.html#l00025">UDTCombatGlobalData::ArmorMitigationFactor</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00044">UDTGlobalData::CombatGlobalData</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00042">UDTBlueprintLibrary::GetGlobalDataFast()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_global_data_8h_source.html#l00044">UDTGlobalData::CombatGlobalData</a>, <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00005">UDTCombatGlobalData::GetArmorConstant()</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00395">ApplyMitigation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00454">ApplyMitigation()</a>.</p>
 
 </div>
 </div>
-<a id="a59a636802be9fd6481e91cffd5584b5e" name="a59a636802be9fd6481e91cffd5584b5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59a636802be9fd6481e91cffd5584b5e">&#9670;&#160;</a></span>GetBaseBlockEffectiveness()</h2>
+<a id="a53a96d85002ba8627d7857002e8d13f1" name="a53a96d85002ba8627d7857002e8d13f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a96d85002ba8627d7857002e8d13f1">&#9670;&#160;</a></span>GetArmorExponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTCombatSubsystem::GetArmorExponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00309">309</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_global_data_8h_source.html#l00044">UDTGlobalData::CombatGlobalData</a>, <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00010">UDTCombatGlobalData::GetArmorExponent()</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00454">ApplyMitigation()</a>.</p>
+
+</div>
+</div>
+<a id="a07aec6eadbba50e61040039381117273" name="a07aec6eadbba50e61040039381117273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07aec6eadbba50e61040039381117273">&#9670;&#160;</a></span>GetBaseBlockEffectiveness()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -725,10 +771,16 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00321">321</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_global_data_8h_source.html#l00044">UDTGlobalData::CombatGlobalData</a>, <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00015">UDTCombatGlobalData::GetBaseBlockEffectiveness()</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00487">ApplyBlock()</a>.</p>
+
 </div>
 </div>
-<a id="ae791801499307304c9df85dca5200c76" name="ae791801499307304c9df85dca5200c76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae791801499307304c9df85dca5200c76">&#9670;&#160;</a></span>GetMaxBlockDamageReduction()</h2>
+<a id="a4dcdca18f190e941974950ccc3fdd01a" name="a4dcdca18f190e941974950ccc3fdd01a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dcdca18f190e941974950ccc3fdd01a">&#9670;&#160;</a></span>GetMaxBlockDamageReduction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -750,7 +802,11 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00363">ApplyCrit()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00395">ApplyMitigation()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00333">333</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_global_data_8h_source.html#l00044">UDTGlobalData::CombatGlobalData</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, and <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00020">UDTCombatGlobalData::GetMaxBlockDamageReduction()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00487">ApplyBlock()</a>.</p>
 
 </div>
 </div>
@@ -777,11 +833,11 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00304">304</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00363">363</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00143">FDTCombatModifierSpec::HandleId</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00119">FDTCombatModifierSpec::Phase</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00131">FDTCombatModifierSpec::Priority</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00153">FDTCombatModifierSpec::HandleId</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00129">FDTCombatModifierSpec::Phase</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00141">FDTCombatModifierSpec::Priority</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">CalculateDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">CalculateDamage()</a>.</p>
 
 </div>
 </div>
@@ -817,11 +873,11 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00253">253</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00276">276</a> of file <a class="el" href="_d_t_combat_subsystem_8cpp_source.html">DTCombatSubsystem.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00080">FDTDamageContext::DamageType</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00086">FDTDamageContext::SourceTags</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00089">FDTDamageContext::TargetTags</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">CalculateDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">CalculateDamage()</a>.</p>
 
 </div>
 </div>

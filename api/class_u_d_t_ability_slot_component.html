@@ -176,10 +176,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0399a527d647928e90c9cb9e31348513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all slots.  <br /></td></tr>
 <tr class="memitem:aee4f432ed430b6f0afd941f0d7456ddc" id="r_aee4f432ed430b6f0afd941f0d7456ddc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aee4f432ed430b6f0afd941f0d7456ddc">RestoreDefaultAbility</a> (FGameplayTag SlotTag)</td></tr>
 <tr class="memdesc:aee4f432ed430b6f0afd941f0d7456ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore the default ability to a slot (if one was configured).  <br /></td></tr>
-<tr class="memitem:a685f8cc20325c175b15bef46a2e9d9e6" id="r_a685f8cc20325c175b15bef46a2e9d9e6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a685f8cc20325c175b15bef46a2e9d9e6">UpdateSlotInputBinding</a> (<a class="el" href="struct_f_ability_slot.html">FAbilitySlot</a> &amp;Slot)</td></tr>
-<tr class="memdesc:a685f8cc20325c175b15bef46a2e9d9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update input binding for a slot.  <br /></td></tr>
-<tr class="memitem:a33f6531bc76e00a2994defa92b930107" id="r_a33f6531bc76e00a2994defa92b930107"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a33f6531bc76e00a2994defa92b930107">RefreshAllInputBindings</a> ()</td></tr>
-<tr class="memdesc:a33f6531bc76e00a2994defa92b930107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-bind input for all slotted abilities.  <br /></td></tr>
 <tr class="memitem:a0d189edb22ce4cb97b409d339e983007" id="r_a0d189edb22ce4cb97b409d339e983007"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0d189edb22ce4cb97b409d339e983007">SetActiveWeaponSet</a> (FGameplayTag WeaponSetTag)</td></tr>
 <tr class="memdesc:a0d189edb22ce4cb97b409d339e983007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the active weapon set and restore that set's saved spell loadout into the spell slots.  <br /></td></tr>
 <tr class="memitem:a8b4f0d8413fc744ebef4f63b5f8fb7c7" id="r_a8b4f0d8413fc744ebef4f63b5f8fb7c7"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#a8b4f0d8413fc744ebef4f63b5f8fb7c7">GetActiveWeaponSet</a> () const</td></tr>
@@ -192,6 +188,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7e7fad03effc5eae02cae2bc9ec3814a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear a spell from a specific weapon set's loadout.  <br /></td></tr>
 <tr class="memitem:a61c22c366ab987319ddc8e7a00e4f318" id="r_a61c22c366ab987319ddc8e7a00e4f318"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a61c22c366ab987319ddc8e7a00e4f318">GetSpellLoadout</a> (FGameplayTag WeaponSetTag, TArray&lt; <a class="el" href="struct_f_d_t_spell_slot_assignment.html">FDTSpellSlotAssignment</a> &gt; &amp;OutAssignments) const</td></tr>
 <tr class="memdesc:a61c22c366ab987319ddc8e7a00e4f318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a weapon set's stored spell loadout, so the loadout screen can display either set's configured spells.  <br /></td></tr>
+<tr class="memitem:a7c2469b40f4b26a64b0a4bf26a252449" id="r_a7c2469b40f4b26a64b0a4bf26a252449"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a7c2469b40f4b26a64b0a4bf26a252449">PruneInvalidSpellAssignments</a> ()</td></tr>
+<tr class="memdesc:a7c2469b40f4b26a64b0a4bf26a252449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drop any stored spell-loadout entries whose ability class is no longer granted on the ASC (e.g.  <br /></td></tr>
 <tr class="memitem:ab6b3cbdb03ef8f76e5e25b21c0760575" id="r_ab6b3cbdb03ef8f76e5e25b21c0760575"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab6b3cbdb03ef8f76e5e25b21c0760575">Server_SetSpellInLoadout</a> (FGameplayTag WeaponSetTag, FGameplayTag SpellSlotTag, FGameplayAbilitySpecHandle AbilityHandle)</td></tr>
 <tr class="memitem:aad6aec77b4a846a419602238f22b3de4" id="r_aad6aec77b4a846a419602238f22b3de4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aad6aec77b4a846a419602238f22b3de4">Server_ClearSpellInLoadout</a> (FGameplayTag WeaponSetTag, FGameplayTag SpellSlotTag)</td></tr>
 <tr class="memitem:a74421812e5ac5bda87509c08ca304ccd" id="r_a74421812e5ac5bda87509c08ca304ccd"><td class="memItemLeft"><a class="el" href="struct_f_ability_slot_save_data.html">FAbilitySlotSaveData</a>&#160;</td><td class="memItemRight"><a class="el" href="#a74421812e5ac5bda87509c08ca304ccd">GetSaveData</a> () const</td></tr>
@@ -219,15 +217,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0b1f3ea7df5c9ef7382eec18d7488d91" id="r_a0b1f3ea7df5c9ef7382eec18d7488d91"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a0b1f3ea7df5c9ef7382eec18d7488d91">GetLifetimeReplicatedProps</a> (TArray&lt; FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
 <tr class="memitem:ae2e2790db7ec18ba2d326c14c5d23d37" id="r_ae2e2790db7ec18ba2d326c14c5d23d37"><td class="memItemLeft"><a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae2e2790db7ec18ba2d326c14c5d23d37">GetAbilitySystemComponent</a> () const</td></tr>
 <tr class="memdesc:ae2e2790db7ec18ba2d326c14c5d23d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ability system component from the owner.  <br /></td></tr>
-<tr class="memitem:a6bdf1fb20d77886f613b43da74a7fc43" id="r_a6bdf1fb20d77886f613b43da74a7fc43"><td class="memItemLeft">UGSCAbilityInputBindingComponent *&#160;</td><td class="memItemRight"><a class="el" href="#a6bdf1fb20d77886f613b43da74a7fc43">GetInputBindingComponent</a> () const</td></tr>
-<tr class="memdesc:a6bdf1fb20d77886f613b43da74a7fc43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the input binding component from the owner.  <br /></td></tr>
+<tr class="memitem:a443a0ee4c81bc2936544e0e71e07fea4" id="r_a443a0ee4c81bc2936544e0e71e07fea4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a443a0ee4c81bc2936544e0e71e07fea4">UpdateSlotInputTag</a> (<a class="el" href="struct_f_ability_slot.html">FAbilitySlot</a> &amp;Slot, FGameplayAbilitySpecHandle PreviousHandle)</td></tr>
+<tr class="memdesc:a443a0ee4c81bc2936544e0e71e07fea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the slot's SlotTag between ability specs' dynamic source tags (authority only).  <br /></td></tr>
 <tr class="memitem:a5dd7fd02d3f20869e363ac56c3a0feee" id="r_a5dd7fd02d3f20869e363ac56c3a0feee"><td class="memItemLeft"><a class="el" href="struct_f_ability_slot.html">FAbilitySlot</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5dd7fd02d3f20869e363ac56c3a0feee">FindSlotByTag</a> (FGameplayTag SlotTag)</td></tr>
 <tr class="memdesc:a5dd7fd02d3f20869e363ac56c3a0feee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a slot by tag.  <br /></td></tr>
 <tr class="memitem:a3a9ad2fc298b3559b430290bf0be9ad7" id="r_a3a9ad2fc298b3559b430290bf0be9ad7"><td class="memItemLeft">const <a class="el" href="struct_f_ability_slot.html">FAbilitySlot</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3a9ad2fc298b3559b430290bf0be9ad7">FindSlotByTag</a> (FGameplayTag SlotTag) const</td></tr>
 <tr class="memitem:a075d1d564d5dbdecfa0c227548ef7100" id="r_a075d1d564d5dbdecfa0c227548ef7100"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a075d1d564d5dbdecfa0c227548ef7100">ValidateAbilityForSlot</a> (const <a class="el" href="struct_f_ability_slot.html">FAbilitySlot</a> &amp;Slot, FGameplayAbilitySpecHandle AbilityHandle, FText &amp;OutFailureReason) const</td></tr>
 <tr class="memdesc:a075d1d564d5dbdecfa0c227548ef7100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate if an ability meets slot requirements.  <br /></td></tr>
-<tr class="memitem:a47c0d963ef3c53c81bf323cbb2f4b80a" id="r_a47c0d963ef3c53c81bf323cbb2f4b80a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a47c0d963ef3c53c81bf323cbb2f4b80a">HandleOwnerPawnSet</a> (APlayerState *Player, APawn *NewPawn, APawn *OldPawn)</td></tr>
-<tr class="memdesc:a47c0d963ef3c53c81bf323cbb2f4b80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the owning PlayerState's pawn is set — re-binds input for all slotted abilities.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -247,7 +243,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Component for managing dynamic ability slots. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00207">207</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00196">196</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aec895b0d79e7923f94d84cbe62790e5c" name="aec895b0d79e7923f94d84cbe62790e5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec895b0d79e7923f94d84cbe62790e5c">&#9670;&#160;</a></span>UDTAbilitySlotComponent()</h2>
@@ -264,9 +260,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00013">13</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00012">12</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00020">GetLifetimeReplicatedProps()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00019">GetLifetimeReplicatedProps()</a>.</p>
 
 </div>
 </div>
@@ -296,11 +292,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Restore a weapon set's saved spell loadout into the spell slots (resolving classes to granted specs). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00667">667</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00700">700</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00160">FDTSpellSlotAssignment::AbilityClass</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00175">FDTWeaponSpellLoadout::Assignments</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00368">bApplyingSpellLoadout</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00085">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00405">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00571">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00111">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00030">FAbilitySlotDefinition::SlotTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00358">SpellLoadouts</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00157">FDTSpellSlotAssignment::SpellSlotTag</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00172">FDTWeaponSpellLoadout::WeaponSetTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00149">FDTSpellSlotAssignment::AbilityClass</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00164">FDTWeaponSpellLoadout::Assignments</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00359">bApplyingSpellLoadout</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00074">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00400">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00540">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00100">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00027">FAbilitySlotDefinition::SlotTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00349">SpellLoadouts</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00146">FDTSpellSlotAssignment::SpellSlotTag</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00161">FDTWeaponSpellLoadout::WeaponSetTag</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00829">LoadSaveData()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00576">SetActiveWeaponSet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00853">LoadSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00626">PruneInvalidSpellAssignments()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00545">SetActiveWeaponSet()</a>.</p>
 
 </div>
 </div>
@@ -330,11 +326,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Check if an ability can be slotted into the specified slot. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00278">278</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00273">273</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00438">FindSlotByTag()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00463">ValidateAbilityForSlot()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00454">FindSlotByTag()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00479">ValidateAbilityForSlot()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a513a0cd3e24888687738c7ba1c0f81e0">Server_SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00638">UDTEquipmentComponent::SlotAbilitiesForItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a513a0cd3e24888687738c7ba1c0f81e0">Server_SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00657">UDTEquipmentComponent::SlotAbilitiesForItem()</a>.</p>
 
 </div>
 </div>
@@ -355,9 +351,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Clear all slots. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00382">382</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00377">377</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00085">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00111">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00030">FAbilitySlotDefinition::SlotTag</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00074">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00100">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00027">FAbilitySlotDefinition::SlotTag</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>.</p>
 
 </div>
 </div>
@@ -383,9 +379,9 @@ Protected Attributes</h2></td></tr>
 <p>Clear a spell from a specific weapon set's loadout. </p>
 <p>If the set is active, also unslots it live. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00622">622</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00591">591</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00365">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00571">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00726">RecordSpellAssignment()</a>, <a class="el" href="#aad6aec77b4a846a419602238f22b3de4">Server_ClearSpellInLoadout()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00356">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00540">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00759">RecordSpellAssignment()</a>, <a class="el" href="#aad6aec77b4a846a419602238f22b3de4">Server_ClearSpellInLoadout()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>.</p>
 
 </div>
 </div>
@@ -410,11 +406,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Find the first empty slot that can accept this ability. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00351">351</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00346">346</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00085">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00112">FAbilitySlot::IsEmpty()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00030">FAbilitySlotDefinition::SlotTag</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00463">ValidateAbilityForSlot()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00074">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00101">FAbilitySlot::IsEmpty()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00027">FAbilitySlotDefinition::SlotTag</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00479">ValidateAbilityForSlot()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00638">UDTEquipmentComponent::SlotAbilitiesForItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00657">UDTEquipmentComponent::SlotAbilitiesForItem()</a>.</p>
 
 </div>
 </div>
@@ -443,11 +439,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Find a slot by tag. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00438">438</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00454">454</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00085">FAbilitySlot::Definition</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00030">FAbilitySlotDefinition::SlotTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00074">FAbilitySlot::Definition</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00027">FAbilitySlotDefinition::SlotTag</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00278">CanSlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00296">GetAbilitySlot()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00290">GetSlottedAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00377">HasSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00829">LoadSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00901">RestoreDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00209">SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00273">CanSlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00291">GetAbilitySlot()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00285">GetSlottedAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00372">HasSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00853">LoadSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00929">RestoreDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00204">SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>.</p>
 
 </div>
 </div>
@@ -474,9 +470,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00451">451</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00467">467</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00085">FAbilitySlot::Definition</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00030">FAbilitySlotDefinition::SlotTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00074">FAbilitySlot::Definition</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00027">FAbilitySlotDefinition::SlotTag</a>.</p>
 
 </div>
 </div>
@@ -495,11 +491,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00364">364</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00359">359</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00085">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00030">FAbilitySlotDefinition::SlotTag</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::SlottedAbilityHandle</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00074">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00027">FAbilitySlotDefinition::SlotTag</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00078">FAbilitySlot::SlottedAbilityHandle</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00106">UDTAbilityWidget::NativeOnDrop()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00836">UDTSkillTreeComponent::RevokeTreeRewards()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00612">UDTEquipmentComponent::UnSlotAbilitiesForItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00107">UDTAbilityWidget::NativeOnDrop()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00841">UDTSkillTreeComponent::RevokeTreeRewards()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00631">UDTEquipmentComponent::UnSlotAbilitiesForItem()</a>.</p>
 
 </div>
 </div>
@@ -524,9 +520,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Get a specific slot by tag. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00296">296</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00291">291</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00438">FindSlotByTag()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00454">FindSlotByTag()</a>.</p>
 
 </div>
 </div>
@@ -555,11 +551,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Get all ability slots. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00262">262</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00251">251</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00262">GetAbilitySlots()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00251">GetAbilitySlots()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00262">GetAbilitySlots()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00251">GetAbilitySlots()</a>.</p>
 
 </div>
 </div>
@@ -588,9 +584,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the ability system component from the owner. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00405">405</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00400">400</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00667">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00781">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00047">InitializeSlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00829">LoadSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00593">SetSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00463">ValidateAbilityForSlot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00700">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00805">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00040">InitializeSlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00853">LoadSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00626">PruneInvalidSpellAssignments()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00562">SetSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00410">UpdateSlotInputTag()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00479">ValidateAbilityForSlot()</a>.</p>
 
 </div>
 </div>
@@ -619,44 +615,11 @@ Protected Attributes</h2></td></tr>
 
 <p>The weapon set whose spell loadout is currently live in the spell slots. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00307">307</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00289">289</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00365">ActiveWeaponSetTag</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00307">GetActiveWeaponSet()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00356">ActiveWeaponSetTag</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00289">GetActiveWeaponSet()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00307">GetActiveWeaponSet()</a>.</p>
-
-</div>
-</div>
-<a id="a6bdf1fb20d77886f613b43da74a7fc43" name="a6bdf1fb20d77886f613b43da74a7fc43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bdf1fb20d77886f613b43da74a7fc43">&#9670;&#160;</a></span>GetInputBindingComponent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">UGSCAbilityInputBindingComponent * UDTAbilitySlotComponent::GetInputBindingComponent </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the input binding component from the owner. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00415">415</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00033">ADTPlayerCharacter::GetAbilityInputBindingComponent()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00547">RefreshAllInputBindings()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00519">UpdateSlotInputBinding()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00289">GetActiveWeaponSet()</a>.</p>
 
 </div>
 </div>
@@ -683,9 +646,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00020">20</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00019">19</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00365">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00358">SpellLoadouts</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00013">UDTAbilitySlotComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00356">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00349">SpellLoadouts</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00012">UDTAbilitySlotComponent()</a>.</p>
 
 </div>
 </div>
@@ -706,9 +669,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Extract save data from current slot assignments. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00781">781</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00805">805</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00196">FAbilitySlotSaveData::ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00365">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00068">FAbilitySlotDefinition::bExcludeFromSave</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00097">FAbilitySlot::DefaultAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00085">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00405">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00100">FAbilitySlot::HasDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00571">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00111">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00188">FAbilitySlotSaveData::SlotAssignments</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00030">FAbilitySlotDefinition::SlotTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::SlottedAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00192">FAbilitySlotSaveData::SpellLoadouts</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00358">SpellLoadouts</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00185">FAbilitySlotSaveData::ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00356">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00057">FAbilitySlotDefinition::bExcludeFromSave</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00086">FAbilitySlot::DefaultAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00074">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00400">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::HasDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00540">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00100">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00177">FAbilitySlotSaveData::SlotAssignments</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00027">FAbilitySlotDefinition::SlotTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00078">FAbilitySlot::SlottedAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00181">FAbilitySlotSaveData::SpellLoadouts</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00349">SpellLoadouts</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#aad6aec77b4a846a419602238f22b3de4">Server_ClearSpellInLoadout()</a>.</p>
 
@@ -735,9 +698,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Get all slots that match specific tags. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00307">307</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00302">302</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00085">FAbilitySlot::Definition</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00030">FAbilitySlotDefinition::SlotTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00074">FAbilitySlot::Definition</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00027">FAbilitySlotDefinition::SlotTag</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_spell_loadout_widget_8cpp_source.html#l00068">UDTSpellLoadoutWidget::RebuildSpellBar()</a>.</p>
 
@@ -760,9 +723,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the ability slotted in the specified slot. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00290">290</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00285">285</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00438">FindSlotByTag()</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::SlottedAbilityHandle</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00454">FindSlotByTag()</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00078">FAbilitySlot::SlottedAbilityHandle</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a513a0cd3e24888687738c7ba1c0f81e0">Server_SwapSlottedAbilities()</a>.</p>
 
@@ -789,51 +752,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Read a weapon set's stored spell loadout, so the loadout screen can display either set's configured spells. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00643">643</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00612">612</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00175">FDTWeaponSpellLoadout::Assignments</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00358">SpellLoadouts</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00172">FDTWeaponSpellLoadout::WeaponSetTag</a>.</p>
-
-</div>
-</div>
-<a id="a47c0d963ef3c53c81bf323cbb2f4b80a" name="a47c0d963ef3c53c81bf323cbb2f4b80a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47c0d963ef3c53c81bf323cbb2f4b80a">&#9670;&#160;</a></span>HandleOwnerPawnSet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void UDTAbilitySlotComponent::HandleOwnerPawnSet </td>
-          <td>(</td>
-          <td class="paramtype">APlayerState *</td>          <td class="paramname"><span class="paramname"><em>Player</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">APawn *</td>          <td class="paramname"><span class="paramname"><em>NewPawn</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">APawn *</td>          <td class="paramname"><span class="paramname"><em>OldPawn</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Called when the owning PlayerState's pawn is set — re-binds input for all slotted abilities. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00772">772</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00547">RefreshAllInputBindings()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00029">InitializeComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00164">FDTWeaponSpellLoadout::Assignments</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00349">SpellLoadouts</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00161">FDTWeaponSpellLoadout::WeaponSetTag</a>.</p>
 
 </div>
 </div>
@@ -854,9 +775,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Check if a slot exists with the given tag. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00377">377</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00372">372</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00438">FindSlotByTag()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00454">FindSlotByTag()</a>.</p>
 
 </div>
 </div>
@@ -883,9 +804,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00029">29</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00028">28</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00346">DefaultSlotDefinitions</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00772">HandleOwnerPawnSet()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00047">InitializeSlots()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00337">DefaultSlotDefinitions</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00040">InitializeSlots()</a>.</p>
 
 </div>
 </div>
@@ -906,11 +827,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Initialize slots with predefined definitions. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00047">47</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00040">40</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00097">FAbilitySlot::DefaultAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00405">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00111">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00220">OnAbilitySlotsInitialized</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::SlottedAbilityHandle</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00519">UpdateSlotInputBinding()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00086">FAbilitySlot::DefaultAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00400">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00100">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00209">OnAbilitySlotsInitialized</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00078">FAbilitySlot::SlottedAbilityHandle</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00410">UpdateSlotInputTag()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00029">InitializeComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00028">InitializeComponent()</a>.</p>
 
 </div>
 </div>
@@ -931,11 +852,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Whether a slot is a per-weapon-set spell slot (its tag is under SpellSlotCategoryTag). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00571">571</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00540">540</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00354">SpellSlotCategoryTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00345">SpellSlotCategoryTag</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00667">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00622">ClearSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00781">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00593">SetSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00700">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00591">ClearSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00805">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00562">SetSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>.</p>
 
 </div>
 </div>
@@ -957,9 +878,9 @@ Protected Attributes</h2></td></tr>
 <p>Restore slot assignments from save data. </p>
 <p>Must be called after abilities have been granted. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00829">829</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00853">853</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00196">FAbilitySlotSaveData::ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00365">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00667">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00438">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00405">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00188">FAbilitySlotSaveData::SlotAssignments</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00192">FAbilitySlotSaveData::SpellLoadouts</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00358">SpellLoadouts</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00185">FAbilitySlotSaveData::ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00356">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00700">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00454">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00400">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00626">PruneInvalidSpellAssignments()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00177">FAbilitySlotSaveData::SlotAssignments</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00181">FAbilitySlotSaveData::SpellLoadouts</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00349">SpellLoadouts</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#aad6aec77b4a846a419602238f22b3de4">Server_ClearSpellInLoadout()</a>.</p>
 
@@ -988,9 +909,35 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00566">566</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00535">535</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00224">OnSpellLoadoutsChanged</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00213">OnSpellLoadoutsChanged</a>.</p>
+
+</div>
+</div>
+<a id="a7c2469b40f4b26a64b0a4bf26a252449" name="a7c2469b40f4b26a64b0a4bf26a252449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2469b40f4b26a64b0a4bf26a252449">&#9670;&#160;</a></span>PruneInvalidSpellAssignments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTAbilitySlotComponent::PruneInvalidSpellAssignments </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Drop any stored spell-loadout entries whose ability class is no longer granted on the ASC (e.g. </p>
+<p>after a skill-tree respec revokes the spell). Cleans EVERY weapon set's stored loadout — including the inactive set, whose spells the live slots never reference — and re-applies the active set if it changed. Authority-only; the resulting store/slot changes replicate to the owner. Returns the number of entries removed. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00626">626</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00149">FDTSpellSlotAssignment::AbilityClass</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00356">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00700">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00400">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00213">OnSpellLoadoutsChanged</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00349">SpellLoadouts</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00853">LoadSaveData()</a>.</p>
 
 </div>
 </div>
@@ -1028,37 +975,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Record/clear a spell assignment in a weapon set's stored loadout. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00726">726</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00759">759</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00160">FDTSpellSlotAssignment::AbilityClass</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00175">FDTWeaponSpellLoadout::Assignments</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00224">OnSpellLoadoutsChanged</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00358">SpellLoadouts</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00157">FDTSpellSlotAssignment::SpellSlotTag</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00172">FDTWeaponSpellLoadout::WeaponSetTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00149">FDTSpellSlotAssignment::AbilityClass</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00164">FDTWeaponSpellLoadout::Assignments</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00213">OnSpellLoadoutsChanged</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00349">SpellLoadouts</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00146">FDTSpellSlotAssignment::SpellSlotTag</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00161">FDTWeaponSpellLoadout::WeaponSetTag</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00622">ClearSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00593">SetSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>.</p>
-
-</div>
-</div>
-<a id="a33f6531bc76e00a2994defa92b930107" name="a33f6531bc76e00a2994defa92b930107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33f6531bc76e00a2994defa92b930107">&#9670;&#160;</a></span>RefreshAllInputBindings()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void UDTAbilitySlotComponent::RefreshAllInputBindings </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Re-bind input for all slotted abilities. </p>
-<p>Call when the pawn/input component becomes available. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00547">547</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00415">GetInputBindingComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00111">FAbilitySlot::IsValid()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00519">UpdateSlotInputBinding()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00772">HandleOwnerPawnSet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00591">ClearSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00562">SetSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>.</p>
 
 </div>
 </div>
@@ -1079,9 +1000,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Restore the default ability to a slot (if one was configured). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00901">901</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00929">929</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00097">FAbilitySlot::DefaultAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00438">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00100">FAbilitySlot::HasDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00216">OnAbilitySlotChanged</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::SlottedAbilityHandle</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00519">UpdateSlotInputBinding()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00086">FAbilitySlot::DefaultAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00454">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::HasDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00205">OnAbilitySlotChanged</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00078">FAbilitySlot::SlottedAbilityHandle</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00410">UpdateSlotInputTag()</a>.</p>
 
 </div>
 </div>
@@ -1104,9 +1025,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00781">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00829">LoadSaveData()</a>, and <a class="el" href="#aad6aec77b4a846a419602238f22b3de4">Server_ClearSpellInLoadout()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00805">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00853">LoadSaveData()</a>, and <a class="el" href="#aad6aec77b4a846a419602238f22b3de4">Server_ClearSpellInLoadout()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00622">ClearSpellInLoadout()</a>, and <a class="el" href="#aad6aec77b4a846a419602238f22b3de4">Server_ClearSpellInLoadout()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00591">ClearSpellInLoadout()</a>, and <a class="el" href="#aad6aec77b4a846a419602238f22b3de4">Server_ClearSpellInLoadout()</a>.</p>
 
 </div>
 </div>
@@ -1136,7 +1057,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#ab6b3cbdb03ef8f76e5e25b21c0760575">Server_SetSpellInLoadout()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ab6b3cbdb03ef8f76e5e25b21c0760575">Server_SetSpellInLoadout()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00593">SetSpellInLoadout()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ab6b3cbdb03ef8f76e5e25b21c0760575">Server_SetSpellInLoadout()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00562">SetSpellInLoadout()</a>.</p>
 
 </div>
 </div>
@@ -1161,7 +1082,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a0b7a96e024b5261e3314d4669d9ef3f1">Server_SlotAbility()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a0b7a96e024b5261e3314d4669d9ef3f1">Server_SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a0b7a96e024b5261e3314d4669d9ef3f1">Server_SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>.</p>
 
 </div>
 </div>
@@ -1184,9 +1105,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00278">CanSlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00290">GetSlottedAbility()</a>, and <a class="el" href="#a513a0cd3e24888687738c7ba1c0f81e0">Server_SwapSlottedAbilities()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00273">CanSlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00285">GetSlottedAbility()</a>, and <a class="el" href="#a513a0cd3e24888687738c7ba1c0f81e0">Server_SwapSlottedAbilities()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a513a0cd3e24888687738c7ba1c0f81e0">Server_SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00209">SwapSlottedAbilities()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a513a0cd3e24888687738c7ba1c0f81e0">Server_SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00204">SwapSlottedAbilities()</a>.</p>
 
 </div>
 </div>
@@ -1207,7 +1128,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a31fac928255141cb6705a62775b9ca9f">Server_UnslotAbility()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a31fac928255141cb6705a62775b9ca9f">Server_UnslotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a31fac928255141cb6705a62775b9ca9f">Server_UnslotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>.</p>
 
 </div>
 </div>
@@ -1229,9 +1150,9 @@ Protected Attributes</h2></td></tr>
 <p>Set the active weapon set and restore that set's saved spell loadout into the spell slots. </p>
 <p>Called by the equipment component on weapon swap. Authority-only; the resulting slot changes replicate to clients. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00576">576</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00545">545</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00365">ActiveWeaponSetTag</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00667">ApplySpellLoadout()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00356">ActiveWeaponSetTag</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00700">ApplySpellLoadout()</a>.</p>
 
 </div>
 </div>
@@ -1262,9 +1183,9 @@ Protected Attributes</h2></td></tr>
 <p>Set a spell into a specific weapon set's loadout (used by the loadout/skill-tree screen to edit either set, even the inactive one). </p>
 <p>If the set is the active one, the spell is also slotted live. Records the ability's class so it persists and restores on swap. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00593">593</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00562">562</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00365">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00405">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00571">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00726">RecordSpellAssignment()</a>, <a class="el" href="#ab6b3cbdb03ef8f76e5e25b21c0760575">Server_SetSpellInLoadout()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00356">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00400">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00540">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00759">RecordSpellAssignment()</a>, <a class="el" href="#ab6b3cbdb03ef8f76e5e25b21c0760575">Server_SetSpellInLoadout()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>.</p>
 
 </div>
 </div>
@@ -1295,11 +1216,11 @@ Protected Attributes</h2></td></tr>
 <p>Attempt to slot an ability into the specified slot. </p>
 <p>bFromEquipment marks the assignment as weapon-granted (excluded from per-slot save; restored by the equipment component on load). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">95</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">90</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00365">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00368">bApplyingSpellLoadout</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00438">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00405">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00571">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00216">OnAbilitySlotChanged</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00726">RecordSpellAssignment()</a>, <a class="el" href="#a0b7a96e024b5261e3314d4669d9ef3f1">Server_SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::SlottedAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00519">UpdateSlotInputBinding()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00463">ValidateAbilityForSlot()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00356">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00359">bApplyingSpellLoadout</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00454">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00400">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00540">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00205">OnAbilitySlotChanged</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00759">RecordSpellAssignment()</a>, <a class="el" href="#a0b7a96e024b5261e3314d4669d9ef3f1">Server_SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00078">FAbilitySlot::SlottedAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00410">UpdateSlotInputTag()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00479">ValidateAbilityForSlot()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00667">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00829">LoadSaveData()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00106">UDTAbilityWidget::NativeOnDrop()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00593">SetSpellInLoadout()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00638">UDTEquipmentComponent::SlotAbilitiesForItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00700">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00853">LoadSaveData()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00107">UDTAbilityWidget::NativeOnDrop()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00562">SetSpellInLoadout()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00657">UDTEquipmentComponent::SlotAbilitiesForItem()</a>.</p>
 
 </div>
 </div>
@@ -1324,11 +1245,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Swap abilities between two slots. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00209">209</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00204">204</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00438">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00111">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00216">OnAbilitySlotChanged</a>, <a class="el" href="#a513a0cd3e24888687738c7ba1c0f81e0">Server_SwapSlottedAbilities()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::SlottedAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00519">UpdateSlotInputBinding()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00463">ValidateAbilityForSlot()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00454">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00100">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00205">OnAbilitySlotChanged</a>, <a class="el" href="#a513a0cd3e24888687738c7ba1c0f81e0">Server_SwapSlottedAbilities()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00078">FAbilitySlot::SlottedAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00410">UpdateSlotInputTag()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00479">ValidateAbilityForSlot()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00106">UDTAbilityWidget::NativeOnDrop()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00302">UDTEquipmentComponent::SwapEquippedItems()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00107">UDTAbilityWidget::NativeOnDrop()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00317">UDTEquipmentComponent::SwapEquippedItems()</a>.</p>
 
 </div>
 </div>
@@ -1349,36 +1270,49 @@ Protected Attributes</h2></td></tr>
 
 <p>Remove an ability from the specified slot. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">157</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">152</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00365">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00368">bApplyingSpellLoadout</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00097">FAbilitySlot::DefaultAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00438">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00100">FAbilitySlot::HasDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00571">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00111">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00216">OnAbilitySlotChanged</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00726">RecordSpellAssignment()</a>, <a class="el" href="#a31fac928255141cb6705a62775b9ca9f">Server_UnslotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::SlottedAbilityHandle</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00519">UpdateSlotInputBinding()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">AbilitySlots</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00356">ActiveWeaponSetTag</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00359">bApplyingSpellLoadout</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00086">FAbilitySlot::DefaultAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00454">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::HasDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00540">IsSpellSlot()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00100">FAbilitySlot::IsValid()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00205">OnAbilitySlotChanged</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00759">RecordSpellAssignment()</a>, <a class="el" href="#a31fac928255141cb6705a62775b9ca9f">Server_UnslotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00078">FAbilitySlot::SlottedAbilityHandle</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00410">UpdateSlotInputTag()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00667">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00382">ClearAllSlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00622">ClearSpellInLoadout()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00836">UDTSkillTreeComponent::RevokeTreeRewards()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00612">UDTEquipmentComponent::UnSlotAbilitiesForItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00700">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00377">ClearAllSlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00591">ClearSpellInLoadout()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00841">UDTSkillTreeComponent::RevokeTreeRewards()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00631">UDTEquipmentComponent::UnSlotAbilitiesForItem()</a>.</p>
 
 </div>
 </div>
-<a id="a685f8cc20325c175b15bef46a2e9d9e6" name="a685f8cc20325c175b15bef46a2e9d9e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a685f8cc20325c175b15bef46a2e9d9e6">&#9670;&#160;</a></span>UpdateSlotInputBinding()</h2>
+<a id="a443a0ee4c81bc2936544e0e71e07fea4" name="a443a0ee4c81bc2936544e0e71e07fea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a443a0ee4c81bc2936544e0e71e07fea4">&#9670;&#160;</a></span>UpdateSlotInputTag()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void UDTAbilitySlotComponent::UpdateSlotInputBinding </td>
+          <td class="memname">void UDTAbilitySlotComponent::UpdateSlotInputTag </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_f_ability_slot.html">FAbilitySlot</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Slot</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_f_ability_slot.html">FAbilitySlot</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">FGameplayAbilitySpecHandle</td>          <td class="paramname"><span class="paramname"><em>PreviousHandle</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Update input binding for a slot. </p>
+<p>Moves the slot's SlotTag between ability specs' dynamic source tags (authority only). </p>
+<p>Removes it from PreviousHandle's spec and adds it to the currently slotted spec, so input routes by tag and the change replicates with the specs — clients never rebind. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00519">519</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00410">410</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00085">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00415">GetInputBindingComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00042">FAbilitySlotDefinition::InputAction</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00046">FAbilitySlotDefinition::InputTriggerEvent</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00111">FAbilitySlot::IsValid()</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::SlottedAbilityHandle</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00074">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00400">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00027">FAbilitySlotDefinition::SlotTag</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00078">FAbilitySlot::SlottedAbilityHandle</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00047">InitializeSlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00953">FAbilitySlot::PostReplicatedAdd()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00969">FAbilitySlot::PostReplicatedChange()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00547">RefreshAllInputBindings()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00901">RestoreDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00209">SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00040">InitializeSlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00929">RestoreDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00204">SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>.</p>
 
 </div>
 </div>
@@ -1416,11 +1350,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Validate if an ability meets slot requirements. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00463">463</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00479">479</a> of file <a class="el" href="_d_t_ability_slot_component_8cpp_source.html">DTAbilitySlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00058">FAbilitySlotDefinition::bIsLocked</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00038">FAbilitySlotDefinition::BlockedTags</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00097">FAbilitySlot::DefaultAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00085">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00405">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00100">FAbilitySlot::HasDefaultAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00034">FAbilitySlotDefinition::RequiredTags</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00047">FAbilitySlotDefinition::bIsLocked</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00035">FAbilitySlotDefinition::BlockedTags</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00086">FAbilitySlot::DefaultAbilityHandle</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00074">FAbilitySlot::Definition</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00400">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00089">FAbilitySlot::HasDefaultAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00031">FAbilitySlotDefinition::RequiredTags</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00278">CanSlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00351">FindAvailableSlotForAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00209">SwapSlottedAbilities()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00273">CanSlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00346">FindAvailableSlotForAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00204">SwapSlottedAbilities()</a>.</p>
 
 </div>
 </div>
@@ -1447,9 +1381,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Runtime ability slots (Fast Array). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00350">350</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00341">341</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00667">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00382">ClearAllSlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00351">FindAvailableSlotForAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00438">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00451">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00364">FindSlotTagForAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00262">GetAbilitySlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00020">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00781">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00307">GetSlotsByTags()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00029">InitializeComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00047">InitializeSlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00547">RefreshAllInputBindings()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00901">RestoreDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00209">SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00700">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00377">ClearAllSlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00346">FindAvailableSlotForAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00454">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00467">FindSlotByTag()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00359">FindSlotTagForAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00251">GetAbilitySlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00019">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00805">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00302">GetSlotsByTags()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00028">InitializeComponent()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00040">InitializeSlots()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00929">RestoreDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00204">SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>.</p>
 
 </div>
 </div>
@@ -1475,9 +1409,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Weapon set whose spell loadout is currently live in the spell slots. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00365">365</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00356">356</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00622">ClearSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00307">GetActiveWeaponSet()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00020">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00781">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00829">LoadSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00576">SetActiveWeaponSet()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00593">SetSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00591">ClearSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00289">GetActiveWeaponSet()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00019">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00805">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00853">LoadSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00626">PruneInvalidSpellAssignments()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00545">SetActiveWeaponSet()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00562">SetSpellInLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>.</p>
 
 </div>
 </div>
@@ -1503,9 +1437,9 @@ Protected Attributes</h2></td></tr>
 
 <p>True while ApplySpellLoadout is mutating spell slots, so slot/unslot don't re-record the store. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00368">368</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00359">359</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00667">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00700">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>.</p>
 
 </div>
 </div>
@@ -1531,9 +1465,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Predefined slot definitions - can be set in blueprints. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00346">346</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00337">337</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00029">InitializeComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00028">InitializeComponent()</a>.</p>
 
 </div>
 </div>
@@ -1551,9 +1485,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Event broadcast when an ability slot changes. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00216">216</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00205">205</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00953">FAbilitySlot::PostReplicatedAdd()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00969">FAbilitySlot::PostReplicatedChange()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00941">FAbilitySlot::PreReplicatedRemove()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00901">RestoreDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00095">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00209">SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00157">UnslotAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00981">FAbilitySlot::PostReplicatedAdd()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00995">FAbilitySlot::PostReplicatedChange()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00969">FAbilitySlot::PreReplicatedRemove()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00929">RestoreDefaultAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00090">SlotAbility()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00204">SwapSlottedAbilities()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00152">UnslotAbility()</a>.</p>
 
 </div>
 </div>
@@ -1571,9 +1505,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Event broadcast when slots are initialized. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00220">220</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00209">209</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00047">InitializeSlots()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00040">InitializeSlots()</a>.</p>
 
 </div>
 </div>
@@ -1591,9 +1525,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Event broadcast when any weapon set's stored spell loadout changes (drives the loadout/skill-tree screen). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00224">224</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00213">213</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00566">OnRep_SpellLoadouts()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00726">RecordSpellAssignment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00535">OnRep_SpellLoadouts()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00626">PruneInvalidSpellAssignments()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00759">RecordSpellAssignment()</a>.</p>
 
 </div>
 </div>
@@ -1619,9 +1553,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Player-configured spell loadout per weapon set. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00358">358</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00349">349</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00667">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00020">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00781">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00643">GetSpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00829">LoadSaveData()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00726">RecordSpellAssignment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00700">ApplySpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00019">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00805">GetSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00612">GetSpellLoadout()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00853">LoadSaveData()</a>, <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00626">PruneInvalidSpellAssignments()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00759">RecordSpellAssignment()</a>.</p>
 
 </div>
 </div>
@@ -1647,9 +1581,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Slots whose tag is under this category are per-weapon-set spell slots that swap with the active weapon. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00354">354</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_slot_component_8h_source.html#l00345">345</a> of file <a class="el" href="_d_t_ability_slot_component_8h_source.html">DTAbilitySlotComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00571">IsSpellSlot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00540">IsSpellSlot()</a>.</p>
 
 </div>
 </div>

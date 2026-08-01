@@ -132,46 +132,29 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_f_melee
 </div><!--header-->
 <div class="contents">
 
+<p>Gameplay half of a melee attack (damage, cues, effects, knockback).  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:adcf6f57a344503f26aaaef83816fa08e" id="r_adcf6f57a344503f26aaaef83816fa08e"><td class="memItemLeft">TObjectPtr&lt; UTargetingPreset &gt;&#160;</td><td class="memItemRight"><a class="el" href="#adcf6f57a344503f26aaaef83816fa08e">TargetingPreset</a></td></tr>
-<tr class="memitem:a86fdd050d729b6806930071646a72523" id="r_a86fdd050d729b6806930071646a72523"><td class="memItemLeft">TEnumAsByte&lt; <a class="el" href="_d_t_gameplay_ability___melee_8h.html#af27cb4236226c373b47a1c21beab6052">EMeleeAttackType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a86fdd050d729b6806930071646a72523">AttackType</a> = <a class="el" href="_d_t_gameplay_ability___melee_8h.html#af27cb4236226c373b47a1c21beab6052ae84c740ce2655df59573c1b5b8d4d887">MAT_Cone</a></td></tr>
-<tr class="memitem:a7de41de2284a27d4738372bd7626a237" id="r_a7de41de2284a27d4738372bd7626a237"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="#a7de41de2284a27d4738372bd7626a237">Offset</a> = FVector::ZeroVector</td></tr>
-<tr class="memitem:aee03e9dc596f235f58a8d47929331645" id="r_aee03e9dc596f235f58a8d47929331645"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aee03e9dc596f235f58a8d47929331645">MomentumImpulse</a> = 500.0f</td></tr>
+<tr class="memitem:af77c6fe4d12a992f8e4b527224348454" id="r_af77c6fe4d12a992f8e4b527224348454"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af77c6fe4d12a992f8e4b527224348454">HitReactMagnitude</a> = 0.25f</td></tr>
+<tr class="memdesc:af77c6fe4d12a992f8e4b527224348454"><td class="mdescLeft">&#160;</td><td class="mdescRight">React strength this attack calls on its victims.  <br /></td></tr>
+<tr class="memitem:a24d18ebb026b132d28e940ea81bdf29d" id="r_a24d18ebb026b132d28e940ea81bdf29d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a24d18ebb026b132d28e940ea81bdf29d">KnockbackMagnitude</a> = 400.0f</td></tr>
+<tr class="memdesc:a24d18ebb026b132d28e940ea81bdf29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw root-motion knockback force of this attack.  <br /></td></tr>
 <tr class="memitem:af0be698044f34ee63820cd48c41b3aa8" id="r_af0be698044f34ee63820cd48c41b3aa8"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#af0be698044f34ee63820cd48c41b3aa8">DamageTypeTag</a></td></tr>
 <tr class="memitem:acc935e70bdb6396d28be6e04a134e282" id="r_acc935e70bdb6396d28be6e04a134e282"><td class="memItemLeft">FGameplayAttribute&#160;</td><td class="memItemRight"><a class="el" href="#acc935e70bdb6396d28be6e04a134e282">BaseDamageAttribute</a></td></tr>
 <tr class="memitem:a55a95f334e2c114ed6867aafc7989bfe" id="r_a55a95f334e2c114ed6867aafc7989bfe"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a55a95f334e2c114ed6867aafc7989bfe">DamageScalar</a> = 1.0f</td></tr>
 <tr class="memitem:ac632803d620d20d448961b15c0aec043" id="r_ac632803d620d20d448961b15c0aec043"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#ac632803d620d20d448961b15c0aec043">HitGameplayCueTag</a></td></tr>
 <tr class="memitem:aaab18917afc1cfaf4a0aef41ac887792" id="r_aaab18917afc1cfaf4a0aef41ac887792"><td class="memItemLeft">TArray&lt; TSubclassOf&lt; UGameplayEffect &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aaab18917afc1cfaf4a0aef41ac887792">MeleeDamageEffects</a></td></tr>
 <tr class="memitem:ae5aa821a01a174862a7c87b28a8171e4" id="r_ae5aa821a01a174862a7c87b28a8171e4"><td class="memItemLeft">TArray&lt; TEnumAsByte&lt; EObjectTypeQuery &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae5aa821a01a174862a7c87b28a8171e4">ObjectTypesToHit</a></td></tr>
-<tr class="memitem:a0e24c1632e4d8f3633dbfe3e1d79b801" id="r_a0e24c1632e4d8f3633dbfe3e1d79b801"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0e24c1632e4d8f3633dbfe3e1d79b801">bDebug</a> = false</td></tr>
-<tr class="memitem:afdc4a5f224ff8f88fab3902a36b5de18" id="r_afdc4a5f224ff8f88fab3902a36b5de18"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#afdc4a5f224ff8f88fab3902a36b5de18">ConeAngle</a> = 50.0f</td></tr>
-<tr class="memitem:a0a2b166266ecba59ac6ae1552d10431a" id="r_a0a2b166266ecba59ac6ae1552d10431a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0a2b166266ecba59ac6ae1552d10431a">ConeRange</a> = 200.0f</td></tr>
-<tr class="memitem:a972eb621def4a348131dc208e5a2e69a" id="r_a972eb621def4a348131dc208e5a2e69a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a972eb621def4a348131dc208e5a2e69a">Radius</a> = 150.0f</td></tr>
-<tr class="memitem:a3fe14a4cc1bf885bef920d73a6af1588" id="r_a3fe14a4cc1bf885bef920d73a6af1588"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="#a3fe14a4cc1bf885bef920d73a6af1588">HalfExtents</a> = FVector(100.0f, 100.0f, 100.0f)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00027">27</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+<div class="textblock"><p>Gameplay half of a melee attack (damage, cues, effects, knockback). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00022">22</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a86fdd050d729b6806930071646a72523" name="a86fdd050d729b6806930071646a72523"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86fdd050d729b6806930071646a72523">&#9670;&#160;</a></span>AttackType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TEnumAsByte&lt;<a class="el" href="_d_t_gameplay_ability___melee_8h.html#af27cb4236226c373b47a1c21beab6052">EMeleeAttackType</a>&gt; FMeleeAttackParams::AttackType = <a class="el" href="_d_t_gameplay_ability___melee_8h.html#af27cb4236226c373b47a1c21beab6052ae84c740ce2655df59573c1b5b8d4d887">MAT_Cone</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00035">35</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
-
-</div>
-</div>
 <a id="acc935e70bdb6396d28be6e04a134e282" name="acc935e70bdb6396d28be6e04a134e282"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc935e70bdb6396d28be6e04a134e282">&#9670;&#160;</a></span>BaseDamageAttribute</h2>
 
@@ -184,55 +167,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
-
-</div>
-</div>
-<a id="a0e24c1632e4d8f3633dbfe3e1d79b801" name="a0e24c1632e4d8f3633dbfe3e1d79b801"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e24c1632e4d8f3633dbfe3e1d79b801">&#9670;&#160;</a></span>bDebug</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool FMeleeAttackParams::bDebug = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00062">62</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
-
-</div>
-</div>
-<a id="afdc4a5f224ff8f88fab3902a36b5de18" name="afdc4a5f224ff8f88fab3902a36b5de18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdc4a5f224ff8f88fab3902a36b5de18">&#9670;&#160;</a></span>ConeAngle</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float FMeleeAttackParams::ConeAngle = 50.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00065">65</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
-
-</div>
-</div>
-<a id="a0a2b166266ecba59ac6ae1552d10431a" name="a0a2b166266ecba59ac6ae1552d10431a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a2b166266ecba59ac6ae1552d10431a">&#9670;&#160;</a></span>ConeRange</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float FMeleeAttackParams::ConeRange = 200.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00068">68</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00038">38</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
 
 </div>
 </div>
@@ -248,7 +183,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00050">50</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00041">41</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
 
 </div>
 </div>
@@ -264,23 +199,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00044">44</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
-
-</div>
-</div>
-<a id="a3fe14a4cc1bf885bef920d73a6af1588" name="a3fe14a4cc1bf885bef920d73a6af1588"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fe14a4cc1bf885bef920d73a6af1588">&#9670;&#160;</a></span>HalfExtents</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FVector FMeleeAttackParams::HalfExtents = FVector(100.0f, 100.0f, 100.0f)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00074">74</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00035">35</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
 
 </div>
 </div>
@@ -296,7 +215,43 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00053">53</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00044">44</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+
+</div>
+</div>
+<a id="af77c6fe4d12a992f8e4b527224348454" name="af77c6fe4d12a992f8e4b527224348454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77c6fe4d12a992f8e4b527224348454">&#9670;&#160;</a></span>HitReactMagnitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float FMeleeAttackParams::HitReactMagnitude = 0.25f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>React strength this attack calls on its victims. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00028">28</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+
+</div>
+</div>
+<a id="a24d18ebb026b132d28e940ea81bdf29d" name="a24d18ebb026b132d28e940ea81bdf29d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d18ebb026b132d28e940ea81bdf29d">&#9670;&#160;</a></span>KnockbackMagnitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float FMeleeAttackParams::KnockbackMagnitude = 400.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Raw root-motion knockback force of this attack. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00032">32</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
 
 </div>
 </div>
@@ -312,23 +267,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00056">56</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
-
-</div>
-</div>
-<a id="aee03e9dc596f235f58a8d47929331645" name="aee03e9dc596f235f58a8d47929331645"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee03e9dc596f235f58a8d47929331645">&#9670;&#160;</a></span>MomentumImpulse</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float FMeleeAttackParams::MomentumImpulse = 500.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00041">41</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
 
 </div>
 </div>
@@ -344,55 +283,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00059">59</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
-
-</div>
-</div>
-<a id="a7de41de2284a27d4738372bd7626a237" name="a7de41de2284a27d4738372bd7626a237"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7de41de2284a27d4738372bd7626a237">&#9670;&#160;</a></span>Offset</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FVector FMeleeAttackParams::Offset = FVector::ZeroVector</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00038">38</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
-
-</div>
-</div>
-<a id="a972eb621def4a348131dc208e5a2e69a" name="a972eb621def4a348131dc208e5a2e69a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a972eb621def4a348131dc208e5a2e69a">&#9670;&#160;</a></span>Radius</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float FMeleeAttackParams::Radius = 150.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
-
-</div>
-</div>
-<a id="adcf6f57a344503f26aaaef83816fa08e" name="adcf6f57a344503f26aaaef83816fa08e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcf6f57a344503f26aaaef83816fa08e">&#9670;&#160;</a></span>TargetingPreset</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TObjectPtr&lt;UTargetingPreset&gt; FMeleeAttackParams::TargetingPreset</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00032">32</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00050">50</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
 
 </div>
 </div>

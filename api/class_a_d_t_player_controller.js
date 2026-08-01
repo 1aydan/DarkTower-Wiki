@@ -1,6 +1,7 @@
 var class_a_d_t_player_controller =
 [
     [ "ADTPlayerController", "class_a_d_t_player_controller.html#a22fad5f10e4e2ce1f716ade4d15c62b4", null ],
+    [ "AcknowledgePossession", "class_a_d_t_player_controller.html#a959dc045cf43117c8553bd33ab210223", null ],
     [ "BeginPlay", "class_a_d_t_player_controller.html#a90489b182bd21f000d34461313c76a95", null ],
     [ "CanRestartPlayer", "class_a_d_t_player_controller.html#a80a8134e1319224f8a9a89ac2f943b07", null ],
     [ "Client_BeginSpectating", "class_a_d_t_player_controller.html#a6116352ddc1fb59b4f52f94821053256", null ],
@@ -13,7 +14,13 @@ var class_a_d_t_player_controller =
     [ "Client_StartRespawnCountdown", "class_a_d_t_player_controller.html#a1d0f1402d7def81b3720b717ce48b0d7", null ],
     [ "Client_UpdateSpectatorTarget", "class_a_d_t_player_controller.html#a1922420bdcb2bba750d3c83bb984f501", null ],
     [ "EndPlay", "class_a_d_t_player_controller.html#af5de165a9eccecdb3753ca51f9246066", null ],
+    [ "GetDTAbilitySystemComponent", "class_a_d_t_player_controller.html#aaf37ac36969672cd391662a0338ccead", null ],
+    [ "GetInputConfig", "class_a_d_t_player_controller.html#a066a06251916483844c966e808b06037", null ],
     [ "GetPlayerBuildSystemComponent", "class_a_d_t_player_controller.html#a3d9fc23002b71101b314e216da7e5ec8", null ],
+    [ "Input_AbilityInputTagPressed", "class_a_d_t_player_controller.html#aab0eb6dc717b5823509d1b289928d062", null ],
+    [ "Input_AbilityInputTagReleased", "class_a_d_t_player_controller.html#af4b4d4afb1fb3dca7e4f9e576962a59f", null ],
+    [ "Input_TargetCancel", "class_a_d_t_player_controller.html#ae78f38127a3319fabb708c3ce07b5b76", null ],
+    [ "Input_TargetConfirm", "class_a_d_t_player_controller.html#ad5ff4f6a8ec8a09930b8f2c387a5283f", null ],
     [ "IsHost", "class_a_d_t_player_controller.html#a806dbd5e0cac762ef0c98f08250c3825", null ],
     [ "IsInDefaultLobbyMap", "class_a_d_t_player_controller.html#a61cf46c4c7466e4fcd6c027acd250dc2", null ],
     [ "IsSpectatingDead", "class_a_d_t_player_controller.html#a9c1e8ea25683b28cb90311bea2e0b078", null ],
@@ -22,6 +29,7 @@ var class_a_d_t_player_controller =
     [ "OnPossess", "class_a_d_t_player_controller.html#af79aac6e409a1ca34d85dcc4a7d9eff5", null ],
     [ "OnRep_PlayerState", "class_a_d_t_player_controller.html#a02141b37a2468a8a123c762bd25a2d68", null ],
     [ "OpenDefaultLobbyHostMapSetup", "class_a_d_t_player_controller.html#a9a82f66b6a64b05f43f12f50ef71cdc8", null ],
+    [ "PostProcessInput", "class_a_d_t_player_controller.html#a20dc8808cc61f062d646c52bbb6fff55", null ],
     [ "PreClientTravel", "class_a_d_t_player_controller.html#afbbc0d558eba26564fcbc176cc1572ce", null ],
     [ "SavePlayerData", "class_a_d_t_player_controller.html#a1350ed553edef9b6ca66287cb8a73a3f", null ],
     [ "Server_CycleSpectatorTarget", "class_a_d_t_player_controller.html#a0b2f2206ace2831d55607d7b275b032d", null ],
@@ -35,10 +43,12 @@ var class_a_d_t_player_controller =
     [ "Server_UpdateHostedRunPreview", "class_a_d_t_player_controller.html#a714d277ae440e9d962e7ed6a3f53fe35", null ],
     [ "SetupInputComponent", "class_a_d_t_player_controller.html#a63db4f07420486d29a7ec1d99d455dee", null ],
     [ "ShowHostMapSetup", "class_a_d_t_player_controller.html#a92ac9bdd19c2bc7c2aabb442e37dba8a", null ],
+    [ "UpdateAudioListenerOverride", "class_a_d_t_player_controller.html#ae1388a63b0b7f3328ae8c34951d903c1", null ],
     [ "CharacterOverviewAction", "class_a_d_t_player_controller.html#ac57a534f563c3a61dbc849cccef8e7db", null ],
     [ "DefaultMappingContexts", "class_a_d_t_player_controller.html#a3f7b498857b0b4c75d045313f460f556", null ],
     [ "EscapeAction", "class_a_d_t_player_controller.html#accec20753bc67c64992d615e91db2a95", null ],
     [ "HostMapSetupAction", "class_a_d_t_player_controller.html#ae2236dab2ef85edec6ad0024c4007f31", null ],
+    [ "InputConfig", "class_a_d_t_player_controller.html#a5fd39474aa4b25874afc987eaee38a0a", null ],
     [ "OnSpectatorTargetChanged", "class_a_d_t_player_controller.html#a0bcd22596ac70ba1930d845e1e4367f9", null ],
     [ "PlayerBuildSystemComponent", "class_a_d_t_player_controller.html#a9aae3935610582f6033c9f430bf1763b", null ]
 ];

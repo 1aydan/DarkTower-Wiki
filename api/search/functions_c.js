@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['makedescriptionvaluedeffromstatmodifier_0',['MakeDescriptionValueDefFromStatModifier',['../_d_t_u_i_blueprint_library_8cpp.html#a4aae8f480890757d34ea6322784c1071',1,'DTUIBlueprintLibrary.cpp']]],
+  ['makedescriptionvaluedeffromstatmodifier_0',['MakeDescriptionValueDefFromStatModifier',['../_d_t_u_i_blueprint_library_8cpp.html#a72b632ffa8f0b94c12898ba3e3bc28de',1,'DTUIBlueprintLibrary.cpp']]],
   ['makegameplayeventdata_1',['MakeGameplayEventData',['../class_u_d_t_ability_core_component.html#a754717e4398908a93bea62cdc05f76fd',1,'UDTAbilityCoreComponent']]],
-  ['makeoutgoingspecwithperiod_2',['MakeOutgoingSpecWithPeriod',['../class_u_d_t_ability_system_component.html#a1ee88b2f2ca3cafa44701e68706c10b8',1,'UDTAbilitySystemComponent']]],
+  ['makehitreactcueparameters_2',['MakeHitReactCueParameters',['../_d_t_gameplay_ability___hit_react_8cpp.html#a3fb7a2ea7e6f8befbf77f9561bb9bf33',1,'DTGameplayAbility_HitReact.cpp']]],
   ['makespec_3',['MakeSpec',['../class_u_d_t_combat_modifier.html#a129f0d20605c1e4560f33e8659e29418',1,'UDTCombatModifier']]],
   ['maketeamqueryparams_4',['MakeTeamQueryParams',['../class_u_d_t_blueprint_library.html#ab37da97aff6f586b199ea6ae636651cd',1,'UDTBlueprintLibrary']]],
   ['matches_5',['Matches',['../class_u_d_t_combat_modifier.html#adcaa26ca7b6e6deb8a1a0098efdf2609',1,'UDTCombatModifier::Matches()'],['../class_u_d_t_ability_event_filter.html#a4094887fb0050461d5516bcb25531bb8',1,'UDTAbilityEventFilter::Matches()']]],
@@ -15,7 +15,7 @@ var searchData=
   ['move_12',['Move',['../class_a_d_t_player_character.html#a947a52b2f1d818d1a36bfef5bde45206',1,'ADTPlayerCharacter']]],
   ['multicast_5fnotifychestopened_13',['Multicast_NotifyChestOpened',['../class_a_d_t_loot_chest.html#ab61ae3d7e565e0cadac2a62ba415ec28',1,'ADTLootChest']]],
   ['multicast_5fonpickedup_14',['Multicast_OnPickedUp',['../class_a_d_t_item_actor.html#ad22b62da0d6e088166c13ec0a99bc851',1,'ADTItemActor']]],
-  ['multicasthandledamage_15',['MulticastHandleDamage',['../class_u_d_t_ability_core_component.html#ab731807192f64f6c3c749ab965ee0cfa',1,'UDTAbilityCoreComponent']]],
-  ['multicasthandledeath_16',['MulticastHandleDeath',['../class_u_d_t_ability_core_component.html#ad3e71636050f6cf6aa2a48a5a1654572',1,'UDTAbilityCoreComponent']]],
+  ['multicasthandledamage_15',['MulticastHandleDamage',['../class_u_d_t_ability_core_component.html#aae9adfb3a527a9af82c41558a31d62e5',1,'UDTAbilityCoreComponent']]],
+  ['multicasthandledeath_16',['MulticastHandleDeath',['../class_u_d_t_ability_core_component.html#a3b25d1385b978aa2859fb810522e5d74',1,'UDTAbilityCoreComponent']]],
   ['multicasthandlekill_17',['MulticastHandleKill',['../class_u_d_t_ability_core_component.html#a74e99e9029140b118a0393b441a5ee87',1,'UDTAbilityCoreComponent']]]
 ];

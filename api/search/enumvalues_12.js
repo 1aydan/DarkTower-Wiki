@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['withcopy_0',['WithCopy',['../struct_t_struct_ops_type_traits_3_01_f_d_t_gameplay_effect_context_01_4.html#aa82477690206a0d6c4ddebbd496868d7a111fc4a39b42999c3abe19ae38df1f1e',1,'TStructOpsTypeTraits&lt; FDTGameplayEffectContext &gt;']]],
-  ['withnetdeltaserializer_1',['WithNetDeltaSerializer',['../struct_t_struct_ops_type_traits_3_01_f_ability_slot_array_01_4.html#a22e5b2c2cbf14ef0e3ddef853ccaea68a1b6f0ccba61b46fa621b177324e9295c',1,'TStructOpsTypeTraits&lt; FAbilitySlotArray &gt;::WithNetDeltaSerializer'],['../struct_t_struct_ops_type_traits_3_01_f_ability_stack_state_array_01_4.html#a583e4028d4790b5c80c1f8ca21b6c922a220a7609391e5693fd7daeabaeb44b4d',1,'TStructOpsTypeTraits&lt; FAbilityStackStateArray &gt;::WithNetDeltaSerializer'],['../struct_t_struct_ops_type_traits_3_01_f_d_t_verb_message_replication_01_4.html#ad4f3237c0702b57faf5ee0df02d91cd3a771cc761ca65af442aedadb65d817c7d',1,'TStructOpsTypeTraits&lt; FDTVerbMessageReplication &gt;::WithNetDeltaSerializer']]],
-  ['withnetserializer_2',['WithNetSerializer',['../struct_t_struct_ops_type_traits_3_01_f_d_t_gameplay_effect_context_01_4.html#aa82477690206a0d6c4ddebbd496868d7a49c7824759819ac849707c4bf3d88d80',1,'TStructOpsTypeTraits&lt; FDTGameplayEffectContext &gt;']]],
-  ['worldplaced_3',['WorldPlaced',['../_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca04ff98bafe4b42e0bb1d1c5d6284fe04',1,'DTItemActor.h']]]
+  ['unspecified_0',['Unspecified',['../_d_t_footstep_effect_set_8h.html#a66793cb4fc250d88cee6c066b9853518a6fcdc090caeade09d0efd6253932b6f5',1,'DTFootstepEffectSet.h']]]
 ];

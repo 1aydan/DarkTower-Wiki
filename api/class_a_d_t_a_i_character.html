@@ -153,32 +153,44 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aff4aa1589ee1bb0316c0734866d42841" id="r_aff4aa1589ee1bb0316c0734866d42841"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aff4aa1589ee1bb0316c0734866d42841">ADTAICharacter</a> (const FObjectInitializer &amp;ObjectInitializer=FObjectInitializer::Get())</td></tr>
 <tr class="memitem:a9ecb6005b68b308474f0bb010ec51861" id="r_a9ecb6005b68b308474f0bb010ec51861"><td class="memItemLeft">FStateTreeReference&#160;</td><td class="memItemRight"><a class="el" href="#a9ecb6005b68b308474f0bb010ec51861">GetDefaultStateTree</a> () const</td></tr>
 <tr class="memitem:a19a995d79d2fe892536c219c479fb6c8" id="r_a19a995d79d2fe892536c219c479fb6c8"><td class="memItemLeft">FStateTreeReference&#160;</td><td class="memItemRight"><a class="el" href="#a19a995d79d2fe892536c219c479fb6c8">GetLinkedStateTreeOverride</a> (FGameplayTag Tag) const</td></tr>
+<tr class="memitem:abf3363902a1e17591110a7f4105fcf39" id="r_abf3363902a1e17591110a7f4105fcf39"><td class="memItemLeft">const <a class="el" href="struct_f_d_t_a_i_perception_config.html">FDTAIPerceptionConfig</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#abf3363902a1e17591110a7f4105fcf39">GetPerceptionConfig</a> () const</td></tr>
+<tr class="memdesc:abf3363902a1e17591110a7f4105fcf39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-archetype perception tuning, applied to the controller's sense configs on possession.  <br /></td></tr>
+<tr class="memitem:a9ba1362cb37d641b18389817e0dad4d4" id="r_a9ba1362cb37d641b18389817e0dad4d4"><td class="memItemLeft">const <a class="el" href="struct_f_d_t_a_i_target_broadcast_config.html">FDTAITargetBroadcastConfig</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9ba1362cb37d641b18389817e0dad4d4">GetTargetBroadcastConfig</a> () const</td></tr>
+<tr class="memdesc:a9ba1362cb37d641b18389817e0dad4d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-archetype rules for sharing acquired targets with nearby allies.  <br /></td></tr>
+<tr class="memitem:a7d82a64b3507d90609d56e7d33fd3675" id="r_a7d82a64b3507d90609d56e7d33fd3675"><td class="memItemLeft">const <a class="el" href="struct_f_d_t_a_i_threat_config.html">FDTAIThreatConfig</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7d82a64b3507d90609d56e7d33fd3675">GetThreatConfig</a> () const</td></tr>
+<tr class="memdesc:a7d82a64b3507d90609d56e7d33fd3675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-archetype aggro/threat tuning, pushed to the controller's threat component on possession.  <br /></td></tr>
+<tr class="memitem:ab504e8f07b7080c4e61c54fbfb08c619" id="r_ab504e8f07b7080c4e61c54fbfb08c619"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab504e8f07b7080c4e61c54fbfb08c619">SetPerceptionConfig</a> (const <a class="el" href="struct_f_d_t_a_i_perception_config.html">FDTAIPerceptionConfig</a> &amp;NewConfig)</td></tr>
+<tr class="memdesc:ab504e8f07b7080c4e61c54fbfb08c619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the perception config and push it onto the possessing controller immediately.  <br /></td></tr>
+<tr class="memitem:ae7625f2936a6a15615bc7bebb94dfe4a" id="r_ae7625f2936a6a15615bc7bebb94dfe4a"><td class="memItemLeft">virtual <a class="el" href="class_u_d_t_targeting_component.html">UDTTargetingComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae7625f2936a6a15615bc7bebb94dfe4a">GetTargetingComponent</a> () const</td></tr>
+<tr class="memdesc:ae7625f2936a6a15615bc7bebb94dfe4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Targeting Component.  <br /></td></tr>
 <tr class="memitem:a2741e3becc0b56490ebfc50d55dd1847" id="r_a2741e3becc0b56490ebfc50d55dd1847"><td class="memItemLeft">FStateTreeReferenceOverrides&#160;</td><td class="memItemRight"><a class="el" href="#a2741e3becc0b56490ebfc50d55dd1847">GetLinkedStateTreeOverrides</a> () const</td></tr>
 <tr class="memitem:ae9598c20048d518c917ac0e40ff8f45e" id="r_ae9598c20048d518c917ac0e40ff8f45e"><td class="memItemLeft"><a class="el" href="_data_types_8h.html#a8be04c76107eed9910dabb87e1d0befb">ESignificanceLevel</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae9598c20048d518c917ac0e40ff8f45e">GetCurrentSignificanceLevel</a> () const</td></tr>
 <tr class="memdesc:ae9598c20048d518c917ac0e40ff8f45e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current significance level for debugging.  <br /></td></tr>
 <tr class="memitem:a467d9088770002d5363bb879e0668f5c" id="r_a467d9088770002d5363bb879e0668f5c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a467d9088770002d5363bb879e0668f5c">SetMinimumSignificanceLevel</a> (<a class="el" href="_data_types_8h.html#a8be04c76107eed9910dabb87e1d0befb">ESignificanceLevel</a> MinLevel)</td></tr>
 <tr class="memitem:ab6206d1be6939e0e0cc3f79dd42a171b" id="r_ab6206d1be6939e0e0cc3f79dd42a171b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab6206d1be6939e0e0cc3f79dd42a171b">ClearMinimumSignificanceLevel</a> ()</td></tr>
-<tr class="memitem:a2eb4d9063e12e8dc853e973e42f9a8f3" id="r_a2eb4d9063e12e8dc853e973e42f9a8f3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2eb4d9063e12e8dc853e973e42f9a8f3">ClearTickOverride</a> ()</td></tr>
-<tr class="memdesc:a2eb4d9063e12e8dc853e973e42f9a8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow significance to resume managing tick enabled state.  <br /></td></tr>
 <tr class="memitem:aa379b21038b98c680c34d27931243c3b" id="r_aa379b21038b98c680c34d27931243c3b"><td class="memItemLeft">virtual UAbilitySystemComponent *&#160;</td><td class="memItemRight"><a class="el" href="#aa379b21038b98c680c34d27931243c3b">GetAbilitySystemComponent</a> () const override</td></tr>
 <tr class="memitem:a20eb91e54200811a0ab52993e77519f7" id="r_a20eb91e54200811a0ab52993e77519f7"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a20eb91e54200811a0ab52993e77519f7">BeginPlay</a> () override</td></tr>
 <tr class="memitem:a29d9919c2ccf63523bb0c43169d1f852" id="r_a29d9919c2ccf63523bb0c43169d1f852"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a29d9919c2ccf63523bb0c43169d1f852">EndPlay</a> (const EEndPlayReason::Type EndPlayReason) override</td></tr>
 <tr class="memitem:ad46c34a0a7290fcbbde71b975bc21669" id="r_ad46c34a0a7290fcbbde71b975bc21669"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad46c34a0a7290fcbbde71b975bc21669">PossessedBy</a> (AController *NewController) override</td></tr>
 <tr class="memitem:a210929444341ff92615f2b1c3c2ede87" id="r_a210929444341ff92615f2b1c3c2ede87"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a210929444341ff92615f2b1c3c2ede87">PostInitProperties</a> () override</td></tr>
 <tr class="memitem:afa36f04ad0160f80ebb57657171bf909" id="r_afa36f04ad0160f80ebb57657171bf909"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afa36f04ad0160f80ebb57657171bf909">PostInitializeComponents</a> () override</td></tr>
-<tr class="memitem:a0d8be66d4f7731a8482396d3f7afe882" id="r_a0d8be66d4f7731a8482396d3f7afe882"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a0d8be66d4f7731a8482396d3f7afe882">SetActorTickEnabled</a> (bool bEnabled) override</td></tr>
 <tr class="inherit_header pub_methods_class_a_d_t_character"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_a_d_t_character.html">ADTCharacter</a></td></tr>
 <tr class="memitem:a31d82a1866632360f41ba4e02947d9fb pub_methods_class_a_d_t_character" id="r_a31d82a1866632360f41ba4e02947d9fb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a31d82a1866632360f41ba4e02947d9fb">ADTCharacter</a> (const FObjectInitializer &amp;ObjectInitializer=FObjectInitializer::Get())</td></tr>
 <tr class="memitem:a92663793936f0ef1ca529291aec05a73 pub_methods_class_a_d_t_character" id="r_a92663793936f0ef1ca529291aec05a73"><td class="memItemLeft"><a class="el" href="class_u_d_t_pawn_extension_component.html">UDTPawnExtensionComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a92663793936f0ef1ca529291aec05a73">GetPawnExtensionComponent</a> () const</td></tr>
 <tr class="memdesc:a92663793936f0ef1ca529291aec05a73 pub_methods_class_a_d_t_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Pawn Extension Component.  <br /></td></tr>
 <tr class="memitem:a35d345d9bf18756b1d3f08e18098f367 pub_methods_class_a_d_t_character" id="r_a35d345d9bf18756b1d3f08e18098f367"><td class="memItemLeft">FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a35d345d9bf18756b1d3f08e18098f367">GetCharacterTags</a> () const</td></tr>
+<tr class="memitem:add7e79430f6163f37ae072ae5aabe7a8 pub_methods_class_a_d_t_character" id="r_add7e79430f6163f37ae072ae5aabe7a8"><td class="memItemLeft"><a class="el" href="class_u_d_t_character_data.html">UDTCharacterData</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#add7e79430f6163f37ae072ae5aabe7a8">GetCharacterData</a> () const</td></tr>
+<tr class="memitem:a6e218917de1d07ede417da116a5b0388 pub_methods_class_a_d_t_character" id="r_a6e218917de1d07ede417da116a5b0388"><td class="memItemLeft">virtual UAnimMontage *&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a6e218917de1d07ede417da116a5b0388">GetHitReactMontage</a> (<a class="el" href="_d_t_character_data_8h.html#aa04e94846bfcc66be0dba629403fcfec">EDTHitReactTier</a> Tier, <a class="el" href="_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07">EDTHitDirection</a> Direction) const</td></tr>
+<tr class="memdesc:a6e218917de1d07ede417da116a5b0388 pub_methods_class_a_d_t_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the best hit-react montage for the given tier and direction, or null if none is set.  <br /></td></tr>
 <tr class="memitem:a523a185606cbdb6cd3e489bf074bd3be pub_methods_class_a_d_t_character" id="r_a523a185606cbdb6cd3e489bf074bd3be"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a523a185606cbdb6cd3e489bf074bd3be">GetSpawnLocation</a> () const</td></tr>
 <tr class="memitem:a706e575f30b44906b3e7f56956827b4a pub_methods_class_a_d_t_character" id="r_a706e575f30b44906b3e7f56956827b4a"><td class="memItemLeft">virtual <a class="el" href="class_u_d_t_ability_core_component.html">UDTAbilityCoreComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a706e575f30b44906b3e7f56956827b4a">GetAbilityCoreComponent_Implementation</a> () const override</td></tr>
-<tr class="memitem:a0aaea4cfce74e376cd9dfae73752e07e pub_methods_class_a_d_t_character" id="r_a0aaea4cfce74e376cd9dfae73752e07e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a0aaea4cfce74e376cd9dfae73752e07e">IsDead_Implementation</a> () const override</td></tr>
+<tr class="memitem:a0aaea4cfce74e376cd9dfae73752e07e pub_methods_class_a_d_t_character" id="r_a0aaea4cfce74e376cd9dfae73752e07e"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a0aaea4cfce74e376cd9dfae73752e07e">IsDead_Implementation</a> () const override</td></tr>
 <tr class="memitem:a2ffcfb9bd4f2ac9fc5ff8617bea0656e pub_methods_class_a_d_t_character" id="r_a2ffcfb9bd4f2ac9fc5ff8617bea0656e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a2ffcfb9bd4f2ac9fc5ff8617bea0656e">SetGenericTeamId</a> (const FGenericTeamId &amp;TeamID) override</td></tr>
 <tr class="memitem:a12d84a720a75d2ce832bd9813683b666 pub_methods_class_a_d_t_character" id="r_a12d84a720a75d2ce832bd9813683b666"><td class="memItemLeft">virtual FGenericTeamId&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a12d84a720a75d2ce832bd9813683b666">GetGenericTeamId</a> () const override</td></tr>
 <tr class="memitem:aa39b1c37c059fca8ae84f4cd44d2dbc4 pub_methods_class_a_d_t_character" id="r_aa39b1c37c059fca8ae84f4cd44d2dbc4"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#aa39b1c37c059fca8ae84f4cd44d2dbc4">PreInitializeComponents</a> () override</td></tr>
 <tr class="memitem:a6fd9c026cf9b6284f8dda1afd31cbf23 pub_methods_class_a_d_t_character" id="r_a6fd9c026cf9b6284f8dda1afd31cbf23"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a6fd9c026cf9b6284f8dda1afd31cbf23">UnPossessed</a> () override</td></tr>
+<tr class="memitem:a8abf2871e04505691b59b839ba2c40ae pub_methods_class_a_d_t_character" id="r_a8abf2871e04505691b59b839ba2c40ae"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a8abf2871e04505691b59b839ba2c40ae">OnRep_Controller</a> () override</td></tr>
+<tr class="memitem:a010e5af9ec635960a76ad08944102a6f pub_methods_class_a_d_t_character" id="r_a010e5af9ec635960a76ad08944102a6f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a010e5af9ec635960a76ad08944102a6f">GetLifetimeReplicatedProps</a> (TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
 <tr class="memitem:a1b5984b1ba535db0d85498de5f92d831 pub_methods_class_a_d_t_character" id="r_a1b5984b1ba535db0d85498de5f92d831"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a1b5984b1ba535db0d85498de5f92d831">GetOwnedGameplayTags</a> (FGameplayTagContainer &amp;OutTagContainer) const override</td></tr>
 <tr class="memitem:a7670bd7d9b1b138b8e568db8374c7fcb pub_methods_class_a_d_t_character" id="r_a7670bd7d9b1b138b8e568db8374c7fcb"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a7670bd7d9b1b138b8e568db8374c7fcb">HasMatchingGameplayTag</a> (FGameplayTag InTagToCheck) const override</td></tr>
 <tr class="memitem:abce55a527ca6530278cba5b5426c632c pub_methods_class_a_d_t_character" id="r_abce55a527ca6530278cba5b5426c632c"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#abce55a527ca6530278cba5b5426c632c">HasAllMatchingGameplayTags</a> (const FGameplayTagContainer &amp;InTagContainer) const override</td></tr>
@@ -199,19 +211,29 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3756bb74da8beda47ed0361eb2c20af3" id="r_a3756bb74da8beda47ed0361eb2c20af3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3756bb74da8beda47ed0361eb2c20af3">SetupSkeletalMesh</a> () const</td></tr>
+<tr class="memitem:a3c6ea91305ce0696c96852e95acfec07" id="r_a3c6ea91305ce0696c96852e95acfec07"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a3c6ea91305ce0696c96852e95acfec07">HandleDeath_Implementation</a> (const <a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a> &amp;HitInfo) override</td></tr>
+<tr class="memitem:abec30568e287b5685fff33f89a4cb6a6" id="r_abec30568e287b5685fff33f89a4cb6a6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abec30568e287b5685fff33f89a4cb6a6">StartDeathDissolve</a> ()</td></tr>
+<tr class="memitem:a3a4d5fe61e38522e15c741c154c1726a" id="r_a3a4d5fe61e38522e15c741c154c1726a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3a4d5fe61e38522e15c741c154c1726a">UpdateDeathDissolve</a> ()</td></tr>
 <tr class="memitem:ae44ce96f8c2d3d475913e25413ad0747" id="r_ae44ce96f8c2d3d475913e25413ad0747"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ae44ce96f8c2d3d475913e25413ad0747">PreSignificanceUpdate</a> (USignificanceManager::FManagedObjectInfo *ObjectInfo, const FTransform &amp;Viewpoint) const</td></tr>
 <tr class="memitem:a167fa4e011864ca6766c71a022a47b6f" id="r_a167fa4e011864ca6766c71a022a47b6f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a167fa4e011864ca6766c71a022a47b6f">PostSignificanceUpdate</a> (USignificanceManager::FManagedObjectInfo *ObjectInfo, float OldSignificance, float Significance, bool bFinal)</td></tr>
 <tr class="inherit_header pro_methods_class_a_d_t_character"><td colspan="2">Protected Member Functions inherited from <a class="el" href="class_a_d_t_character.html">ADTCharacter</a></td></tr>
-<tr class="memitem:ad0fde30a166e80072eae2936e0b9187e pro_methods_class_a_d_t_character" id="r_ad0fde30a166e80072eae2936e0b9187e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#ad0fde30a166e80072eae2936e0b9187e">HandleDeath</a> ()</td></tr>
+<tr class="memitem:aa449457ea0c66a6e4e65baf4f39b37f9 pro_methods_class_a_d_t_character" id="r_aa449457ea0c66a6e4e65baf4f39b37f9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#aa449457ea0c66a6e4e65baf4f39b37f9">HandleDeath</a> (const <a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a> &amp;HitInfo)</td></tr>
+<tr class="memdesc:aa449457ea0c66a6e4e65baf4f39b37f9 pro_methods_class_a_d_t_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bound to AbilityCoreComponent-&gt;OnDeath.  <br /></td></tr>
 <tr class="memitem:a15c8e6a6558ce53d400e716a2462ac71 pro_methods_class_a_d_t_character" id="r_a15c8e6a6558ce53d400e716a2462ac71"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a15c8e6a6558ce53d400e716a2462ac71">OnRep_Team</a> ()</td></tr>
-<tr class="memitem:a8abf2871e04505691b59b839ba2c40ae pro_methods_class_a_d_t_character" id="r_a8abf2871e04505691b59b839ba2c40ae"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a8abf2871e04505691b59b839ba2c40ae">OnRep_Controller</a> () override</td></tr>
-<tr class="memitem:a010e5af9ec635960a76ad08944102a6f pro_methods_class_a_d_t_character" id="r_a010e5af9ec635960a76ad08944102a6f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a010e5af9ec635960a76ad08944102a6f">GetLifetimeReplicatedProps</a> (TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
+<tr class="memitem:adabf79a86df1816c929a312f7f5e8738 pro_methods_class_a_d_t_character" id="r_adabf79a86df1816c929a312f7f5e8738"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#adabf79a86df1816c929a312f7f5e8738">HandleAbilitySystemInitialized</a> ()</td></tr>
+<tr class="memdesc:adabf79a86df1816c929a312f7f5e8738 pro_methods_class_a_d_t_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called once the ASC is initialized (fires on server and clients) via PawnExtComponent's OnAbilitySystemInitialized.  <br /></td></tr>
 <tr class="memitem:a274746bb9bdf67ea6dc712dc72ad8f76 pro_methods_class_a_d_t_character" id="r_a274746bb9bdf67ea6dc712dc72ad8f76"><td class="memItemLeft">virtual FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a274746bb9bdf67ea6dc712dc72ad8f76">BP_GetOwnedGameplayTags</a> () const override</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ad89748bceff6b527f50fc67188713e5f" id="r_ad89748bceff6b527f50fc67188713e5f"><td class="memItemLeft">FStateTreeReference&#160;</td><td class="memItemRight"><a class="el" href="#ad89748bceff6b527f50fc67188713e5f">DefaultStateTree</a></td></tr>
 <tr class="memitem:aabb219816c9de109a61f1d50b187a947" id="r_aabb219816c9de109a61f1d50b187a947"><td class="memItemLeft">FStateTreeReferenceOverrides&#160;</td><td class="memItemRight"><a class="el" href="#aabb219816c9de109a61f1d50b187a947">LinkedStateTreeOverrides</a></td></tr>
+<tr class="memitem:a75acb22d3df885b57597555fd4b4637c" id="r_a75acb22d3df885b57597555fd4b4637c"><td class="memItemLeft"><a class="el" href="struct_f_d_t_a_i_perception_config.html">FDTAIPerceptionConfig</a>&#160;</td><td class="memItemRight"><a class="el" href="#a75acb22d3df885b57597555fd4b4637c">PerceptionConfig</a></td></tr>
+<tr class="memdesc:a75acb22d3df885b57597555fd4b4637c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sight/damage/team sense tuning for this archetype.  <br /></td></tr>
+<tr class="memitem:a3d8652fb1f033b4d76013dbcc48bbf75" id="r_a3d8652fb1f033b4d76013dbcc48bbf75"><td class="memItemLeft"><a class="el" href="struct_f_d_t_a_i_target_broadcast_config.html">FDTAITargetBroadcastConfig</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3d8652fb1f033b4d76013dbcc48bbf75">TargetBroadcastConfig</a></td></tr>
+<tr class="memdesc:a3d8652fb1f033b4d76013dbcc48bbf75"><td class="mdescLeft">&#160;</td><td class="mdescRight">How this archetype shares acquired targets with, and reacts to, nearby allies.  <br /></td></tr>
+<tr class="memitem:aab5680b3f0672717d351de1a29ed8b78" id="r_aab5680b3f0672717d351de1a29ed8b78"><td class="memItemLeft"><a class="el" href="struct_f_d_t_a_i_threat_config.html">FDTAIThreatConfig</a>&#160;</td><td class="memItemRight"><a class="el" href="#aab5680b3f0672717d351de1a29ed8b78">ThreatConfig</a></td></tr>
+<tr class="memdesc:aab5680b3f0672717d351de1a29ed8b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aggro tuning for this archetype: threat gain, decay and target-switch stickiness.  <br /></td></tr>
 <tr class="memitem:ad03d2f826450d9cf8bf96153732aa3e8" id="r_ad03d2f826450d9cf8bf96153732aa3e8"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#ad03d2f826450d9cf8bf96153732aa3e8">SignificanceTag</a> = &quot;AICharacter&quot;</td></tr>
 <tr class="memitem:a7741f64ef8036808422bab18a52d396f" id="r_a7741f64ef8036808422bab18a52d396f"><td class="memItemLeft"><a class="el" href="_data_types_8h.html#a8be04c76107eed9910dabb87e1d0befb">ESignificanceLevel</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7741f64ef8036808422bab18a52d396f">CurrentSignificanceLevel</a> = <a class="el" href="_data_types_8h.html#a8be04c76107eed9910dabb87e1d0befba655d20c1ca69519ca647684edbb2db35">ESignificanceLevel::High</a></td></tr>
 <tr class="memdesc:a7741f64ef8036808422bab18a52d396f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current significance level.  <br /></td></tr>
@@ -219,20 +241,27 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a1ad5086eec0bca8a11d6ab0677af1ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum significance level override.  <br /></td></tr>
 <tr class="memitem:a025cc648c1e2f0b373c3b3f697e3dd67" id="r_a025cc648c1e2f0b373c3b3f697e3dd67"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a025cc648c1e2f0b373c3b3f697e3dd67">bDebugDrawSignificance</a> = false</td></tr>
 <tr class="memdesc:a025cc648c1e2f0b373c3b3f697e3dd67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw debug info showing current significance level.  <br /></td></tr>
-<tr class="memitem:a56a540ac8faeb58aab43f1f4df75679f" id="r_a56a540ac8faeb58aab43f1f4df75679f"><td class="memItemLeft">TOptional&lt; bool &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a56a540ac8faeb58aab43f1f4df75679f">bTickEnabledOverride</a></td></tr>
-<tr class="memdesc:a56a540ac8faeb58aab43f1f4df75679f"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set, significance will not manage tick enabled - use ClearTickEnabledOverride() to restore significance control.  <br /></td></tr>
+<tr class="memitem:a5aa783bb425f809d72532b74fd18f48e" id="r_a5aa783bb425f809d72532b74fd18f48e"><td class="memItemLeft"><a class="el" href="struct_f_d_t_death_visuals.html">FDTDeathVisuals</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5aa783bb425f809d72532b74fd18f48e">DeathVisuals</a></td></tr>
+<tr class="memdesc:a5aa783bb425f809d72532b74fd18f48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-Blueprint cosmetic dissolve-on-death config (drives a named material scalar across all mesh pieces).  <br /></td></tr>
+<tr class="memitem:a5bb14e47288842b325e12ce70f89979e" id="r_a5bb14e47288842b325e12ce70f89979e"><td class="memItemLeft">TArray&lt; TObjectPtr&lt; UMaterialInstanceDynamic &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5bb14e47288842b325e12ce70f89979e">DeathDissolveMIDs</a></td></tr>
+<tr class="memdesc:a5bb14e47288842b325e12ce70f89979e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic material instances created across all mesh components when the death dissolve begins.  <br /></td></tr>
+<tr class="memitem:aa8cd6ac1cf51b579ff9fa4f149864ec1" id="r_aa8cd6ac1cf51b579ff9fa4f149864ec1"><td class="memItemLeft">FTimerHandle&#160;</td><td class="memItemRight"><a class="el" href="#aa8cd6ac1cf51b579ff9fa4f149864ec1">DeathDissolveTimerHandle</a></td></tr>
+<tr class="memdesc:aa8cd6ac1cf51b579ff9fa4f149864ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeating timer that steps the dissolve while it is active.  <br /></td></tr>
+<tr class="memitem:ab902885cd7f5737b1bb178bba2d937b7" id="r_ab902885cd7f5737b1bb178bba2d937b7"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab902885cd7f5737b1bb178bba2d937b7">DeathDissolveStartTime</a> = 0.0f</td></tr>
+<tr class="memdesc:ab902885cd7f5737b1bb178bba2d937b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">World time (seconds) at which the dissolve is considered to start (post StartDelay).  <br /></td></tr>
 <tr class="inherit_header pro_attribs_class_a_d_t_character"><td colspan="2">Protected Attributes inherited from <a class="el" href="class_a_d_t_character.html">ADTCharacter</a></td></tr>
 <tr class="memitem:a957890005dbc26bbd77d629449496cf2 pro_attribs_class_a_d_t_character" id="r_a957890005dbc26bbd77d629449496cf2"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_ability_core_component.html">UDTAbilityCoreComponent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">AbilityCoreComponent</a></td></tr>
 <tr class="memitem:a1115ba0e185d44c28d09a5dbfb3956c2 pro_attribs_class_a_d_t_character" id="r_a1115ba0e185d44c28d09a5dbfb3956c2"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_pawn_extension_component.html">UDTPawnExtensionComponent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a></td></tr>
 <tr class="memitem:a732581f8d38e35971282c5a09038cbf2 pro_attribs_class_a_d_t_character" id="r_a732581f8d38e35971282c5a09038cbf2"><td class="memItemLeft">FGenericTeamId&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a> = FGenericTeamId(<a class="el" href="_data_types_8h.html#a8cfa90fbda3ffcea160c25261e8ee0a9">DT_TEAM_NEUTRAL</a>)</td></tr>
 <tr class="memitem:addc28c8657bf577abe931975725ddd7e pro_attribs_class_a_d_t_character" id="r_addc28c8657bf577abe931975725ddd7e"><td class="memItemLeft">FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#addc28c8657bf577abe931975725ddd7e">CharacterTags</a></td></tr>
+<tr class="memitem:ab9dbdef518e482af69d42271d4559fda pro_attribs_class_a_d_t_character" id="r_ab9dbdef518e482af69d42271d4559fda"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_character_data.html">UDTCharacterData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#ab9dbdef518e482af69d42271d4559fda">CharacterData</a></td></tr>
 <tr class="memitem:ac95435e83f3ccf43976a7979c128cbd9 pro_attribs_class_a_d_t_character" id="r_ac95435e83f3ccf43976a7979c128cbd9"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#ac95435e83f3ccf43976a7979c128cbd9">SpawnLocation</a></td></tr>
 <tr class="memitem:a50646ae2ff885a6d130bf8da62f2f02a pro_attribs_class_a_d_t_character" id="r_a50646ae2ff885a6d130bf8da62f2f02a"><td class="memItemLeft"><a class="el" href="struct_f_death_settings.html">FDeathSettings</a>&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a50646ae2ff885a6d130bf8da62f2f02a">DeathSettings</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base AI character class for Dark Tower. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00017">17</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00019">19</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aff4aa1589ee1bb0316c0734866d42841" name="aff4aa1589ee1bb0316c0734866d42841"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff4aa1589ee1bb0316c0734866d42841">&#9670;&#160;</a></span>ADTAICharacter()</h2>
@@ -249,9 +278,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00024">24</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00050">AbilitySystemComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00075">AbilitySystemComponent</a>.</p>
 
 </div>
 </div>
@@ -281,9 +310,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_a_d_t_character.html#af124710122d91fb3afc1786afac938aa">ADTCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00025">25</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00034">34</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00136">PostSignificanceUpdate()</a>, <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00114">PreSignificanceUpdate()</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00085">SignificanceTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00237">PostSignificanceUpdate()</a>, <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00215">PreSignificanceUpdate()</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00117">SignificanceTag</a>.</p>
 
 </div>
 </div>
@@ -302,32 +331,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00215">215</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00313">313</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00023">Invalid</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00093">MinimumSignificanceOverride</a>.</p>
-
-</div>
-</div>
-<a id="a2eb4d9063e12e8dc853e973e42f9a8f3" name="a2eb4d9063e12e8dc853e973e42f9a8f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2eb4d9063e12e8dc853e973e42f9a8f3">&#9670;&#160;</a></span>ClearTickOverride()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ADTAICharacter::ClearTickOverride </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Allow significance to resume managing tick enabled state. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00226">226</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00100">bTickEnabledOverride</a>.</p>
+<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00025">Invalid</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00125">MinimumSignificanceOverride</a>.</p>
 
 </div>
 </div>
@@ -356,7 +362,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_a_d_t_character.html#a42352bdbb4371a8f46247be09df0c6d2">ADTCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00058">58</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00067">67</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
 </div>
 </div>
@@ -385,9 +391,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">ADTCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00231">231</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00318">318</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00050">AbilitySystemComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00075">AbilitySystemComponent</a>.</p>
 
 </div>
 </div>
@@ -416,11 +422,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Get current significance level for debugging. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00054">54</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00079">79</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00089">CurrentSignificanceLevel</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00054">GetCurrentSignificanceLevel()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00121">CurrentSignificanceLevel</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00079">GetCurrentSignificanceLevel()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00054">GetCurrentSignificanceLevel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00079">GetCurrentSignificanceLevel()</a>.</p>
 
 </div>
 </div>
@@ -447,11 +453,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00025">25</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00027">27</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00079">DefaultStateTree</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00025">GetDefaultStateTree()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00099">DefaultStateTree</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00027">GetDefaultStateTree()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00025">GetDefaultStateTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00027">GetDefaultStateTree()</a>.</p>
 
 </div>
 </div>
@@ -470,9 +476,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00236">236</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00323">323</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00030">GetLinkedStateTreeOverrides()</a>, and <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00055">GetLinkedStateTreeOverrides()</a>, and <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>.</p>
 
 </div>
 </div>
@@ -499,11 +505,174 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00030">30</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00055">55</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00030">GetLinkedStateTreeOverrides()</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00082">LinkedStateTreeOverrides</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00055">GetLinkedStateTreeOverrides()</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00102">LinkedStateTreeOverrides</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00236">GetLinkedStateTreeOverride()</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00030">GetLinkedStateTreeOverrides()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00323">GetLinkedStateTreeOverride()</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00055">GetLinkedStateTreeOverrides()</a>.</p>
+
+</div>
+</div>
+<a id="abf3363902a1e17591110a7f4105fcf39" name="abf3363902a1e17591110a7f4105fcf39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf3363902a1e17591110a7f4105fcf39">&#9670;&#160;</a></span>GetPerceptionConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_f_d_t_a_i_perception_config.html">FDTAIPerceptionConfig</a> &amp; ADTAICharacter::GetPerceptionConfig </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Per-archetype perception tuning, applied to the controller's sense configs on possession. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00034">34</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00034">GetPerceptionConfig()</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00106">PerceptionConfig</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00034">GetPerceptionConfig()</a>.</p>
+
+</div>
+</div>
+<a id="a9ba1362cb37d641b18389817e0dad4d4" name="a9ba1362cb37d641b18389817e0dad4d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba1362cb37d641b18389817e0dad4d4">&#9670;&#160;</a></span>GetTargetBroadcastConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_f_d_t_a_i_target_broadcast_config.html">FDTAITargetBroadcastConfig</a> &amp; ADTAICharacter::GetTargetBroadcastConfig </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Per-archetype rules for sharing acquired targets with nearby allies. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00038">38</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00038">GetTargetBroadcastConfig()</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00110">TargetBroadcastConfig</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00038">GetTargetBroadcastConfig()</a>.</p>
+
+</div>
+</div>
+<a id="ae7625f2936a6a15615bc7bebb94dfe4a" name="ae7625f2936a6a15615bc7bebb94dfe4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7625f2936a6a15615bc7bebb94dfe4a">&#9670;&#160;</a></span>GetTargetingComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_targeting_component.html">UDTTargetingComponent</a> * ADTAICharacter::GetTargetingComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Targeting Component. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00351">351</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00054">ADTAIController::GetTargetingComponent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___perform_targeting_8cpp_source.html#l00066">UDTAbilityTask_PerformTargeting::GatherTargetsLocally()</a>.</p>
+
+</div>
+</div>
+<a id="a7d82a64b3507d90609d56e7d33fd3675" name="a7d82a64b3507d90609d56e7d33fd3675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d82a64b3507d90609d56e7d33fd3675">&#9670;&#160;</a></span>GetThreatConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_f_d_t_a_i_threat_config.html">FDTAIThreatConfig</a> &amp; ADTAICharacter::GetThreatConfig </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Per-archetype aggro/threat tuning, pushed to the controller's threat component on possession. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00042">42</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00042">GetThreatConfig()</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00114">ThreatConfig</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00042">GetThreatConfig()</a>.</p>
+
+</div>
+</div>
+<a id="a3c6ea91305ce0696c96852e95acfec07" name="a3c6ea91305ce0696c96852e95acfec07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6ea91305ce0696c96852e95acfec07">&#9670;&#160;</a></span>HandleDeath_Implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTAICharacter::HandleDeath_Implementation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>HitInfo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_a_d_t_enemy_character.html#a137557a612c2a8f95c9fe48d65b26f1c">ADTEnemyCharacter</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00123">123</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00130">StartDeathDissolve()</a>.</p>
 
 </div>
 </div>
@@ -532,7 +701,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_a_d_t_character.html#a978389139df334910a27d82416ba405e">ADTCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00075">75</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00084">84</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
 </div>
 </div>
@@ -561,9 +730,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_a_d_t_enemy_character.html#ac7e14bbe7c070dfa918c4858225c2d21">ADTEnemyCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00090">90</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00099">99</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00097">SetupSkeletalMesh()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00106">SetupSkeletalMesh()</a>.</p>
 
 </div>
 </div>
@@ -592,9 +761,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_a_d_t_character.html#abf6e1961b2bbd90b410a7387a2f26380">ADTCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00080">80</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00089">89</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00050">AbilitySystemComponent</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00047">ReplicationMode</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00075">AbilitySystemComponent</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00072">ReplicationMode</a>.</p>
 
 </div>
 </div>
@@ -635,11 +804,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00136">136</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00237">237</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00097">bDebugDrawSignificance</a>, <a class="el" href="_d_t_a_i_character_8h_source.html#l00100">bTickEnabledOverride</a>, <a class="el" href="_d_t_a_i_character_8h_source.html#l00089">CurrentSignificanceLevel</a>, <a class="el" href="_d_t_game_settings_8cpp_source.html#l00015">UDTGameSettings::GetSignificanceThreshold()</a>, <a class="el" href="_data_types_8h_source.html#l00022">High</a>, <a class="el" href="_data_types_8h_source.html#l00023">Invalid</a>, <a class="el" href="_data_types_8h_source.html#l00020">Low</a>, <a class="el" href="_data_types_8h_source.html#l00021">Medium</a>, <a class="el" href="_d_t_a_i_character_8h_source.html#l00093">MinimumSignificanceOverride</a>, <a class="el" href="_data_types_8h_source.html#l00019">Off</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00136">PostSignificanceUpdate()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00129">bDebugDrawSignificance</a>, <a class="el" href="_d_t_a_i_character_8h_source.html#l00121">CurrentSignificanceLevel</a>, <a class="el" href="_d_t_game_settings_8cpp_source.html#l00015">UDTGameSettings::GetSignificanceThreshold()</a>, <a class="el" href="_data_types_8h_source.html#l00024">High</a>, <a class="el" href="_data_types_8h_source.html#l00025">Invalid</a>, <a class="el" href="_data_types_8h_source.html#l00022">Low</a>, <a class="el" href="_data_types_8h_source.html#l00023">Medium</a>, <a class="el" href="_d_t_a_i_character_8h_source.html#l00125">MinimumSignificanceOverride</a>, <a class="el" href="_data_types_8h_source.html#l00021">Off</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00237">PostSignificanceUpdate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00025">BeginPlay()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00136">PostSignificanceUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00034">BeginPlay()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00237">PostSignificanceUpdate()</a>.</p>
 
 </div>
 </div>
@@ -670,38 +839,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00114">114</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00215">215</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00025">BeginPlay()</a>.</p>
-
-</div>
-</div>
-<a id="a0d8be66d4f7731a8482396d3f7afe882" name="a0d8be66d4f7731a8482396d3f7afe882"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d8be66d4f7731a8482396d3f7afe882">&#9670;&#160;</a></span>SetActorTickEnabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ADTAICharacter::SetActorTickEnabled </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bEnabled</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00220">220</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00100">bTickEnabledOverride</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00034">BeginPlay()</a>.</p>
 
 </div>
 </div>
@@ -720,9 +860,38 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00205">205</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00303">303</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00089">CurrentSignificanceLevel</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00093">MinimumSignificanceOverride</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00121">CurrentSignificanceLevel</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00125">MinimumSignificanceOverride</a>.</p>
+
+</div>
+</div>
+<a id="ab504e8f07b7080c4e61c54fbfb08c619" name="ab504e8f07b7080c4e61c54fbfb08c619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab504e8f07b7080c4e61c54fbfb08c619">&#9670;&#160;</a></span>SetPerceptionConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTAICharacter::SetPerceptionConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_a_i_perception_config.html">FDTAIPerceptionConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>NewConfig</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replace the perception config and push it onto the possessing controller immediately. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NewConfig</td><td>The perception settings to apply </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00341">341</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00106">PerceptionConfig</a>.</p>
 
 </div>
 </div>
@@ -749,9 +918,71 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00097">97</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00106">106</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00090">PostInitializeComponents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00099">PostInitializeComponents()</a>.</p>
+
+</div>
+</div>
+<a id="abec30568e287b5685fff33f89a4cb6a6" name="abec30568e287b5685fff33f89a4cb6a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec30568e287b5685fff33f89a4cb6a6">&#9670;&#160;</a></span>StartDeathDissolve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTAICharacter::StartDeathDissolve </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00130">130</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00137">DeathDissolveMIDs</a>, <a class="el" href="_d_t_a_i_character_8h_source.html#l00143">DeathDissolveStartTime</a>, <a class="el" href="_d_t_a_i_character_8h_source.html#l00140">DeathDissolveTimerHandle</a>, <a class="el" href="_d_t_a_i_character_8h_source.html#l00133">DeathVisuals</a>, <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00022">GDeathDissolveUpdateInterval</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00178">UpdateDeathDissolve()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00123">HandleDeath_Implementation()</a>.</p>
+
+</div>
+</div>
+<a id="a3a4d5fe61e38522e15c741c154c1726a" name="a3a4d5fe61e38522e15c741c154c1726a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4d5fe61e38522e15c741c154c1726a">&#9670;&#160;</a></span>UpdateDeathDissolve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTAICharacter::UpdateDeathDissolve </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00178">178</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00137">DeathDissolveMIDs</a>, <a class="el" href="_d_t_a_i_character_8h_source.html#l00143">DeathDissolveStartTime</a>, <a class="el" href="_d_t_a_i_character_8h_source.html#l00140">DeathDissolveTimerHandle</a>, and <a class="el" href="_d_t_a_i_character_8h_source.html#l00133">DeathVisuals</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00130">StartDeathDissolve()</a>.</p>
 
 </div>
 </div>
@@ -768,9 +999,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00050">50</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00075">75</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00015">ADTAICharacter()</a>, <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00231">GetAbilitySystemComponent()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00080">PostInitProperties()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00024">ADTAICharacter()</a>, <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00318">GetAbilitySystemComponent()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00089">PostInitProperties()</a>.</p>
 
 </div>
 </div>
@@ -796,37 +1027,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Draw debug info showing current significance level. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00097">97</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00129">129</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00136">PostSignificanceUpdate()</a>.</p>
-
-</div>
-</div>
-<a id="a56a540ac8faeb58aab43f1f4df75679f" name="a56a540ac8faeb58aab43f1f4df75679f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56a540ac8faeb58aab43f1f4df75679f">&#9670;&#160;</a></span>bTickEnabledOverride</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TOptional&lt;bool&gt; ADTAICharacter::bTickEnabledOverride</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>If set, significance will not manage tick enabled - use ClearTickEnabledOverride() to restore significance control. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00100">100</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00226">ClearTickOverride()</a>, <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00136">PostSignificanceUpdate()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00220">SetActorTickEnabled()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00237">PostSignificanceUpdate()</a>.</p>
 
 </div>
 </div>
@@ -852,9 +1055,121 @@ Protected Attributes</h2></td></tr>
 
 <p>Current significance level. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00089">89</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00121">121</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00054">GetCurrentSignificanceLevel()</a>, <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00136">PostSignificanceUpdate()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00205">SetMinimumSignificanceLevel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00079">GetCurrentSignificanceLevel()</a>, <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00237">PostSignificanceUpdate()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00303">SetMinimumSignificanceLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a5bb14e47288842b325e12ce70f89979e" name="a5bb14e47288842b325e12ce70f89979e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb14e47288842b325e12ce70f89979e">&#9670;&#160;</a></span>DeathDissolveMIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;TObjectPtr&lt;UMaterialInstanceDynamic&gt; &gt; ADTAICharacter::DeathDissolveMIDs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dynamic material instances created across all mesh components when the death dissolve begins. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00137">137</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00130">StartDeathDissolve()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00178">UpdateDeathDissolve()</a>.</p>
+
+</div>
+</div>
+<a id="ab902885cd7f5737b1bb178bba2d937b7" name="ab902885cd7f5737b1bb178bba2d937b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab902885cd7f5737b1bb178bba2d937b7">&#9670;&#160;</a></span>DeathDissolveStartTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADTAICharacter::DeathDissolveStartTime = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>World time (seconds) at which the dissolve is considered to start (post StartDelay). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00143">143</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00130">StartDeathDissolve()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00178">UpdateDeathDissolve()</a>.</p>
+
+</div>
+</div>
+<a id="aa8cd6ac1cf51b579ff9fa4f149864ec1" name="aa8cd6ac1cf51b579ff9fa4f149864ec1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cd6ac1cf51b579ff9fa4f149864ec1">&#9670;&#160;</a></span>DeathDissolveTimerHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTimerHandle ADTAICharacter::DeathDissolveTimerHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Repeating timer that steps the dissolve while it is active. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00140">140</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00130">StartDeathDissolve()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00178">UpdateDeathDissolve()</a>.</p>
+
+</div>
+</div>
+<a id="a5aa783bb425f809d72532b74fd18f48e" name="a5aa783bb425f809d72532b74fd18f48e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa783bb425f809d72532b74fd18f48e">&#9670;&#160;</a></span>DeathVisuals</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_d_t_death_visuals.html">FDTDeathVisuals</a> ADTAICharacter::DeathVisuals</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Per-Blueprint cosmetic dissolve-on-death config (drives a named material scalar across all mesh pieces). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00133">133</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00130">StartDeathDissolve()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00178">UpdateDeathDissolve()</a>.</p>
 
 </div>
 </div>
@@ -878,9 +1193,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00079">79</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00099">99</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00025">GetDefaultStateTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00027">GetDefaultStateTree()</a>.</p>
 
 </div>
 </div>
@@ -904,9 +1219,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00082">82</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00102">102</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00030">GetLinkedStateTreeOverrides()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00055">GetLinkedStateTreeOverrides()</a>.</p>
 
 </div>
 </div>
@@ -932,9 +1247,38 @@ Protected Attributes</h2></td></tr>
 
 <p>Minimum significance level override. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00093">93</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00125">125</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00215">ClearMinimumSignificanceLevel()</a>, <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00136">PostSignificanceUpdate()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00205">SetMinimumSignificanceLevel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00313">ClearMinimumSignificanceLevel()</a>, <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00237">PostSignificanceUpdate()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00303">SetMinimumSignificanceLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a75acb22d3df885b57597555fd4b4637c" name="a75acb22d3df885b57597555fd4b4637c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75acb22d3df885b57597555fd4b4637c">&#9670;&#160;</a></span>PerceptionConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_d_t_a_i_perception_config.html">FDTAIPerceptionConfig</a> ADTAICharacter::PerceptionConfig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sight/damage/team sense tuning for this archetype. </p>
+<p>Pushed to the controller in OnPossess. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00106">106</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00034">GetPerceptionConfig()</a>, and <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00341">SetPerceptionConfig()</a>.</p>
 
 </div>
 </div>
@@ -958,9 +1302,9 @@ Protected Attributes</h2></td></tr>
 </ul>
 <dl class="section see"><dt>See also</dt><dd><a href="https://github.com/tranek/GASDocumentation#concepts-asc-rm">https://github.com/tranek/GASDocumentation#concepts-asc-rm</a> for more information </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00072">72</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00080">PostInitProperties()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00089">PostInitProperties()</a>.</p>
 
 </div>
 </div>
@@ -984,9 +1328,65 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00085">85</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00117">117</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00025">BeginPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00034">BeginPlay()</a>.</p>
+
+</div>
+</div>
+<a id="a3d8652fb1f033b4d76013dbcc48bbf75" name="a3d8652fb1f033b4d76013dbcc48bbf75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d8652fb1f033b4d76013dbcc48bbf75">&#9670;&#160;</a></span>TargetBroadcastConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_d_t_a_i_target_broadcast_config.html">FDTAITargetBroadcastConfig</a> ADTAICharacter::TargetBroadcastConfig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>How this archetype shares acquired targets with, and reacts to, nearby allies. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00110">110</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00038">GetTargetBroadcastConfig()</a>.</p>
+
+</div>
+</div>
+<a id="aab5680b3f0672717d351de1a29ed8b78" name="aab5680b3f0672717d351de1a29ed8b78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab5680b3f0672717d351de1a29ed8b78">&#9670;&#160;</a></span>ThreatConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_d_t_a_i_threat_config.html">FDTAIThreatConfig</a> ADTAICharacter::ThreatConfig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Aggro tuning for this archetype: threat gain, decay and target-switch stickiness. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8h_source.html#l00114">114</a> of file <a class="el" href="_d_t_a_i_character_8h_source.html">DTAICharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8h_source.html#l00042">GetThreatConfig()</a>.</p>
 
 </div>
 </div>

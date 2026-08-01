@@ -187,11 +187,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_gameplay_
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    ActiveMontageTask = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    ActiveCastDelayTask = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    ActiveSpellNotifyTask = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    ActiveSpellMontage = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    bIsCastingSpell = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    bSpellEffectTriggered = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#acb78f90e66bbbf8c3da156780ee41749">CurrentCastTime</a> = 0.0f;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a7606ea84bc5bcd85d4170934e9ed74a1">SpellEffectEventPayload</a> = FGameplayEventData();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    bIsCastingSpell = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    bSpellEffectTriggered = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#acb78f90e66bbbf8c3da156780ee41749">CurrentCastTime</a> = 0.0f;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a7606ea84bc5bcd85d4170934e9ed74a1">SpellEffectEventPayload</a> = FGameplayEventData();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    CurrentSpellTargets.Reset();</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
@@ -223,253 +223,238 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_gameplay_
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a96fdb7a5936aa9276097fa48ad6a8328">K2_OnSpellCastStarted</a>(<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#acb78f90e66bbbf8c3da156780ee41749">CurrentCastTime</a>);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    UAnimMontage* MontageToPlay = <a class="code hl_function" href="class_u_d_t_gameplay_ability.html#ac6b682668d8dc0b1da5ce9d419713017">GetAbilityMontageToPlay</a>();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    ActiveSpellMontage = MontageToPlay;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">if</span> (MontageToPlay)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        ActiveMontageTask = UAbilityTask_PlayMontageAndWait::CreatePlayMontageAndWaitProxy(<span class="keyword">this</span>, NAME_None, MontageToPlay, <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#adf47d3bfd5a4c46588c0389b1e76692a">GetEffectiveCastSpeed</a>(), NAME_None,<span class="keyword">true</span>,<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span> (ActiveMontageTask)</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            ActiveMontageTask-&gt;OnCompleted.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnSpellMontageCompleted);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            ActiveMontageTask-&gt;OnBlendOut.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnSpellMontageBlendOut);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            ActiveMontageTask-&gt;OnInterrupted.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnSpellMontageInterrupted);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            ActiveMontageTask-&gt;OnCancelled.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnSpellMontageCancelled);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            ActiveMontageTask-&gt;ReadyForActivation();</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (MontageToPlay)</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    {</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        UE_LOG(LogDTAbility, Verbose, TEXT(<span class="stringliteral">&quot;Spell [%s] has a montage but no valid anim instance.&quot;</span>), *GetName());</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    StartCastDelay();</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::DoSpellEffect_Implementation()</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>{</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">TargetingConfig</a>.TargetingPreset)</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    UDTAbilityTask_PerformTargeting* TargetingTask = <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a340eed05ff5427943e1b7e06e618913d">CreateTargetingTask</a>();</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">if</span> (TargetingTask)</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        TargetingTask-&gt;<a class="code hl_variable" href="class_u_d_t_ability_task___perform_targeting.html#ad33f34b0d46a04571ce9056c23bc8d4f">OnTargetsReady</a>.AddDynamic(<span class="keyword">this</span>, &amp;UDTGameplayAbility_Spell::OnSpellTargetsReady);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        TargetingTask-&gt;ReadyForActivation();</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___spell.html#a340eed05ff5427943e1b7e06e618913d">  123</a></span><a class="code hl_class" href="class_u_d_t_ability_task___perform_targeting.html">UDTAbilityTask_PerformTargeting</a>* <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a340eed05ff5427943e1b7e06e618913d">UDTGameplayAbility_Spell::CreateTargetingTask</a>()</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>{</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_u_d_t_ability_task___perform_targeting.html#a89f9ead13ccf74e8a2474329f69462ab">UDTAbilityTask_PerformTargeting::PerformTargeting</a>(</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keyword">this</span>,</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">TargetingConfig</a>.TargetingPreset,</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">TargetingConfig</a>.SourceMode,</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">TargetingConfig</a>.bServerValidate,</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">TargetingConfig</a>.bUseAsync);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">if</span> (MontageToPlay)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        ActiveMontageTask = UAbilityTask_PlayMontageAndWait::CreatePlayMontageAndWaitProxy(<span class="keyword">this</span>, NAME_None, MontageToPlay, <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#adf47d3bfd5a4c46588c0389b1e76692a">GetEffectiveCastSpeed</a>(), NAME_None,<span class="keyword">true</span>,<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">if</span> (ActiveMontageTask)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            ActiveMontageTask-&gt;OnCompleted.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnSpellMontageCompleted);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            ActiveMontageTask-&gt;OnBlendOut.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnSpellMontageBlendOut);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            ActiveMontageTask-&gt;OnInterrupted.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnSpellMontageInterrupted);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            ActiveMontageTask-&gt;OnCancelled.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnSpellMontageCancelled);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            ActiveMontageTask-&gt;ReadyForActivation();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (MontageToPlay)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        UE_LOG(LogDTAbility, Verbose, TEXT(<span class="stringliteral">&quot;Spell [%s] has a montage but no valid anim instance.&quot;</span>), *GetName());</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    StartCastDelay();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::DoSpellEffect_Implementation()</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>{</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">TargetingConfig</a>.TargetingPreset)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    UDTAbilityTask_PerformTargeting* TargetingTask = <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a340eed05ff5427943e1b7e06e618913d">CreateTargetingTask</a>();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">if</span> (TargetingTask)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        TargetingTask-&gt;<a class="code hl_variable" href="class_u_d_t_ability_task___perform_targeting.html#ad33f34b0d46a04571ce9056c23bc8d4f">OnTargetsReady</a>.AddDynamic(<span class="keyword">this</span>, &amp;UDTGameplayAbility_Spell::OnSpellTargetsReady);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        TargetingTask-&gt;ReadyForActivation();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___spell.html#a340eed05ff5427943e1b7e06e618913d">  122</a></span><a class="code hl_class" href="class_u_d_t_ability_task___perform_targeting.html">UDTAbilityTask_PerformTargeting</a>* <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a340eed05ff5427943e1b7e06e618913d">UDTGameplayAbility_Spell::CreateTargetingTask</a>()</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>{</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_u_d_t_ability_task___perform_targeting.html#a89f9ead13ccf74e8a2474329f69462ab">UDTAbilityTask_PerformTargeting::PerformTargeting</a>(</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keyword">this</span>,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">TargetingConfig</a>.TargetingPreset,</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">TargetingConfig</a>.SourceMode,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">TargetingConfig</a>.bServerValidate,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">TargetingConfig</a>.bUseAsync);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
 </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellTargetsReady(<span class="keyword">const</span> TArray&lt;FHitResult&gt;&amp; HitResults)</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>{</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a14a17690e68e20570487e8280f192d5b">K2_OnSpellTargetsAcquired</a>(HitResults);</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>}</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">  138</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">UDTGameplayAbility_Spell::CastSpell</a>()</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>{</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordflow">if</span> (!IsActive())</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    {</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    }</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    bIsCastingSpell = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a9e88237e347cd4ba1a8fdbd4c34cea61">K2_OnSpellCastFinished</a>();</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#aa3b75028f032c5feafbf447ed0a5e413">SpellEffectMontageSectionName</a> != NAME_None)</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    {</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        MontageJumpToSection(<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#aa3b75028f032c5feafbf447ed0a5e413">SpellEffectMontageSectionName</a>);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    StartSpellNotifyListener();</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellTargetsReady(<span class="keyword">const</span> TArray&lt;FHitResult&gt;&amp; HitResults)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>{</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a14a17690e68e20570487e8280f192d5b">K2_OnSpellTargetsAcquired</a>(HitResults);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    CurrentSpellTargets = HitResults;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">  139</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">UDTGameplayAbility_Spell::CastSpell</a>()</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>{</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">if</span> (!IsActive())</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    bIsCastingSpell = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a9e88237e347cd4ba1a8fdbd4c34cea61">K2_OnSpellCastFinished</a>();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#aa3b75028f032c5feafbf447ed0a5e413">SpellEffectMontageSectionName</a> != NAME_None)</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        MontageJumpToSection(<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#aa3b75028f032c5feafbf447ed0a5e413">SpellEffectMontageSectionName</a>);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    StartSpellNotifyListener();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
 </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___spell.html#a433fa66496a705cd46847489e35abbf7">  156</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a433fa66496a705cd46847489e35abbf7">UDTGameplayAbility_Spell::CancelSpellCast</a>()</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>{</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    FinishSpellAbility(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>}</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="foldopen" id="foldopen00157" data-start="{" data-end="}">
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___spell.html#a433fa66496a705cd46847489e35abbf7">  157</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a433fa66496a705cd46847489e35abbf7">UDTGameplayAbility_Spell::CancelSpellCast</a>()</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>{</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    FinishSpellAbility(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>}</div>
 </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::StartCastDelay()</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>{</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#acb78f90e66bbbf8c3da156780ee41749">CurrentCastTime</a> &lt;= UE_SMALL_NUMBER)</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">CastSpell</a>();</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a491d5715f5819b4ae3e575eae57dad89">CastingMontageSectionName</a> != NAME_None)</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    {</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        MontageJumpToSection(<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a491d5715f5819b4ae3e575eae57dad89">CastingMontageSectionName</a>);</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    ActiveCastDelayTask = UAbilityTask_WaitDelay::WaitDelay(<span class="keyword">this</span>, <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#acb78f90e66bbbf8c3da156780ee41749">CurrentCastTime</a>);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordflow">if</span> (ActiveCastDelayTask)</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    {</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        ActiveCastDelayTask-&gt;OnFinish.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnCastDelayFinished);</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        ActiveCastDelayTask-&gt;ReadyForActivation();</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">CastSpell</a>();</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>}</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::StartSpellNotifyListener()</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>{</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#aa0fa2b17eea3e81978f81695899800be">SpellNotifyTag</a>.IsValid())</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    {</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        ActiveSpellNotifyTask = UAbilityTask_WaitGameplayEvent::WaitGameplayEvent(<span class="keyword">this</span>, <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#aa0fa2b17eea3e81978f81695899800be">SpellNotifyTag</a>, <span class="keyword">nullptr</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordflow">if</span> (ActiveSpellNotifyTask)</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        {</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            ActiveSpellNotifyTask-&gt;EventReceived.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnSpellNotifyReceived);</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            ActiveSpellNotifyTask-&gt;ReadyForActivation();</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        }</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        UE_LOG(LogDTAbility, Verbose, TEXT(<span class="stringliteral">&quot;Spell [%s] could not start notify listener for [%s]. Triggering effect immediately.&quot;</span>),</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            *GetName(), *<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#aa0fa2b17eea3e81978f81695899800be">SpellNotifyTag</a>.ToString());</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    }</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    TriggerSpellEffect(FGameplayEventData());</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>}</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::TriggerSpellEffect(<span class="keyword">const</span> FGameplayEventData&amp; EventPayload)</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>{</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">if</span> (!IsActive() || bSpellEffectTriggered)</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    {</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    }</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    bSpellEffectTriggered = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a7606ea84bc5bcd85d4170934e9ed74a1">SpellEffectEventPayload</a> = EventPayload;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a80ad0cc33f5cba2e51d8480091deaf72">K2_OnSpellEffectTriggered</a>(<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a7606ea84bc5bcd85d4170934e9ed74a1">SpellEffectEventPayload</a>);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a95accfb36f4f3ccecea0a5e4f37c5cc6">DoSpellEffect</a>();</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordflow">if</span> (!IsSpellMontageActive() &amp;&amp; <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a8bf9079fcf5098e2724b528ede5d878f">bEndAbilityAfterEffectWithoutMontage</a>)</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        FinishSpellAbility(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    }</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>}</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::FinishSpellAbility(<span class="keywordtype">bool</span> bWasCancelled)</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>{</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keywordflow">if</span> (!IsActive())</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    {</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    }</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">if</span> (bWasCancelled)</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    {</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        CancelAbility(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    }</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a64656debb984a1948aaf02f5d0deb508">EndAbility</a>(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>}</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="keywordtype">bool</span> UDTGameplayAbility_Spell::IsSpellMontageActive()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="keywordflow">if</span> (!ActiveSpellMontage || !CurrentActorInfo || !CurrentActorInfo-&gt;AnimInstance.IsValid())</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    {</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    }</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">return</span> CurrentActorInfo-&gt;AnimInstance-&gt;Montage_IsPlaying(ActiveSpellMontage);</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>}</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnCastDelayFinished()</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>{</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    ActiveCastDelayTask = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">CastSpell</a>();</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>}</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellNotifyReceived(FGameplayEventData Payload)</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>{</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    ActiveSpellNotifyTask = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    TriggerSpellEffect(Payload);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>}</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellMontageCompleted()</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>{</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    ActiveMontageTask = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a785214b54e730babf3c7c6c94b7594f0">bEndAbilityOnCastComplete</a>)</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    {</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        FinishSpellAbility(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    }</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>}</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellMontageBlendOut()</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>{</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    ActiveMontageTask = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a785214b54e730babf3c7c6c94b7594f0">bEndAbilityOnCastComplete</a>)</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    {</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        FinishSpellAbility(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    }</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>}</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellMontageInterrupted()</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>{</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    ActiveMontageTask = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    FinishSpellAbility(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>}</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellMontageCancelled()</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>{</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    ActiveMontageTask = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    FinishSpellAbility(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>}</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::StartCastDelay()</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>{</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#acb78f90e66bbbf8c3da156780ee41749">CurrentCastTime</a> &lt;= UE_SMALL_NUMBER)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">CastSpell</a>();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a491d5715f5819b4ae3e575eae57dad89">CastingMontageSectionName</a> != NAME_None)</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        MontageJumpToSection(<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a491d5715f5819b4ae3e575eae57dad89">CastingMontageSectionName</a>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    ActiveCastDelayTask = UAbilityTask_WaitDelay::WaitDelay(<span class="keyword">this</span>, <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#acb78f90e66bbbf8c3da156780ee41749">CurrentCastTime</a>);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordflow">if</span> (ActiveCastDelayTask)</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        ActiveCastDelayTask-&gt;OnFinish.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnCastDelayFinished);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        ActiveCastDelayTask-&gt;ReadyForActivation();</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">CastSpell</a>();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::StartSpellNotifyListener()</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>{</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#aa0fa2b17eea3e81978f81695899800be">SpellNotifyTag</a>.IsValid())</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        ActiveSpellNotifyTask = UAbilityTask_WaitGameplayEvent::WaitGameplayEvent(<span class="keyword">this</span>, <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#aa0fa2b17eea3e81978f81695899800be">SpellNotifyTag</a>, <span class="keyword">nullptr</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">if</span> (ActiveSpellNotifyTask)</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            ActiveSpellNotifyTask-&gt;EventReceived.AddDynamic(<span class="keyword">this</span>, &amp;ThisClass::OnSpellNotifyReceived);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            ActiveSpellNotifyTask-&gt;ReadyForActivation();</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        UE_LOG(LogDTAbility, Verbose, TEXT(<span class="stringliteral">&quot;Spell [%s] could not start notify listener for [%s]. Triggering effect immediately.&quot;</span>),</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            *GetName(), *<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#aa0fa2b17eea3e81978f81695899800be">SpellNotifyTag</a>.ToString());</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    TriggerSpellEffect(FGameplayEventData());</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>}</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::TriggerSpellEffect(<span class="keyword">const</span> FGameplayEventData&amp; EventPayload)</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>{</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keywordflow">if</span> (!IsActive() || bSpellEffectTriggered)</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    }</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    bSpellEffectTriggered = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a7606ea84bc5bcd85d4170934e9ed74a1">SpellEffectEventPayload</a> = EventPayload;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a80ad0cc33f5cba2e51d8480091deaf72">K2_OnSpellEffectTriggered</a>(<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a7606ea84bc5bcd85d4170934e9ed74a1">SpellEffectEventPayload</a>);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a95accfb36f4f3ccecea0a5e4f37c5cc6">DoSpellEffect</a>();</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>}</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::FinishSpellAbility(<span class="keywordtype">bool</span> bWasCancelled)</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>{</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keywordflow">if</span> (!IsActive())</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordflow">if</span> (bWasCancelled)</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        CancelAbility(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a64656debb984a1948aaf02f5d0deb508">EndAbility</a>(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>}</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnCastDelayFinished()</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>{</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    ActiveCastDelayTask = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">CastSpell</a>();</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>}</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellNotifyReceived(FGameplayEventData Payload)</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>{</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    ActiveSpellNotifyTask = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    TriggerSpellEffect(Payload);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>}</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellMontageCompleted()</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>{</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    ActiveMontageTask = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a785214b54e730babf3c7c6c94b7594f0">bEndAbilityOnCastComplete</a>)</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        FinishSpellAbility(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>}</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellMontageBlendOut()</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>{</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    ActiveMontageTask = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_gameplay_ability___spell.html#a785214b54e730babf3c7c6c94b7594f0">bEndAbilityOnCastComplete</a>)</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        FinishSpellAbility(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>}</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellMontageInterrupted()</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>{</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    ActiveMontageTask = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    FinishSpellAbility(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>}</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="keywordtype">void</span> UDTGameplayAbility_Spell::OnSpellMontageCancelled()</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>{</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    ActiveMontageTask = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    FinishSpellAbility(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>}</div>
 <div class="ttc" id="a_d_t_ability_system_component_8h_html"><div class="ttname"><a href="_d_t_ability_system_component_8h.html">DTAbilitySystemComponent.h</a></div></div>
 <div class="ttc" id="a_d_t_ability_task___perform_targeting_8h_html"><div class="ttname"><a href="_d_t_ability_task___perform_targeting_8h.html">DTAbilityTask_PerformTargeting.h</a></div></div>
 <div class="ttc" id="a_d_t_gameplay_ability___spell_8h_html"><div class="ttname"><a href="_d_t_gameplay_ability___spell_8h.html">DTGameplayAbility_Spell.h</a></div></div>
 <div class="ttc" id="a_d_t_gameplay_tags_8h_html"><div class="ttname"><a href="_d_t_gameplay_tags_8h.html">DTGameplayTags.h</a></div></div>
 <div class="ttc" id="a_d_t_log_channels_8h_html"><div class="ttname"><a href="_d_t_log_channels_8h.html">DTLogChannels.h</a></div></div>
 <div class="ttc" id="aclass_u_d_t_ability_task___perform_targeting_html"><div class="ttname"><a href="class_u_d_t_ability_task___perform_targeting.html">UDTAbilityTask_PerformTargeting</a></div><div class="ttdoc">Reusable ability task that runs a UTargetingPreset and surfaces the resulting hits to the ability.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_ability_task___perform_targeting_8h_source.html#l00032">DTAbilityTask_PerformTargeting.h:33</a></div></div>
-<div class="ttc" id="aclass_u_d_t_ability_task___perform_targeting_html_a89f9ead13ccf74e8a2474329f69462ab"><div class="ttname"><a href="class_u_d_t_ability_task___perform_targeting.html#a89f9ead13ccf74e8a2474329f69462ab">UDTAbilityTask_PerformTargeting::PerformTargeting</a></div><div class="ttdeci">static UDTAbilityTask_PerformTargeting * PerformTargeting(UGameplayAbility *OwningAbility, UTargetingPreset *TargetingPreset, EDTTargetSourceMode SourceMode=EDTTargetSourceMode::Self, bool bServerValidate=true, bool bUseAsync=false)</div><div class="ttdoc">Run a targeting preset for the owning ability.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_ability_task___perform_targeting_8cpp_source.html#l00013">DTAbilityTask_PerformTargeting.cpp:13</a></div></div>
+<div class="ttc" id="aclass_u_d_t_ability_task___perform_targeting_html_a89f9ead13ccf74e8a2474329f69462ab"><div class="ttname"><a href="class_u_d_t_ability_task___perform_targeting.html#a89f9ead13ccf74e8a2474329f69462ab">UDTAbilityTask_PerformTargeting::PerformTargeting</a></div><div class="ttdeci">static UDTAbilityTask_PerformTargeting * PerformTargeting(UGameplayAbility *OwningAbility, UTargetingPreset *TargetingPreset, EDTTargetSourceMode SourceMode=EDTTargetSourceMode::Self, bool bServerValidate=true, bool bUseAsync=false)</div><div class="ttdoc">Run a targeting preset for the owning ability.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_ability_task___perform_targeting_8cpp_source.html#l00014">DTAbilityTask_PerformTargeting.cpp:14</a></div></div>
 <div class="ttc" id="aclass_u_d_t_ability_task___perform_targeting_html_ad33f34b0d46a04571ce9056c23bc8d4f"><div class="ttname"><a href="class_u_d_t_ability_task___perform_targeting.html#ad33f34b0d46a04571ce9056c23bc8d4f">UDTAbilityTask_PerformTargeting::OnTargetsReady</a></div><div class="ttdeci">FDTOnTargetsReady OnTargetsReady</div><div class="ttdoc">Broadcast when the final (validated) target set is ready.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_ability_task___perform_targeting_8h_source.html#l00039">DTAbilityTask_PerformTargeting.h:39</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a06d39429cae647afe9cec19d13770545"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a06d39429cae647afe9cec19d13770545">UDTGameplayAbility_Spell::bScaleCastTimeByCastSpeed</a></div><div class="ttdeci">bool bScaleCastTimeByCastSpeed</div><div class="ttdoc">If true, CastSpeed shortens CastTime as well as increasing montage play rate.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00079">DTGameplayAbility_Spell.h:79</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a0a4d7f27d1c0aa00ae17060c1c68d294"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a0a4d7f27d1c0aa00ae17060c1c68d294">UDTGameplayAbility_Spell::bAutoBeginCastOnActivate</a></div><div class="ttdeci">bool bAutoBeginCastOnActivate</div><div class="ttdoc">When true (default), BeginSpellCast runs automatically on activation.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00098">DTGameplayAbility_Spell.h:98</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a0a4d7f27d1c0aa00ae17060c1c68d294"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a0a4d7f27d1c0aa00ae17060c1c68d294">UDTGameplayAbility_Spell::bAutoBeginCastOnActivate</a></div><div class="ttdeci">bool bAutoBeginCastOnActivate</div><div class="ttdoc">When true (default), BeginSpellCast runs automatically on activation.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00087">DTGameplayAbility_Spell.h:87</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a14a17690e68e20570487e8280f192d5b"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a14a17690e68e20570487e8280f192d5b">UDTGameplayAbility_Spell::K2_OnSpellTargetsAcquired</a></div><div class="ttdeci">void K2_OnSpellTargetsAcquired(const TArray&lt; FHitResult &gt; &amp;HitResults)</div><div class="ttdoc">Blueprint hook fired with the resolved targets.</div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a1806d1e1ffea1e75276ef74464493988"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a1806d1e1ffea1e75276ef74464493988">UDTGameplayAbility_Spell::CastTime</a></div><div class="ttdeci">float CastTime</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00060">DTGameplayAbility_Spell.h:60</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a1cd4981d03879fd48c2008d69a3f657d"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">UDTGameplayAbility_Spell::CastSpell</a></div><div class="ttdeci">void CastSpell()</div><div class="ttdoc">Moves from cast/channel timing into the spell effect timing path.</div><div class="ttdef"><b>Definition</b> <a href="#l00138">DTGameplayAbility_Spell.cpp:138</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a1cd4981d03879fd48c2008d69a3f657d"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a1cd4981d03879fd48c2008d69a3f657d">UDTGameplayAbility_Spell::CastSpell</a></div><div class="ttdeci">void CastSpell()</div><div class="ttdoc">Moves from cast/channel timing into the spell effect timing path.</div><div class="ttdef"><b>Definition</b> <a href="#l00139">DTGameplayAbility_Spell.cpp:139</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a1ebdb7fb590051e5b3defaaa0b1c24e4"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a1ebdb7fb590051e5b3defaaa0b1c24e4">UDTGameplayAbility_Spell::ActivateAbility</a></div><div class="ttdeci">virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData *TriggerEventData) override</div><div class="ttdef"><b>Definition</b> <a href="#l00024">DTGameplayAbility_Spell.cpp:24</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a340eed05ff5427943e1b7e06e618913d"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a340eed05ff5427943e1b7e06e618913d">UDTGameplayAbility_Spell::CreateTargetingTask</a></div><div class="ttdeci">virtual UDTAbilityTask_PerformTargeting * CreateTargetingTask()</div><div class="ttdoc">Creates the targeting task used by DoSpellEffect.</div><div class="ttdef"><b>Definition</b> <a href="#l00123">DTGameplayAbility_Spell.cpp:123</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a433fa66496a705cd46847489e35abbf7"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a433fa66496a705cd46847489e35abbf7">UDTGameplayAbility_Spell::CancelSpellCast</a></div><div class="ttdeci">void CancelSpellCast()</div><div class="ttdoc">Cancels this spell cast, normally because an interrupt condition was met.</div><div class="ttdef"><b>Definition</b> <a href="#l00156">DTGameplayAbility_Spell.cpp:156</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a340eed05ff5427943e1b7e06e618913d"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a340eed05ff5427943e1b7e06e618913d">UDTGameplayAbility_Spell::CreateTargetingTask</a></div><div class="ttdeci">virtual UDTAbilityTask_PerformTargeting * CreateTargetingTask()</div><div class="ttdoc">Creates the targeting task used by DoSpellEffect.</div><div class="ttdef"><b>Definition</b> <a href="#l00122">DTGameplayAbility_Spell.cpp:122</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a433fa66496a705cd46847489e35abbf7"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a433fa66496a705cd46847489e35abbf7">UDTGameplayAbility_Spell::CancelSpellCast</a></div><div class="ttdeci">void CancelSpellCast()</div><div class="ttdoc">Cancels this spell cast, normally because an interrupt condition was met.</div><div class="ttdef"><b>Definition</b> <a href="#l00157">DTGameplayAbility_Spell.cpp:157</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a491d5715f5819b4ae3e575eae57dad89"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a491d5715f5819b4ae3e575eae57dad89">UDTGameplayAbility_Spell::CastingMontageSectionName</a></div><div class="ttdeci">FName CastingMontageSectionName</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00066">DTGameplayAbility_Spell.h:66</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a5795bba9e0403bfa31c24d1b5dc04635"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">UDTGameplayAbility_Spell::TargetingConfig</a></div><div class="ttdeci">FDTSpellTargetingConfig TargetingConfig</div><div class="ttdoc">Ability targeting config.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00087">DTGameplayAbility_Spell.h:87</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a5795bba9e0403bfa31c24d1b5dc04635"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a5795bba9e0403bfa31c24d1b5dc04635">UDTGameplayAbility_Spell::TargetingConfig</a></div><div class="ttdeci">FDTSpellTargetingConfig TargetingConfig</div><div class="ttdoc">Ability targeting config.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00083">DTGameplayAbility_Spell.h:83</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a64656debb984a1948aaf02f5d0deb508"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a64656debb984a1948aaf02f5d0deb508">UDTGameplayAbility_Spell::EndAbility</a></div><div class="ttdeci">virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override</div><div class="ttdef"><b>Definition</b> <a href="#l00045">DTGameplayAbility_Spell.cpp:45</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a66b51d72017f98df74d364fbe352b806"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a66b51d72017f98df74d364fbe352b806">UDTGameplayAbility_Spell::BeginSpellCast</a></div><div class="ttdeci">void BeginSpellCast()</div><div class="ttdoc">Commits the ability (cost/cooldown) and starts the cast/channel timing path.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">DTGameplayAbility_Spell.cpp:34</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a7606ea84bc5bcd85d4170934e9ed74a1"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a7606ea84bc5bcd85d4170934e9ed74a1">UDTGameplayAbility_Spell::SpellEffectEventPayload</a></div><div class="ttdeci">FGameplayEventData SpellEffectEventPayload</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00104">DTGameplayAbility_Spell.h:104</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a7606ea84bc5bcd85d4170934e9ed74a1"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a7606ea84bc5bcd85d4170934e9ed74a1">UDTGameplayAbility_Spell::SpellEffectEventPayload</a></div><div class="ttdeci">FGameplayEventData SpellEffectEventPayload</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00093">DTGameplayAbility_Spell.h:93</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a785214b54e730babf3c7c6c94b7594f0"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a785214b54e730babf3c7c6c94b7594f0">UDTGameplayAbility_Spell::bEndAbilityOnCastComplete</a></div><div class="ttdeci">bool bEndAbilityOnCastComplete</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00075">DTGameplayAbility_Spell.h:75</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a80ad0cc33f5cba2e51d8480091deaf72"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a80ad0cc33f5cba2e51d8480091deaf72">UDTGameplayAbility_Spell::K2_OnSpellEffectTriggered</a></div><div class="ttdeci">void K2_OnSpellEffectTriggered(const FGameplayEventData &amp;EventPayload)</div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a8bf9079fcf5098e2724b528ede5d878f"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a8bf9079fcf5098e2724b528ede5d878f">UDTGameplayAbility_Spell::bEndAbilityAfterEffectWithoutMontage</a></div><div class="ttdeci">bool bEndAbilityAfterEffectWithoutMontage</div><div class="ttdoc">If true, ends the ability after DoSpellEffect when no montage is playing.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00083">DTGameplayAbility_Spell.h:83</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a8cdcb6f7f68fa3cb9e7c37f7f3bfb828"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a8cdcb6f7f68fa3cb9e7c37f7f3bfb828">UDTGameplayAbility_Spell::GetEffectiveCastTime</a></div><div class="ttdeci">float GetEffectiveCastTime() const</div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a95accfb36f4f3ccecea0a5e4f37c5cc6"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a95accfb36f4f3ccecea0a5e4f37c5cc6">UDTGameplayAbility_Spell::DoSpellEffect</a></div><div class="ttdeci">void DoSpellEffect()</div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a96fdb7a5936aa9276097fa48ad6a8328"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a96fdb7a5936aa9276097fa48ad6a8328">UDTGameplayAbility_Spell::K2_OnSpellCastStarted</a></div><div class="ttdeci">void K2_OnSpellCastStarted(float EffectiveCastTime)</div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_a9e88237e347cd4ba1a8fdbd4c34cea61"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#a9e88237e347cd4ba1a8fdbd4c34cea61">UDTGameplayAbility_Spell::K2_OnSpellCastFinished</a></div><div class="ttdeci">void K2_OnSpellCastFinished()</div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_aa0fa2b17eea3e81978f81695899800be"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#aa0fa2b17eea3e81978f81695899800be">UDTGameplayAbility_Spell::SpellNotifyTag</a></div><div class="ttdeci">FGameplayTag SpellNotifyTag</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00072">DTGameplayAbility_Spell.h:72</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_aa3b75028f032c5feafbf447ed0a5e413"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#aa3b75028f032c5feafbf447ed0a5e413">UDTGameplayAbility_Spell::SpellEffectMontageSectionName</a></div><div class="ttdeci">FName SpellEffectMontageSectionName</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00069">DTGameplayAbility_Spell.h:69</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_acb78f90e66bbbf8c3da156780ee41749"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#acb78f90e66bbbf8c3da156780ee41749">UDTGameplayAbility_Spell::CurrentCastTime</a></div><div class="ttdeci">float CurrentCastTime</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00101">DTGameplayAbility_Spell.h:101</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_acb78f90e66bbbf8c3da156780ee41749"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#acb78f90e66bbbf8c3da156780ee41749">UDTGameplayAbility_Spell::CurrentCastTime</a></div><div class="ttdeci">float CurrentCastTime</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00090">DTGameplayAbility_Spell.h:90</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_adc4a211d002d61ee95db20815666feab"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#adc4a211d002d61ee95db20815666feab">UDTGameplayAbility_Spell::CommitSpellCast</a></div><div class="ttdeci">void CommitSpellCast()</div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_adf47d3bfd5a4c46588c0389b1e76692a"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#adf47d3bfd5a4c46588c0389b1e76692a">UDTGameplayAbility_Spell::GetEffectiveCastSpeed</a></div><div class="ttdeci">float GetEffectiveCastSpeed() const</div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_aea5a144cad92410db81602ea68eada77"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#aea5a144cad92410db81602ea68eada77">UDTGameplayAbility_Spell::CastSpeed</a></div><div class="ttdeci">float CastSpeed</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___spell_8h_source.html#l00063">DTGameplayAbility_Spell.h:63</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___spell_html_af58517eaa6fcaa67e3a620c71e470b5e"><div class="ttname"><a href="class_u_d_t_gameplay_ability___spell.html#af58517eaa6fcaa67e3a620c71e470b5e">UDTGameplayAbility_Spell::UDTGameplayAbility_Spell</a></div><div class="ttdeci">UDTGameplayAbility_Spell(const FObjectInitializer &amp;ObjectInitializer=FObjectInitializer::Get())</div><div class="ttdef"><b>Definition</b> <a href="#l00016">DTGameplayAbility_Spell.cpp:16</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability_html_a7d5cc3923e567ad6328e60b7eeaf26f6"><div class="ttname"><a href="class_u_d_t_gameplay_ability.html#a7d5cc3923e567ad6328e60b7eeaf26f6">UDTGameplayAbility::CommitAbility</a></div><div class="ttdeci">virtual bool CommitAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, FGameplayTagContainer *OptionalRelevantTags=nullptr) override</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability_8cpp_source.html#l00411">DTGameplayAbility.cpp:411</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability_html_a7d5cc3923e567ad6328e60b7eeaf26f6"><div class="ttname"><a href="class_u_d_t_gameplay_ability.html#a7d5cc3923e567ad6328e60b7eeaf26f6">UDTGameplayAbility::CommitAbility</a></div><div class="ttdeci">virtual bool CommitAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, FGameplayTagContainer *OptionalRelevantTags=nullptr) override</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability_8cpp_source.html#l00505">DTGameplayAbility.cpp:505</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability_html_ac6b682668d8dc0b1da5ce9d419713017"><div class="ttname"><a href="class_u_d_t_gameplay_ability.html#ac6b682668d8dc0b1da5ce9d419713017">UDTGameplayAbility::GetAbilityMontageToPlay</a></div><div class="ttdeci">UAnimMontage * GetAbilityMontageToPlay() const</div><div class="ttdoc">Gets the ability montage to play based on settings.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

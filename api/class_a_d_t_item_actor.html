@@ -137,8 +137,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_a_d_t_it
 Inheritance diagram for ADTItemActor:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_a_d_t_item_actor.png" alt=""/>
- </div></div>
+  <img src="class_a_d_t_item_actor.png" usemap="#ADTItemActor_map" alt=""/>
+  <map id="ADTItemActor_map" name="ADTItemActor_map">
+<area href="class_i_d_t_interactable_target.html" title="Interface for world actors the player can interact with (loot, chests, levers, NPCs)." alt="IDTInteractableTarget" shape="rect" coords="143,0,276,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -156,6 +159,32 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a18b35df5447e821ee91edb7cf1f95bd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets physics simulation on this item.  <br /></td></tr>
 <tr class="memitem:a27a7fcfac356c41f1f71ebeb022b2d55" id="r_a27a7fcfac356c41f1f71ebeb022b2d55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a27a7fcfac356c41f1f71ebeb022b2d55">InitDroppedItem</a> ()</td></tr>
 <tr class="memdesc:a27a7fcfac356c41f1f71ebeb022b2d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks this item as a dropped item (visible to all players).  <br /></td></tr>
+<tr class="memitem:a64e2c0ea7d7be6e7ccc741fe67ab4e66" id="r_a64e2c0ea7d7be6e7ccc741fe67ab4e66"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a64e2c0ea7d7be6e7ccc741fe67ab4e66">CanInteract_Implementation</a> (AActor *Interactor) const override</td></tr>
+<tr class="memitem:a9aeb3675cf84bc71d560fa127786524b" id="r_a9aeb3675cf84bc71d560fa127786524b"><td class="memItemLeft">virtual FText&#160;</td><td class="memItemRight"><a class="el" href="#a9aeb3675cf84bc71d560fa127786524b">GetInteractionText_Implementation</a> () const override</td></tr>
+<tr class="memitem:a08ea6d3b8335c29915d570d4e1c50509" id="r_a08ea6d3b8335c29915d570d4e1c50509"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#a08ea6d3b8335c29915d570d4e1c50509">GetInteractionRange_Implementation</a> () const override</td></tr>
+<tr class="memitem:a17af4b011810ff81e14ae7b5fd116b99" id="r_a17af4b011810ff81e14ae7b5fd116b99"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#a17af4b011810ff81e14ae7b5fd116b99">GetInteractionPriority_Implementation</a> () const override</td></tr>
+<tr class="memitem:a5baece4b5709a9fcb28b7d99897ead30" id="r_a5baece4b5709a9fcb28b7d99897ead30"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a5baece4b5709a9fcb28b7d99897ead30">Interact_Implementation</a> (AActor *Interactor) override</td></tr>
+<tr class="memitem:af5492563050822ea1b9f1e7a6b758ff7" id="r_af5492563050822ea1b9f1e7a6b758ff7"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af5492563050822ea1b9f1e7a6b758ff7">OnInteractionFocusGained_Implementation</a> (AActor *Interactor) override</td></tr>
+<tr class="memitem:ac11c87af5ab23b81e876122bb1267816" id="r_ac11c87af5ab23b81e876122bb1267816"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac11c87af5ab23b81e876122bb1267816">OnInteractionFocusLost_Implementation</a> (AActor *Interactor) override</td></tr>
+<tr class="inherit_header pub_methods_class_i_d_t_interactable_target"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_i_d_t_interactable_target.html">IDTInteractableTarget</a></td></tr>
+<tr class="memitem:a4a53d4a7d5f977547572d9fa1c32c019 pub_methods_class_i_d_t_interactable_target" id="r_a4a53d4a7d5f977547572d9fa1c32c019"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_i_d_t_interactable_target.html#a4a53d4a7d5f977547572d9fa1c32c019">GatherInteractionOptions</a> (const <a class="el" href="struct_f_interaction_query.html">FInteractionQuery</a> &amp;InteractQuery, TArray&lt; <a class="el" href="struct_f_interaction_option.html">FInteractionOption</a> &gt; &amp;OutOptions)</td></tr>
+<tr class="memdesc:a4a53d4a7d5f977547572d9fa1c32c019 pub_methods_class_i_d_t_interactable_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the interaction options this target offers (grantable abilities, GAS-event targets, prompt widgets).  <br /></td></tr>
+<tr class="memitem:a8b91535f85c766bb0e829e139bad18ca pub_methods_class_i_d_t_interactable_target" id="r_a8b91535f85c766bb0e829e139bad18ca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_i_d_t_interactable_target.html#a8b91535f85c766bb0e829e139bad18ca">CustomizeInteractionEventData</a> (const FGameplayTag &amp;InteractionEventTag, FGameplayEventData &amp;InOutEventData)</td></tr>
+<tr class="memdesc:a8b91535f85c766bb0e829e139bad18ca pub_methods_class_i_d_t_interactable_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lets the target manipulate the event data before a GAS interaction event is sent.  <br /></td></tr>
+<tr class="memitem:a5dc29b5a5082f9748e3b49c2eb3d6ad4 pub_methods_class_i_d_t_interactable_target" id="r_a5dc29b5a5082f9748e3b49c2eb3d6ad4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_i_d_t_interactable_target.html#a5dc29b5a5082f9748e3b49c2eb3d6ad4">CanInteract</a> (AActor *Interactor) const</td></tr>
+<tr class="memdesc:a5dc29b5a5082f9748e3b49c2eb3d6ad4 pub_methods_class_i_d_t_interactable_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the given interactor may currently interact with this actor.  <br /></td></tr>
+<tr class="memitem:aebf5bd960f50fdc6789360e66b903c0b pub_methods_class_i_d_t_interactable_target" id="r_aebf5bd960f50fdc6789360e66b903c0b"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="class_i_d_t_interactable_target.html#aebf5bd960f50fdc6789360e66b903c0b">GetInteractionText</a> () const</td></tr>
+<tr class="memdesc:aebf5bd960f50fdc6789360e66b903c0b pub_methods_class_i_d_t_interactable_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Short prompt shown in the interaction HUD / loot label (e.g.  <br /></td></tr>
+<tr class="memitem:a499f18da486eab4aaf937dccd951deba pub_methods_class_i_d_t_interactable_target" id="r_a499f18da486eab4aaf937dccd951deba"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_i_d_t_interactable_target.html#a499f18da486eab4aaf937dccd951deba">GetInteractionRange</a> () const</td></tr>
+<tr class="memdesc:a499f18da486eab4aaf937dccd951deba pub_methods_class_i_d_t_interactable_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum interaction distance.  <br /></td></tr>
+<tr class="memitem:a38ff84068995ab52353fa110f4c312dc pub_methods_class_i_d_t_interactable_target" id="r_a38ff84068995ab52353fa110f4c312dc"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_i_d_t_interactable_target.html#a38ff84068995ab52353fa110f4c312dc">GetInteractionPriority</a> () const</td></tr>
+<tr class="memdesc:a38ff84068995ab52353fa110f4c312dc pub_methods_class_i_d_t_interactable_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Focus priority when multiple interactables are candidates.  <br /></td></tr>
+<tr class="memitem:a0d9c828fd6c4d1c924b727d88303d0b9 pub_methods_class_i_d_t_interactable_target" id="r_a0d9c828fd6c4d1c924b727d88303d0b9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_i_d_t_interactable_target.html#a0d9c828fd6c4d1c924b727d88303d0b9">Interact</a> (AActor *Interactor)</td></tr>
+<tr class="memdesc:a0d9c828fd6c4d1c924b727d88303d0b9 pub_methods_class_i_d_t_interactable_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the interaction.  <br /></td></tr>
+<tr class="memitem:a1b1de35b720c67e121a6272b36abc596 pub_methods_class_i_d_t_interactable_target" id="r_a1b1de35b720c67e121a6272b36abc596"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_i_d_t_interactable_target.html#a1b1de35b720c67e121a6272b36abc596">OnInteractionFocusGained</a> (AActor *Interactor)</td></tr>
+<tr class="memdesc:a1b1de35b720c67e121a6272b36abc596 pub_methods_class_i_d_t_interactable_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cosmetic: called on the local player's machine when this actor becomes the focused interactable (outline, glow, prompt anchor).  <br /></td></tr>
+<tr class="memitem:a4dc30ec0f79bbb54daa35bae928b44ca pub_methods_class_i_d_t_interactable_target" id="r_a4dc30ec0f79bbb54daa35bae928b44ca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_i_d_t_interactable_target.html#a4dc30ec0f79bbb54daa35bae928b44ca">OnInteractionFocusLost</a> (AActor *Interactor)</td></tr>
+<tr class="memdesc:a4dc30ec0f79bbb54daa35bae928b44ca pub_methods_class_i_d_t_interactable_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cosmetic: called on the local player's machine when interaction focus leaves this actor.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -166,6 +195,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a64c363631c0b9f0a7c86a5b5d39f08d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time in seconds after which the item will go to sleep when physics is enabled and has hit the ground.  <br /></td></tr>
 <tr class="memitem:ae29aa7f0beb1302f2cf875b2e0f0ae01" id="r_ae29aa7f0beb1302f2cf875b2e0f0ae01"><td class="memItemLeft"><a class="el" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98ec">EItemVisibilityType</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> = <a class="el" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca03bbf749aadcf873fd153a0fa74cd2a6">EItemVisibilityType::PersonalLoot</a></td></tr>
 <tr class="memdesc:ae29aa7f0beb1302f2cf875b2e0f0ae01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines how this item is visible to players.  <br /></td></tr>
+<tr class="memitem:a11c5bc97c5d1c1c12c7715bcd45c8732" id="r_a11c5bc97c5d1c1c12c7715bcd45c8732"><td class="memItemLeft">FDTOnInteractionFocusChanged&#160;</td><td class="memItemRight"><a class="el" href="#a11c5bc97c5d1c1c12c7715bcd45c8732">OnInteractionFocusChanged</a></td></tr>
+<tr class="memdesc:a11c5bc97c5d1c1c12c7715bcd45c8732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast on the local machine when this item gains/loses interaction focus (drives the loot-label glyph).  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -178,6 +209,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:accff2b3455057d400cc03c37560c1df2" id="r_accff2b3455057d400cc03c37560c1df2"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#accff2b3455057d400cc03c37560c1df2">EndPlay</a> (const EEndPlayReason::Type EndPlayReason) override</td></tr>
 <tr class="memitem:a1c524ed9f073b0d22f413ca66153d5bb" id="r_a1c524ed9f073b0d22f413ca66153d5bb"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1c524ed9f073b0d22f413ca66153d5bb">GetLifetimeReplicatedProps</a> (TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
 <tr class="memitem:ad22b62da0d6e088166c13ec0a99bc851" id="r_ad22b62da0d6e088166c13ec0a99bc851"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad22b62da0d6e088166c13ec0a99bc851">Multicast_OnPickedUp</a> ()</td></tr>
+<tr class="memitem:aa91090b8803d939b532a83775e0aa597" id="r_aa91090b8803d939b532a83775e0aa597"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa91090b8803d939b532a83775e0aa597">IsRelevantToInteractor</a> (const AActor *Interactor) const</td></tr>
+<tr class="memdesc:aa91090b8803d939b532a83775e0aa597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the given interactor may see/act on this item (PersonalLoot owner-gate; others = anyone).  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -191,7 +224,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00029">29</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00032">32</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7f5cafbfa8efdc398b1f489ceb77977e" name="a7f5cafbfa8efdc398b1f489ceb77977e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f5cafbfa8efdc398b1f489ceb77977e">&#9670;&#160;</a></span>ADTItemActor()</h2>
@@ -208,11 +241,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00012">12</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00092">ItemCollisionComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00095">ItemMeshComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00101">ItemParticleComponent</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00098">ItemSkeletalMeshComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_collision_channels_8h_source.html#l00029">DT_TraceChannel_Interaction</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00109">ItemCollisionComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00112">ItemMeshComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00118">ItemParticleComponent</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00115">ItemSkeletalMeshComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00141">GetLifetimeReplicatedProps()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00145">GetLifetimeReplicatedProps()</a>.</p>
 
 </div>
 </div>
@@ -232,9 +265,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00155">155</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00159">159</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00037">ItemInfo</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00095">ItemMeshComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00101">ItemParticleComponent</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00098">ItemSkeletalMeshComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00040">ItemInfo</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00112">ItemMeshComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00118">ItemParticleComponent</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00115">ItemSkeletalMeshComponent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals()</a>.</p>
 
@@ -263,9 +296,40 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">46</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">50</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00022">DroppedItem</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00307">InitDroppedItem()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00283">InitWorldPlacedItem()</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00092">ItemCollisionComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00037">ItemInfo</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00095">ItemMeshComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00101">ItemParticleComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00098">ItemSkeletalMeshComponent</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00320">OnItemHit()</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00122">OwningPlayer</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00019">PersonalLoot</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00268">SetItemPhysics()</a>, <a class="el" href="#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00214">TryRegisterLoot()</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00053">VisibilityType</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00025">WorldPlaced</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00025">DroppedItem</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00311">InitDroppedItem()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00287">InitWorldPlacedItem()</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00109">ItemCollisionComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00040">ItemInfo</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00112">ItemMeshComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00118">ItemParticleComponent</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00115">ItemSkeletalMeshComponent</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00324">OnItemHit()</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00139">OwningPlayer</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00022">PersonalLoot</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00272">SetItemPhysics()</a>, <a class="el" href="#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00218">TryRegisterLoot()</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00056">VisibilityType</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00028">WorldPlaced</a>.</p>
+
+</div>
+</div>
+<a id="a64e2c0ea7d7be6e7ccc741fe67ab4e66" name="a64e2c0ea7d7be6e7ccc741fe67ab4e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64e2c0ea7d7be6e7ccc741fe67ab4e66">&#9670;&#160;</a></span>CanInteract_Implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ADTItemActor::CanInteract_Implementation </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>Interactor</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00363">363</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_item_actor_8cpp_source.html#l00335">IsRelevantToInteractor()</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00040">ItemInfo</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>.</p>
 
 </div>
 </div>
@@ -292,9 +356,98 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00120">120</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00124">124</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00119">bRegisteredWithLootSubsystem</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00092">ItemCollisionComponent</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00320">OnItemHit()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00063">UDTLootSubsystem::UnregisterItem()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00136">bRegisteredWithLootSubsystem</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00109">ItemCollisionComponent</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00324">OnItemHit()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00064">UDTLootSubsystem::UnregisterItem()</a>.</p>
+
+</div>
+</div>
+<a id="a17af4b011810ff81e14ae7b5fd116b99" name="a17af4b011810ff81e14ae7b5fd116b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17af4b011810ff81e14ae7b5fd116b99">&#9670;&#160;</a></span>GetInteractionPriority_Implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADTItemActor::GetInteractionPriority_Implementation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00388">388</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>.</p>
+
+</div>
+</div>
+<a id="a08ea6d3b8335c29915d570d4e1c50509" name="a08ea6d3b8335c29915d570d4e1c50509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08ea6d3b8335c29915d570d4e1c50509">&#9670;&#160;</a></span>GetInteractionRange_Implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADTItemActor::GetInteractionRange_Implementation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00383">383</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>.</p>
+
+</div>
+</div>
+<a id="a9aeb3675cf84bc71d560fa127786524b" name="a9aeb3675cf84bc71d560fa127786524b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aeb3675cf84bc71d560fa127786524b">&#9670;&#160;</a></span>GetInteractionText_Implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText ADTItemActor::GetInteractionText_Implementation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00373">373</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00040">ItemInfo</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>.</p>
 
 </div>
 </div>
@@ -321,11 +474,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00056">56</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00059">59</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00056">GetItemInfo()</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00037">ItemInfo</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00059">GetItemInfo()</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00040">ItemInfo</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8h_source.html#l00056">GetItemInfo()</a>, and <a class="el" href="_d_t_player_state_8cpp_source.html#l00350">ADTPlayerState::TryPickupItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8h_source.html#l00059">GetItemInfo()</a>, and <a class="el" href="_d_t_player_state_8cpp_source.html#l00351">ADTPlayerState::TryPickupItem()</a>.</p>
 
 </div>
 </div>
@@ -352,9 +505,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00141">141</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00145">145</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8cpp_source.html#l00012">ADTItemActor()</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00037">ItemInfo</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00053">VisibilityType</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8cpp_source.html#l00015">ADTItemActor()</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00040">ItemInfo</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00056">VisibilityType</a>.</p>
 
 </div>
 </div>
@@ -381,11 +534,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00059">59</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00062">62</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00059">GetOwningPlayer()</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00122">OwningPlayer</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00062">GetOwningPlayer()</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00139">OwningPlayer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8h_source.html#l00059">GetOwningPlayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8h_source.html#l00062">GetOwningPlayer()</a>.</p>
 
 </div>
 </div>
@@ -407,11 +560,11 @@ Protected Attributes</h2></td></tr>
 <p>Marks this item as a dropped item (visible to all players). </p>
 <p>Call this when a player manually drops an item from their inventory. Should be called on the server. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00307">307</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00311">311</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00022">DroppedItem</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00053">VisibilityType</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00025">DroppedItem</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00056">VisibilityType</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>, and <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>, and <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>.</p>
 
 </div>
 </div>
@@ -438,11 +591,75 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00283">283</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00287">287</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00037">ItemInfo</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00053">VisibilityType</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00025">WorldPlaced</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00040">ItemInfo</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00056">VisibilityType</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00028">WorldPlaced</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>.</p>
+
+</div>
+</div>
+<a id="a5baece4b5709a9fcb28b7d99897ead30" name="a5baece4b5709a9fcb28b7d99897ead30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5baece4b5709a9fcb28b7d99897ead30">&#9670;&#160;</a></span>Interact_Implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTItemActor::Interact_Implementation </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>Interactor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00394">394</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_state_8cpp_source.html#l00351">ADTPlayerState::TryPickupItem()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>.</p>
+
+</div>
+</div>
+<a id="aa91090b8803d939b532a83775e0aa597" name="aa91090b8803d939b532a83775e0aa597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa91090b8803d939b532a83775e0aa597">&#9670;&#160;</a></span>IsRelevantToInteractor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ADTItemActor::IsRelevantToInteractor </td>
+          <td>(</td>
+          <td class="paramtype">const AActor *</td>          <td class="paramname"><span class="paramname"><em>Interactor</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether the given interactor may see/act on this item (PersonalLoot owner-gate; others = anyone). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00335">335</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00022">PersonalLoot</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00056">VisibilityType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00363">CanInteract_Implementation()</a>, and <a class="el" href="#ad22b62da0d6e088166c13ec0a99bc851">Multicast_OnPickedUp()</a>.</p>
 
 </div>
 </div>
@@ -469,9 +686,71 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="#ad22b62da0d6e088166c13ec0a99bc851">Multicast_OnPickedUp()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8cpp_source.html#l00335">IsRelevantToInteractor()</a>, and <a class="el" href="#ad22b62da0d6e088166c13ec0a99bc851">Multicast_OnPickedUp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ad22b62da0d6e088166c13ec0a99bc851">Multicast_OnPickedUp()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00234">PickupItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ad22b62da0d6e088166c13ec0a99bc851">Multicast_OnPickedUp()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00238">PickupItem()</a>.</p>
+
+</div>
+</div>
+<a id="af5492563050822ea1b9f1e7a6b758ff7" name="af5492563050822ea1b9f1e7a6b758ff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5492563050822ea1b9f1e7a6b758ff7">&#9670;&#160;</a></span>OnInteractionFocusGained_Implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTItemActor::OnInteractionFocusGained_Implementation </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>Interactor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00406">406</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00105">OnInteractionFocusChanged</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>.</p>
+
+</div>
+</div>
+<a id="ac11c87af5ab23b81e876122bb1267816" name="ac11c87af5ab23b81e876122bb1267816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac11c87af5ab23b81e876122bb1267816">&#9670;&#160;</a></span>OnInteractionFocusLost_Implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTItemActor::OnInteractionFocusLost_Implementation </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>Interactor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00411">411</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00105">OnInteractionFocusChanged</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>.</p>
 
 </div>
 </div>
@@ -519,11 +798,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Called when the item mesh hits something. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00320">320</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00324">324</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00045">PhysicsSleepTime</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00268">SetItemPhysics()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00048">PhysicsSleepTime</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00272">SetItemPhysics()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00120">EndPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00124">EndPlay()</a>.</p>
 
 </div>
 </div>
@@ -544,7 +823,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Cosmetic pickup callback executed on all relevant clients before this actor is destroyed. </p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8cpp_source.html#l00307">InitDroppedItem()</a>, <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00268">SetItemPhysics()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8cpp_source.html#l00363">CanInteract_Implementation()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00388">GetInteractionPriority_Implementation()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00383">GetInteractionRange_Implementation()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00373">GetInteractionText_Implementation()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00311">InitDroppedItem()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00394">Interact_Implementation()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00406">OnInteractionFocusGained_Implementation()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00411">OnInteractionFocusLost_Implementation()</a>, <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00272">SetItemPhysics()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>.</p>
 
@@ -573,9 +852,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00207">207</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00211">211</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00214">TryRegisterLoot()</a>.</p>
+<p class="reference">References <a class="el" href="#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00218">TryRegisterLoot()</a>.</p>
 
 </div>
 </div>
@@ -597,11 +876,11 @@ Protected Attributes</h2></td></tr>
 <p>Picks up the item and destroys the actor. </p>
 <p>Should be called on the server. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00234">234</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00238">238</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00119">bRegisteredWithLootSubsystem</a>, <a class="el" href="#ad22b62da0d6e088166c13ec0a99bc851">Multicast_OnPickedUp()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00268">SetItemPhysics()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00063">UDTLootSubsystem::UnregisterItem()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00136">bRegisteredWithLootSubsystem</a>, <a class="el" href="#ad22b62da0d6e088166c13ec0a99bc851">Multicast_OnPickedUp()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00272">SetItemPhysics()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00064">UDTLootSubsystem::UnregisterItem()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals()</a>, and <a class="el" href="_d_t_player_state_8cpp_source.html#l00350">ADTPlayerState::TryPickupItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals()</a>, and <a class="el" href="_d_t_player_state_8cpp_source.html#l00351">ADTPlayerState::TryPickupItem()</a>.</p>
 
 </div>
 </div>
@@ -620,11 +899,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00035">35</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00039">39</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00037">ItemInfo</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00040">ItemInfo</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00874">UDTLootSubsystem::SpawnSingleLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00941">UDTLootSubsystem::SpawnSingleLoot()</a>.</p>
 
 </div>
 </div>
@@ -646,11 +925,11 @@ Protected Attributes</h2></td></tr>
 <p>Sets physics simulation on this item. </p>
 <p>Should be called on the server. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00268">268</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00272">272</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00092">ItemCollisionComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00109">ItemCollisionComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00320">OnItemHit()</a>, <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00234">PickupItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00324">OnItemHit()</a>, <a class="el" href="#ab056e7812144784f40dad00168c741df">OnPickup()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00238">PickupItem()</a>.</p>
 
 </div>
 </div>
@@ -669,9 +948,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8cpp_source.html#l00155">ApplyItemVisuals()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00234">PickupItem()</a>, and <a class="el" href="#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8cpp_source.html#l00159">ApplyItemVisuals()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00238">PickupItem()</a>, and <a class="el" href="#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00207">OnRep_ItemInfo()</a>, and <a class="el" href="#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00211">OnRep_ItemInfo()</a>, and <a class="el" href="#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals()</a>.</p>
 
 </div>
 </div>
@@ -698,11 +977,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00214">214</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8cpp_source.html#l00218">218</a> of file <a class="el" href="_d_t_item_actor_8cpp_source.html">DTItemActor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00119">bRegisteredWithLootSubsystem</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00037">ItemInfo</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00048">UDTLootSubsystem::RegisterItem()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_item_actor_8h_source.html#l00136">bRegisteredWithLootSubsystem</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00040">ItemInfo</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00049">UDTLootSubsystem::RegisterItem()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00207">OnRep_ItemInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00211">OnRep_ItemInfo()</a>.</p>
 
 </div>
 </div>
@@ -729,9 +1008,9 @@ Protected Attributes</h2></td></tr>
 
 <p>True once we've registered with the subsystem on this instance (prevents duplicate UI events). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00119">119</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00136">136</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00120">EndPlay()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00234">PickupItem()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00214">TryRegisterLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00124">EndPlay()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00238">PickupItem()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00218">TryRegisterLoot()</a>.</p>
 
 </div>
 </div>
@@ -749,7 +1028,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Whether to stop physics simulation when the item hits the ground. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00041">41</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00044">44</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
 </div>
 </div>
@@ -773,9 +1052,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00092">92</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00109">109</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00012">ADTItemActor()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00120">EndPlay()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00268">SetItemPhysics()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00015">ADTItemActor()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00124">EndPlay()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00272">SetItemPhysics()</a>.</p>
 
 </div>
 </div>
@@ -791,9 +1070,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00037">37</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00040">40</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00155">ApplyItemVisuals()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00056">GetItemInfo()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00141">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00283">InitWorldPlacedItem()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00035">SetItemInfo()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00214">TryRegisterLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00159">ApplyItemVisuals()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00363">CanInteract_Implementation()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00373">GetInteractionText_Implementation()</a>, <a class="el" href="_d_t_item_actor_8h_source.html#l00059">GetItemInfo()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00145">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00287">InitWorldPlacedItem()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00039">SetItemInfo()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00218">TryRegisterLoot()</a>.</p>
 
 </div>
 </div>
@@ -817,9 +1096,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00095">95</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00112">112</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00012">ADTItemActor()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00155">ApplyItemVisuals()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00015">ADTItemActor()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00159">ApplyItemVisuals()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>.</p>
 
 </div>
 </div>
@@ -843,9 +1122,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00101">101</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00118">118</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00012">ADTItemActor()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00155">ApplyItemVisuals()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00015">ADTItemActor()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00159">ApplyItemVisuals()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>.</p>
 
 </div>
 </div>
@@ -869,9 +1148,29 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00098">98</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00115">115</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00012">ADTItemActor()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00155">ApplyItemVisuals()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00015">ADTItemActor()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00159">ApplyItemVisuals()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>.</p>
+
+</div>
+</div>
+<a id="a11c5bc97c5d1c1c12c7715bcd45c8732" name="a11c5bc97c5d1c1c12c7715bcd45c8732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c5bc97c5d1c1c12c7715bcd45c8732">&#9670;&#160;</a></span>OnInteractionFocusChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnInteractionFocusChanged ADTItemActor::OnInteractionFocusChanged</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Broadcast on the local machine when this item gains/loses interaction focus (drives the loot-label glyph). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00105">105</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_label_widget_8cpp_source.html#l00006">UDTLootLabelWidget::InitializeLabel()</a>, <a class="el" href="_d_t_loot_label_widget_8cpp_source.html#l00042">UDTLootLabelWidget::NativeDestruct()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00406">OnInteractionFocusGained_Implementation()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00411">OnInteractionFocusLost_Implementation()</a>.</p>
 
 </div>
 </div>
@@ -895,9 +1194,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00122">122</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00139">139</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00059">GetOwningPlayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>, and <a class="el" href="_d_t_item_actor_8h_source.html#l00062">GetOwningPlayer()</a>.</p>
 
 </div>
 </div>
@@ -915,9 +1214,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Time in seconds after which the item will go to sleep when physics is enabled and has hit the ground. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00045">45</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00048">48</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00320">OnItemHit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00324">OnItemHit()</a>.</p>
 
 </div>
 </div>
@@ -936,9 +1235,9 @@ Protected Attributes</h2></td></tr>
 <p>Defines how this item is visible to players. </p>
 <p>PersonalLoot: Only visible to the owner (default for loot spawned from tables/enemies) DroppedItem: Visible to all players (for items dropped from inventory or placed in world) </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00053">53</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_item_actor_8h_source.html#l00056">56</a> of file <a class="el" href="_d_t_item_actor_8h_source.html">DTItemActor.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00046">BeginPlay()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00141">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00307">InitDroppedItem()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00283">InitWorldPlacedItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00050">BeginPlay()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00145">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00311">InitDroppedItem()</a>, <a class="el" href="_d_t_item_actor_8cpp_source.html#l00287">InitWorldPlacedItem()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00335">IsRelevantToInteractor()</a>.</p>
 
 </div>
 </div>

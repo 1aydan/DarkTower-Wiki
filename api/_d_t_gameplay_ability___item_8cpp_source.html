@@ -157,100 +157,145 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_gameplay_
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">const</span> FGameplayAbilitySpec* Spec = GetCurrentAbilitySpec();</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (!Spec)</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">if</span> (UAbilitySystemComponent* ASC = GetAbilitySystemComponentFromActorInfo())</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            Spec = ASC-&gt;FindAbilitySpecFromHandle(<a class="code hl_function" href="class_u_d_t_gameplay_ability.html#a78e93a0246ee613b1997011996727b5a">GetAbilitySpecHandle</a>());</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">if</span> (!Spec)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> Cast&lt;UDTEquipmentInstance&gt;(Spec-&gt;SourceObject.Get());</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        UAbilitySystemComponent* ASC = GetAbilitySystemComponentFromActorInfo();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">if</span> (ASC)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            Spec = ASC-&gt;FindAbilitySpecFromHandle(<a class="code hl_function" href="class_u_d_t_gameplay_ability.html#a78e93a0246ee613b1997011996727b5a">GetAbilitySpecHandle</a>());</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">if</span> (!Spec)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">return</span> Cast&lt;UDTEquipmentInstance&gt;(Spec-&gt;SourceObject.Get());</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
 </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#ac85044b7d7fb666eb71ba4a308dbb313">   38</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ac85044b7d7fb666eb71ba4a308dbb313">UDTGameplayAbility_Item::UseItem</a>()</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a>* <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> = <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">GetItemInstance</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        UE_LOG(LogDTAbility, Warning, TEXT(<span class="stringliteral">&quot;%s: UseItem called but no item instance found via SourceObject&quot;</span>), *GetName());</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    AActor* Avatar = GetAvatarActorFromActorInfo();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">if</span> (!Avatar || !Avatar-&gt;Implements&lt;UInventoryInterface&gt;())</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_class" href="class_u_d_t_equipment_component.html">UDTEquipmentComponent</a>* EquipComp = Cast&lt;UDTEquipmentComponent&gt;(IInventoryInterface::Execute_GetEquipmentComponent(Avatar));</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">if</span> (!EquipComp)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    EquipComp-&gt;UseItem(<a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>-&gt;GetEquippedSlotTag());</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#ac85044b7d7fb666eb71ba4a308dbb313">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ac85044b7d7fb666eb71ba4a308dbb313">UDTGameplayAbility_Item::UseItem</a>()</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_class" href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a>* <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> = <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">GetItemInstance</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        UE_LOG(LogDTAbility, Warning, TEXT(<span class="stringliteral">&quot;%s: UseItem called but no item instance found via SourceObject&quot;</span>), *GetName());</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    AActor* Avatar = GetAvatarActorFromActorInfo();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">if</span> (!Avatar || !Avatar-&gt;Implements&lt;UInventoryInterface&gt;())</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_class" href="class_u_d_t_equipment_component.html">UDTEquipmentComponent</a>* EquipComp = Cast&lt;UDTEquipmentComponent&gt;(IInventoryInterface::Execute_GetEquipmentComponent(Avatar));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span> (!EquipComp)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    EquipComp-&gt;UseItem(<a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>-&gt;GetEquippedSlotTag());</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#a2acc8208daa411eefcaf51147b6c26b2">OnItemUsed</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
 </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#a41e019151c291e387eff1b5b8ba66abc">   62</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#a41e019151c291e387eff1b5b8ba66abc">UDTGameplayAbility_Item::CanActivateAbility</a>(<span class="keyword">const</span> FGameplayAbilitySpecHandle Handle, <span class="keyword">const</span> FGameplayAbilityActorInfo* ActorInfo, <span class="keyword">const</span> FGameplayTagContainer* SourceTags, <span class="keyword">const</span> FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_class" href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a>* <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> = <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">GetItemInstance</a>();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        UE_LOG(LogDTAbility, Warning, TEXT(<span class="stringliteral">&quot;%s: CanActivateAbility - no item instance found via SourceObject&quot;</span>), *GetName());</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> Super::CanActivateAbility(Handle, ActorInfo, SourceTags, TargetTags, OptionalRelevantTags);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#a41e019151c291e387eff1b5b8ba66abc">   65</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#a41e019151c291e387eff1b5b8ba66abc">UDTGameplayAbility_Item::CanActivateAbility</a>(<span class="keyword">const</span> FGameplayAbilitySpecHandle Handle, <span class="keyword">const</span> FGameplayAbilityActorInfo* ActorInfo, <span class="keyword">const</span> FGameplayTagContainer* SourceTags, <span class="keyword">const</span> FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_class" href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a>* <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> = <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">GetItemInstance</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        UE_LOG(LogDTAbility, Warning, TEXT(<span class="stringliteral">&quot;%s: CanActivateAbility - no item instance found via SourceObject&quot;</span>), *GetName());</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> Super::CanActivateAbility(Handle, ActorInfo, SourceTags, TargetTags, OptionalRelevantTags);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
 </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#ae91f1d4a708744493d5b63de2b134fbc">   74</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae91f1d4a708744493d5b63de2b134fbc">UDTGameplayAbility_Item::HasStacks</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_class" href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a>* <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> = <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">GetItemInstance</a>();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> &amp;&amp; <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>-&gt;bDecrementStackOnUse;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#a2de758633184b813db5a0f144203a5bb">   77</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#a2de758633184b813db5a0f144203a5bb">UDTGameplayAbility_Item::GetItemStatModifier</a>(FGameplayTag ItemStatTag)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_class" href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a>* <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> = <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">GetItemInstance</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">return</span> 0.0f;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>-&gt;GetTotalStatModifier(ItemStatTag);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
 </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#a5054a577daad5dc9da1efe446e31c214">   80</a></span>int32 <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#a5054a577daad5dc9da1efe446e31c214">UDTGameplayAbility_Item::GetCurrentStacks</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_class" href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a>* <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> = <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">GetItemInstance</a>();</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>-&gt;GetStackCount();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#ae91f1d4a708744493d5b63de2b134fbc">   88</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae91f1d4a708744493d5b63de2b134fbc">UDTGameplayAbility_Item::HasStacks</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_d_t_gameplay_ability___item.html#a92bc42454e1991b1fcc1c46f7beea5a9">bUseItemStacksAsAbilityStacks</a>)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">return</span> Super::HasStacks();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_class" href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a>* <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> = <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">GetItemInstance</a>();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> &amp;&amp; <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>-&gt;bDecrementStackOnUse;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
 </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#af961f6977125a961c6e038afa03200e0">   90</a></span>int32 <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#af961f6977125a961c6e038afa03200e0">UDTGameplayAbility_Item::GetMaxStacks</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_class" href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a>* <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> = <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">GetItemInstance</a>();</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>)</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">const</span> UInventoryItemDefinition* ItemDef = <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>-&gt;GetItemDefinition();</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span> (!ItemDef)</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">return</span> ItemDef-&gt;MaxStackSize;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#a5054a577daad5dc9da1efe446e31c214">   99</a></span>int32 <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#a5054a577daad5dc9da1efe446e31c214">UDTGameplayAbility_Item::GetCurrentStacks</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_d_t_gameplay_ability___item.html#a92bc42454e1991b1fcc1c46f7beea5a9">bUseItemStacksAsAbilityStacks</a>)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">return</span> Super::GetCurrentStacks();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_class" href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a>* <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> = <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">GetItemInstance</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>-&gt;GetStackCount();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
 </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#af961f6977125a961c6e038afa03200e0">  115</a></span>int32 <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#af961f6977125a961c6e038afa03200e0">UDTGameplayAbility_Item::GetMaxStacks</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_d_t_gameplay_ability___item.html#a92bc42454e1991b1fcc1c46f7beea5a9">bUseItemStacksAsAbilityStacks</a>)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> Super::GetMaxStacks();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_class" href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a>* <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a> = <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">GetItemInstance</a>();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">const</span> UInventoryItemDefinition* ItemDef = <a class="code hl_enumvalue" href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">Item</a>-&gt;GetItemDefinition();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">if</span> (!ItemDef)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">return</span> ItemDef-&gt;MaxStackSize;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>}</div>
+</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="}">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="class_u_d_t_gameplay_ability___item.html#afb30207639edde9a4511c9ad816f47d4">  137</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_u_d_t_gameplay_ability___item.html#afb30207639edde9a4511c9ad816f47d4">UDTGameplayAbility_Item::UsesRegenStacks</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_d_t_gameplay_ability___item.html#a92bc42454e1991b1fcc1c46f7beea5a9">bUseItemStacksAsAbilityStacks</a>)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">return</span> Super::UsesRegenStacks();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="comment">// Item stacks don&#39;t regenerate</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}</div>
+</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
 <div class="ttc" id="a_d_t_equipment_component_8h_html"><div class="ttname"><a href="_d_t_equipment_component_8h.html">DTEquipmentComponent.h</a></div></div>
 <div class="ttc" id="a_d_t_equipment_instance_8h_html"><div class="ttname"><a href="_d_t_equipment_instance_8h.html">DTEquipmentInstance.h</a></div></div>
 <div class="ttc" id="a_d_t_gameplay_ability___item_8h_html"><div class="ttname"><a href="_d_t_gameplay_ability___item_8h.html">DTGameplayAbility_Item.h</a></div></div>
@@ -258,16 +303,20 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_gameplay_
 <div class="ttc" id="a_d_t_loot_source_component_8h_html_a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679"><div class="ttname"><a href="_d_t_loot_source_component_8h.html#a2f299fbfd6e4cc3f98bca3513cfde433a7d74f3b92b19da5e606d737d339a9679">ELootSourceEntryType::Item</a></div><div class="ttdeci">@ Item</div><div class="ttdef"><b>Definition</b> <a href="_d_t_loot_source_component_8h_source.html#l00024">DTLootSourceComponent.h:24</a></div></div>
 <div class="ttc" id="aclass_u_d_t_equipment_component_html"><div class="ttname"><a href="class_u_d_t_equipment_component.html">UDTEquipmentComponent</a></div><div class="ttdoc">Equipment component for Dark Tower.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_equipment_component_8h_source.html#l00051">DTEquipmentComponent.h:52</a></div></div>
 <div class="ttc" id="aclass_u_d_t_equipment_instance_html"><div class="ttname"><a href="class_u_d_t_equipment_instance.html">UDTEquipmentInstance</a></div><div class="ttdoc">Base class for Dark Tower equipment instances.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_equipment_instance_8h_source.html#l00053">DTEquipmentInstance.h:54</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_a41e019151c291e387eff1b5b8ba66abc"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#a41e019151c291e387eff1b5b8ba66abc">UDTGameplayAbility_Item::CanActivateAbility</a></div><div class="ttdeci">virtual bool CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayTagContainer *SourceTags=nullptr, const FGameplayTagContainer *TargetTags=nullptr, FGameplayTagContainer *OptionalRelevantTags=nullptr) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00062">DTGameplayAbility_Item.cpp:62</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_a5054a577daad5dc9da1efe446e31c214"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#a5054a577daad5dc9da1efe446e31c214">UDTGameplayAbility_Item::GetCurrentStacks</a></div><div class="ttdeci">virtual int32 GetCurrentStacks() const override</div><div class="ttdoc">Returns the current number of available charges.</div><div class="ttdef"><b>Definition</b> <a href="#l00080">DTGameplayAbility_Item.cpp:80</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_a2acc8208daa411eefcaf51147b6c26b2"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#a2acc8208daa411eefcaf51147b6c26b2">UDTGameplayAbility_Item::OnItemUsed</a></div><div class="ttdeci">void OnItemUsed()</div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_a2de758633184b813db5a0f144203a5bb"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#a2de758633184b813db5a0f144203a5bb">UDTGameplayAbility_Item::GetItemStatModifier</a></div><div class="ttdeci">float GetItemStatModifier(FGameplayTag ItemStatTag) const</div><div class="ttdef"><b>Definition</b> <a href="#l00077">DTGameplayAbility_Item.cpp:77</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_a41e019151c291e387eff1b5b8ba66abc"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#a41e019151c291e387eff1b5b8ba66abc">UDTGameplayAbility_Item::CanActivateAbility</a></div><div class="ttdeci">virtual bool CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayTagContainer *SourceTags=nullptr, const FGameplayTagContainer *TargetTags=nullptr, FGameplayTagContainer *OptionalRelevantTags=nullptr) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00065">DTGameplayAbility_Item.cpp:65</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_a5054a577daad5dc9da1efe446e31c214"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#a5054a577daad5dc9da1efe446e31c214">UDTGameplayAbility_Item::GetCurrentStacks</a></div><div class="ttdeci">virtual int32 GetCurrentStacks() const override</div><div class="ttdoc">Returns the current number of available charges.</div><div class="ttdef"><b>Definition</b> <a href="#l00099">DTGameplayAbility_Item.cpp:99</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_a8e624777e61789a4517ca2060cac2692"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#a8e624777e61789a4517ca2060cac2692">UDTGameplayAbility_Item::UDTGameplayAbility_Item</a></div><div class="ttdeci">UDTGameplayAbility_Item(const FObjectInitializer &amp;ObjectInitializer=FObjectInitializer::Get())</div><div class="ttdef"><b>Definition</b> <a href="#l00011">DTGameplayAbility_Item.cpp:11</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_ac85044b7d7fb666eb71ba4a308dbb313"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#ac85044b7d7fb666eb71ba4a308dbb313">UDTGameplayAbility_Item::UseItem</a></div><div class="ttdeci">void UseItem()</div><div class="ttdoc">Calls UseItem on the owning item instance (stack decrement, cleanup, etc).</div><div class="ttdef"><b>Definition</b> <a href="#l00038">DTGameplayAbility_Item.cpp:38</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_a92bc42454e1991b1fcc1c46f7beea5a9"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#a92bc42454e1991b1fcc1c46f7beea5a9">UDTGameplayAbility_Item::bUseItemStacksAsAbilityStacks</a></div><div class="ttdeci">bool bUseItemStacksAsAbilityStacks</div><div class="ttdoc">If true, the ability will use the item instance&#39;s stack count as the ability&#39;s stack count.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___item_8h_source.html#l00043">DTGameplayAbility_Item.h:43</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_ac85044b7d7fb666eb71ba4a308dbb313"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#ac85044b7d7fb666eb71ba4a308dbb313">UDTGameplayAbility_Item::UseItem</a></div><div class="ttdeci">void UseItem()</div><div class="ttdoc">Calls UseItem on the owning item instance (stack decrement, cleanup, etc).</div><div class="ttdef"><b>Definition</b> <a href="#l00039">DTGameplayAbility_Item.cpp:39</a></div></div>
 <div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_ae3b61f673562f12e5ed71e50378bbaae"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#ae3b61f673562f12e5ed71e50378bbaae">UDTGameplayAbility_Item::GetItemInstance</a></div><div class="ttdeci">UDTEquipmentInstance * GetItemInstance() const</div><div class="ttdef"><b>Definition</b> <a href="#l00019">DTGameplayAbility_Item.cpp:19</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_ae91f1d4a708744493d5b63de2b134fbc"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#ae91f1d4a708744493d5b63de2b134fbc">UDTGameplayAbility_Item::HasStacks</a></div><div class="ttdeci">virtual bool HasStacks() const override</div><div class="ttdoc">Whether this ability uses the charge/stack system.</div><div class="ttdef"><b>Definition</b> <a href="#l00074">DTGameplayAbility_Item.cpp:74</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_af961f6977125a961c6e038afa03200e0"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#af961f6977125a961c6e038afa03200e0">UDTGameplayAbility_Item::GetMaxStacks</a></div><div class="ttdeci">virtual int32 GetMaxStacks() const override</div><div class="ttdoc">Returns the maximum number of charges this ability can hold.</div><div class="ttdef"><b>Definition</b> <a href="#l00090">DTGameplayAbility_Item.cpp:90</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability_html_a651bc09449ebd656a56593b4f2bcbcc2"><div class="ttname"><a href="class_u_d_t_gameplay_ability.html#a651bc09449ebd656a56593b4f2bcbcc2">UDTGameplayAbility::bRechargeStacksOnCooldown</a></div><div class="ttdeci">bool bRechargeStacksOnCooldown</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability_8h_source.html#l00205">DTGameplayAbility.h:205</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability_html_a78e93a0246ee613b1997011996727b5a"><div class="ttname"><a href="class_u_d_t_gameplay_ability.html#a78e93a0246ee613b1997011996727b5a">UDTGameplayAbility::GetAbilitySpecHandle</a></div><div class="ttdeci">FGameplayAbilitySpecHandle GetAbilitySpecHandle() const</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability_8cpp_source.html#l00569">DTGameplayAbility.cpp:569</a></div></div>
-<div class="ttc" id="aclass_u_d_t_gameplay_ability_html_ae8c783592d5ed82a67ecd35abc555a17"><div class="ttname"><a href="class_u_d_t_gameplay_ability.html#ae8c783592d5ed82a67ecd35abc555a17">UDTGameplayAbility::bConsumeStackOnActivate</a></div><div class="ttdeci">bool bConsumeStackOnActivate</div><div class="ttdoc">If true, one charge is consumed each time the ability activates.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability_8h_source.html#l00202">DTGameplayAbility.h:202</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_ae91f1d4a708744493d5b63de2b134fbc"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#ae91f1d4a708744493d5b63de2b134fbc">UDTGameplayAbility_Item::HasStacks</a></div><div class="ttdeci">virtual bool HasStacks() const override</div><div class="ttdoc">Whether this ability uses the charge/stack system.</div><div class="ttdef"><b>Definition</b> <a href="#l00088">DTGameplayAbility_Item.cpp:88</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_af961f6977125a961c6e038afa03200e0"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#af961f6977125a961c6e038afa03200e0">UDTGameplayAbility_Item::GetMaxStacks</a></div><div class="ttdeci">virtual int32 GetMaxStacks() const override</div><div class="ttdoc">Returns the maximum number of charges this ability can hold.</div><div class="ttdef"><b>Definition</b> <a href="#l00115">DTGameplayAbility_Item.cpp:115</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability___item_html_afb30207639edde9a4511c9ad816f47d4"><div class="ttname"><a href="class_u_d_t_gameplay_ability___item.html#afb30207639edde9a4511c9ad816f47d4">UDTGameplayAbility_Item::UsesRegenStacks</a></div><div class="ttdeci">virtual bool UsesRegenStacks() const override</div><div class="ttdoc">Returns true if this ability manages its own charge regeneration loop (cooldown-per-charge).</div><div class="ttdef"><b>Definition</b> <a href="#l00137">DTGameplayAbility_Item.cpp:137</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability_html_a651bc09449ebd656a56593b4f2bcbcc2"><div class="ttname"><a href="class_u_d_t_gameplay_ability.html#a651bc09449ebd656a56593b4f2bcbcc2">UDTGameplayAbility::bRechargeStacksOnCooldown</a></div><div class="ttdeci">bool bRechargeStacksOnCooldown</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability_8h_source.html#l00237">DTGameplayAbility.h:237</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability_html_a78e93a0246ee613b1997011996727b5a"><div class="ttname"><a href="class_u_d_t_gameplay_ability.html#a78e93a0246ee613b1997011996727b5a">UDTGameplayAbility::GetAbilitySpecHandle</a></div><div class="ttdeci">FGameplayAbilitySpecHandle GetAbilitySpecHandle() const</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability_8cpp_source.html#l00672">DTGameplayAbility.cpp:672</a></div></div>
+<div class="ttc" id="aclass_u_d_t_gameplay_ability_html_ae8c783592d5ed82a67ecd35abc555a17"><div class="ttname"><a href="class_u_d_t_gameplay_ability.html#ae8c783592d5ed82a67ecd35abc555a17">UDTGameplayAbility::bConsumeStackOnActivate</a></div><div class="ttdeci">bool bConsumeStackOnActivate</div><div class="ttdoc">If true, one charge is consumed each time the ability activates.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability_8h_source.html#l00234">DTGameplayAbility.h:234</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

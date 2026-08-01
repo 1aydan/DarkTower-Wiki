@@ -140,14 +140,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_f_colle
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abe7c490c28e439e9b57589f607400cb7" id="r_abe7c490c28e439e9b57589f607400cb7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abe7c490c28e439e9b57589f607400cb7">FCollectedStatModifier</a> ()=default</td></tr>
-<tr class="memitem:a8a74c4968ced87f4502016a8776286f3" id="r_a8a74c4968ced87f4502016a8776286f3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8a74c4968ced87f4502016a8776286f3">FCollectedStatModifier</a> (const FGameplayTag &amp;InStatTag, float InValue, <a class="el" href="_d_t_inventory_types_8h.html#aaa4ac93ff34fbac246ad93e50d911f0f">EStatApplicationType</a> InType, <a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a> InOp=<a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a>)</td></tr>
+<tr class="memitem:a398af788805c5da8bf70a9896229af13" id="r_a398af788805c5da8bf70a9896229af13"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a398af788805c5da8bf70a9896229af13">FCollectedStatModifier</a> (const FGameplayTag &amp;InStatTag, float InValue, <a class="el" href="_d_t_inventory_types_8h.html#aaa4ac93ff34fbac246ad93e50d911f0f">EStatApplicationType</a> InType, <a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a> InOp=<a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a>, bool bInAllowFractional=false)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac4da2974a9f7903bbe55ffd19ba2a548" id="r_ac4da2974a9f7903bbe55ffd19ba2a548"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#ac4da2974a9f7903bbe55ffd19ba2a548">StatTag</a></td></tr>
 <tr class="memitem:adb3698efb2a318242a8877ad2b9edccf" id="r_adb3698efb2a318242a8877ad2b9edccf"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#adb3698efb2a318242a8877ad2b9edccf">Value</a> = 0.0f</td></tr>
 <tr class="memitem:aca640cfff01239df6f94041c8dfc52dd" id="r_aca640cfff01239df6f94041c8dfc52dd"><td class="memItemLeft"><a class="el" href="_d_t_inventory_types_8h.html#aaa4ac93ff34fbac246ad93e50d911f0f">EStatApplicationType</a>&#160;</td><td class="memItemRight"><a class="el" href="#aca640cfff01239df6f94041c8dfc52dd">ApplicationType</a> = <a class="el" href="_d_t_inventory_types_8h.html#aaa4ac93ff34fbac246ad93e50d911f0fa0e50cae2a86a62b6ddf76d5309599cea">EStatApplicationType::BaseStat</a></td></tr>
-<tr class="memitem:a12fdb015fecf7d046ab99015bae722dd" id="r_a12fdb015fecf7d046ab99015bae722dd"><td class="memItemLeft"><a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a>&#160;</td><td class="memItemRight"><a class="el" href="#a12fdb015fecf7d046ab99015bae722dd">Operation</a> = <a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a></td></tr>
+<tr class="memitem:a12fdb015fecf7d046ab99015bae722dd" id="r_a12fdb015fecf7d046ab99015bae722dd"><td class="memItemLeft"><a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a>&#160;</td><td class="memItemRight"><a class="el" href="#a12fdb015fecf7d046ab99015bae722dd">Operation</a> = <a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a></td></tr>
+<tr class="memitem:ae4a35a0b2acfba571175cb02bc991686" id="r_ae4a35a0b2acfba571175cb02bc991686"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae4a35a0b2acfba571175cb02bc991686">bAllowFractional</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a single collected stat modifier (used for base stats only). </p>
@@ -179,12 +180,12 @@ Public Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#abe7c490c28e439e9b57589f607400cb7">FCollectedStatModifier()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#abe7c490c28e439e9b57589f607400cb7">FCollectedStatModifier()</a>, and <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00045">FCollectedStatModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#abe7c490c28e439e9b57589f607400cb7">FCollectedStatModifier()</a>, and <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00050">FCollectedStatModifier()</a>.</p>
 
 </div>
 </div>
-<a id="a8a74c4968ced87f4502016a8776286f3" name="a8a74c4968ced87f4502016a8776286f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a74c4968ced87f4502016a8776286f3">&#9670;&#160;</a></span>FCollectedStatModifier() <span class="overload">[2/2]</span></h2>
+<a id="a398af788805c5da8bf70a9896229af13" name="a398af788805c5da8bf70a9896229af13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398af788805c5da8bf70a9896229af13">&#9670;&#160;</a></span>FCollectedStatModifier() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,7 +211,12 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a></td>          <td class="paramname"><span class="paramname"><em>InOp</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a></td>          <td class="paramname"><span class="paramname"><em>InOp</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bInAllowFractional</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -220,9 +226,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00045">45</a> of file <a class="el" href="_d_t_equipment_stat_helper_8h_source.html">DTEquipmentStatHelper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00050">50</a> of file <a class="el" href="_d_t_equipment_stat_helper_8h_source.html">DTEquipmentStatHelper.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00039">ApplicationType</a>, <a class="el" href="#abe7c490c28e439e9b57589f607400cb7">FCollectedStatModifier()</a>, <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00042">Operation</a>, <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00033">StatTag</a>, and <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00036">Value</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00039">ApplicationType</a>, <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00047">bAllowFractional</a>, <a class="el" href="#abe7c490c28e439e9b57589f607400cb7">FCollectedStatModifier()</a>, <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00042">Operation</a>, <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00033">StatTag</a>, and <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00036">Value</a>.</p>
 
 </div>
 </div>
@@ -241,7 +247,25 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00039">39</a> of file <a class="el" href="_d_t_equipment_stat_helper_8h_source.html">DTEquipmentStatHelper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00045">FCollectedStatModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00050">FCollectedStatModifier()</a>.</p>
+
+</div>
+</div>
+<a id="ae4a35a0b2acfba571175cb02bc991686" name="ae4a35a0b2acfba571175cb02bc991686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a35a0b2acfba571175cb02bc991686">&#9670;&#160;</a></span>bAllowFractional</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FCollectedStatModifier::bAllowFractional = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_equipment_stat_helper_8h_source.html">DTEquipmentStatHelper.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00050">FCollectedStatModifier()</a>.</p>
 
 </div>
 </div>
@@ -252,14 +276,14 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a> FCollectedStatModifier::Operation = <a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a></td>
+          <td class="memname"><a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a> FCollectedStatModifier::Operation = <a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00042">42</a> of file <a class="el" href="_d_t_equipment_stat_helper_8h_source.html">DTEquipmentStatHelper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00045">FCollectedStatModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00050">FCollectedStatModifier()</a>.</p>
 
 </div>
 </div>
@@ -277,7 +301,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00033">33</a> of file <a class="el" href="_d_t_equipment_stat_helper_8h_source.html">DTEquipmentStatHelper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00045">FCollectedStatModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00050">FCollectedStatModifier()</a>.</p>
 
 </div>
 </div>
@@ -295,7 +319,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00036">36</a> of file <a class="el" href="_d_t_equipment_stat_helper_8h_source.html">DTEquipmentStatHelper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00045">FCollectedStatModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00050">FCollectedStatModifier()</a>.</p>
 
 </div>
 </div>

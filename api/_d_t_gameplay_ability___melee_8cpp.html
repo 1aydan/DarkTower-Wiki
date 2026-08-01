@@ -139,17 +139,64 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_gameplay_
 <code>#include &quot;<a class="el" href="_d_t_attribute_set_8h_source.html">AbilitySystem/Attributes/DTAttributeSet.h</a>&quot;</code><br />
 <code>#include &quot;GameplayPrediction.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_combat_subsystem_8h_source.html">AbilitySystem/Combat/DTCombatSubsystem.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_d_t_ability_blueprint_library_8h_source.html">AbilitySystem/Core/DTAbilityBlueprintLibrary.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_i_d_t_targetable_interface_8h_source.html">AbilitySystem/Core/IDTTargetableInterface.h</a>&quot;</code><br />
 <code>#include &quot;Components/PrimitiveComponent.h&quot;</code><br />
+<code>#include &quot;Components/SkeletalMeshComponent.h&quot;</code><br />
+<code>#include &quot;GameFramework/Character.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_blueprint_library_8h_source.html">Core/DTBlueprintLibrary.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_d_t_gameplay_tags_8h_source.html">Core/DTGameplayTags.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_log_channels_8h_source.html">Core/DTLogChannels.h</a>&quot;</code><br />
 <code>#include &quot;Kismet/KismetSystemLibrary.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_team_subsystem_8h_source.html">Systems/DTTeamSubsystem.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_d_t_targeting_component_8h_source.html">Targeting/DTTargetingComponent.h</a>&quot;</code><br />
-<code>#include &quot;Types/TargetingSystemTypes.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_ability_actor_8h_source.html">World/DTAbilityActor.h</a>&quot;</code><br />
 </div>
 <p><a href="_d_t_gameplay_ability___melee_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a262702ceaa82cd4c8af3a703f74f6ada" id="r_a262702ceaa82cd4c8af3a703f74f6ada"><td class="memItemLeft">static TAutoConsoleVariable&lt; bool &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a262702ceaa82cd4c8af3a703f74f6ada">CVarMeleeDebugDraw</a> (TEXT(&quot;DT.Melee.DebugDraw&quot;), false, TEXT(&quot;When true, draws hitbox debug shapes for every melee hit event, ignoring per-notify bDebug.&quot;), ECVF_Cheat)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a262702ceaa82cd4c8af3a703f74f6ada" name="a262702ceaa82cd4c8af3a703f74f6ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a262702ceaa82cd4c8af3a703f74f6ada">&#9670;&#160;</a></span>CVarMeleeDebugDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TAutoConsoleVariable&lt; bool &gt; CVarMeleeDebugDraw </td>
+          <td>(</td>
+          <td class="paramtype">TEXT(&quot;DT.Melee.DebugDraw&quot;)</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TEXT(&quot;When true, draws hitbox debug shapes for every melee hit event, ignoring per-notify bDebug.&quot;)</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ECVF_Cheat</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

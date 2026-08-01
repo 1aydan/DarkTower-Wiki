@@ -155,9 +155,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a92663793936f0ef1ca529291aec05a73" id="r_a92663793936f0ef1ca529291aec05a73"><td class="memItemLeft"><a class="el" href="class_u_d_t_pawn_extension_component.html">UDTPawnExtensionComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a92663793936f0ef1ca529291aec05a73">GetPawnExtensionComponent</a> () const</td></tr>
 <tr class="memdesc:a92663793936f0ef1ca529291aec05a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Pawn Extension Component.  <br /></td></tr>
 <tr class="memitem:a35d345d9bf18756b1d3f08e18098f367" id="r_a35d345d9bf18756b1d3f08e18098f367"><td class="memItemLeft">FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="#a35d345d9bf18756b1d3f08e18098f367">GetCharacterTags</a> () const</td></tr>
+<tr class="memitem:add7e79430f6163f37ae072ae5aabe7a8" id="r_add7e79430f6163f37ae072ae5aabe7a8"><td class="memItemLeft"><a class="el" href="class_u_d_t_character_data.html">UDTCharacterData</a> *&#160;</td><td class="memItemRight"><a class="el" href="#add7e79430f6163f37ae072ae5aabe7a8">GetCharacterData</a> () const</td></tr>
+<tr class="memitem:a6e218917de1d07ede417da116a5b0388" id="r_a6e218917de1d07ede417da116a5b0388"><td class="memItemLeft">virtual UAnimMontage *&#160;</td><td class="memItemRight"><a class="el" href="#a6e218917de1d07ede417da116a5b0388">GetHitReactMontage</a> (<a class="el" href="_d_t_character_data_8h.html#aa04e94846bfcc66be0dba629403fcfec">EDTHitReactTier</a> Tier, <a class="el" href="_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07">EDTHitDirection</a> Direction) const</td></tr>
+<tr class="memdesc:a6e218917de1d07ede417da116a5b0388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the best hit-react montage for the given tier and direction, or null if none is set.  <br /></td></tr>
 <tr class="memitem:a523a185606cbdb6cd3e489bf074bd3be" id="r_a523a185606cbdb6cd3e489bf074bd3be"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="#a523a185606cbdb6cd3e489bf074bd3be">GetSpawnLocation</a> () const</td></tr>
 <tr class="memitem:a706e575f30b44906b3e7f56956827b4a" id="r_a706e575f30b44906b3e7f56956827b4a"><td class="memItemLeft">virtual <a class="el" href="class_u_d_t_ability_core_component.html">UDTAbilityCoreComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a706e575f30b44906b3e7f56956827b4a">GetAbilityCoreComponent_Implementation</a> () const override</td></tr>
-<tr class="memitem:a0aaea4cfce74e376cd9dfae73752e07e" id="r_a0aaea4cfce74e376cd9dfae73752e07e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0aaea4cfce74e376cd9dfae73752e07e">IsDead_Implementation</a> () const override</td></tr>
+<tr class="memitem:a0aaea4cfce74e376cd9dfae73752e07e" id="r_a0aaea4cfce74e376cd9dfae73752e07e"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a0aaea4cfce74e376cd9dfae73752e07e">IsDead_Implementation</a> () const override</td></tr>
 <tr class="memitem:a2ffcfb9bd4f2ac9fc5ff8617bea0656e" id="r_a2ffcfb9bd4f2ac9fc5ff8617bea0656e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2ffcfb9bd4f2ac9fc5ff8617bea0656e">SetGenericTeamId</a> (const FGenericTeamId &amp;TeamID) override</td></tr>
 <tr class="memitem:a12d84a720a75d2ce832bd9813683b666" id="r_a12d84a720a75d2ce832bd9813683b666"><td class="memItemLeft">virtual FGenericTeamId&#160;</td><td class="memItemRight"><a class="el" href="#a12d84a720a75d2ce832bd9813683b666">GetGenericTeamId</a> () const override</td></tr>
 <tr class="memitem:a0f01130d7b35fb5bd9153bf2632ac779" id="r_a0f01130d7b35fb5bd9153bf2632ac779"><td class="memItemLeft">virtual UAbilitySystemComponent *&#160;</td><td class="memItemRight"><a class="el" href="#a0f01130d7b35fb5bd9153bf2632ac779">GetAbilitySystemComponent</a> () const override</td></tr>
@@ -167,6 +170,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abf6e1961b2bbd90b410a7387a2f26380" id="r_abf6e1961b2bbd90b410a7387a2f26380"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#abf6e1961b2bbd90b410a7387a2f26380">PostInitProperties</a> () override</td></tr>
 <tr class="memitem:a978389139df334910a27d82416ba405e" id="r_a978389139df334910a27d82416ba405e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a978389139df334910a27d82416ba405e">PossessedBy</a> (AController *NewController) override</td></tr>
 <tr class="memitem:a6fd9c026cf9b6284f8dda1afd31cbf23" id="r_a6fd9c026cf9b6284f8dda1afd31cbf23"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6fd9c026cf9b6284f8dda1afd31cbf23">UnPossessed</a> () override</td></tr>
+<tr class="memitem:a8abf2871e04505691b59b839ba2c40ae" id="r_a8abf2871e04505691b59b839ba2c40ae"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8abf2871e04505691b59b839ba2c40ae">OnRep_Controller</a> () override</td></tr>
+<tr class="memitem:a010e5af9ec635960a76ad08944102a6f" id="r_a010e5af9ec635960a76ad08944102a6f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a010e5af9ec635960a76ad08944102a6f">GetLifetimeReplicatedProps</a> (TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
 <tr class="memitem:a1b5984b1ba535db0d85498de5f92d831" id="r_a1b5984b1ba535db0d85498de5f92d831"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1b5984b1ba535db0d85498de5f92d831">GetOwnedGameplayTags</a> (FGameplayTagContainer &amp;OutTagContainer) const override</td></tr>
 <tr class="memitem:a7670bd7d9b1b138b8e568db8374c7fcb" id="r_a7670bd7d9b1b138b8e568db8374c7fcb"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a7670bd7d9b1b138b8e568db8374c7fcb">HasMatchingGameplayTag</a> (FGameplayTag InTagToCheck) const override</td></tr>
 <tr class="memitem:abce55a527ca6530278cba5b5426c632c" id="r_abce55a527ca6530278cba5b5426c632c"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#abce55a527ca6530278cba5b5426c632c">HasAllMatchingGameplayTags</a> (const FGameplayTagContainer &amp;InTagContainer) const override</td></tr>
@@ -182,10 +187,11 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ad0fde30a166e80072eae2936e0b9187e" id="r_ad0fde30a166e80072eae2936e0b9187e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad0fde30a166e80072eae2936e0b9187e">HandleDeath</a> ()</td></tr>
+<tr class="memitem:aa449457ea0c66a6e4e65baf4f39b37f9" id="r_aa449457ea0c66a6e4e65baf4f39b37f9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa449457ea0c66a6e4e65baf4f39b37f9">HandleDeath</a> (const <a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a> &amp;HitInfo)</td></tr>
+<tr class="memdesc:aa449457ea0c66a6e4e65baf4f39b37f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bound to AbilityCoreComponent-&gt;OnDeath.  <br /></td></tr>
 <tr class="memitem:a15c8e6a6558ce53d400e716a2462ac71" id="r_a15c8e6a6558ce53d400e716a2462ac71"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a15c8e6a6558ce53d400e716a2462ac71">OnRep_Team</a> ()</td></tr>
-<tr class="memitem:a8abf2871e04505691b59b839ba2c40ae" id="r_a8abf2871e04505691b59b839ba2c40ae"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8abf2871e04505691b59b839ba2c40ae">OnRep_Controller</a> () override</td></tr>
-<tr class="memitem:a010e5af9ec635960a76ad08944102a6f" id="r_a010e5af9ec635960a76ad08944102a6f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a010e5af9ec635960a76ad08944102a6f">GetLifetimeReplicatedProps</a> (TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
+<tr class="memitem:adabf79a86df1816c929a312f7f5e8738" id="r_adabf79a86df1816c929a312f7f5e8738"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#adabf79a86df1816c929a312f7f5e8738">HandleAbilitySystemInitialized</a> ()</td></tr>
+<tr class="memdesc:adabf79a86df1816c929a312f7f5e8738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called once the ASC is initialized (fires on server and clients) via PawnExtComponent's OnAbilitySystemInitialized.  <br /></td></tr>
 <tr class="memitem:a274746bb9bdf67ea6dc712dc72ad8f76" id="r_a274746bb9bdf67ea6dc712dc72ad8f76"><td class="memItemLeft">virtual FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="#a274746bb9bdf67ea6dc712dc72ad8f76">BP_GetOwnedGameplayTags</a> () const override</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -194,13 +200,14 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a1115ba0e185d44c28d09a5dbfb3956c2" id="r_a1115ba0e185d44c28d09a5dbfb3956c2"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_pawn_extension_component.html">UDTPawnExtensionComponent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a></td></tr>
 <tr class="memitem:a732581f8d38e35971282c5a09038cbf2" id="r_a732581f8d38e35971282c5a09038cbf2"><td class="memItemLeft">FGenericTeamId&#160;</td><td class="memItemRight"><a class="el" href="#a732581f8d38e35971282c5a09038cbf2">TeamId</a> = FGenericTeamId(<a class="el" href="_data_types_8h.html#a8cfa90fbda3ffcea160c25261e8ee0a9">DT_TEAM_NEUTRAL</a>)</td></tr>
 <tr class="memitem:addc28c8657bf577abe931975725ddd7e" id="r_addc28c8657bf577abe931975725ddd7e"><td class="memItemLeft">FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="#addc28c8657bf577abe931975725ddd7e">CharacterTags</a></td></tr>
+<tr class="memitem:ab9dbdef518e482af69d42271d4559fda" id="r_ab9dbdef518e482af69d42271d4559fda"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_character_data.html">UDTCharacterData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab9dbdef518e482af69d42271d4559fda">CharacterData</a></td></tr>
 <tr class="memitem:ac95435e83f3ccf43976a7979c128cbd9" id="r_ac95435e83f3ccf43976a7979c128cbd9"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="#ac95435e83f3ccf43976a7979c128cbd9">SpawnLocation</a></td></tr>
 <tr class="memitem:a50646ae2ff885a6d130bf8da62f2f02a" id="r_a50646ae2ff885a6d130bf8da62f2f02a"><td class="memItemLeft"><a class="el" href="struct_f_death_settings.html">FDeathSettings</a>&#160;</td><td class="memItemRight"><a class="el" href="#a50646ae2ff885a6d130bf8da62f2f02a">DeathSettings</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base non player character class for Dark Tower. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00025">25</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00026">26</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a31d82a1866632360f41ba4e02947d9fb" name="a31d82a1866632360f41ba4e02947d9fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31d82a1866632360f41ba4e02947d9fb">&#9670;&#160;</a></span>ADTCharacter()</h2>
@@ -219,9 +226,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00012">12</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00080">AbilityCoreComponent</a>, and <a class="el" href="_d_t_character_8h_source.html#l00083">PawnExtComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00092">AbilityCoreComponent</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00193">HandleAbilitySystemInitialized()</a>, and <a class="el" href="_d_t_character_8h_source.html#l00095">PawnExtComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00025">GetLifetimeReplicatedProps()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00032">GetLifetimeReplicatedProps()</a>.</p>
 
 </div>
 </div>
@@ -251,9 +258,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_a_d_t_a_i_character.html#a20eb91e54200811a0ab52993e77519f7">ADTAICharacter</a>, and <a class="el" href="class_a_d_t_player_character.html#a8f96e2e70aed148508a8b32c72b32b82">ADTPlayerCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00092">92</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00104">104</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00025">UDTTeamSubsystem::RegisterTeamMember()</a>, and <a class="el" href="_d_t_character_8h_source.html#l00093">SpawnLocation</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00045">UDTTeamSubsystem::RegisterTeamMember()</a>, and <a class="el" href="_d_t_character_8h_source.html#l00108">SpawnLocation</a>.</p>
 
 </div>
 </div>
@@ -282,9 +289,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_a_d_t_player_character.html#a0935da37ee331a35910f0d2fd675f61a">ADTPlayerCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00233">233</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00261">261</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ad0fde30a166e80072eae2936e0b9187e">HandleDeath()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#aa449457ea0c66a6e4e65baf4f39b37f9">HandleDeath()</a>.</p>
 
 </div>
 </div>
@@ -313,9 +320,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_a_d_t_a_i_character.html#a29d9919c2ccf63523bb0c43169d1f852">ADTAICharacter</a>, and <a class="el" href="class_a_d_t_player_character.html#adebede47b8357a64b5094602748ed5b6">ADTPlayerCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00105">105</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00117">117</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00053">UDTTeamSubsystem::UnregisterTeamMember()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00073">UDTTeamSubsystem::UnregisterTeamMember()</a>.</p>
 
 </div>
 </div>
@@ -342,11 +349,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00057">57</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00080">AbilityCoreComponent</a>, and <a class="el" href="_d_t_character_8h_source.html#l00047">GetAbilityCoreComponent_Implementation()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00092">AbilityCoreComponent</a>, and <a class="el" href="_d_t_character_8h_source.html#l00057">GetAbilityCoreComponent_Implementation()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8h_source.html#l00047">GetAbilityCoreComponent_Implementation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8h_source.html#l00057">GetAbilityCoreComponent_Implementation()</a>.</p>
 
 </div>
 </div>
@@ -375,9 +382,40 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_a_d_t_a_i_character.html#aa379b21038b98c680c34d27931243c3b">ADTAICharacter</a>, and <a class="el" href="class_a_d_t_player_character.html#a4963d6ea650942e021bda91270a66d94">ADTPlayerCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00077">77</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00089">89</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00141">GetOwnedGameplayTags()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00161">HasAllMatchingGameplayTags()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00171">HasAnyMatchingGameplayTags()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00151">HasMatchingGameplayTag()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00153">GetOwnedGameplayTags()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00193">HandleAbilitySystemInitialized()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00173">HasAllMatchingGameplayTags()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00183">HasAnyMatchingGameplayTags()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00163">HasMatchingGameplayTag()</a>.</p>
+
+</div>
+</div>
+<a id="add7e79430f6163f37ae072ae5aabe7a8" name="add7e79430f6163f37ae072ae5aabe7a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add7e79430f6163f37ae072ae5aabe7a8">&#9670;&#160;</a></span>GetCharacterData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_character_data.html">UDTCharacterData</a> * ADTCharacter::GetCharacterData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00044">44</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00105">CharacterData</a>, and <a class="el" href="_d_t_character_8h_source.html#l00044">GetCharacterData()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00062">UDTGameplayAbility_HitReact::ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00098">UDTGameplayAbility_HitReact::EndAbility()</a>, <a class="el" href="_d_t_character_8h_source.html#l00044">GetCharacterData()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00325">ADTPlayerCharacter::GetHitReactMontage()</a>, and <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00040">UDTGameplayAbility_HitReact::ShouldAbilityRespondToEvent()</a>.</p>
 
 </div>
 </div>
@@ -404,11 +442,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00040">40</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00041">41</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00090">CharacterTags</a>, and <a class="el" href="_d_t_character_8h_source.html#l00040">GetCharacterTags()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00102">CharacterTags</a>, and <a class="el" href="_d_t_character_8h_source.html#l00041">GetCharacterTags()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8h_source.html#l00040">GetCharacterTags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8h_source.html#l00041">GetCharacterTags()</a>.</p>
 
 </div>
 </div>
@@ -435,9 +473,49 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00072">72</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00084">84</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00086">TeamId</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00098">TeamId</a>.</p>
+
+</div>
+</div>
+<a id="a6e218917de1d07ede417da116a5b0388" name="a6e218917de1d07ede417da116a5b0388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e218917de1d07ede417da116a5b0388">&#9670;&#160;</a></span>GetHitReactMontage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UAnimMontage * ADTCharacter::GetHitReactMontage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_d_t_character_data_8h.html#aa04e94846bfcc66be0dba629403fcfec">EDTHitReactTier</a></td>          <td class="paramname"><span class="paramname"><em>Tier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07">EDTHitDirection</a></td>          <td class="paramname"><span class="paramname"><em>Direction</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the best hit-react montage for the given tier and direction, or null if none is set. </p>
+<p>The montage is chosen from the character's CharacterData. </p>
+
+<p>Reimplemented in <a class="el" href="class_a_d_t_player_character.html#aea7cdf7b60534cb3bca31dc96b95b04a">ADTPlayerCharacter</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00039">39</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00105">CharacterData</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00186">UDTGameplayAbility_HitReact::ApplyHitReact()</a>.</p>
 
 </div>
 </div>
@@ -459,16 +537,14 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00025">25</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00032">32</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00012">ADTCharacter()</a>, and <a class="el" href="_d_t_character_8h_source.html#l00086">TeamId</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="#ad0fde30a166e80072eae2936e0b9187e">HandleDeath()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00012">ADTCharacter()</a>, and <a class="el" href="_d_t_character_8h_source.html#l00098">TeamId</a>.</p>
 
 </div>
 </div>
@@ -495,9 +571,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00141">141</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00153">153</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00077">GetAbilitySystemComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00089">GetAbilitySystemComponent()</a>.</p>
 
 </div>
 </div>
@@ -526,11 +602,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the Pawn Extension Component. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00037">37</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00038">38</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00037">GetPawnExtensionComponent()</a>, and <a class="el" href="_d_t_character_8h_source.html#l00083">PawnExtComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00038">GetPawnExtensionComponent()</a>, and <a class="el" href="_d_t_character_8h_source.html#l00095">PawnExtComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8h_source.html#l00037">GetPawnExtensionComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8h_source.html#l00038">GetPawnExtensionComponent()</a>.</p>
 
 </div>
 </div>
@@ -557,16 +633,49 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00043">43</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00053">53</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00043">GetSpawnLocation()</a>, and <a class="el" href="_d_t_character_8h_source.html#l00093">SpawnLocation</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00053">GetSpawnLocation()</a>, and <a class="el" href="_d_t_character_8h_source.html#l00108">SpawnLocation</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8h_source.html#l00043">GetSpawnLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8h_source.html#l00053">GetSpawnLocation()</a>.</p>
 
 </div>
 </div>
-<a id="ad0fde30a166e80072eae2936e0b9187e" name="ad0fde30a166e80072eae2936e0b9187e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0fde30a166e80072eae2936e0b9187e">&#9670;&#160;</a></span>HandleDeath()</h2>
+<a id="adabf79a86df1816c929a312f7f5e8738" name="adabf79a86df1816c929a312f7f5e8738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabf79a86df1816c929a312f7f5e8738">&#9670;&#160;</a></span>HandleAbilitySystemInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTCharacter::HandleAbilitySystemInitialized </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called once the ASC is initialized (fires on server and clients) via PawnExtComponent's OnAbilitySystemInitialized. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00193">193</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00102">CharacterTags</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00089">GetAbilitySystemComponent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00012">ADTCharacter()</a>, and <a class="el" href="#aa449457ea0c66a6e4e65baf4f39b37f9">HandleDeath()</a>.</p>
+
+</div>
+</div>
+<a id="aa449457ea0c66a6e4e65baf4f39b37f9" name="aa449457ea0c66a6e4e65baf4f39b37f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa449457ea0c66a6e4e65baf4f39b37f9">&#9670;&#160;</a></span>HandleDeath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -577,7 +686,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ADTCharacter::HandleDeath </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>HitInfo</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -588,9 +697,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00233">BP_GetOwnedGameplayTags()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00025">GetLifetimeReplicatedProps()</a>, <a class="el" href="#ad0fde30a166e80072eae2936e0b9187e">HandleDeath()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00223">OnRep_Controller()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00209">OnRep_Team()</a>.</p>
+<p>Bound to AbilityCoreComponent-&gt;OnDeath. </p>
+<p>HitInfo is the killing blow's snapshot (direction, instigator, damage tags, ...). </p>
 
-<p class="reference">Referenced by <a class="el" href="#ad0fde30a166e80072eae2936e0b9187e">HandleDeath()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00082">PreInitializeComponents()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00261">BP_GetOwnedGameplayTags()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00193">HandleAbilitySystemInitialized()</a>, <a class="el" href="#aa449457ea0c66a6e4e65baf4f39b37f9">HandleDeath()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00237">OnRep_Team()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#aa449457ea0c66a6e4e65baf4f39b37f9">HandleDeath()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00094">PreInitializeComponents()</a>.</p>
 
 </div>
 </div>
@@ -617,9 +729,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00161">161</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00173">173</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00077">GetAbilitySystemComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00089">GetAbilitySystemComponent()</a>.</p>
 
 </div>
 </div>
@@ -646,9 +758,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00171">171</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00183">183</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00077">GetAbilitySystemComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00089">GetAbilitySystemComponent()</a>.</p>
 
 </div>
 </div>
@@ -675,11 +787,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00151">151</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00163">163</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00077">GetAbilitySystemComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8cpp_source.html#l00089">GetAbilitySystemComponent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00205">ADTPlayerCharacter::DoAim()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00181">ADTPlayerCharacter::DoMove()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00107">ADTPlayerCharacter::Tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00192">ADTPlayerCharacter::DoMove()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00113">ADTPlayerCharacter::Tick()</a>.</p>
 
 </div>
 </div>
@@ -701,14 +813,14 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00032">32</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00044">44</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00080">AbilityCoreComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00092">AbilityCoreComponent</a>.</p>
 
 </div>
 </div>
@@ -730,16 +842,14 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00223">223</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00251">251</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00083">PawnExtComponent</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="#ad0fde30a166e80072eae2936e0b9187e">HandleDeath()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00095">PawnExtComponent</a>.</p>
 
 </div>
 </div>
@@ -766,11 +876,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00209">209</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00237">237</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00033">OnTeamChange</a>, <a class="el" href="_d_t_character_8h_source.html#l00086">TeamId</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00069">UDTTeamSubsystem::UpdateActorTeam()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00034">OnTeamChange</a>, <a class="el" href="_d_t_character_8h_source.html#l00098">TeamId</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00089">UDTTeamSubsystem::UpdateActorTeam()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ad0fde30a166e80072eae2936e0b9187e">HandleDeath()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#aa449457ea0c66a6e4e65baf4f39b37f9">HandleDeath()</a>.</p>
 
 </div>
 </div>
@@ -799,9 +909,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_a_d_t_a_i_character.html#ad46c34a0a7290fcbbde71b975bc21669">ADTAICharacter</a>, and <a class="el" href="class_a_d_t_player_character.html#a16a78b5a385c17788467d30ee91f9c6f">ADTPlayerCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00121">121</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00133">133</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00083">PawnExtComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00095">PawnExtComponent</a>.</p>
 
 </div>
 </div>
@@ -830,7 +940,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_a_d_t_a_i_character.html#a210929444341ff92615f2b1c3c2ede87">ADTAICharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00116">116</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00128">128</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
 </div>
 </div>
@@ -857,11 +967,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_a_d_t_player_character.html#a2bcfda891c9481149c92e3b2b9c51a0b">ADTPlayerCharacter</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00094">94</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00082">82</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00080">AbilityCoreComponent</a>, and <a class="el" href="#ad0fde30a166e80072eae2936e0b9187e">HandleDeath()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00092">AbilityCoreComponent</a>, and <a class="el" href="#aa449457ea0c66a6e4e65baf4f39b37f9">HandleDeath()</a>.</p>
 
 </div>
 </div>
@@ -888,9 +996,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00043">43</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00055">55</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00033">OnTeamChange</a>, <a class="el" href="_d_t_character_8h_source.html#l00086">TeamId</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00069">UDTTeamSubsystem::UpdateActorTeam()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00034">OnTeamChange</a>, <a class="el" href="_d_t_character_8h_source.html#l00098">TeamId</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00089">UDTTeamSubsystem::UpdateActorTeam()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_i_subsystem_8cpp_source.html#l00014">UDTAISubsystem::SpawnAI()</a>.</p>
 
@@ -919,9 +1027,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00131">131</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8cpp_source.html#l00143">143</a> of file <a class="el" href="_d_t_character_8cpp_source.html">DTCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00083">PawnExtComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00095">PawnExtComponent</a>.</p>
 
 </div>
 </div>
@@ -946,9 +1054,35 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00092">92</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00012">ADTCharacter()</a>, <a class="el" href="_d_t_character_8h_source.html#l00047">GetAbilityCoreComponent_Implementation()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00032">IsDead_Implementation()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00082">PreInitializeComponents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00012">ADTCharacter()</a>, <a class="el" href="_d_t_character_8h_source.html#l00057">GetAbilityCoreComponent_Implementation()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00044">IsDead_Implementation()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00094">PreInitializeComponents()</a>.</p>
+
+</div>
+</div>
+<a id="ab9dbdef518e482af69d42271d4559fda" name="ab9dbdef518e482af69d42271d4559fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9dbdef518e482af69d42271d4559fda">&#9670;&#160;</a></span>CharacterData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_character_data.html">UDTCharacterData</a>&gt; ADTCharacter::CharacterData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00105">105</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8h_source.html#l00044">GetCharacterData()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00039">GetHitReactMontage()</a>.</p>
 
 </div>
 </div>
@@ -972,9 +1106,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00090">90</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00102">102</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8h_source.html#l00040">GetCharacterTags()</a>, and <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00027">ADTEnemyCharacter::PostInitializeComponents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8h_source.html#l00041">GetCharacterTags()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00193">HandleAbilitySystemInitialized()</a>, and <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00022">ADTEnemyCharacter::PostInitializeComponents()</a>.</p>
 
 </div>
 </div>
@@ -998,7 +1132,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00096">96</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00111">111</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 
 </div>
 </div>
@@ -1014,9 +1148,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00033">33</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00034">34</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00209">OnRep_Team()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00043">SetGenericTeamId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00237">OnRep_Team()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00055">SetGenericTeamId()</a>.</p>
 
 </div>
 </div>
@@ -1040,9 +1174,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00083">83</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00095">95</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00012">ADTCharacter()</a>, <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00016">ADTEnemyCharacter::ADTEnemyCharacter()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00299">ADTPlayerCharacter::GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_character_8h_source.html#l00037">GetPawnExtensionComponent()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00223">OnRep_Controller()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00289">ADTPlayerCharacter::OnRep_PlayerState()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00121">PossessedBy()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00095">ADTPlayerCharacter::PossessedBy()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00131">UnPossessed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00012">ADTCharacter()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00295">ADTPlayerCharacter::GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_character_8h_source.html#l00038">GetPawnExtensionComponent()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00251">OnRep_Controller()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00285">ADTPlayerCharacter::OnRep_PlayerState()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00133">PossessedBy()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00101">ADTPlayerCharacter::PossessedBy()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00143">UnPossessed()</a>.</p>
 
 </div>
 </div>
@@ -1066,9 +1200,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00093">93</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00108">108</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00092">BeginPlay()</a>, and <a class="el" href="_d_t_character_8h_source.html#l00043">GetSpawnLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00104">BeginPlay()</a>, and <a class="el" href="_d_t_character_8h_source.html#l00053">GetSpawnLocation()</a>.</p>
 
 </div>
 </div>
@@ -1092,9 +1226,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00086">86</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_8h_source.html#l00098">98</a> of file <a class="el" href="_d_t_character_8h_source.html">DTCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00030">ADTPlayerCharacter::ADTPlayerCharacter()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00072">GetGenericTeamId()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00025">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00209">OnRep_Team()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00043">SetGenericTeamId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00032">ADTPlayerCharacter::ADTPlayerCharacter()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00084">GetGenericTeamId()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00032">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00237">OnRep_Team()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00055">SetGenericTeamId()</a>.</p>
 
 </div>
 </div>

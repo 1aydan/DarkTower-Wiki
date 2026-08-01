@@ -10,6 +10,7 @@ var dir_41720e907965c4f90bcd7150c2828ddc =
     [ "DTGameState.cpp", "_d_t_game_state_8cpp.html", null ],
     [ "DTGlobalData.cpp", "_d_t_global_data_8cpp.html", null ],
     [ "DTHud.cpp", "_d_t_hud_8cpp.html", null ],
+    [ "DTInputConfig.cpp", "_d_t_input_config_8cpp.html", null ],
     [ "DTLocalPlayer.cpp", "_d_t_local_player_8cpp.html", null ],
     [ "DTLogChannels.cpp", "_d_t_log_channels_8cpp.html", "_d_t_log_channels_8cpp" ],
     [ "DTMathLibrary.cpp", "_d_t_math_library_8cpp.html", null ],

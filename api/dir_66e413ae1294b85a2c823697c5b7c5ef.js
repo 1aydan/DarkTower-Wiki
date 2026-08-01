@@ -18,5 +18,6 @@ var dir_66e413ae1294b85a2c823697c5b7c5ef =
     [ "DTItemInstance.cpp", "_d_t_item_instance_8cpp.html", null ],
     [ "DTLootSourceComponent.cpp", "_d_t_loot_source_component_8cpp.html", null ],
     [ "DTLootSourceInterface.cpp", "_d_t_loot_source_interface_8cpp.html", null ],
+    [ "DTMutableMeshSlotComponent.cpp", "_d_t_mutable_mesh_slot_component_8cpp.html", null ],
     [ "DTWeaponActor.cpp", "_d_t_weapon_actor_8cpp.html", null ]
 ];

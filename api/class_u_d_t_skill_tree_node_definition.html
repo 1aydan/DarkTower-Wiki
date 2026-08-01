@@ -158,8 +158,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:aa101c29ec080898a43eaccf52d81a47d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional ability definition this node represents.  <br /></td></tr>
 <tr class="memitem:a737740aaa591c61a053a23569eeb893f" id="r_a737740aaa591c61a053a23569eeb893f"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#a737740aaa591c61a053a23569eeb893f">NodeName</a></td></tr>
 <tr class="memitem:ac42ec4fb2eba5e2e3404d1b706100007" id="r_ac42ec4fb2eba5e2e3404d1b706100007"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#ac42ec4fb2eba5e2e3404d1b706100007">Description</a></td></tr>
-<tr class="memitem:ae06bcb4becb87bb7bc5f48676f140f74" id="r_ae06bcb4becb87bb7bc5f48676f140f74"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae06bcb4becb87bb7bc5f48676f140f74">TooltipValues</a></td></tr>
-<tr class="memdesc:ae06bcb4becb87bb7bc5f48676f140f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic tooltip values used to replace placeholders inside Description.  <br /></td></tr>
+<tr class="memitem:a9d1d3078ebdadb773b4375f1073c2c06" id="r_a9d1d3078ebdadb773b4375f1073c2c06"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9d1d3078ebdadb773b4375f1073c2c06">TooltipValues</a></td></tr>
+<tr class="memdesc:a9d1d3078ebdadb773b4375f1073c2c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Values used to fill {Placeholder} tokens in Description (each is attribute-scalable / composite).  <br /></td></tr>
 <tr class="memitem:abac3d3f1a26afaae104f666e0ec2ac4f" id="r_abac3d3f1a26afaae104f666e0ec2ac4f"><td class="memItemLeft">TSoftObjectPtr&lt; UTexture2D &gt;&#160;</td><td class="memItemRight"><a class="el" href="#abac3d3f1a26afaae104f666e0ec2ac4f">Icon</a></td></tr>
 <tr class="memitem:affa687ad6e116a6582c6656e4207198e" id="r_affa687ad6e116a6582c6656e4207198e"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#affa687ad6e116a6582c6656e4207198e">MaxRank</a> = 1</td></tr>
 <tr class="memitem:a49591b1b54886affb8e5d019dfa2ee30" id="r_a49591b1b54886affb8e5d019dfa2ee30"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a49591b1b54886affb8e5d019dfa2ee30">PointsPerRank</a> = 1</td></tr>
@@ -589,20 +589,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae06bcb4becb87bb7bc5f48676f140f74" name="ae06bcb4becb87bb7bc5f48676f140f74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae06bcb4becb87bb7bc5f48676f140f74">&#9670;&#160;</a></span>TooltipValues</h2>
+<a id="a9d1d3078ebdadb773b4375f1073c2c06" name="a9d1d3078ebdadb773b4375f1073c2c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d1d3078ebdadb773b4375f1073c2c06">&#9670;&#160;</a></span>TooltipValues</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">TArray&lt;<a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a>&gt; UDTSkillTreeNodeDefinition::TooltipValues</td>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a>&gt; UDTSkillTreeNodeDefinition::TooltipValues</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Dynamic tooltip values used to replace placeholders inside Description. </p>
-<p>Supports flat min/max ranges or scalable curve-table-backed values. </p>
+<p>Values used to fill {Placeholder} tokens in Description (each is attribute-scalable / composite). </p>
+<p>For ability nodes this is synced from the ability's DynamicValues. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_definition_8h_source.html#l00040">40</a> of file <a class="el" href="_d_t_skill_tree_node_definition_8h_source.html">DTSkillTreeNodeDefinition.h</a>.</p>
 

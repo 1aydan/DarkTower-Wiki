@@ -10,6 +10,7 @@ var dir_4cd56da83d955b6ee7514e5988440990 =
     [ "DTGameState.h", "_d_t_game_state_8h.html", "_d_t_game_state_8h" ],
     [ "DTGlobalData.h", "_d_t_global_data_8h.html", "_d_t_global_data_8h" ],
     [ "DTHud.h", "_d_t_hud_8h.html", "_d_t_hud_8h" ],
+    [ "DTInputConfig.h", "_d_t_input_config_8h.html", "_d_t_input_config_8h" ],
     [ "DTLocalPlayer.h", "_d_t_local_player_8h.html", "_d_t_local_player_8h" ],
     [ "DTLogChannels.h", "_d_t_log_channels_8h.html", "_d_t_log_channels_8h" ],
     [ "DTMathLibrary.h", "_d_t_math_library_8h.html", "_d_t_math_library_8h" ],

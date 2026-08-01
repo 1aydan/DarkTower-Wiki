@@ -149,6 +149,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ac40ed318c6707cb6bc5270848f2abb14" id="r_ac40ed318c6707cb6bc5270848f2abb14"><td class="memItemLeft">FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="#ac40ed318c6707cb6bc5270848f2abb14">WeaponTags</a></td></tr>
 <tr class="memitem:aa4be9124a533abb62058a426b7508c3a" id="r_aa4be9124a533abb62058a426b7508c3a"><td class="memItemLeft">FHitResult&#160;</td><td class="memItemRight"><a class="el" href="#aa4be9124a533abb62058a426b7508c3a">HitResult</a></td></tr>
 <tr class="memitem:aacde106ee462946952d8ea8cd78b9132" id="r_aacde106ee462946952d8ea8cd78b9132"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aacde106ee462946952d8ea8cd78b9132">bSkipBuiltInMitigation</a> = false</td></tr>
+<tr class="memitem:a2a0f264f69301ddfc4f72ec5296647b2" id="r_a2a0f264f69301ddfc4f72ec5296647b2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a2a0f264f69301ddfc4f72ec5296647b2">HitReactMagnitude</a> = 0.0f</td></tr>
+<tr class="memitem:ac9a826d7817049fa559d1b0128adda65" id="r_ac9a826d7817049fa559d1b0128adda65"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ac9a826d7817049fa559d1b0128adda65">KnockbackMagnitude</a> = 0.0f</td></tr>
+<tr class="memitem:a49689481e8347b5707752dd4d078c84c" id="r_a49689481e8347b5707752dd4d078c84c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a49689481e8347b5707752dd4d078c84c">bSuppressHitReact</a> = false</td></tr>
+<tr class="memdesc:a49689481e8347b5707752dd4d078c84c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppresses the Event.Character.HitReact broadcast entirely.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -186,7 +190,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00077">77</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">UDTCombatSubsystem::CalculateDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00801">UDTCheatManager::KillAllEnemies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">UDTCombatSubsystem::CalculateDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00815">UDTCheatManager::KillAllEnemies()</a>.</p>
 
 </div>
 </div>
@@ -204,7 +208,28 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00101">101</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">UDTCombatSubsystem::CalculateDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">UDTCombatSubsystem::CalculateDamage()</a>.</p>
+
+</div>
+</div>
+<a id="a49689481e8347b5707752dd4d078c84c" name="a49689481e8347b5707752dd4d078c84c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49689481e8347b5707752dd4d078c84c">&#9670;&#160;</a></span>bSuppressHitReact</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FDTDamageContext::bSuppressHitReact = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Suppresses the Event.Character.HitReact broadcast entirely. </p>
+<p>Set on DoT/tick damage so it can never flinch or stagger. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00111">111</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>.</p>
 
 </div>
 </div>
@@ -222,7 +247,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00083">83</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00363">UDTCombatSubsystem::ApplyCrit()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00147">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00395">UDTCombatSubsystem::ApplyMitigation()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">UDTCombatSubsystem::CalculateDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00801">UDTCheatManager::KillAllEnemies()</a>, <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00053">UDTCombatModifier::Matches()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00253">UDTCombatSubsystem::UpdateContextTags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00487">UDTCombatSubsystem::ApplyBlock()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00422">UDTCombatSubsystem::ApplyCrit()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00454">UDTCombatSubsystem::ApplyMitigation()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">UDTCombatSubsystem::CalculateDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00815">UDTCheatManager::KillAllEnemies()</a>, <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00053">UDTCombatModifier::Matches()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00276">UDTCombatSubsystem::UpdateContextTags()</a>.</p>
 
 </div>
 </div>
@@ -240,7 +265,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00147">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00801">UDTCheatManager::KillAllEnemies()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00253">UDTCombatSubsystem::UpdateContextTags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00815">UDTCheatManager::KillAllEnemies()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00276">UDTCombatSubsystem::UpdateContextTags()</a>.</p>
 
 </div>
 </div>
@@ -258,7 +283,25 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00147">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00421">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">UDTCombatSubsystem::CalculateDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00017">UDTCombatModifierRule::GetActorFromContext()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00801">UDTCheatManager::KillAllEnemies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00531">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">UDTCombatSubsystem::CalculateDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00017">UDTCombatModifierRule::GetActorFromContext()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00815">UDTCheatManager::KillAllEnemies()</a>.</p>
+
+</div>
+</div>
+<a id="a2a0f264f69301ddfc4f72ec5296647b2" name="a2a0f264f69301ddfc4f72ec5296647b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a0f264f69301ddfc4f72ec5296647b2">&#9670;&#160;</a></span>HitReactMagnitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float FDTDamageContext::HitReactMagnitude = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00104">104</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>.</p>
 
 </div>
 </div>
@@ -276,7 +319,25 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00098">98</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00147">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00421">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">UDTCombatSubsystem::CalculateDamage()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00531">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">UDTCombatSubsystem::CalculateDamage()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>.</p>
+
+</div>
+</div>
+<a id="ac9a826d7817049fa559d1b0128adda65" name="ac9a826d7817049fa559d1b0128adda65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a826d7817049fa559d1b0128adda65">&#9670;&#160;</a></span>KnockbackMagnitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float FDTDamageContext::KnockbackMagnitude = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00107">107</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>.</p>
 
 </div>
 </div>
@@ -294,7 +355,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00065">65</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00363">UDTCombatSubsystem::ApplyCrit()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00147">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00421">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">UDTCombatSubsystem::CalculateDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00017">UDTCombatModifierRule::GetActorFromContext()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00801">UDTCheatManager::KillAllEnemies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00422">UDTCombatSubsystem::ApplyCrit()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00531">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">UDTCombatSubsystem::CalculateDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00017">UDTCombatModifierRule::GetActorFromContext()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00815">UDTCheatManager::KillAllEnemies()</a>.</p>
 
 </div>
 </div>
@@ -312,7 +373,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00074">74</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00801">UDTCheatManager::KillAllEnemies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00815">UDTCheatManager::KillAllEnemies()</a>.</p>
 
 </div>
 </div>
@@ -330,7 +391,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00086">86</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00053">UDTCombatModifier::Matches()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00253">UDTCombatSubsystem::UpdateContextTags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00053">UDTCombatModifier::Matches()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00276">UDTCombatSubsystem::UpdateContextTags()</a>.</p>
 
 </div>
 </div>
@@ -348,7 +409,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00068">68</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00147">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00421">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">UDTCombatSubsystem::CalculateDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00017">UDTCombatModifierRule::GetActorFromContext()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00801">UDTCheatManager::KillAllEnemies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00531">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">UDTCombatSubsystem::CalculateDamage()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">UDTCheatManager::DamageSelf()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00017">UDTCombatModifierRule::GetActorFromContext()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00815">UDTCheatManager::KillAllEnemies()</a>.</p>
 
 </div>
 </div>
@@ -366,7 +427,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_types_8h_source.html#l00089">89</a> of file <a class="el" href="_d_t_combat_types_8h_source.html">DTCombatTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00053">UDTCombatModifier::Matches()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00253">UDTCombatSubsystem::UpdateContextTags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00053">UDTCombatModifier::Matches()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00276">UDTCombatSubsystem::UpdateContextTags()</a>.</p>
 
 </div>
 </div>

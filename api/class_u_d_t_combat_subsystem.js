@@ -8,11 +8,12 @@ var class_u_d_t_combat_subsystem =
     [ "BroadcastDamageEvent", "class_u_d_t_combat_subsystem.html#a54c69d4224b680bb2f0708ee1fc3b300", null ],
     [ "CalculateDamage", "class_u_d_t_combat_subsystem.html#a11365406a6028efd63373893131d2049", null ],
     [ "DealDamage", "class_u_d_t_combat_subsystem.html#ad2e0a7551d0fdd82f9224ce9f96f6df5", null ],
-    [ "DealDamageToTarget", "class_u_d_t_combat_subsystem.html#a6686324367c9ca04bf20e7c8adbdbe7a", null ],
+    [ "DealDamageToTarget", "class_u_d_t_combat_subsystem.html#a0cccae5e99132fcfd190d6ddce100ac5", null ],
     [ "GatherModifiers", "class_u_d_t_combat_subsystem.html#a423ca93a3ed7625ed97dc7b6b97819d9", null ],
-    [ "GetArmorMitigationFactor", "class_u_d_t_combat_subsystem.html#a22f2729cdcc2840a66e729e4479ed26a", null ],
-    [ "GetBaseBlockEffectiveness", "class_u_d_t_combat_subsystem.html#a59a636802be9fd6481e91cffd5584b5e", null ],
-    [ "GetMaxBlockDamageReduction", "class_u_d_t_combat_subsystem.html#ae791801499307304c9df85dca5200c76", null ],
+    [ "GetArmorConstant", "class_u_d_t_combat_subsystem.html#a7a96a24f189521290e574737ce791285", null ],
+    [ "GetArmorExponent", "class_u_d_t_combat_subsystem.html#a53a96d85002ba8627d7857002e8d13f1", null ],
+    [ "GetBaseBlockEffectiveness", "class_u_d_t_combat_subsystem.html#a07aec6eadbba50e61040039381117273", null ],
+    [ "GetMaxBlockDamageReduction", "class_u_d_t_combat_subsystem.html#a4dcdca18f190e941974950ccc3fdd01a", null ],
     [ "SortModifiers", "class_u_d_t_combat_subsystem.html#a9063c2afe30ce88ca52326e84f2a1995", null ],
     [ "UpdateContextTags", "class_u_d_t_combat_subsystem.html#aa0dfde53181191178af514691375ce30", null ]
 ];

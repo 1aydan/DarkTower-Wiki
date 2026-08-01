@@ -139,387 +139,502 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_item_acto
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;InventoryItemFragment_World.h&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;NiagaraComponent.h&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_d_t_log_channels_8h.html">Core/DTLogChannels.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Net/UnrealNetwork.h&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_d_t_loot_subsystem_8h.html">Systems/DTLootSubsystem.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a7f5cafbfa8efdc398b1f489ceb77977e">   12</a></span><a class="code hl_function" href="class_a_d_t_item_actor.html#a7f5cafbfa8efdc398b1f489ceb77977e">ADTItemActor::ADTItemActor</a>()</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    PrimaryActorTick.bCanEverTick = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    bReplicates = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    bOnlyRelevantToOwner = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    bAlwaysRelevant = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a> = CreateDefaultSubobject&lt;UBoxComponent&gt;(TEXT(<span class="stringliteral">&quot;LootCollisionComponent&quot;</span>));</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    RootComponent = <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;SetSimulatePhysics(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;SetIsReplicated(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a> = CreateDefaultSubobject&lt;UStaticMeshComponent&gt;(TEXT(<span class="stringliteral">&quot;LootMeshComponent&quot;</span>));</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetupAttachment(RootComponent);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a> = CreateDefaultSubobject&lt;USkeletalMeshComponent&gt;(TEXT(<span class="stringliteral">&quot;LootSkeletalMeshComponent&quot;</span>));</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetupAttachment(RootComponent);;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a> = CreateDefaultSubobject&lt;UNiagaraComponent&gt;(TEXT(<span class="stringliteral">&quot;LootParticleComponent&quot;</span>));</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>-&gt;SetupAttachment(RootComponent);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
-</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_d_t_player_state_8h.html">Core/DTPlayerState.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;GameFramework/Pawn.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Net/UnrealNetwork.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_d_t_collision_channels_8h.html">Physics/DTCollisionChannels.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_d_t_loot_subsystem_8h.html">Systems/DTLootSubsystem.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a7f5cafbfa8efdc398b1f489ceb77977e">   15</a></span><a class="code hl_function" href="class_a_d_t_item_actor.html#a7f5cafbfa8efdc398b1f489ceb77977e">ADTItemActor::ADTItemActor</a>()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    PrimaryActorTick.bCanEverTick = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    bReplicates = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    bOnlyRelevantToOwner = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    bAlwaysRelevant = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a> = CreateDefaultSubobject&lt;UBoxComponent&gt;(TEXT(<span class="stringliteral">&quot;LootCollisionComponent&quot;</span>));</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    RootComponent = <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;SetSimulatePhysics(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;SetIsReplicated(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;SetCollisionResponseToChannel(<a class="code hl_define" href="_d_t_collision_channels_8h.html#a37c6964d2913b35a1c87c3eafb6ac0ab">DT_TraceChannel_Interaction</a>, ECR_Block);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a> = CreateDefaultSubobject&lt;UStaticMeshComponent&gt;(TEXT(<span class="stringliteral">&quot;LootMeshComponent&quot;</span>));</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetupAttachment(RootComponent);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a> = CreateDefaultSubobject&lt;USkeletalMeshComponent&gt;(TEXT(<span class="stringliteral">&quot;LootSkeletalMeshComponent&quot;</span>));</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetupAttachment(RootComponent);;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a8cf387268b2049c712ae00f05f93751d">   35</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a8cf387268b2049c712ae00f05f93751d">ADTItemActor::SetItemInfo</a>(<span class="keyword">const</span> FInventoryItemInfo&amp; NewLootInfo)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        UE_LOG(LogTemp, Warning, TEXT(<span class="stringliteral">&quot;ADTItemActor::SetItemInfo called on non-authority instance&quot;</span>));</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a> = NewLootInfo;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a> = CreateDefaultSubobject&lt;UNiagaraComponent&gt;(TEXT(<span class="stringliteral">&quot;LootParticleComponent&quot;</span>));</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>-&gt;SetupAttachment(RootComponent);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
 </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a054b5248f4c058049ab320914fba5b0d">   46</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a054b5248f4c058049ab320914fba5b0d">ADTItemActor::BeginPlay</a>()</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    Super::BeginPlay();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> (HasAuthority())</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> == <a class="code hl_enumvalue" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca1d451e4bf304b1922c9ecfae11fde954">EItemVisibilityType::DroppedItem</a>)</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <a class="code hl_function" href="class_a_d_t_item_actor.html#a27a7fcfac356c41f1f71ebeb022b2d55">InitDroppedItem</a>();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a8cf387268b2049c712ae00f05f93751d">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a8cf387268b2049c712ae00f05f93751d">ADTItemActor::SetItemInfo</a>(<span class="keyword">const</span> FInventoryItemInfo&amp; NewLootInfo)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        UE_LOG(LogTemp, Warning, TEXT(<span class="stringliteral">&quot;ADTItemActor::SetItemInfo called on non-authority instance&quot;</span>));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a> = NewLootInfo;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a054b5248f4c058049ab320914fba5b0d">   50</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a054b5248f4c058049ab320914fba5b0d">ADTItemActor::BeginPlay</a>()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    Super::BeginPlay();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">if</span> (HasAuthority())</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> == <a class="code hl_enumvalue" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca1d451e4bf304b1922c9ecfae11fde954">EItemVisibilityType::DroppedItem</a>)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="comment">// SS AE - force for sanity</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            bOnlyRelevantToOwner = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> == <a class="code hl_enumvalue" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca04ff98bafe4b42e0bb1d1c5d6284fe04">EItemVisibilityType::WorldPlaced</a>)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <a class="code hl_function" href="class_a_d_t_item_actor.html#af1edba118212f7f4bd079ba0b8049343">InitWorldPlacedItem</a>();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;OnComponentHit.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_a_d_t_item_actor.html#a8a875433725e5334d8a600b3a571ad39">ADTItemActor::OnItemHit</a>);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="comment">// TODO : maybe make this optional?</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_function" href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">SetItemPhysics</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_function" href="class_a_d_t_item_actor.html#a27a7fcfac356c41f1f71ebeb022b2d55">InitDroppedItem</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="comment">// SS AE - force for sanity</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            bOnlyRelevantToOwner = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> == <a class="code hl_enumvalue" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca04ff98bafe4b42e0bb1d1c5d6284fe04">EItemVisibilityType::WorldPlaced</a>)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <a class="code hl_function" href="class_a_d_t_item_actor.html#af1edba118212f7f4bd079ba0b8049343">InitWorldPlacedItem</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;OnComponentHit.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_a_d_t_item_actor.html#a8a875433725e5334d8a600b3a571ad39">ADTItemActor::OnItemHit</a>);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// personal loot setup</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> == <a class="code hl_enumvalue" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca03bbf749aadcf873fd153a0fa74cd2a6">EItemVisibilityType::PersonalLoot</a>)</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        APlayerController* LocalPC = GetWorld() ? GetWorld()-&gt;GetFirstPlayerController() : <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">if</span> (LocalPC &amp;&amp; HasAuthority())</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keyword">const</span> AActor* OwnerActor = GetOwner();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keyword">const</span> APawn* LocalPawn = LocalPC-&gt;GetPawn();</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keyword">const</span> <span class="keywordtype">bool</span> bIsOwnedByLocalPlayer =</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                (OwnerActor == LocalPC) ||</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                (LocalPawn &amp;&amp; OwnerActor == LocalPawn) ||</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                (OwnerActor &amp;&amp; LocalPawn &amp;&amp; OwnerActor-&gt;IsOwnedBy(LocalPawn)) ||</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                (OwnerActor &amp;&amp; OwnerActor-&gt;IsOwnedBy(LocalPC));</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">if</span> (!bIsOwnedByLocalPlayer)</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>)</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>)</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>)</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                {</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                }</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a1b247f01255f82c07c9d438a61950321">OwningPlayer</a> = LocalPC;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition)</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    {</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <a class="code hl_function" href="class_a_d_t_item_actor.html#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals</a>();</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#afd53cf7f9e9aad5ffdda27338518096b">TryRegisterLoot</a>();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>}</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="comment">// TODO : maybe make this optional?</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_function" href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">SetItemPhysics</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// personal loot setup</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> == <a class="code hl_enumvalue" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca03bbf749aadcf873fd153a0fa74cd2a6">EItemVisibilityType::PersonalLoot</a>)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        APlayerController* LocalPC = GetWorld() ? GetWorld()-&gt;GetFirstPlayerController() : <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">if</span> (LocalPC &amp;&amp; HasAuthority())</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keyword">const</span> AActor* OwnerActor = GetOwner();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keyword">const</span> APawn* LocalPawn = LocalPC-&gt;GetPawn();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keyword">const</span> <span class="keywordtype">bool</span> bIsOwnedByLocalPlayer =</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                (OwnerActor == LocalPC) ||</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                (LocalPawn &amp;&amp; OwnerActor == LocalPawn) ||</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                (OwnerActor &amp;&amp; LocalPawn &amp;&amp; OwnerActor-&gt;IsOwnedBy(LocalPawn)) ||</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                (OwnerActor &amp;&amp; OwnerActor-&gt;IsOwnedBy(LocalPC));</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">if</span> (!bIsOwnedByLocalPlayer)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a1b247f01255f82c07c9d438a61950321">OwningPlayer</a> = LocalPC;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <a class="code hl_function" href="class_a_d_t_item_actor.html#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals</a>();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#afd53cf7f9e9aad5ffdda27338518096b">TryRegisterLoot</a>();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
 </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#accff2b3455057d400cc03c37560c1df2">  120</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#accff2b3455057d400cc03c37560c1df2">ADTItemActor::EndPlay</a>(<span class="keyword">const</span> EEndPlayReason::Type EndPlayReason)</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>{</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    Super::EndPlay(EndPlayReason);</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">if</span> (HasAuthority())</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;OnComponentHit.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_a_d_t_item_actor.html#a8a875433725e5334d8a600b3a571ad39">ADTItemActor::OnItemHit</a>);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        GetWorldTimerManager().ClearTimer(PhysicsSleepTimerHandle);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a>)</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>* LootSubsystem = GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>&gt;();</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">if</span> (LootSubsystem)</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        {</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            LootSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_loot_subsystem.html#a0de8aee7c99dbf392f0b8774ba6a375d">UnregisterItem</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }   </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}</div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#accff2b3455057d400cc03c37560c1df2">  124</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#accff2b3455057d400cc03c37560c1df2">ADTItemActor::EndPlay</a>(<span class="keyword">const</span> EEndPlayReason::Type EndPlayReason)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>{</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    Super::EndPlay(EndPlayReason);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">if</span> (HasAuthority())</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;OnComponentHit.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_a_d_t_item_actor.html#a8a875433725e5334d8a600b3a571ad39">ADTItemActor::OnItemHit</a>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        GetWorldTimerManager().ClearTimer(PhysicsSleepTimerHandle);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a>)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>* LootSubsystem = GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>&gt;();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">if</span> (LootSubsystem)</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            LootSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_loot_subsystem.html#a0de8aee7c99dbf392f0b8774ba6a375d">UnregisterItem</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        }   </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
 </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a1c524ed9f073b0d22f413ca66153d5bb">  141</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a1c524ed9f073b0d22f413ca66153d5bb">ADTItemActor::GetLifetimeReplicatedProps</a>(TArray&lt;class FLifetimeProperty&gt;&amp; OutLifetimeProps)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    Super::GetLifetimeReplicatedProps(OutLifetimeProps);</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    DOREPLIFETIME(<a class="code hl_function" href="class_a_d_t_item_actor.html#a7f5cafbfa8efdc398b1f489ceb77977e">ADTItemActor</a>, <a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>);</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    DOREPLIFETIME(<a class="code hl_function" href="class_a_d_t_item_actor.html#a7f5cafbfa8efdc398b1f489ceb77977e">ADTItemActor</a>, <a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a>);</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}</div>
-</div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a1c524ed9f073b0d22f413ca66153d5bb">  145</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a1c524ed9f073b0d22f413ca66153d5bb">ADTItemActor::GetLifetimeReplicatedProps</a>(TArray&lt;class FLifetimeProperty&gt;&amp; OutLifetimeProps)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    Super::GetLifetimeReplicatedProps(OutLifetimeProps);</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keywordtype">void</span> ADTItemActor::SetItemVisuals_Implementation()</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>{</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#a78a1fb649124fa01b8f8ccb7a39e03e9">ApplyItemVisuals</a>();</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>}</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">// TODO - Add more modular support for visuals</span></div>
-<div class="foldopen" id="foldopen00155" data-start="{" data-end="}">
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a78a1fb649124fa01b8f8ccb7a39e03e9">  155</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a78a1fb649124fa01b8f8ccb7a39e03e9">ADTItemActor::ApplyItemVisuals</a>()</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>{</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition)</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keyword">const</span> UInventoryItemFragment_World* WorldFragment = <a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition-&gt;FindFragment&lt;UInventoryItemFragment_World&gt;();</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">if</span> (!WorldFragment)</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">if</span> (!WorldFragment-&gt;StaticMesh.IsNull())</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordflow">if</span> (UStaticMesh* LoadedMesh = WorldFragment-&gt;StaticMesh.LoadSynchronous())</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetStaticMesh(LoadedMesh);</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetRelativeTransform(WorldFragment-&gt;VisualTransformOffset);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetVisibility(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetHiddenInGame(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        }</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    }</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!WorldFragment-&gt;SkeletalMesh.IsNull())</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    {</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">if</span> (USkeletalMesh* LoadedMesh = WorldFragment-&gt;SkeletalMesh.LoadSynchronous())</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        {</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetSkeletalMesh(LoadedMesh);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetRelativeTransform(WorldFragment-&gt;VisualTransformOffset);</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetVisibility(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetHiddenInGame(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        }</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    }</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    {</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    }</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">if</span> (!WorldFragment-&gt;NiagaraEffect.IsNull())</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    {</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">if</span> (UNiagaraSystem* LoadedEffect = WorldFragment-&gt;NiagaraEffect.LoadSynchronous())</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>-&gt;SetRelativeTransform(WorldFragment-&gt;VisualTransformOffset);</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>-&gt;SetAsset(LoadedEffect);</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>-&gt;Activate();</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        }</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>}</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    DOREPLIFETIME(<a class="code hl_function" href="class_a_d_t_item_actor.html#a7f5cafbfa8efdc398b1f489ceb77977e">ADTItemActor</a>, <a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    DOREPLIFETIME(<a class="code hl_function" href="class_a_d_t_item_actor.html#a7f5cafbfa8efdc398b1f489ceb77977e">ADTItemActor</a>, <a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
 </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="foldopen" id="foldopen00207" data-start="{" data-end="}">
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#aa25071fa7ccb2be36f1d600f1ced81de">  207</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#aa25071fa7ccb2be36f1d600f1ced81de">ADTItemActor::OnRep_ItemInfo</a>()</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>{</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals</a>();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keywordtype">void</span> ADTItemActor::SetItemVisuals_Implementation()</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>{</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#a78a1fb649124fa01b8f8ccb7a39e03e9">ApplyItemVisuals</a>();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>}</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment">// TODO - Add more modular support for visuals</span></div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="}">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a78a1fb649124fa01b8f8ccb7a39e03e9">  159</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a78a1fb649124fa01b8f8ccb7a39e03e9">ADTItemActor::ApplyItemVisuals</a>()</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>{</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">const</span> UInventoryItemFragment_World* WorldFragment = <a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition-&gt;FindFragment&lt;UInventoryItemFragment_World&gt;();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">if</span> (!WorldFragment)</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">if</span> (!WorldFragment-&gt;StaticMesh.IsNull())</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">if</span> (UStaticMesh* LoadedMesh = WorldFragment-&gt;StaticMesh.LoadSynchronous())</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetStaticMesh(LoadedMesh);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetRelativeTransform(WorldFragment-&gt;VisualTransformOffset);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetVisibility(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetHiddenInGame(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!WorldFragment-&gt;SkeletalMesh.IsNull())</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keywordflow">if</span> (USkeletalMesh* LoadedMesh = WorldFragment-&gt;SkeletalMesh.LoadSynchronous())</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetSkeletalMesh(LoadedMesh);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetRelativeTransform(WorldFragment-&gt;VisualTransformOffset);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetVisibility(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetHiddenInGame(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ItemMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ItemSkeletalMeshComponent</a>-&gt;SetVisibility(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordflow">if</span> (!WorldFragment-&gt;NiagaraEffect.IsNull())</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keywordflow">if</span> (UNiagaraSystem* LoadedEffect = WorldFragment-&gt;NiagaraEffect.LoadSynchronous())</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>-&gt;SetRelativeTransform(WorldFragment-&gt;VisualTransformOffset);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>-&gt;SetAsset(LoadedEffect);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ItemParticleComponent</a>-&gt;Activate();</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>}</div>
+</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#afd53cf7f9e9aad5ffdda27338518096b">TryRegisterLoot</a>();</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>}</div>
+<div class="foldopen" id="foldopen00211" data-start="{" data-end="}">
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#aa25071fa7ccb2be36f1d600f1ced81de">  211</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#aa25071fa7ccb2be36f1d600f1ced81de">ADTItemActor::OnRep_ItemInfo</a>()</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>{</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#a4caa4711d887fd2cc053432bc82393e6">SetItemVisuals</a>();</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#afd53cf7f9e9aad5ffdda27338518096b">TryRegisterLoot</a>();</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
 </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="foldopen" id="foldopen00214" data-start="{" data-end="}">
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#afd53cf7f9e9aad5ffdda27338518096b">  214</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#afd53cf7f9e9aad5ffdda27338518096b">ADTItemActor::TryRegisterLoot</a>()</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>{</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a>)</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    {</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    }</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    </div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition)</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    {</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    }</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>* LootSubsystem = GetWorld() ? GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>&gt;() : <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">if</span> (LootSubsystem)</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    {</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        LootSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_loot_subsystem.html#a6dd96c7c3767a1f3e5f223d5b564a501">RegisterItem</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    }</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>}</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="foldopen" id="foldopen00218" data-start="{" data-end="}">
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#afd53cf7f9e9aad5ffdda27338518096b">  218</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#afd53cf7f9e9aad5ffdda27338518096b">ADTItemActor::TryRegisterLoot</a>()</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>{</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a>)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition)</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    }</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>* LootSubsystem = GetWorld() ? GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>&gt;() : <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordflow">if</span> (LootSubsystem)</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        LootSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_loot_subsystem.html#a6dd96c7c3767a1f3e5f223d5b564a501">RegisterItem</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>}</div>
 </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
-<div class="foldopen" id="foldopen00234" data-start="{" data-end="}">
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#af9db966410ea63ad0c4a53465fe50a8c">  234</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#af9db966410ea63ad0c4a53465fe50a8c">ADTItemActor::PickupItem</a>()</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>{</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    {</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    }</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    </div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    SetActorEnableCollision(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">SetItemPhysics</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    </div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a>)</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    {</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>* LootSubsystem = GetWorld() ? GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>&gt;() : <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="keywordflow">if</span> (LootSubsystem)</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        {</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            LootSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_loot_subsystem.html#a0de8aee7c99dbf392f0b8774ba6a375d">UnregisterItem</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        }</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    }</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#ad22b62da0d6e088166c13ec0a99bc851">Multicast_OnPickedUp</a>();</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    ForceNetUpdate();</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    Destroy();</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>}</div>
-</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="keywordtype">void</span> ADTItemActor::OnPickup_Implementation()</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>{</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="foldopen" id="foldopen00238" data-start="{" data-end="}">
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#af9db966410ea63ad0c4a53465fe50a8c">  238</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#af9db966410ea63ad0c4a53465fe50a8c">ADTItemActor::PickupItem</a>()</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>{</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    SetActorEnableCollision(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">SetItemPhysics</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a>)</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>* LootSubsystem = GetWorld() ? GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a>&gt;() : <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keywordflow">if</span> (LootSubsystem)</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            LootSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_loot_subsystem.html#a0de8aee7c99dbf392f0b8774ba6a375d">UnregisterItem</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">bRegisteredWithLootSubsystem</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    }</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#ad22b62da0d6e088166c13ec0a99bc851">Multicast_OnPickedUp</a>();</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    ForceNetUpdate();</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    Destroy();</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>}</div>
+</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="keywordtype">void</span> ADTItemActor::Multicast_OnPickedUp_Implementation()</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="keywordtype">void</span> ADTItemActor::OnPickup_Implementation()</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>{</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#ab056e7812144784f40dad00168c741df">OnPickup</a>();</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>}</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
-<div class="foldopen" id="foldopen00268" data-start="{" data-end="}">
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">  268</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">ADTItemActor::SetItemPhysics</a>(<span class="keywordtype">bool</span> bEnablePhysics)</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>{</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    {</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    }</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>)</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    {</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;SetSimulatePhysics(bEnablePhysics);</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;SetEnableGravity(bEnablePhysics);</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    }</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>}</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>}</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="keywordtype">void</span> ADTItemActor::Multicast_OnPickedUp_Implementation()</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>{</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <a class="code hl_function" href="class_a_d_t_item_actor.html#ab056e7812144784f40dad00168c741df">OnPickup</a>();</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>}</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="foldopen" id="foldopen00272" data-start="{" data-end="}">
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">  272</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">ADTItemActor::SetItemPhysics</a>(<span class="keywordtype">bool</span> bEnablePhysics)</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>{</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    {</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    }</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>)</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;SetSimulatePhysics(bEnablePhysics);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ItemCollisionComponent</a>-&gt;SetEnableGravity(bEnablePhysics);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    }</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>}</div>
 </div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
-<div class="foldopen" id="foldopen00283" data-start="{" data-end="}">
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#af1edba118212f7f4bd079ba0b8049343">  283</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#af1edba118212f7f4bd079ba0b8049343">ADTItemActor::InitWorldPlacedItem</a>()</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>{</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    {</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    }</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition)</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        UE_LOG(LogDTLoot, Warning, TEXT(<span class="stringliteral">&quot;ADTItemActor::InitWorldPlacedItem called with invalid ItemDefinition&quot;</span>));</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemGuid.IsValid())</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    {</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.Init(<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition);</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    }</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    </div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> = <a class="code hl_enumvalue" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca04ff98bafe4b42e0bb1d1c5d6284fe04">EItemVisibilityType::WorldPlaced</a>;</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    bOnlyRelevantToOwner = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    SetOwner(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    ForceNetUpdate();</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>}</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="foldopen" id="foldopen00287" data-start="{" data-end="}">
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#af1edba118212f7f4bd079ba0b8049343">  287</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#af1edba118212f7f4bd079ba0b8049343">ADTItemActor::InitWorldPlacedItem</a>()</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>{</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition)</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        UE_LOG(LogDTLoot, Warning, TEXT(<span class="stringliteral">&quot;ADTItemActor::InitWorldPlacedItem called with invalid ItemDefinition&quot;</span>));</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemGuid.IsValid())</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    {</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        <a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.Init(<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> = <a class="code hl_enumvalue" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca04ff98bafe4b42e0bb1d1c5d6284fe04">EItemVisibilityType::WorldPlaced</a>;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    bOnlyRelevantToOwner = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    SetOwner(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    ForceNetUpdate();</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>}</div>
 </div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
-<div class="foldopen" id="foldopen00307" data-start="{" data-end="}">
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a27a7fcfac356c41f1f71ebeb022b2d55">  307</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a27a7fcfac356c41f1f71ebeb022b2d55">ADTItemActor::InitDroppedItem</a>()</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>{</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    {</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    }</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    </div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> = <a class="code hl_enumvalue" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca1d451e4bf304b1922c9ecfae11fde954">EItemVisibilityType::DroppedItem</a>;</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    bOnlyRelevantToOwner = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    SetOwner(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    ForceNetUpdate();</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>}</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
+<div class="foldopen" id="foldopen00311" data-start="{" data-end="}">
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a27a7fcfac356c41f1f71ebeb022b2d55">  311</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a27a7fcfac356c41f1f71ebeb022b2d55">ADTItemActor::InitDroppedItem</a>()</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>{</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    }</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> = <a class="code hl_enumvalue" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca1d451e4bf304b1922c9ecfae11fde954">EItemVisibilityType::DroppedItem</a>;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    bOnlyRelevantToOwner = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    SetOwner(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    ForceNetUpdate();</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>}</div>
 </div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="foldopen" id="foldopen00320" data-start="{" data-end="}">
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a8a875433725e5334d8a600b3a571ad39">  320</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a8a875433725e5334d8a600b3a571ad39">ADTItemActor::OnItemHit</a>(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, <span class="keyword">const</span> FHitResult&amp; Hit)</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>{</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <span class="comment">// for sanity</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="keywordflow">if</span> (HasAuthority())</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    {</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        GetWorldTimerManager().SetTimer(PhysicsSleepTimerHandle,</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            FTimerDelegate::CreateUObject(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">ADTItemActor::SetItemPhysics</a>, <span class="keyword">false</span>),</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a64c363631c0b9f0a7c86a5b5d39f08d0">PhysicsSleepTime</a>, <span class="keyword">false</span>);   </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    }</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>}</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="foldopen" id="foldopen00324" data-start="{" data-end="}">
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a8a875433725e5334d8a600b3a571ad39">  324</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a8a875433725e5334d8a600b3a571ad39">ADTItemActor::OnItemHit</a>(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, <span class="keyword">const</span> FHitResult&amp; Hit)</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>{</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="comment">// for sanity</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <span class="keywordflow">if</span> (HasAuthority())</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        GetWorldTimerManager().SetTimer(PhysicsSleepTimerHandle,</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            FTimerDelegate::CreateUObject(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">ADTItemActor::SetItemPhysics</a>, <span class="keyword">false</span>),</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            <a class="code hl_variable" href="class_a_d_t_item_actor.html#a64c363631c0b9f0a7c86a5b5d39f08d0">PhysicsSleepTime</a>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    }</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>}</div>
 </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="foldopen" id="foldopen00335" data-start="{" data-end="}">
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#aa91090b8803d939b532a83775e0aa597">  335</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#aa91090b8803d939b532a83775e0aa597">ADTItemActor::IsRelevantToInteractor</a>(<span class="keyword">const</span> AActor* Interactor)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keywordflow">if</span> (!Interactor)</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    }</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="comment">// Non-personal loot is interactable by anyone.</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">VisibilityType</a> != <a class="code hl_enumvalue" href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca03bbf749aadcf873fd153a0fa74cd2a6">EItemVisibilityType::PersonalLoot</a>)</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    {</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    }</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <span class="keyword">const</span> AActor* OwnerActor = GetOwner();</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keywordflow">if</span> (!OwnerActor)</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    {</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    }</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keyword">const</span> APawn* InteractorPawn = Cast&lt;APawn&gt;(Interactor);</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="keyword">const</span> AController* InteractorController = InteractorPawn ? InteractorPawn-&gt;GetController() : Cast&lt;AController&gt;(Interactor);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    <span class="keywordflow">return</span> (OwnerActor == Interactor) ||</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        (InteractorController &amp;&amp; OwnerActor == InteractorController) ||</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        (InteractorPawn &amp;&amp; OwnerActor-&gt;IsOwnedBy(InteractorPawn)) ||</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        (InteractorController &amp;&amp; OwnerActor-&gt;IsOwnedBy(InteractorController));</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>}</div>
+</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
+<div class="foldopen" id="foldopen00363" data-start="{" data-end="}">
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a64e2c0ea7d7be6e7ccc741fe67ab4e66">  363</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a64e2c0ea7d7be6e7ccc741fe67ab4e66">ADTItemActor::CanInteract_Implementation</a>(AActor* Interactor)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition)</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    {</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    }</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#aa91090b8803d939b532a83775e0aa597">IsRelevantToInteractor</a>(Interactor);</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>}</div>
+</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span> </div>
+<div class="foldopen" id="foldopen00373" data-start="{" data-end="}">
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a9aeb3675cf84bc71d560fa127786524b">  373</a></span>FText <a class="code hl_function" href="class_a_d_t_item_actor.html#a9aeb3675cf84bc71d560fa127786524b">ADTItemActor::GetInteractionText_Implementation</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition &amp;&amp; !<a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition-&gt;DisplayName.IsEmpty())</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    {</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ItemInfo</a>.ItemDefinition-&gt;DisplayName;</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    }</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>    <span class="keywordflow">return</span> NSLOCTEXT(<span class="stringliteral">&quot;DTInteraction&quot;</span>, <span class="stringliteral">&quot;PickUp&quot;</span>, <span class="stringliteral">&quot;Pick Up&quot;</span>);</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>}</div>
+</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span> </div>
+<div class="foldopen" id="foldopen00383" data-start="{" data-end="}">
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a08ea6d3b8335c29915d570d4e1c50509">  383</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a08ea6d3b8335c29915d570d4e1c50509">ADTItemActor::GetInteractionRange_Implementation</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>}</div>
+</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
+<div class="foldopen" id="foldopen00388" data-start="{" data-end="}">
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a17af4b011810ff81e14ae7b5fd116b99">  388</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a17af4b011810ff81e14ae7b5fd116b99">ADTItemActor::GetInteractionPriority_Implementation</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    <span class="comment">//return PriorityForRarity(ItemInfo.RarityTag);</span></div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    <span class="keywordflow">return</span> 1.0f;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>}</div>
+</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span> </div>
+<div class="foldopen" id="foldopen00394" data-start="{" data-end="}">
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#a5baece4b5709a9fcb28b7d99897ead30">  394</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#a5baece4b5709a9fcb28b7d99897ead30">ADTItemActor::Interact_Implementation</a>(AActor* Interactor)</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>{</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    APawn* InteractorPawn = Cast&lt;APawn&gt;(Interactor);</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    <a class="code hl_class" href="class_a_d_t_player_state.html">ADTPlayerState</a>* PlayerState = InteractorPawn ? InteractorPawn-&gt;GetPlayerState&lt;<a class="code hl_class" href="class_a_d_t_player_state.html">ADTPlayerState</a>&gt;() : <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    <span class="keywordflow">if</span> (!PlayerState)</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    {</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    }</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    </div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    PlayerState-&gt;<a class="code hl_function" href="class_a_d_t_player_state.html#a265a75efe5b8930fe2413de58546eb43">TryPickupItem</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>}</div>
+</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span> </div>
+<div class="foldopen" id="foldopen00406" data-start="{" data-end="}">
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#af5492563050822ea1b9f1e7a6b758ff7">  406</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#af5492563050822ea1b9f1e7a6b758ff7">ADTItemActor::OnInteractionFocusGained_Implementation</a>(AActor* Interactor)</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>{</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a11c5bc97c5d1c1c12c7715bcd45c8732">OnInteractionFocusChanged</a>.Broadcast(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>}</div>
+</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span> </div>
+<div class="foldopen" id="foldopen00411" data-start="{" data-end="}">
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno"><a class="line" href="class_a_d_t_item_actor.html#ac11c87af5ab23b81e876122bb1267816">  411</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_item_actor.html#ac11c87af5ab23b81e876122bb1267816">ADTItemActor::OnInteractionFocusLost_Implementation</a>(AActor* Interactor)</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>{</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    <a class="code hl_variable" href="class_a_d_t_item_actor.html#a11c5bc97c5d1c1c12c7715bcd45c8732">OnInteractionFocusChanged</a>.Broadcast(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>}</div>
+</div>
+<div class="ttc" id="a_d_t_collision_channels_8h_html"><div class="ttname"><a href="_d_t_collision_channels_8h.html">DTCollisionChannels.h</a></div></div>
+<div class="ttc" id="a_d_t_collision_channels_8h_html_a37c6964d2913b35a1c87c3eafb6ac0ab"><div class="ttname"><a href="_d_t_collision_channels_8h.html#a37c6964d2913b35a1c87c3eafb6ac0ab">DT_TraceChannel_Interaction</a></div><div class="ttdeci">#define DT_TraceChannel_Interaction</div><div class="ttdef"><b>Definition</b> <a href="_d_t_collision_channels_8h_source.html#l00029">DTCollisionChannels.h:29</a></div></div>
 <div class="ttc" id="a_d_t_item_actor_8h_html"><div class="ttname"><a href="_d_t_item_actor_8h.html">DTItemActor.h</a></div></div>
-<div class="ttc" id="a_d_t_item_actor_8h_html_a22cc6657fe08ebe4ea9b96cd3e1e98eca03bbf749aadcf873fd153a0fa74cd2a6"><div class="ttname"><a href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca03bbf749aadcf873fd153a0fa74cd2a6">EItemVisibilityType::PersonalLoot</a></div><div class="ttdeci">@ PersonalLoot</div><div class="ttdoc">Personal loot - only visible to the owning player.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00019">DTItemActor.h:19</a></div></div>
-<div class="ttc" id="a_d_t_item_actor_8h_html_a22cc6657fe08ebe4ea9b96cd3e1e98eca04ff98bafe4b42e0bb1d1c5d6284fe04"><div class="ttname"><a href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca04ff98bafe4b42e0bb1d1c5d6284fe04">EItemVisibilityType::WorldPlaced</a></div><div class="ttdeci">@ WorldPlaced</div><div class="ttdoc">World Placed item - item placed in the world and visible to all players.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00025">DTItemActor.h:25</a></div></div>
-<div class="ttc" id="a_d_t_item_actor_8h_html_a22cc6657fe08ebe4ea9b96cd3e1e98eca1d451e4bf304b1922c9ecfae11fde954"><div class="ttname"><a href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca1d451e4bf304b1922c9ecfae11fde954">EItemVisibilityType::DroppedItem</a></div><div class="ttdeci">@ DroppedItem</div><div class="ttdoc">Dropped item - visible to all players.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00022">DTItemActor.h:22</a></div></div>
+<div class="ttc" id="a_d_t_item_actor_8h_html_a22cc6657fe08ebe4ea9b96cd3e1e98eca03bbf749aadcf873fd153a0fa74cd2a6"><div class="ttname"><a href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca03bbf749aadcf873fd153a0fa74cd2a6">EItemVisibilityType::PersonalLoot</a></div><div class="ttdeci">@ PersonalLoot</div><div class="ttdoc">Personal loot - only visible to the owning player.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00022">DTItemActor.h:22</a></div></div>
+<div class="ttc" id="a_d_t_item_actor_8h_html_a22cc6657fe08ebe4ea9b96cd3e1e98eca04ff98bafe4b42e0bb1d1c5d6284fe04"><div class="ttname"><a href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca04ff98bafe4b42e0bb1d1c5d6284fe04">EItemVisibilityType::WorldPlaced</a></div><div class="ttdeci">@ WorldPlaced</div><div class="ttdoc">World Placed item - item placed in the world and visible to all players.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00028">DTItemActor.h:28</a></div></div>
+<div class="ttc" id="a_d_t_item_actor_8h_html_a22cc6657fe08ebe4ea9b96cd3e1e98eca1d451e4bf304b1922c9ecfae11fde954"><div class="ttname"><a href="_d_t_item_actor_8h.html#a22cc6657fe08ebe4ea9b96cd3e1e98eca1d451e4bf304b1922c9ecfae11fde954">EItemVisibilityType::DroppedItem</a></div><div class="ttdeci">@ DroppedItem</div><div class="ttdoc">Dropped item - visible to all players.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00025">DTItemActor.h:25</a></div></div>
 <div class="ttc" id="a_d_t_log_channels_8h_html"><div class="ttname"><a href="_d_t_log_channels_8h.html">DTLogChannels.h</a></div></div>
 <div class="ttc" id="a_d_t_loot_subsystem_8h_html"><div class="ttname"><a href="_d_t_loot_subsystem_8h.html">DTLootSubsystem.h</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a04690d8d8e444b09edf0ca43df1e5c77"><div class="ttname"><a href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">ADTItemActor::bRegisteredWithLootSubsystem</a></div><div class="ttdeci">bool bRegisteredWithLootSubsystem</div><div class="ttdoc">True once we&#39;ve registered with the subsystem on this instance (prevents duplicate UI events).</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00119">DTItemActor.h:119</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a054b5248f4c058049ab320914fba5b0d"><div class="ttname"><a href="class_a_d_t_item_actor.html#a054b5248f4c058049ab320914fba5b0d">ADTItemActor::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="#l00046">DTItemActor.cpp:46</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a18b35df5447e821ee91edb7cf1f95bd3"><div class="ttname"><a href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">ADTItemActor::SetItemPhysics</a></div><div class="ttdeci">void SetItemPhysics(bool bEnablePhysics=true)</div><div class="ttdoc">Sets physics simulation on this item.</div><div class="ttdef"><b>Definition</b> <a href="#l00268">DTItemActor.cpp:268</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a1b247f01255f82c07c9d438a61950321"><div class="ttname"><a href="class_a_d_t_item_actor.html#a1b247f01255f82c07c9d438a61950321">ADTItemActor::OwningPlayer</a></div><div class="ttdeci">TWeakObjectPtr&lt; APlayerController &gt; OwningPlayer</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00122">DTItemActor.h:122</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a1c524ed9f073b0d22f413ca66153d5bb"><div class="ttname"><a href="class_a_d_t_item_actor.html#a1c524ed9f073b0d22f413ca66153d5bb">ADTItemActor::GetLifetimeReplicatedProps</a></div><div class="ttdeci">virtual void GetLifetimeReplicatedProps(TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00141">DTItemActor.cpp:141</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a27a7fcfac356c41f1f71ebeb022b2d55"><div class="ttname"><a href="class_a_d_t_item_actor.html#a27a7fcfac356c41f1f71ebeb022b2d55">ADTItemActor::InitDroppedItem</a></div><div class="ttdeci">void InitDroppedItem()</div><div class="ttdoc">Marks this item as a dropped item (visible to all players).</div><div class="ttdef"><b>Definition</b> <a href="#l00307">DTItemActor.cpp:307</a></div></div>
+<div class="ttc" id="a_d_t_player_state_8h_html"><div class="ttname"><a href="_d_t_player_state_8h.html">DTPlayerState.h</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a04690d8d8e444b09edf0ca43df1e5c77"><div class="ttname"><a href="class_a_d_t_item_actor.html#a04690d8d8e444b09edf0ca43df1e5c77">ADTItemActor::bRegisteredWithLootSubsystem</a></div><div class="ttdeci">bool bRegisteredWithLootSubsystem</div><div class="ttdoc">True once we&#39;ve registered with the subsystem on this instance (prevents duplicate UI events).</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00136">DTItemActor.h:136</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a054b5248f4c058049ab320914fba5b0d"><div class="ttname"><a href="class_a_d_t_item_actor.html#a054b5248f4c058049ab320914fba5b0d">ADTItemActor::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="#l00050">DTItemActor.cpp:50</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a08ea6d3b8335c29915d570d4e1c50509"><div class="ttname"><a href="class_a_d_t_item_actor.html#a08ea6d3b8335c29915d570d4e1c50509">ADTItemActor::GetInteractionRange_Implementation</a></div><div class="ttdeci">virtual float GetInteractionRange_Implementation() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00383">DTItemActor.cpp:383</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a11c5bc97c5d1c1c12c7715bcd45c8732"><div class="ttname"><a href="class_a_d_t_item_actor.html#a11c5bc97c5d1c1c12c7715bcd45c8732">ADTItemActor::OnInteractionFocusChanged</a></div><div class="ttdeci">FDTOnInteractionFocusChanged OnInteractionFocusChanged</div><div class="ttdoc">Broadcast on the local machine when this item gains/loses interaction focus (drives the loot-label gl...</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00105">DTItemActor.h:105</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a17af4b011810ff81e14ae7b5fd116b99"><div class="ttname"><a href="class_a_d_t_item_actor.html#a17af4b011810ff81e14ae7b5fd116b99">ADTItemActor::GetInteractionPriority_Implementation</a></div><div class="ttdeci">virtual float GetInteractionPriority_Implementation() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00388">DTItemActor.cpp:388</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a18b35df5447e821ee91edb7cf1f95bd3"><div class="ttname"><a href="class_a_d_t_item_actor.html#a18b35df5447e821ee91edb7cf1f95bd3">ADTItemActor::SetItemPhysics</a></div><div class="ttdeci">void SetItemPhysics(bool bEnablePhysics=true)</div><div class="ttdoc">Sets physics simulation on this item.</div><div class="ttdef"><b>Definition</b> <a href="#l00272">DTItemActor.cpp:272</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a1b247f01255f82c07c9d438a61950321"><div class="ttname"><a href="class_a_d_t_item_actor.html#a1b247f01255f82c07c9d438a61950321">ADTItemActor::OwningPlayer</a></div><div class="ttdeci">TWeakObjectPtr&lt; APlayerController &gt; OwningPlayer</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00139">DTItemActor.h:139</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a1c524ed9f073b0d22f413ca66153d5bb"><div class="ttname"><a href="class_a_d_t_item_actor.html#a1c524ed9f073b0d22f413ca66153d5bb">ADTItemActor::GetLifetimeReplicatedProps</a></div><div class="ttdeci">virtual void GetLifetimeReplicatedProps(TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00145">DTItemActor.cpp:145</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a27a7fcfac356c41f1f71ebeb022b2d55"><div class="ttname"><a href="class_a_d_t_item_actor.html#a27a7fcfac356c41f1f71ebeb022b2d55">ADTItemActor::InitDroppedItem</a></div><div class="ttdeci">void InitDroppedItem()</div><div class="ttdoc">Marks this item as a dropped item (visible to all players).</div><div class="ttdef"><b>Definition</b> <a href="#l00311">DTItemActor.cpp:311</a></div></div>
 <div class="ttc" id="aclass_a_d_t_item_actor_html_a4caa4711d887fd2cc053432bc82393e6"><div class="ttname"><a href="class_a_d_t_item_actor.html#a4caa4711d887fd2cc053432bc82393e6">ADTItemActor::SetItemVisuals</a></div><div class="ttdeci">void SetItemVisuals()</div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a64c363631c0b9f0a7c86a5b5d39f08d0"><div class="ttname"><a href="class_a_d_t_item_actor.html#a64c363631c0b9f0a7c86a5b5d39f08d0">ADTItemActor::PhysicsSleepTime</a></div><div class="ttdeci">float PhysicsSleepTime</div><div class="ttdoc">Time in seconds after which the item will go to sleep when physics is enabled and has hit the ground.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00045">DTItemActor.h:45</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a78a1fb649124fa01b8f8ccb7a39e03e9"><div class="ttname"><a href="class_a_d_t_item_actor.html#a78a1fb649124fa01b8f8ccb7a39e03e9">ADTItemActor::ApplyItemVisuals</a></div><div class="ttdeci">void ApplyItemVisuals()</div><div class="ttdef"><b>Definition</b> <a href="#l00155">DTItemActor.cpp:155</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a7f5cafbfa8efdc398b1f489ceb77977e"><div class="ttname"><a href="class_a_d_t_item_actor.html#a7f5cafbfa8efdc398b1f489ceb77977e">ADTItemActor::ADTItemActor</a></div><div class="ttdeci">ADTItemActor()</div><div class="ttdef"><b>Definition</b> <a href="#l00012">DTItemActor.cpp:12</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a816d50115eec2d615a6f060a84753145"><div class="ttname"><a href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ADTItemActor::ItemSkeletalMeshComponent</a></div><div class="ttdeci">TObjectPtr&lt; USkeletalMeshComponent &gt; ItemSkeletalMeshComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00098">DTItemActor.h:98</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a8a875433725e5334d8a600b3a571ad39"><div class="ttname"><a href="class_a_d_t_item_actor.html#a8a875433725e5334d8a600b3a571ad39">ADTItemActor::OnItemHit</a></div><div class="ttdeci">void OnItemHit(UPrimitiveComponent *HitComponent, AActor *OtherActor, UPrimitiveComponent *OtherComp, FVector NormalImpulse, const FHitResult &amp;Hit)</div><div class="ttdoc">Called when the item mesh hits something.</div><div class="ttdef"><b>Definition</b> <a href="#l00320">DTItemActor.cpp:320</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a8cf387268b2049c712ae00f05f93751d"><div class="ttname"><a href="class_a_d_t_item_actor.html#a8cf387268b2049c712ae00f05f93751d">ADTItemActor::SetItemInfo</a></div><div class="ttdeci">void SetItemInfo(const FInventoryItemInfo &amp;NewLootInfo)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">DTItemActor.cpp:35</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_a9fc15b840770d9e8f0b1fdc8b3f7466a"><div class="ttname"><a href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ADTItemActor::ItemParticleComponent</a></div><div class="ttdeci">TObjectPtr&lt; UNiagaraComponent &gt; ItemParticleComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00101">DTItemActor.h:101</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_aa25071fa7ccb2be36f1d600f1ced81de"><div class="ttname"><a href="class_a_d_t_item_actor.html#aa25071fa7ccb2be36f1d600f1ced81de">ADTItemActor::OnRep_ItemInfo</a></div><div class="ttdeci">void OnRep_ItemInfo()</div><div class="ttdef"><b>Definition</b> <a href="#l00207">DTItemActor.cpp:207</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a5baece4b5709a9fcb28b7d99897ead30"><div class="ttname"><a href="class_a_d_t_item_actor.html#a5baece4b5709a9fcb28b7d99897ead30">ADTItemActor::Interact_Implementation</a></div><div class="ttdeci">virtual void Interact_Implementation(AActor *Interactor) override</div><div class="ttdef"><b>Definition</b> <a href="#l00394">DTItemActor.cpp:394</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a64c363631c0b9f0a7c86a5b5d39f08d0"><div class="ttname"><a href="class_a_d_t_item_actor.html#a64c363631c0b9f0a7c86a5b5d39f08d0">ADTItemActor::PhysicsSleepTime</a></div><div class="ttdeci">float PhysicsSleepTime</div><div class="ttdoc">Time in seconds after which the item will go to sleep when physics is enabled and has hit the ground.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00048">DTItemActor.h:48</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a64e2c0ea7d7be6e7ccc741fe67ab4e66"><div class="ttname"><a href="class_a_d_t_item_actor.html#a64e2c0ea7d7be6e7ccc741fe67ab4e66">ADTItemActor::CanInteract_Implementation</a></div><div class="ttdeci">virtual bool CanInteract_Implementation(AActor *Interactor) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00363">DTItemActor.cpp:363</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a78a1fb649124fa01b8f8ccb7a39e03e9"><div class="ttname"><a href="class_a_d_t_item_actor.html#a78a1fb649124fa01b8f8ccb7a39e03e9">ADTItemActor::ApplyItemVisuals</a></div><div class="ttdeci">void ApplyItemVisuals()</div><div class="ttdef"><b>Definition</b> <a href="#l00159">DTItemActor.cpp:159</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a7f5cafbfa8efdc398b1f489ceb77977e"><div class="ttname"><a href="class_a_d_t_item_actor.html#a7f5cafbfa8efdc398b1f489ceb77977e">ADTItemActor::ADTItemActor</a></div><div class="ttdeci">ADTItemActor()</div><div class="ttdef"><b>Definition</b> <a href="#l00015">DTItemActor.cpp:15</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a816d50115eec2d615a6f060a84753145"><div class="ttname"><a href="class_a_d_t_item_actor.html#a816d50115eec2d615a6f060a84753145">ADTItemActor::ItemSkeletalMeshComponent</a></div><div class="ttdeci">TObjectPtr&lt; USkeletalMeshComponent &gt; ItemSkeletalMeshComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00115">DTItemActor.h:115</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a8a875433725e5334d8a600b3a571ad39"><div class="ttname"><a href="class_a_d_t_item_actor.html#a8a875433725e5334d8a600b3a571ad39">ADTItemActor::OnItemHit</a></div><div class="ttdeci">void OnItemHit(UPrimitiveComponent *HitComponent, AActor *OtherActor, UPrimitiveComponent *OtherComp, FVector NormalImpulse, const FHitResult &amp;Hit)</div><div class="ttdoc">Called when the item mesh hits something.</div><div class="ttdef"><b>Definition</b> <a href="#l00324">DTItemActor.cpp:324</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a8cf387268b2049c712ae00f05f93751d"><div class="ttname"><a href="class_a_d_t_item_actor.html#a8cf387268b2049c712ae00f05f93751d">ADTItemActor::SetItemInfo</a></div><div class="ttdeci">void SetItemInfo(const FInventoryItemInfo &amp;NewLootInfo)</div><div class="ttdef"><b>Definition</b> <a href="#l00039">DTItemActor.cpp:39</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a9aeb3675cf84bc71d560fa127786524b"><div class="ttname"><a href="class_a_d_t_item_actor.html#a9aeb3675cf84bc71d560fa127786524b">ADTItemActor::GetInteractionText_Implementation</a></div><div class="ttdeci">virtual FText GetInteractionText_Implementation() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00373">DTItemActor.cpp:373</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_a9fc15b840770d9e8f0b1fdc8b3f7466a"><div class="ttname"><a href="class_a_d_t_item_actor.html#a9fc15b840770d9e8f0b1fdc8b3f7466a">ADTItemActor::ItemParticleComponent</a></div><div class="ttdeci">TObjectPtr&lt; UNiagaraComponent &gt; ItemParticleComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00118">DTItemActor.h:118</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_aa25071fa7ccb2be36f1d600f1ced81de"><div class="ttname"><a href="class_a_d_t_item_actor.html#aa25071fa7ccb2be36f1d600f1ced81de">ADTItemActor::OnRep_ItemInfo</a></div><div class="ttdeci">void OnRep_ItemInfo()</div><div class="ttdef"><b>Definition</b> <a href="#l00211">DTItemActor.cpp:211</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_aa91090b8803d939b532a83775e0aa597"><div class="ttname"><a href="class_a_d_t_item_actor.html#aa91090b8803d939b532a83775e0aa597">ADTItemActor::IsRelevantToInteractor</a></div><div class="ttdeci">bool IsRelevantToInteractor(const AActor *Interactor) const</div><div class="ttdoc">Whether the given interactor may see/act on this item (PersonalLoot owner-gate; others = anyone).</div><div class="ttdef"><b>Definition</b> <a href="#l00335">DTItemActor.cpp:335</a></div></div>
 <div class="ttc" id="aclass_a_d_t_item_actor_html_ab056e7812144784f40dad00168c741df"><div class="ttname"><a href="class_a_d_t_item_actor.html#ab056e7812144784f40dad00168c741df">ADTItemActor::OnPickup</a></div><div class="ttdeci">void OnPickup()</div><div class="ttdoc">Cosmetic pickup callback executed on all relevant clients before this actor is destroyed.</div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_ac4ddef3df4a221215a1ad6411375a6d8"><div class="ttname"><a href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ADTItemActor::ItemInfo</a></div><div class="ttdeci">FInventoryItemInfo ItemInfo</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00037">DTItemActor.h:37</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_accff2b3455057d400cc03c37560c1df2"><div class="ttname"><a href="class_a_d_t_item_actor.html#accff2b3455057d400cc03c37560c1df2">ADTItemActor::EndPlay</a></div><div class="ttdeci">virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override</div><div class="ttdef"><b>Definition</b> <a href="#l00120">DTItemActor.cpp:120</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_ac11c87af5ab23b81e876122bb1267816"><div class="ttname"><a href="class_a_d_t_item_actor.html#ac11c87af5ab23b81e876122bb1267816">ADTItemActor::OnInteractionFocusLost_Implementation</a></div><div class="ttdeci">virtual void OnInteractionFocusLost_Implementation(AActor *Interactor) override</div><div class="ttdef"><b>Definition</b> <a href="#l00411">DTItemActor.cpp:411</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_ac4ddef3df4a221215a1ad6411375a6d8"><div class="ttname"><a href="class_a_d_t_item_actor.html#ac4ddef3df4a221215a1ad6411375a6d8">ADTItemActor::ItemInfo</a></div><div class="ttdeci">FInventoryItemInfo ItemInfo</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00040">DTItemActor.h:40</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_accff2b3455057d400cc03c37560c1df2"><div class="ttname"><a href="class_a_d_t_item_actor.html#accff2b3455057d400cc03c37560c1df2">ADTItemActor::EndPlay</a></div><div class="ttdeci">virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override</div><div class="ttdef"><b>Definition</b> <a href="#l00124">DTItemActor.cpp:124</a></div></div>
 <div class="ttc" id="aclass_a_d_t_item_actor_html_ad22b62da0d6e088166c13ec0a99bc851"><div class="ttname"><a href="class_a_d_t_item_actor.html#ad22b62da0d6e088166c13ec0a99bc851">ADTItemActor::Multicast_OnPickedUp</a></div><div class="ttdeci">void Multicast_OnPickedUp()</div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_ae29aa7f0beb1302f2cf875b2e0f0ae01"><div class="ttname"><a href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">ADTItemActor::VisibilityType</a></div><div class="ttdeci">EItemVisibilityType VisibilityType</div><div class="ttdoc">Defines how this item is visible to players.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00053">DTItemActor.h:53</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_af1edba118212f7f4bd079ba0b8049343"><div class="ttname"><a href="class_a_d_t_item_actor.html#af1edba118212f7f4bd079ba0b8049343">ADTItemActor::InitWorldPlacedItem</a></div><div class="ttdeci">void InitWorldPlacedItem()</div><div class="ttdef"><b>Definition</b> <a href="#l00283">DTItemActor.cpp:283</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_af9db966410ea63ad0c4a53465fe50a8c"><div class="ttname"><a href="class_a_d_t_item_actor.html#af9db966410ea63ad0c4a53465fe50a8c">ADTItemActor::PickupItem</a></div><div class="ttdeci">void PickupItem()</div><div class="ttdoc">Picks up the item and destroys the actor.</div><div class="ttdef"><b>Definition</b> <a href="#l00234">DTItemActor.cpp:234</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_afd53cf7f9e9aad5ffdda27338518096b"><div class="ttname"><a href="class_a_d_t_item_actor.html#afd53cf7f9e9aad5ffdda27338518096b">ADTItemActor::TryRegisterLoot</a></div><div class="ttdeci">void TryRegisterLoot()</div><div class="ttdef"><b>Definition</b> <a href="#l00214">DTItemActor.cpp:214</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_afe1474b5e7370abcbe3fd12ff6d52c20"><div class="ttname"><a href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ADTItemActor::ItemCollisionComponent</a></div><div class="ttdeci">TObjectPtr&lt; UBoxComponent &gt; ItemCollisionComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00092">DTItemActor.h:92</a></div></div>
-<div class="ttc" id="aclass_a_d_t_item_actor_html_afe853ecc84ba77d8416a8d9dbe81cc3c"><div class="ttname"><a href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ADTItemActor::ItemMeshComponent</a></div><div class="ttdeci">TObjectPtr&lt; UStaticMeshComponent &gt; ItemMeshComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00095">DTItemActor.h:95</a></div></div>
-<div class="ttc" id="aclass_u_d_t_loot_subsystem_html"><div class="ttname"><a href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a></div><div class="ttdoc">Subsystem to manage loot in the world.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_loot_subsystem_8h_source.html#l00062">DTLootSubsystem.h:63</a></div></div>
-<div class="ttc" id="aclass_u_d_t_loot_subsystem_html_a0de8aee7c99dbf392f0b8774ba6a375d"><div class="ttname"><a href="class_u_d_t_loot_subsystem.html#a0de8aee7c99dbf392f0b8774ba6a375d">UDTLootSubsystem::UnregisterItem</a></div><div class="ttdeci">void UnregisterItem(ADTItemActor *Item)</div><div class="ttdef"><b>Definition</b> <a href="_d_t_loot_subsystem_8cpp_source.html#l00063">DTLootSubsystem.cpp:63</a></div></div>
-<div class="ttc" id="aclass_u_d_t_loot_subsystem_html_a6dd96c7c3767a1f3e5f223d5b564a501"><div class="ttname"><a href="class_u_d_t_loot_subsystem.html#a6dd96c7c3767a1f3e5f223d5b564a501">UDTLootSubsystem::RegisterItem</a></div><div class="ttdeci">void RegisterItem(ADTItemActor *Item)</div><div class="ttdef"><b>Definition</b> <a href="_d_t_loot_subsystem_8cpp_source.html#l00048">DTLootSubsystem.cpp:48</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_ae29aa7f0beb1302f2cf875b2e0f0ae01"><div class="ttname"><a href="class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01">ADTItemActor::VisibilityType</a></div><div class="ttdeci">EItemVisibilityType VisibilityType</div><div class="ttdoc">Defines how this item is visible to players.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00056">DTItemActor.h:56</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_af1edba118212f7f4bd079ba0b8049343"><div class="ttname"><a href="class_a_d_t_item_actor.html#af1edba118212f7f4bd079ba0b8049343">ADTItemActor::InitWorldPlacedItem</a></div><div class="ttdeci">void InitWorldPlacedItem()</div><div class="ttdef"><b>Definition</b> <a href="#l00287">DTItemActor.cpp:287</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_af5492563050822ea1b9f1e7a6b758ff7"><div class="ttname"><a href="class_a_d_t_item_actor.html#af5492563050822ea1b9f1e7a6b758ff7">ADTItemActor::OnInteractionFocusGained_Implementation</a></div><div class="ttdeci">virtual void OnInteractionFocusGained_Implementation(AActor *Interactor) override</div><div class="ttdef"><b>Definition</b> <a href="#l00406">DTItemActor.cpp:406</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_af9db966410ea63ad0c4a53465fe50a8c"><div class="ttname"><a href="class_a_d_t_item_actor.html#af9db966410ea63ad0c4a53465fe50a8c">ADTItemActor::PickupItem</a></div><div class="ttdeci">void PickupItem()</div><div class="ttdoc">Picks up the item and destroys the actor.</div><div class="ttdef"><b>Definition</b> <a href="#l00238">DTItemActor.cpp:238</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_afd53cf7f9e9aad5ffdda27338518096b"><div class="ttname"><a href="class_a_d_t_item_actor.html#afd53cf7f9e9aad5ffdda27338518096b">ADTItemActor::TryRegisterLoot</a></div><div class="ttdeci">void TryRegisterLoot()</div><div class="ttdef"><b>Definition</b> <a href="#l00218">DTItemActor.cpp:218</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_afe1474b5e7370abcbe3fd12ff6d52c20"><div class="ttname"><a href="class_a_d_t_item_actor.html#afe1474b5e7370abcbe3fd12ff6d52c20">ADTItemActor::ItemCollisionComponent</a></div><div class="ttdeci">TObjectPtr&lt; UBoxComponent &gt; ItemCollisionComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00109">DTItemActor.h:109</a></div></div>
+<div class="ttc" id="aclass_a_d_t_item_actor_html_afe853ecc84ba77d8416a8d9dbe81cc3c"><div class="ttname"><a href="class_a_d_t_item_actor.html#afe853ecc84ba77d8416a8d9dbe81cc3c">ADTItemActor::ItemMeshComponent</a></div><div class="ttdeci">TObjectPtr&lt; UStaticMeshComponent &gt; ItemMeshComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_item_actor_8h_source.html#l00112">DTItemActor.h:112</a></div></div>
+<div class="ttc" id="aclass_a_d_t_player_state_html"><div class="ttname"><a href="class_a_d_t_player_state.html">ADTPlayerState</a></div><div class="ttdoc">Base Player State class for Dark Tower.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_player_state_8h_source.html#l00037">DTPlayerState.h:38</a></div></div>
+<div class="ttc" id="aclass_a_d_t_player_state_html_a265a75efe5b8930fe2413de58546eb43"><div class="ttname"><a href="class_a_d_t_player_state.html#a265a75efe5b8930fe2413de58546eb43">ADTPlayerState::TryPickupItem</a></div><div class="ttdeci">bool TryPickupItem(ADTItemActor *ItemActor)</div><div class="ttdef"><b>Definition</b> <a href="_d_t_player_state_8cpp_source.html#l00351">DTPlayerState.cpp:351</a></div></div>
+<div class="ttc" id="aclass_u_d_t_loot_subsystem_html"><div class="ttname"><a href="class_u_d_t_loot_subsystem.html">UDTLootSubsystem</a></div><div class="ttdoc">Subsystem to manage loot in the world.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_loot_subsystem_8h_source.html#l00059">DTLootSubsystem.h:60</a></div></div>
+<div class="ttc" id="aclass_u_d_t_loot_subsystem_html_a0de8aee7c99dbf392f0b8774ba6a375d"><div class="ttname"><a href="class_u_d_t_loot_subsystem.html#a0de8aee7c99dbf392f0b8774ba6a375d">UDTLootSubsystem::UnregisterItem</a></div><div class="ttdeci">void UnregisterItem(ADTItemActor *Item)</div><div class="ttdef"><b>Definition</b> <a href="_d_t_loot_subsystem_8cpp_source.html#l00064">DTLootSubsystem.cpp:64</a></div></div>
+<div class="ttc" id="aclass_u_d_t_loot_subsystem_html_a6dd96c7c3767a1f3e5f223d5b564a501"><div class="ttname"><a href="class_u_d_t_loot_subsystem.html#a6dd96c7c3767a1f3e5f223d5b564a501">UDTLootSubsystem::RegisterItem</a></div><div class="ttdeci">void RegisterItem(ADTItemActor *Item)</div><div class="ttdef"><b>Definition</b> <a href="_d_t_loot_subsystem_8cpp_source.html#l00049">DTLootSubsystem.cpp:49</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

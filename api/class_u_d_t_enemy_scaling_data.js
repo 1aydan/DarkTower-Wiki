@@ -10,10 +10,6 @@ var class_u_d_t_enemy_scaling_data =
     [ "GetTierMultiplier", "class_u_d_t_enemy_scaling_data.html#a4aabf62ca726004af0c656011aa946fb", null ],
     [ "EnemyStatInitializationEffect", "class_u_d_t_enemy_scaling_data.html#acec5c54a29d9f608a2f32784bc882dba", null ],
     [ "EnemyTierMultipliers", "class_u_d_t_enemy_scaling_data.html#a2f013bdcd3d415c8d3d1f46041111a71", null ],
-    [ "GlobalEnemyArmorGrowth", "class_u_d_t_enemy_scaling_data.html#af50ee39b80382612a47c076baf508819", null ],
-    [ "GlobalEnemyDamageScalar", "class_u_d_t_enemy_scaling_data.html#a207d028c39714a359f07ace61493970e", null ],
-    [ "GlobalEnemyDR", "class_u_d_t_enemy_scaling_data.html#a19e01d968b8952086ccb2de216612ecd", null ],
-    [ "GlobalEnemyLifeGrowth", "class_u_d_t_enemy_scaling_data.html#a6b455da6c48c115b8387e67fd184f8a6", null ],
     [ "GlobalEnemyResistancePerLevel", "class_u_d_t_enemy_scaling_data.html#a20a98b2072710d4c5844a0ba4d4cf79a", null ],
-    [ "GlobalEnemyScalingThreshold", "class_u_d_t_enemy_scaling_data.html#ad5bc5e12662ae9c6c17d9c12f64d1d45", null ]
+    [ "ScalingBands", "class_u_d_t_enemy_scaling_data.html#a4bdd2e1e443220991a5035b3f17329f3", null ]
 ];

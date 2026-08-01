@@ -145,14 +145,17 @@ Inheritance diagram for UDTCombatGlobalData:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a77d0b23c7c3f11495c24a8c5c2e52f5d" id="r_a77d0b23c7c3f11495c24a8c5c2e52f5d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a77d0b23c7c3f11495c24a8c5c2e52f5d">GetArmorMitigationFactor</a> () const</td></tr>
+<tr class="memitem:ad16ec4461d6874e96dd5af4addb568a6" id="r_ad16ec4461d6874e96dd5af4addb568a6"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ad16ec4461d6874e96dd5af4addb568a6">GetArmorConstant</a> () const</td></tr>
+<tr class="memitem:a8e6ab20f7d55a5d9472ade625986edcf" id="r_a8e6ab20f7d55a5d9472ade625986edcf"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a8e6ab20f7d55a5d9472ade625986edcf">GetArmorExponent</a> () const</td></tr>
 <tr class="memitem:ac9e4f1db6b3f57a6e8a3f5433ee21ef3" id="r_ac9e4f1db6b3f57a6e8a3f5433ee21ef3"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ac9e4f1db6b3f57a6e8a3f5433ee21ef3">GetBaseBlockEffectiveness</a> () const</td></tr>
 <tr class="memitem:ade82ce37323e04adeeb09d0e5b63c7e1" id="r_ade82ce37323e04adeeb09d0e5b63c7e1"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ade82ce37323e04adeeb09d0e5b63c7e1">GetMaxBlockDamageReduction</a> () const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a0c1c318995fda501e72e3fc2b5382ca4" id="r_a0c1c318995fda501e72e3fc2b5382ca4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0c1c318995fda501e72e3fc2b5382ca4">ArmorMitigationFactor</a> = 8.0f</td></tr>
-<tr class="memdesc:a0c1c318995fda501e72e3fc2b5382ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls how strongly armor reduces incoming damage.  <br /></td></tr>
+<tr class="memitem:aa31be067e7699728bd48d1f71a038d11" id="r_aa31be067e7699728bd48d1f71a038d11"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aa31be067e7699728bd48d1f71a038d11">ArmorConstant</a> = 2500.0f</td></tr>
+<tr class="memdesc:aa31be067e7699728bd48d1f71a038d11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls how strongly armor reduces incoming damage.  <br /></td></tr>
+<tr class="memitem:a674946859218d98c346fc557ade59c9e" id="r_a674946859218d98c346fc557ade59c9e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a674946859218d98c346fc557ade59c9e">ArmorExponent</a> = 0.6f</td></tr>
+<tr class="memdesc:a674946859218d98c346fc557ade59c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skews the armor curve.  <br /></td></tr>
 <tr class="memitem:abeee37180400029c63068f9db5f6a7eb" id="r_abeee37180400029c63068f9db5f6a7eb"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#abeee37180400029c63068f9db5f6a7eb">BaseBlockEffectiveness</a> = 0.5f</td></tr>
 <tr class="memdesc:abeee37180400029c63068f9db5f6a7eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base fraction of damage removed by a successful block, before BlockEffectiveness scaling.  <br /></td></tr>
 <tr class="memitem:ad247b188719fd00e63ab0f2b544ac150" id="r_ad247b188719fd00e63ab0f2b544ac150"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ad247b188719fd00e63ab0f2b544ac150">MaxBlockDamageReduction</a> = 0.8f</td></tr>
@@ -163,14 +166,14 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8h_source.html#l00013">13</a> of file <a class="el" href="_d_t_combat_global_data_8h_source.html">DTCombatGlobalData.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a77d0b23c7c3f11495c24a8c5c2e52f5d" name="a77d0b23c7c3f11495c24a8c5c2e52f5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77d0b23c7c3f11495c24a8c5c2e52f5d">&#9670;&#160;</a></span>GetArmorMitigationFactor()</h2>
+<a id="ad16ec4461d6874e96dd5af4addb568a6" name="ad16ec4461d6874e96dd5af4addb568a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad16ec4461d6874e96dd5af4addb568a6">&#9670;&#160;</a></span>GetArmorConstant()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float UDTCombatGlobalData::GetArmorMitigationFactor </td>
+          <td class="memname">float UDTCombatGlobalData::GetArmorConstant </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -180,7 +183,32 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00005">5</a> of file <a class="el" href="_d_t_combat_global_data_8cpp_source.html">DTCombatGlobalData.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_global_data_8h_source.html#l00025">ArmorMitigationFactor</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_global_data_8h_source.html#l00027">ArmorConstant</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00297">UDTCombatSubsystem::GetArmorConstant()</a>.</p>
+
+</div>
+</div>
+<a id="a8e6ab20f7d55a5d9472ade625986edcf" name="a8e6ab20f7d55a5d9472ade625986edcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6ab20f7d55a5d9472ade625986edcf">&#9670;&#160;</a></span>GetArmorExponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTCombatGlobalData::GetArmorExponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00010">10</a> of file <a class="el" href="_d_t_combat_global_data_8cpp_source.html">DTCombatGlobalData.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_combat_global_data_8h_source.html#l00035">ArmorExponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00309">UDTCombatSubsystem::GetArmorExponent()</a>.</p>
 
 </div>
 </div>
@@ -199,9 +227,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00010">10</a> of file <a class="el" href="_d_t_combat_global_data_8cpp_source.html">DTCombatGlobalData.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_combat_global_data_8cpp_source.html">DTCombatGlobalData.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_global_data_8h_source.html#l00035">BaseBlockEffectiveness</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_global_data_8h_source.html#l00048">BaseBlockEffectiveness</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00321">UDTCombatSubsystem::GetBaseBlockEffectiveness()</a>.</p>
 
 </div>
 </div>
@@ -220,31 +250,54 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_combat_global_data_8cpp_source.html">DTCombatGlobalData.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00020">20</a> of file <a class="el" href="_d_t_combat_global_data_8cpp_source.html">DTCombatGlobalData.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_global_data_8h_source.html#l00039">MaxBlockDamageReduction</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_global_data_8h_source.html#l00052">MaxBlockDamageReduction</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00333">UDTCombatSubsystem::GetMaxBlockDamageReduction()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a0c1c318995fda501e72e3fc2b5382ca4" name="a0c1c318995fda501e72e3fc2b5382ca4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c1c318995fda501e72e3fc2b5382ca4">&#9670;&#160;</a></span>ArmorMitigationFactor</h2>
+<a id="aa31be067e7699728bd48d1f71a038d11" name="aa31be067e7699728bd48d1f71a038d11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa31be067e7699728bd48d1f71a038d11">&#9670;&#160;</a></span>ArmorConstant</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float UDTCombatGlobalData::ArmorMitigationFactor = 8.0f</td>
+          <td class="memname">float UDTCombatGlobalData::ArmorConstant = 2500.0f</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Controls how strongly armor reduces incoming damage. </p>
-<p>Formula: ArmorReduction = Armor / (Armor + ArmorMitigationFactor * Damage) Higher values make armor less effective. Lower values make armor more effective. </p>
+<p>Formula: ArmorReduction = Armor^p / (Armor^p + ArmorConstant^p) (p = ArmorExponent) ArmorConstant is the amount of armor required for 50% mitigation (at Armor == K the two terms are equal regardless of p). Mitigation does not depend on hit size and asymptotically approaches but never reaches 100%. Lower values make armor stronger. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8h_source.html#l00025">25</a> of file <a class="el" href="_d_t_combat_global_data_8h_source.html">DTCombatGlobalData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8h_source.html#l00027">27</a> of file <a class="el" href="_d_t_combat_global_data_8h_source.html">DTCombatGlobalData.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00005">GetArmorMitigationFactor()</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00274">UDTCombatSubsystem::GetArmorMitigationFactor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00005">GetArmorConstant()</a>.</p>
+
+</div>
+</div>
+<a id="a674946859218d98c346fc557ade59c9e" name="a674946859218d98c346fc557ade59c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a674946859218d98c346fc557ade59c9e">&#9670;&#160;</a></span>ArmorExponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTCombatGlobalData::ArmorExponent = 0.6f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Skews the armor curve. </p>
+<p>p = 1 is linear-in-EHP (every point of armor worth the same survivability). p &lt; 1 front-loads the curve: early armor gives much more mitigation, and the late game diminishes faster. p &gt; 1 back-loads it (weak early, ramps later). Affects shape only; the 50% point stays at K. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8h_source.html#l00035">35</a> of file <a class="el" href="_d_t_combat_global_data_8h_source.html">DTCombatGlobalData.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00010">GetArmorExponent()</a>.</p>
 
 </div>
 </div>
@@ -263,9 +316,9 @@ Public Attributes</h2></td></tr>
 <p>Base fraction of damage removed by a successful block, before BlockEffectiveness scaling. </p>
 <p>Formula: BlockDamageReduction = min(BaseBlockEffectiveness * (1 + BlockEffectiveness/100), MaxBlockDamageReduction) </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8h_source.html#l00035">35</a> of file <a class="el" href="_d_t_combat_global_data_8h_source.html">DTCombatGlobalData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8h_source.html#l00048">48</a> of file <a class="el" href="_d_t_combat_global_data_8h_source.html">DTCombatGlobalData.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00010">GetBaseBlockEffectiveness()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00015">GetBaseBlockEffectiveness()</a>.</p>
 
 </div>
 </div>
@@ -283,9 +336,9 @@ Public Attributes</h2></td></tr>
 
 <p>Hard cap on total block damage reduction (0-1). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8h_source.html#l00039">39</a> of file <a class="el" href="_d_t_combat_global_data_8h_source.html">DTCombatGlobalData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_combat_global_data_8h_source.html#l00052">52</a> of file <a class="el" href="_d_t_combat_global_data_8h_source.html">DTCombatGlobalData.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00015">GetMaxBlockDamageReduction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_global_data_8cpp_source.html#l00020">GetMaxBlockDamageReduction()</a>.</p>
 
 </div>
 </div>

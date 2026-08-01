@@ -145,6 +145,8 @@ Classes</h2></td></tr>
 <tr class="memitem:FDTHostRequest" id="r_FDTHostRequest"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_d_t_host_request.html">FDTHostRequest</a></td></tr>
 <tr class="memitem:FAbilitySlotEntry" id="r_FAbilitySlotEntry"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_ability_slot_entry.html">FAbilitySlotEntry</a></td></tr>
 <tr class="memitem:FDeathSettings" id="r_FDeathSettings"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_death_settings.html">FDeathSettings</a></td></tr>
+<tr class="memitem:FDTDeathVisuals" id="r_FDTDeathVisuals"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_d_t_death_visuals.html">FDTDeathVisuals</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cosmetic on-death config.  <a href="struct_f_d_t_death_visuals.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -161,6 +163,12 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#af6531890d25f5670fbd04efb036ce235abaa1d5d7c2a65312fdc5577125de257a">SinglePlayer</a> = 1
 , <a class="el" href="#af6531890d25f5670fbd04efb036ce235a901a7320e77e54c4794bd577399eb0a6">Multiplayer</a> = 2
  }</td></tr>
+<tr class="memitem:a06f38e065ceb35cdd5f6d5970b888c07" id="r_a06f38e065ceb35cdd5f6d5970b888c07"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a06f38e065ceb35cdd5f6d5970b888c07">EDTHitDirection</a> : uint8 { <a class="el" href="#a06f38e065ceb35cdd5f6d5970b888c07a5835bab1ade0060909e31a06af2e2cde">Front</a>
+, <a class="el" href="#a06f38e065ceb35cdd5f6d5970b888c07a0557fa923dcee4d0f86b1409f5c2167f">Back</a>
+, <a class="el" href="#a06f38e065ceb35cdd5f6d5970b888c07a945d5e233cf7d6240f6b783b36a374ff">Left</a>
+, <a class="el" href="#a06f38e065ceb35cdd5f6d5970b888c07a92b09c7c48c520c3c55e497875da437c">Right</a>
+ }</td></tr>
+<tr class="memdesc:a06f38e065ceb35cdd5f6d5970b888c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quadrant a hit came from, relative to the target's facing (used for directional reactions).  <a href="#a06f38e065ceb35cdd5f6d5970b888c07">More...</a><br /></td></tr>
 <tr class="memitem:ac0f26f29f51535c69051d9b25fb532cd" id="r_ac0f26f29f51535c69051d9b25fb532cd"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ac0f26f29f51535c69051d9b25fb532cd">EDTHostMapSetupEntryPoint</a> : uint8 { <a class="el" href="#ac0f26f29f51535c69051d9b25fb532cda6df05f477a5a204f117aef389f8f4e78">LobbyHotkey</a>
 , <a class="el" href="#ac0f26f29f51535c69051d9b25fb532cdae60a168da09718b70e0470f3552d4ad9">StoryPortal</a>
 , <a class="el" href="#ac0f26f29f51535c69051d9b25fb532cdafca17837ae1938c426617abe977b8c8f">EndgamePortal</a>
@@ -190,6 +198,38 @@ Variables</h2></td></tr>
 <tr class="memitem:a06d407605bf826c67db5d80f2d117857" id="r_a06d407605bf826c67db5d80f2d117857"><td class="memItemLeft">const uint8&#160;</td><td class="memItemRight"><a class="el" href="#a06d407605bf826c67db5d80f2d117857">DT_TEAM_ENEMY</a> = 2</td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="a06f38e065ceb35cdd5f6d5970b888c07" name="a06f38e065ceb35cdd5f6d5970b888c07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f38e065ceb35cdd5f6d5970b888c07">&#9670;&#160;</a></span>EDTHitDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a06f38e065ceb35cdd5f6d5970b888c07">EDTHitDirection</a> : uint8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Quadrant a hit came from, relative to the target's facing (used for directional reactions). </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06f38e065ceb35cdd5f6d5970b888c07a5835bab1ade0060909e31a06af2e2cde" name="a06f38e065ceb35cdd5f6d5970b888c07a5835bab1ade0060909e31a06af2e2cde"></a>Front&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06f38e065ceb35cdd5f6d5970b888c07a0557fa923dcee4d0f86b1409f5c2167f" name="a06f38e065ceb35cdd5f6d5970b888c07a0557fa923dcee4d0f86b1409f5c2167f"></a>Back&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06f38e065ceb35cdd5f6d5970b888c07a945d5e233cf7d6240f6b783b36a374ff" name="a06f38e065ceb35cdd5f6d5970b888c07a945d5e233cf7d6240f6b783b36a374ff"></a>Left&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06f38e065ceb35cdd5f6d5970b888c07a92b09c7c48c520c3c55e497875da437c" name="a06f38e065ceb35cdd5f6d5970b888c07a92b09c7c48c520c3c55e497875da437c"></a>Right&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00038">38</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
+
+</div>
+</div>
 <a id="ac0f26f29f51535c69051d9b25fb532cd" name="ac0f26f29f51535c69051d9b25fb532cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac0f26f29f51535c69051d9b25fb532cd">&#9670;&#160;</a></span>EDTHostMapSetupEntryPoint</h2>
 
@@ -215,7 +255,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="ac0f26f29f51535c69051d9b25fb532cdafca17837ae1938c426617abe977b8c8f" name="ac0f26f29f51535c69051d9b25fb532cdafca17837ae1938c426617abe977b8c8f"></a>EndgamePortal&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00035">35</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00047">47</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
 
 </div>
 </div>
@@ -244,7 +284,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="aa24b09d7095e570d437c7052b9b1d4aca1b4b16ae294b41580302d0090a902233" name="aa24b09d7095e570d437c7052b9b1d4aca1b4b16ae294b41580302d0090a902233"></a>Endgame&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00043">43</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00055">55</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
 
 </div>
 </div>
@@ -272,7 +312,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a7b047a2c4990193536d894496859ff4ea3c6af21da136bfabc347f0c980ae6b3a" name="a7b047a2c4990193536d894496859ff4ea3c6af21da136bfabc347f0c980ae6b3a"></a>NearAliveTeammate&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00051">51</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00063">63</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
 
 </div>
 </div>
@@ -301,7 +341,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="af6531890d25f5670fbd04efb036ce235a901a7320e77e54c4794bd577399eb0a6" name="af6531890d25f5670fbd04efb036ce235a901a7320e77e54c4794bd577399eb0a6"></a>Multiplayer&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00027">27</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00029">29</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
 
 </div>
 </div>
@@ -333,7 +373,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="af6588843e9a4e70fc77c80a404ee306fadc647eb65e6711e155375218212b3964" name="af6588843e9a4e70fc77c80a404ee306fadc647eb65e6711e155375218212b3964"></a>Password&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00059">59</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00071">71</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
 
 </div>
 </div>
@@ -364,7 +404,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a8be04c76107eed9910dabb87e1d0befba4bbb8f967da6d1a610596d7257179c2b" name="a8be04c76107eed9910dabb87e1d0befba4bbb8f967da6d1a610596d7257179c2b"></a>Invalid&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00017">17</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00019">19</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
 
 </div>
 </div>
@@ -381,7 +421,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00014">14</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00016">16</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
 
 </div>
 </div>
@@ -397,7 +437,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00012">12</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00014">14</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
 
 </div>
 </div>
@@ -413,9 +453,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00013">13</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_data_types_8h_source.html#l00015">15</a> of file <a class="el" href="_data_types_8h_source.html">DataTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00030">ADTPlayerCharacter::ADTPlayerCharacter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00032">ADTPlayerCharacter::ADTPlayerCharacter()</a>.</p>
 
 </div>
 </div>

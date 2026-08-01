@@ -12,7 +12,6 @@ var struct_f_loot_context =
     [ "MinItemStackCount", "struct_f_loot_context.html#ae33cc43b8333f7ff015136e0e19428ba", null ],
     [ "MinLootRolls", "struct_f_loot_context.html#ac7f0a565338cba991c3b98396a0ccd5a", null ],
     [ "OwningPlayer", "struct_f_loot_context.html#ac05e02c0e1fd0ab5e7bdfbb59318fb3e", null ],
-    [ "PreGeneratedLoot", "struct_f_loot_context.html#a00801a23be87631b46e90a5ae65a14fc", null ],
     [ "RequestorTags", "struct_f_loot_context.html#a1945a1cc38f21296d8895a6d3d7df931", null ],
     [ "SeedOverride", "struct_f_loot_context.html#ad2c54798715f483f8b68683fa32ff357", null ],
     [ "SpawnTransform", "struct_f_loot_context.html#abd48f599203b6d24aa5800c75a273379", null ]

@@ -19,6 +19,6 @@ var class_u_d_t_skill_tree_node_definition =
     [ "PassiveEffectClass", "class_u_d_t_skill_tree_node_definition.html#abb0ed0e436cfccd9aaf75c39f1f5d821", null ],
     [ "PointsPerRank", "class_u_d_t_skill_tree_node_definition.html#a49591b1b54886affb8e5d019dfa2ee30", null ],
     [ "PrerequisiteNodeTags", "class_u_d_t_skill_tree_node_definition.html#abe3c9d4f88802ad8104febe5b275e433", null ],
-    [ "TooltipValues", "class_u_d_t_skill_tree_node_definition.html#ae06bcb4becb87bb7bc5f48676f140f74", null ],
+    [ "TooltipValues", "class_u_d_t_skill_tree_node_definition.html#a9d1d3078ebdadb773b4375f1073c2c06", null ],
     [ "UnlockPointsRequired", "class_u_d_t_skill_tree_node_definition.html#a293060950da3a621182209e8bd6c10a5", null ]
 ];

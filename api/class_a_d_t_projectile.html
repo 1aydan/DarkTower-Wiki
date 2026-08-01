@@ -175,6 +175,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a6eebd57379bb80b7bca33b777edd5e3d" id="r_a6eebd57379bb80b7bca33b777edd5e3d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a6eebd57379bb80b7bca33b777edd5e3d">DamageScalar</a> = 1.0f</td></tr>
 <tr class="memitem:a846a66537a816aab4f62c7f3bb387bc6" id="r_a846a66537a816aab4f62c7f3bb387bc6"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a846a66537a816aab4f62c7f3bb387bc6">AOERadius</a> = 500.0f</td></tr>
 <tr class="memitem:a44716b476fed7d278914ce2574df084f" id="r_a44716b476fed7d278914ce2574df084f"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#a44716b476fed7d278914ce2574df084f">DamageTypeTag</a></td></tr>
+<tr class="memitem:a7bb8354f62f43f933e075550da21246c" id="r_a7bb8354f62f43f933e075550da21246c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a7bb8354f62f43f933e075550da21246c">HitReactMagnitude</a> = 0.25f</td></tr>
+<tr class="memitem:a0248dbe3e99eedad0123ad90c91f8e7f" id="r_a0248dbe3e99eedad0123ad90c91f8e7f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0248dbe3e99eedad0123ad90c91f8e7f">KnockbackMagnitude</a> = 0.0f</td></tr>
+<tr class="memdesc:a0248dbe3e99eedad0123ad90c91f8e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw root-motion knockback force of this projectile (0 = none, ~300 = small pushback, ~800 = solid shove).  <br /></td></tr>
 <tr class="memitem:ad2594d9d6bcffdddeef2f04293dc5ceb" id="r_ad2594d9d6bcffdddeef2f04293dc5ceb"><td class="memItemLeft">FGameplayAttribute&#160;</td><td class="memItemRight"><a class="el" href="#ad2594d9d6bcffdddeef2f04293dc5ceb">DamageAttribute</a></td></tr>
 <tr class="memitem:a78064bd42ab4226b46bdcd2fdc555a6d" id="r_a78064bd42ab4226b46bdcd2fdc555a6d"><td class="memItemLeft">FOnProjectileHit&#160;</td><td class="memItemRight"><a class="el" href="#a78064bd42ab4226b46bdcd2fdc555a6d">OnProjectileHit</a></td></tr>
 <tr class="memdesc:a78064bd42ab4226b46bdcd2fdc555a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when projectile hits something.  <br /></td></tr>
@@ -236,9 +239,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00020">20</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00152">CollisionComponent</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00158">MeshComponent</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00161">NiagaraComponent</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00155">ProjectileMovementComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00159">CollisionComponent</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00165">MeshComponent</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00168">NiagaraComponent</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00162">ProjectileMovementComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00051">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00443">SpawnProjectile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00051">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00448">SpawnProjectile()</a>.</p>
 
 </div>
 </div>
@@ -268,7 +271,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00293">293</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8cpp_source.html#l00293">ApplyGameplayEffectsToTarget()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00090">EffectLevel</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00087">HitEffects</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00164">SourceASC</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8cpp_source.html#l00293">ApplyGameplayEffectsToTarget()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00090">EffectLevel</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00087">HitEffects</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00171">SourceASC</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00293">ApplyGameplayEffectsToTarget()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>.</p>
 
@@ -330,7 +333,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00058">58</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00152">CollisionComponent</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00186">HandleProjectileHit()</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00175">SpawnTime</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00159">CollisionComponent</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00186">HandleProjectileHit()</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00182">SpawnTime</a>.</p>
 
 </div>
 </div>
@@ -390,7 +393,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00077">77</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00116">ImpactGameplayCueTag</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00164">SourceASC</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00123">ImpactGameplayCueTag</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00171">SourceASC</a>.</p>
 
 </div>
 </div>
@@ -446,11 +449,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00145">145</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00152">152</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00170">CurrentPenetrationCount</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00145">GetCurrentPenetrationCount()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00177">CurrentPenetrationCount</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00152">GetCurrentPenetrationCount()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8h_source.html#l00145">GetCurrentPenetrationCount()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8h_source.html#l00152">GetCurrentPenetrationCount()</a>.</p>
 
 </div>
 </div>
@@ -477,11 +480,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00148">148</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00155">155</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00148">GetHitActors()</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00167">HitActors</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00155">GetHitActors()</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00174">HitActors</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8h_source.html#l00148">GetHitActors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8h_source.html#l00155">GetHitActors()</a>.</p>
 
 </div>
 </div>
@@ -510,7 +513,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00051">51</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8cpp_source.html#l00020">ADTProjectile()</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00173">ReplicatedSpawnData</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8cpp_source.html#l00020">ADTProjectile()</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00180">ReplicatedSpawnData</a>.</p>
 
 </div>
 </div>
@@ -533,7 +536,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00174">174</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00093">BaseDamage</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00105">DamageAttribute</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00096">DamageScalar</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00164">SourceASC</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00093">BaseDamage</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00112">DamageAttribute</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00096">DamageScalar</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00171">SourceASC</a>.</p>
 
 </div>
 </div>
@@ -560,11 +563,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00138">138</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00145">145</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00138">GetSourceAbilitySystemComponent()</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00164">SourceASC</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00145">GetSourceAbilitySystemComponent()</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00171">SourceASC</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8h_source.html#l00138">GetSourceAbilitySystemComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8h_source.html#l00145">GetSourceAbilitySystemComponent()</a>.</p>
 
 </div>
 </div>
@@ -667,7 +670,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">201</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00099">AOERadius</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00293">ApplyGameplayEffectsToTarget()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00123">bDebug</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00075">bDestroyOnHit</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00081">bPenetrate</a>, <a class="el" href="#a19d8e0658e25d93c762f1340f324e233">CanHitActor()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00170">CurrentPenetrationCount</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00200">UDTTeamSubsystem::GetAllEnemies()</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00167">HitActors</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00033">FTeamQueryParams::MaxDistance</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00084">MaxPenetrationCount</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00109">OnProjectileHit</a>, <a class="el" href="#a65e8255f8d03e3c0353f90286a97addb">OnSuccessfulHit()</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00049">FTeamQueryParams::OverrideLocation</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00099">AOERadius</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00293">ApplyGameplayEffectsToTarget()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00130">bDebug</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00075">bDestroyOnHit</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00081">bPenetrate</a>, <a class="el" href="#a19d8e0658e25d93c762f1340f324e233">CanHitActor()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00177">CurrentPenetrationCount</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00220">UDTTeamSubsystem::GetAllEnemies()</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00174">HitActors</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00033">FTeamQueryParams::MaxDistance</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00084">MaxPenetrationCount</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00116">OnProjectileHit</a>, <a class="el" href="#a65e8255f8d03e3c0353f90286a97addb">OnSuccessfulHit()</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00049">FTeamQueryParams::OverrideLocation</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00058">BeginPlay()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>.</p>
 
@@ -707,9 +710,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00109">109</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00105">DamageAttribute</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00043">FProjectileSpawnData::DamageAttributeOverride</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00096">DamageScalar</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00034">FProjectileSpawnData::DamageScalar</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00028">FProjectileSpawnData::Direction</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00173">ReplicatedSpawnData</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00129">SetProjectileDirection()</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00164">SourceASC</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00112">DamageAttribute</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00043">FProjectileSpawnData::DamageAttributeOverride</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00096">DamageScalar</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00034">FProjectileSpawnData::DamageScalar</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00028">FProjectileSpawnData::Direction</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00180">ReplicatedSpawnData</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00129">SetProjectileDirection()</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00171">SourceASC</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00443">SpawnProjectile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00448">SpawnProjectile()</a>.</p>
 
 </div>
 </div>
@@ -769,7 +772,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00336">336</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00173">ReplicatedSpawnData</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00129">SetProjectileDirection()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00180">ReplicatedSpawnData</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00129">SetProjectileDirection()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#ab13a0f7470d64f62e64a5346c90278da">OnProjectileDestroy()</a>.</p>
 
@@ -835,7 +838,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00129">129</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00155">ProjectileMovementComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_projectile_8h_source.html#l00162">ProjectileMovementComponent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00109">InitializeProjectile()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00336">OnRep_SpawnData()</a>.</p>
 
@@ -873,7 +876,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00443">443</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8cpp_source.html#l00448">448</a> of file <a class="el" href="_d_t_projectile_8cpp_source.html">DTProjectile.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_projectile_8cpp_source.html#l00020">ADTProjectile()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00046">FProjectileSpawnData::bAutoInitialize</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00109">InitializeProjectile()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00037">FProjectileSpawnData::Instigator</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00025">FProjectileSpawnData::Location</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00040">FProjectileSpawnData::SourceASC</a>, and <a class="el" href="_d_t_projectile_8h_source.html#l00031">FProjectileSpawnData::SpawnTime</a>.</p>
 
@@ -959,7 +962,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Projectile Debugging. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00123">123</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00130">130</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>.</p>
 
@@ -1057,7 +1060,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00152">152</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00159">159</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00020">ADTProjectile()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00058">BeginPlay()</a>.</p>
 
@@ -1083,9 +1086,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00170">170</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00177">177</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8h_source.html#l00145">GetCurrentPenetrationCount()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8h_source.html#l00152">GetCurrentPenetrationCount()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>.</p>
 
 </div>
 </div>
@@ -1101,7 +1104,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00105">105</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00112">112</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00174">GetProjectileDamage()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00109">InitializeProjectile()</a>.</p>
 
@@ -1215,9 +1218,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00167">167</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00174">174</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8h_source.html#l00148">GetHitActors()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8h_source.html#l00155">GetHitActors()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>.</p>
 
 </div>
 </div>
@@ -1239,6 +1242,22 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a7bb8354f62f43f933e075550da21246c" name="a7bb8354f62f43f933e075550da21246c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bb8354f62f43f933e075550da21246c">&#9670;&#160;</a></span>HitReactMagnitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADTProjectile::HitReactMagnitude = 0.25f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00105">105</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+
+</div>
+</div>
 <a id="a147f6cff52170fcd1504411a8150c221" name="a147f6cff52170fcd1504411a8150c221"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a147f6cff52170fcd1504411a8150c221">&#9670;&#160;</a></span>ImpactGameplayCueTag</h2>
 
@@ -1251,9 +1270,28 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00116">116</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00123">123</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00077">Destroyed()</a>.</p>
+
+</div>
+</div>
+<a id="a0248dbe3e99eedad0123ad90c91f8e7f" name="a0248dbe3e99eedad0123ad90c91f8e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0248dbe3e99eedad0123ad90c91f8e7f">&#9670;&#160;</a></span>KnockbackMagnitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADTProjectile::KnockbackMagnitude = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Raw root-motion knockback force of this projectile (0 = none, ~300 = small pushback, ~800 = solid shove). </p>
+<p>Independent of the react tier — pushes even without stunning. Target data may remap/cap it. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00109">109</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 </div>
 </div>
@@ -1295,7 +1333,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00158">158</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00165">165</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00020">ADTProjectile()</a>.</p>
 
@@ -1321,7 +1359,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00161">161</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00168">168</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00020">ADTProjectile()</a>.</p>
 
@@ -1341,7 +1379,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Called when projectile is destroyed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00113">113</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00120">120</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 </div>
 </div>
@@ -1359,7 +1397,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Called when projectile hits something. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00109">109</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00116">116</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">HandleProjectileOverlap()</a>.</p>
 
@@ -1377,7 +1415,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00119">119</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00126">126</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 </div>
 </div>
@@ -1401,7 +1439,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00155">155</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00162">162</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00020">ADTProjectile()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00129">SetProjectileDirection()</a>.</p>
 
@@ -1427,7 +1465,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00173">173</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00180">180</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00051">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00109">InitializeProjectile()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00336">OnRep_SpawnData()</a>.</p>
 
@@ -1453,9 +1491,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00164">164</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00171">171</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00293">ApplyGameplayEffectsToTarget()</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00077">Destroyed()</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00174">GetProjectileDamage()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00138">GetSourceAbilitySystemComponent()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00109">InitializeProjectile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00293">ApplyGameplayEffectsToTarget()</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00077">Destroyed()</a>, <a class="el" href="_d_t_projectile_8cpp_source.html#l00174">GetProjectileDamage()</a>, <a class="el" href="_d_t_projectile_8h_source.html#l00145">GetSourceAbilitySystemComponent()</a>, and <a class="el" href="_d_t_projectile_8cpp_source.html#l00109">InitializeProjectile()</a>.</p>
 
 </div>
 </div>
@@ -1479,7 +1517,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00175">175</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_projectile_8h_source.html#l00182">182</a> of file <a class="el" href="_d_t_projectile_8h_source.html">DTProjectile.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00058">BeginPlay()</a>.</p>
 

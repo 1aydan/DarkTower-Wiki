@@ -20,5 +20,6 @@ var class_u_d_t_hud_widget =
     [ "LootCanvas", "class_u_d_t_hud_widget.html#a20dad048405afa86c6980776fcda191d", null ],
     [ "PB_XP", "class_u_d_t_hud_widget.html#a57645235a4d6fd50e01c75b112a22835", null ],
     [ "TXT_DungeonLives", "class_u_d_t_hud_widget.html#a4fe61a72f5cd60b08973f5f01736ab3c", null ],
-    [ "TXT_DungeonSettings", "class_u_d_t_hud_widget.html#a2f4aaa3e362dbd7b74e79df086f582ee", null ]
+    [ "TXT_DungeonSettings", "class_u_d_t_hud_widget.html#a2f4aaa3e362dbd7b74e79df086f582ee", null ],
+    [ "WBP_PlayerDamaged", "class_u_d_t_hud_widget.html#a942d8a9ad6eba661bd297f2aa66cf508", null ]
 ];

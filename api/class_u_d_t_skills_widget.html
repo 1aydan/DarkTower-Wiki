@@ -163,6 +163,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7798a1e89c1737f1eebc336023cb65b9" id="r_a7798a1e89c1737f1eebc336023cb65b9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a7798a1e89c1737f1eebc336023cb65b9">NativeOnActivated</a> () override</td></tr>
 <tr class="memitem:a2c58a182f32b2664bad5bb8d59dce879" id="r_a2c58a182f32b2664bad5bb8d59dce879"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2c58a182f32b2664bad5bb8d59dce879">NativeOnDeactivated</a> () override</td></tr>
 <tr class="memitem:a04e314395972616daa4b2c8913101dd9" id="r_a04e314395972616daa4b2c8913101dd9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a04e314395972616daa4b2c8913101dd9">OnAbilitySystemInitialized</a> () override</td></tr>
+<tr class="memitem:ac241f2346844cb2ea86d242ee5c30c21" id="r_ac241f2346844cb2ea86d242ee5c30c21"><td class="memItemLeft"><a class="el" href="class_u_d_t_skill_tree_panel_widget.html">UDTSkillTreePanelWidget</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac241f2346844cb2ea86d242ee5c30c21">GetActiveSkillTreePanel</a> () const</td></tr>
+<tr class="memdesc:ac241f2346844cb2ea86d242ee5c30c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">The skill tree panel shown in the active tab (falls back to the first panel).  <br /></td></tr>
 <tr class="memitem:a82e69cad18249dd3c6a46b394f3deb73" id="r_a82e69cad18249dd3c6a46b394f3deb73"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a82e69cad18249dd3c6a46b394f3deb73">RefreshSkills</a> ()</td></tr>
 <tr class="memdesc:a82e69cad18249dd3c6a46b394f3deb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh the skills display.  <br /></td></tr>
 <tr class="memitem:a1907b44147e71c9b172f342c93bc225d" id="r_a1907b44147e71c9b172f342c93bc225d"><td class="memItemLeft"><a class="el" href="class_u_d_t_skill_tree_component.html">UDTSkillTreeComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1907b44147e71c9b172f342c93bc225d">GetSkillTreeComponent</a> () const</td></tr>
@@ -237,6 +239,35 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac241f2346844cb2ea86d242ee5c30c21" name="ac241f2346844cb2ea86d242ee5c30c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac241f2346844cb2ea86d242ee5c30c21">&#9670;&#160;</a></span>GetActiveSkillTreePanel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_skill_tree_panel_widget.html">UDTSkillTreePanelWidget</a> * UDTSkillsWidget::GetActiveSkillTreePanel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The skill tree panel shown in the active tab (falls back to the first panel). </p>
+
+<p class="reference">References <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00142">GetSkillTreeComponent()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00061">InitializeSkillTreePanels()</a>, and <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00117">RefreshSkills()</a>.</p>
+
+</div>
+</div>
 <a id="a1907b44147e71c9b172f342c93bc225d" name="a1907b44147e71c9b172f342c93bc225d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1907b44147e71c9b172f342c93bc225d">&#9670;&#160;</a></span>GetSkillTreeComponent()</h2>
 
@@ -264,9 +295,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00142">142</a> of file <a class="el" href="_d_t_skills_widget_8cpp_source.html">DTSkillsWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_state_8h_source.html#l00069">ADTPlayerState::GetSkillTreeComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_state_8h_source.html#l00071">ADTPlayerState::GetSkillTreeComponent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00061">InitializeSkillTreePanels()</a>, and <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00040">NativeOnDeactivated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ac241f2346844cb2ea86d242ee5c30c21">GetActiveSkillTreePanel()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00061">InitializeSkillTreePanels()</a>, and <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00040">NativeOnDeactivated()</a>.</p>
 
 </div>
 </div>
@@ -402,9 +433,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00061">61</a> of file <a class="el" href="_d_t_skills_widget_8cpp_source.html">DTSkillsWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skills_widget_8h_source.html#l00063">CAS_SkillContent</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00046">FTabEntryInfo::CreatedTabContentWidget</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00351">UDTSkillTreeComponent::GetAvailableSkillPoints()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00042">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00142">GetSkillTreeComponent()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00367">UDTSkillTreeComponent::GetTotalSkillPoints()</a>, <a class="el" href="_d_t_skill_tree_component_8h_source.html#l00107">UDTSkillTreeComponent::GetTreeInstances()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00137">HandleSkillPointsChanged()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00133">HandleSkillTabContentCreated()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00128">HandleSkillTabSelected()</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00034">FTabEntryInfo::IconBrush</a>, <a class="el" href="_d_t_skill_tree_component_8h_source.html#l00041">UDTSkillTreeComponent::OnSkillPointsChanged</a>, <a class="el" href="#a91d601ebf9adf86aca2739033591d82c">OnSkillPointsUpdated()</a>, <a class="el" href="_d_t_skill_tree_panel_widget_8cpp_source.html#l00087">UDTSkillTreePanelWidget::SetSkillTree()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00035">UDTGlobalData::SkillTreeGlobalData</a>, <a class="el" href="_d_t_skills_widget_8h_source.html#l00080">SkillTreePanels</a>, <a class="el" href="_d_t_skills_widget_8h_source.html#l00067">SkillTreePanelWidgetClass</a>, <a class="el" href="_d_t_skills_widget_8h_source.html#l00071">SkillTreeTabButtonClass</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00040">FTabEntryInfo::TabButtonType</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00028">FTabEntryInfo::TabId</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00031">FTabEntryInfo::TabText</a>, <a class="el" href="_d_t_skills_widget_8h_source.html#l00059">TLW_SkillTabs</a>, <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00032">UDTSkillTreeDefinition::TreeIcon</a>, and <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00024">UDTSkillTreeDefinition::TreeName</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skills_widget_8h_source.html#l00066">CAS_SkillContent</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00046">FTabEntryInfo::CreatedTabContentWidget</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00356">UDTSkillTreeComponent::GetAvailableSkillPoints()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00142">GetSkillTreeComponent()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00372">UDTSkillTreeComponent::GetTotalSkillPoints()</a>, <a class="el" href="_d_t_skill_tree_component_8h_source.html#l00107">UDTSkillTreeComponent::GetTreeInstances()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00137">HandleSkillPointsChanged()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00133">HandleSkillTabContentCreated()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00128">HandleSkillTabSelected()</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00034">FTabEntryInfo::IconBrush</a>, <a class="el" href="_d_t_skill_tree_component_8h_source.html#l00041">UDTSkillTreeComponent::OnSkillPointsChanged</a>, <a class="el" href="#a91d601ebf9adf86aca2739033591d82c">OnSkillPointsUpdated()</a>, <a class="el" href="_d_t_skill_tree_panel_widget_8cpp_source.html#l00087">UDTSkillTreePanelWidget::SetSkillTree()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00035">UDTGlobalData::SkillTreeGlobalData</a>, <a class="el" href="_d_t_skills_widget_8h_source.html#l00083">SkillTreePanels</a>, <a class="el" href="_d_t_skills_widget_8h_source.html#l00070">SkillTreePanelWidgetClass</a>, <a class="el" href="_d_t_skills_widget_8h_source.html#l00074">SkillTreeTabButtonClass</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00040">FTabEntryInfo::TabButtonType</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00028">FTabEntryInfo::TabId</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00031">FTabEntryInfo::TabText</a>, <a class="el" href="_d_t_skills_widget_8h_source.html#l00062">TLW_SkillTabs</a>, <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00032">UDTSkillTreeDefinition::TreeIcon</a>, and <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00024">UDTSkillTreeDefinition::TreeName</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00032">NativeOnActivated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ac241f2346844cb2ea86d242ee5c30c21">GetActiveSkillTreePanel()</a>, and <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00032">NativeOnActivated()</a>.</p>
 
 </div>
 </div>
@@ -464,7 +495,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00040">40</a> of file <a class="el" href="_d_t_skills_widget_8cpp_source.html">DTSkillsWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00142">GetSkillTreeComponent()</a>, and <a class="el" href="_d_t_skills_widget_8h_source.html#l00059">TLW_SkillTabs</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00142">GetSkillTreeComponent()</a>, and <a class="el" href="_d_t_skills_widget_8h_source.html#l00062">TLW_SkillTabs</a>.</p>
 
 </div>
 </div>
@@ -493,7 +524,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00023">23</a> of file <a class="el" href="_d_t_skills_widget_8cpp_source.html">DTSkillsWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skills_widget_8h_source.html#l00076">AB_AbilityBar</a>, <a class="el" href="_d_t_skills_widget_8h_source.html#l00063">CAS_SkillContent</a>, and <a class="el" href="_d_t_skills_widget_8h_source.html#l00059">TLW_SkillTabs</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skills_widget_8h_source.html#l00079">AB_AbilityBar</a>, <a class="el" href="_d_t_skills_widget_8h_source.html#l00066">CAS_SkillContent</a>, and <a class="el" href="_d_t_skills_widget_8h_source.html#l00062">TLW_SkillTabs</a>.</p>
 
 </div>
 </div>
@@ -619,9 +650,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00117">117</a> of file <a class="el" href="_d_t_skills_widget_8cpp_source.html">DTSkillsWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skills_widget_8h_source.html#l00080">SkillTreePanels</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skills_widget_8h_source.html#l00083">SkillTreePanels</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00032">NativeOnActivated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ac241f2346844cb2ea86d242ee5c30c21">GetActiveSkillTreePanel()</a>, and <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00032">NativeOnActivated()</a>.</p>
 
 </div>
 </div>
@@ -649,7 +680,7 @@ Protected Attributes</h2></td></tr>
 <p>Spell loadout editor — the per-weapon-set spell bar (with the bar-swap toggle) that skill-tree spells are dragged onto. </p>
 <p>Set the BP-bound AB_AbilityBar to a <a class="el" href="class_u_d_t_spell_loadout_widget.html" title="Loadout (skill-tree/assignment) screen for spells.">UDTSpellLoadoutWidget</a> subclass. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00076">76</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00079">79</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00023">NativeOnInitialized()</a>.</p>
 
@@ -677,7 +708,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Animated switcher linked to the tab list � holds one skill tree panel per tab. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00063">63</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00066">66</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00061">InitializeSkillTreePanels()</a>, and <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00023">NativeOnInitialized()</a>.</p>
 
@@ -705,7 +736,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Created skill tree panel instances (one per tab). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00083">83</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00061">InitializeSkillTreePanels()</a>, and <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00117">RefreshSkills()</a>.</p>
 
@@ -733,7 +764,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Widget class for skill tree panels (content created per tab). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00067">67</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00070">70</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00061">InitializeSkillTreePanels()</a>.</p>
 
@@ -761,7 +792,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Button class used for each skill tree tab (must be a CommonButtonBase subclass). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00074">74</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00061">InitializeSkillTreePanels()</a>.</p>
 
@@ -790,7 +821,7 @@ Protected Attributes</h2></td></tr>
 <p>Tab list widget � each skill tree is a tab. </p>
 <p>L1/R1 or keyboard keys cycle between them. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00059">59</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skills_widget_8h_source.html#l00062">62</a> of file <a class="el" href="_d_t_skills_widget_8h_source.html">DTSkillsWidget.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00061">InitializeSkillTreePanels()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00040">NativeOnDeactivated()</a>, and <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00023">NativeOnInitialized()</a>.</p>
 

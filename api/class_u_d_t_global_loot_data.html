@@ -153,7 +153,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5116dc07c6b98c0b4216b03698654088" id="r_a5116dc07c6b98c0b4216b03698654088"><td class="memItemLeft">UDataTable *&#160;</td><td class="memItemRight"><a class="el" href="#a5116dc07c6b98c0b4216b03698654088">GetBaseStatTableForEquipmentType</a> (FGameplayTag EquipmentTypeTag)</td></tr>
 <tr class="memdesc:a5116dc07c6b98c0b4216b03698654088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the base stat data table for a given equipment type tag.  <br /></td></tr>
 <tr class="memitem:a44a37c7af27f30090c0c24a81ebd0b36" id="r_a44a37c7af27f30090c0c24a81ebd0b36"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a44a37c7af27f30090c0c24a81ebd0b36">GetBaseStatRow</a> (FGameplayTag StatTag, FGameplayTag EquipmentTypeTag, <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> &amp;OutRow) const</td></tr>
-<tr class="memdesc:a44a37c7af27f30090c0c24a81ebd0b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search base stat table for a stat row by stat tag.  <br /></td></tr>
+<tr class="memdesc:a44a37c7af27f30090c0c24a81ebd0b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search the item type's global stat table for a stat row by stat tag.  <br /></td></tr>
+<tr class="memitem:a12f4dbc621ab041a4ab776a27b30cd98" id="r_a12f4dbc621ab041a4ab776a27b30cd98"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a12f4dbc621ab041a4ab776a27b30cd98">GetBaseStatRowForItem</a> (FGameplayTag StatTag, const UInventoryItemDefinition *ItemDef, <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> &amp;OutRow) const</td></tr>
+<tr class="memdesc:a12f4dbc621ab041a4ab776a27b30cd98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a stat row for a specific item: searches the item's own stat tables (equipment fragment ItemStatTables) first, then the item type's global table.  <br /></td></tr>
+<tr class="memitem:a18ac0c382e20fef454912b43a6196e56" id="r_a18ac0c382e20fef454912b43a6196e56"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a18ac0c382e20fef454912b43a6196e56">GetStatTablesForItem</a> (const UInventoryItemDefinition *ItemDef, TArray&lt; UDataTable * &gt; &amp;OutTables) const</td></tr>
+<tr class="memdesc:a18ac0c382e20fef454912b43a6196e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collect the stat tables that feed an item's base-stat pool, in resolution priority order: the equipment fragment's ItemStatTables first, then the item type's global table (skipped when the fragment sets bIgnoreTypeStatTable).  <br /></td></tr>
 <tr class="memitem:a5ade8e954f4b9f2d715dc0e978c8e9fb" id="r_a5ade8e954f4b9f2d715dc0e978c8e9fb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ade8e954f4b9f2d715dc0e978c8e9fb">InvalidateStatRowCache</a> ()</td></tr>
 <tr class="memdesc:a5ade8e954f4b9f2d715dc0e978c8e9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate the cached base-stat row lookup.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -171,10 +175,10 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a7611f44dcb085baa2f9338896403e78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Diminishing return exponent for floors beyond soft cap.  <br /></td></tr>
 <tr class="memitem:a843c2e715313696396a0268419082190" id="r_a843c2e715313696396a0268419082190"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a843c2e715313696396a0268419082190">GlobalItemPowerScalingRate</a> = 150.0f</td></tr>
 <tr class="memdesc:a843c2e715313696396a0268419082190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls how fast ItemPower approaches 1.  <br /></td></tr>
-<tr class="memitem:abcdda7d822dae45b740fd163e5ed04c2" id="r_abcdda7d822dae45b740fd163e5ed04c2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#abcdda7d822dae45b740fd163e5ed04c2">MinItemPower</a> = 0.02f</td></tr>
-<tr class="memdesc:abcdda7d822dae45b740fd163e5ed04c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Built-in minimum ItemPower at floor 0 (ensures items always have some base power).  <br /></td></tr>
+<tr class="memitem:abcdda7d822dae45b740fd163e5ed04c2" id="r_abcdda7d822dae45b740fd163e5ed04c2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#abcdda7d822dae45b740fd163e5ed04c2">MinItemPower</a> = 0.01f</td></tr>
+<tr class="memdesc:abcdda7d822dae45b740fd163e5ed04c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Built-in minimum ItemPower at floor 0 (sets the baseline power/headroom of the weakest gear).  <br /></td></tr>
 <tr class="memitem:a72f3696f7f5ce7b541bdff64185637a0" id="r_a72f3696f7f5ce7b541bdff64185637a0"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a72f3696f7f5ce7b541bdff64185637a0">MinStatScale</a> = 0.7f</td></tr>
-<tr class="memdesc:a72f3696f7f5ce7b541bdff64185637a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bottom of the base-stat roll window as a fraction of the floor-appropriate ceiling (ScaledMin = ScaledMax * MinStatScale).  <br /></td></tr>
+<tr class="memdesc:a72f3696f7f5ce7b541bdff64185637a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bottom of the base-stat roll window as a fraction of the ItemPower-scaled range.  <br /></td></tr>
 <tr class="memitem:a34835ba54ca049d7b0d4c35e22345f76" id="r_a34835ba54ca049d7b0d4c35e22345f76"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a34835ba54ca049d7b0d4c35e22345f76">GlobalRollScalar</a> = 1.0f</td></tr>
 <tr class="memdesc:a34835ba54ca049d7b0d4c35e22345f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls randomness distribution for stat rolls.  <br /></td></tr>
 <tr class="memitem:a73e6e467769db2a7846dc713ab2d15b2" id="r_a73e6e467769db2a7846dc713ab2d15b2"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a73e6e467769db2a7846dc713ab2d15b2">AffixTierCount</a> = 10</td></tr>
@@ -185,6 +189,10 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a0f028830294dd804c3be8c62308c0e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floors over which the tier odds shift upward (depth flattens the falloff so higher tiers get likelier).  <br /></td></tr>
 <tr class="memitem:ac9bcef44b8cdd1e845a02ff9af5b91da" id="r_ac9bcef44b8cdd1e845a02ff9af5b91da"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ac9bcef44b8cdd1e845a02ff9af5b91da">MaxFloorPressure</a> = 0.8f</td></tr>
 <tr class="memdesc:ac9bcef44b8cdd1e845a02ff9af5b91da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cap (0-1) on how much depth flattens the curve.  <br /></td></tr>
+<tr class="memitem:a186cdf89ec87571ff718e754ebcfe068" id="r_a186cdf89ec87571ff718e754ebcfe068"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a186cdf89ec87571ff718e754ebcfe068">GlobalAffixPowerScalingRate</a> = 90.0f</td></tr>
+<tr class="memdesc:a186cdf89ec87571ff718e754ebcfe068"><td class="mdescLeft">&#160;</td><td class="mdescRight">How fast affix magnitude (AffixPower) approaches 1, independent of the base-stat ItemPower curve.  <br /></td></tr>
+<tr class="memitem:a0c98483f6ad18642f579a55ede942bae" id="r_a0c98483f6ad18642f579a55ede942bae"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0c98483f6ad18642f579a55ede942bae">MinAffixPower</a> = 0.4f</td></tr>
+<tr class="memdesc:a0c98483f6ad18642f579a55ede942bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Built-in minimum AffixPower at floor 0.  <br /></td></tr>
 <tr class="memitem:aa5d1701b2eeb7afca700bbf8503d0e33" id="r_aa5d1701b2eeb7afca700bbf8503d0e33"><td class="memItemLeft">TMap&lt; FGameplayTag, float &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa5d1701b2eeb7afca700bbf8503d0e33">GlobalEnemyTierScalingMap</a></td></tr>
 <tr class="memdesc:aa5d1701b2eeb7afca700bbf8503d0e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">LootBonus contribution per enemy tier tag (feeds FinalLootBudget: drop quantity + rarity weighting).  <br /></td></tr>
 <tr class="memitem:a1d9aaf87992945b05e0acf48ec0b7e7c" id="r_a1d9aaf87992945b05e0acf48ec0b7e7c"><td class="memItemLeft">TMap&lt; FGameplayTag, float &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1d9aaf87992945b05e0acf48ec0b7e7c">GlobalChestTierScalingMap</a></td></tr>
@@ -215,7 +223,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Global loot data asset for Dark Tower. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00019">19</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00020">20</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad8cdbe07147cd6e387071826c74779ad" name="ad8cdbe07147cd6e387071826c74779ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8cdbe07147cd6e387071826c74779ad">&#9670;&#160;</a></span>UDTGlobalLootData()</h2>
@@ -232,9 +240,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00009">9</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00011">11</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00100">GlobalChestTierScalingMap</a>, and <a class="el" href="_d_t_global_loot_data_8h_source.html#l00096">GlobalEnemyTierScalingMap</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00115">GlobalChestTierScalingMap</a>, and <a class="el" href="_d_t_global_loot_data_8h_source.html#l00111">GlobalEnemyTierScalingMap</a>.</p>
 
 </div>
 </div>
@@ -263,20 +271,63 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Search base stat table for a stat row by stat tag. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Search the item type's global stat table for a stat row by stat tag. </p>
+<p>Prefer GetBaseStatRowForItem wherever the item definition is available - it also searches the item's own ItemStatTables (equipment fragment). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">StatTag</td><td>The stat tag to search for </td></tr>
-    <tr><td class="paramname">EquipmentTypeTag</td><td>The equipment type tag to identify which table to search (e.g., Item.Type.Weapon.Sword). If empty, searches all tables. </td></tr>
+    <tr><td class="paramname">EquipmentTypeTag</td><td>The equipment type tag identifying which table to search (e.g., Item.Type.Weapon.Sword) </td></tr>
     <tr><td class="paramname">OutRow</td><td>The found stat row (output parameter) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if found, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00095">95</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00090">90</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00127">FDTEquipmentStatHelper::CollectAllStats()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00037">BaseStatTableMap</a>.</p>
+
+</div>
+</div>
+<a id="a12f4dbc621ab041a4ab776a27b30cd98" name="a12f4dbc621ab041a4ab776a27b30cd98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12f4dbc621ab041a4ab776a27b30cd98">&#9670;&#160;</a></span>GetBaseStatRowForItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTGlobalLootData::GetBaseStatRowForItem </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>StatTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const UInventoryItemDefinition *</td>          <td class="paramname"><span class="paramname"><em>ItemDef</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>OutRow</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resolve a stat row for a specific item: searches the item's own stat tables (equipment fragment ItemStatTables) first, then the item type's global table. </p>
+<p>This is the canonical resolver for rolled item stats - use it wherever the item definition is available. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">StatTag</td><td>The stat tag to search for </td></tr>
+    <tr><td class="paramname">ItemDef</td><td>The item definition whose stat tables should be searched </td></tr>
+    <tr><td class="paramname">OutRow</td><td>The found stat row (output parameter) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if found, false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00148">148</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00113">GetStatTablesForItem()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00136">FDTEquipmentStatHelper::CollectAllStats()</a>.</p>
 
 </div>
 </div>
@@ -304,9 +355,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The corresponding base stat data table, or nullptr if not found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00046">46</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00048">48</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00036">BaseStatTableMap</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00037">BaseStatTableMap</a>.</p>
 
 </div>
 </div>
@@ -334,9 +385,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Affix config for that rarity, or default (0 affixes) if not found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00026">26</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00028">28</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00028">LootRarityDataMap</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00029">LootRarityDataMap</a>.</p>
 
 </div>
 </div>
@@ -364,11 +415,47 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Rarity data, or default if not found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00036">36</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00038">38</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00028">LootRarityDataMap</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00029">LootRarityDataMap</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00176">UDTLootSubsystem::CalculateItemValue()</a>.</p>
+
+</div>
+</div>
+<a id="a18ac0c382e20fef454912b43a6196e56" name="a18ac0c382e20fef454912b43a6196e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ac0c382e20fef454912b43a6196e56">&#9670;&#160;</a></span>GetStatTablesForItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGlobalLootData::GetStatTablesForItem </td>
+          <td>(</td>
+          <td class="paramtype">const UInventoryItemDefinition *</td>          <td class="paramname"><span class="paramname"><em>ItemDef</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TArray&lt; UDataTable * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>OutTables</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Collect the stat tables that feed an item's base-stat pool, in resolution priority order: the equipment fragment's ItemStatTables first, then the item type's global table (skipped when the fragment sets bIgnoreTypeStatTable). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ItemDef</td><td>The item definition to collect tables for </td></tr>
+    <tr><td class="paramname">OutTables</td><td>Valid stat tables in priority order </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00113">113</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00037">BaseStatTableMap</a>, <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00040">UDTInventoryItemFragment_Equipment::bIgnoreTypeStatTable</a>, and <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00036">UDTInventoryItemFragment_Equipment::ItemStatTables</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00148">GetBaseStatRowForItem()</a>.</p>
 
 </div>
 </div>
@@ -388,9 +475,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Invalidate the cached base-stat row lookup. </p>
-<p>Call after data tables change (e.g. editor reimport). The cache is rebuilt lazily on the next GetBaseStatRow call. </p>
+<p>Call after data tables change (e.g. editor reimport). Per-table caches are rebuilt lazily on the next lookup. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00056">56</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00058">58</a> of file <a class="el" href="_d_t_global_loot_data_8cpp_source.html">DTGlobalLootData.cpp</a>.</p>
 
 </div>
 </div>
@@ -446,7 +533,7 @@ Public Attributes</h2></td></tr>
 
 <p>Base item level at floor 1. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00124">124</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00139">139</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -462,9 +549,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00036">36</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00037">37</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00046">GetBaseStatTableForEquipmentType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00090">GetBaseStatRow()</a>, <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00048">GetBaseStatTableForEquipmentType()</a>, and <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00113">GetStatTablesForItem()</a>.</p>
 
 </div>
 </div>
@@ -501,7 +588,7 @@ Public Attributes</h2></td></tr>
 
 <p>Base value per item level for calculating item worth. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00120">120</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00135">135</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00176">UDTLootSubsystem::CalculateItemValue()</a>.</p>
 
@@ -519,7 +606,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00048">48</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00049">49</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -535,7 +622,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00032">32</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00033">33</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -551,7 +638,26 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00040">40</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00041">41</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+
+</div>
+</div>
+<a id="a186cdf89ec87571ff718e754ebcfe068" name="a186cdf89ec87571ff718e754ebcfe068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a186cdf89ec87571ff718e754ebcfe068">&#9670;&#160;</a></span>GlobalAffixPowerScalingRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTGlobalLootData::GlobalAffixPowerScalingRate = 90.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>How fast affix magnitude (AffixPower) approaches 1, independent of the base-stat ItemPower curve. </p>
+<p>Splitting the rates lets affix strength and base-stat strength ramp on different schedules. Smaller = affixes reach full strength sooner. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00100">100</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -569,9 +675,9 @@ Public Attributes</h2></td></tr>
 
 <p>LootBonus contribution per chest tier tag (feeds FinalLootBudget: drop quantity + rarity weighting). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00100">100</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00115">115</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00009">UDTGlobalLootData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00011">UDTGlobalLootData()</a>.</p>
 
 </div>
 </div>
@@ -589,9 +695,9 @@ Public Attributes</h2></td></tr>
 
 <p>LootBonus contribution per enemy tier tag (feeds FinalLootBudget: drop quantity + rarity weighting). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00096">96</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00111">111</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00009">UDTGlobalLootData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00011">UDTGlobalLootData()</a>.</p>
 
 </div>
 </div>
@@ -610,7 +716,7 @@ Public Attributes</h2></td></tr>
 <p>Diminishing return exponent for floors beyond soft cap. </p>
 <p>Lower = stronger compression </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00056">56</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00057">57</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -628,7 +734,7 @@ Public Attributes</h2></td></tr>
 
 <p>The floor value at which diminishing returns begin. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00052">52</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00053">53</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -647,7 +753,7 @@ Public Attributes</h2></td></tr>
 <p>Controls how fast ItemPower approaches 1. </p>
 <p>Smaller = faster early progression </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00060">60</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00061">61</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -663,7 +769,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00044">44</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00045">45</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -681,7 +787,7 @@ Public Attributes</h2></td></tr>
 
 <p>Scales how many extra loot rolls each floor of budget grants (ExtraLootRolls = Floor * FinalLootBudget * this). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00112">112</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00127">127</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -718,7 +824,7 @@ Public Attributes</h2></td></tr>
 
 <p>Item level gained per effective floor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00128">128</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00143">143</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -736,7 +842,7 @@ Public Attributes</h2></td></tr>
 
 <p>Ratio to convert item level to level requirement. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00140">140</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00155">155</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -755,7 +861,7 @@ Public Attributes</h2></td></tr>
 <p>Controls how fast LootBudget approaches 1. </p>
 <p>Smaller = faster growth in drop quantity/rarity </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00108">108</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00123">123</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -771,9 +877,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00028">28</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00029">29</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00026">GetRarityAffixConfig()</a>, and <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00036">GetRarityData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00028">GetRarityAffixConfig()</a>, and <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00038">GetRarityData()</a>.</p>
 
 </div>
 </div>
@@ -791,7 +897,7 @@ Public Attributes</h2></td></tr>
 
 <p>Maximum character level cap. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00136">136</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00151">151</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -809,7 +915,7 @@ Public Attributes</h2></td></tr>
 
 <p>Hard cap on the number of extra loot rolls the loot budget can grant (safety against runaway quantity). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00116">116</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00131">131</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -832,6 +938,25 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0c98483f6ad18642f579a55ede942bae" name="a0c98483f6ad18642f579a55ede942bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c98483f6ad18642f579a55ede942bae">&#9670;&#160;</a></span>MinAffixPower</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTGlobalLootData::MinAffixPower = 0.4f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Built-in minimum AffixPower at floor 0. </p>
+<p>Floors affix magnitude so rolling a high tier still feels rewarding early, instead of being crushed toward zero by low-floor scaling (the double-suppression fix). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00107">107</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+
+</div>
+</div>
 <a id="abcdda7d822dae45b740fd163e5ed04c2" name="abcdda7d822dae45b740fd163e5ed04c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abcdda7d822dae45b740fd163e5ed04c2">&#9670;&#160;</a></span>MinItemPower</h2>
 
@@ -839,14 +964,14 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float UDTGlobalLootData::MinItemPower = 0.02f</td>
+          <td class="memname">float UDTGlobalLootData::MinItemPower = 0.01f</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Built-in minimum ItemPower at floor 0 (ensures items always have some base power). </p>
+<p>Built-in minimum ItemPower at floor 0 (sets the baseline power/headroom of the weakest gear). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00064">64</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00065">65</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -864,7 +989,7 @@ Public Attributes</h2></td></tr>
 
 <p>Minimum level requirement for any item. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00144">144</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00159">159</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -882,7 +1007,7 @@ Public Attributes</h2></td></tr>
 
 <p>Built-in minimum loot budget at floor 0. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00104">104</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00119">119</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>
@@ -898,8 +1023,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Bottom of the base-stat roll window as a fraction of the floor-appropriate ceiling (ScaledMin = ScaledMax * MinStatScale). </p>
-<p>Higher = tighter base-stat variance among same-floor drops; lower = wider spread. e.g. 0.7 -&gt; deep-floor rolls stay within ~1.4x of each other. </p>
+<p>Bottom of the base-stat roll window as a fraction of the ItemPower-scaled range. </p>
+<p>Higher = tighter base-stat variance among same-floor drops; lower = wider spread. e.g. 0.7 -&gt; deep rolls stay within ~1.4x. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00072">72</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
@@ -919,7 +1044,7 @@ Public Attributes</h2></td></tr>
 
 <p>How much each point of total stats contributes to item level. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00132">132</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_global_loot_data_8h_source.html#l00147">147</a> of file <a class="el" href="_d_t_global_loot_data_8h_source.html">DTGlobalLootData.h</a>.</p>
 
 </div>
 </div>

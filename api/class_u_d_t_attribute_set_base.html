@@ -142,8 +142,8 @@ Inheritance diagram for UDTAttributeSetBase:</div>
  <div class="center">
   <img src="class_u_d_t_attribute_set_base.png" usemap="#UDTAttributeSetBase_map" alt=""/>
   <map id="UDTAttributeSetBase_map" name="UDTAttributeSetBase_map">
-<area href="class_u_d_t_attribute_set.html" title="Main Attribute Set class for Dark Tower." alt="UDTAttributeSet" shape="rect" coords="0,112,139,136"/>
-<area href="class_u_d_t_actor_attribute_set.html" title="Base Attribute Set class for ability actors since they are lazy loaded." alt="UDTActorAttributeSet" shape="rect" coords="0,168,139,192"/>
+<area href="class_u_d_t_attribute_set.html" title="Main Attribute Set class for Dark Tower." alt="UDTAttributeSet" shape="rect" coords="0,112,132,136"/>
+<area href="class_u_d_t_actor_attribute_set.html" title="Base Attribute Set class for ability actors since they are lazy loaded." alt="UDTActorAttributeSet" shape="rect" coords="0,168,132,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -151,11 +151,34 @@ Inheritance diagram for UDTAttributeSetBase:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa72cd6ba058f7023fcb711304cbd54e2" id="r_aa72cd6ba058f7023fcb711304cbd54e2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa72cd6ba058f7023fcb711304cbd54e2">UDTAttributeSetBase</a> ()</td></tr>
 <tr class="memitem:a04b24a6ab1773da13068dd996ee5c9dd" id="r_a04b24a6ab1773da13068dd996ee5c9dd"><td class="memItemLeft"><a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a04b24a6ab1773da13068dd996ee5c9dd">GetDTAbilitySystemComponent</a> () const</td></tr>
+<tr class="memitem:a1a73097f7c1cfcc90abd8537691c0fdc" id="r_a1a73097f7c1cfcc90abd8537691c0fdc"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1a73097f7c1cfcc90abd8537691c0fdc">PreAttributeChange</a> (const FGameplayAttribute &amp;Attribute, float &amp;NewValue) override</td></tr>
+<tr class="memitem:a9d32dcb3568ac856908c052f1c2fce11" id="r_a9d32dcb3568ac856908c052f1c2fce11"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9d32dcb3568ac856908c052f1c2fce11">PostGameplayEffectExecute</a> (const FGameplayEffectModCallbackData &amp;Data) override</td></tr>
+<tr class="memitem:a26b61740d2e5b4d7a67345606ba918fd" id="r_a26b61740d2e5b4d7a67345606ba918fd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a26b61740d2e5b4d7a67345606ba918fd">GetLifetimeReplicatedProps</a> (TArray&lt; FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
+<tr class="memitem:a7cab2a262c061c74e63a94416c03a935" id="r_a7cab2a262c061c74e63a94416c03a935"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#a7cab2a262c061c74e63a94416c03a935">GetClampMinimumValueFor</a> (const FGameplayAttribute &amp;Attribute)</td></tr>
+<tr class="memdesc:a7cab2a262c061c74e63a94416c03a935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to get the minimum clamp value for a given attribute.  <br /></td></tr>
+<tr class="memitem:a9d092d41caf4cd358e2f231a115661ca" id="r_a9d092d41caf4cd358e2f231a115661ca"><td class="memItemLeft">virtual const FGameplayTagContainer &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9d092d41caf4cd358e2f231a115661ca">GetSourceTagsFromContext</a> (const FGameplayEffectModCallbackData &amp;Data)</td></tr>
+<tr class="memdesc:a9d092d41caf4cd358e2f231a115661ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the aggregated SourceTags for this EffectSpec.  <br /></td></tr>
+<tr class="memitem:a83d7ee1108a27152a616a2ea0984c749" id="r_a83d7ee1108a27152a616a2ea0984c749"><td class="memTemplParams" colspan="2">template&lt;class TReturnType&gt; </td></tr>
+<tr class="memitem:a83d7ee1108a27152a616a2ea0984c749 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a83d7ee1108a27152a616a2ea0984c749">GetSourceAndTargetFromContext</a> (const FGameplayEffectModCallbackData &amp;Data, TReturnType *&amp;SourceActor, TReturnType *&amp;TargetActor)</td></tr>
+<tr class="memdesc:a83d7ee1108a27152a616a2ea0984c749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts Source and Target actors from the mod callback data.  <br /></td></tr>
+<tr class="memitem:aff866eb6109a6fe402b435d8bbf576c3" id="r_aff866eb6109a6fe402b435d8bbf576c3"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aff866eb6109a6fe402b435d8bbf576c3">AdjustAttributeForMaxChange</a> (FGameplayAttributeData &amp;AffectedAttribute, const FGameplayAttributeData &amp;MaxAttribute, float NewMaxValue, const FGameplayAttribute &amp;AffectedAttributeProperty) const</td></tr>
+<tr class="memdesc:aff866eb6109a6fe402b435d8bbf576c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to proportionally adjust the value of an attribute when its associated max attribute changes.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a52af4df98ddf6ccab9da556b0f194a25" id="r_a52af4df98ddf6ccab9da556b0f194a25"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a52af4df98ddf6ccab9da556b0f194a25">GetExecutionDataFromMod</a> (const FGameplayEffectModCallbackData &amp;Data, OUT <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;OutExecutionData)</td></tr>
+<tr class="memdesc:a52af4df98ddf6ccab9da556b0f194a25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills out an <a class="el" href="struct_f_d_t_attribute_set_execution_data.html" title="Structure holding various information to deal with AttributeSet PostGameplayEffectExecute,...">FDTAttributeSetExecutionData</a> structure based on provided mod callback data.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-static-methods" class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a3776894b93435d81e28e6a8db766cc76" id="r_a3776894b93435d81e28e6a8db766cc76"><td class="memItemLeft">static <a class="el" href="class_u_d_t_ability_core_component.html">UDTAbilityCoreComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3776894b93435d81e28e6a8db766cc76">GetCoreComponent</a> (const AActor *Actor)</td></tr>
+<tr class="memdesc:a3776894b93435d81e28e6a8db766cc76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_u_d_t_ability_core_component.html" title="The per-actor GAS hub for Dark Tower.">UDTAbilityCoreComponent</a> of an actor, if it has one.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base Attribute Set class for Dark Tower. </p>
+<p>Does not hold any Gameplay Attribute but provides the shared plumbing: forwarding Pre/PostGameplayEffectExecute to the owner's <a class="el" href="class_u_d_t_ability_core_component.html" title="The per-actor GAS hub for Dark Tower.">UDTAbilityCoreComponent</a>, execution-data extraction, clamping helpers and max-attribute adjustment. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00036">36</a> of file <a class="el" href="_d_t_attribute_set_base_8h_source.html">DTAttributeSetBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00113">113</a> of file <a class="el" href="_d_t_attribute_set_base_8h_source.html">DTAttributeSetBase.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa72cd6ba058f7023fcb711304cbd54e2" name="aa72cd6ba058f7023fcb711304cbd54e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa72cd6ba058f7023fcb711304cbd54e2">&#9670;&#160;</a></span>UDTAttributeSetBase()</h2>
@@ -172,11 +195,120 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00007">7</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00012">12</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aff866eb6109a6fe402b435d8bbf576c3" name="aff866eb6109a6fe402b435d8bbf576c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff866eb6109a6fe402b435d8bbf576c3">&#9670;&#160;</a></span>AdjustAttributeForMaxChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAttributeSetBase::AdjustAttributeForMaxChange </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayAttributeData &amp;</td>          <td class="paramname"><span class="paramname"><em>AffectedAttribute</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayAttributeData &amp;</td>          <td class="paramname"><span class="paramname"><em>MaxAttribute</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>NewMaxValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayAttribute &amp;</td>          <td class="paramname"><span class="paramname"><em>AffectedAttributeProperty</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper function to proportionally adjust the value of an attribute when its associated max attribute changes. </p>
+<p>(e.g. When MaxHealth increases, Health increases by an amount that maintains the same percentage as before) </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00073">73</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00691">UDTAbilityCoreComponent::AdjustAttributeForMaxChange()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00092">UDTAttributeSet::PreAttributeChange()</a>.</p>
+
+</div>
+</div>
+<a id="a7cab2a262c061c74e63a94416c03a935" name="a7cab2a262c061c74e63a94416c03a935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cab2a262c061c74e63a94416c03a935">&#9670;&#160;</a></span>GetClampMinimumValueFor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAttributeSetBase::GetClampMinimumValueFor </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayAttribute &amp;</td>          <td class="paramname"><span class="paramname"><em>Attribute</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper function to get the minimum clamp value for a given attribute. </p>
+<p>Subclasses are expected to override this. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00062">62</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00483">UDTAttributeSet::HandleDamageAttribute()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00560">UDTAttributeSet::HandleHealthAttribute()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00575">UDTAttributeSet::HandleManaAttribute()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00596">UDTAttributeSet::HandleShieldAttribute()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00721">UDTAbilityCoreComponent::PostGameplayEffectExecute()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00469">UDTAttributeSet::SetAttributeClamped()</a>.</p>
+
+</div>
+</div>
+<a id="a3776894b93435d81e28e6a8db766cc76" name="a3776894b93435d81e28e6a8db766cc76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3776894b93435d81e28e6a8db766cc76">&#9670;&#160;</a></span>GetCoreComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_ability_core_component.html">UDTAbilityCoreComponent</a> * UDTAttributeSetBase::GetCoreComponent </td>
+          <td>(</td>
+          <td class="paramtype">const AActor *</td>          <td class="paramname"><span class="paramname"><em>Actor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the <a class="el" href="class_u_d_t_ability_core_component.html" title="The per-actor GAS hub for Dark Tower.">UDTAbilityCoreComponent</a> of an actor, if it has one. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00140">140</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00094">GetExecutionDataFromMod()</a>, <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00043">PostGameplayEffectExecute()</a>, and <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00021">PreAttributeChange()</a>.</p>
+
+</div>
+</div>
 <a id="a04b24a6ab1773da13068dd996ee5c9dd" name="a04b24a6ab1773da13068dd996ee5c9dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04b24a6ab1773da13068dd996ee5c9dd">&#9670;&#160;</a></span>GetDTAbilitySystemComponent()</h2>
 
@@ -192,7 +324,221 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00011">11</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00016">16</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a52af4df98ddf6ccab9da556b0f194a25" name="a52af4df98ddf6ccab9da556b0f194a25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52af4df98ddf6ccab9da556b0f194a25">&#9670;&#160;</a></span>GetExecutionDataFromMod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAttributeSetBase::GetExecutionDataFromMod </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayEffectModCallbackData &amp;</td>          <td class="paramname"><span class="paramname"><em>Data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OUT <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>OutExecutionData</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fills out an <a class="el" href="struct_f_d_t_attribute_set_execution_data.html" title="Structure holding various information to deal with AttributeSet PostGameplayEffectExecute,...">FDTAttributeSetExecutionData</a> structure based on provided mod callback data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Data</td><td>The gameplay effect mod callback data available in attribute sets' PostGameplayEffectExecute </td></tr>
+    <tr><td class="paramname">OutExecutionData</td><td>Returned structure with various information extracted from Data (Source / Target Actor, Controllers, etc.) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00094">94</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00063">FDTAttributeSetExecutionData::Context</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00072">FDTAttributeSetExecutionData::DeltaValue</a>, <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00140">GetCoreComponent()</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00024">FDTAttributeSetExecutionData::SourceActor</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00032">FDTAttributeSetExecutionData::SourceASC</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00044">FDTAttributeSetExecutionData::SourceController</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00036">FDTAttributeSetExecutionData::SourceCoreComponent</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00060">FDTAttributeSetExecutionData::SourceObject</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00052">FDTAttributeSetExecutionData::SourcePawn</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00066">FDTAttributeSetExecutionData::SourceTags</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00069">FDTAttributeSetExecutionData::SpecAssetTags</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00028">FDTAttributeSetExecutionData::TargetActor</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00048">FDTAttributeSetExecutionData::TargetController</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00040">FDTAttributeSetExecutionData::TargetCoreComponent</a>, and <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00056">FDTAttributeSetExecutionData::TargetPawn</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00220">UDTAttributeSet::PostGameplayEffectExecute()</a>.</p>
+
+</div>
+</div>
+<a id="a26b61740d2e5b4d7a67345606ba918fd" name="a26b61740d2e5b4d7a67345606ba918fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26b61740d2e5b4d7a67345606ba918fd">&#9670;&#160;</a></span>GetLifetimeReplicatedProps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAttributeSetBase::GetLifetimeReplicatedProps </td>
+          <td>(</td>
+          <td class="paramtype">TArray&lt; FLifetimeProperty &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>OutLifetimeProps</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_u_d_t_attribute_set.html#a0547cc6540a6df3744b34d1155833a3f">UDTAttributeSet</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00057">57</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a83d7ee1108a27152a616a2ea0984c749" name="a83d7ee1108a27152a616a2ea0984c749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83d7ee1108a27152a616a2ea0984c749">&#9670;&#160;</a></span>GetSourceAndTargetFromContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TReturnType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAttributeSetBase::GetSourceAndTargetFromContext </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayEffectModCallbackData &amp;</td>          <td class="paramname"><span class="paramname"><em>Data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TReturnType *&amp;</td>          <td class="paramname"><span class="paramname"><em>SourceActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TReturnType *&amp;</td>          <td class="paramname"><span class="paramname"><em>TargetActor</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extracts Source and Target actors from the mod callback data. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00136">136</a> of file <a class="el" href="_d_t_attribute_set_base_8h_source.html">DTAttributeSetBase.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_combat_modifier_8h_source.html#l00015">Source</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00721">UDTAbilityCoreComponent::PostGameplayEffectExecute()</a>, and <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00043">PostGameplayEffectExecute()</a>.</p>
+
+</div>
+</div>
+<a id="a9d092d41caf4cd358e2f231a115661ca" name="a9d092d41caf4cd358e2f231a115661ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d092d41caf4cd358e2f231a115661ca">&#9670;&#160;</a></span>GetSourceTagsFromContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const FGameplayTagContainer &amp; UDTAttributeSetBase::GetSourceTagsFromContext </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayEffectModCallbackData &amp;</td>          <td class="paramname"><span class="paramname"><em>Data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the aggregated SourceTags for this EffectSpec. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00068">68</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00721">UDTAbilityCoreComponent::PostGameplayEffectExecute()</a>.</p>
+
+</div>
+</div>
+<a id="a9d32dcb3568ac856908c052f1c2fce11" name="a9d32dcb3568ac856908c052f1c2fce11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d32dcb3568ac856908c052f1c2fce11">&#9670;&#160;</a></span>PostGameplayEffectExecute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAttributeSetBase::PostGameplayEffectExecute </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayEffectModCallbackData &amp;</td>          <td class="paramname"><span class="paramname"><em>Data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_u_d_t_attribute_set.html#a22f9bc7c9499ed4038b32cd01909bc67">UDTAttributeSet</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00043">43</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00140">GetCoreComponent()</a>, and <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00136">GetSourceAndTargetFromContext()</a>.</p>
+
+</div>
+</div>
+<a id="a1a73097f7c1cfcc90abd8537691c0fdc" name="a1a73097f7c1cfcc90abd8537691c0fdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a73097f7c1cfcc90abd8537691c0fdc">&#9670;&#160;</a></span>PreAttributeChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAttributeSetBase::PreAttributeChange </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayAttribute &amp;</td>          <td class="paramname"><span class="paramname"><em>Attribute</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>NewValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_u_d_t_attribute_set.html#a41d0421ec644956008d5308d99657f26">UDTAttributeSet</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00021">21</a> of file <a class="el" href="_d_t_attribute_set_base_8cpp_source.html">DTAttributeSetBase.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, and <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00140">GetCoreComponent()</a>.</p>
 
 </div>
 </div>

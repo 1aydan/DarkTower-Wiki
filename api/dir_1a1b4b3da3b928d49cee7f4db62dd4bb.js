@@ -13,6 +13,7 @@ var dir_1a1b4b3da3b928d49cee7f4db62dd4bb =
     [ "DTQuestLogWidget.cpp", "_d_t_quest_log_widget_8cpp.html", null ],
     [ "DTSessionBrowserWidget.cpp", "_d_t_session_browser_widget_8cpp.html", null ],
     [ "DTSettingScreen.cpp", "_d_t_setting_screen_8cpp.html", null ],
+    [ "DTShaderCompileWidget.cpp", "_d_t_shader_compile_widget_8cpp.html", null ],
     [ "DTSkillsWidget.cpp", "_d_t_skills_widget_8cpp.html", null ],
     [ "DTSpellBookWidget.cpp", "_d_t_spell_book_widget_8cpp.html", null ]
 ];

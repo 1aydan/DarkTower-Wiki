@@ -136,13 +136,55 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_a_i_chara
 <code>#include &quot;SkeletalMeshComponentBudgeted.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_a_i_controller_8h_source.html">AI/DTAIController.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_state_tree_a_i_component_8h_source.html">AI/StateTree/DTStateTreeAIComponent.h</a>&quot;</code><br />
+<code>#include &quot;Components/MeshComponent.h&quot;</code><br />
 <code>#include &quot;Components/SkeletalMeshComponent.h&quot;</code><br />
 <code>#include &quot;Components/GameFrameworkComponentManager.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_log_channels_8h_source.html">Core/DTLogChannels.h</a>&quot;</code><br />
+<code>#include &quot;Curves/CurveFloat.h&quot;</code><br />
+<code>#include &quot;Engine/World.h&quot;</code><br />
+<code>#include &quot;Materials/MaterialInstanceDynamic.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_game_settings_8h_source.html">Settings/DTGameSettings.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_a_i_subsystem_8h_source.html">Systems/DTAISubsystem.h</a>&quot;</code><br />
+<code>#include &quot;TimerManager.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_d_t_targeting_component_8h_source.html">Targeting/DTTargetingComponent.h</a>&quot;</code><br />
 </div>
 <p><a href="_d_t_a_i_character_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a3264a66bdcb841ecf32edc03f5a3a520" id="r_a3264a66bdcb841ecf32edc03f5a3a520"><td class="memItemLeft">static constexpr float&#160;</td><td class="memItemRight"><a class="el" href="#a3264a66bdcb841ecf32edc03f5a3a520">GDeathDissolveUpdateInterval</a> = 1.0f / 60.0f</td></tr>
+<tr class="memdesc:a3264a66bdcb841ecf32edc03f5a3a520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dissolve refresh rate.  <br /></td></tr>
+</table>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a3264a66bdcb841ecf32edc03f5a3a520" name="a3264a66bdcb841ecf32edc03f5a3a520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3264a66bdcb841ecf32edc03f5a3a520">&#9670;&#160;</a></span>GDeathDissolveUpdateInterval</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GDeathDissolveUpdateInterval = 1.0f / 60.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dissolve refresh rate. </p>
+<p>Timer-driven so it runs independently of actor tick / significance. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00022">22</a> of file <a class="el" href="_d_t_a_i_character_8cpp_source.html">DTAICharacter.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00130">ADTAICharacter::StartDeathDissolve()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

@@ -13,6 +13,7 @@ var dir_2247c9e1bf1f513f25452c5ab7056ad6 =
     [ "DTQuestLogWidget.h", "_d_t_quest_log_widget_8h.html", "_d_t_quest_log_widget_8h" ],
     [ "DTSessionBrowserWidget.h", "_d_t_session_browser_widget_8h.html", "_d_t_session_browser_widget_8h" ],
     [ "DTSettingScreen.h", "_d_t_setting_screen_8h.html", "_d_t_setting_screen_8h" ],
+    [ "DTShaderCompileWidget.h", "_d_t_shader_compile_widget_8h.html", "_d_t_shader_compile_widget_8h" ],
     [ "DTSkillsWidget.h", "_d_t_skills_widget_8h.html", "_d_t_skills_widget_8h" ],
     [ "DTSpellBookWidget.h", "_d_t_spell_book_widget_8h.html", "_d_t_spell_book_widget_8h" ]
 ];

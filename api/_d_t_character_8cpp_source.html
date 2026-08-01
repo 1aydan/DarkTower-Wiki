@@ -151,306 +151,344 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_character
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    PrimaryActorTick.bCanEverTick = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    PrimaryActorTick.bStartWithTickEnabled = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_variable" href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">AbilityCoreComponent</a> = CreateDefaultSubobject&lt;UDTAbilityCoreComponent&gt;(TEXT(<span class="stringliteral">&quot;AbilityCoreComponent&quot;</span>));</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a> = CreateDefaultSubobject&lt;UDTPawnExtensionComponent&gt;(TEXT(<span class="stringliteral">&quot;PawnExtensionComponent&quot;</span>));</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
-</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a010e5af9ec635960a76ad08944102a6f">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a010e5af9ec635960a76ad08944102a6f">ADTCharacter::GetLifetimeReplicatedProps</a>(TArray&lt;class FLifetimeProperty&gt;&amp; OutLifetimeProps)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    Super::GetLifetimeReplicatedProps(OutLifetimeProps);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    DOREPLIFETIME(<a class="code hl_function" href="class_a_d_t_character.html#a31d82a1866632360f41ba4e02947d9fb">ADTCharacter</a>, <a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment">// Single ASC-ready hook for all DT characters. The base adds the default identity tags; subclasses</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="comment">// override HandleAbilitySystemInitialized (calling Super) for archetype setup like enemy scaling.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>-&gt;OnAbilitySystemInitialized_RegisterAndCall(FSimpleMulticastDelegate::FDelegate::CreateUObject(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_a_d_t_character.html#adabf79a86df1816c929a312f7f5e8738">ADTCharacter::HandleAbilitySystemInitialized</a>));</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
 </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a0aaea4cfce74e376cd9dfae73752e07e">   32</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_d_t_character.html#a0aaea4cfce74e376cd9dfae73752e07e">ADTCharacter::IsDead_Implementation</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a010e5af9ec635960a76ad08944102a6f">   32</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a010e5af9ec635960a76ad08944102a6f">ADTCharacter::GetLifetimeReplicatedProps</a>(TArray&lt;class FLifetimeProperty&gt;&amp; OutLifetimeProps)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">AbilityCoreComponent</a>)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        UE_LOG(LogDT, Verbose, TEXT(<span class="stringliteral">&quot;ADTCharacter::IsDead called but AbilityCoreComponent is null on %s&quot;</span>), *GetName());</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">return</span> !<a class="code hl_variable" href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">AbilityCoreComponent</a>-&gt;IsAlive();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    Super::GetLifetimeReplicatedProps(OutLifetimeProps);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    DOREPLIFETIME(<a class="code hl_function" href="class_a_d_t_character.html#a31d82a1866632360f41ba4e02947d9fb">ADTCharacter</a>, <a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
 </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a2ffcfb9bd4f2ac9fc5ff8617bea0656e">   43</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a2ffcfb9bd4f2ac9fc5ff8617bea0656e">ADTCharacter::SetGenericTeamId</a>(<span class="keyword">const</span> FGenericTeamId&amp; TeamID)</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        UE_LOG(LogDT, Warning, TEXT(<span class="stringliteral">&quot;ADTCharacter::SetGenericTeamId called on non-authority instance for %s&quot;</span>), *GetName());</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a> != TeamID)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a> = TeamID;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a6e218917de1d07ede417da116a5b0388">   39</a></span>UAnimMontage* <a class="code hl_function" href="class_a_d_t_character.html#a6e218917de1d07ede417da116a5b0388">ADTCharacter::GetHitReactMontage</a>(<span class="keyword">const</span> <a class="code hl_enumeration" href="_d_t_character_data_8h.html#aa04e94846bfcc66be0dba629403fcfec">EDTHitReactTier</a> Tier, <span class="keyword">const</span> <a class="code hl_enumeration" href="_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07">EDTHitDirection</a> Direction)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_d_t_character.html#ab9dbdef518e482af69d42271d4559fda">CharacterData</a> ? <a class="code hl_variable" href="class_a_d_t_character.html#ab9dbdef518e482af69d42271d4559fda">CharacterData</a>-&gt;GetHitReactMontage(Tier, Direction) : <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a0aaea4cfce74e376cd9dfae73752e07e">   44</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_d_t_character.html#a0aaea4cfce74e376cd9dfae73752e07e">ADTCharacter::IsDead_Implementation</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">AbilityCoreComponent</a>)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        UE_LOG(LogDT, Verbose, TEXT(<span class="stringliteral">&quot;ADTCharacter::IsDead called but AbilityCoreComponent is null on %s&quot;</span>), *GetName());</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> !<a class="code hl_variable" href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">AbilityCoreComponent</a>-&gt;IsAlive();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a8d83f13020df049969cff6855c04df8e">OnTeamChange</a>.IsBound())</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <a class="code hl_variable" href="class_a_d_t_character.html#a8d83f13020df049969cff6855c04df8e">OnTeamChange</a>.Broadcast(<a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>* TeamSubsystem = GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>&gt;();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span> (TeamSubsystem)</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            TeamSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_team_subsystem.html#a236b4567ea6c176f1c1acc1cf6bad9f6">UpdateActorTeam</a>(<span class="keyword">this</span>, <a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        UE_LOG(LogDT, Verbose, TEXT(<span class="stringliteral">&quot;ADTCharacter::SetGenericTeamId called but TeamId is already %d for %s&quot;</span>), TeamID.GetId(), *GetName());</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
-</div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a2ffcfb9bd4f2ac9fc5ff8617bea0656e">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a2ffcfb9bd4f2ac9fc5ff8617bea0656e">ADTCharacter::SetGenericTeamId</a>(<span class="keyword">const</span> FGenericTeamId&amp; TeamID)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">if</span> (!HasAuthority())</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        UE_LOG(LogDT, Warning, TEXT(<span class="stringliteral">&quot;ADTCharacter::SetGenericTeamId called on non-authority instance for %s&quot;</span>), *GetName());</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a> != TeamID)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a> = TeamID;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a8d83f13020df049969cff6855c04df8e">OnTeamChange</a>.IsBound())</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_variable" href="class_a_d_t_character.html#a8d83f13020df049969cff6855c04df8e">OnTeamChange</a>.Broadcast(<a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a12d84a720a75d2ce832bd9813683b666">   72</a></span>FGenericTeamId <a class="code hl_function" href="class_a_d_t_character.html#a12d84a720a75d2ce832bd9813683b666">ADTCharacter::GetGenericTeamId</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>* TeamSubsystem = GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>&gt;();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (TeamSubsystem)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            TeamSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_team_subsystem.html#a236b4567ea6c176f1c1acc1cf6bad9f6">UpdateActorTeam</a>(<span class="keyword">this</span>, <a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        UE_LOG(LogDT, Verbose, TEXT(<span class="stringliteral">&quot;ADTCharacter::SetGenericTeamId called but TeamId is already %d for %s&quot;</span>), TeamID.GetId(), *GetName());</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
 </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">   77</a></span>UAbilitySystemComponent* <a class="code hl_function" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">ADTCharacter::GetAbilitySystemComponent</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a12d84a720a75d2ce832bd9813683b666">   84</a></span>FGenericTeamId <a class="code hl_function" href="class_a_d_t_character.html#a12d84a720a75d2ce832bd9813683b666">ADTCharacter::GetGenericTeamId</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
 </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#aa39b1c37c059fca8ae84f4cd44d2dbc4">   82</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#aa39b1c37c059fca8ae84f4cd44d2dbc4">ADTCharacter::PreInitializeComponents</a>()</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>{</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    Super::PreInitializeComponents();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">AbilityCoreComponent</a>)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">AbilityCoreComponent</a>-&gt;OnDeath.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_a_d_t_character.html#ad0fde30a166e80072eae2936e0b9187e">ADTCharacter::HandleDeath</a>);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">   89</a></span>UAbilitySystemComponent* <a class="code hl_function" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">ADTCharacter::GetAbilitySystemComponent</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
 </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#af124710122d91fb3afc1786afac938aa">   92</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#af124710122d91fb3afc1786afac938aa">ADTCharacter::BeginPlay</a>()</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>{</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    Super::BeginPlay();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>* TeamSubsystem = GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>&gt;();</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">if</span> (TeamSubsystem)</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        TeamSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_team_subsystem.html#a447684742abbe1c9f7fa722b51327cbe">RegisterTeamMember</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_variable" href="class_a_d_t_character.html#ac95435e83f3ccf43976a7979c128cbd9">SpawnLocation</a> = GetActorLocation();</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#aa39b1c37c059fca8ae84f4cd44d2dbc4">   94</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#aa39b1c37c059fca8ae84f4cd44d2dbc4">ADTCharacter::PreInitializeComponents</a>()</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>{</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    Super::PreInitializeComponents();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">AbilityCoreComponent</a>)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">AbilityCoreComponent</a>-&gt;OnDeath.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_a_d_t_character.html#aa449457ea0c66a6e4e65baf4f39b37f9">ADTCharacter::HandleDeath</a>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
 </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a42352bdbb4371a8f46247be09df0c6d2">  105</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a42352bdbb4371a8f46247be09df0c6d2">ADTCharacter::EndPlay</a>(<span class="keyword">const</span> EEndPlayReason::Type EndPlayReason)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>{</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    Super::EndPlay(EndPlayReason);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>* TeamSubsystem = GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>&gt;();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (TeamSubsystem)</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        TeamSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_team_subsystem.html#ab866d233c3117a3680217112fe337d34">UnregisterTeamMember</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#af124710122d91fb3afc1786afac938aa">  104</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#af124710122d91fb3afc1786afac938aa">ADTCharacter::BeginPlay</a>()</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    Super::BeginPlay();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>* TeamSubsystem = GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>&gt;();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">if</span> (TeamSubsystem)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        TeamSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_team_subsystem.html#a447684742abbe1c9f7fa722b51327cbe">RegisterTeamMember</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_variable" href="class_a_d_t_character.html#ac95435e83f3ccf43976a7979c128cbd9">SpawnLocation</a> = GetActorLocation();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
 </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#abf6e1961b2bbd90b410a7387a2f26380">  116</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#abf6e1961b2bbd90b410a7387a2f26380">ADTCharacter::PostInitProperties</a>()</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>{</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    Super::PostInitProperties();</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
-</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a42352bdbb4371a8f46247be09df0c6d2">  117</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a42352bdbb4371a8f46247be09df0c6d2">ADTCharacter::EndPlay</a>(<span class="keyword">const</span> EEndPlayReason::Type EndPlayReason)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>{</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    Super::EndPlay(EndPlayReason);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a978389139df334910a27d82416ba405e">  121</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a978389139df334910a27d82416ba405e">ADTCharacter::PossessedBy</a>(AController* NewController)</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>{</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    Super::PossessedBy(NewController);</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>)</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>-&gt;HandleControllerChanged();</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>* TeamSubsystem = GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>&gt;();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">if</span> (TeamSubsystem)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        TeamSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_team_subsystem.html#ab866d233c3117a3680217112fe337d34">UnregisterTeamMember</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
 </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a6fd9c026cf9b6284f8dda1afd31cbf23">  131</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a6fd9c026cf9b6284f8dda1afd31cbf23">ADTCharacter::UnPossessed</a>()</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    Super::UnPossessed();</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>)</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    {</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>-&gt;HandleControllerChanged();</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#abf6e1961b2bbd90b410a7387a2f26380">  128</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#abf6e1961b2bbd90b410a7387a2f26380">ADTCharacter::PostInitProperties</a>()</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>{</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    Super::PostInitProperties();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
 </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a1b5984b1ba535db0d85498de5f92d831">  141</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a1b5984b1ba535db0d85498de5f92d831">ADTCharacter::GetOwnedGameplayTags</a>(FGameplayTagContainer&amp; OutTagContainer)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">if</span> (UAbilitySystemComponent* AbilitySystemComponent = <a class="code hl_function" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">GetAbilitySystemComponent</a>())</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    {</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        FGameplayTagContainer OwnedTags;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        AbilitySystemComponent-&gt;GetOwnedGameplayTags(OwnedTags);</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        OutTagContainer = MoveTemp(OwnedTags);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>}</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a978389139df334910a27d82416ba405e">  133</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a978389139df334910a27d82416ba405e">ADTCharacter::PossessedBy</a>(AController* NewController)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>{</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    Super::PossessedBy(NewController);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>)</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>-&gt;HandleControllerChanged();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>}</div>
 </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a7670bd7d9b1b138b8e568db8374c7fcb">  151</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_d_t_character.html#a7670bd7d9b1b138b8e568db8374c7fcb">ADTCharacter::HasMatchingGameplayTag</a>(<span class="keyword">const</span> FGameplayTag InTagToCheck)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">if</span> (UAbilitySystemComponent* AbilitySystemComponent = <a class="code hl_function" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">GetAbilitySystemComponent</a>())</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    {</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">return</span> AbilitySystemComponent-&gt;HasMatchingGameplayTag(InTagToCheck);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>}</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="}">
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a6fd9c026cf9b6284f8dda1afd31cbf23">  143</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a6fd9c026cf9b6284f8dda1afd31cbf23">ADTCharacter::UnPossessed</a>()</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>{</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    Super::UnPossessed();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>)</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>-&gt;HandleControllerChanged();</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
 </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="foldopen" id="foldopen00161" data-start="{" data-end="}">
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#abce55a527ca6530278cba5b5426c632c">  161</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_d_t_character.html#abce55a527ca6530278cba5b5426c632c">ADTCharacter::HasAllMatchingGameplayTags</a>(<span class="keyword">const</span> FGameplayTagContainer&amp; InTagContainer)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">if</span> (UAbilitySystemComponent* AbilitySystemComponent = <a class="code hl_function" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">GetAbilitySystemComponent</a>())</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">return</span> AbilitySystemComponent-&gt;HasAllMatchingGameplayTags(InTagContainer);</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>}</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a1b5984b1ba535db0d85498de5f92d831">  153</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a1b5984b1ba535db0d85498de5f92d831">ADTCharacter::GetOwnedGameplayTags</a>(FGameplayTagContainer&amp; OutTagContainer)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">if</span> (UAbilitySystemComponent* AbilitySystemComponent = <a class="code hl_function" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">GetAbilitySystemComponent</a>())</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        FGameplayTagContainer OwnedTags;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        AbilitySystemComponent-&gt;GetOwnedGameplayTags(OwnedTags);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        OutTagContainer = MoveTemp(OwnedTags);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>}</div>
 </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a4f0e8f4b1ab66529b276cd303de0be3d">  171</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_d_t_character.html#a4f0e8f4b1ab66529b276cd303de0be3d">ADTCharacter::HasAnyMatchingGameplayTags</a>(<span class="keyword">const</span> FGameplayTagContainer&amp; InTagContainer)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordflow">if</span> (UAbilitySystemComponent* AbilitySystemComponent = <a class="code hl_function" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">GetAbilitySystemComponent</a>())</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    {</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">return</span> AbilitySystemComponent-&gt;HasAnyMatchingGameplayTags(InTagContainer);</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a7670bd7d9b1b138b8e568db8374c7fcb">  163</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_d_t_character.html#a7670bd7d9b1b138b8e568db8374c7fcb">ADTCharacter::HasMatchingGameplayTag</a>(<span class="keyword">const</span> FGameplayTag InTagToCheck)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordflow">if</span> (UAbilitySystemComponent* AbilitySystemComponent = <a class="code hl_function" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">GetAbilitySystemComponent</a>())</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">return</span> AbilitySystemComponent-&gt;HasMatchingGameplayTag(InTagToCheck);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>}</div>
 </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="keywordtype">void</span> ADTCharacter::HandleDeath_Implementation()</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>{</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">if</span> (HasAuthority())</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    {</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a50646ae2ff885a6d130bf8da62f2f02a">DeathSettings</a>.<a class="code hl_variable" href="struct_f_death_settings.html#aea105bba7540c045df4ccdaaed26680e">DeathStatEvents</a>.Num() &gt; 0)</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        {</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            UStatSubsystem* StatSubsystem = GetWorld()-&gt;GetSubsystem&lt;UStatSubsystem&gt;();</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <span class="keywordflow">if</span> (StatSubsystem)</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            {</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                StatSubsystem-&gt;ProcessStatEvents(<a class="code hl_variable" href="class_a_d_t_character.html#a50646ae2ff885a6d130bf8da62f2f02a">DeathSettings</a>.<a class="code hl_variable" href="struct_f_death_settings.html#aea105bba7540c045df4ccdaaed26680e">DeathStatEvents</a>, GetController() ? GetController()-&gt;PlayerState : <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            }   </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        }</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    }</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    UGameplayMessageSubsystem&amp; MessageSubsystem = UGameplayMessageSubsystem::Get(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FGameplayTag&amp; DeathEvent : <a class="code hl_variable" href="class_a_d_t_character.html#a50646ae2ff885a6d130bf8da62f2f02a">DeathSettings</a>.DeathEvents)</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    {</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        FDTVerbMessage DeathMessage;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        DeathMessage.<a class="code hl_variable" href="struct_f_d_t_verb_message.html#a77f5d919cf3fdd0c88754cd1961658ee">Verb</a> = DeathEvent;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        DeathMessage.<a class="code hl_variable" href="struct_f_d_t_verb_message.html#a3c14f25ecf16adff2f05bbc214b9d7e5">Instigator</a> = <span class="keyword">this</span>;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        DeathMessage.<a class="code hl_variable" href="struct_f_d_t_verb_message.html#aeee09cae5a6104d665fb765664755cea">Target</a> = <span class="keyword">this</span>;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        DeathMessage.<a class="code hl_variable" href="struct_f_d_t_verb_message.html#a7964bd6a38300ef79a44646c80cdccb6">ContextTags</a> = <a class="code hl_variable" href="class_a_d_t_character.html#addc28c8657bf577abe931975725ddd7e">CharacterTags</a>;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        DeathMessage.<a class="code hl_variable" href="struct_f_d_t_verb_message.html#a63a882b1a1e29528e14522fe28dddbfe">InstigatorTags</a> = <a class="code hl_variable" href="class_a_d_t_character.html#addc28c8657bf577abe931975725ddd7e">CharacterTags</a>;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        MessageSubsystem.BroadcastMessage(DeathEvent, DeathMessage);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="foldopen" id="foldopen00173" data-start="{" data-end="}">
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#abce55a527ca6530278cba5b5426c632c">  173</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_d_t_character.html#abce55a527ca6530278cba5b5426c632c">ADTCharacter::HasAllMatchingGameplayTags</a>(<span class="keyword">const</span> FGameplayTagContainer&amp; InTagContainer)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordflow">if</span> (UAbilitySystemComponent* AbilitySystemComponent = <a class="code hl_function" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">GetAbilitySystemComponent</a>())</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="keywordflow">return</span> AbilitySystemComponent-&gt;HasAllMatchingGameplayTags(InTagContainer);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>}</div>
+</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="foldopen" id="foldopen00183" data-start="{" data-end="}">
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a4f0e8f4b1ab66529b276cd303de0be3d">  183</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_d_t_character.html#a4f0e8f4b1ab66529b276cd303de0be3d">ADTCharacter::HasAnyMatchingGameplayTags</a>(<span class="keyword">const</span> FGameplayTagContainer&amp; InTagContainer)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordflow">if</span> (UAbilitySystemComponent* AbilitySystemComponent = <a class="code hl_function" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">GetAbilitySystemComponent</a>())</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">return</span> AbilitySystemComponent-&gt;HasAnyMatchingGameplayTags(InTagContainer);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>}</div>
+</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="foldopen" id="foldopen00193" data-start="{" data-end="}">
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#adabf79a86df1816c929a312f7f5e8738">  193</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#adabf79a86df1816c929a312f7f5e8738">ADTCharacter::HandleAbilitySystemInitialized</a>()</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>{</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#addc28c8657bf577abe931975725ddd7e">CharacterTags</a>.IsEmpty())</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="comment">// Added locally on every machine (this fires on server and clients). CharacterTags is authored,</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="comment">// static data present everywhere, so no replication is needed to keep the sets consistent. If these</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="comment">// tags ever become runtime-mutable on the server, switch to AddReplicatedLooseGameplayTags instead.</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">if</span> (UAbilitySystemComponent* AbilitySystemComponent = <a class="code hl_function" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">GetAbilitySystemComponent</a>())</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        AbilitySystemComponent-&gt;AddLooseGameplayTags(<a class="code hl_variable" href="class_a_d_t_character.html#addc28c8657bf577abe931975725ddd7e">CharacterTags</a>);</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
+</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="foldopen" id="foldopen00209" data-start="{" data-end="}">
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a15c8e6a6558ce53d400e716a2462ac71">  209</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a15c8e6a6558ce53d400e716a2462ac71">ADTCharacter::OnRep_Team</a>()</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="keywordtype">void</span> ADTCharacter::HandleDeath_Implementation(<span class="keyword">const</span> <a class="code hl_struct" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a>&amp; HitInfo)</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>{</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a8d83f13020df049969cff6855c04df8e">OnTeamChange</a>.IsBound())</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keywordflow">if</span> (HasAuthority())</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    {</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a8d83f13020df049969cff6855c04df8e">OnTeamChange</a>.Broadcast(<a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    }</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>* TeamSubsystem = GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>&gt;();</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordflow">if</span> (TeamSubsystem)</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        TeamSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_team_subsystem.html#a236b4567ea6c176f1c1acc1cf6bad9f6">UpdateActorTeam</a>(<span class="keyword">this</span>, <a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>);</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    }</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>}</div>
-</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="foldopen" id="foldopen00223" data-start="{" data-end="}">
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a8abf2871e04505691b59b839ba2c40ae">  223</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a8abf2871e04505691b59b839ba2c40ae">ADTCharacter::OnRep_Controller</a>()</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>{</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    Super::OnRep_Controller();</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>)</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    {</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>-&gt;HandleControllerChanged();</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    }</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>}</div>
-</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a50646ae2ff885a6d130bf8da62f2f02a">DeathSettings</a>.<a class="code hl_variable" href="struct_f_death_settings.html#aea105bba7540c045df4ccdaaed26680e">DeathStatEvents</a>.Num() &gt; 0)</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            UStatSubsystem* StatSubsystem = GetWorld()-&gt;GetSubsystem&lt;UStatSubsystem&gt;();</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            <span class="keywordflow">if</span> (StatSubsystem)</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                StatSubsystem-&gt;ProcessStatEvents(<a class="code hl_variable" href="class_a_d_t_character.html#a50646ae2ff885a6d130bf8da62f2f02a">DeathSettings</a>.<a class="code hl_variable" href="struct_f_death_settings.html#aea105bba7540c045df4ccdaaed26680e">DeathStatEvents</a>, GetController() ? GetController()-&gt;PlayerState : <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            }   </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        }</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    UGameplayMessageSubsystem&amp; MessageSubsystem = UGameplayMessageSubsystem::Get(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FGameplayTag&amp; DeathEvent : <a class="code hl_variable" href="class_a_d_t_character.html#a50646ae2ff885a6d130bf8da62f2f02a">DeathSettings</a>.DeathEvents)</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    {</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        FDTVerbMessage DeathMessage;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        DeathMessage.<a class="code hl_variable" href="struct_f_d_t_verb_message.html#a77f5d919cf3fdd0c88754cd1961658ee">Verb</a> = DeathEvent;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        DeathMessage.<a class="code hl_variable" href="struct_f_d_t_verb_message.html#a3c14f25ecf16adff2f05bbc214b9d7e5">Instigator</a> = <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        DeathMessage.<a class="code hl_variable" href="struct_f_d_t_verb_message.html#aeee09cae5a6104d665fb765664755cea">Target</a> = <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        DeathMessage.<a class="code hl_variable" href="struct_f_d_t_verb_message.html#a7964bd6a38300ef79a44646c80cdccb6">ContextTags</a> = <a class="code hl_variable" href="class_a_d_t_character.html#addc28c8657bf577abe931975725ddd7e">CharacterTags</a>;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        DeathMessage.<a class="code hl_variable" href="struct_f_d_t_verb_message.html#a63a882b1a1e29528e14522fe28dddbfe">InstigatorTags</a> = <a class="code hl_variable" href="class_a_d_t_character.html#addc28c8657bf577abe931975725ddd7e">CharacterTags</a>;</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="foldopen" id="foldopen00233" data-start="{" data-end="}">
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a274746bb9bdf67ea6dc712dc72ad8f76">  233</a></span>FGameplayTagContainer <a class="code hl_function" href="class_a_d_t_character.html#a274746bb9bdf67ea6dc712dc72ad8f76">ADTCharacter::BP_GetOwnedGameplayTags</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keywordflow">return</span> FGameplayTagContainer();</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>}</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        MessageSubsystem.BroadcastMessage(DeathEvent, DeathMessage);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    }</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>}</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="foldopen" id="foldopen00237" data-start="{" data-end="}">
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a15c8e6a6558ce53d400e716a2462ac71">  237</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a15c8e6a6558ce53d400e716a2462ac71">ADTCharacter::OnRep_Team</a>()</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>{</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a8d83f13020df049969cff6855c04df8e">OnTeamChange</a>.IsBound())</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a8d83f13020df049969cff6855c04df8e">OnTeamChange</a>.Broadcast(<a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>* TeamSubsystem = GetWorld()-&gt;GetSubsystem&lt;<a class="code hl_class" href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a>&gt;();</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keywordflow">if</span> (TeamSubsystem)</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        TeamSubsystem-&gt;<a class="code hl_function" href="class_u_d_t_team_subsystem.html#a236b4567ea6c176f1c1acc1cf6bad9f6">UpdateActorTeam</a>(<span class="keyword">this</span>, <a class="code hl_variable" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a>);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>}</div>
+</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="foldopen" id="foldopen00251" data-start="{" data-end="}">
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a8abf2871e04505691b59b839ba2c40ae">  251</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_character.html#a8abf2871e04505691b59b839ba2c40ae">ADTCharacter::OnRep_Controller</a>()</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>{</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    Super::OnRep_Controller();</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>)</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    {</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <a class="code hl_variable" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a>-&gt;HandleControllerChanged();</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    }</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>}</div>
+</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="foldopen" id="foldopen00261" data-start="{" data-end="}">
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="class_a_d_t_character.html#a274746bb9bdf67ea6dc712dc72ad8f76">  261</a></span>FGameplayTagContainer <a class="code hl_function" href="class_a_d_t_character.html#a274746bb9bdf67ea6dc712dc72ad8f76">ADTCharacter::BP_GetOwnedGameplayTags</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keywordflow">return</span> FGameplayTagContainer();</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>}</div>
 </div>
 <div class="ttc" id="a_d_t_ability_system_component_8h_html"><div class="ttname"><a href="_d_t_ability_system_component_8h.html">DTAbilitySystemComponent.h</a></div></div>
 <div class="ttc" id="a_d_t_character_8h_html"><div class="ttname"><a href="_d_t_character_8h.html">DTCharacter.h</a></div></div>
+<div class="ttc" id="a_d_t_character_data_8h_html_aa04e94846bfcc66be0dba629403fcfec"><div class="ttname"><a href="_d_t_character_data_8h.html#aa04e94846bfcc66be0dba629403fcfec">EDTHitReactTier</a></div><div class="ttdeci">EDTHitReactTier</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_data_8h_source.html#l00017">DTCharacterData.h:18</a></div></div>
 <div class="ttc" id="a_d_t_character_movement_component_8h_html"><div class="ttname"><a href="_d_t_character_movement_component_8h.html">DTCharacterMovementComponent.h</a></div></div>
 <div class="ttc" id="a_d_t_log_channels_8h_html"><div class="ttname"><a href="_d_t_log_channels_8h.html">DTLogChannels.h</a></div></div>
 <div class="ttc" id="a_d_t_message_types_8h_html"><div class="ttname"><a href="_d_t_message_types_8h.html">DTMessageTypes.h</a></div></div>
 <div class="ttc" id="a_d_t_pawn_extension_component_8h_html"><div class="ttname"><a href="_d_t_pawn_extension_component_8h.html">DTPawnExtensionComponent.h</a></div></div>
 <div class="ttc" id="a_d_t_team_subsystem_8h_html"><div class="ttname"><a href="_d_t_team_subsystem_8h.html">DTTeamSubsystem.h</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a010e5af9ec635960a76ad08944102a6f"><div class="ttname"><a href="class_a_d_t_character.html#a010e5af9ec635960a76ad08944102a6f">ADTCharacter::GetLifetimeReplicatedProps</a></div><div class="ttdeci">virtual void GetLifetimeReplicatedProps(TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00025">DTCharacter.cpp:25</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a0aaea4cfce74e376cd9dfae73752e07e"><div class="ttname"><a href="class_a_d_t_character.html#a0aaea4cfce74e376cd9dfae73752e07e">ADTCharacter::IsDead_Implementation</a></div><div class="ttdeci">bool IsDead_Implementation() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00032">DTCharacter.cpp:32</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a0f01130d7b35fb5bd9153bf2632ac779"><div class="ttname"><a href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">ADTCharacter::GetAbilitySystemComponent</a></div><div class="ttdeci">virtual UAbilitySystemComponent * GetAbilitySystemComponent() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00077">DTCharacter.cpp:77</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a1115ba0e185d44c28d09a5dbfb3956c2"><div class="ttname"><a href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">ADTCharacter::PawnExtComponent</a></div><div class="ttdeci">TObjectPtr&lt; UDTPawnExtensionComponent &gt; PawnExtComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00083">DTCharacter.h:83</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a12d84a720a75d2ce832bd9813683b666"><div class="ttname"><a href="class_a_d_t_character.html#a12d84a720a75d2ce832bd9813683b666">ADTCharacter::GetGenericTeamId</a></div><div class="ttdeci">virtual FGenericTeamId GetGenericTeamId() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00072">DTCharacter.cpp:72</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a15c8e6a6558ce53d400e716a2462ac71"><div class="ttname"><a href="class_a_d_t_character.html#a15c8e6a6558ce53d400e716a2462ac71">ADTCharacter::OnRep_Team</a></div><div class="ttdeci">virtual void OnRep_Team()</div><div class="ttdef"><b>Definition</b> <a href="#l00209">DTCharacter.cpp:209</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a1b5984b1ba535db0d85498de5f92d831"><div class="ttname"><a href="class_a_d_t_character.html#a1b5984b1ba535db0d85498de5f92d831">ADTCharacter::GetOwnedGameplayTags</a></div><div class="ttdeci">virtual void GetOwnedGameplayTags(FGameplayTagContainer &amp;OutTagContainer) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00141">DTCharacter.cpp:141</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a274746bb9bdf67ea6dc712dc72ad8f76"><div class="ttname"><a href="class_a_d_t_character.html#a274746bb9bdf67ea6dc712dc72ad8f76">ADTCharacter::BP_GetOwnedGameplayTags</a></div><div class="ttdeci">virtual FGameplayTagContainer BP_GetOwnedGameplayTags() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00233">DTCharacter.cpp:233</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a2ffcfb9bd4f2ac9fc5ff8617bea0656e"><div class="ttname"><a href="class_a_d_t_character.html#a2ffcfb9bd4f2ac9fc5ff8617bea0656e">ADTCharacter::SetGenericTeamId</a></div><div class="ttdeci">virtual void SetGenericTeamId(const FGenericTeamId &amp;TeamID) override</div><div class="ttdef"><b>Definition</b> <a href="#l00043">DTCharacter.cpp:43</a></div></div>
+<div class="ttc" id="a_data_types_8h_html_a06f38e065ceb35cdd5f6d5970b888c07"><div class="ttname"><a href="_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07">EDTHitDirection</a></div><div class="ttdeci">EDTHitDirection</div><div class="ttdoc">Quadrant a hit came from, relative to the target&#39;s facing (used for directional reactions).</div><div class="ttdef"><b>Definition</b> <a href="_data_types_8h_source.html#l00038">DataTypes.h:39</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a010e5af9ec635960a76ad08944102a6f"><div class="ttname"><a href="class_a_d_t_character.html#a010e5af9ec635960a76ad08944102a6f">ADTCharacter::GetLifetimeReplicatedProps</a></div><div class="ttdeci">virtual void GetLifetimeReplicatedProps(TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00032">DTCharacter.cpp:32</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a0aaea4cfce74e376cd9dfae73752e07e"><div class="ttname"><a href="class_a_d_t_character.html#a0aaea4cfce74e376cd9dfae73752e07e">ADTCharacter::IsDead_Implementation</a></div><div class="ttdeci">virtual bool IsDead_Implementation() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00044">DTCharacter.cpp:44</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a0f01130d7b35fb5bd9153bf2632ac779"><div class="ttname"><a href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">ADTCharacter::GetAbilitySystemComponent</a></div><div class="ttdeci">virtual UAbilitySystemComponent * GetAbilitySystemComponent() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00089">DTCharacter.cpp:89</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a1115ba0e185d44c28d09a5dbfb3956c2"><div class="ttname"><a href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">ADTCharacter::PawnExtComponent</a></div><div class="ttdeci">TObjectPtr&lt; UDTPawnExtensionComponent &gt; PawnExtComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00095">DTCharacter.h:95</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a12d84a720a75d2ce832bd9813683b666"><div class="ttname"><a href="class_a_d_t_character.html#a12d84a720a75d2ce832bd9813683b666">ADTCharacter::GetGenericTeamId</a></div><div class="ttdeci">virtual FGenericTeamId GetGenericTeamId() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00084">DTCharacter.cpp:84</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a15c8e6a6558ce53d400e716a2462ac71"><div class="ttname"><a href="class_a_d_t_character.html#a15c8e6a6558ce53d400e716a2462ac71">ADTCharacter::OnRep_Team</a></div><div class="ttdeci">virtual void OnRep_Team()</div><div class="ttdef"><b>Definition</b> <a href="#l00237">DTCharacter.cpp:237</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a1b5984b1ba535db0d85498de5f92d831"><div class="ttname"><a href="class_a_d_t_character.html#a1b5984b1ba535db0d85498de5f92d831">ADTCharacter::GetOwnedGameplayTags</a></div><div class="ttdeci">virtual void GetOwnedGameplayTags(FGameplayTagContainer &amp;OutTagContainer) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00153">DTCharacter.cpp:153</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a274746bb9bdf67ea6dc712dc72ad8f76"><div class="ttname"><a href="class_a_d_t_character.html#a274746bb9bdf67ea6dc712dc72ad8f76">ADTCharacter::BP_GetOwnedGameplayTags</a></div><div class="ttdeci">virtual FGameplayTagContainer BP_GetOwnedGameplayTags() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00261">DTCharacter.cpp:261</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a2ffcfb9bd4f2ac9fc5ff8617bea0656e"><div class="ttname"><a href="class_a_d_t_character.html#a2ffcfb9bd4f2ac9fc5ff8617bea0656e">ADTCharacter::SetGenericTeamId</a></div><div class="ttdeci">virtual void SetGenericTeamId(const FGenericTeamId &amp;TeamID) override</div><div class="ttdef"><b>Definition</b> <a href="#l00055">DTCharacter.cpp:55</a></div></div>
 <div class="ttc" id="aclass_a_d_t_character_html_a31d82a1866632360f41ba4e02947d9fb"><div class="ttname"><a href="class_a_d_t_character.html#a31d82a1866632360f41ba4e02947d9fb">ADTCharacter::ADTCharacter</a></div><div class="ttdeci">ADTCharacter(const FObjectInitializer &amp;ObjectInitializer=FObjectInitializer::Get())</div><div class="ttdef"><b>Definition</b> <a href="#l00012">DTCharacter.cpp:12</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a42352bdbb4371a8f46247be09df0c6d2"><div class="ttname"><a href="class_a_d_t_character.html#a42352bdbb4371a8f46247be09df0c6d2">ADTCharacter::EndPlay</a></div><div class="ttdeci">virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override</div><div class="ttdef"><b>Definition</b> <a href="#l00105">DTCharacter.cpp:105</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a4f0e8f4b1ab66529b276cd303de0be3d"><div class="ttname"><a href="class_a_d_t_character.html#a4f0e8f4b1ab66529b276cd303de0be3d">ADTCharacter::HasAnyMatchingGameplayTags</a></div><div class="ttdeci">virtual bool HasAnyMatchingGameplayTags(const FGameplayTagContainer &amp;InTagContainer) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00171">DTCharacter.cpp:171</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a50646ae2ff885a6d130bf8da62f2f02a"><div class="ttname"><a href="class_a_d_t_character.html#a50646ae2ff885a6d130bf8da62f2f02a">ADTCharacter::DeathSettings</a></div><div class="ttdeci">FDeathSettings DeathSettings</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00096">DTCharacter.h:96</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a6fd9c026cf9b6284f8dda1afd31cbf23"><div class="ttname"><a href="class_a_d_t_character.html#a6fd9c026cf9b6284f8dda1afd31cbf23">ADTCharacter::UnPossessed</a></div><div class="ttdeci">virtual void UnPossessed() override</div><div class="ttdef"><b>Definition</b> <a href="#l00131">DTCharacter.cpp:131</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a732581f8d38e35971282c5a09038cbf2"><div class="ttname"><a href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">ADTCharacter::TeamId</a></div><div class="ttdeci">FGenericTeamId TeamId</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00086">DTCharacter.h:86</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a7670bd7d9b1b138b8e568db8374c7fcb"><div class="ttname"><a href="class_a_d_t_character.html#a7670bd7d9b1b138b8e568db8374c7fcb">ADTCharacter::HasMatchingGameplayTag</a></div><div class="ttdeci">virtual bool HasMatchingGameplayTag(FGameplayTag InTagToCheck) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00151">DTCharacter.cpp:151</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a8abf2871e04505691b59b839ba2c40ae"><div class="ttname"><a href="class_a_d_t_character.html#a8abf2871e04505691b59b839ba2c40ae">ADTCharacter::OnRep_Controller</a></div><div class="ttdeci">virtual void OnRep_Controller() override</div><div class="ttdef"><b>Definition</b> <a href="#l00223">DTCharacter.cpp:223</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a8d83f13020df049969cff6855c04df8e"><div class="ttname"><a href="class_a_d_t_character.html#a8d83f13020df049969cff6855c04df8e">ADTCharacter::OnTeamChange</a></div><div class="ttdeci">FOnTeamChange OnTeamChange</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00033">DTCharacter.h:33</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a957890005dbc26bbd77d629449496cf2"><div class="ttname"><a href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">ADTCharacter::AbilityCoreComponent</a></div><div class="ttdeci">TObjectPtr&lt; UDTAbilityCoreComponent &gt; AbilityCoreComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00080">DTCharacter.h:80</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_a978389139df334910a27d82416ba405e"><div class="ttname"><a href="class_a_d_t_character.html#a978389139df334910a27d82416ba405e">ADTCharacter::PossessedBy</a></div><div class="ttdeci">virtual void PossessedBy(AController *NewController) override</div><div class="ttdef"><b>Definition</b> <a href="#l00121">DTCharacter.cpp:121</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_aa39b1c37c059fca8ae84f4cd44d2dbc4"><div class="ttname"><a href="class_a_d_t_character.html#aa39b1c37c059fca8ae84f4cd44d2dbc4">ADTCharacter::PreInitializeComponents</a></div><div class="ttdeci">virtual void PreInitializeComponents() override</div><div class="ttdef"><b>Definition</b> <a href="#l00082">DTCharacter.cpp:82</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_abce55a527ca6530278cba5b5426c632c"><div class="ttname"><a href="class_a_d_t_character.html#abce55a527ca6530278cba5b5426c632c">ADTCharacter::HasAllMatchingGameplayTags</a></div><div class="ttdeci">virtual bool HasAllMatchingGameplayTags(const FGameplayTagContainer &amp;InTagContainer) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00161">DTCharacter.cpp:161</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_abf6e1961b2bbd90b410a7387a2f26380"><div class="ttname"><a href="class_a_d_t_character.html#abf6e1961b2bbd90b410a7387a2f26380">ADTCharacter::PostInitProperties</a></div><div class="ttdeci">virtual void PostInitProperties() override</div><div class="ttdef"><b>Definition</b> <a href="#l00116">DTCharacter.cpp:116</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_ac95435e83f3ccf43976a7979c128cbd9"><div class="ttname"><a href="class_a_d_t_character.html#ac95435e83f3ccf43976a7979c128cbd9">ADTCharacter::SpawnLocation</a></div><div class="ttdeci">FVector SpawnLocation</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00093">DTCharacter.h:93</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_ad0fde30a166e80072eae2936e0b9187e"><div class="ttname"><a href="class_a_d_t_character.html#ad0fde30a166e80072eae2936e0b9187e">ADTCharacter::HandleDeath</a></div><div class="ttdeci">void HandleDeath()</div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_addc28c8657bf577abe931975725ddd7e"><div class="ttname"><a href="class_a_d_t_character.html#addc28c8657bf577abe931975725ddd7e">ADTCharacter::CharacterTags</a></div><div class="ttdeci">FGameplayTagContainer CharacterTags</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00090">DTCharacter.h:90</a></div></div>
-<div class="ttc" id="aclass_a_d_t_character_html_af124710122d91fb3afc1786afac938aa"><div class="ttname"><a href="class_a_d_t_character.html#af124710122d91fb3afc1786afac938aa">ADTCharacter::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="#l00092">DTCharacter.cpp:92</a></div></div>
-<div class="ttc" id="aclass_u_d_t_ability_system_component_html"><div class="ttname"><a href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_d_t_ability_system_component_8h_source.html#l00064">DTAbilitySystemComponent.h:65</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a42352bdbb4371a8f46247be09df0c6d2"><div class="ttname"><a href="class_a_d_t_character.html#a42352bdbb4371a8f46247be09df0c6d2">ADTCharacter::EndPlay</a></div><div class="ttdeci">virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override</div><div class="ttdef"><b>Definition</b> <a href="#l00117">DTCharacter.cpp:117</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a4f0e8f4b1ab66529b276cd303de0be3d"><div class="ttname"><a href="class_a_d_t_character.html#a4f0e8f4b1ab66529b276cd303de0be3d">ADTCharacter::HasAnyMatchingGameplayTags</a></div><div class="ttdeci">virtual bool HasAnyMatchingGameplayTags(const FGameplayTagContainer &amp;InTagContainer) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00183">DTCharacter.cpp:183</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a50646ae2ff885a6d130bf8da62f2f02a"><div class="ttname"><a href="class_a_d_t_character.html#a50646ae2ff885a6d130bf8da62f2f02a">ADTCharacter::DeathSettings</a></div><div class="ttdeci">FDeathSettings DeathSettings</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00111">DTCharacter.h:111</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a6e218917de1d07ede417da116a5b0388"><div class="ttname"><a href="class_a_d_t_character.html#a6e218917de1d07ede417da116a5b0388">ADTCharacter::GetHitReactMontage</a></div><div class="ttdeci">virtual UAnimMontage * GetHitReactMontage(EDTHitReactTier Tier, EDTHitDirection Direction) const</div><div class="ttdoc">Gets the best hit-react montage for the given tier and direction, or null if none is set.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">DTCharacter.cpp:39</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a6fd9c026cf9b6284f8dda1afd31cbf23"><div class="ttname"><a href="class_a_d_t_character.html#a6fd9c026cf9b6284f8dda1afd31cbf23">ADTCharacter::UnPossessed</a></div><div class="ttdeci">virtual void UnPossessed() override</div><div class="ttdef"><b>Definition</b> <a href="#l00143">DTCharacter.cpp:143</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a732581f8d38e35971282c5a09038cbf2"><div class="ttname"><a href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">ADTCharacter::TeamId</a></div><div class="ttdeci">FGenericTeamId TeamId</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00098">DTCharacter.h:98</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a7670bd7d9b1b138b8e568db8374c7fcb"><div class="ttname"><a href="class_a_d_t_character.html#a7670bd7d9b1b138b8e568db8374c7fcb">ADTCharacter::HasMatchingGameplayTag</a></div><div class="ttdeci">virtual bool HasMatchingGameplayTag(FGameplayTag InTagToCheck) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00163">DTCharacter.cpp:163</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a8abf2871e04505691b59b839ba2c40ae"><div class="ttname"><a href="class_a_d_t_character.html#a8abf2871e04505691b59b839ba2c40ae">ADTCharacter::OnRep_Controller</a></div><div class="ttdeci">virtual void OnRep_Controller() override</div><div class="ttdef"><b>Definition</b> <a href="#l00251">DTCharacter.cpp:251</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a8d83f13020df049969cff6855c04df8e"><div class="ttname"><a href="class_a_d_t_character.html#a8d83f13020df049969cff6855c04df8e">ADTCharacter::OnTeamChange</a></div><div class="ttdeci">FOnTeamChange OnTeamChange</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00034">DTCharacter.h:34</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a957890005dbc26bbd77d629449496cf2"><div class="ttname"><a href="class_a_d_t_character.html#a957890005dbc26bbd77d629449496cf2">ADTCharacter::AbilityCoreComponent</a></div><div class="ttdeci">TObjectPtr&lt; UDTAbilityCoreComponent &gt; AbilityCoreComponent</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00092">DTCharacter.h:92</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_a978389139df334910a27d82416ba405e"><div class="ttname"><a href="class_a_d_t_character.html#a978389139df334910a27d82416ba405e">ADTCharacter::PossessedBy</a></div><div class="ttdeci">virtual void PossessedBy(AController *NewController) override</div><div class="ttdef"><b>Definition</b> <a href="#l00133">DTCharacter.cpp:133</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_aa39b1c37c059fca8ae84f4cd44d2dbc4"><div class="ttname"><a href="class_a_d_t_character.html#aa39b1c37c059fca8ae84f4cd44d2dbc4">ADTCharacter::PreInitializeComponents</a></div><div class="ttdeci">virtual void PreInitializeComponents() override</div><div class="ttdef"><b>Definition</b> <a href="#l00094">DTCharacter.cpp:94</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_aa449457ea0c66a6e4e65baf4f39b37f9"><div class="ttname"><a href="class_a_d_t_character.html#aa449457ea0c66a6e4e65baf4f39b37f9">ADTCharacter::HandleDeath</a></div><div class="ttdeci">void HandleDeath(const FDTLastHitInfo &amp;HitInfo)</div><div class="ttdoc">Bound to AbilityCoreComponent-&gt;OnDeath.</div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_ab9dbdef518e482af69d42271d4559fda"><div class="ttname"><a href="class_a_d_t_character.html#ab9dbdef518e482af69d42271d4559fda">ADTCharacter::CharacterData</a></div><div class="ttdeci">TObjectPtr&lt; UDTCharacterData &gt; CharacterData</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00105">DTCharacter.h:105</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_abce55a527ca6530278cba5b5426c632c"><div class="ttname"><a href="class_a_d_t_character.html#abce55a527ca6530278cba5b5426c632c">ADTCharacter::HasAllMatchingGameplayTags</a></div><div class="ttdeci">virtual bool HasAllMatchingGameplayTags(const FGameplayTagContainer &amp;InTagContainer) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00173">DTCharacter.cpp:173</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_abf6e1961b2bbd90b410a7387a2f26380"><div class="ttname"><a href="class_a_d_t_character.html#abf6e1961b2bbd90b410a7387a2f26380">ADTCharacter::PostInitProperties</a></div><div class="ttdeci">virtual void PostInitProperties() override</div><div class="ttdef"><b>Definition</b> <a href="#l00128">DTCharacter.cpp:128</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_ac95435e83f3ccf43976a7979c128cbd9"><div class="ttname"><a href="class_a_d_t_character.html#ac95435e83f3ccf43976a7979c128cbd9">ADTCharacter::SpawnLocation</a></div><div class="ttdeci">FVector SpawnLocation</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00108">DTCharacter.h:108</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_adabf79a86df1816c929a312f7f5e8738"><div class="ttname"><a href="class_a_d_t_character.html#adabf79a86df1816c929a312f7f5e8738">ADTCharacter::HandleAbilitySystemInitialized</a></div><div class="ttdeci">virtual void HandleAbilitySystemInitialized()</div><div class="ttdoc">Called once the ASC is initialized (fires on server and clients) via PawnExtComponent&#39;s OnAbilitySyst...</div><div class="ttdef"><b>Definition</b> <a href="#l00193">DTCharacter.cpp:193</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_addc28c8657bf577abe931975725ddd7e"><div class="ttname"><a href="class_a_d_t_character.html#addc28c8657bf577abe931975725ddd7e">ADTCharacter::CharacterTags</a></div><div class="ttdeci">FGameplayTagContainer CharacterTags</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_8h_source.html#l00102">DTCharacter.h:102</a></div></div>
+<div class="ttc" id="aclass_a_d_t_character_html_af124710122d91fb3afc1786afac938aa"><div class="ttname"><a href="class_a_d_t_character.html#af124710122d91fb3afc1786afac938aa">ADTCharacter::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="#l00104">DTCharacter.cpp:104</a></div></div>
+<div class="ttc" id="aclass_u_d_t_ability_system_component_html"><div class="ttname"><a href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_d_t_ability_system_component_8h_source.html#l00066">DTAbilitySystemComponent.h:67</a></div></div>
 <div class="ttc" id="aclass_u_d_t_character_movement_component_html"><div class="ttname"><a href="class_u_d_t_character_movement_component.html">UDTCharacterMovementComponent</a></div><div class="ttdoc">Custom Character Movement Component for Dark Tower.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_character_movement_component_8h_source.html#l00039">DTCharacterMovementComponent.h:40</a></div></div>
-<div class="ttc" id="aclass_u_d_t_team_subsystem_html"><div class="ttname"><a href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a></div><div class="ttdoc">World subsystem to manage team-related functionality Maintains a cached registry of team members for ...</div><div class="ttdef"><b>Definition</b> <a href="_d_t_team_subsystem_8h_source.html#l00090">DTTeamSubsystem.h:91</a></div></div>
-<div class="ttc" id="aclass_u_d_t_team_subsystem_html_a236b4567ea6c176f1c1acc1cf6bad9f6"><div class="ttname"><a href="class_u_d_t_team_subsystem.html#a236b4567ea6c176f1c1acc1cf6bad9f6">UDTTeamSubsystem::UpdateActorTeam</a></div><div class="ttdeci">void UpdateActorTeam(AActor *Actor, FGenericTeamId TeamId)</div><div class="ttdoc">Updates the team ID for an actor.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_team_subsystem_8cpp_source.html#l00069">DTTeamSubsystem.cpp:69</a></div></div>
-<div class="ttc" id="aclass_u_d_t_team_subsystem_html_a447684742abbe1c9f7fa722b51327cbe"><div class="ttname"><a href="class_u_d_t_team_subsystem.html#a447684742abbe1c9f7fa722b51327cbe">UDTTeamSubsystem::RegisterTeamMember</a></div><div class="ttdeci">void RegisterTeamMember(AActor *Actor)</div><div class="ttdoc">Registers an actor with the team subsystem Call this when an actor that implements IGenericTeamAgentI...</div><div class="ttdef"><b>Definition</b> <a href="_d_t_team_subsystem_8cpp_source.html#l00025">DTTeamSubsystem.cpp:25</a></div></div>
-<div class="ttc" id="aclass_u_d_t_team_subsystem_html_ab866d233c3117a3680217112fe337d34"><div class="ttname"><a href="class_u_d_t_team_subsystem.html#ab866d233c3117a3680217112fe337d34">UDTTeamSubsystem::UnregisterTeamMember</a></div><div class="ttdeci">void UnregisterTeamMember(AActor *Actor)</div><div class="ttdoc">Unregisters an actor from the team subsystem Call this when an actor is destroyed.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_team_subsystem_8cpp_source.html#l00053">DTTeamSubsystem.cpp:53</a></div></div>
-<div class="ttc" id="astruct_f_d_t_verb_message_html_a3c14f25ecf16adff2f05bbc214b9d7e5"><div class="ttname"><a href="struct_f_d_t_verb_message.html#a3c14f25ecf16adff2f05bbc214b9d7e5">FDTVerbMessage::Instigator</a></div><div class="ttdeci">TObjectPtr&lt; UObject &gt; Instigator</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00135">DTMessageTypes.h:135</a></div></div>
-<div class="ttc" id="astruct_f_d_t_verb_message_html_a63a882b1a1e29528e14522fe28dddbfe"><div class="ttname"><a href="struct_f_d_t_verb_message.html#a63a882b1a1e29528e14522fe28dddbfe">FDTVerbMessage::InstigatorTags</a></div><div class="ttdeci">FGameplayTagContainer InstigatorTags</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00141">DTMessageTypes.h:141</a></div></div>
-<div class="ttc" id="astruct_f_d_t_verb_message_html_a77f5d919cf3fdd0c88754cd1961658ee"><div class="ttname"><a href="struct_f_d_t_verb_message.html#a77f5d919cf3fdd0c88754cd1961658ee">FDTVerbMessage::Verb</a></div><div class="ttdeci">FGameplayTag Verb</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00132">DTMessageTypes.h:132</a></div></div>
-<div class="ttc" id="astruct_f_d_t_verb_message_html_a7964bd6a38300ef79a44646c80cdccb6"><div class="ttname"><a href="struct_f_d_t_verb_message.html#a7964bd6a38300ef79a44646c80cdccb6">FDTVerbMessage::ContextTags</a></div><div class="ttdeci">FGameplayTagContainer ContextTags</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00147">DTMessageTypes.h:147</a></div></div>
-<div class="ttc" id="astruct_f_d_t_verb_message_html_aeee09cae5a6104d665fb765664755cea"><div class="ttname"><a href="struct_f_d_t_verb_message.html#aeee09cae5a6104d665fb765664755cea">FDTVerbMessage::Target</a></div><div class="ttdeci">TObjectPtr&lt; UObject &gt; Target</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00138">DTMessageTypes.h:138</a></div></div>
-<div class="ttc" id="astruct_f_death_settings_html_aea105bba7540c045df4ccdaaed26680e"><div class="ttname"><a href="struct_f_death_settings.html#aea105bba7540c045df4ccdaaed26680e">FDeathSettings::DeathStatEvents</a></div><div class="ttdeci">TArray&lt; FStatEvent &gt; DeathStatEvents</div><div class="ttdef"><b>Definition</b> <a href="_data_types_8h_source.html#l00177">DataTypes.h:177</a></div></div>
+<div class="ttc" id="aclass_u_d_t_team_subsystem_html"><div class="ttname"><a href="class_u_d_t_team_subsystem.html">UDTTeamSubsystem</a></div><div class="ttdoc">World subsystem to manage team-related functionality Maintains a cached registry of team members for ...</div><div class="ttdef"><b>Definition</b> <a href="_d_t_team_subsystem_8h_source.html#l00080">DTTeamSubsystem.h:81</a></div></div>
+<div class="ttc" id="aclass_u_d_t_team_subsystem_html_a236b4567ea6c176f1c1acc1cf6bad9f6"><div class="ttname"><a href="class_u_d_t_team_subsystem.html#a236b4567ea6c176f1c1acc1cf6bad9f6">UDTTeamSubsystem::UpdateActorTeam</a></div><div class="ttdeci">void UpdateActorTeam(AActor *Actor, FGenericTeamId TeamId)</div><div class="ttdoc">Updates the team ID for an actor.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_team_subsystem_8cpp_source.html#l00089">DTTeamSubsystem.cpp:89</a></div></div>
+<div class="ttc" id="aclass_u_d_t_team_subsystem_html_a447684742abbe1c9f7fa722b51327cbe"><div class="ttname"><a href="class_u_d_t_team_subsystem.html#a447684742abbe1c9f7fa722b51327cbe">UDTTeamSubsystem::RegisterTeamMember</a></div><div class="ttdeci">void RegisterTeamMember(AActor *Actor)</div><div class="ttdoc">Registers an actor with the team subsystem Call this when an actor that implements IGenericTeamAgentI...</div><div class="ttdef"><b>Definition</b> <a href="_d_t_team_subsystem_8cpp_source.html#l00045">DTTeamSubsystem.cpp:45</a></div></div>
+<div class="ttc" id="aclass_u_d_t_team_subsystem_html_ab866d233c3117a3680217112fe337d34"><div class="ttname"><a href="class_u_d_t_team_subsystem.html#ab866d233c3117a3680217112fe337d34">UDTTeamSubsystem::UnregisterTeamMember</a></div><div class="ttdeci">void UnregisterTeamMember(AActor *Actor)</div><div class="ttdoc">Unregisters an actor from the team subsystem Call this when an actor is destroyed.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_team_subsystem_8cpp_source.html#l00073">DTTeamSubsystem.cpp:73</a></div></div>
+<div class="ttc" id="astruct_f_d_t_last_hit_info_html"><div class="ttname"><a href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a></div><div class="ttdef"><b>Definition</b> <a href="_d_t_ability_core_component_8h_source.html#l00044">DTAbilityCoreComponent.h:45</a></div></div>
+<div class="ttc" id="astruct_f_d_t_verb_message_html_a3c14f25ecf16adff2f05bbc214b9d7e5"><div class="ttname"><a href="struct_f_d_t_verb_message.html#a3c14f25ecf16adff2f05bbc214b9d7e5">FDTVerbMessage::Instigator</a></div><div class="ttdeci">TObjectPtr&lt; UObject &gt; Instigator</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00137">DTMessageTypes.h:137</a></div></div>
+<div class="ttc" id="astruct_f_d_t_verb_message_html_a63a882b1a1e29528e14522fe28dddbfe"><div class="ttname"><a href="struct_f_d_t_verb_message.html#a63a882b1a1e29528e14522fe28dddbfe">FDTVerbMessage::InstigatorTags</a></div><div class="ttdeci">FGameplayTagContainer InstigatorTags</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00143">DTMessageTypes.h:143</a></div></div>
+<div class="ttc" id="astruct_f_d_t_verb_message_html_a77f5d919cf3fdd0c88754cd1961658ee"><div class="ttname"><a href="struct_f_d_t_verb_message.html#a77f5d919cf3fdd0c88754cd1961658ee">FDTVerbMessage::Verb</a></div><div class="ttdeci">FGameplayTag Verb</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00134">DTMessageTypes.h:134</a></div></div>
+<div class="ttc" id="astruct_f_d_t_verb_message_html_a7964bd6a38300ef79a44646c80cdccb6"><div class="ttname"><a href="struct_f_d_t_verb_message.html#a7964bd6a38300ef79a44646c80cdccb6">FDTVerbMessage::ContextTags</a></div><div class="ttdeci">FGameplayTagContainer ContextTags</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00149">DTMessageTypes.h:149</a></div></div>
+<div class="ttc" id="astruct_f_d_t_verb_message_html_aeee09cae5a6104d665fb765664755cea"><div class="ttname"><a href="struct_f_d_t_verb_message.html#aeee09cae5a6104d665fb765664755cea">FDTVerbMessage::Target</a></div><div class="ttdeci">TObjectPtr&lt; UObject &gt; Target</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00140">DTMessageTypes.h:140</a></div></div>
+<div class="ttc" id="astruct_f_death_settings_html_aea105bba7540c045df4ccdaaed26680e"><div class="ttname"><a href="struct_f_death_settings.html#aea105bba7540c045df4ccdaaed26680e">FDeathSettings::DeathStatEvents</a></div><div class="ttdeci">TArray&lt; FStatEvent &gt; DeathStatEvents</div><div class="ttdef"><b>Definition</b> <a href="_data_types_8h_source.html#l00189">DataTypes.h:189</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

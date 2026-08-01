@@ -184,20 +184,8 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>World subsystem to manage team-related functionality Maintains a cached registry of team members for efficient team-based queries. </p>
-<p>Query System:</p><ul>
-<li>All query functions accept an optional <a class="el" href="struct_f_team_query_params.html">FTeamQueryParams</a> for advanced filtering</li>
-<li>Simple queries pass default params or leave it empty</li>
-<li>Advanced queries create <a class="el" href="struct_f_team_query_params.html">FTeamQueryParams</a> and set flags/properties:<ul>
-<li>RequireFacing - Only actors within facing cone</li>
-<li>IgnoreDead - Exclude dead actors (enabled by default)</li>
-<li>IncludeSelf - Include source actor in results</li>
-<li>SortByDistance - Sort by closest first</li>
-<li>RequireLineOfSight - Only actors with clear line of sight </li>
-</ul>
-</li>
-</ul>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8h_source.html#l00090">90</a> of file <a class="el" href="_d_t_team_subsystem_8h_source.html">DTTeamSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_team_subsystem_8h_source.html">DTTeamSubsystem.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a251efb73b2668d6aa3ec62d8b95a1a7d" name="a251efb73b2668d6aa3ec62d8b95a1a7d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a251efb73b2668d6aa3ec62d8b95a1a7d">&#9670;&#160;</a></span>AreActorsAllies()</h2>
@@ -228,11 +216,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if actors are considered allies </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00158">158</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00178">178</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00134">AreActorsOnSameTeam()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00154">AreActorsOnSameTeam()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00452">CanDamageActor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00526">CanDamageActor()</a>.</p>
 
 </div>
 </div>
@@ -265,9 +253,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if actors are considered enemies </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00147">147</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00167">167</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00118">GetTeamAttitude()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00138">GetTeamAttitude()</a>.</p>
 
 </div>
 </div>
@@ -300,11 +288,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if both actors are on the same team </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00134">134</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00154">154</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00092">GetActorTeam()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00112">GetActorTeam()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00158">AreActorsAllies()</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00210">DoesActorPassTeamQuery()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00178">AreActorsAllies()</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00230">DoesActorPassTeamQuery()</a>.</p>
 
 </div>
 </div>
@@ -337,9 +325,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the damage should be allowed, false if the actors are allies </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00452">452</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00526">526</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00158">AreActorsAllies()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00178">AreActorsAllies()</a>.</p>
 
 </div>
 </div>
@@ -366,7 +354,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00017">17</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00037">37</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
 </div>
 </div>
@@ -411,9 +399,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the candidate passes query flags and team relationship filtering </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00210">210</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00230">230</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00134">AreActorsOnSameTeam()</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00049">FTeamQueryParams::OverrideLocation</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00154">AreActorsOnSameTeam()</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00049">FTeamQueryParams::OverrideLocation</a>.</p>
 
 </div>
 </div>
@@ -446,7 +434,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The closest ally, or null if none found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00327">327</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00381">381</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00021">SortByDistance</a>.</p>
 
@@ -481,7 +469,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The closest enemy, or null if none found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00311">311</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00365">365</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00021">SortByDistance</a>.</p>
 
@@ -528,7 +516,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The closest team member, or null if none found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00271">271</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00325">325</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00041">FTeamQueryParams::ActorClass</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00019">IgnoreDead</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00020">IncludeSelf</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00033">FTeamQueryParams::MaxDistance</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00072">FTeamMemberList::Members</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00049">FTeamQueryParams::OverrideLocation</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00021">SortByDistance</a>.</p>
 
@@ -558,9 +546,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The team ID, or an invalid team ID if the actor doesn't support teams </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00092">92</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00112">112</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00134">AreActorsOnSameTeam()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00108">IsActorOnTeam()</a>, and <a class="el" href="_d_t_targeting_filter_task___team_8cpp_source.html#l00014">UDTTargetingFilterTask_Team::ShouldFilterTarget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00154">AreActorsOnSameTeam()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00128">IsActorOnTeam()</a>, and <a class="el" href="_d_t_targeting_filter_task___team_8cpp_source.html#l00014">UDTTargetingFilterTask_Team::ShouldFilterTarget()</a>.</p>
 
 </div>
 </div>
@@ -599,7 +587,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of actors found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00163">163</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00183">183</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00041">FTeamQueryParams::ActorClass</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00019">IgnoreDead</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00020">IncludeSelf</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00072">FTeamMemberList::Members</a>.</p>
 
@@ -640,7 +628,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of allies found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00205">205</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00225">225</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
 </div>
 </div>
@@ -679,7 +667,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of enemies found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00200">200</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00220">220</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">ADTProjectile::HandleProjectileOverlap()</a>.</p>
 
@@ -714,9 +702,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The attitude relationship (Friendly, Neutral, or Hostile) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00118">118</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00138">138</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00147">AreActorsEnemies()</a>, and <a class="el" href="_d_t_targeting_filter_task___team_8cpp_source.html#l00014">UDTTargetingFilterTask_Team::ShouldFilterTarget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00167">AreActorsEnemies()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00291">ADTAIController::HandleSightUpdate()</a>, and <a class="el" href="_d_t_targeting_filter_task___team_8cpp_source.html#l00014">UDTTargetingFilterTask_Team::ShouldFilterTarget()</a>.</p>
 
 </div>
 </div>
@@ -743,7 +731,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00009">9</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00029">29</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
 </div>
 </div>
@@ -776,9 +764,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the actor is on the specified team </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00108">108</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00128">128</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00092">GetActorTeam()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00112">GetActorTeam()</a>.</p>
 
 </div>
 </div>
@@ -805,9 +793,9 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00025">25</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00045">45</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_actor_8cpp_source.html#l00021">ADTAbilityActor::BeginPlay()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00092">ADTCharacter::BeginPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_actor_8cpp_source.html#l00021">ADTAbilityActor::BeginPlay()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00104">ADTCharacter::BeginPlay()</a>.</p>
 
 </div>
 </div>
@@ -834,9 +822,9 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00053">53</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00073">73</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_actor_8cpp_source.html#l00032">ADTAbilityActor::EndPlay()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00105">ADTCharacter::EndPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_actor_8cpp_source.html#l00032">ADTAbilityActor::EndPlay()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00117">ADTCharacter::EndPlay()</a>.</p>
 
 </div>
 </div>
@@ -868,9 +856,9 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00069">69</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00089">89</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00209">ADTCharacter::OnRep_Team()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00043">ADTCharacter::SetGenericTeamId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00237">ADTCharacter::OnRep_Team()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00055">ADTCharacter::SetGenericTeamId()</a>.</p>
 
 </div>
 </div>

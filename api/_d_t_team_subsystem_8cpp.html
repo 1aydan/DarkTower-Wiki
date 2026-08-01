@@ -136,8 +136,150 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_team_subs
 <code>#include &quot;GenericTeamAgentInterface.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_i_d_t_targetable_interface_8h_source.html">AbilitySystem/Core/IDTTargetableInterface.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_log_channels_8h_source.html">Core/DTLogChannels.h</a>&quot;</code><br />
+<code>#include &quot;DrawDebugHelpers.h&quot;</code><br />
 </div>
 <p><a href="_d_t_team_subsystem_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a8f2aae957c73c855b56e6cfccf3e5da3" id="r_a8f2aae957c73c855b56e6cfccf3e5da3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8f2aae957c73c855b56e6cfccf3e5da3">DT_TEAM_LOG_REJECT</a>(Reason)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a65e06666999126afdb48a570097b9b50" id="r_a65e06666999126afdb48a570097b9b50"><td class="memItemLeft">static TAutoConsoleVariable&lt; int32 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a65e06666999126afdb48a570097b9b50">CVarDTTeamDebugQueries</a> (TEXT(&quot;DT.Team.DebugQueries&quot;), 0, TEXT(&quot;  2 = also log per-actor reject reasons in PassesQueryFlags&quot;), ECVF_Cheat)</td></tr>
+<tr class="memitem:aacaaa95e5e43bb8f6cec97220e9f877f" id="r_aacaaa95e5e43bb8f6cec97220e9f877f"><td class="memItemLeft">static TAutoConsoleVariable&lt; FString &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aacaaa95e5e43bb8f6cec97220e9f877f">CVarDTTeamDebugActor</a> (TEXT(&quot;DT.Team.DebugActor&quot;), TEXT(&quot;&quot;), TEXT(&quot;When set, only queries whose source actor name contains this substring are drawn/logged. Empty = all.&quot;), ECVF_Cheat)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a20c6a206c087a1a0422c6324282fe6ea" id="r_a20c6a206c087a1a0422c6324282fe6ea"><td class="memItemLeft">static constexpr float&#160;</td><td class="memItemRight"><a class="el" href="#a20c6a206c087a1a0422c6324282fe6ea">GDTTeamDebugDrawLifetime</a> = 0.1f</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a8f2aae957c73c855b56e6cfccf3e5da3" name="a8f2aae957c73c855b56e6cfccf3e5da3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f2aae957c73c855b56e6cfccf3e5da3">&#9670;&#160;</a></span>DT_TEAM_LOG_REJECT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_TEAM_LOG_REJECT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>Reason</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (bLogRejects) \</div>
+<div class="line">{ \</div>
+<div class="line">    UE_LOG(LogDTTeam, Verbose, TEXT(<span class="stringliteral">&quot;PassesQueryFlags: %s -&gt; %s rejected (%s)&quot;</span>), \</div>
+<div class="line">        *GetNameSafe(SourceActor), *GetNameSafe(TargetActor), TEXT(Reason)); \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="aacaaa95e5e43bb8f6cec97220e9f877f" name="aacaaa95e5e43bb8f6cec97220e9f877f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacaaa95e5e43bb8f6cec97220e9f877f">&#9670;&#160;</a></span>CVarDTTeamDebugActor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TAutoConsoleVariable&lt; FString &gt; CVarDTTeamDebugActor </td>
+          <td>(</td>
+          <td class="paramtype">TEXT(&quot;DT.Team.DebugActor&quot;)</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TEXT(&quot;&quot;)</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TEXT(&quot;When set, only queries whose source actor name contains this substring are drawn/logged. Empty = all.&quot;)</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ECVF_Cheat</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65e06666999126afdb48a570097b9b50" name="a65e06666999126afdb48a570097b9b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e06666999126afdb48a570097b9b50">&#9670;&#160;</a></span>CVarDTTeamDebugQueries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TAutoConsoleVariable&lt; int32 &gt; CVarDTTeamDebugQueries </td>
+          <td>(</td>
+          <td class="paramtype">TEXT(&quot;DT.Team.DebugQueries&quot;)</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TEXT(&quot;  2 = also log per-actor reject reasons in PassesQueryFlags&quot;)</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ECVF_Cheat</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a20c6a206c087a1a0422c6324282fe6ea" name="a20c6a206c087a1a0422c6324282fe6ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c6a206c087a1a0422c6324282fe6ea">&#9670;&#160;</a></span>GDTTeamDebugDrawLifetime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GDTTeamDebugDrawLifetime = 0.1f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00026">26</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

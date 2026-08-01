@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_inventory
 <div class="contents">
 <div class="textblock"><code>#include &quot;CoreMinimal.h&quot;</code><br />
 <code>#include &quot;GameplayTagContainer.h&quot;</code><br />
-<code>#include &quot;ScalableFloat.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_d_t_ability_types_8h_source.html">AbilitySystem/DTAbilityTypes.h</a>&quot;</code><br />
 <code>#include &quot;ModularInventory/Public/InventoryTypes.h&quot;</code><br />
 <code>#include &quot;DTInventoryTypes.generated.h&quot;</code><br />
 </div>
@@ -141,14 +141,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_inventory
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:FDynamicValueDefinitionBase" id="r_FDynamicValueDefinitionBase"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html">FDynamicValueDefinitionBase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared format fields used by gameplay modifiers and dynamic UI descriptions.  <a href="struct_f_dynamic_value_definition_base.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FStatModifierDef" id="r_FStatModifierDef"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_stat_modifier_def.html">FStatModifierDef</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single stat modifier definition for an affix.  <a href="struct_f_stat_modifier_def.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FRarityAffixConfig" id="r_FRarityAffixConfig"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_rarity_affix_config.html">FRarityAffixConfig</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for how many affixes a rarity tier can have.  <a href="struct_f_rarity_affix_config.html#details">More...</a><br /></td></tr>
-<tr class="memitem:FDynamicDescriptionValue" id="r_FDynamicDescriptionValue"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Place holder driven description value definition used for dynamic tooltip generation.  <a href="struct_f_dynamic_description_value.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FBaseStatTableRow" id="r_FBaseStatTableRow"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data table row structure for base item stats.  <a href="struct_f_base_stat_table_row.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FBaseStatDisplayInfo" id="r_FBaseStatDisplayInfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_base_stat_display_info.html">FBaseStatDisplayInfo</a></td></tr>
@@ -161,6 +157,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single loot entry with item definition and drop weight.  <a href="struct_f_loot_table_row.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FAffixTableRow" id="r_FAffixTableRow"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_affix_table_row.html">FAffixTableRow</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single affix entry in a data table for weighted random selection.  <a href="struct_f_affix_table_row.html#details">More...</a><br /></td></tr>
+<tr class="memitem:FDTAbilityPoolRow" id="r_FDTAbilityPoolRow"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_d_t_ability_pool_row.html">FDTAbilityPoolRow</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single weighted ability candidate row for an ability pool DataTable.  <a href="struct_f_d_t_ability_pool_row.html#details">More...</a><br /></td></tr>
+<tr class="memitem:FDTRollableAbilitySlot" id="r_FDTRollableAbilitySlot"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_d_t_rollable_ability_slot.html">FDTRollableAbilitySlot</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One rollable ability slot authored on an equipment item.  <a href="struct_f_d_t_rollable_ability_slot.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FLootContext" id="r_FLootContext"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_loot_context.html">FLootContext</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Context structure for loot generation and spawning.  <a href="struct_f_loot_context.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
@@ -171,22 +171,14 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a31782345de601fe8e4f4f5530f2f2315a07e01d7a96d9fd76cf08aa5916f7c788">Implicit</a>
  }</td></tr>
 <tr class="memdesc:a31782345de601fe8e4f4f5530f2f2315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for affix slot types (Prefix/Suffix/Implicit).  <a href="#a31782345de601fe8e4f4f5530f2f2315">More...</a><br /></td></tr>
-<tr class="memitem:af838fad222c2a4326c9170fb186dc82b" id="r_af838fad222c2a4326c9170fb186dc82b"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a> : uint8 { <a class="el" href="#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">Add</a>
-, <a class="el" href="#af838fad222c2a4326c9170fb186dc82bae257376d913f3b53cbb4a9b19d770648">Multiply</a>
-, <a class="el" href="#af838fad222c2a4326c9170fb186dc82ba6da8e67225fdcfa78c3ea5dc3154b849">Override</a>
- }</td></tr>
-<tr class="memdesc:af838fad222c2a4326c9170fb186dc82b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for stat modifier operations.  <a href="#af838fad222c2a4326c9170fb186dc82b">More...</a><br /></td></tr>
 <tr class="memitem:aaa4ac93ff34fbac246ad93e50d911f0f" id="r_aaa4ac93ff34fbac246ad93e50d911f0f"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aaa4ac93ff34fbac246ad93e50d911f0f">EStatApplicationType</a> : uint8 { <a class="el" href="#aaa4ac93ff34fbac246ad93e50d911f0fa0e50cae2a86a62b6ddf76d5309599cea">BaseStat</a>
 , <a class="el" href="#aaa4ac93ff34fbac246ad93e50d911f0fafa213a2d4ffbcda002e282d24766a9e8">ItemStat</a>
  }</td></tr>
 <tr class="memdesc:aaa4ac93ff34fbac246ad93e50d911f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for how stats are applied based on equipment state.  <a href="#aaa4ac93ff34fbac246ad93e50d911f0f">More...</a><br /></td></tr>
-<tr class="memitem:ae119a4b43145a9470312810d6cda32ad" id="r_ae119a4b43145a9470312810d6cda32ad"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ae119a4b43145a9470312810d6cda32ad">EDynamicDescriptionValueSource</a> : uint8 { <a class="el" href="#ae119a4b43145a9470312810d6cda32ada87ba2ecc8b6915e8bd6f5089918229fd">Range</a>
-, <a class="el" href="#ae119a4b43145a9470312810d6cda32ada14963c125ef87e6e8374421fdb09c4f3">ScalableFloat</a>
-, <a class="el" href="#ae119a4b43145a9470312810d6cda32adafeaca76029a0a1c64c2da067e3ebbc0d">AbilityProperty</a>
+<tr class="memitem:aec808e7d8b3c596dd977f125cf7160b3" id="r_aec808e7d8b3c596dd977f125cf7160b3"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aec808e7d8b3c596dd977f125cf7160b3">EStatRollBehavior</a> : uint8 { <a class="el" href="#aec808e7d8b3c596dd977f125cf7160b3a2762a7201f402884d941b78a6d20cdc7">ScaledByItemPower</a>
+, <a class="el" href="#aec808e7d8b3c596dd977f125cf7160b3a3e924c28566464990d1d3bdf974a1b67">FullRange</a>
  }</td></tr>
-<tr class="memitem:a603a57c88d2ff0542f64e2028aae8d16" id="r_a603a57c88d2ff0542f64e2028aae8d16"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a603a57c88d2ff0542f64e2028aae8d16">EScalableValueEvaluationMode</a> : uint8 { <a class="el" href="#a603a57c88d2ff0542f64e2028aae8d16afd1dd0c603be8170f9eae0be9f2f6afb">Direct</a>
-, <a class="el" href="#a603a57c88d2ff0542f64e2028aae8d16a68a9b1d527f9c27839e9b5a67ba30d56">AccumulateByLevel</a>
- }</td></tr>
+<tr class="memdesc:aec808e7d8b3c596dd977f125cf7160b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">How a base stat's roll window scales during loot generation.  <a href="#aec808e7d8b3c596dd977f125cf7160b3">More...</a><br /></td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
 <a id="a31782345de601fe8e4f4f5530f2f2315" name="a31782345de601fe8e4f4f5530f2f2315"></a>
@@ -216,66 +208,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a31782345de601fe8e4f4f5530f2f2315a07e01d7a96d9fd76cf08aa5916f7c788" name="a31782345de601fe8e4f4f5530f2f2315a07e01d7a96d9fd76cf08aa5916f7c788"></a>Implicit&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00024">24</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
-
-</div>
-</div>
-<a id="ae119a4b43145a9470312810d6cda32ad" name="ae119a4b43145a9470312810d6cda32ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae119a4b43145a9470312810d6cda32ad">&#9670;&#160;</a></span>EDynamicDescriptionValueSource</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="#ae119a4b43145a9470312810d6cda32ad">EDynamicDescriptionValueSource</a> : uint8</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae119a4b43145a9470312810d6cda32ada87ba2ecc8b6915e8bd6f5089918229fd" name="ae119a4b43145a9470312810d6cda32ada87ba2ecc8b6915e8bd6f5089918229fd"></a>Range&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ae119a4b43145a9470312810d6cda32ada14963c125ef87e6e8374421fdb09c4f3" name="ae119a4b43145a9470312810d6cda32ada14963c125ef87e6e8374421fdb09c4f3"></a>ScalableFloat&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ae119a4b43145a9470312810d6cda32adafeaca76029a0a1c64c2da067e3ebbc0d" name="ae119a4b43145a9470312810d6cda32adafeaca76029a0a1c64c2da067e3ebbc0d"></a>AbilityProperty&#160;</td><td class="fielddoc"><p>Reads a named numeric UPROPERTY off a context object (e.g. </p>
-<p>an ability) supplied at format time. </p>
-</td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00056">56</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
-
-</div>
-</div>
-<a id="a603a57c88d2ff0542f64e2028aae8d16" name="a603a57c88d2ff0542f64e2028aae8d16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a603a57c88d2ff0542f64e2028aae8d16">&#9670;&#160;</a></span>EScalableValueEvaluationMode</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="#a603a57c88d2ff0542f64e2028aae8d16">EScalableValueEvaluationMode</a> : uint8</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a603a57c88d2ff0542f64e2028aae8d16afd1dd0c603be8170f9eae0be9f2f6afb" name="a603a57c88d2ff0542f64e2028aae8d16afd1dd0c603be8170f9eae0be9f2f6afb"></a>Direct&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a603a57c88d2ff0542f64e2028aae8d16a68a9b1d527f9c27839e9b5a67ba30d56" name="a603a57c88d2ff0542f64e2028aae8d16a68a9b1d527f9c27839e9b5a67ba30d56"></a>AccumulateByLevel&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00065">65</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00026">26</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
 
 </div>
 </div>
@@ -307,12 +240,12 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00046">46</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00037">37</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
 
 </div>
 </div>
-<a id="af838fad222c2a4326c9170fb186dc82b" name="af838fad222c2a4326c9170fb186dc82b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af838fad222c2a4326c9170fb186dc82b">&#9670;&#160;</a></span>EStatModifierOp</h2>
+<a id="aec808e7d8b3c596dd977f125cf7160b3" name="aec808e7d8b3c596dd977f125cf7160b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec808e7d8b3c596dd977f125cf7160b3">&#9670;&#160;</a></span>EStatRollBehavior</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,7 +254,7 @@ Enumerations</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a> : uint8</td>
+          <td class="memname">enum class <a class="el" href="#aec808e7d8b3c596dd977f125cf7160b3">EStatRollBehavior</a> : uint8</td>
         </tr>
       </table>
   </td>
@@ -331,14 +264,17 @@ Enumerations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Enum for stat modifier operations. </p>
+<p>How a base stat's roll window scales during loot generation. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9" name="af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9"></a>Add&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af838fad222c2a4326c9170fb186dc82bae257376d913f3b53cbb4a9b19d770648" name="af838fad222c2a4326c9170fb186dc82bae257376d913f3b53cbb4a9b19d770648"></a>Multiply&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af838fad222c2a4326c9170fb186dc82ba6da8e67225fdcfa78c3ea5dc3154b849" name="af838fad222c2a4326c9170fb186dc82ba6da8e67225fdcfa78c3ea5dc3154b849"></a>Override&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aec808e7d8b3c596dd977f125cf7160b3a2762a7201f402884d941b78a6d20cdc7" name="aec808e7d8b3c596dd977f125cf7160b3a2762a7201f402884d941b78a6d20cdc7"></a>ScaledByItemPower&#160;</td><td class="fielddoc"><p>Roll window scales with ItemPower (floor depth) and the rarity stat multiplier. </p>
+<p>Default for power stats (damage, armor). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aec808e7d8b3c596dd977f125cf7160b3a3e924c28566464990d1d3bdf974a1b67" name="aec808e7d8b3c596dd977f125cf7160b3a3e924c28566464990d1d3bdf974a1b67"></a>FullRange&#160;</td><td class="fielddoc"><p>Rolls the full Min-Max range at any floor, ignoring ItemPower and rarity. </p>
+<p>Use for stats whose range is floor-independent (e.g. flask recharge speed). </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00035">35</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00050">50</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
 
 </div>
 </div>

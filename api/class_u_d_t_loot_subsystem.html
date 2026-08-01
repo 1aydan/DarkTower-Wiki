@@ -168,8 +168,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a269d485c49b480e943f82a7596afcd33" id="r_a269d485c49b480e943f82a7596afcd33"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a269d485c49b480e943f82a7596afcd33">CalculateActualStatValue</a> (float NormalizedRoll, const <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> &amp;StatRow)</td></tr>
-<tr class="memdesc:a269d485c49b480e943f82a7596afcd33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate actual stat value from normalized roll value Note: NormalizedRoll already includes quality and rarity scaling from generation.  <br /></td></tr>
+<tr class="memitem:ab5a2672ceabdfb57bbf101c91382acb1" id="r_ab5a2672ceabdfb57bbf101c91382acb1"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#ab5a2672ceabdfb57bbf101c91382acb1">CalculateActualStatValue</a> (float NormalizedRoll, const <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> &amp;StatRow, int32 DisplayJitter=0)</td></tr>
+<tr class="memdesc:ab5a2672ceabdfb57bbf101c91382acb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate actual stat value from normalized roll value Note: NormalizedRoll already includes quality and rarity scaling from generation.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -190,6 +190,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a31a8ba216605baf89c6895cdb65e99af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate effective floor with diminishing returns beyond soft cap Formula: IF Floor ≤ SoftCap THEN Floor ELSE SoftCap + (Floor − SoftCap)^DR.  <br /></td></tr>
 <tr class="memitem:a226ed96eba9eee5a234c8872ec9f13c8" id="r_a226ed96eba9eee5a234c8872ec9f13c8"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a226ed96eba9eee5a234c8872ec9f13c8">CalculateItemPower</a> (float EffectiveFloor) const</td></tr>
 <tr class="memdesc:a226ed96eba9eee5a234c8872ec9f13c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate ItemPower (0-1) from effective floor, with a built-in minimum.  <br /></td></tr>
+<tr class="memitem:aa0f0d043dd003118af8a23cf4fe7fb20" id="r_aa0f0d043dd003118af8a23cf4fe7fb20"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aa0f0d043dd003118af8a23cf4fe7fb20">CalculateAffixPower</a> (float EffectiveFloor) const</td></tr>
+<tr class="memdesc:aa0f0d043dd003118af8a23cf4fe7fb20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate AffixPower (0-1) from effective floor, on its own scaling rate and minimum so affix magnitude can be paced independently of base-stat ItemPower.  <br /></td></tr>
 <tr class="memitem:a3700b18e7f7d25605d85396e549194e2" id="r_a3700b18e7f7d25605d85396e549194e2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a3700b18e7f7d25605d85396e549194e2">CalculateLootBudget</a> (float EffectiveFloor) const</td></tr>
 <tr class="memdesc:a3700b18e7f7d25605d85396e549194e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the loot budget (0-1) from effective floor, with a built-in minimum.  <br /></td></tr>
 <tr class="memitem:afccb2ee932f851176c68ee2aa63f9d4a" id="r_afccb2ee932f851176c68ee2aa63f9d4a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#afccb2ee932f851176c68ee2aa63f9d4a">CalculateLootBonus</a> (const <a class="el" href="struct_f_loot_context.html">FLootContext</a> &amp;Context) const</td></tr>
@@ -200,10 +202,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a288ac46f92dfd2aa6b4d0894beecd434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expected (fractional) extra loot rolls granted by the loot budget — no flooring, no RNG.  <br /></td></tr>
 <tr class="memitem:a3920f235de1e732d54eef857c967818f" id="r_a3920f235de1e732d54eef857c967818f"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a3920f235de1e732d54eef857c967818f">RollExtraLootRolls</a> (float EffectiveFloor, float FinalLootBudget) const</td></tr>
 <tr class="memdesc:a3920f235de1e732d54eef857c967818f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll the actual integer extra loot rolls from the expected value: the integer part is guaranteed and the fractional part is a probability for one more (e.g.  <br /></td></tr>
-<tr class="memitem:a9b5dd87216d41f4b8916d3dffab1d60a" id="r_a9b5dd87216d41f4b8916d3dffab1d60a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a9b5dd87216d41f4b8916d3dffab1d60a">CalculateRollFactor</a> ()</td></tr>
-<tr class="memdesc:a9b5dd87216d41f4b8916d3dffab1d60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate roll factor for stat generation Formula: RAND() ^ GlobalRollScalar.  <br /></td></tr>
-<tr class="memitem:a56dcec163ff6c5e0c67358fb58ff8d54" id="r_a56dcec163ff6c5e0c67358fb58ff8d54"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a56dcec163ff6c5e0c67358fb58ff8d54">RollAffixTierAlpha</a> (float EffectiveFloor, float ItemPower) const</td></tr>
-<tr class="memdesc:a56dcec163ff6c5e0c67358fb58ff8d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll an affix's normalized magnitude alpha using the floor-scaled tier system.  <br /></td></tr>
+<tr class="memitem:ab2f9235a263f56a0338786b791d29137" id="r_ab2f9235a263f56a0338786b791d29137"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab2f9235a263f56a0338786b791d29137">CalculateRollFactor</a> () const</td></tr>
+<tr class="memdesc:ab2f9235a263f56a0338786b791d29137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate roll factor for stat generation Formula: RAND() ^ GlobalRollScalar.  <br /></td></tr>
+<tr class="memitem:a55b44555a5cf3cb6a3ddfc44f9c1b505" id="r_a55b44555a5cf3cb6a3ddfc44f9c1b505"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a55b44555a5cf3cb6a3ddfc44f9c1b505">RollAffixTierAlpha</a> (float EffectiveFloor) const</td></tr>
+<tr class="memdesc:a55b44555a5cf3cb6a3ddfc44f9c1b505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll an affix's normalized magnitude alpha using the floor-scaled tier system.  <br /></td></tr>
 <tr class="memitem:add6c1743b49a6f2594482feffe3f95bd" id="r_add6c1743b49a6f2594482feffe3f95bd"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#add6c1743b49a6f2594482feffe3f95bd">GetEffectiveFloorFromContext</a> (const <a class="el" href="struct_f_loot_context.html">FLootContext</a> &amp;Context) const</td></tr>
 <tr class="memdesc:add6c1743b49a6f2594482feffe3f95bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the floor to use for calculations (uses override if set, otherwise game state).  <br /></td></tr>
 <tr class="memitem:a66ae070559cee2c0ba38fcb2f8d18cf0" id="r_a66ae070559cee2c0ba38fcb2f8d18cf0"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a66ae070559cee2c0ba38fcb2f8d18cf0">CalculateBaseItemLevel</a> (float EffectiveFloor, FGameplayTag RarityTag) const</td></tr>
@@ -220,6 +222,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a3e24500514f12c49f0938a0d92090a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the rarity for a loot item using loot-budget-driven weights.  <br /></td></tr>
 <tr class="memitem:ad9d093affb5fd74c160e764d9e9ba720" id="r_ad9d093affb5fd74c160e764d9e9ba720"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#ad9d093affb5fd74c160e764d9e9ba720">CalculateStackCount</a> (const <a class="el" href="struct_f_loot_table_row.html">FLootTableRow</a> &amp;Row) const</td></tr>
 <tr class="memdesc:ad9d093affb5fd74c160e764d9e9ba720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate stack count for a stackable item.  <br /></td></tr>
+<tr class="memitem:ae938bf683ca43bccbc562af107d699a6" id="r_ae938bf683ca43bccbc562af107d699a6"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#ae938bf683ca43bccbc562af107d699a6">PickWeightedIndex</a> (TArrayView&lt; const float &gt; Weights) const</td></tr>
+<tr class="memdesc:ae938bf683ca43bccbc562af107d699a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pick one index from a weight array using LootStream (the shared weighted-selection core).  <br /></td></tr>
 <tr class="memitem:a436d295ddbb880e61afe0f609a4268c9" id="r_a436d295ddbb880e61afe0f609a4268c9"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a436d295ddbb880e61afe0f609a4268c9">SelectWeightedIndex</a> (const TArray&lt; <a class="el" href="struct_f_loot_table_row.html">FLootTableRow</a> * &gt; &amp;AvailableRows, const TArray&lt; float &gt; &amp;Weights) const</td></tr>
 <tr class="memdesc:a436d295ddbb880e61afe0f609a4268c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a loot row using weighted random selection.  <br /></td></tr>
 <tr class="memitem:a356f7ef6cfb8fdaa6ea2e226d79d7375" id="r_a356f7ef6cfb8fdaa6ea2e226d79d7375"><td class="memItemLeft">TArray&lt; int32 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a356f7ef6cfb8fdaa6ea2e226d79d7375">SelectWeightedIndices</a> (const TArray&lt; float &gt; &amp;Weights, int32 NumToSelect) const</td></tr>
@@ -230,14 +234,16 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:aaaaebfeb3b60f6fd9d9fe0a2b97b3a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll base stats for an item based on its base stat table.  <br /></td></tr>
 <tr class="memitem:a967434f1e577970adda1f42122760d86" id="r_a967434f1e577970adda1f42122760d86"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a967434f1e577970adda1f42122760d86">BuildBaseStatPool</a> (const FInventoryItemInfo &amp;ItemInfo, TArray&lt; <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> * &gt; &amp;OutStatPool, TArray&lt; float &gt; &amp;OutWeights)</td></tr>
 <tr class="memdesc:a967434f1e577970adda1f42122760d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper: Build base stat pool from item-specific and global tables.  <br /></td></tr>
-<tr class="memitem:a2f132e4df7b22534cd6c1301a2bd0bac" id="r_a2f132e4df7b22534cd6c1301a2bd0bac"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a2f132e4df7b22534cd6c1301a2bd0bac">RollForcedBaseStats</a> (FInventoryItemInfo &amp;ItemInfo, TArray&lt; <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> * &gt; &amp;StatPool, TArray&lt; float &gt; &amp;Weights, float ItemPower, float RarityStatMultiplier)</td></tr>
-<tr class="memdesc:a2f132e4df7b22534cd6c1301a2bd0bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper: Roll forced stats from the item's stats fragment.  <br /></td></tr>
-<tr class="memitem:a94e39aaa2c697d5a05ebd59a0a076391" id="r_a94e39aaa2c697d5a05ebd59a0a076391"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a94e39aaa2c697d5a05ebd59a0a076391">CalculateStatValue</a> (FInventoryItemInfo &amp;ItemInfo, const <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> *StatRow, float ItemPower, float RarityStatMultiplier)</td></tr>
-<tr class="memdesc:a94e39aaa2c697d5a05ebd59a0a076391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate and add a stat value to an item based on a stat row.  <br /></td></tr>
-<tr class="memitem:a202b1d9d26f05d8d1e75ea0f68d353ff" id="r_a202b1d9d26f05d8d1e75ea0f68d353ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a202b1d9d26f05d8d1e75ea0f68d353ff">RollAffixes</a> (FInventoryItemInfo &amp;ItemInfo, float EffectiveFloor, float ItemPower, int32 GatingItemLevel) const</td></tr>
-<tr class="memdesc:a202b1d9d26f05d8d1e75ea0f68d353ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll affixes for an item based on its rarity and affix pool.  <br /></td></tr>
-<tr class="memitem:a3800e9af5dc66a0c218cf6aaa1f739e1" id="r_a3800e9af5dc66a0c218cf6aaa1f739e1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3800e9af5dc66a0c218cf6aaa1f739e1">RollAffixesForSlot</a> (FInventoryItemInfo &amp;ItemInfo, <a class="el" href="_d_t_inventory_types_8h.html#a31782345de601fe8e4f4f5530f2f2315">EAffixSlotType</a> SlotType, int32 AffixCount, FGameplayTagContainer &amp;ExcludedTags, TSet&lt; FGuid &gt; &amp;RolledAffixGuids, float EffectiveFloor, float ItemPower, int32 GatingItemLevel) const</td></tr>
-<tr class="memdesc:a3800e9af5dc66a0c218cf6aaa1f739e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to roll affixes for a specific slot type (prefix/suffix).  <br /></td></tr>
+<tr class="memitem:a1094c0b7f94a3a84c87523494542bc13" id="r_a1094c0b7f94a3a84c87523494542bc13"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a1094c0b7f94a3a84c87523494542bc13">RollForcedBaseStats</a> (FInventoryItemInfo &amp;ItemInfo, TArray&lt; <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> * &gt; &amp;StatPool, TArray&lt; float &gt; &amp;Weights, float ItemPower, float RarityStatMultiplier) const</td></tr>
+<tr class="memdesc:a1094c0b7f94a3a84c87523494542bc13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper: Roll forced stats from the item's stats fragment.  <br /></td></tr>
+<tr class="memitem:ac4c746d75d28c0da47587f0b544d1800" id="r_ac4c746d75d28c0da47587f0b544d1800"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac4c746d75d28c0da47587f0b544d1800">CalculateStatValue</a> (FInventoryItemInfo &amp;ItemInfo, const <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> *StatRow, float ItemPower, float RarityStatMultiplier) const</td></tr>
+<tr class="memdesc:ac4c746d75d28c0da47587f0b544d1800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate and add a stat value to an item based on a stat row.  <br /></td></tr>
+<tr class="memitem:a006627e7ac93f4626f415ef0f5914b4d" id="r_a006627e7ac93f4626f415ef0f5914b4d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a006627e7ac93f4626f415ef0f5914b4d">RollAffixes</a> (FInventoryItemInfo &amp;ItemInfo, float EffectiveFloor, int32 GatingItemLevel) const</td></tr>
+<tr class="memdesc:a006627e7ac93f4626f415ef0f5914b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll affixes for an item based on its rarity and affix pool.  <br /></td></tr>
+<tr class="memitem:a563e337471d56487b8b393858215b279" id="r_a563e337471d56487b8b393858215b279"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a563e337471d56487b8b393858215b279">RollAffixesForSlot</a> (FInventoryItemInfo &amp;ItemInfo, <a class="el" href="_d_t_inventory_types_8h.html#a31782345de601fe8e4f4f5530f2f2315">EAffixSlotType</a> SlotType, int32 AffixCount, FGameplayTagContainer &amp;ExcludedTags, TSet&lt; FGuid &gt; &amp;RolledAffixGuids, float EffectiveFloor, int32 GatingItemLevel) const</td></tr>
+<tr class="memdesc:a563e337471d56487b8b393858215b279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to roll affixes for a specific slot type (prefix/suffix).  <br /></td></tr>
+<tr class="memitem:a0a2f985e2a7adbbe2ffd2ca459d04f2a" id="r_a0a2f985e2a7adbbe2ffd2ca459d04f2a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0a2f985e2a7adbbe2ffd2ca459d04f2a">RollItemAbilities</a> (FInventoryItemInfo &amp;ItemInfo, const UInventoryItemDefinition *ItemDef) const</td></tr>
+<tr class="memdesc:a0a2f985e2a7adbbe2ffd2ca459d04f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll the item's active (weapon) and passive (other equipment) abilities from its authored AbilitySlots.  <br /></td></tr>
 <tr class="memitem:ad14a293d4f37015b79346b5d8f5f69c2" id="r_ad14a293d4f37015b79346b5d8f5f69c2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad14a293d4f37015b79346b5d8f5f69c2">CacheLootTableRows</a> (UDataTable *LootTable)</td></tr>
 <tr class="memdesc:ad14a293d4f37015b79346b5d8f5f69c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache loot table rows for a specific table.  <br /></td></tr>
 <tr class="memitem:a96a0e4acd70a543a8f19b2f99528da87" id="r_a96a0e4acd70a543a8f19b2f99528da87"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a96a0e4acd70a543a8f19b2f99528da87">CacheBaseStatRows</a> (UDataTable *BaseStatTable)</td></tr>
@@ -283,7 +289,7 @@ Static Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Subsystem to manage loot in the world. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00062">62</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00059">59</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a967434f1e577970adda1f42122760d86" name="a967434f1e577970adda1f42122760d86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a967434f1e577970adda1f42122760d86">&#9670;&#160;</a></span>BuildBaseStatPool()</h2>
@@ -327,11 +333,11 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01036">1036</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01103">1103</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01036">BuildBaseStatPool()</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01616">GetOrCacheBaseStatRows()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01103">BuildBaseStatPool()</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01672">GetOrCacheBaseStatRows()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01036">BuildBaseStatPool()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00981">RollBaseStats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01103">BuildBaseStatPool()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01048">RollBaseStats()</a>.</p>
 
 </div>
 </div>
@@ -360,11 +366,11 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Cache all affix rows and separate them into prefixes/suffixes. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01558">1558</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01619">1619</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00189">CachedGlobalAffixData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00026">Prefix</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00027">Suffix</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00187">CachedGlobalAffixData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00028">Prefix</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00029">Suffix</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01393">RebuildDataTableCache()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01454">RebuildDataTableCache()</a>.</p>
 
 </div>
 </div>
@@ -399,11 +405,11 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01543">1543</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01604">1604</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00186">CachedGlobalBaseStatRows</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00184">CachedGlobalBaseStatRows</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01616">GetOrCacheBaseStatRows()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01393">RebuildDataTableCache()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01672">GetOrCacheBaseStatRows()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01454">RebuildDataTableCache()</a>.</p>
 
 </div>
 </div>
@@ -438,11 +444,11 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01528">1528</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01589">1589</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00183">CachedGlobalLootTableRows</a>, and <a class="el" href="_d_t_loot_source_component_8h_source.html#l00023">LootTable</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00181">CachedGlobalLootTableRows</a>, and <a class="el" href="_d_t_loot_source_component_8h_source.html#l00023">LootTable</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01597">GetOrCacheLootTableRows()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01653">GetOrCacheLootTableRows()</a>.</p>
 
 </div>
 </div>
@@ -472,16 +478,16 @@ Static Protected Attributes</h2></td></tr>
 <p>Cache per-rarity weighting inputs from the data asset and validate that every rarity tier is configured. </p>
 <p>Logs a warning if a tier is missing or has a non-positive base rate (which would otherwise collapse rarity selection toward a uniform distribution). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01430">1430</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01491">1491</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00192">CachedRarityWeights</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00053">FCachedRarityWeight::GlobalBaseRate</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00361">FLootRarityData::GlobalBaseRate</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00054">FCachedRarityWeight::GlobalWeightScalar</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00365">FLootRarityData::GlobalWeightScalar</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00052">FCachedRarityWeight::RarityTag</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00055">FCachedRarityWeight::StatMultiplier</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00349">FLootRarityData::StatMultiplier</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00190">CachedRarityWeights</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00050">FCachedRarityWeight::GlobalBaseRate</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00291">FLootRarityData::GlobalBaseRate</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00051">FCachedRarityWeight::GlobalWeightScalar</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00295">FLootRarityData::GlobalWeightScalar</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00049">FCachedRarityWeight::RarityTag</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00052">FCachedRarityWeight::StatMultiplier</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00279">FLootRarityData::StatMultiplier</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01393">RebuildDataTableCache()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01454">RebuildDataTableCache()</a>.</p>
 
 </div>
 </div>
-<a id="a269d485c49b480e943f82a7596afcd33" name="a269d485c49b480e943f82a7596afcd33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a269d485c49b480e943f82a7596afcd33">&#9670;&#160;</a></span>CalculateActualStatValue()</h2>
+<a id="ab5a2672ceabdfb57bbf101c91382acb1" name="ab5a2672ceabdfb57bbf101c91382acb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a2672ceabdfb57bbf101c91382acb1">&#9670;&#160;</a></span>CalculateActualStatValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -497,7 +503,12 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>StatRow</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>StatRow</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>DisplayJitter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -512,16 +523,57 @@ Static Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">NormalizedRoll</td><td>The normalized roll value stored on the item (includes quality/rarity) </td></tr>
     <tr><td class="paramname">StatRow</td><td>The base stat row containing min/max ranges </td></tr>
+    <tr><td class="paramname">DisplayJitter</td><td>Flat display-space offset added to the final value (e.g. -3..+3); +2 = 5-&gt;7 or 5%-&gt;7% </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Calculated actual stat value </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Calculated actual stat value (floored at 1 in display terms: 1 flat, or 1% for percent stats) </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00195">195</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00239">FBaseStatTableRow::MaxValue</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00235">FBaseStatTableRow::MinValue</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00038">Multiply</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00231">FBaseStatTableRow::Operation</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00153">FBaseStatTableRow::bShowAsPercent</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00157">FBaseStatTableRow::DecimalPlaces</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00165">FBaseStatTableRow::MaxValue</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00161">FBaseStatTableRow::MinValue</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00118">Multiply</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00149">FBaseStatTableRow::Operation</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00129">CalculateTotalStatValue()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00127">FDTEquipmentStatHelper::CollectAllStats()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00435">UDTUIBlueprintLibrary::GetItemBaseStatDisplayInfo()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00503">UDTEquipmentInstance::GetTotalStatModifier()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00398">UDTCheatManager::TestLootGen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00130">CalculateTotalStatValue()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00136">FDTEquipmentStatHelper::CollectAllStats()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00424">UDTUIBlueprintLibrary::GetItemBaseStatDisplayInfo()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00457">UDTEquipmentInstance::GetTotalStatModifier()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00417">UDTCheatManager::TestLootGen()</a>.</p>
+
+</div>
+</div>
+<a id="aa0f0d043dd003118af8a23cf4fe7fb20" name="aa0f0d043dd003118af8a23cf4fe7fb20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0f0d043dd003118af8a23cf4fe7fb20">&#9670;&#160;</a></span>CalculateAffixPower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTLootSubsystem::CalculateAffixPower </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>EffectiveFloor</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate AffixPower (0-1) from effective floor, on its own scaling rate and minimum so affix magnitude can be paced independently of base-stat ItemPower. </p>
+<p>Formula: MinAffixPower + (1 - MinAffixPower) * (1 - EXP(-EffectiveFloor / GlobalAffixPowerScalingRate)) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EffectiveFloor</td><td>Floor value after diminishing returns </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>AffixPower between MinAffixPower and 1 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00763">763</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00899">RollAffixTierAlpha()</a>.</p>
 
 </div>
 </div>
@@ -562,11 +614,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Base item level (without stat contribution) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00114">114</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00115">115</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00357">FLootRarityData::ItemLevelBonus</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00287">FLootRarityData::ItemLevelBonus</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
@@ -602,11 +654,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Effective floor value after diminishing returns </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00676">676</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00727">727</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00801">GetExpectedExtraLootRollsForFloor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00869">GetExpectedExtraLootRollsForFloor()</a>.</p>
 
 </div>
 </div>
@@ -649,9 +701,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00154">154</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
@@ -692,11 +744,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Final loot budget driving drop quantity and rarity weighting </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00757">757</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00825">825</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00727">CalculateLootBonus()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00712">CalculateLootBudget()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00795">CalculateLootBonus()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00780">CalculateLootBudget()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>.</p>
 
 </div>
 </div>
@@ -732,11 +784,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ItemPower between MinItemPower and 1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00697">697</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00748">748</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
@@ -777,11 +829,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Selected rarity tag </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00207">207</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00231">231</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00192">CachedRarityWeights</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00190">CachedRarityWeights</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01388">PickWeightedIndex()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
@@ -824,9 +876,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00176">176</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00120">UDTGlobalLootData::BaseValuePerItemLevel</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00036">UDTGlobalLootData::GetRarityData()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00353">FLootRarityData::ValueMultiplier</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_global_loot_data_8h_source.html#l00135">UDTGlobalLootData::BaseValuePerItemLevel</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00038">UDTGlobalLootData::GetRarityData()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00283">FLootRarityData::ValueMultiplier</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
@@ -864,9 +916,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00165">165</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
@@ -902,11 +954,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Combined loot bonus (additive, e.g. 0.25 = +25%) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00727">727</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00795">795</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00492">FLootContext::LootBonus</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00472">FLootContext::RequestorTags</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00468">FLootContext::LootBonus</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00448">FLootContext::RequestorTags</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00757">CalculateFinalLootBudget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00825">CalculateFinalLootBudget()</a>.</p>
 
 </div>
 </div>
@@ -942,16 +994,16 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Loot budget between MinLoot and 1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00712">712</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00780">780</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00757">CalculateFinalLootBudget()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00801">GetExpectedExtraLootRollsForFloor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00825">CalculateFinalLootBudget()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00869">GetExpectedExtraLootRollsForFloor()</a>.</p>
 
 </div>
 </div>
-<a id="a9b5dd87216d41f4b8916d3dffab1d60a" name="a9b5dd87216d41f4b8916d3dffab1d60a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b5dd87216d41f4b8916d3dffab1d60a">&#9670;&#160;</a></span>CalculateRollFactor()</h2>
+<a id="ab2f9235a263f56a0338786b791d29137" name="ab2f9235a263f56a0338786b791d29137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f9235a263f56a0338786b791d29137">&#9670;&#160;</a></span>CalculateRollFactor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -963,7 +1015,7 @@ Static Protected Attributes</h2></td></tr>
           <td class="memname">float UDTLootSubsystem::CalculateRollFactor </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -976,11 +1028,11 @@ Static Protected Attributes</h2></td></tr>
 <p>Calculate roll factor for stat generation Formula: RAND() ^ GlobalRollScalar. </p>
 <dl class="section return"><dt>Returns</dt><dd>Roll factor for positioning within stat range </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00817">817</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00885">885</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00169">LootStream</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01133">CalculateStatValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01208">CalculateStatValue()</a>.</p>
 
 </div>
 </div>
@@ -1016,16 +1068,16 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Calculated stack count </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00244">244</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00250">250</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00400">FLootTableRow::MaxStackCount</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00396">FLootTableRow::MinStackCount</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00169">LootStream</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00330">FLootTableRow::MaxStackCount</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00326">FLootTableRow::MinStackCount</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
-<a id="a94e39aaa2c697d5a05ebd59a0a076391" name="a94e39aaa2c697d5a05ebd59a0a076391"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94e39aaa2c697d5a05ebd59a0a076391">&#9670;&#160;</a></span>CalculateStatValue()</h2>
+<a id="ac4c746d75d28c0da47587f0b544d1800" name="ac4c746d75d28c0da47587f0b544d1800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c746d75d28c0da47587f0b544d1800">&#9670;&#160;</a></span>CalculateStatValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1051,7 +1103,7 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>RarityStatMultiplier</em></span>&#160;)</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>RarityStatMultiplier</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1072,11 +1124,11 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01133">1133</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01208">1208</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00817">CalculateRollFactor()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00239">FBaseStatTableRow::MaxValue</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00235">FBaseStatTableRow::MinValue</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00058">Range</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00223">FBaseStatTableRow::StatTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00885">CalculateRollFactor()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00056">FullRange</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00169">LootStream</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00165">FBaseStatTableRow::MaxValue</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00161">FBaseStatTableRow::MinValue</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00126">Range</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00177">FBaseStatTableRow::RollBehavior</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00141">FBaseStatTableRow::StatTag</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00981">RollBaseStats()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01069">RollForcedBaseStats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01048">RollBaseStats()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01144">RollForcedBaseStats()</a>.</p>
 
 </div>
 </div>
@@ -1112,11 +1164,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Total sum of all stat values </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00129">129</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00130">130</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00195">CalculateActualStatValue()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00195">CalculateActualStatValue()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
@@ -1137,11 +1189,11 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Clear all cached data table rows. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01422">1422</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01483">1483</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00189">CachedGlobalAffixData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00186">CachedGlobalBaseStatRows</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00183">CachedGlobalLootTableRows</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00192">CachedRarityWeights</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00187">CachedGlobalAffixData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00184">CachedGlobalBaseStatRows</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00181">CachedGlobalLootTableRows</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00190">CachedRarityWeights</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01393">RebuildDataTableCache()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01454">RebuildDataTableCache()</a>.</p>
 
 </div>
 </div>
@@ -1160,9 +1212,9 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00078">78</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00079">79</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00165">LootItems</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00071">OnLootUnregistered</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00163">LootItems</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00068">OnLootUnregistered</a>.</p>
 
 </div>
 </div>
@@ -1195,11 +1247,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if any loot was generated </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">351</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">422</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00509">FLootContext::bGuaranteeAllItems</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00676">CalculateEffectiveFloor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00757">CalculateFinalLootBudget()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00404">FLootTableRow::DropChance</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00666">GetEffectiveFloorFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01597">GetOrCacheLootTableRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00091">InitializeRandomStreams()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00500">FLootContext::ItemDefinitions</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00388">FLootTableRow::LootDefinition</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>, <a class="el" href="_d_t_loot_source_component_8h_source.html#l00023">LootTable</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00448">FLootContext::LootTables</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00464">FLootContext::MaxItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::MaxLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00400">FLootTableRow::MaxStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00460">FLootContext::MinItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::MinLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00396">FLootTableRow::MinStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00504">FLootContext::PreGeneratedLoot</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00779">RollExtraLootRolls()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00484">FLootContext::SeedOverride</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01299">SelectWeightedIndex()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00392">FLootTableRow::Weight</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00481">FLootContext::bGuaranteeAllItems</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00727">CalculateEffectiveFloor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00825">CalculateFinalLootBudget()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00334">FLootTableRow::DropChance</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00717">GetEffectiveFloorFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01653">GetOrCacheLootTableRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00092">InitializeRandomStreams()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00476">FLootContext::ItemDefinitions</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00318">FLootTableRow::LootDefinition</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00169">LootStream</a>, <a class="el" href="_d_t_loot_source_component_8h_source.html#l00023">LootTable</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00424">FLootContext::LootTables</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00440">FLootContext::MaxItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00432">FLootContext::MaxLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00330">FLootTableRow::MaxStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00436">FLootContext::MinItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00428">FLootContext::MinLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00326">FLootTableRow::MinStackCount</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00847">RollExtraLootRolls()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00460">FLootContext::SeedOverride</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01416">SelectWeightedIndex()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00322">FLootTableRow::Weight</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00547">SpawnLootFromContext()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00680">UDTCheatManager::SpawnLootWithAffix()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00398">UDTCheatManager::TestLootGen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00598">SpawnLootFromContext()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00697">UDTCheatManager::SpawnLootWithAffix()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00417">UDTCheatManager::TestLootGen()</a>.</p>
 
 </div>
 </div>
@@ -1264,11 +1316,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if item was successfully generated (passed drop chance) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">267</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">275</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00180">bUseHugeSeedDistribution</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00114">CalculateBaseItemLevel()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00154">CalculateFinalItemLevel()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00697">CalculateItemPower()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00207">CalculateItemRarity()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00176">CalculateItemValue()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00165">CalculateLevelRequirement()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00244">CalculateStackCount()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00129">CalculateTotalStatValue()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00404">FLootTableRow::DropChance</a>, <a class="el" href="_d_t_math_library_8cpp_source.html#l00015">UDTMathLibrary::GenerateDerivedSeed()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01515">GetRarityStatMultiplier()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00249">ItemSupportsLootGen()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00388">FLootTableRow::LootDefinition</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01196">RollAffixes()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00981">RollBaseStats()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00178">bUseHugeSeedDistribution</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00115">CalculateBaseItemLevel()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00154">CalculateFinalItemLevel()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00748">CalculateItemPower()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00231">CalculateItemRarity()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00176">CalculateItemValue()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00165">CalculateLevelRequirement()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00250">CalculateStackCount()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00130">CalculateTotalStatValue()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00334">FLootTableRow::DropChance</a>, <a class="el" href="_d_t_math_library_8cpp_source.html#l00015">UDTMathLibrary::GenerateDerivedSeed()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01576">GetRarityStatMultiplier()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00255">ItemSupportsLootGen()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00318">FLootTableRow::LootDefinition</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00169">LootStream</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01272">RollAffixes()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01048">RollBaseStats()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00363">RollItemAbilities()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
@@ -1290,11 +1342,11 @@ Static Protected Attributes</h2></td></tr>
 <p>Get the current floor from the game state (for loot scaling purposes). </p>
 <dl class="section return"><dt>Returns</dt><dd>Current floor number, or 1 if game state is not valid </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00632">632</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00683">683</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_game_state_8h_source.html#l00044">ADTGameState::GetCurrentDungeonFloor()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00666">GetEffectiveFloorFromContext()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00766">UDTCheatManager::LogExtraLootRolls()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00717">GetEffectiveFloorFromContext()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00780">UDTCheatManager::LogExtraLootRolls()</a>.</p>
 
 </div>
 </div>
@@ -1316,7 +1368,7 @@ Static Protected Attributes</h2></td></tr>
 <p>Get the current dungeon seed from the game state (for loot generation consistency). </p>
 <dl class="section return"><dt>Returns</dt><dd>Current dungeon seed, or 0 if game state is not valid </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00649">649</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00700">700</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_game_state_8h_source.html#l00048">ADTGameState::GetCurrentDungeonSeed()</a>.</p>
 
@@ -1354,11 +1406,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Floor value to use for scaling calculations </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00666">666</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00717">717</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00488">FLootContext::FloorOverride</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00632">GetCurrentDungeonFloor()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00464">FLootContext::FloorOverride</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00683">GetCurrentDungeonFloor()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>.</p>
 
 </div>
 </div>
@@ -1399,11 +1451,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Expected extra rolls as a fractional value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00770">770</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00838">838</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00801">GetExpectedExtraLootRollsForFloor()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00779">RollExtraLootRolls()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00869">GetExpectedExtraLootRollsForFloor()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00847">RollExtraLootRolls()</a>.</p>
 
 </div>
 </div>
@@ -1448,11 +1500,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Expected extra loot rolls (fractional, clamped to MaxExtraLootRolls) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00801">801</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00869">869</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00676">CalculateEffectiveFloor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00712">CalculateLootBudget()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00770">GetExpectedExtraLootRolls()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00727">CalculateEffectiveFloor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00780">CalculateLootBudget()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00838">GetExpectedExtraLootRolls()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00766">UDTCheatManager::LogExtraLootRolls()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00780">UDTCheatManager::LogExtraLootRolls()</a>.</p>
 
 </div>
 </div>
@@ -1479,11 +1531,11 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00083">83</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00083">GetLootItems()</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00165">LootItems</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00080">GetLootItems()</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00163">LootItems</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00083">GetLootItems()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00080">GetLootItems()</a>.</p>
 
 </div>
 </div>
@@ -1519,11 +1571,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Cached array of base stat rows </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01616">1616</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01672">1672</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01543">CacheBaseStatRows()</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00186">CachedGlobalBaseStatRows</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01604">CacheBaseStatRows()</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00184">CachedGlobalBaseStatRows</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01036">BuildBaseStatPool()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01103">BuildBaseStatPool()</a>.</p>
 
 </div>
 </div>
@@ -1559,11 +1611,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Cached array of loot table rows </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01597">1597</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01653">1653</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00183">CachedGlobalLootTableRows</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01528">CacheLootTableRows()</a>, and <a class="el" href="_d_t_loot_source_component_8h_source.html#l00023">LootTable</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00181">CachedGlobalLootTableRows</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01589">CacheLootTableRows()</a>, and <a class="el" href="_d_t_loot_source_component_8h_source.html#l00023">LootTable</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>.</p>
 
 </div>
 </div>
@@ -1599,11 +1651,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Stat multiplier for that rarity </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01515">1515</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01576">1576</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00192">CachedRarityWeights</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00190">CachedRarityWeights</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
@@ -1638,11 +1690,11 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00091">91</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00092">92</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00180">bUseHugeSeedDistribution</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>, <a class="el" href="_d_t_math_library_8cpp_source.html#l00058">UDTMathLibrary::NextRandomInt()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00484">FLootContext::SeedOverride</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00178">bUseHugeSeedDistribution</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00169">LootStream</a>, <a class="el" href="_d_t_math_library_8cpp_source.html#l00058">UDTMathLibrary::NextRandomInt()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00460">FLootContext::SeedOverride</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>.</p>
 
 </div>
 </div>
@@ -1678,9 +1730,9 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the item supports full loot stat generation </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00249">249</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00255">255</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
@@ -1707,9 +1759,49 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00022">22</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00023">23</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00180">bUseHugeSeedDistribution</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, <a class="el" href="_d_t_math_library_8cpp_source.html#l00036">UDTMathLibrary::GenerateRandomSeed()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00042">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00029">UDTGlobalData::GlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01393">RebuildDataTableCache()</a>, and <a class="el" href="_d_t_math_library_8cpp_source.html#l00053">UDTMathLibrary::SeedRandomGenerator()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00178">bUseHugeSeedDistribution</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_math_library_8cpp_source.html#l00036">UDTMathLibrary::GenerateRandomSeed()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00029">UDTGlobalData::GlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01454">RebuildDataTableCache()</a>, and <a class="el" href="_d_t_math_library_8cpp_source.html#l00053">UDTMathLibrary::SeedRandomGenerator()</a>.</p>
+
+</div>
+</div>
+<a id="ae938bf683ca43bccbc562af107d699a6" name="ae938bf683ca43bccbc562af107d699a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae938bf683ca43bccbc562af107d699a6">&#9670;&#160;</a></span>PickWeightedIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTLootSubsystem::PickWeightedIndex </td>
+          <td>(</td>
+          <td class="paramtype">TArrayView&lt; const float &gt;</td>          <td class="paramname"><span class="paramname"><em>Weights</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pick one index from a weight array using LootStream (the shared weighted-selection core). </p>
+<p>Consumes exactly one LootStream draw when any positive weight exists. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Weights</td><td>Weight per index (non-positive weights are never selected) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Selected index, or INDEX_NONE if no positive weight exists </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01388">1388</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00169">LootStream</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00231">CalculateItemRarity()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01310">RollAffixesForSlot()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00363">RollItemAbilities()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01416">SelectWeightedIndex()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01426">SelectWeightedIndices()</a>.</p>
 
 </div>
 </div>
@@ -1730,11 +1822,11 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Rebuild all cached data table rows (loot tables, base stats, affixes) Call this after modifying data tables in editor or when hot-reloading. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01393">1393</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01454">1454</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01558">CacheAffixRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01543">CacheBaseStatRows()</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00189">CachedGlobalAffixData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00186">CachedGlobalBaseStatRows</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00192">CachedRarityWeights</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01430">CacheRarityWeights()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01422">ClearDataTableCache()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01619">CacheAffixRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01604">CacheBaseStatRows()</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00187">CachedGlobalAffixData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00184">CachedGlobalBaseStatRows</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00190">CachedRarityWeights</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01491">CacheRarityWeights()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01483">ClearDataTableCache()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00022">OnWorldBeginPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00023">OnWorldBeginPlay()</a>.</p>
 
 </div>
 </div>
@@ -1753,16 +1845,16 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00048">48</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00049">49</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00165">LootItems</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00068">OnLootRegistered</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00163">LootItems</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00065">OnLootRegistered</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00214">ADTItemActor::TryRegisterLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00218">ADTItemActor::TryRegisterLoot()</a>.</p>
 
 </div>
 </div>
-<a id="a202b1d9d26f05d8d1e75ea0f68d353ff" name="a202b1d9d26f05d8d1e75ea0f68d353ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a202b1d9d26f05d8d1e75ea0f68d353ff">&#9670;&#160;</a></span>RollAffixes()</h2>
+<a id="a006627e7ac93f4626f415ef0f5914b4d" name="a006627e7ac93f4626f415ef0f5914b4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a006627e7ac93f4626f415ef0f5914b4d">&#9670;&#160;</a></span>RollAffixes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1783,11 +1875,6 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>ItemPower</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>GatingItemLevel</em></span>&#160;) const</td>
         </tr>
       </table>
@@ -1802,23 +1889,22 @@ Static Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ItemInfo</td><td>Item to roll affixes for (modified in place) </td></tr>
-    <tr><td class="paramname">EffectiveFloor</td><td>Floor after diminishing returns (drives the affix tier distribution) </td></tr>
-    <tr><td class="paramname">ItemPower</td><td>ItemPower scalar (0-1) used as the affix floor magnitude scale </td></tr>
+    <tr><td class="paramname">EffectiveFloor</td><td>Floor after diminishing returns (drives the affix tier distribution and AffixPower) </td></tr>
     <tr><td class="paramname">GatingItemLevel</td><td>Provisional item level used to gate affixes via CanRollAtLevel </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01196">1196</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01272">1272</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00156">FRarityAffixConfig::MaxPrefixes</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00162">FRarityAffixConfig::MaxSuffixes</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00153">FRarityAffixConfig::MinPrefixes</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00159">FRarityAffixConfig::MinSuffixes</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00026">Prefix</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01234">RollAffixesForSlot()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00027">Suffix</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00169">LootStream</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00108">FRarityAffixConfig::MaxPrefixes</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00114">FRarityAffixConfig::MaxSuffixes</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00105">FRarityAffixConfig::MinPrefixes</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00111">FRarityAffixConfig::MinSuffixes</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00028">Prefix</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01310">RollAffixesForSlot()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00029">Suffix</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
-<a id="a3800e9af5dc66a0c218cf6aaa1f739e1" name="a3800e9af5dc66a0c218cf6aaa1f739e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3800e9af5dc66a0c218cf6aaa1f739e1">&#9670;&#160;</a></span>RollAffixesForSlot()</h2>
+<a id="a563e337471d56487b8b393858215b279" name="a563e337471d56487b8b393858215b279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a563e337471d56487b8b393858215b279">&#9670;&#160;</a></span>RollAffixesForSlot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1859,11 +1945,6 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>ItemPower</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>GatingItemLevel</em></span>&#160;) const</td>
         </tr>
       </table>
@@ -1882,23 +1963,22 @@ Static Protected Attributes</h2></td></tr>
     <tr><td class="paramname">AffixCount</td><td>How many affixes to roll </td></tr>
     <tr><td class="paramname">ExcludedTags</td><td>Tags that prevent affixes from rolling together (shared across prefix and suffix passes) </td></tr>
     <tr><td class="paramname">RolledAffixGuids</td><td>GUIDs of affixes already rolled on this item; prevents duplicates unless bAllowDuplicates is set on the affix </td></tr>
-    <tr><td class="paramname">EffectiveFloor</td><td>Floor after diminishing returns (drives the affix tier distribution) </td></tr>
-    <tr><td class="paramname">ItemPower</td><td>ItemPower scalar (0-1) used as the affix floor magnitude scale </td></tr>
+    <tr><td class="paramname">EffectiveFloor</td><td>Floor after diminishing returns (drives the affix tier distribution and AffixPower) </td></tr>
     <tr><td class="paramname">GatingItemLevel</td><td>Provisional item level used to gate affixes via CanRollAtLevel </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01234">1234</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01310">1310</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00189">CachedGlobalAffixData</a>, <a class="el" href="_d_t_affix_definition_8h_source.html#l00030">UDTAffixDefinition::DisplayName</a>, <a class="el" href="_d_t_affix_definition_8h_source.html#l00042">UDTAffixDefinition::ExclusionTags</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00026">Prefix</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00831">RollAffixTierAlpha()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00027">Suffix</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00187">CachedGlobalAffixData</a>, <a class="el" href="_d_t_affix_definition_8h_source.html#l00030">UDTAffixDefinition::DisplayName</a>, <a class="el" href="_d_t_affix_definition_8h_source.html#l00042">UDTAffixDefinition::ExclusionTags</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01388">PickWeightedIndex()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00028">Prefix</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00899">RollAffixTierAlpha()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00029">Suffix</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01196">RollAffixes()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01272">RollAffixes()</a>.</p>
 
 </div>
 </div>
-<a id="a56dcec163ff6c5e0c67358fb58ff8d54" name="a56dcec163ff6c5e0c67358fb58ff8d54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56dcec163ff6c5e0c67358fb58ff8d54">&#9670;&#160;</a></span>RollAffixTierAlpha()</h2>
+<a id="a55b44555a5cf3cb6a3ddfc44f9c1b505" name="a55b44555a5cf3cb6a3ddfc44f9c1b505"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55b44555a5cf3cb6a3ddfc44f9c1b505">&#9670;&#160;</a></span>RollAffixTierAlpha()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1909,12 +1989,8 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">float UDTLootSubsystem::RollAffixTierAlpha </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>EffectiveFloor</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>ItemPower</em></span>&#160;) const</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>EffectiveFloor</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1925,20 +2001,19 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Roll an affix's normalized magnitude alpha using the floor-scaled tier system. </p>
-<p>Tier (luck): weighted pick over 1..AffixTierCount where high tiers are always rarest; depth shifts the odds upward (FloorPressure flattens the falloff, capped by MaxFloorPressure). Magnitude (floor scale): the rolled TierFraction is multiplied by ItemPower so a high tier at a low floor is scaled down (no one-shot), while the same tier deeper is far stronger. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Tier (luck): weighted pick over 1..AffixTierCount where high tiers are always rarest; depth shifts the odds upward (FloorPressure flattens the falloff, capped by MaxFloorPressure). Magnitude (floor scale): the rolled TierFraction is multiplied by AffixPower, which has its own rate and a MinAffixPower floor so a high tier still lands meaningfully even at low floors, then scales further with depth. Uses AffixPower rather than ItemPower so affix pacing is independent. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">EffectiveFloor</td><td>Floor after diminishing returns (drives the tier distribution) </td></tr>
-    <tr><td class="paramname">ItemPower</td><td>ItemPower scalar (0-1) used as the floor magnitude scale </td></tr>
+    <tr><td class="paramname">EffectiveFloor</td><td>Floor after diminishing returns (drives both the tier distribution and AffixPower) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Alpha = ItemPower * TierFraction, stored as the affix's NormalizedRollValue </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Alpha = AffixPower * TierFraction, stored as the affix's NormalizedRollValue </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00831">831</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00899">899</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00763">CalculateAffixPower()</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00169">LootStream</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01234">RollAffixesForSlot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01310">RollAffixesForSlot()</a>.</p>
 
 </div>
 </div>
@@ -1984,11 +2059,11 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00981">981</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01048">1048</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01036">BuildBaseStatPool()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01133">CalculateStatValue()</a>, <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00033">UDTInventoryItemFragment_Equipment::NumBaseStatsToRoll</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00981">RollBaseStats()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01069">RollForcedBaseStats()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01334">SelectWeightedIndices()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01103">BuildBaseStatPool()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01208">CalculateStatValue()</a>, <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00044">UDTInventoryItemFragment_Equipment::NumBaseStatsToRoll</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01048">RollBaseStats()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01144">RollForcedBaseStats()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01426">SelectWeightedIndices()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00981">RollBaseStats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01048">RollBaseStats()</a>.</p>
 
 </div>
 </div>
@@ -2029,16 +2104,16 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Additional loot rolls to perform </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00779">779</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00847">847</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00770">GetExpectedExtraLootRolls()</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00838">GetExpectedExtraLootRolls()</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00169">LootStream</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>.</p>
 
 </div>
 </div>
-<a id="a2f132e4df7b22534cd6c1301a2bd0bac" name="a2f132e4df7b22534cd6c1301a2bd0bac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f132e4df7b22534cd6c1301a2bd0bac">&#9670;&#160;</a></span>RollForcedBaseStats()</h2>
+<a id="a1094c0b7f94a3a84c87523494542bc13" name="a1094c0b7f94a3a84c87523494542bc13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1094c0b7f94a3a84c87523494542bc13">&#9670;&#160;</a></span>RollForcedBaseStats()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2069,7 +2144,7 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>RarityStatMultiplier</em></span>&#160;)</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>RarityStatMultiplier</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -2092,11 +2167,55 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of forced stats that were rolled </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01069">1069</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01144">1144</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01133">CalculateStatValue()</a>, and <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00029">UDTInventoryItemFragment_Equipment::ForcedBaseStats</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01208">CalculateStatValue()</a>, and <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00030">UDTInventoryItemFragment_Equipment::ForcedBaseStats</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00981">RollBaseStats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01048">RollBaseStats()</a>.</p>
+
+</div>
+</div>
+<a id="a0a2f985e2a7adbbe2ffd2ca459d04f2a" name="a0a2f985e2a7adbbe2ffd2ca459d04f2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2f985e2a7adbbe2ffd2ca459d04f2a">&#9670;&#160;</a></span>RollItemAbilities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTLootSubsystem::RollItemAbilities </td>
+          <td>(</td>
+          <td class="paramtype">FInventoryItemInfo &amp;</td>          <td class="paramname"><span class="paramname"><em>ItemInfo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const UInventoryItemDefinition *</td>          <td class="paramname"><span class="paramname"><em>ItemDef</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Roll the item's active (weapon) and passive (other equipment) abilities from its authored AbilitySlots. </p>
+<p>Static slots record their fixed ability (no draw); rolled slots pick one candidate by weight via PickWeightedIndex. Results are stored on ItemInfo.RolledAbilities by ability-definition GUID. Runs at a fixed point after RollAffixes so items without rollable slots make no new LootStream draws and existing loot seeds reproduce prior fields unchanged. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ItemInfo</td><td>Item to add rolled abilities to (modified in place) </td></tr>
+    <tr><td class="paramname">ItemDef</td><td>Item definition supplying the equipment fragment / rollable ability slots </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00363">363</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00411">FDTRollableAbilitySlot::AbilityPool</a>, <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00054">UDTInventoryItemFragment_Equipment::AbilitySlots</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01388">PickWeightedIndex()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00407">FDTRollableAbilitySlot::StaticAbility</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00403">FDTRollableAbilitySlot::TargetAbilitySlot</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>.</p>
 
 </div>
 </div>
@@ -2137,11 +2256,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Index of selected row, or -1 if none selected </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01299">1299</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01416">1416</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01388">PickWeightedIndex()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>.</p>
 
 </div>
 </div>
@@ -2182,11 +2301,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Array of selected indices </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01334">1334</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01426">1426</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">LootStream</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01388">PickWeightedIndex()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00981">RollBaseStats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01048">RollBaseStats()</a>.</p>
 
 </div>
 </div>
@@ -2214,11 +2333,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Array of all spawned loot actors </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00547">547</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00598">598</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00496">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00476">FLootContext::OwningPlayer</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00547">SpawnLootFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00937">SpawnMultipleLootForPlayer()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00480">FLootContext::SpawnTransform</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00472">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::OwningPlayer</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00598">SpawnLootFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01004">SpawnMultipleLootForPlayer()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::SpawnTransform</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_source_component_8cpp_source.html#l00039">UDTLootSourceComponent::Internal_DropLoot()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00245">UDTCheatManager::SpawnLootAtFloor()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00547">SpawnLootFromContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_source_component_8cpp_source.html#l00039">UDTLootSourceComponent::Internal_DropLoot()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00271">UDTCheatManager::SpawnLootAtFloor()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00598">SpawnLootFromContext()</a>.</p>
 
 </div>
 </div>
@@ -2265,11 +2384,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Array of spawned loot actors </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00937">937</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01004">1004</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00195">LootSpreadRadius</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00874">SpawnSingleLoot()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00193">LootSpreadRadius</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00941">SpawnSingleLoot()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00547">SpawnLootFromContext()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00614">SpawnPreGeneratedLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00598">SpawnLootFromContext()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00665">SpawnPreGeneratedLoot()</a>.</p>
 
 </div>
 </div>
@@ -2308,11 +2427,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Array of spawned loot actors </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00614">614</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00665">665</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00937">SpawnMultipleLootForPlayer()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01004">SpawnMultipleLootForPlayer()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00680">UDTCheatManager::SpawnLootWithAffix()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00697">UDTCheatManager::SpawnLootWithAffix()</a>.</p>
 
 </div>
 </div>
@@ -2359,11 +2478,11 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The spawned loot actor, or nullptr if spawn failed </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00874">874</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00941">941</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">CachedGlobalLootData</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00035">ADTItemActor::SetItemInfo()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">CachedGlobalLootData</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00039">ADTItemActor::SetItemInfo()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00937">SpawnMultipleLootForPlayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01004">SpawnMultipleLootForPlayer()</a>.</p>
 
 </div>
 </div>
@@ -2382,11 +2501,11 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00063">63</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00064">64</a> of file <a class="el" href="_d_t_loot_subsystem_8cpp_source.html">DTLootSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00165">LootItems</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00071">OnLootUnregistered</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00163">LootItems</a>, and <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00068">OnLootUnregistered</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00120">ADTItemActor::EndPlay()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00234">ADTItemActor::PickupItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_item_actor_8cpp_source.html#l00124">ADTItemActor::EndPlay()</a>, and <a class="el" href="_d_t_item_actor_8cpp_source.html#l00238">ADTItemActor::PickupItem()</a>.</p>
 
 </div>
 </div>
@@ -2413,9 +2532,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Whether to use huge seed distribution for loot generation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00180">180</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00178">178</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00091">InitializeRandomStreams()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00022">OnWorldBeginPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00092">InitializeRandomStreams()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00023">OnWorldBeginPlay()</a>.</p>
 
 </div>
 </div>
@@ -2441,9 +2560,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Cached affix definitions pre-sorted by slot type (prefix/suffix). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00189">189</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00187">187</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01558">CacheAffixRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01422">ClearDataTableCache()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01393">RebuildDataTableCache()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01234">RollAffixesForSlot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01619">CacheAffixRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01483">ClearDataTableCache()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01454">RebuildDataTableCache()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01310">RollAffixesForSlot()</a>.</p>
 
 </div>
 </div>
@@ -2469,9 +2588,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Cached base stat rows per table. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00186">186</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00184">184</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01543">CacheBaseStatRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01422">ClearDataTableCache()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01616">GetOrCacheBaseStatRows()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01393">RebuildDataTableCache()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01604">CacheBaseStatRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01483">ClearDataTableCache()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01672">GetOrCacheBaseStatRows()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01454">RebuildDataTableCache()</a>.</p>
 
 </div>
 </div>
@@ -2497,9 +2616,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Cached reference to global loot data for performance. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00175">175</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00173">173</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01036">BuildBaseStatPool()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01558">CacheAffixRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01430">CacheRarityWeights()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00114">CalculateBaseItemLevel()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00676">CalculateEffectiveFloor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00154">CalculateFinalItemLevel()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00697">CalculateItemPower()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00176">CalculateItemValue()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00165">CalculateLevelRequirement()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00727">CalculateLootBonus()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00712">CalculateLootBudget()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00817">CalculateRollFactor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01133">CalculateStatValue()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00129">CalculateTotalStatValue()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00770">GetExpectedExtraLootRolls()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00801">GetExpectedExtraLootRollsForFloor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00022">OnWorldBeginPlay()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01393">RebuildDataTableCache()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01196">RollAffixes()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00831">RollAffixTierAlpha()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00779">RollExtraLootRolls()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00874">SpawnSingleLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01103">BuildBaseStatPool()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01619">CacheAffixRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01491">CacheRarityWeights()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00763">CalculateAffixPower()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00115">CalculateBaseItemLevel()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00727">CalculateEffectiveFloor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00154">CalculateFinalItemLevel()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00748">CalculateItemPower()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00176">CalculateItemValue()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00165">CalculateLevelRequirement()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00795">CalculateLootBonus()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00780">CalculateLootBudget()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00885">CalculateRollFactor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01208">CalculateStatValue()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00130">CalculateTotalStatValue()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00838">GetExpectedExtraLootRolls()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00869">GetExpectedExtraLootRollsForFloor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00023">OnWorldBeginPlay()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01454">RebuildDataTableCache()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01272">RollAffixes()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00899">RollAffixTierAlpha()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00847">RollExtraLootRolls()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00941">SpawnSingleLoot()</a>.</p>
 
 </div>
 </div>
@@ -2525,9 +2644,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Cached loot table rows per table. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00183">183</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00181">181</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01528">CacheLootTableRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01422">ClearDataTableCache()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01597">GetOrCacheLootTableRows()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01589">CacheLootTableRows()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01483">ClearDataTableCache()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01653">GetOrCacheLootTableRows()</a>.</p>
 
 </div>
 </div>
@@ -2554,9 +2673,9 @@ Static Protected Attributes</h2></td></tr>
 <p>Cached rarity weighting inputs, in selection order (Common..Artifact). </p>
 <p>Rebuilt with the data table cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00192">192</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00190">190</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01430">CacheRarityWeights()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00207">CalculateItemRarity()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01422">ClearDataTableCache()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01515">GetRarityStatMultiplier()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01393">RebuildDataTableCache()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01491">CacheRarityWeights()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00231">CalculateItemRarity()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01483">ClearDataTableCache()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01576">GetRarityStatMultiplier()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01454">RebuildDataTableCache()</a>.</p>
 
 </div>
 </div>
@@ -2580,9 +2699,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00165">165</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00163">163</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00078">ClearLootItems()</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00083">GetLootItems()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00048">RegisterItem()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00063">UnregisterItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00079">ClearLootItems()</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00080">GetLootItems()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00049">RegisterItem()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00064">UnregisterItem()</a>.</p>
 
 </div>
 </div>
@@ -2608,9 +2727,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Base spacing between loot items in world units; the spawn ring scales up from this with item count. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00195">195</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00193">193</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00937">SpawnMultipleLootForPlayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01004">SpawnMultipleLootForPlayer()</a>.</p>
 
 </div>
 </div>
@@ -2636,9 +2755,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Random stream for all loot generation decisions. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00171">171</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00169">169</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00207">CalculateItemRarity()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00817">CalculateRollFactor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00244">CalculateStackCount()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">GenerateLootFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00267">GenerateLootItem()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00091">InitializeRandomStreams()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01196">RollAffixes()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01234">RollAffixesForSlot()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00831">RollAffixTierAlpha()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00779">RollExtraLootRolls()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01299">SelectWeightedIndex()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01334">SelectWeightedIndices()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00885">CalculateRollFactor()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00250">CalculateStackCount()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01208">CalculateStatValue()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">GenerateLootFromContext()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00275">GenerateLootItem()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00092">InitializeRandomStreams()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01388">PickWeightedIndex()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01272">RollAffixes()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00899">RollAffixTierAlpha()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00847">RollExtraLootRolls()</a>.</p>
 
 </div>
 </div>
@@ -2654,9 +2773,9 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00068">68</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00065">65</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00048">RegisterItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00049">RegisterItem()</a>.</p>
 
 </div>
 </div>
@@ -2672,9 +2791,9 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00068">68</a> of file <a class="el" href="_d_t_loot_subsystem_8h_source.html">DTLootSubsystem.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00078">ClearLootItems()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00063">UnregisterItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00079">ClearLootItems()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00064">UnregisterItem()</a>.</p>
 
 </div>
 </div>

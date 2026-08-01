@@ -142,15 +142,15 @@ Inheritance diagram for UDTGameplayAbility:</div>
  <div class="center">
   <img src="class_u_d_t_gameplay_ability.png" usemap="#UDTGameplayAbility_map" alt=""/>
   <map id="UDTGameplayAbility_map" name="UDTGameplayAbility_map">
-<area href="class_u_d_t_gameplay_ability___death.html" title="Death ability, used to handle death logic (Lyra port)." alt="UDTGameplayAbility_Death" shape="rect" coords="0,112,219,136"/>
-<area href="class_u_d_t_gameplay_ability___dodge.html" title="Dodge / Roll ability with root motion movement More so an example of an ability done in c++." alt="UDTGameplayAbility_Dodge" shape="rect" coords="229,112,448,136"/>
-<area href="class_u_d_t_gameplay_ability___item.html" title="Base class for abilities bound to an equipped item." alt="UDTGameplayAbility_Item" shape="rect" coords="458,112,677,136"/>
-<area href="class_u_d_t_gameplay_ability___melee.html" title="Base Melee Gameplay Ability class for Dark Tower." alt="UDTGameplayAbility_Melee" shape="rect" coords="687,112,906,136"/>
-<area href="class_u_d_t_gameplay_ability___passive.html" title="The one passive ability class for Dark Tower — a lean, reactive, fire-and-forget proc." alt="UDTGameplayAbility_Passive" shape="rect" coords="916,112,1135,136"/>
-<area href="class_u_d_t_gameplay_ability___spell.html" title="Base class for all spell type abilities." alt="UDTGameplayAbility_Spell" shape="rect" coords="1145,112,1364,136"/>
-<area href="class_u_d_t_gameplay_ability___chain_ability.html" title="Fires evenly spread chains and pulls hostile targets after the chain reaches them." alt="UDTGameplayAbility_ChainAbility" shape="rect" coords="1030,168,1249,192"/>
-<area href="class_u_d_t_gameplay_ability___spell___targeted.html" title="Spell whose targeting origin is a world location (e.g." alt="UDTGameplayAbility_Spell_Targeted" shape="rect" coords="1259,168,1478,192"/>
-<area href="class_u_d_t_gameplay_ability___spell___leap.html" title="Leap-strike spell: targets a world location, leaps the avatar there during the cast,..." alt="UDTGameplayAbility_Spell_Leap" shape="rect" coords="1259,224,1478,248"/>
+<area href="class_u_d_t_gameplay_ability___channel.html" title="Base class for sustained &quot;channel&quot; abilities (e.g." alt="UDTGameplayAbility_Channel" shape="rect" coords="191,112,372,136"/>
+<area href="class_u_d_t_gameplay_ability___death.html" title="Death ability, used to handle death logic (Lyra port)." alt="UDTGameplayAbility_Death" shape="rect" coords="191,168,372,192"/>
+<area href="class_u_d_t_gameplay_ability___dodge.html" title="Dodge / Roll ability with root motion movement More so an example of an ability done in c++." alt="UDTGameplayAbility_Dodge" shape="rect" coords="191,224,372,248"/>
+<area href="class_u_d_t_gameplay_ability___hit_react.html" title="Base class for hit-react gameplay abilities." alt="UDTGameplayAbility_HitReact" shape="rect" coords="191,280,372,304"/>
+<area href="class_u_d_t_gameplay_ability___interact.html" title="UDTGameplayAbility_Interact." alt="UDTGameplayAbility_Interact" shape="rect" coords="191,336,372,360"/>
+<area href="class_u_d_t_gameplay_ability___item.html" title="Base class for abilities bound to an equipped item." alt="UDTGameplayAbility_Item" shape="rect" coords="191,392,372,416"/>
+<area href="class_u_d_t_gameplay_ability___melee.html" title="Base Melee Gameplay Ability class for Dark Tower." alt="UDTGameplayAbility_Melee" shape="rect" coords="191,448,372,472"/>
+<area href="class_u_d_t_gameplay_ability___passive.html" title="Base class for passive abilities that respond to gameplay events." alt="UDTGameplayAbility_Passive" shape="rect" coords="191,504,372,528"/>
+<area href="class_u_d_t_gameplay_ability___spell.html" title="Base class for all spell type abilities." alt="UDTGameplayAbility_Spell" shape="rect" coords="191,560,372,584"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -173,10 +173,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9e7af1a508d2395f526585eb004bb58c" id="r_a9e7af1a508d2395f526585eb004bb58c"><td class="memItemLeft">UAnimMontage *&#160;</td><td class="memItemRight"><a class="el" href="#a9e7af1a508d2395f526585eb004bb58c">GetRandomAbilityMontage</a> () const</td></tr>
 <tr class="memdesc:a9e7af1a508d2395f526585eb004bb58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random montage from the ability montages.  <br /></td></tr>
 <tr class="memitem:afd26dead01cdcfc5ed5e186bd6c8b0fb" id="r_afd26dead01cdcfc5ed5e186bd6c8b0fb"><td class="memItemLeft"><a class="el" href="_d_t_gameplay_ability_8h.html#a7770945a7f48a5b53a0c0de7ecaf93a0">EAbilityActivationGroup</a>&#160;</td><td class="memItemRight"><a class="el" href="#afd26dead01cdcfc5ed5e186bd6c8b0fb">GetActivationGroup</a> () const</td></tr>
+<tr class="memitem:a716f76246b36c09b7411fa90187fb0e6" id="r_a716f76246b36c09b7411fa90187fb0e6"><td class="memItemLeft"><a class="el" href="_d_t_gameplay_ability_8h.html#a5f5c7ed49a4da18165fceeb5a8205c08">EDTAbilityActivationPolicy</a>&#160;</td><td class="memItemRight"><a class="el" href="#a716f76246b36c09b7411fa90187fb0e6">GetActivationPolicy</a> () const</td></tr>
 <tr class="memitem:ab2d6405cc1c4c7685d601da1b6c85227" id="r_ab2d6405cc1c4c7685d601da1b6c85227"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab2d6405cc1c4c7685d601da1b6c85227">CanSendActivationEvents</a> () const</td></tr>
 <tr class="memdesc:ab2d6405cc1c4c7685d601da1b6c85227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this ability should send TAG_EVENT_ABILITY_ACTIVATED / DEACTIVATED / FAILED events.  <br /></td></tr>
 <tr class="memitem:aefb75aa804f8dfce04ed3a099c799d71" id="r_aefb75aa804f8dfce04ed3a099c799d71"><td class="memItemLeft"><a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aefb75aa804f8dfce04ed3a099c799d71">GetAbilityDefinition</a> () const</td></tr>
 <tr class="memdesc:aefb75aa804f8dfce04ed3a099c799d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the ability definition associated with this ability.  <br /></td></tr>
+<tr class="memitem:a6dd44cd5e79b3b24f0e3a355ce9a06b9" id="r_a6dd44cd5e79b3b24f0e3a355ce9a06b9"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a6dd44cd5e79b3b24f0e3a355ce9a06b9">GetDynamicValueByTag</a> (FGameplayTag ValueTag, bool &amp;bFound) const</td></tr>
+<tr class="memdesc:a6dd44cd5e79b3b24f0e3a355ce9a06b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves a dynamic value authored on this ability's definition by tag, at this ability's level, reading any Attribute-sourced values from the caster ASC.  <br /></td></tr>
+<tr class="memitem:a6df7457255669b859fd281d2300602a6" id="r_a6df7457255669b859fd281d2300602a6"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a6df7457255669b859fd281d2300602a6">GetCooldownDuration</a> (int32 Level) const</td></tr>
+<tr class="memdesc:a6df7457255669b859fd281d2300602a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The nominal cooldown duration (seconds) this ability would apply on use, evaluated at Level.  <br /></td></tr>
 <tr class="memitem:ad855a16d964d6d6fa41b063d7ab1e6f6" id="r_ad855a16d964d6d6fa41b063d7ab1e6f6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad855a16d964d6d6fa41b063d7ab1e6f6">CanChangeActivationGroup</a> (<a class="el" href="_d_t_gameplay_ability_8h.html#a7770945a7f48a5b53a0c0de7ecaf93a0">EAbilityActivationGroup</a> NewGroup) const</td></tr>
 <tr class="memitem:aa008fab59a81ec90a42e9824ee4a2246" id="r_aa008fab59a81ec90a42e9824ee4a2246"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa008fab59a81ec90a42e9824ee4a2246">ChangeActivationGroup</a> (<a class="el" href="_d_t_gameplay_ability_8h.html#a7770945a7f48a5b53a0c0de7ecaf93a0">EAbilityActivationGroup</a> NewGroup)</td></tr>
 <tr class="memitem:a97d4e8d4f70190fb63ca10fcd67347ff" id="r_a97d4e8d4f70190fb63ca10fcd67347ff"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a97d4e8d4f70190fb63ca10fcd67347ff">HasStacks</a> () const</td></tr>
@@ -195,8 +200,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aae59f54d9261bf61ded4ad23c650aa02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a single charge (clamped to max).  <br /></td></tr>
 <tr class="memitem:a796cd62f287c73279ad18fd1018723da" id="r_a796cd62f287c73279ad18fd1018723da"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a796cd62f287c73279ad18fd1018723da">ResetStacks</a> ()</td></tr>
 <tr class="memdesc:a796cd62f287c73279ad18fd1018723da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset charges to the maximum value.  <br /></td></tr>
+<tr class="memitem:a880b81ee87f28c71d22c66829e7ad685" id="r_a880b81ee87f28c71d22c66829e7ad685"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a880b81ee87f28c71d22c66829e7ad685">TryActivateAbilityOnSpawn</a> (const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilitySpec &amp;Spec) const</td></tr>
 <tr class="memitem:a84cea1f4451bd0531c2666e3634d5c5f" id="r_a84cea1f4451bd0531c2666e3634d5c5f"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a84cea1f4451bd0531c2666e3634d5c5f">CanActivateAbility</a> (const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayTagContainer *SourceTags, const FGameplayTagContainer *TargetTags, FGameplayTagContainer *OptionalRelevantTags) const override</td></tr>
 <tr class="memitem:ab7af49289a0082b404caa9532fd70f5d" id="r_ab7af49289a0082b404caa9532fd70f5d"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ab7af49289a0082b404caa9532fd70f5d">CheckCooldown</a> (const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, FGameplayTagContainer *OptionalRelevantTags) const override</td></tr>
+<tr class="memitem:aff2b42c02eef57e873c4f3f1eda80136" id="r_aff2b42c02eef57e873c4f3f1eda80136"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aff2b42c02eef57e873c4f3f1eda80136">ApplyCooldown</a> (const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo) const override</td></tr>
 <tr class="memitem:af044e57dbb337b122a3a6ce74614c0d7" id="r_af044e57dbb337b122a3a6ce74614c0d7"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af044e57dbb337b122a3a6ce74614c0d7">OnGiveAbility</a> (const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilitySpec &amp;Spec) override</td></tr>
 <tr class="memitem:ad28e868382b9feeb5eb76598c774c315" id="r_ad28e868382b9feeb5eb76598c774c315"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad28e868382b9feeb5eb76598c774c315">OnRemoveAbility</a> (const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilitySpec &amp;Spec) override</td></tr>
 <tr class="memitem:aabf713d658d7f6b30ea16459f1571b46" id="r_aabf713d658d7f6b30ea16459f1571b46"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aabf713d658d7f6b30ea16459f1571b46">SetCanBeCanceled</a> (bool bCanBeCanceled) override</td></tr>
@@ -215,8 +222,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:acf3f17d87b818aad9c57f19644d0b0ff" id="r_acf3f17d87b818aad9c57f19644d0b0ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acf3f17d87b818aad9c57f19644d0b0ff">HandleAbilityStackChanged</a> (FGameplayAbilitySpecHandle ChangedAbilityHandle, int32 NewStacks, int32 OldStacks)</td></tr>
 <tr class="memitem:aad2fd13be81a3fbf8cbe3bc2c0a9cb7c" id="r_aad2fd13be81a3fbf8cbe3bc2c0a9cb7c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aad2fd13be81a3fbf8cbe3bc2c0a9cb7c">SetCurrentStacks</a> (int32 NewStacks)</td></tr>
 <tr class="memdesc:aad2fd13be81a3fbf8cbe3bc2c0a9cb7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current stack count directly (clamped to [0, MaxStacks]) and broadcasts the delegate.  <br /></td></tr>
-<tr class="memitem:a9a05e59f17d4e53e5c831ba09600c7ca" id="r_a9a05e59f17d4e53e5c831ba09600c7ca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9a05e59f17d4e53e5c831ba09600c7ca">StartStackRegeneration</a> ()</td></tr>
-<tr class="memdesc:a9a05e59f17d4e53e5c831ba09600c7ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the cooldown-based charge regeneration loop if below max stacks.  <br /></td></tr>
+<tr class="memitem:a03281529ba0b9bb24081bcf5d10a4fd6" id="r_a03281529ba0b9bb24081bcf5d10a4fd6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a03281529ba0b9bb24081bcf5d10a4fd6">StartStackRegeneration</a> () const</td></tr>
+<tr class="memdesc:a03281529ba0b9bb24081bcf5d10a4fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the cooldown-based charge regeneration loop if below max stacks.  <br /></td></tr>
 <tr class="memitem:a106b8fde3bb10bbf6ff1e31b552c0d43" id="r_a106b8fde3bb10bbf6ff1e31b552c0d43"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a106b8fde3bb10bbf6ff1e31b552c0d43">HandleCooldownTagChanged</a> (FGameplayTag CooldownTag, int32 NewCount)</td></tr>
 <tr class="memdesc:a106b8fde3bb10bbf6ff1e31b552c0d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a cooldown tag count changes.  <br /></td></tr>
 <tr class="memitem:a0afa3a97bd9e57379f94e614a970b0d9" id="r_a0afa3a97bd9e57379f94e614a970b0d9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0afa3a97bd9e57379f94e614a970b0d9">RegisterCooldownTagDelegates</a> ()</td></tr>
@@ -229,7 +236,6 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a738f9c34916134146933b7e4b4da47e6" id="r_a738f9c34916134146933b7e4b4da47e6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a738f9c34916134146933b7e4b4da47e6">bActivateOnGranted</a> = false</td></tr>
 <tr class="memitem:aa4a11d7193c80c1271985c0691c64abe" id="r_aa4a11d7193c80c1271985c0691c64abe"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa4a11d7193c80c1271985c0691c64abe">bDoActivationEvents</a> = true</td></tr>
 <tr class="memdesc:aa4a11d7193c80c1271985c0691c64abe"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true (default), this ability broadcasts ability lifecycle events.  <br /></td></tr>
 <tr class="memitem:a73c58de96499514529f5268f56b2caf7" id="r_a73c58de96499514529f5268f56b2caf7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a73c58de96499514529f5268f56b2caf7">bUseAbilityStacks</a> = false</td></tr>
@@ -244,6 +250,8 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a9ed1bdb29a433668c64b696e8b31a9f4" id="r_a9ed1bdb29a433668c64b696e8b31a9f4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9ed1bdb29a433668c64b696e8b31a9f4">bUseRandomAbilityMontage</a> = false</td></tr>
 <tr class="memitem:a191c55f4ab27513a2460cda71e6be7dc" id="r_a191c55f4ab27513a2460cda71e6be7dc"><td class="memItemLeft">TArray&lt; UAnimMontage * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a191c55f4ab27513a2460cda71e6be7dc">AbilityMontages</a></td></tr>
 <tr class="memitem:ae7591c233f93aa0dfcb281f23e5a2eed" id="r_ae7591c233f93aa0dfcb281f23e5a2eed"><td class="memItemLeft"><a class="el" href="_d_t_gameplay_ability_8h.html#a7770945a7f48a5b53a0c0de7ecaf93a0">EAbilityActivationGroup</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae7591c233f93aa0dfcb281f23e5a2eed">ActivationGroup</a></td></tr>
+<tr class="memitem:a173060d2b4bc6cb0bfa6aad1127cadc9" id="r_a173060d2b4bc6cb0bfa6aad1127cadc9"><td class="memItemLeft"><a class="el" href="_d_t_gameplay_ability_8h.html#a5f5c7ed49a4da18165fceeb5a8205c08">EDTAbilityActivationPolicy</a>&#160;</td><td class="memItemRight"><a class="el" href="#a173060d2b4bc6cb0bfa6aad1127cadc9">ActivationPolicy</a> = <a class="el" href="_d_t_gameplay_ability_8h.html#a5f5c7ed49a4da18165fceeb5a8205c08a82db7a1dadfda8ba50b0665f651d567d">EDTAbilityActivationPolicy::OnInputTriggered</a></td></tr>
+<tr class="memdesc:a173060d2b4bc6cb0bfa6aad1127cadc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">How this ability activates from tag-routed player input.  <br /></td></tr>
 <tr class="memitem:aec6449460dc1082656be0f0d8d56bfda" id="r_aec6449460dc1082656be0f0d8d56bfda"><td class="memItemLeft">TArray&lt; TPair&lt; FGameplayTag, FDelegateHandle &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aec6449460dc1082656be0f0d8d56bfda">CooldownTagDelegateHandles</a></td></tr>
 <tr class="memdesc:aec6449460dc1082656be0f0d8d56bfda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delegate handles for the cooldown tag events we're listening to.  <br /></td></tr>
 <tr class="memitem:ab60f474aeb5c75709872a23c80691656" id="r_ab60f474aeb5c75709872a23c80691656"><td class="memItemLeft">FDelegateHandle&#160;</td><td class="memItemRight"><a class="el" href="#ab60f474aeb5c75709872a23c80691656">AbilityStackChangedDelegateHandle</a></td></tr>
@@ -251,7 +259,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base Gameplay Ability class for Dark Tower. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00063">63</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a994c68e08e11fec81749910933b7c1aa" name="a994c68e08e11fec81749910933b7c1aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a994c68e08e11fec81749910933b7c1aa">&#9670;&#160;</a></span>UDTGameplayAbility()</h2>
@@ -268,9 +276,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00021">21</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00023">23</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00218">ActivationGroup</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00022">Independent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00250">ActivationGroup</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00022">Independent</a>.</p>
 
 </div>
 </div>
@@ -298,11 +306,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00377">377</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00471">471</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00055">OnAbilityEnded</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00071">OnAbilityEnded</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00383">PreActivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00477">PreActivate()</a>.</p>
 
 </div>
 </div>
@@ -343,11 +351,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_u_d_t_gameplay_ability___death.html#a2d49768ebb69d70bb7b1aaf2559bf967">UDTGameplayAbility_Death</a>, <a class="el" href="class_u_d_t_gameplay_ability___dodge.html#a71f5c2eb8e1fe13155cb3916ac9d5bd0">UDTGameplayAbility_Dodge</a>, <a class="el" href="class_u_d_t_gameplay_ability___melee.html#a008d967fba0ab00f56764951f89b8240">UDTGameplayAbility_Melee</a>, <a class="el" href="class_u_d_t_gameplay_ability___passive.html#a8a7edcd41f2abdb026420dae6966ea64">UDTGameplayAbility_Passive</a>, <a class="el" href="class_u_d_t_gameplay_ability___spell.html#a1ebdb7fb590051e5b3defaaa0b1c24e4">UDTGameplayAbility_Spell</a>, and <a class="el" href="class_u_d_t_gameplay_ability___spell___targeted.html#a4ee9495b60f3e5f04011832a6e2d2ade">UDTGameplayAbility_Spell_Targeted</a>.</p>
+<p>Reimplemented in <a class="el" href="class_u_d_t_gameplay_ability___channel.html#a987851cf2b7be39e3bc0c72297e3e721">UDTGameplayAbility_Channel</a>, <a class="el" href="class_u_d_t_gameplay_ability___death.html#a2d49768ebb69d70bb7b1aaf2559bf967">UDTGameplayAbility_Death</a>, <a class="el" href="class_u_d_t_gameplay_ability___dodge.html#a71f5c2eb8e1fe13155cb3916ac9d5bd0">UDTGameplayAbility_Dodge</a>, <a class="el" href="class_u_d_t_gameplay_ability___hit_react.html#ad21fd68a510ca885e2299c8fbdf8afc9">UDTGameplayAbility_HitReact</a>, <a class="el" href="class_u_d_t_gameplay_ability___interact.html#abe51ea740213afca6badb4ddfe122155">UDTGameplayAbility_Interact</a>, <a class="el" href="class_u_d_t_gameplay_ability___melee.html#a008d967fba0ab00f56764951f89b8240">UDTGameplayAbility_Melee</a>, <a class="el" href="class_u_d_t_gameplay_ability___passive.html#a8a7edcd41f2abdb026420dae6966ea64">UDTGameplayAbility_Passive</a>, <a class="el" href="class_u_d_t_gameplay_ability___spell.html#a1ebdb7fb590051e5b3defaaa0b1c24e4">UDTGameplayAbility_Spell</a>, and <a class="el" href="class_u_d_t_gameplay_ability___spell___targeted.html#a4ee9495b60f3e5f04011832a6e2d2ade">UDTGameplayAbility_Spell_Targeted</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00390">390</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00484">484</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00177">IsRegeneratingStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">StartStackRegeneration()</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00158">UsesRegenStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00233">IsRegeneratingStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00319">StartStackRegeneration()</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00190">UsesRegenStacks()</a>.</p>
 
 </div>
 </div>
@@ -377,11 +385,49 @@ Protected Attributes</h2></td></tr>
 <p>Add a single charge (clamped to max). </p>
 <p>Returns the new stack count. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00197">197</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00253">253</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00569">GetAbilitySpecHandle()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00172">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00672">GetAbilitySpecHandle()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00290">HandleCooldownTagChanged()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00384">HandleCooldownTagChanged()</a>.</p>
+
+</div>
+</div>
+<a id="aff2b42c02eef57e873c4f3f1eda80136" name="aff2b42c02eef57e873c4f3f1eda80136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff2b42c02eef57e873c4f3f1eda80136">&#9670;&#160;</a></span>ApplyCooldown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility::ApplyCooldown </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayAbilitySpecHandle</td>          <td class="paramname"><span class="paramname"><em>Handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayAbilityActorInfo *</td>          <td class="paramname"><span class="paramname"><em>ActorInfo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayAbilityActivationInfo</td>          <td class="paramname"><span class="paramname"><em>ActivationInfo</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00128">128</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="#a6df7457255669b859fd281d2300602a6">GetCooldownDuration()</a>.</p>
 
 </div>
 </div>
@@ -429,9 +475,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_u_d_t_gameplay_ability___item.html#a41e019151c291e387eff1b5b8ba66abc">UDTGameplayAbility_Item</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00432">432</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00526">526</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00218">ActivationGroup</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00421">UDTAbilitySystemComponent::IsActivationGroupBlocked()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00250">ActivationGroup</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00087">GetAbilityDefinition()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00520">UDTAbilitySystemComponent::IsActivationGroupBlocked()</a>, and <a class="el" href="_d_t_ability_definition_8h_source.html#l00041">UDTAbilityDefinition::RequiredTags</a>.</p>
 
 </div>
 </div>
@@ -450,11 +496,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00095">95</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00151">151</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00218">ActivationGroup</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00028">Exclusive_Blocking</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00025">Exclusive_Replaceable</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">GetDTAbilitySystemComponentFromActorInfo()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00421">UDTAbilitySystemComponent::IsActivationGroupBlocked()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00250">ActivationGroup</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00028">Exclusive_Blocking</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00025">Exclusive_Replaceable</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">GetDTAbilitySystemComponentFromActorInfo()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00520">UDTAbilitySystemComponent::IsActivationGroupBlocked()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00125">ChangeActivationGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">ChangeActivationGroup()</a>, and <a class="el" href="#a6df7457255669b859fd281d2300602a6">GetCooldownDuration()</a>.</p>
 
 </div>
 </div>
@@ -483,11 +529,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Whether this ability should send TAG_EVENT_ABILITY_ACTIVATED / DEACTIVATED / FAILED events. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00120">120</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00139">139</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00190">bDoActivationEvents</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00120">CanSendActivationEvents()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00222">bDoActivationEvents</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00139">CanSendActivationEvents()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00120">CanSendActivationEvents()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00525">UDTAbilitySystemComponent::NotifyAbilityActivated()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00587">UDTAbilitySystemComponent::NotifyAbilityEnded()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00555">UDTAbilitySystemComponent::NotifyAbilityFailed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00139">CanSendActivationEvents()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00624">UDTAbilitySystemComponent::NotifyAbilityActivated()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00686">UDTAbilitySystemComponent::NotifyAbilityEnded()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00654">UDTAbilitySystemComponent::NotifyAbilityFailed()</a>.</p>
 
 </div>
 </div>
@@ -506,11 +552,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00125">125</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">181</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00218">ActivationGroup</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00446">UDTAbilitySystemComponent::AddAbilityToActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00095">CanChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00125">ChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00012">ENSURE_ABILITY_IS_INSTANTIATED_OR_RETURN</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">GetDTAbilitySystemComponentFromActorInfo()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00477">UDTAbilitySystemComponent::RemoveAbilityFromActivationGroup()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00250">ActivationGroup</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00545">UDTAbilitySystemComponent::AddAbilityToActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00151">CanChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">ChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00014">ENSURE_ABILITY_IS_INSTANTIATED_OR_RETURN</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">GetDTAbilitySystemComponentFromActorInfo()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00576">UDTAbilitySystemComponent::RemoveAbilityFromActivationGroup()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___death_8cpp_source.html#l00026">UDTGameplayAbility_Death::ActivateAbility()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00125">ChangeActivationGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___death_8cpp_source.html#l00028">UDTGameplayAbility_Death::ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00186">UDTGameplayAbility_HitReact::ApplyHitReact()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">ChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00098">UDTGameplayAbility_HitReact::EndAbility()</a>, and <a class="el" href="#a6df7457255669b859fd281d2300602a6">GetCooldownDuration()</a>.</p>
 
 </div>
 </div>
@@ -546,9 +592,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00471">471</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00579">579</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">GetCurrentStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>.</p>
 
 </div>
 </div>
@@ -589,11 +635,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00411">411</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00505">505</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00202">bConsumeStackOnActivate</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00182">ConsumeStack()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00234">bConsumeStackOnActivate</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">ConsumeStack()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00027">UDTGameplayAbility_Dodge::ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00363">UDTGameplayAbility_Melee::ActivateAbility()</a>, and <a class="el" href="_d_t_gameplay_ability___spell_8cpp_source.html#l00034">UDTGameplayAbility_Spell::BeginSpellCast()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00027">UDTGameplayAbility_Dodge::ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00355">UDTGameplayAbility_Melee::ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">UDTGameplayAbility_Channel::BeginChannel()</a>, and <a class="el" href="_d_t_gameplay_ability___spell_8cpp_source.html#l00034">UDTGameplayAbility_Spell::BeginSpellCast()</a>.</p>
 
 </div>
 </div>
@@ -623,11 +669,11 @@ Protected Attributes</h2></td></tr>
 <p>Consume a single charge. </p>
 <p>Returns the new stack count. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00182">182</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">238</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00569">GetAbilitySpecHandle()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">GetDTAbilitySystemComponentFromActorInfo()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00672">GetAbilitySpecHandle()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">GetDTAbilitySystemComponentFromActorInfo()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00411">CommitAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00505">CommitAbility()</a>.</p>
 
 </div>
 </div>
@@ -673,9 +719,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_u_d_t_gameplay_ability___chain_ability.html#a510182dc0ea28d3c132d4d56ababf5e5">UDTGameplayAbility_ChainAbility</a>, <a class="el" href="class_u_d_t_gameplay_ability___death.html#a5b8e4c1ac2dbc179dd8d87f1b27deb40">UDTGameplayAbility_Death</a>, <a class="el" href="class_u_d_t_gameplay_ability___dodge.html#ae050916f55f52742292f8756a119c08a">UDTGameplayAbility_Dodge</a>, <a class="el" href="class_u_d_t_gameplay_ability___melee.html#a1e5a330f4906c495e4562989e9d20769">UDTGameplayAbility_Melee</a>, <a class="el" href="class_u_d_t_gameplay_ability___spell.html#a64656debb984a1948aaf02f5d0deb508">UDTGameplayAbility_Spell</a>, <a class="el" href="class_u_d_t_gameplay_ability___spell___leap.html#a67358b43de2abb0951d04bdc0980e7f3">UDTGameplayAbility_Spell_Leap</a>, and <a class="el" href="class_u_d_t_gameplay_ability___spell___targeted.html#a4c91d4978512463147f1101fcc55ffa9">UDTGameplayAbility_Spell_Targeted</a>.</p>
+<p>Reimplemented in <a class="el" href="class_u_d_t_gameplay_ability___chain.html#ab57641fd725640a9678ade3dfd1fd59d">UDTGameplayAbility_Chain</a>, <a class="el" href="class_u_d_t_gameplay_ability___channel.html#a9dd7b0654105f801f8c57357b299ba29">UDTGameplayAbility_Channel</a>, <a class="el" href="class_u_d_t_gameplay_ability___death.html#a5b8e4c1ac2dbc179dd8d87f1b27deb40">UDTGameplayAbility_Death</a>, <a class="el" href="class_u_d_t_gameplay_ability___dodge.html#ae050916f55f52742292f8756a119c08a">UDTGameplayAbility_Dodge</a>, <a class="el" href="class_u_d_t_gameplay_ability___hit_react.html#a4c90ceff31907ac3b156a31cb5473839">UDTGameplayAbility_HitReact</a>, <a class="el" href="class_u_d_t_gameplay_ability___interact.html#a7cfbf0ef92b8a24e77fd29e8683d4a7f">UDTGameplayAbility_Interact</a>, <a class="el" href="class_u_d_t_gameplay_ability___melee.html#a1e5a330f4906c495e4562989e9d20769">UDTGameplayAbility_Melee</a>, <a class="el" href="class_u_d_t_gameplay_ability___spell.html#a64656debb984a1948aaf02f5d0deb508">UDTGameplayAbility_Spell</a>, <a class="el" href="class_u_d_t_gameplay_ability___spell___leap.html#a67358b43de2abb0951d04bdc0980e7f3">UDTGameplayAbility_Spell_Leap</a>, and <a class="el" href="class_u_d_t_gameplay_ability___spell___targeted.html#a4c91d4978512463147f1101fcc55ffa9">UDTGameplayAbility_Spell_Targeted</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00427">427</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00521">521</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___passive_8cpp_source.html#l00062">UDTGameplayAbility_Passive::ActivateAbility()</a>.</p>
 
@@ -699,11 +745,11 @@ Protected Attributes</h2></td></tr>
 <p>Gets the ability definition associated with this ability. </p>
 <dl class="section return"><dt>Returns</dt><dd>The ability definition, or nullptr if not set or not loaded. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00085">85</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00087">87</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00209">AbilityDefinitionAsset</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00241">AbilityDefinitionAsset</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00027">UDTAbilityWidget::GetAbilityTooltipWidget()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00012">UDTAbilityTooltipWidget::SetAbility()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00033">UDTAbilityTooltipWidget::SetAbilityComparison()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00526">CanActivateAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00138">UDTAbilityTooltipWidget::FindGrantedSpec()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00028">UDTAbilityWidget::GetAbilityTooltipWidget()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00097">GetDynamicValueByTag()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00029">UDTAbilityTooltipWidget::SetAbility()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00052">UDTAbilityTooltipWidget::SetAbilityComparison()</a>.</p>
 
 </div>
 </div>
@@ -731,9 +777,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The ability montage at the specified index, or nullptr if index is out of bounds </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00064">64</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00066">66</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00215">AbilityMontages</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00247">AbilityMontages</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00027">UDTGameplayAbility_Dodge::ActivateAbility()</a>, and <a class="el" href="#ac6b682668d8dc0b1da5ce9d419713017">GetAbilityMontageToPlay()</a>.</p>
 
@@ -757,9 +803,9 @@ Protected Attributes</h2></td></tr>
 <p>Gets the ability montages associated with this ability. </p>
 <dl class="section return"><dt>Returns</dt><dd>Array of ability montages </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00059">59</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00061">61</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00215">AbilityMontages</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00247">AbilityMontages</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#ac6b682668d8dc0b1da5ce9d419713017">GetAbilityMontageToPlay()</a>.</p>
 
@@ -783,7 +829,7 @@ Protected Attributes</h2></td></tr>
 <p>Gets the ability montage to play based on settings. </p>
 <dl class="section return"><dt>Returns</dt><dd>The ability montage to play </dd></dl>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00064">GetAbilityMontageByIndex()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00059">GetAbilityMontages()</a>, <a class="el" href="#ac6b682668d8dc0b1da5ce9d419713017">GetAbilityMontageToPlay()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00074">GetRandomAbilityMontage()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00066">GetAbilityMontageByIndex()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00061">GetAbilityMontages()</a>, <a class="el" href="#ac6b682668d8dc0b1da5ce9d419713017">GetAbilityMontageToPlay()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00076">GetRandomAbilityMontage()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#ac6b682668d8dc0b1da5ce9d419713017">GetAbilityMontageToPlay()</a>.</p>
 
@@ -812,9 +858,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00569">569</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00672">672</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00197">AddStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00182">ConsumeStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability___item_8cpp_source.html#l00019">UDTGameplayAbility_Item::GetItemInstance()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00579">HandleAbilityStackChanged()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00212">ResetStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00225">SetCurrentStacks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00253">AddStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">ConsumeStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability___item_8cpp_source.html#l00019">UDTGameplayAbility_Item::GetItemInstance()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00682">HandleAbilityStackChanged()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00268">ResetStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00306">SetCurrentStacks()</a>.</p>
 
 </div>
 </div>
@@ -841,11 +887,65 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00114">114</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00130">130</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00218">ActivationGroup</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00114">GetActivationGroup()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00250">ActivationGroup</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00130">GetActivationGroup()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00114">GetActivationGroup()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00525">UDTAbilitySystemComponent::NotifyAbilityActivated()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00587">UDTAbilitySystemComponent::NotifyAbilityEnded()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00130">GetActivationGroup()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00624">UDTAbilitySystemComponent::NotifyAbilityActivated()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00686">UDTAbilitySystemComponent::NotifyAbilityEnded()</a>.</p>
+
+</div>
+</div>
+<a id="a716f76246b36c09b7411fa90187fb0e6" name="a716f76246b36c09b7411fa90187fb0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a716f76246b36c09b7411fa90187fb0e6">&#9670;&#160;</a></span>GetActivationPolicy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_d_t_gameplay_ability_8h.html#a5f5c7ed49a4da18165fceeb5a8205c08">EDTAbilityActivationPolicy</a> UDTGameplayAbility::GetActivationPolicy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00133">133</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00254">ActivationPolicy</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00133">GetActivationPolicy()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00133">GetActivationPolicy()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00969">UDTAbilitySystemComponent::ProcessAbilityInput()</a>.</p>
+
+</div>
+</div>
+<a id="a6df7457255669b859fd281d2300602a6" name="a6df7457255669b859fd281d2300602a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6df7457255669b859fd281d2300602a6">&#9670;&#160;</a></span>GetCooldownDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTGameplayAbility::GetCooldownDuration </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>Level</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The nominal cooldown duration (seconds) this ability would apply on use, evaluated at Level. </p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00151">CanChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">ChangeActivationGroup()</a>, <a class="el" href="#a6df7457255669b859fd281d2300602a6">GetCooldownDuration()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">GetMaxStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00233">IsRegeneratingStacks()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00128">ApplyCooldown()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00206">UDTAbilityTooltipWidget::GetCooldownAtLevel()</a>, <a class="el" href="#a6df7457255669b859fd281d2300602a6">GetCooldownDuration()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00319">StartStackRegeneration()</a>.</p>
 
 </div>
 </div>
@@ -876,11 +976,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_u_d_t_gameplay_ability___item.html#a5054a577daad5dc9da1efe446e31c214">UDTGameplayAbility_Item</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">153</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">209</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00569">GetAbilitySpecHandle()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00172">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00672">GetAbilitySpecHandle()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00197">AddStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00432">CanActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00471">CheckCooldown()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00182">ConsumeStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00290">HandleCooldownTagChanged()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00177">IsRegeneratingStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">StartStackRegeneration()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00150">UDTAbilityWidget::UpdateAbilityInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00253">AddStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00526">CanActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00579">CheckCooldown()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">ConsumeStack()</a>, <a class="el" href="#a6df7457255669b859fd281d2300602a6">GetCooldownDuration()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00384">HandleCooldownTagChanged()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00233">IsRegeneratingStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00319">StartStackRegeneration()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00151">UDTAbilityWidget::UpdateAbilityInfo()</a>.</p>
 
 </div>
 </div>
@@ -902,9 +1002,37 @@ Protected Attributes</h2></td></tr>
 <p>Gets the DT Ability System Component. </p>
 <dl class="section return"><dt>Returns</dt><dd>The DT Ability System Component </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">44</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">46</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00197">AddStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00432">CanActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00095">CanChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00125">ChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00182">ConsumeStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00537">OnGiveAbility()</a>, <a class="el" href="#afa48df9bee15774593c3230f5b694f29">OnPawnAvatarSet()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00481">OnRemoveAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00212">ResetStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00225">SetCurrentStacks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00253">AddStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00526">CanActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00151">CanChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">ChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">ConsumeStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00640">OnGiveAbility()</a>, <a class="el" href="#afa48df9bee15774593c3230f5b694f29">OnPawnAvatarSet()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00589">OnRemoveAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00268">ResetStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00306">SetCurrentStacks()</a>.</p>
+
+</div>
+</div>
+<a id="a6dd44cd5e79b3b24f0e3a355ce9a06b9" name="a6dd44cd5e79b3b24f0e3a355ce9a06b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dd44cd5e79b3b24f0e3a355ce9a06b9">&#9670;&#160;</a></span>GetDynamicValueByTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTGameplayAbility::GetDynamicValueByTag </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>ValueTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>bFound</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resolves a dynamic value authored on this ability's definition by tag, at this ability's level, reading any Attribute-sourced values from the caster ASC. </p>
+<p>bFound reports whether the value exists on the definition. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00097">97</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00087">GetAbilityDefinition()</a>, and <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00026">UDTAbilityDefinition::GetDynamicAbilityValueByTag()</a>.</p>
 
 </div>
 </div>
@@ -935,11 +1063,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_u_d_t_gameplay_ability___item.html#af961f6977125a961c6e038afa03200e0">UDTGameplayAbility_Item</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00172">172</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">228</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00198">MaxStacks</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00230">MaxStacks</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00197">AddStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00290">HandleCooldownTagChanged()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00054">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00177">IsRegeneratingStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00537">OnGiveAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00212">ResetStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00225">SetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">StartStackRegeneration()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00150">UDTAbilityWidget::UpdateAbilityInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00253">AddStack()</a>, <a class="el" href="#a6df7457255669b859fd281d2300602a6">GetCooldownDuration()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00384">HandleCooldownTagChanged()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00233">IsRegeneratingStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00640">OnGiveAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00268">ResetStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00306">SetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00319">StartStackRegeneration()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00151">UDTAbilityWidget::UpdateAbilityInfo()</a>.</p>
 
 </div>
 </div>
@@ -961,7 +1089,7 @@ Protected Attributes</h2></td></tr>
 <p>Gets the owning controller, if available. </p>
 <dl class="section return"><dt>Returns</dt><dd>The controller owning this ability, or nullptr </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00033">33</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00035">35</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#afa48df9bee15774593c3230f5b694f29">OnPawnAvatarSet()</a>.</p>
 
@@ -985,9 +1113,9 @@ Protected Attributes</h2></td></tr>
 <p>Gets a random montage from the ability montages. </p>
 <dl class="section return"><dt>Returns</dt><dd>A random ability montage, or nullptr if none are available </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00074">74</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00076">76</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00215">AbilityMontages</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00247">AbilityMontages</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#ac6b682668d8dc0b1da5ce9d419713017">GetAbilityMontageToPlay()</a>.</p>
 
@@ -1025,11 +1153,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00579">579</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00682">682</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00569">GetAbilitySpecHandle()</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00059">OnAbilityStacksChanged</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00672">GetAbilitySpecHandle()</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00075">OnAbilityStacksChanged</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00537">OnGiveAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00640">OnGiveAbility()</a>.</p>
 
 </div>
 </div>
@@ -1063,11 +1191,11 @@ Protected Attributes</h2></td></tr>
 <p>Called when a cooldown tag count changes. </p>
 <p>When it drops to 0 a charge is regenerated. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00290">290</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00384">384</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00197">AddStack()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00205">bRechargeStacksOnCooldown</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00172">GetMaxStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">StartStackRegeneration()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00253">AddStack()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00237">bRechargeStacksOnCooldown</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">GetMaxStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00319">StartStackRegeneration()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00326">RegisterCooldownTagDelegates()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00420">RegisterCooldownTagDelegates()</a>.</p>
 
 </div>
 </div>
@@ -1098,11 +1226,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_u_d_t_gameplay_ability___item.html#ae91f1d4a708744493d5b63de2b134fbc">UDTGameplayAbility_Item</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">148</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">204</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00194">bUseAbilityStacks</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00226">bUseAbilityStacks</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00390">ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00197">AddStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00432">CanActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00471">CheckCooldown()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00411">CommitAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00182">ConsumeStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00290">HandleCooldownTagChanged()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00054">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00177">IsRegeneratingStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00537">OnGiveAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00212">ResetStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00225">SetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">StartStackRegeneration()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00150">UDTAbilityWidget::UpdateAbilityInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00484">ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00253">AddStack()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00526">CanActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00579">CheckCooldown()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00505">CommitAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">ConsumeStack()</a>, <a class="el" href="#a6df7457255669b859fd281d2300602a6">GetCooldownDuration()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00384">HandleCooldownTagChanged()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00233">IsRegeneratingStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00640">OnGiveAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00268">ResetStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00306">SetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00319">StartStackRegeneration()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00151">UDTAbilityWidget::UpdateAbilityInfo()</a>.</p>
 
 </div>
 </div>
@@ -1131,11 +1259,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if the ability is currently regenerating charges (on cooldown and below max stacks). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00177">177</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00233">233</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00205">bRechargeStacksOnCooldown</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00172">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00237">bRechargeStacksOnCooldown</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00390">ActivateAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00484">ActivateAbility()</a>, and <a class="el" href="#a6df7457255669b859fd281d2300602a6">GetCooldownDuration()</a>.</p>
 
 </div>
 </div>
@@ -1160,7 +1288,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a4905bf8860f08c8182fcf195971b9454">OnAbilityAdded()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a4905bf8860f08c8182fcf195971b9454">OnAbilityAdded()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00537">OnGiveAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a4905bf8860f08c8182fcf195971b9454">OnAbilityAdded()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00640">OnGiveAbility()</a>.</p>
 
 </div>
 </div>
@@ -1185,7 +1313,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#af24c462225a843dbcf72350716a0a431">OnAbilityRemoved()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#af24c462225a843dbcf72350716a0a431">OnAbilityRemoved()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00506">UDTAbilitySystemComponent::OnRemoveAbility()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00481">OnRemoveAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#af24c462225a843dbcf72350716a0a431">OnAbilityRemoved()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00605">UDTAbilitySystemComponent::OnRemoveAbility()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00589">OnRemoveAbility()</a>.</p>
 
 </div>
 </div>
@@ -1216,9 +1344,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00525">525</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00633">633</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00184">bActivateOnGranted</a>, and <a class="el" href="#afa48df9bee15774593c3230f5b694f29">OnPawnAvatarSet()</a>.</p>
+<p class="reference">References <a class="el" href="#afa48df9bee15774593c3230f5b694f29">OnPawnAvatarSet()</a>.</p>
 
 </div>
 </div>
@@ -1249,9 +1377,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00537">537</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00640">640</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00222">AbilityStackChangedDelegateHandle</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00205">bRechargeStacksOnCooldown</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00172">GetMaxStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00579">HandleAbilityStackChanged()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>, <a class="el" href="#a4905bf8860f08c8182fcf195971b9454">OnAbilityAdded()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00326">RegisterCooldownTagDelegates()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00258">AbilityStackChangedDelegateHandle</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00237">bRechargeStacksOnCooldown</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">GetMaxStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00682">HandleAbilityStackChanged()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>, <a class="el" href="#a4905bf8860f08c8182fcf195971b9454">OnAbilityAdded()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00420">RegisterCooldownTagDelegates()</a>.</p>
 
 </div>
 </div>
@@ -1270,9 +1398,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00033">GetOwningController()</a>, and <a class="el" href="#afa48df9bee15774593c3230f5b694f29">OnPawnAvatarSet()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00035">GetOwningController()</a>, and <a class="el" href="#afa48df9bee15774593c3230f5b694f29">OnPawnAvatarSet()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00054">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00525">OnAvatarSet()</a>, and <a class="el" href="#afa48df9bee15774593c3230f5b694f29">OnPawnAvatarSet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00633">OnAvatarSet()</a>, and <a class="el" href="#afa48df9bee15774593c3230f5b694f29">OnPawnAvatarSet()</a>.</p>
 
 </div>
 </div>
@@ -1303,9 +1431,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00481">481</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00589">589</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00222">AbilityStackChangedDelegateHandle</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="#af24c462225a843dbcf72350716a0a431">OnAbilityRemoved()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00358">UnregisterCooldownTagDelegates()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00258">AbilityStackChangedDelegateHandle</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="#af24c462225a843dbcf72350716a0a431">OnAbilityRemoved()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00452">UnregisterCooldownTagDelegates()</a>.</p>
 
 </div>
 </div>
@@ -1351,9 +1479,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00383">383</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00477">477</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00377">AbilityEnded()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00471">AbilityEnded()</a>.</p>
 
 </div>
 </div>
@@ -1382,11 +1510,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Register / unregister for cooldown tag events on the ASC. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00326">326</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00420">420</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00221">CooldownTagDelegateHandles</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00290">HandleCooldownTagChanged()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00358">UnregisterCooldownTagDelegates()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00257">CooldownTagDelegateHandles</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00384">HandleCooldownTagChanged()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00452">UnregisterCooldownTagDelegates()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00537">OnGiveAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00640">OnGiveAbility()</a>.</p>
 
 </div>
 </div>
@@ -1415,9 +1543,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reset charges to the maximum value. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00212">212</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00268">268</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00569">GetAbilitySpecHandle()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00172">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00672">GetAbilitySpecHandle()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>.</p>
 
 </div>
 </div>
@@ -1444,11 +1572,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00514">514</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00622">622</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00218">ActivationGroup</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00025">Exclusive_Replaceable</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00250">ActivationGroup</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00025">Exclusive_Replaceable</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___death_8cpp_source.html#l00026">UDTGameplayAbility_Death::ActivateAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___death_8cpp_source.html#l00028">UDTGameplayAbility_Death::ActivateAbility()</a>.</p>
 
 </div>
 </div>
@@ -1477,14 +1605,14 @@ Protected Attributes</h2></td></tr>
 
 <p>Sets the current stack count directly (clamped to [0, MaxStacks]) and broadcasts the delegate. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00225">225</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00306">306</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00569">GetAbilitySpecHandle()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00044">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00172">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00672">GetAbilitySpecHandle()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00046">GetDTAbilitySystemComponentFromActorInfo()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>.</p>
 
 </div>
 </div>
-<a id="a9a05e59f17d4e53e5c831ba09600c7ca" name="a9a05e59f17d4e53e5c831ba09600c7ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a05e59f17d4e53e5c831ba09600c7ca">&#9670;&#160;</a></span>StartStackRegeneration()</h2>
+<a id="a03281529ba0b9bb24081bcf5d10a4fd6" name="a03281529ba0b9bb24081bcf5d10a4fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03281529ba0b9bb24081bcf5d10a4fd6">&#9670;&#160;</a></span>StartStackRegeneration()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1496,7 +1624,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void UDTGameplayAbility::StartStackRegeneration </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1508,11 +1636,36 @@ Protected Attributes</h2></td></tr>
 
 <p>Start the cooldown-based charge regeneration loop if below max stacks. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">238</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00319">319</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00205">bRechargeStacksOnCooldown</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00153">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00172">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00237">bRechargeStacksOnCooldown</a>, <a class="el" href="#a6df7457255669b859fd281d2300602a6">GetCooldownDuration()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00390">ActivateAbility()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00290">HandleCooldownTagChanged()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00484">ActivateAbility()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00384">HandleCooldownTagChanged()</a>.</p>
+
+</div>
+</div>
+<a id="a880b81ee87f28c71d22c66829e7ad685" name="a880b81ee87f28c71d22c66829e7ad685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a880b81ee87f28c71d22c66829e7ad685">&#9670;&#160;</a></span>TryActivateAbilityOnSpawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility::TryActivateAbilityOnSpawn </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayAbilityActorInfo *</td>          <td class="paramname"><span class="paramname"><em>ActorInfo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayAbilitySpec &amp;</td>          <td class="paramname"><span class="paramname"><em>Spec</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00281">281</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00254">ActivationPolicy</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00046">OnSpawn</a>.</p>
 
 </div>
 </div>
@@ -1539,11 +1692,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00358">358</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00452">452</a> of file <a class="el" href="_d_t_gameplay_ability_8cpp_source.html">DTGameplayAbility.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00221">CooldownTagDelegateHandles</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00257">CooldownTagDelegateHandles</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00481">OnRemoveAbility()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00326">RegisterCooldownTagDelegates()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00589">OnRemoveAbility()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00420">RegisterCooldownTagDelegates()</a>.</p>
 
 </div>
 </div>
@@ -1573,13 +1726,13 @@ Protected Attributes</h2></td></tr>
 <p>Returns true if this ability manages its own charge regeneration loop (cooldown-per-charge). </p>
 <p>Returns false for abilities whose stack count comes from an external source (e.g. item stacks) </p>
 
-<p>Reimplemented in <a class="el" href="class_u_d_t_gameplay_ability___item.html#a0f86865eac8013d099060c033f3b2021">UDTGameplayAbility_Item</a>.</p>
+<p>Reimplemented in <a class="el" href="class_u_d_t_gameplay_ability___item.html#afb30207639edde9a4511c9ad816f47d4">UDTGameplayAbility_Item</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00158">158</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00190">190</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00205">bRechargeStacksOnCooldown</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00194">bUseAbilityStacks</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00158">UsesRegenStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00237">bRechargeStacksOnCooldown</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00226">bUseAbilityStacks</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00190">UsesRegenStacks()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00390">ActivateAbility()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00150">UDTAbilityWidget::UpdateAbilityInfo()</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00158">UsesRegenStacks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00484">ActivateAbility()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00151">UDTAbilityWidget::UpdateAbilityInfo()</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00190">UsesRegenStacks()</a>.</p>
 
 </div>
 </div>
@@ -1606,9 +1759,9 @@ Protected Attributes</h2></td></tr>
 
 <p>The ability definition asset associated with this ability (provides UI metadata like icon, name, description). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00209">209</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00241">241</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00085">GetAbilityDefinition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00087">GetAbilityDefinition()</a>.</p>
 
 </div>
 </div>
@@ -1632,9 +1785,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00215">215</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00247">247</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00064">GetAbilityMontageByIndex()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00059">GetAbilityMontages()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00074">GetRandomAbilityMontage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00066">GetAbilityMontageByIndex()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00061">GetAbilityMontages()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00076">GetRandomAbilityMontage()</a>.</p>
 
 </div>
 </div>
@@ -1658,9 +1811,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00222">222</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00258">258</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00537">OnGiveAbility()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00481">OnRemoveAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00640">OnGiveAbility()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00589">OnRemoveAbility()</a>.</p>
 
 </div>
 </div>
@@ -1684,14 +1837,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00218">218</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00250">250</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00432">CanActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00095">CanChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00125">ChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00114">GetActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00514">SetCanBeCanceled()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00021">UDTGameplayAbility()</a>, <a class="el" href="_d_t_gameplay_ability___chain_ability_8cpp_source.html#l00015">UDTGameplayAbility_ChainAbility::UDTGameplayAbility_ChainAbility()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00023">UDTGameplayAbility_Melee::UDTGameplayAbility_Melee()</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8cpp_source.html#l00008">UDTGameplayAbility_Passive::UDTGameplayAbility_Passive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00526">CanActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00151">CanChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">ChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00130">GetActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00622">SetCanBeCanceled()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00023">UDTGameplayAbility()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00015">UDTGameplayAbility_Chain::UDTGameplayAbility_Chain()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00015">UDTGameplayAbility_Channel::UDTGameplayAbility_Channel()</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00016">UDTGameplayAbility_HitReact::UDTGameplayAbility_HitReact()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00032">UDTGameplayAbility_Melee::UDTGameplayAbility_Melee()</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8cpp_source.html#l00008">UDTGameplayAbility_Passive::UDTGameplayAbility_Passive()</a>.</p>
 
 </div>
 </div>
-<a id="a738f9c34916134146933b7e4b4da47e6" name="a738f9c34916134146933b7e4b4da47e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a738f9c34916134146933b7e4b4da47e6">&#9670;&#160;</a></span>bActivateOnGranted</h2>
+<a id="a173060d2b4bc6cb0bfa6aad1127cadc9" name="a173060d2b4bc6cb0bfa6aad1127cadc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a173060d2b4bc6cb0bfa6aad1127cadc9">&#9670;&#160;</a></span>ActivationPolicy</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1700,7 +1853,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool UDTGameplayAbility::bActivateOnGranted = false</td>
+          <td class="memname"><a class="el" href="_d_t_gameplay_ability_8h.html#a5f5c7ed49a4da18165fceeb5a8205c08">EDTAbilityActivationPolicy</a> UDTGameplayAbility::ActivationPolicy = <a class="el" href="_d_t_gameplay_ability_8h.html#a5f5c7ed49a4da18165fceeb5a8205c08a82db7a1dadfda8ba50b0665f651d567d">EDTAbilityActivationPolicy::OnInputTriggered</a></td>
         </tr>
       </table>
   </td>
@@ -1710,9 +1863,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00184">184</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p>How this ability activates from tag-routed player input. </p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00525">OnAvatarSet()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00254">254</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00133">GetActivationPolicy()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00281">TryActivateAbilityOnSpawn()</a>, and <a class="el" href="_d_t_gameplay_ability___interact_8cpp_source.html#l00020">UDTGameplayAbility_Interact::UDTGameplayAbility_Interact()</a>.</p>
 
 </div>
 </div>
@@ -1738,9 +1893,9 @@ Protected Attributes</h2></td></tr>
 
 <p>If true, one charge is consumed each time the ability activates. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00202">202</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00234">234</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00411">CommitAbility()</a>, and <a class="el" href="_d_t_gameplay_ability___item_8cpp_source.html#l00011">UDTGameplayAbility_Item::UDTGameplayAbility_Item()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00505">CommitAbility()</a>, and <a class="el" href="_d_t_gameplay_ability___item_8cpp_source.html#l00011">UDTGameplayAbility_Item::UDTGameplayAbility_Item()</a>.</p>
 
 </div>
 </div>
@@ -1766,9 +1921,9 @@ Protected Attributes</h2></td></tr>
 
 <p>When true (default), this ability broadcasts ability lifecycle events. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00190">190</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00222">222</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00120">CanSendActivationEvents()</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8cpp_source.html#l00008">UDTGameplayAbility_Passive::UDTGameplayAbility_Passive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00139">CanSendActivationEvents()</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00016">UDTGameplayAbility_HitReact::UDTGameplayAbility_HitReact()</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8cpp_source.html#l00008">UDTGameplayAbility_Passive::UDTGameplayAbility_Passive()</a>.</p>
 
 </div>
 </div>
@@ -1792,9 +1947,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00205">205</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00237">237</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00290">HandleCooldownTagChanged()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00177">IsRegeneratingStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00537">OnGiveAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00238">StartStackRegeneration()</a>, <a class="el" href="_d_t_gameplay_ability___item_8cpp_source.html#l00011">UDTGameplayAbility_Item::UDTGameplayAbility_Item()</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00158">UsesRegenStacks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00384">HandleCooldownTagChanged()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00233">IsRegeneratingStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00640">OnGiveAbility()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00319">StartStackRegeneration()</a>, <a class="el" href="_d_t_gameplay_ability___item_8cpp_source.html#l00011">UDTGameplayAbility_Item::UDTGameplayAbility_Item()</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00190">UsesRegenStacks()</a>.</p>
 
 </div>
 </div>
@@ -1821,9 +1976,9 @@ Protected Attributes</h2></td></tr>
 <p>Enable the charge/stack system for this ability. </p>
 <p>When false all stack properties are hidden. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00194">194</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00226">226</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">HasStacks()</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00016">UDTGameplayAbility_Dodge::UDTGameplayAbility_Dodge()</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00158">UsesRegenStacks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">HasStacks()</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00016">UDTGameplayAbility_Dodge::UDTGameplayAbility_Dodge()</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00190">UsesRegenStacks()</a>.</p>
 
 </div>
 </div>
@@ -1847,7 +2002,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00212">212</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00244">244</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
 </div>
 </div>
@@ -1873,9 +2028,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Delegate handles for the cooldown tag events we're listening to. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00221">221</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00257">257</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00326">RegisterCooldownTagDelegates()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00358">UnregisterCooldownTagDelegates()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00420">RegisterCooldownTagDelegates()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00452">UnregisterCooldownTagDelegates()</a>.</p>
 
 </div>
 </div>
@@ -1901,9 +2056,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Maximum number of charges this ability can hold. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00198">198</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00230">230</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00172">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00016">UDTGameplayAbility_Dodge::UDTGameplayAbility_Dodge()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">GetMaxStacks()</a>, and <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00016">UDTGameplayAbility_Dodge::UDTGameplayAbility_Dodge()</a>.</p>
 
 </div>
 </div>
@@ -1919,9 +2074,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00055">55</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00377">AbilityEnded()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00471">AbilityEnded()</a>.</p>
 
 </div>
 </div>
@@ -1939,9 +2094,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Fired whenever the charge count changes. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00059">59</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00075">75</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00579">HandleAbilityStackChanged()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00682">HandleAbilityStackChanged()</a>.</p>
 
 </div>
 </div>

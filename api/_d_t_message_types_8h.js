@@ -7,6 +7,7 @@ var _d_t_message_types_8h =
     [ "FDTStatChangedMessage", "struct_f_d_t_stat_changed_message.html", "struct_f_d_t_stat_changed_message" ],
     [ "FDTDungeonSummaryMessage", "struct_f_d_t_dungeon_summary_message.html", "struct_f_d_t_dungeon_summary_message" ],
     [ "FDTPlayerDeathMessage", "struct_f_d_t_player_death_message.html", "struct_f_d_t_player_death_message" ],
+    [ "FDTInteractionMessage", "struct_f_d_t_interaction_message.html", "struct_f_d_t_interaction_message" ],
     [ "FDTQueuedNotification", "struct_f_d_t_queued_notification.html", "struct_f_d_t_queued_notification" ],
     [ "FDTAnnouncementMessage", "struct_f_d_t_announcement_message.html", "struct_f_d_t_announcement_message" ],
     [ "FDTQueuedAnnouncement", "struct_f_d_t_queued_announcement.html", "struct_f_d_t_queued_announcement" ],

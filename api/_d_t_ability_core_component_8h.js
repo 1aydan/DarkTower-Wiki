@@ -1,8 +1,28 @@
 var _d_t_ability_core_component_8h =
 [
+    [ "FDTGameplayEffectExecuteData", "struct_f_d_t_gameplay_effect_execute_data.html", "struct_f_d_t_gameplay_effect_execute_data" ],
+    [ "FDTLastHitInfo", "struct_f_d_t_last_hit_info.html", "struct_f_d_t_last_hit_info" ],
     [ "UDTAbilityCoreComponent", "class_u_d_t_ability_core_component.html", "class_u_d_t_ability_core_component" ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE", "_d_t_ability_core_component_8h.html#ade2153fdfdf9db6d487d794b41c146ba", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_FiveParams", "_d_t_ability_core_component_8h.html#a4f3d503d4c252e9519eecef36d214144", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_FiveParams", "_d_t_ability_core_component_8h.html#a22bd5a85c48c4a95d4e140baacaf6c44", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_FiveParams", "_d_t_ability_core_component_8h.html#a37f7957fe741acd3e86a2759a118e6c7", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams", "_d_t_ability_core_component_8h.html#ab15d078d336a07ec4f846e00a8b4779e", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam", "_d_t_ability_core_component_8h.html#ade8b614f1e5bd64bc4c74dc64e51dd6b", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam", "_d_t_ability_core_component_8h.html#aaedda46e55343059c9a1927e35570f3f", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam", "_d_t_ability_core_component_8h.html#abc93e9678e633602110e4cdbf6e48277", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam", "_d_t_ability_core_component_8h.html#ad2c07037b025f3c4e58881edc6bbce54", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams", "_d_t_ability_core_component_8h.html#abf07b43f8806a32a034932de22b2ac6d", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams", "_d_t_ability_core_component_8h.html#af5c57e71682928378cdb26e50ca349f6", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams", "_d_t_ability_core_component_8h.html#ae0cc219fdaaaba0f06d6b95bd18de25a", null ],
     [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams", "_d_t_ability_core_component_8h.html#a1b9b000e2a0508266d1255ac2f276722", null ],
     [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams", "_d_t_ability_core_component_8h.html#a8102bfea1905021da5ddc1317910c108", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams", "_d_t_ability_core_component_8h.html#a2afb345ba4ffeef055cfc8695c3b8267", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams", "_d_t_ability_core_component_8h.html#a2bed648283dd1649870f17f3bc46f8f9", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams", "_d_t_ability_core_component_8h.html#ae1d4cdb8918e100ecdc55818c2119f41", null ],
     [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams", "_d_t_ability_core_component_8h.html#ae459cb95031b43a9700b43c47884c34a", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams", "_d_t_ability_core_component_8h.html#aed4c36ba366b004a9b5aa4da649973a4", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams", "_d_t_ability_core_component_8h.html#ac2c25a772e494de7a4b1c2eb6de2b682", null ],
+    [ "DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams", "_d_t_ability_core_component_8h.html#a8f3965f59398badd2227a5f2ad1129ce", null ],
     [ "DECLARE_MULTICAST_DELEGATE_ThreeParams", "_d_t_ability_core_component_8h.html#a84f33b223f2d04f709b20b1700510777", null ]
 ];

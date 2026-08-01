@@ -146,38 +146,51 @@ Inheritance diagram for UDTCheatManager:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a155961fb96725060d641eea2b9ad1c0a" id="r_a155961fb96725060d641eea2b9ad1c0a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a155961fb96725060d641eea2b9ad1c0a">DamageSelf</a> (float Amount=10.0f) const</td></tr>
-<tr class="memdesc:a155961fb96725060d641eea2b9ad1c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deal self damage to the player's pawn.  <br /></td></tr>
+<tr class="memdesc:a155961fb96725060d641eea2b9ad1c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deal true (unmitigated) damage to the player's own pawn.  <br /></td></tr>
 <tr class="memitem:a75ee1ba70b7b1e4ddc033a7cba16e456" id="r_a75ee1ba70b7b1e4ddc033a7cba16e456"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a75ee1ba70b7b1e4ddc033a7cba16e456">God</a> () override</td></tr>
 <tr class="memdesc:a75ee1ba70b7b1e4ddc033a7cba16e456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles god mode for the player.  <br /></td></tr>
+<tr class="memitem:a9031ce87ae48f1dc73ede2606dd66bba" id="r_a9031ce87ae48f1dc73ede2606dd66bba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9031ce87ae48f1dc73ede2606dd66bba">DemiGod</a> () const</td></tr>
+<tr class="memdesc:a9031ce87ae48f1dc73ede2606dd66bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles demi god mode for the player.  <br /></td></tr>
 <tr class="memitem:aa382d4afa403367baf41459ac84263b2" id="r_aa382d4afa403367baf41459ac84263b2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa382d4afa403367baf41459ac84263b2">SpawnLootByName</a> (FName LootItemName, int32 Quantity=1, int32 Seed=0) const</td></tr>
+<tr class="memdesc:aa382d4afa403367baf41459ac84263b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a loot item in front of the player, looked up by item definition asset name.  <br /></td></tr>
 <tr class="memitem:a654298c5ae3dfb83541fe9ad7043dc50" id="r_a654298c5ae3dfb83541fe9ad7043dc50"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a654298c5ae3dfb83541fe9ad7043dc50">SpawnLootByID</a> (FGuid LootItemID, int32 Quantity=1, int32 Seed=0) const</td></tr>
+<tr class="memdesc:a654298c5ae3dfb83541fe9ad7043dc50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a loot item in front of the player, looked up by item definition GUID.  <br /></td></tr>
 <tr class="memitem:acd0ae7ba8c3088f3be8e4c3751a82e22" id="r_acd0ae7ba8c3088f3be8e4c3751a82e22"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acd0ae7ba8c3088f3be8e4c3751a82e22">SpawnLootByPhrase</a> (FGuid LootItemID, int32 Quantity=1, const FString &amp;SeedPhrase=TEXT(&quot;&quot;)) const</td></tr>
+<tr class="memdesc:acd0ae7ba8c3088f3be8e4c3751a82e22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a loot item by GUID using a text phrase as the roll seed.  <br /></td></tr>
 <tr class="memitem:a954d4c74be66bf1a6b2261bd9e7572e4" id="r_a954d4c74be66bf1a6b2261bd9e7572e4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a954d4c74be66bf1a6b2261bd9e7572e4">SpawnLootAtFloor</a> (FGuid LootItemID, int32 Quantity=1, int32 Floor=1, int32 Seed=0) const</td></tr>
+<tr class="memdesc:a954d4c74be66bf1a6b2261bd9e7572e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a loot item by GUID as if it had dropped on a specific dungeon floor, so floor scaling applies.  <br /></td></tr>
 <tr class="memitem:a145d33bfa14cccb79eb5282936c4cb08" id="r_a145d33bfa14cccb79eb5282936c4cb08"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a145d33bfa14cccb79eb5282936c4cb08">SpawnLootWithAffix</a> (FGuid LootItemID, FGuid AffixGuid, float RollValue=1.0f, bool bClearAffixes=false) const</td></tr>
+<tr class="memdesc:a145d33bfa14cccb79eb5282936c4cb08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a loot item by GUID with a specific affix forced onto it at a chosen roll value.  <br /></td></tr>
 <tr class="memitem:aa5b54a31620e8af1b501c9fb74ca0886" id="r_aa5b54a31620e8af1b501c9fb74ca0886"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa5b54a31620e8af1b501c9fb74ca0886">ClearInventory</a> () const</td></tr>
+<tr class="memdesc:aa5b54a31620e8af1b501c9fb74ca0886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove every item from the player's inventory.  <br /></td></tr>
 <tr class="memitem:a75b235da847837f20071e9dd0568a930" id="r_a75b235da847837f20071e9dd0568a930"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a75b235da847837f20071e9dd0568a930">ClearEquipment</a> () const</td></tr>
+<tr class="memdesc:a75b235da847837f20071e9dd0568a930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unequip every equipment slot on the player.  <br /></td></tr>
 <tr class="memitem:a99a07e47c97ac5e4911a7a40e89dbf34" id="r_a99a07e47c97ac5e4911a7a40e89dbf34"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a99a07e47c97ac5e4911a7a40e89dbf34">SaveGame</a> () const</td></tr>
+<tr class="memdesc:a99a07e47c97ac5e4911a7a40e89dbf34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force an immediate save of the current game.  <br /></td></tr>
 <tr class="memitem:a86090bfa21655fc89d0f1836ef4c4791" id="r_a86090bfa21655fc89d0f1836ef4c4791"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a86090bfa21655fc89d0f1836ef4c4791">TestLootGen</a> (int32 Iterations) const</td></tr>
-<tr class="memdesc:a86090bfa21655fc89d0f1836ef4c4791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test global loot generation with specified Iteration.  <br /></td></tr>
+<tr class="memdesc:a86090bfa21655fc89d0f1836ef4c4791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the global loot generator repeatedly and log seed/item statistics.  <br /></td></tr>
 <tr class="memitem:a0616d057573042c438bfb01d32091117" id="r_a0616d057573042c438bfb01d32091117"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0616d057573042c438bfb01d32091117">LogExtraLootRolls</a> (int32 Floor=-1, float LootBonus=0.0f) const</td></tr>
 <tr class="memdesc:a0616d057573042c438bfb01d32091117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log the number of extra loot rolls the loot budget grants at a floor (and optional loot bonus).  <br /></td></tr>
 <tr class="memitem:adb2fe972aafa644c42a0b6e1385d493d" id="r_adb2fe972aafa644c42a0b6e1385d493d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adb2fe972aafa644c42a0b6e1385d493d">KillAllEnemies</a> () const</td></tr>
+<tr class="memdesc:adb2fe972aafa644c42a0b6e1385d493d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kill every enemy currently present in the level.  <br /></td></tr>
 <tr class="memitem:ace99af86d84b6e09b5931ee0528949b0" id="r_ace99af86d84b6e09b5931ee0528949b0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ace99af86d84b6e09b5931ee0528949b0">SetDungeonSettings</a> (int32 Floor, int32 Seed) const</td></tr>
-<tr class="memdesc:ace99af86d84b6e09b5931ee0528949b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override the dungeon floor and/or seed for the current session and rebuild.  <br /></td></tr>
+<tr class="memdesc:ace99af86d84b6e09b5931ee0528949b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override the dungeon floor and seed for the current session and rebuild the dungeon.  <br /></td></tr>
 <tr class="memitem:a092ec8fb8a59274aba2c398f449365d0" id="r_a092ec8fb8a59274aba2c398f449365d0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a092ec8fb8a59274aba2c398f449365d0">RespecTree</a> (FString TreeTagString) const</td></tr>
-<tr class="memdesc:a092ec8fb8a59274aba2c398f449365d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Respec a specific skill tree by tag string (e.g., "SkillTree.Berserker").  <br /></td></tr>
+<tr class="memdesc:a092ec8fb8a59274aba2c398f449365d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Respec a single skill tree and refund its invested points.  <br /></td></tr>
 <tr class="memitem:a62c5cda7d0b9efbe4fad3939749ae453" id="r_a62c5cda7d0b9efbe4fad3939749ae453"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a62c5cda7d0b9efbe4fad3939749ae453">RespecAllTrees</a> () const</td></tr>
-<tr class="memdesc:a62c5cda7d0b9efbe4fad3939749ae453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Respec all skill trees at once.  <br /></td></tr>
+<tr class="memdesc:a62c5cda7d0b9efbe4fad3939749ae453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Respec every skill tree at once and refund all invested points.  <br /></td></tr>
 <tr class="memitem:af1c6b735cdc13081e80ac1d4c7100aaa" id="r_af1c6b735cdc13081e80ac1d4c7100aaa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af1c6b735cdc13081e80ac1d4c7100aaa">PrintSkillTrees</a> () const</td></tr>
-<tr class="memdesc:af1c6b735cdc13081e80ac1d4c7100aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the current Skill Tree Status (points, invested nodes, unlocked rows).  <br /></td></tr>
+<tr class="memdesc:af1c6b735cdc13081e80ac1d4c7100aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the current skill tree status (points, invested nodes, unlocked rows).  <br /></td></tr>
 <tr class="memitem:aa8e0e5e53a0d65b3650ab05aa313c601" id="r_aa8e0e5e53a0d65b3650ab05aa313c601"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa8e0e5e53a0d65b3650ab05aa313c601">AddCurrency</a> (FString CurrencyTagString, int64 Amount=100, bool bGiveToEveryone=false) const</td></tr>
 <tr class="memdesc:aa8e0e5e53a0d65b3650ab05aa313c601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grant an amount of a currency to the local player.  <br /></td></tr>
 <tr class="memitem:a8fc4080825d707c940b892951b5e01b6" id="r_a8fc4080825d707c940b892951b5e01b6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8fc4080825d707c940b892951b5e01b6">ClearCurrency</a> (FString CurrencyTagString) const</td></tr>
+<tr class="memdesc:a8fc4080825d707c940b892951b5e01b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zero out a currency balance for the local player.  <br /></td></tr>
 <tr class="memitem:aef4f6fc5b82917bfc7254c009cd845d5" id="r_aef4f6fc5b82917bfc7254c009cd845d5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aef4f6fc5b82917bfc7254c009cd845d5">PrintCurrencies</a> () const</td></tr>
 <tr class="memdesc:aef4f6fc5b82917bfc7254c009cd845d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print all current currency balances for the local player to the console.  <br /></td></tr>
 <tr class="memitem:a9950ea80ab261e423eeb805a814ada3d" id="r_a9950ea80ab261e423eeb805a814ada3d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9950ea80ab261e423eeb805a814ada3d">AddHeroXP</a> (int64 Amount=100, bool bGiveToEveryone=false) const</td></tr>
 <tr class="memdesc:a9950ea80ab261e423eeb805a814ada3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grant hero progression XP to the local player or to everyone.  <br /></td></tr>
 <tr class="memitem:a582c53f86a642685a6e0b2682dfce2e2" id="r_a582c53f86a642685a6e0b2682dfce2e2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a582c53f86a642685a6e0b2682dfce2e2">ClearHeroProgression</a> () const</td></tr>
+<tr class="memdesc:a582c53f86a642685a6e0b2682dfce2e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset hero level and XP back to zero for the local player.  <br /></td></tr>
 <tr class="memitem:aa6b1744cc49d27d50b815351db4fcd64" id="r_aa6b1744cc49d27d50b815351db4fcd64"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa6b1744cc49d27d50b815351db4fcd64">PrintHeroProgression</a> () const</td></tr>
 <tr class="memdesc:aa6b1744cc49d27d50b815351db4fcd64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print hero progression values (level, current XP, XP to next, total XP).  <br /></td></tr>
 <tr class="memitem:a7c92de1123c99490ea3124f992294323" id="r_a7c92de1123c99490ea3124f992294323"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7c92de1123c99490ea3124f992294323">QuestAccept</a> (FString QuestTagString) const</td></tr>
@@ -189,27 +202,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a453082ea09985224d6e5e0bcc43778eb" id="r_a453082ea09985224d6e5e0bcc43778eb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a453082ea09985224d6e5e0bcc43778eb">QuestAbandon</a> (FString QuestTagString) const</td></tr>
 <tr class="memdesc:a453082ea09985224d6e5e0bcc43778eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abandon a quest for the local player.  <br /></td></tr>
 <tr class="memitem:a21776b80f16f0c45d09892706a480d5d" id="r_a21776b80f16f0c45d09892706a480d5d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a21776b80f16f0c45d09892706a480d5d">PrintQuest</a> (FString QuestTagString=TEXT(&quot;&quot;)) const</td></tr>
-<tr class="memdesc:a21776b80f16f0c45d09892706a480d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a specific quest state or all quest entries when no tag is provided.  <br /></td></tr>
+<tr class="memdesc:a21776b80f16f0c45d09892706a480d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a single quest's state, or every quest entry when no tag is provided.  <br /></td></tr>
 <tr class="memitem:afb82cbb5a310ecd8fa7d098d0cf30816" id="r_afb82cbb5a310ecd8fa7d098d0cf30816"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afb82cbb5a310ecd8fa7d098d0cf30816">PrintAllQuests</a> () const</td></tr>
 <tr class="memdesc:afb82cbb5a310ecd8fa7d098d0cf30816"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print all player and shared quests.  <br /></td></tr>
 <tr class="memitem:a18cafea87fe8335f2a174de0d4eeb1de" id="r_a18cafea87fe8335f2a174de0d4eeb1de"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a18cafea87fe8335f2a174de0d4eeb1de">AddPlayerStat</a> (FString StatTagString, double Delta=1.0) const</td></tr>
-<tr class="memdesc:a18cafea87fe8335f2a174de0d4eeb1de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a numeric player stat (owner-only replicated, persistent).  <br /></td></tr>
+<tr class="memdesc:a18cafea87fe8335f2a174de0d4eeb1de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add to a numeric player stat (owner-only replicated, persistent).  <br /></td></tr>
 <tr class="memitem:aa958bb920a680393b9e4dd6cca43c2db" id="r_aa958bb920a680393b9e4dd6cca43c2db"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa958bb920a680393b9e4dd6cca43c2db">SetPlayerStat</a> (FString StatTagString, double Value) const</td></tr>
-<tr class="memdesc:aa958bb920a680393b9e4dd6cca43c2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a numeric player stat (owner-only replicated, persistent).  <br /></td></tr>
+<tr class="memdesc:aa958bb920a680393b9e4dd6cca43c2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a numeric player stat to an absolute value (owner-only replicated, persistent).  <br /></td></tr>
 <tr class="memitem:a3b01e154d441979f38d270431db04f36" id="r_a3b01e154d441979f38d270431db04f36"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3b01e154d441979f38d270431db04f36">PrintPlayerStat</a> (FString StatTagString) const</td></tr>
 <tr class="memdesc:a3b01e154d441979f38d270431db04f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a numeric player stat if present.  <br /></td></tr>
 <tr class="memitem:a789934d2baab872a8f9985fc5d5d5096" id="r_a789934d2baab872a8f9985fc5d5d5096"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a789934d2baab872a8f9985fc5d5d5096">AddWorldStat</a> (FString StatTagString, double Delta=1.0) const</td></tr>
-<tr class="memdesc:a789934d2baab872a8f9985fc5d5d5096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a numeric world stat (persistent).  <br /></td></tr>
+<tr class="memdesc:a789934d2baab872a8f9985fc5d5d5096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add to a numeric world stat (persistent).  <br /></td></tr>
 <tr class="memitem:ad631b8786ee27a62fb39eacc5cd136d3" id="r_ad631b8786ee27a62fb39eacc5cd136d3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad631b8786ee27a62fb39eacc5cd136d3">SetWorldStat</a> (FString StatTagString, double Value) const</td></tr>
-<tr class="memdesc:ad631b8786ee27a62fb39eacc5cd136d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a numeric world stat (persistent).  <br /></td></tr>
+<tr class="memdesc:ad631b8786ee27a62fb39eacc5cd136d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a numeric world stat to an absolute value (persistent).  <br /></td></tr>
 <tr class="memitem:a1011451c3f0d3154d6a49b80b90388f9" id="r_a1011451c3f0d3154d6a49b80b90388f9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1011451c3f0d3154d6a49b80b90388f9">PrintWorldStat</a> (FString StatTagString) const</td></tr>
 <tr class="memdesc:a1011451c3f0d3154d6a49b80b90388f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a numeric world stat if present.  <br /></td></tr>
 <tr class="memitem:abec4c082ea84f360fa2f079a2fd6ac1c" id="r_abec4c082ea84f360fa2f079a2fd6ac1c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abec4c082ea84f360fa2f079a2fd6ac1c">PrintAllStats</a> () const</td></tr>
 <tr class="memdesc:abec4c082ea84f360fa2f079a2fd6ac1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print all persistent player and world stats.  <br /></td></tr>
 <tr class="memitem:aeccc002263de48e6a33df6aa11fc0a91" id="r_aeccc002263de48e6a33df6aa11fc0a91"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeccc002263de48e6a33df6aa11fc0a91">ClearStats</a> (EStatSource StatSource) const</td></tr>
+<tr class="memdesc:aeccc002263de48e6a33df6aa11fc0a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wipe stat data for one source.  <br /></td></tr>
 <tr class="memitem:abf9977b5b71f63b9171474865e76a9bf" id="r_abf9977b5b71f63b9171474865e76a9bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abf9977b5b71f63b9171474865e76a9bf">ClearQuestData</a> (EQuestScope QuestSource, bool bTransientOnly) const</td></tr>
+<tr class="memdesc:abf9977b5b71f63b9171474865e76a9bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wipe quest data for one scope.  <br /></td></tr>
 <tr class="memitem:ab6bed0b16a078e26e73898a95b9c2aa0" id="r_ab6bed0b16a078e26e73898a95b9c2aa0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab6bed0b16a078e26e73898a95b9c2aa0">CompleteDungeon</a> (bool bFail=false) const</td></tr>
-<tr class="memdesc:ab6bed0b16a078e26e73898a95b9c2aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks the current dungeon floor as complete, activating portals and broadcasting the floor-complete event.  <br /></td></tr>
+<tr class="memdesc:ab6bed0b16a078e26e73898a95b9c2aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the current dungeon floor complete, activating portals and broadcasting the floor-complete event.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -217,8 +232,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base Cheat Manager class for Dark Tower. </p>
+<p>NOTE: the console does NOT surface these comments - its autocomplete description is built purely from the parameter list. Help text for a command lives in [/Script/EngineSettings.ConsoleSettings] in DefaultInput.ini; keep that list in sync when adding or renaming an exec cheat here. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8h_source.html#l00019">19</a> of file <a class="el" href="_d_t_cheat_manager_8h_source.html">DTCheatManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8h_source.html#l00023">23</a> of file <a class="el" href="_d_t_cheat_manager_8h_source.html">DTCheatManager.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aa8e0e5e53a0d65b3650ab05aa313c601" name="aa8e0e5e53a0d65b3650ab05aa313c601"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8e0e5e53a0d65b3650ab05aa313c601">&#9670;&#160;</a></span>AddCurrency()</h2>
@@ -254,9 +270,9 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01029">1029</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01043">1043</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_game_state_8cpp_source.html#l00176">ADTGameState::AwardCurrencyToAllPlayers()</a>, <a class="el" href="_d_t_gameplay_tags_8cpp_source.html#l00381">DTGameplayTags::FindTagByString()</a>, and <a class="el" href="_d_t_player_state_8h_source.html#l00072">ADTPlayerState::GetCurrencyComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_game_state_8cpp_source.html#l00176">ADTGameState::AwardCurrencyToAllPlayers()</a>, <a class="el" href="_d_t_gameplay_tags_8cpp_source.html#l00425">DTGameplayTags::FindTagByString()</a>, and <a class="el" href="_d_t_player_state_8h_source.html#l00074">ADTPlayerState::GetCurrencyComponent()</a>.</p>
 
 </div>
 </div>
@@ -280,11 +296,17 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Grant hero progression XP to the local player or to everyone. </p>
-<p>Usage: AddHeroXP 1000 </p>
+<p>Usage: AddHeroXP 1000 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Amount</td><td>XP to grant </td></tr>
+    <tr><td class="paramname">bGiveToEveryone</td><td>If true, grants the XP to all players instead of just the local player </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01184">1184</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01198">1198</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00025">UDTPlayerProgressionComponent::AddExperience()</a>, <a class="el" href="_d_t_game_state_8cpp_source.html#l00150">ADTGameState::AwardExperienceToAllPlayers()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00126">UDTPlayerProgressionComponent::GetExperienceToNextLevel()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00116">UDTPlayerProgressionComponent::GetHeroExperience()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00111">UDTPlayerProgressionComponent::GetHeroLevel()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00078">ADTPlayerState::GetPlayerProgressionComponent()</a>, and <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00121">UDTPlayerProgressionComponent::GetTotalHeroExperience()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00025">UDTPlayerProgressionComponent::AddExperience()</a>, <a class="el" href="_d_t_game_state_8cpp_source.html#l00150">ADTGameState::AwardExperienceToAllPlayers()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00126">UDTPlayerProgressionComponent::GetExperienceToNextLevel()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00116">UDTPlayerProgressionComponent::GetHeroExperience()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00111">UDTPlayerProgressionComponent::GetHeroLevel()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00080">ADTPlayerState::GetPlayerProgressionComponent()</a>, and <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00121">UDTPlayerProgressionComponent::GetTotalHeroExperience()</a>.</p>
 
 </div>
 </div>
@@ -307,10 +329,16 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Add a numeric player stat (owner-only replicated, persistent). </p>
-<p>Usage: AddPlayerStat Stat.Kills 1 </p>
+<p>Add to a numeric player stat (owner-only replicated, persistent). </p>
+<p>Usage: AddPlayerStat Stat.Kills 1 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">StatTagString</td><td>Full stat tag string, e.g. "Stat.Kills" </td></tr>
+    <tr><td class="paramname">Delta</td><td>Amount to add to the current value </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01477">1477</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01491">1491</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -333,10 +361,16 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Add a numeric world stat (persistent). </p>
-<p>Usage: AddWorldStat Stat.World.Kills 1 </p>
+<p>Add to a numeric world stat (persistent). </p>
+<p>Usage: AddWorldStat Stat.World.Kills 1 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">StatTagString</td><td>Full stat tag string, e.g. "Stat.World.Kills" </td></tr>
+    <tr><td class="paramname">Delta</td><td>Amount to add to the current value </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01582">1582</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01596">1596</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -355,9 +389,17 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01078">1078</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Zero out a currency balance for the local player. </p>
+<p>Usage: ClearCurrency Currency.Gold </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">CurrencyTagString</td><td>Full tag string, e.g. "Currency.Gold" </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_tags_8cpp_source.html#l00381">DTGameplayTags::FindTagByString()</a>, and <a class="el" href="_d_t_player_state_8h_source.html#l00072">ADTPlayerState::GetCurrencyComponent()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01092">1092</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_tags_8cpp_source.html#l00425">DTGameplayTags::FindTagByString()</a>, and <a class="el" href="_d_t_player_state_8h_source.html#l00074">ADTPlayerState::GetCurrencyComponent()</a>.</p>
 
 </div>
 </div>
@@ -376,7 +418,10 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00344">344</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Unequip every equipment slot on the player. </p>
+<p>Usage: ClearEquipment </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00363">363</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -395,9 +440,12 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01238">1238</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Reset hero level and XP back to zero for the local player. </p>
+<p>Usage: ClearHeroProgression </p>
 
-<p class="reference">References <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00078">UDTPlayerProgressionComponent::ClearProgression()</a>, and <a class="el" href="_d_t_player_state_8h_source.html#l00078">ADTPlayerState::GetPlayerProgressionComponent()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01252">1252</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00078">UDTPlayerProgressionComponent::ClearProgression()</a>, and <a class="el" href="_d_t_player_state_8h_source.html#l00080">ADTPlayerState::GetPlayerProgressionComponent()</a>.</p>
 
 </div>
 </div>
@@ -416,7 +464,10 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00310">310</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Remove every item from the player's inventory. </p>
+<p>Usage: ClearInventory </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00329">329</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -439,9 +490,18 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01741">1741</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Wipe quest data for one scope. </p>
+<p>Usage: ClearQuestData Player true </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QuestSource</td><td>Which store to clear - Player or Shared </td></tr>
+    <tr><td class="paramname">bTransientOnly</td><td>If true, only transient session quests are reset; false also wipes persistent save data </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="_d_t_player_state_8h_source.html#l00081">ADTPlayerState::GetPlayerQuestComponent()</a>, and <a class="el" href="_d_t_game_state_8h_source.html#l00072">ADTGameState::GetWorldQuestComponent()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01755">1755</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_state_8h_source.html#l00083">ADTPlayerState::GetPlayerQuestComponent()</a>, and <a class="el" href="_d_t_game_state_8h_source.html#l00072">ADTGameState::GetWorldQuestComponent()</a>.</p>
 
 </div>
 </div>
@@ -460,9 +520,17 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01708">1708</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Wipe stat data for one source. </p>
+<p>Usage: ClearStats Player </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">StatSource</td><td>Which store to clear - Player or World </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="_d_t_player_state_8h_source.html#l00075">ADTPlayerState::GetPlayerStatComponent()</a>, and <a class="el" href="_d_t_game_state_8h_source.html#l00069">ADTGameState::GetWorldStatComponent()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01722">1722</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_state_8h_source.html#l00077">ADTPlayerState::GetPlayerStatComponent()</a>, and <a class="el" href="_d_t_game_state_8h_source.html#l00069">ADTGameState::GetWorldStatComponent()</a>.</p>
 
 </div>
 </div>
@@ -481,12 +549,17 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Marks the current dungeon floor as complete, activating portals and broadcasting the floor-complete event. </p>
-<p>Pass bFail=true to trigger a run-failed flow instead. </p>
+<p>Mark the current dungeon floor complete, activating portals and broadcasting the floor-complete event. </p>
+<p>Usage: CompleteDungeon </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bFail</td><td>If true, triggers the run-failed flow instead of the floor-complete flow </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01792">1792</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01806">1806</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00046">GameMode</a>.</p>
+<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00058">GameMode</a>.</p>
 
 </div>
 </div>
@@ -505,12 +578,41 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Deal self damage to the player's pawn. </p>
-<p>Usage from console: DealSelfDamage 25 </p>
+<p>Deal true (unmitigated) damage to the player's own pawn. </p>
+<p>Usage: DamageSelf 25 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Amount</td><td>Damage to apply (must be &gt; 0) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00048">48</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00077">FDTDamageContext::BaseDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00080">FDTDamageContext::DamageType</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00021">UDTCombatSubsystem::DealDamage()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00071">FDTDamageContext::EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00074">FDTDamageContext::SourceObject</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00068">FDTDamageContext::TargetActor</a>.</p>
+
+</div>
+</div>
+<a id="a9031ce87ae48f1dc73ede2606dd66bba" name="a9031ce87ae48f1dc73ede2606dd66bba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9031ce87ae48f1dc73ede2606dd66bba">&#9670;&#160;</a></span>DemiGod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCheatManager::DemiGod </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Toggles demi god mode for the player. </p>
+<p>Damage still lands in full - hit reacts, damage numbers and leech all behave normally - but a killing blow loops health back to max instead of dropping to zero. Usage: DemiGod </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00119">119</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_character_8cpp_source.html#l00295">ADTPlayerCharacter::GetAbilitySystemComponent()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>.</p>
 
 </div>
 </div>
@@ -537,9 +639,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00834">834</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">848</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00084">God()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00245">SpawnLootAtFloor()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00191">SpawnLootByID()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00167">SpawnLootByName()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00215">SpawnLootByPhrase()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00680">SpawnLootWithAffix()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00398">TestLootGen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00119">DemiGod()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00084">God()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00271">SpawnLootAtFloor()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00217">SpawnLootByID()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00193">SpawnLootByName()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00241">SpawnLootByPhrase()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00697">SpawnLootWithAffix()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00417">TestLootGen()</a>.</p>
 
 </div>
 </div>
@@ -567,10 +669,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Toggles god mode for the player. </p>
+<p>All incoming damage is ignored entirely. Usage: God </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00084">84</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8cpp_source.html#l00299">ADTPlayerCharacter::GetAbilitySystemComponent()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00834">GetPlayerCharacter()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8cpp_source.html#l00295">ADTPlayerCharacter::GetAbilitySystemComponent()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>.</p>
 
 </div>
 </div>
@@ -589,7 +692,10 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00801">801</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Kill every enemy currently present in the level. </p>
+<p>Usage: KillAllEnemies </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00815">815</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00077">FDTDamageContext::BaseDamage</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00083">FDTDamageContext::ContextTags</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00080">FDTDamageContext::DamageType</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00021">UDTCombatSubsystem::DealDamage()</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00071">FDTDamageContext::EffectCauser</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00065">FDTDamageContext::SourceActor</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00074">FDTDamageContext::SourceObject</a>, and <a class="el" href="_d_t_combat_types_8h_source.html#l00068">FDTDamageContext::TargetActor</a>.</p>
 
@@ -615,11 +721,17 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Log the number of extra loot rolls the loot budget grants at a floor (and optional loot bonus). </p>
-<p>Pass Floor = -1 (default) to use the current dungeon floor. Usage: LogExtraLootRolls 200 0.5 </p>
+<p>Reported as "N guaranteed + P% chance of one more", mirroring how RollExtraLootRolls resolves it. Usage: LogExtraLootRolls 200 0.5 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Floor</td><td>Dungeon floor to evaluate; pass -1 (default) to use the current floor </td></tr>
+    <tr><td class="paramname">LootBonus</td><td>Additional loot bonus to fold into the budget </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00766">766</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00780">780</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00632">UDTLootSubsystem::GetCurrentDungeonFloor()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00801">UDTLootSubsystem::GetExpectedExtraLootRollsForFloor()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00683">UDTLootSubsystem::GetCurrentDungeonFloor()</a>, and <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00869">UDTLootSubsystem::GetExpectedExtraLootRollsForFloor()</a>.</p>
 
 </div>
 </div>
@@ -639,10 +751,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Print all player and shared quests. </p>
+<p>Usage: PrintAllQuests </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01472">1472</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01486">1486</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01415">PrintQuest()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01429">PrintQuest()</a>.</p>
 
 </div>
 </div>
@@ -662,8 +775,9 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Print all persistent player and world stats. </p>
+<p>Usage: PrintAllStats </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01669">1669</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01683">1683</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -683,10 +797,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Print all current currency balances for the local player to the console. </p>
+<p>Usage: PrintCurrencies </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01106">1106</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01120">1120</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_component_8h_source.html#l00052">UDTCurrencyComponent::GetAllBalances()</a>, and <a class="el" href="_d_t_player_state_8h_source.html#l00072">ADTPlayerState::GetCurrencyComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_component_8h_source.html#l00052">UDTCurrencyComponent::GetAllBalances()</a>, and <a class="el" href="_d_t_player_state_8h_source.html#l00074">ADTPlayerState::GetCurrencyComponent()</a>.</p>
 
 </div>
 </div>
@@ -706,10 +821,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Print hero progression values (level, current XP, XP to next, total XP). </p>
+<p>Usage: PrintHeroProgression </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01264">1264</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01278">1278</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00126">UDTPlayerProgressionComponent::GetExperienceToNextLevel()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00116">UDTPlayerProgressionComponent::GetHeroExperience()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00111">UDTPlayerProgressionComponent::GetHeroLevel()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00078">ADTPlayerState::GetPlayerProgressionComponent()</a>, and <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00121">UDTPlayerProgressionComponent::GetTotalHeroExperience()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00126">UDTPlayerProgressionComponent::GetExperienceToNextLevel()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00116">UDTPlayerProgressionComponent::GetHeroExperience()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00111">UDTPlayerProgressionComponent::GetHeroLevel()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00080">ADTPlayerState::GetPlayerProgressionComponent()</a>, and <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00121">UDTPlayerProgressionComponent::GetTotalHeroExperience()</a>.</p>
 
 </div>
 </div>
@@ -729,9 +845,14 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Print a numeric player stat if present. </p>
-<p>Usage: PrintPlayerStat Stat.Kills </p>
+<p>Usage: PrintPlayerStat Stat.Kills </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">StatTagString</td><td>Full stat tag string, e.g. "Stat.Kills" </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01544">1544</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01558">1558</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -750,13 +871,19 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print a specific quest state or all quest entries when no tag is provided. </p>
+<p>Print a single quest's state, or every quest entry when no tag is provided. </p>
+<p>Usage: PrintQuest Quest.Main.Intro </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QuestTagString</td><td>Full quest tag string; leave empty to print all entries </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01415">1415</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01429">1429</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00038">GetQuestStateString()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01472">PrintAllQuests()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01486">PrintAllQuests()</a>.</p>
 
 </div>
 </div>
@@ -775,11 +902,12 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print the current Skill Tree Status (points, invested nodes, unlocked rows). </p>
+<p>Print the current skill tree status (points, invested nodes, unlocked rows). </p>
+<p>Usage: PrintSkillTrees </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00958">958</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00972">972</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00027">UDTSkillTreeDefinition::FindNode()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00351">UDTSkillTreeComponent::GetAvailableSkillPoints()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00042">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00060">UDTSkillTreeDefinition::GetNodeCount()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00069">ADTPlayerState::GetSkillTreeComponent()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00367">UDTSkillTreeComponent::GetTotalSkillPoints()</a>, <a class="el" href="_d_t_skill_tree_component_8h_source.html#l00107">UDTSkillTreeComponent::GetTreeInstances()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00405">UDTSkillTreeComponent::GetUnlockedNodeCount()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00035">UDTGlobalData::SkillTreeGlobalData</a>, and <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00024">UDTSkillTreeDefinition::TreeName</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00027">UDTSkillTreeDefinition::FindNode()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00356">UDTSkillTreeComponent::GetAvailableSkillPoints()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00060">UDTSkillTreeDefinition::GetNodeCount()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00071">ADTPlayerState::GetSkillTreeComponent()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00372">UDTSkillTreeComponent::GetTotalSkillPoints()</a>, <a class="el" href="_d_t_skill_tree_component_8h_source.html#l00107">UDTSkillTreeComponent::GetTreeInstances()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00410">UDTSkillTreeComponent::GetUnlockedNodeCount()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00035">UDTGlobalData::SkillTreeGlobalData</a>, and <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00024">UDTSkillTreeDefinition::TreeName</a>.</p>
 
 </div>
 </div>
@@ -799,9 +927,14 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Print a numeric world stat if present. </p>
-<p>Usage: PrintWorldStat Stat.World.Kills </p>
+<p>Usage: PrintWorldStat Stat.World.Kills </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">StatTagString</td><td>Full stat tag string, e.g. "Stat.World.Kills" </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01637">1637</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01651">1651</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -821,9 +954,14 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Abandon a quest for the local player. </p>
-<p>Usage: QuestAbandon Quest.Main.Intro </p>
+<p>Usage: QuestAbandon Quest.Main.Intro </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QuestTagString</td><td>Full quest tag string, e.g. "Quest.Main.Intro" </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01384">1384</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01398">1398</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -843,9 +981,14 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Accept a quest for the local player. </p>
-<p>Usage: QuestAccept Quest.Main.Intro </p>
+<p>Usage: QuestAccept Quest.Main.Intro </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QuestTagString</td><td>Full quest tag string, e.g. "Quest.Main.Intro" </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01291">1291</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01305">1305</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -869,9 +1012,15 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Complete a quest for the local player. </p>
-<p>Usage: QuestComplete Quest.Main.Intro true </p>
+<p>Usage: QuestComplete Quest.Main.Intro true </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QuestTagString</td><td>Full quest tag string, e.g. "Quest.Main.Intro" </td></tr>
+    <tr><td class="paramname">bGrantRewards</td><td>If true, hands out the quest's rewards as if it completed normally </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01322">1322</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01336">1336</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -891,9 +1040,14 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fail a quest for the local player. </p>
-<p>Usage: QuestFail Quest.Main.Intro </p>
+<p>Usage: QuestFail Quest.Main.Intro </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QuestTagString</td><td>Full quest tag string, e.g. "Quest.Main.Intro" </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01353">1353</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01367">1367</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -912,11 +1066,12 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Respec all skill trees at once. </p>
+<p>Respec every skill tree at once and refund all invested points. </p>
+<p>Usage: RespecAllTrees </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00920">920</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00934">934</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00351">UDTSkillTreeComponent::GetAvailableSkillPoints()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00069">ADTPlayerState::GetSkillTreeComponent()</a>, <a class="el" href="_d_t_skill_tree_component_8h_source.html#l00107">UDTSkillTreeComponent::GetTreeInstances()</a>, and <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00259">UDTSkillTreeComponent::RespecTree()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00356">UDTSkillTreeComponent::GetAvailableSkillPoints()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00071">ADTPlayerState::GetSkillTreeComponent()</a>, <a class="el" href="_d_t_skill_tree_component_8h_source.html#l00107">UDTSkillTreeComponent::GetTreeInstances()</a>, and <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00259">UDTSkillTreeComponent::RespecTree()</a>.</p>
 
 </div>
 </div>
@@ -935,12 +1090,17 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Respec a specific skill tree by tag string (e.g., "SkillTree.Berserker"). </p>
-<p>Usage: RespecTree SkillTree.Berserker </p>
+<p>Respec a single skill tree and refund its invested points. </p>
+<p>Usage: RespecTree SkillTree.Berserker </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TreeTagString</td><td>Full tag string of the tree, e.g. "SkillTree.Berserker" </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00880">880</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00894">894</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_tags_8cpp_source.html#l00381">DTGameplayTags::FindTagByString()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00351">UDTSkillTreeComponent::GetAvailableSkillPoints()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00069">ADTPlayerState::GetSkillTreeComponent()</a>, and <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00259">UDTSkillTreeComponent::RespecTree()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_tags_8cpp_source.html#l00425">DTGameplayTags::FindTagByString()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00356">UDTSkillTreeComponent::GetAvailableSkillPoints()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00071">ADTPlayerState::GetSkillTreeComponent()</a>, and <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00259">UDTSkillTreeComponent::RespecTree()</a>.</p>
 
 </div>
 </div>
@@ -959,7 +1119,10 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00378">378</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Force an immediate save of the current game. </p>
+<p>Usage: SaveGame </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00397">397</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_save_subsystem_8cpp_source.html#l00100">UDTSaveSubsystem::SaveCurrentSlot()</a>.</p>
 
@@ -984,12 +1147,18 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Override the dungeon floor and/or seed for the current session and rebuild. </p>
-<p>Usage: SetDungeonSettings 3 12345 </p>
+<p>Override the dungeon floor and seed for the current session and rebuild the dungeon. </p>
+<p>Usage: SetDungeonSettings 3 12345 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Floor</td><td>Dungeon floor to switch to </td></tr>
+    <tr><td class="paramname">Seed</td><td>Generation seed to rebuild with </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00845">845</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00859">859</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_progression_types_8h_source.html#l00102">FDTDungeonSettings::DungeonSeed</a>, <a class="el" href="_data_types_8h_source.html#l00046">GameMode</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00096">FDTDungeonSettings::GlobalFloor</a>, and <a class="el" href="_d_t_game_state_8cpp_source.html#l00264">ADTGameState::SetCurrentDungeonSettings()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_progression_types_8h_source.html#l00102">FDTDungeonSettings::DungeonSeed</a>, <a class="el" href="_data_types_8h_source.html#l00058">GameMode</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00096">FDTDungeonSettings::GlobalFloor</a>, and <a class="el" href="_d_t_game_state_8cpp_source.html#l00264">ADTGameState::SetCurrentDungeonSettings()</a>.</p>
 
 </div>
 </div>
@@ -1012,10 +1181,16 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set a numeric player stat (owner-only replicated, persistent). </p>
-<p>Usage: SetPlayerStat Stat.Kills 100 </p>
+<p>Set a numeric player stat to an absolute value (owner-only replicated, persistent). </p>
+<p>Usage: SetPlayerStat Stat.Kills 100 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">StatTagString</td><td>Full stat tag string, e.g. "Stat.Kills" </td></tr>
+    <tr><td class="paramname">Value</td><td>Absolute value to write </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01512">1512</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01526">1526</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1038,10 +1213,16 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set a numeric world stat (persistent). </p>
-<p>Usage: SetWorldStat Stat.World.Kills 100 </p>
+<p>Set a numeric world stat to an absolute value (persistent). </p>
+<p>Usage: SetWorldStat Stat.World.Kills 100 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">StatTagString</td><td>Full stat tag string, e.g. "Stat.World.Kills" </td></tr>
+    <tr><td class="paramname">Value</td><td>Absolute value to write </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01611">1611</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01625">1625</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1074,9 +1255,20 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00245">245</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Spawn a loot item by GUID as if it had dropped on a specific dungeon floor, so floor scaling applies. </p>
+<p>Usage: SpawnLootAtFloor 0A1B2C3D... 1 25 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LootItemID</td><td>GUID of the <a class="el" href="class_u_d_t_item_definition.html" title="Base class for Dark Tower item definitions.">UDTItemDefinition</a> </td></tr>
+    <tr><td class="paramname">Quantity</td><td>Number to spawn (clamped to at least 1; stackable items spawn as one stack) </td></tr>
+    <tr><td class="paramname">Floor</td><td>Dungeon floor to roll the item against </td></tr>
+    <tr><td class="paramname">Seed</td><td>Roll seed override; 0 rolls randomly </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00496">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00488">FLootContext::FloorOverride</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00834">GetPlayerCharacter()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::MaxLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::MinLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00476">FLootContext::OwningPlayer</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00504">FLootContext::PreGeneratedLoot</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00484">FLootContext::SeedOverride</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00547">UDTLootSubsystem::SpawnLootFromContext()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00480">FLootContext::SpawnTransform</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00271">271</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00481">FLootContext::bGuaranteeAllItems</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00472">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00464">FLootContext::FloorOverride</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00476">FLootContext::ItemDefinitions</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00440">FLootContext::MaxItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00436">FLootContext::MinItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::OwningPlayer</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00460">FLootContext::SeedOverride</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00598">UDTLootSubsystem::SpawnLootFromContext()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::SpawnTransform</a>.</p>
 
 </div>
 </div>
@@ -1104,9 +1296,19 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00191">191</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Spawn a loot item in front of the player, looked up by item definition GUID. </p>
+<p>Usage: SpawnLootByID 0A1B2C3D... 1 12345 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LootItemID</td><td>GUID of the <a class="el" href="class_u_d_t_item_definition.html" title="Base class for Dark Tower item definitions.">UDTItemDefinition</a> </td></tr>
+    <tr><td class="paramname">Quantity</td><td>Number to spawn (clamped to at least 1; stackable items spawn as one stack) </td></tr>
+    <tr><td class="paramname">Seed</td><td>Roll seed override; 0 rolls randomly </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00834">GetPlayerCharacter()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00217">217</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>.</p>
 
 </div>
 </div>
@@ -1134,9 +1336,19 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00167">167</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Spawn a loot item in front of the player, looked up by item definition asset name. </p>
+<p>Usage: SpawnLootByName ID_Sword_Rusted 3 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LootItemName</td><td>Asset name of the <a class="el" href="class_u_d_t_item_definition.html" title="Base class for Dark Tower item definitions.">UDTItemDefinition</a> </td></tr>
+    <tr><td class="paramname">Quantity</td><td>Number to spawn (clamped to at least 1; stackable items spawn as one stack) </td></tr>
+    <tr><td class="paramname">Seed</td><td>Roll seed override; 0 rolls randomly </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00834">GetPlayerCharacter()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00193">193</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>.</p>
 
 </div>
 </div>
@@ -1164,9 +1376,19 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00215">215</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Spawn a loot item by GUID using a text phrase as the roll seed. </p>
+<p>The same phrase always produces the same roll, which makes a specific item reproducible without tracking numeric seeds. Usage: SpawnLootByPhrase 0A1B2C3D... 1 "big crit stick" </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LootItemID</td><td>GUID of the <a class="el" href="class_u_d_t_item_definition.html" title="Base class for Dark Tower item definitions.">UDTItemDefinition</a> </td></tr>
+    <tr><td class="paramname">Quantity</td><td>Number to spawn (clamped to at least 1; stackable items spawn as one stack) </td></tr>
+    <tr><td class="paramname">SeedPhrase</td><td>Phrase hashed into the roll seed; empty rolls randomly </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00834">GetPlayerCharacter()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00241">241</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>.</p>
 
 </div>
 </div>
@@ -1199,9 +1421,20 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00680">680</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p>Spawn a loot item by GUID with a specific affix forced onto it at a chosen roll value. </p>
+<p>Usage: SpawnLootWithAffix 0A1B2C3D... 4E5F6A7B... 1.0 true </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LootItemID</td><td>GUID of the <a class="el" href="class_u_d_t_item_definition.html" title="Base class for Dark Tower item definitions.">UDTItemDefinition</a> </td></tr>
+    <tr><td class="paramname">AffixGuid</td><td>GUID of the <a class="el" href="class_u_d_t_affix_definition.html" title="Base definition for item affixes (prefixes, suffixes, and implicits).">UDTAffixDefinition</a> to force on </td></tr>
+    <tr><td class="paramname">RollValue</td><td>Normalized roll for the forced affix, clamped to 0-1 (1 = max roll) </td></tr>
+    <tr><td class="paramname">bClearAffixes</td><td>If true, strips the naturally rolled affixes so only the forced one remains </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00496">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_affix_definition_8h_source.html#l00030">UDTAffixDefinition::DisplayName</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">UDTLootSubsystem::GenerateLootFromContext()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00834">GetPlayerCharacter()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::MaxLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::MinLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00476">FLootContext::OwningPlayer</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00504">FLootContext::PreGeneratedLoot</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00614">UDTLootSubsystem::SpawnPreGeneratedLoot()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00480">FLootContext::SpawnTransform</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00697">697</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00481">FLootContext::bGuaranteeAllItems</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00472">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_affix_definition_8h_source.html#l00030">UDTAffixDefinition::DisplayName</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">UDTLootSubsystem::GenerateLootFromContext()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00476">FLootContext::ItemDefinitions</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::OwningPlayer</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00665">UDTLootSubsystem::SpawnPreGeneratedLoot()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::SpawnTransform</a>.</p>
 
 </div>
 </div>
@@ -1220,11 +1453,17 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Test global loot generation with specified Iteration. </p>
+<p>Run the global loot generator repeatedly and log seed/item statistics. </p>
+<p>Nothing is spawned into the world. Usage: TestLootGen 500 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Iterations</td><td>Number of generation passes to run </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00398">398</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00417">417</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00496">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00195">UDTLootSubsystem::CalculateActualStatValue()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00351">UDTLootSubsystem::GenerateLootFromContext()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00042">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00834">GetPlayerCharacter()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00029">UDTGlobalData::GlobalLootData</a>, <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00448">FLootContext::LootTables</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::MaxLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::MinLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00476">FLootContext::OwningPlayer</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00480">FLootContext::SpawnTransform</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00472">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00195">UDTLootSubsystem::CalculateActualStatValue()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00422">UDTLootSubsystem::GenerateLootFromContext()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00029">UDTGlobalData::GlobalLootData</a>, <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00424">FLootContext::LootTables</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00432">FLootContext::MaxLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00428">FLootContext::MinLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::OwningPlayer</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::SpawnTransform</a>.</p>
 
 </div>
 </div>

@@ -151,15 +151,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a89f2ec196f1e6db23ba76a550832a7d2" id="r_a89f2ec196f1e6db23ba76a550832a7d2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a89f2ec196f1e6db23ba76a550832a7d2">FStatModifierDef</a> ()</td></tr>
 <tr class="inherit_header pub_methods_struct_f_dynamic_value_definition_base"><td colspan="2">Public Member Functions inherited from <a class="el" href="struct_f_dynamic_value_definition_base.html">FDynamicValueDefinitionBase</a></td></tr>
 <tr class="memitem:a8d38441ee4895752b2bab743e9298910 pub_methods_struct_f_dynamic_value_definition_base" id="r_a8d38441ee4895752b2bab743e9298910"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a8d38441ee4895752b2bab743e9298910">FDynamicValueDefinitionBase</a> ()</td></tr>
+<tr class="memitem:a81ebb00f3fe0b8a02d72388fe9b00022 pub_methods_struct_f_dynamic_value_definition_base" id="r_a81ebb00f3fe0b8a02d72388fe9b00022"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a81ebb00f3fe0b8a02d72388fe9b00022">EvaluateScalarAtLevel</a> (int32 EvaluationLevel, float NormalizedValue=0.0f) const</td></tr>
+<tr class="memdesc:a81ebb00f3fe0b8a02d72388fe9b00022 pub_methods_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the Range/ScalableFloat scalar at a level (or at NormalizedValue when EvaluationLevel &lt;= 0).  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a584ba593549d4e192f597f5476ee9c27" id="r_a584ba593549d4e192f597f5476ee9c27"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#a584ba593549d4e192f597f5476ee9c27">ModifierID</a></td></tr>
 <tr class="memitem:a5c234d4b8f24eec9b15fad674269769e" id="r_a5c234d4b8f24eec9b15fad674269769e"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#a5c234d4b8f24eec9b15fad674269769e">SetByCallerTag</a></td></tr>
+<tr class="memitem:a4bd3286b4abbecd9611cea418ea79d49" id="r_a4bd3286b4abbecd9611cea418ea79d49"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4bd3286b4abbecd9611cea418ea79d49">bShowSign</a> = true</td></tr>
+<tr class="memdesc:a4bd3286b4abbecd9611cea418ea79d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to show an explicit +/- prefix when this affix value is displayed.  <br /></td></tr>
+<tr class="memitem:a5080a0f06911204f0217dd7e6131843d" id="r_a5080a0f06911204f0217dd7e6131843d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5080a0f06911204f0217dd7e6131843d">bShowAsPercent</a> = false</td></tr>
+<tr class="memdesc:a5080a0f06911204f0217dd7e6131843d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the rolled value as a percentage (additive 0-1 fractions show value x100, e.g.  <br /></td></tr>
+<tr class="memitem:adbdee66d22813da01ee99134a6038658" id="r_adbdee66d22813da01ee99134a6038658"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#adbdee66d22813da01ee99134a6038658">DecimalPlaces</a> = 0</td></tr>
+<tr class="memdesc:adbdee66d22813da01ee99134a6038658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decimals kept for the displayed value.  <br /></td></tr>
 <tr class="inherit_header pub_attribs_struct_f_dynamic_value_definition_base"><td colspan="2">Public Attributes inherited from <a class="el" href="struct_f_dynamic_value_definition_base.html">FDynamicValueDefinitionBase</a></td></tr>
-<tr class="memitem:a5f079cbb5f39d905681ccde3a5bac94c pub_attribs_struct_f_dynamic_value_definition_base" id="r_a5f079cbb5f39d905681ccde3a5bac94c"><td class="memItemLeft"><a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a5f079cbb5f39d905681ccde3a5bac94c">Operation</a> = <a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a></td></tr>
+<tr class="memitem:a5f079cbb5f39d905681ccde3a5bac94c pub_attribs_struct_f_dynamic_value_definition_base" id="r_a5f079cbb5f39d905681ccde3a5bac94c"><td class="memItemLeft"><a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a5f079cbb5f39d905681ccde3a5bac94c">Operation</a> = <a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a></td></tr>
 <tr class="memdesc:a5f079cbb5f39d905681ccde3a5bac94c pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display operation used to decide percent vs flat formatting.  <br /></td></tr>
-<tr class="memitem:a6e987fe32ec55f13d834dec3be7b5b5e pub_attribs_struct_f_dynamic_value_definition_base" id="r_a6e987fe32ec55f13d834dec3be7b5b5e"><td class="memItemLeft"><a class="el" href="_d_t_inventory_types_8h.html#ae119a4b43145a9470312810d6cda32ad">EDynamicDescriptionValueSource</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a6e987fe32ec55f13d834dec3be7b5b5e">ValueSource</a> = <a class="el" href="_d_t_inventory_types_8h.html#ae119a4b43145a9470312810d6cda32ada87ba2ecc8b6915e8bd6f5089918229fd">EDynamicDescriptionValueSource::Range</a></td></tr>
+<tr class="memitem:a6e987fe32ec55f13d834dec3be7b5b5e pub_attribs_struct_f_dynamic_value_definition_base" id="r_a6e987fe32ec55f13d834dec3be7b5b5e"><td class="memItemLeft"><a class="el" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32ad">EDynamicDescriptionValueSource</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a6e987fe32ec55f13d834dec3be7b5b5e">ValueSource</a> = <a class="el" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32ada87ba2ecc8b6915e8bd6f5089918229fd">EDynamicDescriptionValueSource::Range</a></td></tr>
 <tr class="memdesc:a6e987fe32ec55f13d834dec3be7b5b5e pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether this value comes from a min/max range or a scalable float.  <br /></td></tr>
 <tr class="memitem:a7d569992f04b3ac19070635dbdfeaacb pub_attribs_struct_f_dynamic_value_definition_base" id="r_a7d569992f04b3ac19070635dbdfeaacb"><td class="memItemLeft">FScalableFloat&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a7d569992f04b3ac19070635dbdfeaacb">ScalableValue</a></td></tr>
 <tr class="memdesc:a7d569992f04b3ac19070635dbdfeaacb pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalable float that can point to a Curve Table row when ValueSource is set to Scalable Float.  <br /></td></tr>
@@ -167,15 +175,21 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:ac2d1eb60fe4aa303436ff2373b81595b pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value at the start of the interpolation range.  <br /></td></tr>
 <tr class="memitem:adf1843731f46106363c93d36c9731d1e pub_attribs_struct_f_dynamic_value_definition_base" id="r_adf1843731f46106363c93d36c9731d1e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#adf1843731f46106363c93d36c9731d1e">MaxValue</a> = 0.0f</td></tr>
 <tr class="memdesc:adf1843731f46106363c93d36c9731d1e pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value at the end of the interpolation range.  <br /></td></tr>
-<tr class="memitem:a375e3f8d8560121f287502cf1755022d pub_attribs_struct_f_dynamic_value_definition_base" id="r_a375e3f8d8560121f287502cf1755022d"><td class="memItemLeft"><a class="el" href="_d_t_inventory_types_8h.html#a603a57c88d2ff0542f64e2028aae8d16">EScalableValueEvaluationMode</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a375e3f8d8560121f287502cf1755022d">ScalableEvaluationMode</a> = <a class="el" href="_d_t_inventory_types_8h.html#a603a57c88d2ff0542f64e2028aae8d16afd1dd0c603be8170f9eae0be9f2f6afb">EScalableValueEvaluationMode::Direct</a></td></tr>
+<tr class="memitem:a375e3f8d8560121f287502cf1755022d pub_attribs_struct_f_dynamic_value_definition_base" id="r_a375e3f8d8560121f287502cf1755022d"><td class="memItemLeft"><a class="el" href="_d_t_ability_types_8h.html#a603a57c88d2ff0542f64e2028aae8d16">EScalableValueEvaluationMode</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a375e3f8d8560121f287502cf1755022d">ScalableEvaluationMode</a> = <a class="el" href="_d_t_ability_types_8h.html#a603a57c88d2ff0542f64e2028aae8d16afd1dd0c603be8170f9eae0be9f2f6afb">EScalableValueEvaluationMode::Direct</a></td></tr>
 <tr class="memdesc:a375e3f8d8560121f287502cf1755022d pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls whether scalable values are read directly at the evaluation level or accumulated up to it.  <br /></td></tr>
-<tr class="memitem:a9c0f98757fbfdb649bfc44b4caace72e pub_attribs_struct_f_dynamic_value_definition_base" id="r_a9c0f98757fbfdb649bfc44b4caace72e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a9c0f98757fbfdb649bfc44b4caace72e">bShowSign</a> = true</td></tr>
-<tr class="memdesc:a9c0f98757fbfdb649bfc44b4caace72e pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to show an explicit +/- prefix.  <br /></td></tr>
+<tr class="memitem:adf35b0b56b95dba54bf5e3054c2da556 pub_attribs_struct_f_dynamic_value_definition_base" id="r_adf35b0b56b95dba54bf5e3054c2da556"><td class="memItemLeft">FGameplayAttribute&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#adf35b0b56b95dba54bf5e3054c2da556">SourceAttribute</a></td></tr>
+<tr class="memdesc:adf35b0b56b95dba54bf5e3054c2da556 pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute captured when ValueSource == Attribute.  <br /></td></tr>
+<tr class="memitem:aa1e1e3edc3ec7b6bcf48121ed2d1ce23 pub_attribs_struct_f_dynamic_value_definition_base" id="r_aa1e1e3edc3ec7b6bcf48121ed2d1ce23"><td class="memItemLeft">FScalableFloat&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#aa1e1e3edc3ec7b6bcf48121ed2d1ce23">Coefficient</a> = FScalableFloat(1.0f)</td></tr>
+<tr class="memdesc:aa1e1e3edc3ec7b6bcf48121ed2d1ce23 pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplier applied to the captured attribute when ValueSource == Attribute (e.g.  <br /></td></tr>
+<tr class="memitem:a2b7415f5791a900db9021a29430297c0 pub_attribs_struct_f_dynamic_value_definition_base" id="r_a2b7415f5791a900db9021a29430297c0"><td class="memItemLeft"><a class="el" href="_d_t_ability_types_8h.html#adc9d33262fca0a8be960025c6c61f93d">EDynamicValueAttributeCaptureSource</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a2b7415f5791a900db9021a29430297c0">CaptureSource</a> = <a class="el" href="_d_t_ability_types_8h.html#adc9d33262fca0a8be960025c6c61f93daf31bbdd1b3e85bccd652680e16935819">EDynamicValueAttributeCaptureSource::Source</a></td></tr>
+<tr class="memdesc:a2b7415f5791a900db9021a29430297c0 pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which ASC the attribute is read from when ValueSource == Attribute.  <br /></td></tr>
+<tr class="memitem:a3592493afad95bca7c8673ef987d1a95 pub_attribs_struct_f_dynamic_value_definition_base" id="r_a3592493afad95bca7c8673ef987d1a95"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a3592493afad95bca7c8673ef987d1a95">SourceValueTag</a></td></tr>
+<tr class="memdesc:a3592493afad95bca7c8673ef987d1a95 pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag of another dynamic ability value (on the owning definition) to pull from when ValueSource == AbilityValue.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Single stat modifier definition for an affix. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00122">122</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00063">63</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a89f2ec196f1e6db23ba76a550832a7d2" name="a89f2ec196f1e6db23ba76a550832a7d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89f2ec196f1e6db23ba76a550832a7d2">&#9670;&#160;</a></span>FStatModifierDef()</h2>
@@ -200,15 +214,77 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00134">134</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00087">87</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00105">FDynamicValueDefinitionBase::bShowSign</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00107">FDynamicValueDefinitionBase::FDynamicValueDefinitionBase()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00134">FStatModifierDef()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00128">ModifierID</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00132">SetByCallerTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00200">FDynamicValueDefinitionBase::FDynamicValueDefinitionBase()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00087">FStatModifierDef()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00069">ModifierID</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00073">SetByCallerTag</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_inventory_types_8h_source.html#l00134">FStatModifierDef()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_inventory_types_8h_source.html#l00087">FStatModifierDef()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a5080a0f06911204f0217dd7e6131843d" name="a5080a0f06911204f0217dd7e6131843d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5080a0f06911204f0217dd7e6131843d">&#9670;&#160;</a></span>bShowAsPercent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FStatModifierDef::bShowAsPercent = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the rolled value as a percentage (additive 0-1 fractions show value x100, e.g. </p>
+<p>crit chance 0.01 -&gt; "1%"). A Multiply Operation always displays as a percentage. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00081">81</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00035">MakeDescriptionValueDefFromStatModifier()</a>.</p>
+
+</div>
+</div>
+<a id="a4bd3286b4abbecd9611cea418ea79d49" name="a4bd3286b4abbecd9611cea418ea79d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bd3286b4abbecd9611cea418ea79d49">&#9670;&#160;</a></span>bShowSign</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FStatModifierDef::bShowSign = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to show an explicit +/- prefix when this affix value is displayed. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00077">77</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00035">MakeDescriptionValueDefFromStatModifier()</a>.</p>
+
+</div>
+</div>
+<a id="adbdee66d22813da01ee99134a6038658" name="adbdee66d22813da01ee99134a6038658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbdee66d22813da01ee99134a6038658">&#9670;&#160;</a></span>DecimalPlaces</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 FStatModifierDef::DecimalPlaces = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decimals kept for the displayed value. </p>
+<p>0 = whole numbers. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00085">85</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00035">MakeDescriptionValueDefFromStatModifier()</a>.</p>
+
+</div>
+</div>
 <a id="a584ba593549d4e192f597f5476ee9c27" name="a584ba593549d4e192f597f5476ee9c27"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a584ba593549d4e192f597f5476ee9c27">&#9670;&#160;</a></span>ModifierID</h2>
 
@@ -221,9 +297,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00128">128</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00069">69</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_inventory_types_8h_source.html#l00134">FStatModifierDef()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_inventory_types_8h_source.html#l00087">FStatModifierDef()</a>.</p>
 
 </div>
 </div>
@@ -239,9 +315,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00132">132</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00073">73</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00127">FDTEquipmentStatHelper::CollectAllStats()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00134">FStatModifierDef()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00503">UDTEquipmentInstance::GetTotalStatModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00136">FDTEquipmentStatHelper::CollectAllStats()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00087">FStatModifierDef()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00457">UDTEquipmentInstance::GetTotalStatModifier()</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,7 @@
 var struct_f_skill_tree_node =
 [
     [ "FSkillTreeNode", "struct_f_skill_tree_node.html#a5fc54e48961fa2d67e209907aa18cc81", null ],
+    [ "GetAbilityDefinition", "struct_f_skill_tree_node.html#aead56bbfe1b18b48cd1600818ec0a33c", null ],
     [ "GetDefinition", "struct_f_skill_tree_node.html#a82addbb9cc7c7f9d5598a435ee775eac", null ],
     [ "GetDescription", "struct_f_skill_tree_node.html#aa07f73485c63b9c658e35225be007cfb", null ],
     [ "GetGrantedAbilityClass", "struct_f_skill_tree_node.html#aaa76aa3061b54dfe28f9dde673192932", null ],
@@ -12,7 +13,7 @@ var struct_f_skill_tree_node =
     [ "GetPassiveEffectClass", "struct_f_skill_tree_node.html#a695aa8b89d0d1d7b1d04bf732a8a8f7b", null ],
     [ "GetPointsPerRank", "struct_f_skill_tree_node.html#a0a3ed237c394af8055a297a71ae69633", null ],
     [ "GetPrerequisiteNodeTags", "struct_f_skill_tree_node.html#af50d17994a54d9addc40a1e34bf75428", null ],
-    [ "GetTooltipValues", "struct_f_skill_tree_node.html#a2858c222fe3590d4e9f5a410f1cd4b20", null ],
+    [ "GetTooltipValues", "struct_f_skill_tree_node.html#a43115b02f6cd9fe85133c90d53e1204e", null ],
     [ "GetUnlockPointsRequired", "struct_f_skill_tree_node.html#a599765f6b7d9632870f30fa612ffa3ad", null ],
     [ "GridPosition", "struct_f_skill_tree_node.html#a0126bbbd31ae0bb7ec4bd48e70a692e9", null ],
     [ "GridSpan", "struct_f_skill_tree_node.html#afb420767324f37ecd0008dc099123966", null ],

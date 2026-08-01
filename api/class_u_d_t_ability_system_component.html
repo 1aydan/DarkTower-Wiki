@@ -151,6 +151,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:affa5a1b06fcee1cf7d135334bee8d8db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a gameplay event through this ASC.  <br /></td></tr>
 <tr class="memitem:a2eab54d6762beabff4ac980ccc2c5b88" id="r_a2eab54d6762beabff4ac980ccc2c5b88"><td class="memItemLeft">FGameplayEventData&#160;</td><td class="memItemRight"><a class="el" href="#a2eab54d6762beabff4ac980ccc2c5b88">BuildAbilityEventPayload</a> (const FGameplayTag &amp;EventTag, AActor *Instigator, AActor *Target, AActor *Causer, float Magnitude, const FGameplayTagContainer &amp;ContextTags=FGameplayTagContainer(), const FHitResult &amp;HitResult=FHitResult(), const FGameplayEffectContextHandle &amp;ExistingContext=FGameplayEffectContextHandle()) const</td></tr>
 <tr class="memdesc:a2eab54d6762beabff4ac980ccc2c5b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a fully-populated FGameplayEventData from common ability event parameters.  <br /></td></tr>
+<tr class="memitem:a78180db5059c939697faafc870739eaf" id="r_a78180db5059c939697faafc870739eaf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a78180db5059c939697faafc870739eaf">GiveAbilitySet</a> (const <a class="el" href="class_u_d_t_ability_set.html">UDTAbilitySet</a> *InAbilitySet, <a class="el" href="struct_f_d_t_ability_set_handle.html">FDTAbilitySetHandle</a> &amp;OutHandle)</td></tr>
+<tr class="memdesc:a78180db5059c939697faafc870739eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grants a given Ability Set to the ASC, adding defined Abilities, Attributes, Effects and Owned Tags.  <br /></td></tr>
+<tr class="memitem:aac29ee4488886149a08c6bea40e19d83" id="r_aac29ee4488886149a08c6bea40e19d83"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aac29ee4488886149a08c6bea40e19d83">ClearAbilitySet</a> (<a class="el" href="struct_f_d_t_ability_set_handle.html">FDTAbilitySetHandle</a> &amp;InAbilitySetHandle)</td></tr>
+<tr class="memdesc:aac29ee4488886149a08c6bea40e19d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the AbilitySet represented by InAbilitySetHandle from this ASC.  <br /></td></tr>
 <tr class="memitem:ad1dc19ac2c665b775a8a9f585a35e3d1" id="r_ad1dc19ac2c665b775a8a9f585a35e3d1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad1dc19ac2c665b775a8a9f585a35e3d1">CanActivateAbilitiesByTags</a> (const FGameplayTagContainer &amp;Tags) const</td></tr>
 <tr class="memitem:a7a2c8d967017b737caab19d94db715d2" id="r_a7a2c8d967017b737caab19d94db715d2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a7a2c8d967017b737caab19d94db715d2">GetAbilityCooldownByTags</a> (const FGameplayTagContainer &amp;Tags, bool bRequireAll=false) const</td></tr>
 <tr class="memitem:a45ec31c45bfda6bbe280431a844879b1" id="r_a45ec31c45bfda6bbe280431a844879b1"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a45ec31c45bfda6bbe280431a844879b1">GetAbilityStacksByTags</a> (const FGameplayTagContainer &amp;Tags, bool bRequireAll=false) const</td></tr>
@@ -161,11 +165,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f51bf6fd101380c6b7f5fb5c5c16039" id="r_a8f51bf6fd101380c6b7f5fb5c5c16039"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8f51bf6fd101380c6b7f5fb5c5c16039">TryConsumeAbilityStack</a> (FGameplayAbilitySpecHandle AbilityHandle, int32 Count=1)</td></tr>
 <tr class="memitem:a722cb2c8043db5e16a9f5cf9e95ac1f3" id="r_a722cb2c8043db5e16a9f5cf9e95ac1f3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a722cb2c8043db5e16a9f5cf9e95ac1f3">TryAddAbilityStack</a> (FGameplayAbilitySpecHandle AbilityHandle, int32 MaxStacks, int32 Count=1)</td></tr>
 <tr class="memitem:a4ab766e0822ab8c86eebfd3a0ee4296b" id="r_a4ab766e0822ab8c86eebfd3a0ee4296b"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a4ab766e0822ab8c86eebfd3a0ee4296b">ResetAbilityStacks</a> (FGameplayAbilitySpecHandle AbilityHandle, int32 MaxStacks)</td></tr>
-<tr class="memitem:a1ee88b2f2ca3cafa44701e68706c10b8" id="r_a1ee88b2f2ca3cafa44701e68706c10b8"><td class="memItemLeft">FGameplayEffectSpecHandle&#160;</td><td class="memItemRight"><a class="el" href="#a1ee88b2f2ca3cafa44701e68706c10b8">MakeOutgoingSpecWithPeriod</a> (TSubclassOf&lt; UGameplayEffect &gt; EffectClass, float Level, float PeriodSeconds, float DurationSeconds=-1.0f) const</td></tr>
 <tr class="memitem:af107b6dfbe531977a2d1d206d550b559" id="r_af107b6dfbe531977a2d1d206d550b559"><td class="memItemLeft"><a class="el" href="struct_f_d_t_combat_modifier_handle.html">FDTCombatModifierHandle</a>&#160;</td><td class="memItemRight"><a class="el" href="#af107b6dfbe531977a2d1d206d550b559">RegisterCombatModifierDefinition</a> (class <a class="el" href="class_u_d_t_combat_modifier.html">UDTCombatModifier</a> *ModifierDefinition, UObject *SourceObject, float EvaluationLevel=1.0f)</td></tr>
 <tr class="memitem:a02c7f704b5e1a1896a53acb19322e052" id="r_a02c7f704b5e1a1896a53acb19322e052"><td class="memItemLeft"><a class="el" href="struct_f_d_t_combat_modifier_handle.html">FDTCombatModifierHandle</a>&#160;</td><td class="memItemRight"><a class="el" href="#a02c7f704b5e1a1896a53acb19322e052">RegisterCombatModifierSpec</a> (const <a class="el" href="struct_f_d_t_combat_modifier_spec.html">FDTCombatModifierSpec</a> &amp;ModifierSpec)</td></tr>
 <tr class="memitem:aa20eb1ec6a315d34a8775c63c5cd87eb" id="r_aa20eb1ec6a315d34a8775c63c5cd87eb"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa20eb1ec6a315d34a8775c63c5cd87eb">UnregisterCombatModifier</a> (<a class="el" href="struct_f_d_t_combat_modifier_handle.html">FDTCombatModifierHandle</a> Handle)</td></tr>
 <tr class="memitem:ac7eae9b88218570aeaa1943c9cd7bc46" id="r_ac7eae9b88218570aeaa1943c9cd7bc46"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac7eae9b88218570aeaa1943c9cd7bc46">AppendCombatModifierSpecs</a> (<a class="el" href="_d_t_combat_types_8h.html#a97484017feb0b2da51a4ee2b219b8a8e">EDTCombatModifierPhase</a> Phase, bool bOutgoingDamage, TArray&lt; <a class="el" href="struct_f_d_t_combat_modifier_spec.html">FDTCombatModifierSpec</a> &gt; &amp;OutSpecs) const</td></tr>
+<tr class="memitem:a8f39fe44653891963b221f2bc8a0146a" id="r_a8f39fe44653891963b221f2bc8a0146a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8f39fe44653891963b221f2bc8a0146a">TryActivateAbilitiesOnSpawn</a> ()</td></tr>
 <tr class="memitem:ad88678c7d6fec8eda873474422a9f8e7" id="r_ad88678c7d6fec8eda873474422a9f8e7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad88678c7d6fec8eda873474422a9f8e7">CancelAbilitiesByFunc</a> (<a class="el" href="#a95dd08daae6adfba87d942e9158e5538">TShouldCancelAbilityFunc</a> ShouldCancelFunc, bool bReplicateCancelAbility)</td></tr>
 <tr class="memitem:a4a790bddbfe34db49ed619bba0c239e6" id="r_a4a790bddbfe34db49ed619bba0c239e6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4a790bddbfe34db49ed619bba0c239e6">IsActivationGroupBlocked</a> (<a class="el" href="_d_t_gameplay_ability_8h.html#a7770945a7f48a5b53a0c0de7ecaf93a0">EAbilityActivationGroup</a> Group) const</td></tr>
 <tr class="memitem:ad554b02723bbc9cb4a4cffb9ed1fb27d" id="r_ad554b02723bbc9cb4a4cffb9ed1fb27d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad554b02723bbc9cb4a4cffb9ed1fb27d">AddAbilityToActivationGroup</a> (<a class="el" href="_d_t_gameplay_ability_8h.html#a7770945a7f48a5b53a0c0de7ecaf93a0">EAbilityActivationGroup</a> Group, <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a> *Ability)</td></tr>
@@ -173,17 +177,54 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a64dbd2958bc5626d68eff216bc523b1e" id="r_a64dbd2958bc5626d68eff216bc523b1e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a64dbd2958bc5626d68eff216bc523b1e">CancelActivationGroupAbilities</a> (<a class="el" href="_d_t_gameplay_ability_8h.html#a7770945a7f48a5b53a0c0de7ecaf93a0">EAbilityActivationGroup</a> Group, <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a> *IgnoreAbility, bool bReplicateCancelAbility)</td></tr>
 <tr class="memitem:a2c0b0d44763e9beccd46ff36e4c84c41" id="r_a2c0b0d44763e9beccd46ff36e4c84c41"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2c0b0d44763e9beccd46ff36e4c84c41">DeferredSetBaseAttributeValueFromReplication</a> (const FGameplayAttribute &amp;Attribute, float NewValue)</td></tr>
 <tr class="memitem:a08421e4c2fecd0b33d94c1c027ba764b" id="r_a08421e4c2fecd0b33d94c1c027ba764b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a08421e4c2fecd0b33d94c1c027ba764b">DeferredSetBaseAttributeValueFromReplication</a> (const FGameplayAttribute &amp;Attribute, const FGameplayAttributeData &amp;NewValue)</td></tr>
-<tr class="memitem:acfda0d13062d0c3a6652227a03ac8d48" id="r_acfda0d13062d0c3a6652227a03ac8d48"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#acfda0d13062d0c3a6652227a03ac8d48">GetLifetimeReplicatedProps</a> (TArray&lt; FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
+<tr class="memitem:aed65ffbfb02f94f3d8a62718c8c02932" id="r_aed65ffbfb02f94f3d8a62718c8c02932"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aed65ffbfb02f94f3d8a62718c8c02932">AbilityInputTagPressed</a> (const FGameplayTag &amp;InputTag)</td></tr>
+<tr class="memdesc:aed65ffbfb02f94f3d8a62718c8c02932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queues a press for every activatable spec whose dynamic source tags contain InputTag.  <br /></td></tr>
+<tr class="memitem:adf703e2838757bed3909e4c01b8f5474" id="r_adf703e2838757bed3909e4c01b8f5474"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf703e2838757bed3909e4c01b8f5474">AbilityInputTagReleased</a> (const FGameplayTag &amp;InputTag)</td></tr>
+<tr class="memdesc:adf703e2838757bed3909e4c01b8f5474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queues a release for every activatable spec whose dynamic source tags contain InputTag.  <br /></td></tr>
+<tr class="memitem:a43453f41de7fd8e4fefc92aa0bddfe79" id="r_a43453f41de7fd8e4fefc92aa0bddfe79"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a43453f41de7fd8e4fefc92aa0bddfe79">ProcessAbilityInput</a> (float DeltaTime, bool bGamePaused)</td></tr>
+<tr class="memdesc:a43453f41de7fd8e4fefc92aa0bddfe79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drains the queued input; called every frame from the player controller's PostProcessInput.  <br /></td></tr>
+<tr class="memitem:a4920e06aee3d63c0e491aea420dbf5d7" id="r_a4920e06aee3d63c0e491aea420dbf5d7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4920e06aee3d63c0e491aea420dbf5d7">ClearAbilityInput</a> ()</td></tr>
+<tr class="memdesc:a4920e06aee3d63c0e491aea420dbf5d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all queued/held ability input.  <br /></td></tr>
+<tr class="memitem:a2526b71227a1c2c146e07caffdda9697" id="r_a2526b71227a1c2c146e07caffdda9697"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2526b71227a1c2c146e07caffdda9697">OnAbilityActivatedCallback</a> (UGameplayAbility *Ability)</td></tr>
+<tr class="memitem:a34a922c412ba764a32afcaecbda018c6" id="r_a34a922c412ba764a32afcaecbda018c6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a34a922c412ba764a32afcaecbda018c6">OnAbilityFailedCallback</a> (const UGameplayAbility *Ability, const FGameplayTagContainer &amp;Tags)</td></tr>
+<tr class="memitem:a3614ffc35accc305cb97f6534dd610e9" id="r_a3614ffc35accc305cb97f6534dd610e9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a3614ffc35accc305cb97f6534dd610e9">OnAbilityEndedCallback</a> (UGameplayAbility *Ability)</td></tr>
+<tr class="memitem:abebd1c1b9ca015123dcf6abad0c8be8a" id="r_abebd1c1b9ca015123dcf6abad0c8be8a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#abebd1c1b9ca015123dcf6abad0c8be8a">GrantDefaultAbilitiesAndAttributes</a> (AActor *InOwnerActor, AActor *InAvatarActor)</td></tr>
+<tr class="memdesc:abebd1c1b9ca015123dcf6abad0c8be8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called from InitAbilityActorInfo; grants GrantedAbilities / GrantedAttributes.  <br /></td></tr>
+<tr class="memitem:a0279410c35f24c768ad0bc2cbcf2ff05" id="r_a0279410c35f24c768ad0bc2cbcf2ff05"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a0279410c35f24c768ad0bc2cbcf2ff05">GrantDefaultAbilitySets</a> (AActor *InOwnerActor, AActor *InAvatarActor)</td></tr>
+<tr class="memdesc:a0279410c35f24c768ad0bc2cbcf2ff05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called from InitAbilityActorInfo; grants GrantedAbilitySets.  <br /></td></tr>
+<tr class="memitem:a67ddcc9c114433296f941d28b8ff5ec2" id="r_a67ddcc9c114433296f941d28b8ff5ec2"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a67ddcc9c114433296f941d28b8ff5ec2">ShouldGrantAbility</a> (TSubclassOf&lt; UGameplayAbility &gt; InAbility, int32 InLevel=1)</td></tr>
+<tr class="memdesc:a67ddcc9c114433296f941d28b8ff5ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevents re-adding an ability previously granted when bResetAbilitiesOnSpawn is false.  <br /></td></tr>
+<tr class="memitem:a302d3cb169f7d7425a707220ef48c88d" id="r_a302d3cb169f7d7425a707220ef48c88d"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a302d3cb169f7d7425a707220ef48c88d">ShouldGrantAbilitySet</a> (const <a class="el" href="class_u_d_t_ability_set.html">UDTAbilitySet</a> *InAbilitySet) const</td></tr>
+<tr class="memdesc:a302d3cb169f7d7425a707220ef48c88d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevents re-granting a set previously added (always re-grants for PlayerState owners so respawns rebuild specs).  <br /></td></tr>
+<tr class="memitem:a3092fc418e07c708d13ccc4dc90f6a1e" id="r_a3092fc418e07c708d13ccc4dc90f6a1e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3092fc418e07c708d13ccc4dc90f6a1e">IsPlayerStateOwner</a> () const</td></tr>
+<tr class="memdesc:a3092fc418e07c708d13ccc4dc90f6a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when the owner actor is a PlayerState.  <br /></td></tr>
+<tr class="memitem:a086621a772f98573e438ea70aee7b8ab" id="r_a086621a772f98573e438ea70aee7b8ab"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a086621a772f98573e438ea70aee7b8ab">BeginPlay</a> () override</td></tr>
+<tr class="memitem:ac164958f57eb2af59f1990d954562d2e" id="r_ac164958f57eb2af59f1990d954562d2e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac164958f57eb2af59f1990d954562d2e">BeginDestroy</a> () override</td></tr>
+<tr class="memitem:ab330e3ce9c74f044b2f1f32a1c8d1d6f" id="r_ab330e3ce9c74f044b2f1f32a1c8d1d6f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab330e3ce9c74f044b2f1f32a1c8d1d6f">AbilitySpecInputPressed</a> (FGameplayAbilitySpec &amp;Spec) override</td></tr>
+<tr class="memitem:a8b2d115b756502e0199e3c4053eb9cad" id="r_a8b2d115b756502e0199e3c4053eb9cad"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8b2d115b756502e0199e3c4053eb9cad">AbilitySpecInputReleased</a> (FGameplayAbilitySpec &amp;Spec) override</td></tr>
 <tr class="memitem:a54b02707495d2a7cf4f61b20b5db475f" id="r_a54b02707495d2a7cf4f61b20b5db475f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a54b02707495d2a7cf4f61b20b5db475f">InitAbilityActorInfo</a> (AActor *InOwnerActor, AActor *InAvatarActor) override</td></tr>
-<tr class="memitem:a012c7321713ae1eab98adcf8b3694074" id="r_a012c7321713ae1eab98adcf8b3694074"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a012c7321713ae1eab98adcf8b3694074">OnRemoveAbility</a> (FGameplayAbilitySpec &amp;AbilitySpec) override</td></tr>
 <tr class="memitem:af52e7e0f51808c235282568124b8f6cf" id="r_af52e7e0f51808c235282568124b8f6cf"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af52e7e0f51808c235282568124b8f6cf">NotifyAbilityActivated</a> (const FGameplayAbilitySpecHandle Handle, UGameplayAbility *Ability) override</td></tr>
 <tr class="memitem:aa00e1e4ceb58bbed75550f8962ae0dc3" id="r_aa00e1e4ceb58bbed75550f8962ae0dc3"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa00e1e4ceb58bbed75550f8962ae0dc3">NotifyAbilityFailed</a> (const FGameplayAbilitySpecHandle Handle, UGameplayAbility *Ability, const FGameplayTagContainer &amp;FailureReason) override</td></tr>
 <tr class="memitem:a83bfe7c4c38d9ebe698b643c78800ab0" id="r_a83bfe7c4c38d9ebe698b643c78800ab0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a83bfe7c4c38d9ebe698b643c78800ab0">NotifyAbilityEnded</a> (FGameplayAbilitySpecHandle Handle, UGameplayAbility *Ability, bool bWasCancelled) override</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a84d902be6e00159acc2d48fb0876a3b4" id="r_a84d902be6e00159acc2d48fb0876a3b4"><td class="memItemLeft">FDTOnInitAbilityActorInfo&#160;</td><td class="memItemRight"><a class="el" href="#a84d902be6e00159acc2d48fb0876a3b4">OnInitAbilityActorInfo</a></td></tr>
+<tr class="memdesc:a84d902be6e00159acc2d48fb0876a3b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called just after InitAbilityActorInfo, once abilities and attributes have been granted.  <br /></td></tr>
 <tr class="memitem:ab8561c132ea44b11dd8660b9305e73b5" id="r_ab8561c132ea44b11dd8660b9305e73b5"><td class="memItemLeft">FDTAbilityEventDelegate&#160;</td><td class="memItemRight"><a class="el" href="#ab8561c132ea44b11dd8660b9305e73b5">OnAbilityEvent</a></td></tr>
 <tr class="memdesc:ab8561c132ea44b11dd8660b9305e73b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delegate invoked whenever a generic ability event is broadcast through this ASC.  <br /></td></tr>
+<tr class="memitem:a346a800918324c6a1a28bd56ac0d91b9" id="r_a346a800918324c6a1a28bd56ac0d91b9"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_d_t_ability_input_mapping.html">FDTAbilityInputMapping</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a346a800918324c6a1a28bd56ac0d91b9">GrantedAbilities</a></td></tr>
+<tr class="memdesc:a346a800918324c6a1a28bd56ac0d91b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of Gameplay Abilities to grant when the Ability System Component is initialized.  <br /></td></tr>
+<tr class="memitem:a7e09d22c0ff2eadba6cd54a5b73fbc3b" id="r_a7e09d22c0ff2eadba6cd54a5b73fbc3b"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_d_t_attribute_set_definition.html">FDTAttributeSetDefinition</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7e09d22c0ff2eadba6cd54a5b73fbc3b">GrantedAttributes</a></td></tr>
+<tr class="memdesc:a7e09d22c0ff2eadba6cd54a5b73fbc3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of Attribute Sets to grant when the Ability System Component is initialized, with optional initialization data.  <br /></td></tr>
+<tr class="memitem:a5c78e6bd0d62e95c49cddf959865e327" id="r_a5c78e6bd0d62e95c49cddf959865e327"><td class="memItemLeft">TArray&lt; TSubclassOf&lt; UGameplayEffect &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5c78e6bd0d62e95c49cddf959865e327">GrantedEffects</a></td></tr>
+<tr class="memdesc:a5c78e6bd0d62e95c49cddf959865e327"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of GameplayEffects to apply when the Ability System Component is initialized (on begin play).  <br /></td></tr>
+<tr class="memitem:ab5df5ba41b4e522dbe9bed651bcc5dfe" id="r_ab5df5ba41b4e522dbe9bed651bcc5dfe"><td class="memItemLeft">TArray&lt; TSoftObjectPtr&lt; <a class="el" href="class_u_d_t_ability_set.html">UDTAbilitySet</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab5df5ba41b4e522dbe9bed651bcc5dfe">GrantedAbilitySets</a></td></tr>
+<tr class="memdesc:ab5df5ba41b4e522dbe9bed651bcc5dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of Gameplay Ability Sets to grant when the Ability System Component is initialized.  <br /></td></tr>
+<tr class="memitem:adb267d2f211ea0d45f79f763821ede78" id="r_adb267d2f211ea0d45f79f763821ede78"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#adb267d2f211ea0d45f79f763821ede78">bResetAbilitiesOnSpawn</a> = true</td></tr>
+<tr class="memdesc:adb267d2f211ea0d45f79f763821ede78"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true (default), startup abilities are re-granted every time InitAbilityActorInfo runs (deaths / respawns / possession changes).  <br /></td></tr>
+<tr class="memitem:aa2b09dc6c248c762aa80e63b3dbf00b5" id="r_aa2b09dc6c248c762aa80e63b3dbf00b5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa2b09dc6c248c762aa80e63b3dbf00b5">bResetAttributesOnSpawn</a> = true</td></tr>
+<tr class="memdesc:aa2b09dc6c248c762aa80e63b3dbf00b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true (default), startup attributes are reset to their default values every time InitAbilityActorInfo runs.  <br /></td></tr>
 <tr class="memitem:a0a6543fb7029985ff17ab9e980140176" id="r_a0a6543fb7029985ff17ab9e980140176"><td class="memItemLeft">FDTOnAbilityStackChanged&#160;</td><td class="memItemRight"><a class="el" href="#a0a6543fb7029985ff17ab9e980140176">OnAbilityStackChanged</a></td></tr>
 <tr class="memdesc:a0a6543fb7029985ff17ab9e980140176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delegate invoked whenever replicated or local ability stack state changes.  <br /></td></tr>
 <tr class="memitem:a25c1ba3941a05531723254b5258bbfe9" id="r_a25c1ba3941a05531723254b5258bbfe9"><td class="memItemLeft">FDTOnRemoveAbility&#160;</td><td class="memItemRight"><a class="el" href="#a25c1ba3941a05531723254b5258bbfe9">OnRemoveAbilityDelegate</a></td></tr>
@@ -191,6 +232,12 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:acfda0d13062d0c3a6652227a03ac8d48" id="r_acfda0d13062d0c3a6652227a03ac8d48"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#acfda0d13062d0c3a6652227a03ac8d48">GetLifetimeReplicatedProps</a> (TArray&lt; FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
+<tr class="memitem:a012c7321713ae1eab98adcf8b3694074" id="r_a012c7321713ae1eab98adcf8b3694074"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a012c7321713ae1eab98adcf8b3694074">OnRemoveAbility</a> (FGameplayAbilitySpec &amp;AbilitySpec) override</td></tr>
+<tr class="memitem:a66e9f6933a55b59d4ea4b9b7dae64cd9" id="r_a66e9f6933a55b59d4ea4b9b7dae64cd9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a66e9f6933a55b59d4ea4b9b7dae64cd9">GrantStartupEffects</a> ()</td></tr>
+<tr class="memdesc:a66e9f6933a55b59d4ea4b9b7dae64cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies startup GrantedEffects (authority only); called from BeginPlay.  <br /></td></tr>
+<tr class="memitem:a25cfb467062a2b3fced6a2c8b64ce5a2" id="r_a25cfb467062a2b3fced6a2c8b64ce5a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a25cfb467062a2b3fced6a2c8b64ce5a2">OnPawnControllerChanged</a> (APawn *Pawn, AController *NewController)</td></tr>
+<tr class="memdesc:a25cfb467062a2b3fced6a2c8b64ce5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reinit the cached ability actor info (specifically the player controller) on possession changes.  <br /></td></tr>
 <tr class="memitem:aa9ec7d95139774caef65481c074c6851" id="r_aa9ec7d95139774caef65481c074c6851"><td class="memItemLeft">AActor *&#160;</td><td class="memItemRight"><a class="el" href="#aa9ec7d95139774caef65481c074c6851">GetValidEventActor</a> () const</td></tr>
 <tr class="memitem:a4bafe5aa60b91b375be5f223b3ef0ea7" id="r_a4bafe5aa60b91b375be5f223b3ef0ea7"><td class="memItemLeft"><a class="el" href="struct_f_ability_stack_state.html">FAbilityStackState</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4bafe5aa60b91b375be5f223b3ef0ea7">FindAbilityStackState</a> (FGameplayAbilitySpecHandle AbilityHandle)</td></tr>
 <tr class="memitem:adf8ce3cad3709e2fc316627835765d22" id="r_adf8ce3cad3709e2fc316627835765d22"><td class="memItemLeft">const <a class="el" href="struct_f_ability_stack_state.html">FAbilityStackState</a> *&#160;</td><td class="memItemRight"><a class="el" href="#adf8ce3cad3709e2fc316627835765d22">FindAbilityStackState</a> (FGameplayAbilitySpecHandle AbilityHandle) const</td></tr>
@@ -204,6 +251,13 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a4a167531c412e60eb7ee390d71fb0369" id="r_a4a167531c412e60eb7ee390d71fb0369"><td class="memItemLeft">TMap&lt; FGameplayAbilitySpecHandle, int32 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4a167531c412e60eb7ee390d71fb0369">ReplicatedStackCache</a></td></tr>
 <tr class="memitem:a18f4d24f44146b251b3f8cdad5629f0d" id="r_a18f4d24f44146b251b3f8cdad5629f0d"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_d_t_combat_modifier_spec.html">FDTCombatModifierSpec</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a18f4d24f44146b251b3f8cdad5629f0d">RegisteredCombatModifiers</a></td></tr>
 <tr class="memitem:ae63597840055bafe91ed1f7234f4a39a" id="r_ae63597840055bafe91ed1f7234f4a39a"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#ae63597840055bafe91ed1f7234f4a39a">NextCombatModifierId</a> = 1</td></tr>
+<tr class="memitem:a6a1f322bf64ef296f84521500afa94b5" id="r_a6a1f322bf64ef296f84521500afa94b5"><td class="memItemLeft">TArray&lt; FGameplayAbilitySpecHandle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6a1f322bf64ef296f84521500afa94b5">AddedAbilityHandles</a></td></tr>
+<tr class="memitem:a5245b059584d2d41c9d014247cf1c697" id="r_a5245b059584d2d41c9d014247cf1c697"><td class="memItemLeft">TArray&lt; TObjectPtr&lt; UAttributeSet &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5245b059584d2d41c9d014247cf1c697">AddedAttributes</a></td></tr>
+<tr class="memitem:a2f4c06ffd8dbe54a7b49d4a9f948fb7c" id="r_a2f4c06ffd8dbe54a7b49d4a9f948fb7c"><td class="memItemLeft">TArray&lt; FActiveGameplayEffectHandle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2f4c06ffd8dbe54a7b49d4a9f948fb7c">AddedEffects</a></td></tr>
+<tr class="memitem:aed3a9f5d72d892f092891b47a6929e7a" id="r_aed3a9f5d72d892f092891b47a6929e7a"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_d_t_ability_set_handle.html">FDTAbilitySetHandle</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aed3a9f5d72d892f092891b47a6929e7a">AddedAbilitySets</a></td></tr>
+<tr class="memitem:aad7b58c18e781ce080fefe47a55c71c3" id="r_aad7b58c18e781ce080fefe47a55c71c3"><td class="memItemLeft">TArray&lt; FGameplayAbilitySpecHandle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aad7b58c18e781ce080fefe47a55c71c3">InputPressedSpecHandles</a></td></tr>
+<tr class="memitem:ab9554054fc5f5347840e513680107b39" id="r_ab9554054fc5f5347840e513680107b39"><td class="memItemLeft">TArray&lt; FGameplayAbilitySpecHandle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab9554054fc5f5347840e513680107b39">InputReleasedSpecHandles</a></td></tr>
+<tr class="memitem:a58f748e827c389c4bf4457038c5b2328" id="r_a58f748e827c389c4bf4457038c5b2328"><td class="memItemLeft">TArray&lt; FGameplayAbilitySpecHandle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a58f748e827c389c4bf4457038c5b2328">InputHeldSpecHandles</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -211,7 +265,7 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00064">64</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00066">66</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a95dd08daae6adfba87d942e9158e5538" name="a95dd08daae6adfba87d942e9158e5538"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95dd08daae6adfba87d942e9158e5538">&#9670;&#160;</a></span>TShouldCancelAbilityFunc</h2>
@@ -225,7 +279,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00140">140</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00193">193</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
 
 </div>
 </div>
@@ -245,15 +299,123 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00020">20</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00164">AbilityStackStates</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00257">AbilityStackStates</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00756">AppendCombatModifierSpecs()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00047">GetLifetimeReplicatedProps()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00855">AppendCombatModifierSpecs()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00106">GetLifetimeReplicatedProps()</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aed65ffbfb02f94f3d8a62718c8c02932" name="aed65ffbfb02f94f3d8a62718c8c02932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed65ffbfb02f94f3d8a62718c8c02932">&#9670;&#160;</a></span>AbilityInputTagPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::AbilityInputTagPressed </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayTag &amp;</td>          <td class="paramname"><span class="paramname"><em>InputTag</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Queues a press for every activatable spec whose dynamic source tags contain InputTag. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00935">935</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00286">InputHeldSpecHandles</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00280">InputPressedSpecHandles</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00343">ADTPlayerController::Input_AbilityInputTagPressed()</a>.</p>
+
+</div>
+</div>
+<a id="adf703e2838757bed3909e4c01b8f5474" name="adf703e2838757bed3909e4c01b8f5474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf703e2838757bed3909e4c01b8f5474">&#9670;&#160;</a></span>AbilityInputTagReleased()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::AbilityInputTagReleased </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayTag &amp;</td>          <td class="paramname"><span class="paramname"><em>InputTag</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Queues a release for every activatable spec whose dynamic source tags contain InputTag. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00952">952</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00286">InputHeldSpecHandles</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00283">InputReleasedSpecHandles</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00352">ADTPlayerController::Input_AbilityInputTagReleased()</a>.</p>
+
+</div>
+</div>
+<a id="ab330e3ce9c74f044b2f1f32a1c8d1d6f" name="ab330e3ce9c74f044b2f1f32a1c8d1d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab330e3ce9c74f044b2f1f32a1c8d1d6f">&#9670;&#160;</a></span>AbilitySpecInputPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::AbilitySpecInputPressed </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayAbilitySpec &amp;</td>          <td class="paramname"><span class="paramname"><em>Spec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01060">1060</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00969">ProcessAbilityInput()</a>.</p>
+
+</div>
+</div>
+<a id="a8b2d115b756502e0199e3c4053eb9cad" name="a8b2d115b756502e0199e3c4053eb9cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b2d115b756502e0199e3c4053eb9cad">&#9670;&#160;</a></span>AbilitySpecInputReleased()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::AbilitySpecInputReleased </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayAbilitySpec &amp;</td>          <td class="paramname"><span class="paramname"><em>Spec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01076">1076</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00969">ProcessAbilityInput()</a>.</p>
+
+</div>
+</div>
 <a id="ad554b02723bbc9cb4a4cffb9ed1fb27d" name="ad554b02723bbc9cb4a4cffb9ed1fb27d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad554b02723bbc9cb4a4cffb9ed1fb27d">&#9670;&#160;</a></span>AddAbilityToActivationGroup()</h2>
 
@@ -273,11 +435,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00446">446</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00545">545</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00161">ActivationGroupCounts</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00482">CancelActivationGroupAbilities()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00028">Exclusive_Blocking</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00025">Exclusive_Replaceable</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00022">Independent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00254">ActivationGroupCounts</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00581">CancelActivationGroupAbilities()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00028">Exclusive_Blocking</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00025">Exclusive_Replaceable</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00022">Independent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00125">UDTGameplayAbility::ChangeActivationGroup()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00525">NotifyAbilityActivated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">UDTGameplayAbility::ChangeActivationGroup()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00624">NotifyAbilityActivated()</a>.</p>
 
 </div>
 </div>
@@ -305,11 +467,69 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00756">756</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00855">855</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00146">FDTCombatModifierSpec::OwningComponent</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00167">RegisteredCombatModifiers</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00015">UDTAbilitySystemComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00156">FDTCombatModifierSpec::OwningComponent</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00260">RegisteredCombatModifiers</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00020">UDTAbilitySystemComponent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00286">UDTCombatSubsystem::GatherModifiers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, and <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00345">UDTCombatSubsystem::GatherModifiers()</a>.</p>
+
+</div>
+</div>
+<a id="ac164958f57eb2af59f1990d954562d2e" name="ac164958f57eb2af59f1990d954562d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac164958f57eb2af59f1990d954562d2e">&#9670;&#160;</a></span>BeginDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::BeginDestroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00038">38</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00265">AddedAbilityHandles</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00277">AddedAbilitySets</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00269">AddedAttributes</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00273">AddedEffects</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00111">UDTAbilityCoreComponent::ShutdownAbilitySystemDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="a086621a772f98573e438ea70aee7b8ab" name="a086621a772f98573e438ea70aee7b8ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a086621a772f98573e438ea70aee7b8ab">&#9670;&#160;</a></span>BeginPlay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::BeginPlay </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00025">25</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01272">GrantStartupEffects()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01092">OnAbilityActivatedCallback()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01122">OnAbilityEndedCallback()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01107">OnAbilityFailedCallback()</a>.</p>
 
 </div>
 </div>
@@ -365,11 +585,11 @@ Friends</h2></td></tr>
 <p>Builds a fully-populated FGameplayEventData from common ability event parameters. </p>
 <p>The ContextHandle will be a <a class="el" href="struct_f_d_t_gameplay_effect_context.html">FDTGameplayEffectContext</a> with ContextTags set. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00678">678</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00777">777</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00351">UDTBlueprintLibrary::GetDTEffectContextMutable()</a>, <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00025">Instigator</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00028">Target</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00346">UDTBlueprintLibrary::GetDTEffectContextMutable()</a>, <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00021">Instigator</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00024">Target</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00421">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00100">UDTAbilityCoreComponent::MakeGameplayEventData()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00525">NotifyAbilityActivated()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00587">NotifyAbilityEnded()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00555">NotifyAbilityFailed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00531">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00204">UDTAbilityCoreComponent::MakeGameplayEventData()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00624">NotifyAbilityActivated()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00686">NotifyAbilityEnded()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00654">NotifyAbilityFailed()</a>.</p>
 
 </div>
 </div>
@@ -388,9 +608,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00121">121</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00241">241</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, and <a class="el" href="_d_t_can_activate_ability_8cpp_source.html#l00009">FDTCanActivateAbilityCondition::TestCondition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, and <a class="el" href="_d_t_can_activate_ability_8cpp_source.html#l00009">FDTCanActivateAbilityCondition::TestCondition()</a>.</p>
 
 </div>
 </div>
@@ -413,9 +633,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00379">379</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00478">478</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00482">CancelActivationGroupAbilities()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00581">CancelActivationGroupAbilities()</a>.</p>
 
 </div>
 </div>
@@ -443,11 +663,62 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00482">482</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00581">581</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00379">CancelAbilitiesByFunc()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00478">CancelAbilitiesByFunc()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00446">AddAbilityToActivationGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00545">AddAbilityToActivationGroup()</a>.</p>
+
+</div>
+</div>
+<a id="a4920e06aee3d63c0e491aea420dbf5d7" name="a4920e06aee3d63c0e491aea420dbf5d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4920e06aee3d63c0e491aea420dbf5d7">&#9670;&#160;</a></span>ClearAbilityInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::ClearAbilityInput </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears all queued/held ability input. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01053">1053</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00286">InputHeldSpecHandles</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00280">InputPressedSpecHandles</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00283">InputReleasedSpecHandles</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">InitAbilityActorInfo()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00969">ProcessAbilityInput()</a>.</p>
+
+</div>
+</div>
+<a id="aac29ee4488886149a08c6bea40e19d83" name="aac29ee4488886149a08c6bea40e19d83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac29ee4488886149a08c6bea40e19d83">&#9670;&#160;</a></span>ClearAbilitySet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilitySystemComponent::ClearAbilitySet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_f_d_t_ability_set_handle.html">FDTAbilitySetHandle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>InAbilitySetHandle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the AbilitySet represented by InAbilitySetHandle from this ASC. </p>
+<p>Clears out any previously granted Abilities, Attributes, Effects and Owned Tags from the set. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00917">917</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_set_types_8h_source.html#l00131">FDTAbilitySetHandle::AbilitySetPathName</a>, <a class="el" href="_d_t_ability_set_types_8h_source.html#l00136">FDTAbilitySetHandle::IsValid()</a>, and <a class="el" href="_d_t_ability_set_8cpp_source.html#l00074">UDTAbilitySet::RemoveFromAbilitySystem()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
 
 </div>
 </div>
@@ -470,7 +741,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00499">499</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00598">598</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>.</p>
 
 </div>
 </div>
@@ -493,7 +766,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00492">492</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00591">591</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>.</p>
 
 </div>
 </div>
@@ -520,11 +795,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00617">617</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00716">716</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00027">FAbilityStackState::AbilitySpecHandle</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00164">AbilityStackStates</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00029">FAbilityStackState::AbilitySpecHandle</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00257">AbilityStackStates</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00208">GetAbilityCurrentStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00256">InitializeAbilityStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00220">SetAbilityCurrentStacks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00328">GetAbilityCurrentStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00376">InitializeAbilityStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00340">SetAbilityCurrentStacks()</a>.</p>
 
 </div>
 </div>
@@ -551,9 +826,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00630">630</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00729">729</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00027">FAbilityStackState::AbilitySpecHandle</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00164">AbilityStackStates</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00029">FAbilityStackState::AbilitySpecHandle</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00257">AbilityStackStates</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
 
 </div>
 </div>
@@ -576,9 +851,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00143">143</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00263">263</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
 
 </div>
 </div>
@@ -601,11 +876,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00208">208</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00328">328</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00030">FAbilityStackState::CurrentStacks</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00617">FindAbilityStackState()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00032">FAbilityStackState::CurrentStacks</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00716">FindAbilityStackState()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00172">GetAbilityStacksByTags()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00256">InitializeAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00220">SetAbilityCurrentStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00325">TryAddAbilityStack()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00303">TryConsumeAbilityStack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00292">GetAbilityStacksByTags()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00376">InitializeAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00340">SetAbilityCurrentStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00445">TryAddAbilityStack()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00423">TryConsumeAbilityStack()</a>.</p>
 
 </div>
 </div>
@@ -628,11 +903,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00172">172</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00292">292</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00208">GetAbilityCurrentStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00328">GetAbilityCurrentStacks()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
 
 </div>
 </div>
@@ -654,14 +929,14 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00047">47</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00106">106</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00164">AbilityStackStates</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00015">UDTAbilitySystemComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00257">AbilityStackStates</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00020">UDTAbilitySystemComponent()</a>.</p>
 
 </div>
 </div>
@@ -688,9 +963,146 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00780">780</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00879">879</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00525">NotifyAbilityActivated()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00587">NotifyAbilityEnded()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00555">NotifyAbilityFailed()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00655">SendAbilityEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00624">NotifyAbilityActivated()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00686">NotifyAbilityEnded()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00654">NotifyAbilityFailed()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00754">SendAbilityEvent()</a>.</p>
+
+</div>
+</div>
+<a id="a78180db5059c939697faafc870739eaf" name="a78180db5059c939697faafc870739eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78180db5059c939697faafc870739eaf">&#9670;&#160;</a></span>GiveAbilitySet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilitySystemComponent::GiveAbilitySet </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_u_d_t_ability_set.html">UDTAbilitySet</a> *</td>          <td class="paramname"><span class="paramname"><em>InAbilitySet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_f_d_t_ability_set_handle.html">FDTAbilitySetHandle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>OutHandle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Grants a given Ability Set to the ASC, adding defined Abilities, Attributes, Effects and Owned Tags. </p>
+<p>Must be called on authority; input routing needs no client-side call since input tags replicate with specs. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00899">899</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_set_8cpp_source.html#l00019">UDTAbilitySet::GrantToAbilitySystem()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
+
+</div>
+</div>
+<a id="abebd1c1b9ca015123dcf6abad0c8be8a" name="abebd1c1b9ca015123dcf6abad0c8be8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abebd1c1b9ca015123dcf6abad0c8be8a">&#9670;&#160;</a></span>GrantDefaultAbilitiesAndAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::GrantDefaultAbilitiesAndAttributes </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>InOwnerActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>InAvatarActor</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called from InitAbilityActorInfo; grants GrantedAbilities / GrantedAttributes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01175">1175</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00265">AddedAbilityHandles</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00269">AddedAttributes</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00105">bResetAbilitiesOnSpawn</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00112">bResetAttributesOnSpawn</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00086">GrantedAbilities</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00090">GrantedAttributes</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01137">ShouldGrantAbility()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">InitAbilityActorInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a0279410c35f24c768ad0bc2cbcf2ff05" name="a0279410c35f24c768ad0bc2cbcf2ff05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0279410c35f24c768ad0bc2cbcf2ff05">&#9670;&#160;</a></span>GrantDefaultAbilitySets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::GrantDefaultAbilitySets </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>InOwnerActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>InAvatarActor</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called from InitAbilityActorInfo; grants GrantedAbilitySets. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01243">1243</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00277">AddedAbilitySets</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00098">GrantedAbilitySets</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01148">ShouldGrantAbilitySet()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">InitAbilityActorInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a66e9f6933a55b59d4ea4b9b7dae64cd9" name="a66e9f6933a55b59d4ea4b9b7dae64cd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e9f6933a55b59d4ea4b9b7dae64cd9">&#9670;&#160;</a></span>GrantStartupEffects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::GrantStartupEffects </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies startup GrantedEffects (authority only); called from BeginPlay. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01272">1272</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00273">AddedEffects</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00094">GrantedEffects</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00025">BeginPlay()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">InitAbilityActorInfo()</a>.</p>
 
 </div>
 </div>
@@ -721,9 +1133,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00054">54</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">113</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00164">AbilityStackStates</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00172">UDTGameplayAbility::GetMaxStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00148">UDTGameplayAbility::HasStacks()</a>, <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00035">UDTCharacterMovementComponent::InitializeForAbilitySystem()</a>, <a class="el" href="class_u_d_t_gameplay_ability.html#afa48df9bee15774593c3230f5b694f29">UDTGameplayAbility::OnPawnAvatarSet()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00348">ResetAbilityStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00257">AbilityStackStates</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01053">ClearAbilityInput()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">UDTGameplayAbility::GetMaxStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01175">GrantDefaultAbilitiesAndAttributes()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01243">GrantDefaultAbilitySets()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01272">GrantStartupEffects()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">UDTGameplayAbility::HasStacks()</a>, <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00036">UDTCharacterMovementComponent::InitializeForAbilitySystem()</a>, <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00023">UDTAnimInstance::InitializeWithAbilitySystem()</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00123">UDTAbilityCoreComponent::OnInitAbilityActorInfo</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00078">OnInitAbilityActorInfo</a>, <a class="el" href="class_u_d_t_gameplay_ability.html#afa48df9bee15774593c3230f5b694f29">UDTGameplayAbility::OnPawnAvatarSet()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01301">OnPawnControllerChanged()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00069">UDTAbilityCoreComponent::RegisterAbilitySystemDelegates()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00468">ResetAbilityStacks()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00754">UDTAbilityCoreComponent::SetStartupAbilitiesGranted()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00050">UDTAbilityCoreComponent::SetupOwner()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00229">TryActivateAbilitiesOnSpawn()</a>.</p>
 
 </div>
 </div>
@@ -746,11 +1158,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00256">256</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00376">376</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00027">FAbilityStackState::AbilitySpecHandle</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00164">AbilityStackStates</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00030">FAbilityStackState::CurrentStacks</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00617">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00208">GetAbilityCurrentStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00643">NotifyAbilityStackChanged()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00029">FAbilityStackState::AbilitySpecHandle</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00257">AbilityStackStates</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00032">FAbilityStackState::CurrentStacks</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00716">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00328">GetAbilityCurrentStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00742">NotifyAbilityStackChanged()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
 
 </div>
 </div>
@@ -769,46 +1181,34 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00421">421</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00520">520</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00161">ActivationGroupCounts</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00028">Exclusive_Blocking</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00025">Exclusive_Replaceable</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00022">Independent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00254">ActivationGroupCounts</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00028">Exclusive_Blocking</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00025">Exclusive_Replaceable</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00022">Independent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00432">UDTGameplayAbility::CanActivateAbility()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00095">UDTGameplayAbility::CanChangeActivationGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00526">UDTGameplayAbility::CanActivateAbility()</a>, and <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00151">UDTGameplayAbility::CanChangeActivationGroup()</a>.</p>
 
 </div>
 </div>
-<a id="a1ee88b2f2ca3cafa44701e68706c10b8" name="a1ee88b2f2ca3cafa44701e68706c10b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ee88b2f2ca3cafa44701e68706c10b8">&#9670;&#160;</a></span>MakeOutgoingSpecWithPeriod()</h2>
+<a id="a3092fc418e07c708d13ccc4dc90f6a1e" name="a3092fc418e07c708d13ccc4dc90f6a1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3092fc418e07c708d13ccc4dc90f6a1e">&#9670;&#160;</a></span>IsPlayerStateOwner()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FGameplayEffectSpecHandle UDTAbilitySystemComponent::MakeOutgoingSpecWithPeriod </td>
+          <td class="memname">bool UDTAbilitySystemComponent::IsPlayerStateOwner </td>
           <td>(</td>
-          <td class="paramtype">TSubclassOf&lt; UGameplayEffect &gt;</td>          <td class="paramname"><span class="paramname"><em>EffectClass</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Level</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>PeriodSeconds</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>DurationSeconds</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1.0f</span>&#160;) const</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00358">358</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p>Returns true when the owner actor is a PlayerState. </p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01169">1169</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01148">ShouldGrantAbilitySet()</a>.</p>
 
 </div>
 </div>
@@ -839,9 +1239,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00525">525</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00624">624</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00446">AddAbilityToActivationGroup()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00678">BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00120">UDTGameplayAbility::CanSendActivationEvents()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00114">UDTGameplayAbility::GetActivationGroup()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00780">GetValidEventActor()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00655">SendAbilityEvent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00545">AddAbilityToActivationGroup()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00777">BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00139">UDTGameplayAbility::CanSendActivationEvents()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00130">UDTGameplayAbility::GetActivationGroup()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00879">GetValidEventActor()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00754">SendAbilityEvent()</a>.</p>
 
 </div>
 </div>
@@ -877,9 +1277,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00587">587</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00686">686</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00678">BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00120">UDTGameplayAbility::CanSendActivationEvents()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00114">UDTGameplayAbility::GetActivationGroup()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00780">GetValidEventActor()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00477">RemoveAbilityFromActivationGroup()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00655">SendAbilityEvent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00777">BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00139">UDTGameplayAbility::CanSendActivationEvents()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00130">UDTGameplayAbility::GetActivationGroup()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00879">GetValidEventActor()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00576">RemoveAbilityFromActivationGroup()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00754">SendAbilityEvent()</a>.</p>
 
 </div>
 </div>
@@ -915,9 +1315,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00555">555</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00654">654</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00678">BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00120">UDTGameplayAbility::CanSendActivationEvents()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00780">GetValidEventActor()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00655">SendAbilityEvent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00777">BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00139">UDTGameplayAbility::CanSendActivationEvents()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00879">GetValidEventActor()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00754">SendAbilityEvent()</a>.</p>
 
 </div>
 </div>
@@ -953,11 +1353,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00643">643</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00742">742</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00076">OnAbilityStackChanged</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00166">ReplicatedStackCache</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00115">OnAbilityStackChanged</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00259">ReplicatedStackCache</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00256">InitializeAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00028">FAbilityStackState::PostReplicatedAdd()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00036">FAbilityStackState::PostReplicatedChange()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00220">SetAbilityCurrentStacks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00376">InitializeAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00087">FAbilityStackState::PostReplicatedAdd()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00095">FAbilityStackState::PostReplicatedChange()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00340">SetAbilityCurrentStacks()</a>.</p>
 
 </div>
 </div>
@@ -988,11 +1388,143 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00649">649</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00748">748</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00076">OnAbilityStackChanged</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00166">ReplicatedStackCache</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00115">OnAbilityStackChanged</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00259">ReplicatedStackCache</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00020">FAbilityStackState::PreReplicatedRemove()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00282">RemoveAbilityStacks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00079">FAbilityStackState::PreReplicatedRemove()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00402">RemoveAbilityStacks()</a>.</p>
+
+</div>
+</div>
+<a id="a2526b71227a1c2c146e07caffdda9697" name="a2526b71227a1c2c146e07caffdda9697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2526b71227a1c2c146e07caffdda9697">&#9670;&#160;</a></span>OnAbilityActivatedCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::OnAbilityActivatedCallback </td>
+          <td>(</td>
+          <td class="paramtype">UGameplayAbility *</td>          <td class="paramname"><span class="paramname"><em>Ability</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01092">1092</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00176">UDTAbilityCoreComponent::OnAbilityActivated</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00025">BeginPlay()</a>.</p>
+
+</div>
+</div>
+<a id="a3614ffc35accc305cb97f6534dd610e9" name="a3614ffc35accc305cb97f6534dd610e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3614ffc35accc305cb97f6534dd610e9">&#9670;&#160;</a></span>OnAbilityEndedCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::OnAbilityEndedCallback </td>
+          <td>(</td>
+          <td class="paramtype">UGameplayAbility *</td>          <td class="paramname"><span class="paramname"><em>Ability</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01122">1122</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00180">UDTAbilityCoreComponent::OnAbilityEnded</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00025">BeginPlay()</a>.</p>
+
+</div>
+</div>
+<a id="a34a922c412ba764a32afcaecbda018c6" name="a34a922c412ba764a32afcaecbda018c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34a922c412ba764a32afcaecbda018c6">&#9670;&#160;</a></span>OnAbilityFailedCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::OnAbilityFailedCallback </td>
+          <td>(</td>
+          <td class="paramtype">const UGameplayAbility *</td>          <td class="paramname"><span class="paramname"><em>Ability</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayTagContainer &amp;</td>          <td class="paramname"><span class="paramname"><em>Tags</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01107">1107</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00184">UDTAbilityCoreComponent::OnAbilityFailed</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00025">BeginPlay()</a>.</p>
+
+</div>
+</div>
+<a id="a25cfb467062a2b3fced6a2c8b64ce5a2" name="a25cfb467062a2b3fced6a2c8b64ce5a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25cfb467062a2b3fced6a2c8b64ce5a2">&#9670;&#160;</a></span>OnPawnControllerChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::OnPawnControllerChanged </td>
+          <td>(</td>
+          <td class="paramtype">APawn *</td>          <td class="paramname"><span class="paramname"><em>Pawn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AController *</td>          <td class="paramname"><span class="paramname"><em>NewController</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reinit the cached ability actor info (specifically the player controller) on possession changes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01301">1301</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">InitAbilityActorInfo()</a>.</p>
 
 </div>
 </div>
@@ -1014,14 +1546,43 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00506">506</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00605">605</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="class_u_d_t_gameplay_ability.html#af24c462225a843dbcf72350716a0a431">UDTGameplayAbility::OnAbilityRemoved()</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00079">OnRemoveAbilityDelegate</a>.</p>
+<p class="reference">References <a class="el" href="class_u_d_t_gameplay_ability.html#af24c462225a843dbcf72350716a0a431">UDTGameplayAbility::OnAbilityRemoved()</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00118">OnRemoveAbilityDelegate</a>.</p>
+
+</div>
+</div>
+<a id="a43453f41de7fd8e4fefc92aa0bddfe79" name="a43453f41de7fd8e4fefc92aa0bddfe79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43453f41de7fd8e4fefc92aa0bddfe79">&#9670;&#160;</a></span>ProcessAbilityInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::ProcessAbilityInput </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>DeltaTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bGamePaused</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Drains the queued input; called every frame from the player controller's PostProcessInput. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00969">969</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01060">AbilitySpecInputPressed()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01076">AbilitySpecInputReleased()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01053">ClearAbilityInput()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00133">UDTGameplayAbility::GetActivationPolicy()</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00286">InputHeldSpecHandles</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00280">InputPressedSpecHandles</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00283">InputReleasedSpecHandles</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00040">OnInputTriggered</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00043">WhileInputActive</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00326">ADTPlayerController::PostProcessInput()</a>.</p>
 
 </div>
 </div>
@@ -1049,11 +1610,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00716">716</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00815">815</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00035">UDTCombatModifier::MakeSpec()</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00168">NextCombatModifierId</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00728">RegisterCombatModifierSpec()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_modifier_8cpp_source.html#l00035">UDTCombatModifier::MakeSpec()</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00261">NextCombatModifierId</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00827">RegisterCombatModifierSpec()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
 
 </div>
 </div>
@@ -1072,11 +1633,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00728">728</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00827">827</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00143">FDTCombatModifierSpec::HandleId</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00044">FDTCombatModifierHandle::Id</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00168">NextCombatModifierId</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00167">RegisteredCombatModifiers</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00153">FDTCombatModifierSpec::HandleId</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00044">FDTCombatModifierHandle::Id</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00261">NextCombatModifierId</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00260">RegisteredCombatModifiers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00716">RegisterCombatModifierDefinition()</a>, and <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00350">FDTEquipmentStatHelper::RegisterCombatModifiers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00815">RegisterCombatModifierDefinition()</a>, and <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00358">FDTEquipmentStatHelper::RegisterCombatModifiers()</a>.</p>
 
 </div>
 </div>
@@ -1099,11 +1660,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00477">477</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00576">576</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00161">ActivationGroupCounts</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00254">ActivationGroupCounts</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00125">UDTGameplayAbility::ChangeActivationGroup()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00587">NotifyAbilityEnded()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">UDTGameplayAbility::ChangeActivationGroup()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00686">NotifyAbilityEnded()</a>.</p>
 
 </div>
 </div>
@@ -1122,11 +1683,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00282">282</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00402">402</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00164">AbilityStackStates</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00649">NotifyAbilityStackRemoved()</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00166">ReplicatedStackCache</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00257">AbilityStackStates</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00748">NotifyAbilityStackRemoved()</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00259">ReplicatedStackCache</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
 
 </div>
 </div>
@@ -1149,11 +1710,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00348">348</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00468">468</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00220">SetAbilityCurrentStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00340">SetAbilityCurrentStacks()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00054">InitAbilityActorInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">InitAbilityActorInfo()</a>.</p>
 
 </div>
 </div>
@@ -1179,11 +1740,11 @@ Friends</h2></td></tr>
 <p>Sends a gameplay event through this ASC. </p>
 <p>Broadcasts the OnAbilityEvent delegate, then dispatches the event via GAS. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00655">655</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00754">754</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00780">GetValidEventActor()</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00073">OnAbilityEvent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00879">GetValidEventActor()</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00082">OnAbilityEvent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00421">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00525">NotifyAbilityActivated()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00587">NotifyAbilityEnded()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00555">NotifyAbilityFailed()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00130">UDTAbilityCoreComponent::SendAbilityEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00531">UDTCombatSubsystem::BroadcastDamageEvent()</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00624">NotifyAbilityActivated()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00686">NotifyAbilityEnded()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00654">NotifyAbilityFailed()</a>, <a class="el" href="_d_t_ability_blueprint_library_8cpp_source.html#l00009">UDTAbilityBlueprintLibrary::SendAbilityEvent()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00234">UDTAbilityCoreComponent::SendAbilityEvent()</a>.</p>
 
 </div>
 </div>
@@ -1206,11 +1767,102 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00220">220</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00340">340</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00027">FAbilityStackState::AbilitySpecHandle</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00164">AbilityStackStates</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00030">FAbilityStackState::CurrentStacks</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00617">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00208">GetAbilityCurrentStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00643">NotifyAbilityStackChanged()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00029">FAbilityStackState::AbilitySpecHandle</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00257">AbilityStackStates</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00032">FAbilityStackState::CurrentStacks</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00716">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00328">GetAbilityCurrentStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00742">NotifyAbilityStackChanged()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00348">ResetAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00325">TryAddAbilityStack()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00303">TryConsumeAbilityStack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00468">ResetAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00445">TryAddAbilityStack()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00423">TryConsumeAbilityStack()</a>.</p>
+
+</div>
+</div>
+<a id="a67ddcc9c114433296f941d28b8ff5ec2" name="a67ddcc9c114433296f941d28b8ff5ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ddcc9c114433296f941d28b8ff5ec2">&#9670;&#160;</a></span>ShouldGrantAbility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilitySystemComponent::ShouldGrantAbility </td>
+          <td>(</td>
+          <td class="paramtype">TSubclassOf&lt; UGameplayAbility &gt;</td>          <td class="paramname"><span class="paramname"><em>InAbility</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>InLevel</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prevents re-adding an ability previously granted when bResetAbilitiesOnSpawn is false. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01137">1137</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00105">bResetAbilitiesOnSpawn</a>, and <a class="el" href="_d_t_ability_system_utils_8cpp_source.html#l00225">FDTAbilitySystemUtils::IsAbilityGranted()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01175">GrantDefaultAbilitiesAndAttributes()</a>.</p>
+
+</div>
+</div>
+<a id="a302d3cb169f7d7425a707220ef48c88d" name="a302d3cb169f7d7425a707220ef48c88d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a302d3cb169f7d7425a707220ef48c88d">&#9670;&#160;</a></span>ShouldGrantAbilitySet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilitySystemComponent::ShouldGrantAbilitySet </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_u_d_t_ability_set.html">UDTAbilitySet</a> *</td>          <td class="paramname"><span class="paramname"><em>InAbilitySet</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prevents re-granting a set previously added (always re-grants for PlayerState owners so respawns rebuild specs). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01148">1148</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00277">AddedAbilitySets</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01169">IsPlayerStateOwner()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01243">GrantDefaultAbilitySets()</a>.</p>
+
+</div>
+</div>
+<a id="a8f39fe44653891963b221f2bc8a0146a" name="a8f39fe44653891963b221f2bc8a0146a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f39fe44653891963b221f2bc8a0146a">&#9670;&#160;</a></span>TryActivateAbilitiesOnSpawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilitySystemComponent::TryActivateAbilitiesOnSpawn </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00229">229</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">InitAbilityActorInfo()</a>.</p>
 
 </div>
 </div>
@@ -1238,11 +1890,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00325">325</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00445">445</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00208">GetAbilityCurrentStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00220">SetAbilityCurrentStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00328">GetAbilityCurrentStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00340">SetAbilityCurrentStacks()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
 
 </div>
 </div>
@@ -1265,11 +1917,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00303">303</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00423">423</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00208">GetAbilityCurrentStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00220">SetAbilityCurrentStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00328">GetAbilityCurrentStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00340">SetAbilityCurrentStacks()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
 
 </div>
 </div>
@@ -1288,11 +1940,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00741">741</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00840">840</a> of file <a class="el" href="_d_t_ability_system_component_8cpp_source.html">DTAbilitySystemComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00143">FDTCombatModifierSpec::HandleId</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00044">FDTCombatModifierHandle::Id</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00046">FDTCombatModifierHandle::IsValid()</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00167">RegisteredCombatModifiers</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00153">FDTCombatModifierSpec::HandleId</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00044">FDTCombatModifierHandle::Id</a>, <a class="el" href="_d_t_combat_types_8h_source.html#l00046">FDTCombatModifierHandle::IsValid()</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00260">RegisteredCombatModifiers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00057">UDTCombatSubsystem::CalculateDamage()</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00059">UDTCombatSubsystem::CalculateDamage()</a>, and <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>.</p>
 
 </div>
 </div>
@@ -1317,11 +1969,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">81</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">120</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00756">AppendCombatModifierSpecs()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00678">BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00121">CanActivateAbilitiesByTags()</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00143">GetAbilityCooldownByTags()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00208">GetAbilityCurrentStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00172">GetAbilityStacksByTags()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00256">InitializeAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00358">MakeOutgoingSpecWithPeriod()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00716">RegisterCombatModifierDefinition()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00728">RegisterCombatModifierSpec()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00282">RemoveAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00348">ResetAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00655">SendAbilityEvent()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00220">SetAbilityCurrentStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00325">TryAddAbilityStack()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00303">TryConsumeAbilityStack()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00741">UnregisterCombatModifier()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00855">AppendCombatModifierSpecs()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00777">BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00241">CanActivateAbilitiesByTags()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00917">ClearAbilitySet()</a>, <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00263">GetAbilityCooldownByTags()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00328">GetAbilityCurrentStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00292">GetAbilityStacksByTags()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00899">GiveAbilitySet()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00376">InitializeAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00815">RegisterCombatModifierDefinition()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00827">RegisterCombatModifierSpec()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00402">RemoveAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00468">ResetAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00754">SendAbilityEvent()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00340">SetAbilityCurrentStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00229">TryActivateAbilitiesOnSpawn()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00445">TryAddAbilityStack()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00423">TryConsumeAbilityStack()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00840">UnregisterCombatModifier()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00081">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00617">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00630">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00208">GetAbilityCurrentStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00256">InitializeAbilityStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00220">SetAbilityCurrentStacks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8h_source.html#l00120">FAbilityStackState</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00716">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00729">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00328">GetAbilityCurrentStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00376">InitializeAbilityStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00340">SetAbilityCurrentStacks()</a>.</p>
 
 </div>
 </div>
@@ -1346,9 +1998,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00164">164</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00257">257</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00617">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00630">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00047">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00054">InitAbilityActorInfo()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00256">InitializeAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00282">RemoveAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00220">SetAbilityCurrentStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00015">UDTAbilitySystemComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00716">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00729">FindAbilityStackState()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00106">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">InitAbilityActorInfo()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00376">InitializeAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00402">RemoveAbilityStacks()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00340">SetAbilityCurrentStacks()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00020">UDTAbilitySystemComponent()</a>.</p>
 
 </div>
 </div>
@@ -1372,9 +2024,313 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00161">161</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00254">254</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00446">AddAbilityToActivationGroup()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00421">IsActivationGroupBlocked()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00477">RemoveAbilityFromActivationGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00545">AddAbilityToActivationGroup()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00520">IsActivationGroupBlocked()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00576">RemoveAbilityFromActivationGroup()</a>.</p>
+
+</div>
+</div>
+<a id="a6a1f322bf64ef296f84521500afa94b5" name="a6a1f322bf64ef296f84521500afa94b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a1f322bf64ef296f84521500afa94b5">&#9670;&#160;</a></span>AddedAbilityHandles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;FGameplayAbilitySpecHandle&gt; UDTAbilitySystemComponent::AddedAbilityHandles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00265">265</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00038">BeginDestroy()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01175">GrantDefaultAbilitiesAndAttributes()</a>.</p>
+
+</div>
+</div>
+<a id="aed3a9f5d72d892f092891b47a6929e7a" name="aed3a9f5d72d892f092891b47a6929e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3a9f5d72d892f092891b47a6929e7a">&#9670;&#160;</a></span>AddedAbilitySets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_d_t_ability_set_handle.html">FDTAbilitySetHandle</a>&gt; UDTAbilitySystemComponent::AddedAbilitySets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00277">277</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00038">BeginDestroy()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01243">GrantDefaultAbilitySets()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01148">ShouldGrantAbilitySet()</a>.</p>
+
+</div>
+</div>
+<a id="a5245b059584d2d41c9d014247cf1c697" name="a5245b059584d2d41c9d014247cf1c697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5245b059584d2d41c9d014247cf1c697">&#9670;&#160;</a></span>AddedAttributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;TObjectPtr&lt;UAttributeSet&gt; &gt; UDTAbilitySystemComponent::AddedAttributes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00269">269</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00038">BeginDestroy()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01175">GrantDefaultAbilitiesAndAttributes()</a>.</p>
+
+</div>
+</div>
+<a id="a2f4c06ffd8dbe54a7b49d4a9f948fb7c" name="a2f4c06ffd8dbe54a7b49d4a9f948fb7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f4c06ffd8dbe54a7b49d4a9f948fb7c">&#9670;&#160;</a></span>AddedEffects</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;FActiveGameplayEffectHandle&gt; UDTAbilitySystemComponent::AddedEffects</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00273">273</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00038">BeginDestroy()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01272">GrantStartupEffects()</a>.</p>
+
+</div>
+</div>
+<a id="adb267d2f211ea0d45f79f763821ede78" name="adb267d2f211ea0d45f79f763821ede78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb267d2f211ea0d45f79f763821ede78">&#9670;&#160;</a></span>bResetAbilitiesOnSpawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilitySystemComponent::bResetAbilitiesOnSpawn = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When true (default), startup abilities are re-granted every time InitAbilityActorInfo runs (deaths / respawns / possession changes). </p>
+<p>When false, they're only granted the first time. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00105">105</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01175">GrantDefaultAbilitiesAndAttributes()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01137">ShouldGrantAbility()</a>.</p>
+
+</div>
+</div>
+<a id="aa2b09dc6c248c762aa80e63b3dbf00b5" name="aa2b09dc6c248c762aa80e63b3dbf00b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b09dc6c248c762aa80e63b3dbf00b5">&#9670;&#160;</a></span>bResetAttributesOnSpawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilitySystemComponent::bResetAttributesOnSpawn = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When true (default), startup attributes are reset to their default values every time InitAbilityActorInfo runs. </p>
+<p>When false, they're only granted the first time. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00112">112</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01175">GrantDefaultAbilitiesAndAttributes()</a>.</p>
+
+</div>
+</div>
+<a id="a346a800918324c6a1a28bd56ac0d91b9" name="a346a800918324c6a1a28bd56ac0d91b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a346a800918324c6a1a28bd56ac0d91b9">&#9670;&#160;</a></span>GrantedAbilities</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_d_t_ability_input_mapping.html">FDTAbilityInputMapping</a>&gt; UDTAbilitySystemComponent::GrantedAbilities</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of Gameplay Abilities to grant when the Ability System Component is initialized. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00086">86</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01175">GrantDefaultAbilitiesAndAttributes()</a>.</p>
+
+</div>
+</div>
+<a id="ab5df5ba41b4e522dbe9bed651bcc5dfe" name="ab5df5ba41b4e522dbe9bed651bcc5dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5df5ba41b4e522dbe9bed651bcc5dfe">&#9670;&#160;</a></span>GrantedAbilitySets</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;TSoftObjectPtr&lt;<a class="el" href="class_u_d_t_ability_set.html">UDTAbilitySet</a>&gt; &gt; UDTAbilitySystemComponent::GrantedAbilitySets</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of Gameplay Ability Sets to grant when the Ability System Component is initialized. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00098">98</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01243">GrantDefaultAbilitySets()</a>.</p>
+
+</div>
+</div>
+<a id="a7e09d22c0ff2eadba6cd54a5b73fbc3b" name="a7e09d22c0ff2eadba6cd54a5b73fbc3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e09d22c0ff2eadba6cd54a5b73fbc3b">&#9670;&#160;</a></span>GrantedAttributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_d_t_attribute_set_definition.html">FDTAttributeSetDefinition</a>&gt; UDTAbilitySystemComponent::GrantedAttributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of Attribute Sets to grant when the Ability System Component is initialized, with optional initialization data. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00090">90</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01175">GrantDefaultAbilitiesAndAttributes()</a>.</p>
+
+</div>
+</div>
+<a id="a5c78e6bd0d62e95c49cddf959865e327" name="a5c78e6bd0d62e95c49cddf959865e327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c78e6bd0d62e95c49cddf959865e327">&#9670;&#160;</a></span>GrantedEffects</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;TSubclassOf&lt;UGameplayEffect&gt; &gt; UDTAbilitySystemComponent::GrantedEffects</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of GameplayEffects to apply when the Ability System Component is initialized (on begin play). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00094">94</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01272">GrantStartupEffects()</a>.</p>
+
+</div>
+</div>
+<a id="a58f748e827c389c4bf4457038c5b2328" name="a58f748e827c389c4bf4457038c5b2328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58f748e827c389c4bf4457038c5b2328">&#9670;&#160;</a></span>InputHeldSpecHandles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;FGameplayAbilitySpecHandle&gt; UDTAbilitySystemComponent::InputHeldSpecHandles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00286">286</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00935">AbilityInputTagPressed()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00952">AbilityInputTagReleased()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01053">ClearAbilityInput()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00969">ProcessAbilityInput()</a>.</p>
+
+</div>
+</div>
+<a id="aad7b58c18e781ce080fefe47a55c71c3" name="aad7b58c18e781ce080fefe47a55c71c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7b58c18e781ce080fefe47a55c71c3">&#9670;&#160;</a></span>InputPressedSpecHandles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;FGameplayAbilitySpecHandle&gt; UDTAbilitySystemComponent::InputPressedSpecHandles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00280">280</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00935">AbilityInputTagPressed()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01053">ClearAbilityInput()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00969">ProcessAbilityInput()</a>.</p>
+
+</div>
+</div>
+<a id="ab9554054fc5f5347840e513680107b39" name="ab9554054fc5f5347840e513680107b39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9554054fc5f5347840e513680107b39">&#9670;&#160;</a></span>InputReleasedSpecHandles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;FGameplayAbilitySpecHandle&gt; UDTAbilitySystemComponent::InputReleasedSpecHandles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00283">283</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00952">AbilityInputTagReleased()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01053">ClearAbilityInput()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00969">ProcessAbilityInput()</a>.</p>
 
 </div>
 </div>
@@ -1398,9 +2354,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00168">168</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00261">261</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00716">RegisterCombatModifierDefinition()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00728">RegisterCombatModifierSpec()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00815">RegisterCombatModifierDefinition()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00827">RegisterCombatModifierSpec()</a>.</p>
 
 </div>
 </div>
@@ -1418,9 +2374,9 @@ Friends</h2></td></tr>
 
 <p>Delegate invoked whenever a generic ability event is broadcast through this ASC. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00073">73</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00082">82</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00139">UDTAbilityCoreComponent::RegisterAbilitySystemDelegates()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00655">SendAbilityEvent()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00150">UDTAbilityCoreComponent::ShutdownAbilitySystemDelegates()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00754">SendAbilityEvent()</a>.</p>
 
 </div>
 </div>
@@ -1438,9 +2394,30 @@ Friends</h2></td></tr>
 
 <p>Delegate invoked whenever replicated or local ability stack state changes. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00076">76</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00115">115</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00643">NotifyAbilityStackChanged()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00649">NotifyAbilityStackRemoved()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00742">NotifyAbilityStackChanged()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00748">NotifyAbilityStackRemoved()</a>.</p>
+
+</div>
+</div>
+<a id="a84d902be6e00159acc2d48fb0876a3b4" name="a84d902be6e00159acc2d48fb0876a3b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84d902be6e00159acc2d48fb0876a3b4">&#9670;&#160;</a></span>OnInitAbilityActorInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnInitAbilityActorInfo UDTAbilitySystemComponent::OnInitAbilityActorInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event called just after InitAbilityActorInfo, once abilities and attributes have been granted. </p>
+<p>Happens multiple times for both client / server (component init + owning-actor replication). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00078">78</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">InitAbilityActorInfo()</a>.</p>
 
 </div>
 </div>
@@ -1458,9 +2435,9 @@ Friends</h2></td></tr>
 
 <p>Delegate invoked when an ability is removed from this ASC. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00079">79</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00118">118</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00506">OnRemoveAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00605">OnRemoveAbility()</a>.</p>
 
 </div>
 </div>
@@ -1484,9 +2461,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00167">167</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00260">260</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00756">AppendCombatModifierSpecs()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00728">RegisterCombatModifierSpec()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00741">UnregisterCombatModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00855">AppendCombatModifierSpecs()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00827">RegisterCombatModifierSpec()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00840">UnregisterCombatModifier()</a>.</p>
 
 </div>
 </div>
@@ -1510,9 +2487,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00166">166</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_component_8h_source.html#l00259">259</a> of file <a class="el" href="_d_t_ability_system_component_8h_source.html">DTAbilitySystemComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00643">NotifyAbilityStackChanged()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00649">NotifyAbilityStackRemoved()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00036">FAbilityStackState::PostReplicatedChange()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00282">RemoveAbilityStacks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00742">NotifyAbilityStackChanged()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00748">NotifyAbilityStackRemoved()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00095">FAbilityStackState::PostReplicatedChange()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00402">RemoveAbilityStacks()</a>.</p>
 
 </div>
 </div>

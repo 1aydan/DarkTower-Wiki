@@ -136,28 +136,49 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_anim_inst
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Animations/GSCNativeAnimInstance.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;DTAnimInstance.generated.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>UCLASS()</div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_u_d_t_anim_instance.html">   13</a></span>class DARKTOWER_API <a class="code hl_function" href="class_u_d_t_anim_instance.html#ac527274999e9218f64373359387cbb54">UDTAnimInstance</a> : public UGSCNativeAnimInstance</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    GENERATED_BODY()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_function" href="class_u_d_t_anim_instance.html#ac527274999e9218f64373359387cbb54">UDTAnimInstance</a>(<span class="keyword">const</span> FObjectInitializer&amp; ObjectInitializer);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    UPROPERTY(BlueprintReadOnly, Category = <span class="stringliteral">&quot;Character State Data&quot;</span>)</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_u_d_t_anim_instance.html#a7b4b245626234099314612c4ff37c728">   22</a></span>    float <a class="code hl_variable" href="class_u_d_t_anim_instance.html#a7b4b245626234099314612c4ff37c728">GroundDistance</a> = -1.0f;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_anim_instance.html#a392346739e5e34021785bb38cb05e14c">NativeUpdateAnimation</a>(<span class="keywordtype">float</span> DeltaSeconds) override;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Animation/AnimInstance.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;GameplayEffectTypes.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;DTAnimInstance.generated.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span>UAbilitySystemComponent;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>UCLASS()</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_u_d_t_anim_instance.html">   17</a></span>class DARKTOWER_API <a class="code hl_function" href="class_u_d_t_anim_instance.html#ac527274999e9218f64373359387cbb54">UDTAnimInstance</a> : public UAnimInstance</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_function" href="class_u_d_t_anim_instance.html#ac527274999e9218f64373359387cbb54">UDTAnimInstance</a>(<span class="keyword">const</span> FObjectInitializer&amp; ObjectInitializer);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    UPROPERTY(EditDefaultsOnly, Category = <span class="stringliteral">&quot;GameplayTags&quot;</span>)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_u_d_t_anim_instance.html#ae9f7e82ea6b573a9584e73d709976d07">   29</a></span>    FGameplayTagBlueprintPropertyMap <a class="code hl_variable" href="class_u_d_t_anim_instance.html#ae9f7e82ea6b573a9584e73d709976d07">GameplayTagPropertyMap</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_anim_instance.html#a60d2e70fe38e7c031b50bc2045e197b0">InitializeWithAbilitySystem</a>(UAbilitySystemComponent* ASC);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">//~ Begin UObject interface</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#if WITH_EDITOR</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">virtual</span> EDataValidationResult IsDataValid(<span class="keyword">class</span> FDataValidationContext&amp; Context) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">//~ End UObject interface</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">//~ Begin UAnimInstance interface</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_anim_instance.html#a51b76c72ff9ffe579ff295cf711f218f">NativeInitializeAnimation</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">//~ End UAnimInstance interface</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    UPROPERTY(BlueprintReadOnly, Category = <span class="stringliteral">&quot;Character State Data&quot;</span>)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_u_d_t_anim_instance.html#a7b4b245626234099314612c4ff37c728">   46</a></span>    float <a class="code hl_variable" href="class_u_d_t_anim_instance.html#a7b4b245626234099314612c4ff37c728">GroundDistance</a> = -1.0f;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_anim_instance.html#a392346739e5e34021785bb38cb05e14c">NativeUpdateAnimation</a>(<span class="keywordtype">float</span> DeltaSeconds) override;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
 </div>
-<div class="ttc" id="aclass_u_d_t_anim_instance_html_a392346739e5e34021785bb38cb05e14c"><div class="ttname"><a href="class_u_d_t_anim_instance.html#a392346739e5e34021785bb38cb05e14c">UDTAnimInstance::NativeUpdateAnimation</a></div><div class="ttdeci">virtual void NativeUpdateAnimation(float DeltaSeconds) override</div><div class="ttdef"><b>Definition</b> <a href="_d_t_anim_instance_8cpp_source.html#l00021">DTAnimInstance.cpp:21</a></div></div>
-<div class="ttc" id="aclass_u_d_t_anim_instance_html_a7b4b245626234099314612c4ff37c728"><div class="ttname"><a href="class_u_d_t_anim_instance.html#a7b4b245626234099314612c4ff37c728">UDTAnimInstance::GroundDistance</a></div><div class="ttdeci">float GroundDistance</div><div class="ttdef"><b>Definition</b> <a href="#l00022">DTAnimInstance.h:22</a></div></div>
-<div class="ttc" id="aclass_u_d_t_anim_instance_html_ac527274999e9218f64373359387cbb54"><div class="ttname"><a href="class_u_d_t_anim_instance.html#ac527274999e9218f64373359387cbb54">UDTAnimInstance::UDTAnimInstance</a></div><div class="ttdeci">UDTAnimInstance(const FObjectInitializer &amp;ObjectInitializer)</div><div class="ttdef"><b>Definition</b> <a href="_d_t_anim_instance_8cpp_source.html#l00016">DTAnimInstance.cpp:16</a></div></div>
+<div class="ttc" id="aclass_u_d_t_anim_instance_html_a392346739e5e34021785bb38cb05e14c"><div class="ttname"><a href="class_u_d_t_anim_instance.html#a392346739e5e34021785bb38cb05e14c">UDTAnimInstance::NativeUpdateAnimation</a></div><div class="ttdeci">virtual void NativeUpdateAnimation(float DeltaSeconds) override</div><div class="ttdef"><b>Definition</b> <a href="_d_t_anim_instance_8cpp_source.html#l00047">DTAnimInstance.cpp:47</a></div></div>
+<div class="ttc" id="aclass_u_d_t_anim_instance_html_a51b76c72ff9ffe579ff295cf711f218f"><div class="ttname"><a href="class_u_d_t_anim_instance.html#a51b76c72ff9ffe579ff295cf711f218f">UDTAnimInstance::NativeInitializeAnimation</a></div><div class="ttdeci">virtual void NativeInitializeAnimation() override</div><div class="ttdef"><b>Definition</b> <a href="_d_t_anim_instance_8cpp_source.html#l00037">DTAnimInstance.cpp:37</a></div></div>
+<div class="ttc" id="aclass_u_d_t_anim_instance_html_a60d2e70fe38e7c031b50bc2045e197b0"><div class="ttname"><a href="class_u_d_t_anim_instance.html#a60d2e70fe38e7c031b50bc2045e197b0">UDTAnimInstance::InitializeWithAbilitySystem</a></div><div class="ttdeci">virtual void InitializeWithAbilitySystem(UAbilitySystemComponent *ASC)</div><div class="ttdoc">Hooks the tag property map up to the given ASC.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_anim_instance_8cpp_source.html#l00023">DTAnimInstance.cpp:23</a></div></div>
+<div class="ttc" id="aclass_u_d_t_anim_instance_html_a7b4b245626234099314612c4ff37c728"><div class="ttname"><a href="class_u_d_t_anim_instance.html#a7b4b245626234099314612c4ff37c728">UDTAnimInstance::GroundDistance</a></div><div class="ttdeci">float GroundDistance</div><div class="ttdef"><b>Definition</b> <a href="#l00046">DTAnimInstance.h:46</a></div></div>
+<div class="ttc" id="aclass_u_d_t_anim_instance_html_ac527274999e9218f64373359387cbb54"><div class="ttname"><a href="class_u_d_t_anim_instance.html#ac527274999e9218f64373359387cbb54">UDTAnimInstance::UDTAnimInstance</a></div><div class="ttdeci">UDTAnimInstance(const FObjectInitializer &amp;ObjectInitializer)</div><div class="ttdef"><b>Definition</b> <a href="_d_t_anim_instance_8cpp_source.html#l00018">DTAnimInstance.cpp:18</a></div></div>
+<div class="ttc" id="aclass_u_d_t_anim_instance_html_ae9f7e82ea6b573a9584e73d709976d07"><div class="ttname"><a href="class_u_d_t_anim_instance.html#ae9f7e82ea6b573a9584e73d709976d07">UDTAnimInstance::GameplayTagPropertyMap</a></div><div class="ttdeci">FGameplayTagBlueprintPropertyMap GameplayTagPropertyMap</div><div class="ttdoc">Gameplay tags that can be mapped to blueprint variables.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">DTAnimInstance.h:29</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

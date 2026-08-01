@@ -151,30 +151,49 @@ Inheritance diagram for ADTPlayerCharacter:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abe93f5a617a89a3e8a27b5ea4267584a" id="r_abe93f5a617a89a3e8a27b5ea4267584a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abe93f5a617a89a3e8a27b5ea4267584a">ADTPlayerCharacter</a> (const FObjectInitializer &amp;ObjectInitializer=FObjectInitializer::Get())</td></tr>
 <tr class="memitem:ae607e44c05f2394fba4cddd932365a94" id="r_ae607e44c05f2394fba4cddd932365a94"><td class="memItemLeft">virtual <a class="el" href="class_u_d_t_targeting_component.html">UDTTargetingComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae607e44c05f2394fba4cddd932365a94">GetTargetingComponent</a> () const</td></tr>
-<tr class="memitem:a963fa6a3afb33cbc27d7c61fdb614a6d" id="r_a963fa6a3afb33cbc27d7c61fdb614a6d"><td class="memItemLeft">virtual UGSCAbilityInputBindingComponent *&#160;</td><td class="memItemRight"><a class="el" href="#a963fa6a3afb33cbc27d7c61fdb614a6d">GetAbilityInputBindingComponent</a> () const</td></tr>
-<tr class="memitem:ae50ec79b01850a870c6e6dda3dffcf7b" id="r_ae50ec79b01850a870c6e6dda3dffcf7b"><td class="memItemLeft">UModularMeshComponent *&#160;</td><td class="memItemRight"><a class="el" href="#ae50ec79b01850a870c6e6dda3dffcf7b">GetModularMeshComponent</a> () const</td></tr>
-<tr class="memdesc:ae50ec79b01850a870c6e6dda3dffcf7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modular mesh component.  <br /></td></tr>
+<tr class="memitem:a4774bed45b4611ec4475b86bed0ffa15" id="r_a4774bed45b4611ec4475b86bed0ffa15"><td class="memItemLeft">URPGCameraComponent *&#160;</td><td class="memItemRight"><a class="el" href="#a4774bed45b4611ec4475b86bed0ffa15">GetRPGCameraComponent</a> () const</td></tr>
+<tr class="memdesc:a4774bed45b4611ec4475b86bed0ffa15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the top-down camera boom.  <br /></td></tr>
+<tr class="memitem:a5a4f94673a1848276e52c9a4cdd5166a" id="r_a5a4f94673a1848276e52c9a4cdd5166a"><td class="memItemLeft">UOcclusionFadeComponent *&#160;</td><td class="memItemRight"><a class="el" href="#a5a4f94673a1848276e52c9a4cdd5166a">GetOcclusionFadeComponent</a> () const</td></tr>
+<tr class="memdesc:a5a4f94673a1848276e52c9a4cdd5166a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the view-obstruction fade component.  <br /></td></tr>
+<tr class="memitem:a083e39281d2e1fb11aec0cb4b34cc092" id="r_a083e39281d2e1fb11aec0cb4b34cc092"><td class="memItemLeft"><a class="el" href="class_u_d_t_customizable_mesh_component.html">UDTCustomizableMeshComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a083e39281d2e1fb11aec0cb4b34cc092">GetCustomizableMeshComponent</a> () const</td></tr>
+<tr class="memdesc:a083e39281d2e1fb11aec0cb4b34cc092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the customizable (Mutable) mesh component.  <br /></td></tr>
 <tr class="memitem:a2572373f3cfad366894c86bd009ca109" id="r_a2572373f3cfad366894c86bd009ca109"><td class="memItemLeft">UMotionWarpingComponent *&#160;</td><td class="memItemRight"><a class="el" href="#a2572373f3cfad366894c86bd009ca109">GetMotionWarpingComponent</a> () const</td></tr>
 <tr class="memdesc:a2572373f3cfad366894c86bd009ca109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Motion Warping Component.  <br /></td></tr>
 <tr class="memitem:ac7954386abe15b6c1d8e7ffd44484546" id="r_ac7954386abe15b6c1d8e7ffd44484546"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="#ac7954386abe15b6c1d8e7ffd44484546">GetAimGroundLocation</a> (float MaxDistance=0.0f) const</td></tr>
 <tr class="memdesc:ac7954386abe15b6c1d8e7ffd44484546"><td class="mdescLeft">&#160;</td><td class="mdescRight">World-space ground aim point for cast-at-location targeting.  <br /></td></tr>
-<tr class="memitem:ac4e1127b9ab7358f0e2b257edd8a8d86" id="r_ac4e1127b9ab7358f0e2b257edd8a8d86"><td class="memItemLeft">UGSCLinkAnimLayersComponent *&#160;</td><td class="memItemRight"><a class="el" href="#ac4e1127b9ab7358f0e2b257edd8a8d86">GetLinkAnimLayersComponent</a> () const</td></tr>
-<tr class="memdesc:ac4e1127b9ab7358f0e2b257edd8a8d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Link Anim Layers Component.  <br /></td></tr>
+<tr class="memitem:a354513b78c06e87e463c84204b02ff0d" id="r_a354513b78c06e87e463c84204b02ff0d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a354513b78c06e87e463c84204b02ff0d">IsUsingMouseAim</a> () const</td></tr>
+<tr class="memdesc:a354513b78c06e87e463c84204b02ff0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">True while the player is aiming with the mouse (false = gamepad).  <br /></td></tr>
+<tr class="memitem:a20eacd8ef959920c654cbb63c364dd94" id="r_a20eacd8ef959920c654cbb63c364dd94"><td class="memItemLeft"><a class="el" href="class_u_d_t_link_anim_layers_component.html">UDTLinkAnimLayersComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a20eacd8ef959920c654cbb63c364dd94">GetLinkAnimLayersComponent</a> () const</td></tr>
+<tr class="memdesc:a20eacd8ef959920c654cbb63c364dd94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Link Anim Layers Component.  <br /></td></tr>
 <tr class="memitem:a4963d6ea650942e021bda91270a66d94" id="r_a4963d6ea650942e021bda91270a66d94"><td class="memItemLeft">virtual UAbilitySystemComponent *&#160;</td><td class="memItemRight"><a class="el" href="#a4963d6ea650942e021bda91270a66d94">GetAbilitySystemComponent</a> () const override</td></tr>
+<tr class="memitem:aea7cdf7b60534cb3bca31dc96b95b04a" id="r_aea7cdf7b60534cb3bca31dc96b95b04a"><td class="memItemLeft">virtual UAnimMontage *&#160;</td><td class="memItemRight"><a class="el" href="#aea7cdf7b60534cb3bca31dc96b95b04a">GetHitReactMontage</a> (<a class="el" href="_d_t_character_data_8h.html#aa04e94846bfcc66be0dba629403fcfec">EDTHitReactTier</a> Tier, <a class="el" href="_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07">EDTHitDirection</a> Direction) const override</td></tr>
+<tr class="memdesc:aea7cdf7b60534cb3bca31dc96b95b04a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefers the per-weapon hit-react override set.  <br /></td></tr>
 <tr class="memitem:a89117a998a650fe16465d86fb22f97a8" id="r_a89117a998a650fe16465d86fb22f97a8"><td class="memItemLeft">virtual UInventoryComponent *&#160;</td><td class="memItemRight"><a class="el" href="#a89117a998a650fe16465d86fb22f97a8">GetInventoryComponent_Implementation</a> () const override</td></tr>
 <tr class="memitem:ae751827866b7ab80ac563fd5df06d7de" id="r_ae751827866b7ab80ac563fd5df06d7de"><td class="memItemLeft">virtual UInventoryEquipmentComponent *&#160;</td><td class="memItemRight"><a class="el" href="#ae751827866b7ab80ac563fd5df06d7de">GetEquipmentComponent_Implementation</a> () const override</td></tr>
+<tr class="memitem:ab22db57574aeaa029eee27de79e3b84a" id="r_ab22db57574aeaa029eee27de79e3b84a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab22db57574aeaa029eee27de79e3b84a">HandleDeath_Implementation</a> (const <a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a> &amp;HitInfo) override</td></tr>
+<tr class="memitem:a8f96e2e70aed148508a8b32c72b32b82" id="r_a8f96e2e70aed148508a8b32c72b32b82"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8f96e2e70aed148508a8b32c72b32b82">BeginPlay</a> () override</td></tr>
+<tr class="memitem:a1b4c21b60e592cafa1ccef6959bbd30b" id="r_a1b4c21b60e592cafa1ccef6959bbd30b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1b4c21b60e592cafa1ccef6959bbd30b">Tick</a> (float DeltaTime) override</td></tr>
+<tr class="memitem:adebede47b8357a64b5094602748ed5b6" id="r_adebede47b8357a64b5094602748ed5b6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#adebede47b8357a64b5094602748ed5b6">EndPlay</a> (EEndPlayReason::Type EndPlayReason) override</td></tr>
+<tr class="memitem:a4d69dd6f6589a6c6829d788b7b317179" id="r_a4d69dd6f6589a6c6829d788b7b317179"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4d69dd6f6589a6c6829d788b7b317179">SetupPlayerInputComponent</a> (class UInputComponent *PlayerInputComponent) override</td></tr>
+<tr class="memitem:a16a78b5a385c17788467d30ee91f9c6f" id="r_a16a78b5a385c17788467d30ee91f9c6f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a16a78b5a385c17788467d30ee91f9c6f">PossessedBy</a> (AController *NewController) override</td></tr>
+<tr class="memitem:a52f417f9584fca4e4dac586ec89afb04" id="r_a52f417f9584fca4e4dac586ec89afb04"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a52f417f9584fca4e4dac586ec89afb04">OnRep_PlayerState</a> () override</td></tr>
+<tr class="memitem:acc30f4af498a3969c676b5ad237b57e9" id="r_acc30f4af498a3969c676b5ad237b57e9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#acc30f4af498a3969c676b5ad237b57e9">NotifyControllerChanged</a> () override</td></tr>
 <tr class="inherit_header pub_methods_class_a_d_t_character"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_a_d_t_character.html">ADTCharacter</a></td></tr>
 <tr class="memitem:a31d82a1866632360f41ba4e02947d9fb pub_methods_class_a_d_t_character" id="r_a31d82a1866632360f41ba4e02947d9fb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a31d82a1866632360f41ba4e02947d9fb">ADTCharacter</a> (const FObjectInitializer &amp;ObjectInitializer=FObjectInitializer::Get())</td></tr>
 <tr class="memitem:a92663793936f0ef1ca529291aec05a73 pub_methods_class_a_d_t_character" id="r_a92663793936f0ef1ca529291aec05a73"><td class="memItemLeft"><a class="el" href="class_u_d_t_pawn_extension_component.html">UDTPawnExtensionComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a92663793936f0ef1ca529291aec05a73">GetPawnExtensionComponent</a> () const</td></tr>
 <tr class="memdesc:a92663793936f0ef1ca529291aec05a73 pub_methods_class_a_d_t_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Pawn Extension Component.  <br /></td></tr>
 <tr class="memitem:a35d345d9bf18756b1d3f08e18098f367 pub_methods_class_a_d_t_character" id="r_a35d345d9bf18756b1d3f08e18098f367"><td class="memItemLeft">FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a35d345d9bf18756b1d3f08e18098f367">GetCharacterTags</a> () const</td></tr>
+<tr class="memitem:add7e79430f6163f37ae072ae5aabe7a8 pub_methods_class_a_d_t_character" id="r_add7e79430f6163f37ae072ae5aabe7a8"><td class="memItemLeft"><a class="el" href="class_u_d_t_character_data.html">UDTCharacterData</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#add7e79430f6163f37ae072ae5aabe7a8">GetCharacterData</a> () const</td></tr>
 <tr class="memitem:a523a185606cbdb6cd3e489bf074bd3be pub_methods_class_a_d_t_character" id="r_a523a185606cbdb6cd3e489bf074bd3be"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a523a185606cbdb6cd3e489bf074bd3be">GetSpawnLocation</a> () const</td></tr>
 <tr class="memitem:a706e575f30b44906b3e7f56956827b4a pub_methods_class_a_d_t_character" id="r_a706e575f30b44906b3e7f56956827b4a"><td class="memItemLeft">virtual <a class="el" href="class_u_d_t_ability_core_component.html">UDTAbilityCoreComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a706e575f30b44906b3e7f56956827b4a">GetAbilityCoreComponent_Implementation</a> () const override</td></tr>
-<tr class="memitem:a0aaea4cfce74e376cd9dfae73752e07e pub_methods_class_a_d_t_character" id="r_a0aaea4cfce74e376cd9dfae73752e07e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a0aaea4cfce74e376cd9dfae73752e07e">IsDead_Implementation</a> () const override</td></tr>
+<tr class="memitem:a0aaea4cfce74e376cd9dfae73752e07e pub_methods_class_a_d_t_character" id="r_a0aaea4cfce74e376cd9dfae73752e07e"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a0aaea4cfce74e376cd9dfae73752e07e">IsDead_Implementation</a> () const override</td></tr>
 <tr class="memitem:a2ffcfb9bd4f2ac9fc5ff8617bea0656e pub_methods_class_a_d_t_character" id="r_a2ffcfb9bd4f2ac9fc5ff8617bea0656e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a2ffcfb9bd4f2ac9fc5ff8617bea0656e">SetGenericTeamId</a> (const FGenericTeamId &amp;TeamID) override</td></tr>
 <tr class="memitem:a12d84a720a75d2ce832bd9813683b666 pub_methods_class_a_d_t_character" id="r_a12d84a720a75d2ce832bd9813683b666"><td class="memItemLeft">virtual FGenericTeamId&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a12d84a720a75d2ce832bd9813683b666">GetGenericTeamId</a> () const override</td></tr>
+<tr class="memitem:aa39b1c37c059fca8ae84f4cd44d2dbc4 pub_methods_class_a_d_t_character" id="r_aa39b1c37c059fca8ae84f4cd44d2dbc4"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#aa39b1c37c059fca8ae84f4cd44d2dbc4">PreInitializeComponents</a> () override</td></tr>
 <tr class="memitem:abf6e1961b2bbd90b410a7387a2f26380 pub_methods_class_a_d_t_character" id="r_abf6e1961b2bbd90b410a7387a2f26380"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#abf6e1961b2bbd90b410a7387a2f26380">PostInitProperties</a> () override</td></tr>
 <tr class="memitem:a6fd9c026cf9b6284f8dda1afd31cbf23 pub_methods_class_a_d_t_character" id="r_a6fd9c026cf9b6284f8dda1afd31cbf23"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a6fd9c026cf9b6284f8dda1afd31cbf23">UnPossessed</a> () override</td></tr>
+<tr class="memitem:a8abf2871e04505691b59b839ba2c40ae pub_methods_class_a_d_t_character" id="r_a8abf2871e04505691b59b839ba2c40ae"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a8abf2871e04505691b59b839ba2c40ae">OnRep_Controller</a> () override</td></tr>
+<tr class="memitem:a010e5af9ec635960a76ad08944102a6f pub_methods_class_a_d_t_character" id="r_a010e5af9ec635960a76ad08944102a6f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a010e5af9ec635960a76ad08944102a6f">GetLifetimeReplicatedProps</a> (TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
 <tr class="memitem:a1b5984b1ba535db0d85498de5f92d831 pub_methods_class_a_d_t_character" id="r_a1b5984b1ba535db0d85498de5f92d831"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a1b5984b1ba535db0d85498de5f92d831">GetOwnedGameplayTags</a> (FGameplayTagContainer &amp;OutTagContainer) const override</td></tr>
 <tr class="memitem:a7670bd7d9b1b138b8e568db8374c7fcb pub_methods_class_a_d_t_character" id="r_a7670bd7d9b1b138b8e568db8374c7fcb"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a7670bd7d9b1b138b8e568db8374c7fcb">HasMatchingGameplayTag</a> (FGameplayTag InTagToCheck) const override</td></tr>
 <tr class="memitem:abce55a527ca6530278cba5b5426c632c pub_methods_class_a_d_t_character" id="r_abce55a527ca6530278cba5b5426c632c"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#abce55a527ca6530278cba5b5426c632c">HasAllMatchingGameplayTags</a> (const FGameplayTagContainer &amp;InTagContainer) const override</td></tr>
@@ -193,43 +212,36 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a947a52b2f1d818d1a36bfef5bde45206" id="r_a947a52b2f1d818d1a36bfef5bde45206"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a947a52b2f1d818d1a36bfef5bde45206">Move</a> (const FInputActionValue &amp;Value)</td></tr>
 <tr class="memitem:a385cca2b695562eeae793bab8470555d" id="r_a385cca2b695562eeae793bab8470555d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a385cca2b695562eeae793bab8470555d">StickAim</a> (const FInputActionValue &amp;Value)</td></tr>
 <tr class="memitem:a0bfc5ba3d6e923ddf1f7bde45c35fd64" id="r_a0bfc5ba3d6e923ddf1f7bde45c35fd64"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0bfc5ba3d6e923ddf1f7bde45c35fd64">MouseAim</a> (const FInputActionValue &amp;Value)</td></tr>
-<tr class="memitem:a8f96e2e70aed148508a8b32c72b32b82" id="r_a8f96e2e70aed148508a8b32c72b32b82"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8f96e2e70aed148508a8b32c72b32b82">BeginPlay</a> () override</td></tr>
-<tr class="memitem:a1b4c21b60e592cafa1ccef6959bbd30b" id="r_a1b4c21b60e592cafa1ccef6959bbd30b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1b4c21b60e592cafa1ccef6959bbd30b">Tick</a> (float DeltaTime) override</td></tr>
-<tr class="memitem:adebede47b8357a64b5094602748ed5b6" id="r_adebede47b8357a64b5094602748ed5b6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#adebede47b8357a64b5094602748ed5b6">EndPlay</a> (EEndPlayReason::Type EndPlayReason) override</td></tr>
-<tr class="memitem:a4d69dd6f6589a6c6829d788b7b317179" id="r_a4d69dd6f6589a6c6829d788b7b317179"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4d69dd6f6589a6c6829d788b7b317179">SetupPlayerInputComponent</a> (class UInputComponent *PlayerInputComponent) override</td></tr>
-<tr class="memitem:a16a78b5a385c17788467d30ee91f9c6f" id="r_a16a78b5a385c17788467d30ee91f9c6f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a16a78b5a385c17788467d30ee91f9c6f">PossessedBy</a> (AController *NewController) override</td></tr>
-<tr class="memitem:a52f417f9584fca4e4dac586ec89afb04" id="r_a52f417f9584fca4e4dac586ec89afb04"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a52f417f9584fca4e4dac586ec89afb04">OnRep_PlayerState</a> () override</td></tr>
-<tr class="memitem:a2bcfda891c9481149c92e3b2b9c51a0b" id="r_a2bcfda891c9481149c92e3b2b9c51a0b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2bcfda891c9481149c92e3b2b9c51a0b">PreInitializeComponents</a> () override</td></tr>
-<tr class="memitem:acc30f4af498a3969c676b5ad237b57e9" id="r_acc30f4af498a3969c676b5ad237b57e9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#acc30f4af498a3969c676b5ad237b57e9">NotifyControllerChanged</a> () override</td></tr>
-<tr class="memitem:a731a69e92edc85882144fd358e78299b" id="r_a731a69e92edc85882144fd358e78299b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a731a69e92edc85882144fd358e78299b">HandleDeath_Implementation</a> () override</td></tr>
+<tr class="memitem:aa0862d151ccd45cc75acad10e0bc25fb" id="r_aa0862d151ccd45cc75acad10e0bc25fb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa0862d151ccd45cc75acad10e0bc25fb">CameraZoom</a> (const FInputActionValue &amp;Value)</td></tr>
 <tr class="memitem:a0935da37ee331a35910f0d2fd675f61a" id="r_a0935da37ee331a35910f0d2fd675f61a"><td class="memItemLeft">virtual FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="#a0935da37ee331a35910f0d2fd675f61a">BP_GetOwnedGameplayTags</a> () const override</td></tr>
 <tr class="inherit_header pro_methods_class_a_d_t_character"><td colspan="2">Protected Member Functions inherited from <a class="el" href="class_a_d_t_character.html">ADTCharacter</a></td></tr>
-<tr class="memitem:ad0fde30a166e80072eae2936e0b9187e pro_methods_class_a_d_t_character" id="r_ad0fde30a166e80072eae2936e0b9187e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#ad0fde30a166e80072eae2936e0b9187e">HandleDeath</a> ()</td></tr>
+<tr class="memitem:aa449457ea0c66a6e4e65baf4f39b37f9 pro_methods_class_a_d_t_character" id="r_aa449457ea0c66a6e4e65baf4f39b37f9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#aa449457ea0c66a6e4e65baf4f39b37f9">HandleDeath</a> (const <a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a> &amp;HitInfo)</td></tr>
+<tr class="memdesc:aa449457ea0c66a6e4e65baf4f39b37f9 pro_methods_class_a_d_t_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bound to AbilityCoreComponent-&gt;OnDeath.  <br /></td></tr>
 <tr class="memitem:a15c8e6a6558ce53d400e716a2462ac71 pro_methods_class_a_d_t_character" id="r_a15c8e6a6558ce53d400e716a2462ac71"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a15c8e6a6558ce53d400e716a2462ac71">OnRep_Team</a> ()</td></tr>
-<tr class="memitem:a8abf2871e04505691b59b839ba2c40ae pro_methods_class_a_d_t_character" id="r_a8abf2871e04505691b59b839ba2c40ae"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a8abf2871e04505691b59b839ba2c40ae">OnRep_Controller</a> () override</td></tr>
-<tr class="memitem:a010e5af9ec635960a76ad08944102a6f pro_methods_class_a_d_t_character" id="r_a010e5af9ec635960a76ad08944102a6f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a010e5af9ec635960a76ad08944102a6f">GetLifetimeReplicatedProps</a> (TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
+<tr class="memitem:adabf79a86df1816c929a312f7f5e8738 pro_methods_class_a_d_t_character" id="r_adabf79a86df1816c929a312f7f5e8738"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#adabf79a86df1816c929a312f7f5e8738">HandleAbilitySystemInitialized</a> ()</td></tr>
+<tr class="memdesc:adabf79a86df1816c929a312f7f5e8738 pro_methods_class_a_d_t_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called once the ASC is initialized (fires on server and clients) via PawnExtComponent's OnAbilitySystemInitialized.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a2d2b439cfe46aa3e5846ebfafc9cbf0a" id="r_a2d2b439cfe46aa3e5846ebfafc9cbf0a"><td class="memItemLeft">TObjectPtr&lt; USpringArmComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2d2b439cfe46aa3e5846ebfafc9cbf0a">SpringArm</a></td></tr>
-<tr class="memdesc:a2d2b439cfe46aa3e5846ebfafc9cbf0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera boom spring arm.  <br /></td></tr>
+<tr class="memitem:a435e05a92c6d31b4608871a07117551e" id="r_a435e05a92c6d31b4608871a07117551e"><td class="memItemLeft">TObjectPtr&lt; URPGCameraComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a435e05a92c6d31b4608871a07117551e">SpringArm</a></td></tr>
+<tr class="memdesc:a435e05a92c6d31b4608871a07117551e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera boom spring arm.  <br /></td></tr>
 <tr class="memitem:a368875bdb1a1159eb7e2ec3eed5a304e" id="r_a368875bdb1a1159eb7e2ec3eed5a304e"><td class="memItemLeft">TObjectPtr&lt; UCameraComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a368875bdb1a1159eb7e2ec3eed5a304e">Camera</a></td></tr>
 <tr class="memdesc:a368875bdb1a1159eb7e2ec3eed5a304e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Player Camera.  <br /></td></tr>
+<tr class="memitem:af459fe9b7bd2dddd0f39b63ab48c5e82" id="r_af459fe9b7bd2dddd0f39b63ab48c5e82"><td class="memItemLeft">TObjectPtr&lt; UOcclusionFadeComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af459fe9b7bd2dddd0f39b63ab48c5e82">OcclusionFadeComponent</a></td></tr>
+<tr class="memdesc:af459fe9b7bd2dddd0f39b63ab48c5e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feeds the MPC cutout materials the camera-relative values they need each frame.  <br /></td></tr>
 <tr class="memitem:a90a0c76afed6beec177caa7fa325ccb6" id="r_a90a0c76afed6beec177caa7fa325ccb6"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_targeting_component.html">UDTTargetingComponent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a90a0c76afed6beec177caa7fa325ccb6">TargetingComponent</a></td></tr>
 <tr class="memdesc:a90a0c76afed6beec177caa7fa325ccb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Targeting Component.  <br /></td></tr>
-<tr class="memitem:a499e8aa76547fdf609901da23936e71a" id="r_a499e8aa76547fdf609901da23936e71a"><td class="memItemLeft">TObjectPtr&lt; UModularMeshComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a499e8aa76547fdf609901da23936e71a">ModularMeshComponent</a></td></tr>
+<tr class="memitem:a090312f73b55214f578fac64448bf92a" id="r_a090312f73b55214f578fac64448bf92a"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_customizable_mesh_component.html">UDTCustomizableMeshComponent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a090312f73b55214f578fac64448bf92a">CustomizableMeshComponent</a></td></tr>
 <tr class="memitem:a21b9b7b7d5b512327f2ba1230755e761" id="r_a21b9b7b7d5b512327f2ba1230755e761"><td class="memItemLeft">TObjectPtr&lt; UMotionWarpingComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a21b9b7b7d5b512327f2ba1230755e761">MotionWarpingComponent</a></td></tr>
-<tr class="memitem:a0b27d37512f750758079ddafad536602" id="r_a0b27d37512f750758079ddafad536602"><td class="memItemLeft">TObjectPtr&lt; UGSCLinkAnimLayersComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0b27d37512f750758079ddafad536602">LinkAnimLayersComponent</a></td></tr>
-<tr class="memitem:a902af540d221f8be980e79b303bb055c" id="r_a902af540d221f8be980e79b303bb055c"><td class="memItemLeft">TObjectPtr&lt; UGSCAbilityInputBindingComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a902af540d221f8be980e79b303bb055c">AbilityInputBindingComponent</a></td></tr>
-<tr class="memdesc:a902af540d221f8be980e79b303bb055c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input Binding Component.  <br /></td></tr>
+<tr class="memitem:a75dc8fbaea863ecc7aef1ae4d1c40fb7" id="r_a75dc8fbaea863ecc7aef1ae4d1c40fb7"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_link_anim_layers_component.html">UDTLinkAnimLayersComponent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a75dc8fbaea863ecc7aef1ae4d1c40fb7">LinkAnimLayersComponent</a></td></tr>
 <tr class="memitem:ac413db6613af02e4cd2fa52ee80e6338" id="r_ac413db6613af02e4cd2fa52ee80e6338"><td class="memItemLeft">UInputAction *&#160;</td><td class="memItemRight"><a class="el" href="#ac413db6613af02e4cd2fa52ee80e6338">MoveAction</a></td></tr>
 <tr class="memdesc:ac413db6613af02e4cd2fa52ee80e6338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Movement input action.  <br /></td></tr>
 <tr class="memitem:a74f8c697820303ef38256158f353f0cc" id="r_a74f8c697820303ef38256158f353f0cc"><td class="memItemLeft">UInputAction *&#160;</td><td class="memItemRight"><a class="el" href="#a74f8c697820303ef38256158f353f0cc">StickAimAction</a></td></tr>
 <tr class="memdesc:a74f8c697820303ef38256158f353f0cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gamepad aim input action.  <br /></td></tr>
 <tr class="memitem:a4ed9154350b6966edd68e8ed2e4f26a4" id="r_a4ed9154350b6966edd68e8ed2e4f26a4"><td class="memItemLeft">UInputAction *&#160;</td><td class="memItemRight"><a class="el" href="#a4ed9154350b6966edd68e8ed2e4f26a4">MouseAimAction</a></td></tr>
 <tr class="memdesc:a4ed9154350b6966edd68e8ed2e4f26a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse aim input action.  <br /></td></tr>
-<tr class="memitem:ad2e8e865205429c5fe6aef73da889dbd" id="r_ad2e8e865205429c5fe6aef73da889dbd"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ad2e8e865205429c5fe6aef73da889dbd">AimRotationInterpSpeed</a> = 10.0f</td></tr>
-<tr class="memdesc:ad2e8e865205429c5fe6aef73da889dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed to blend between our current rotation and the target aim rotation.  <br /></td></tr>
+<tr class="memitem:a7c2bea57b9946a91244d83191bc6c1b6" id="r_a7c2bea57b9946a91244d83191bc6c1b6"><td class="memItemLeft">UInputAction *&#160;</td><td class="memItemRight"><a class="el" href="#a7c2bea57b9946a91244d83191bc6c1b6">CameraZoomAction</a></td></tr>
+<tr class="memdesc:a7c2bea57b9946a91244d83191bc6c1b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera zoom input action (mouse wheel / gamepad axis).  <br /></td></tr>
 <tr class="memitem:a8e868d645d66bf60e26b457c50cdfc78" id="r_a8e868d645d66bf60e26b457c50cdfc78"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a8e868d645d66bf60e26b457c50cdfc78">DefaultAimDistance</a> = 800.0f</td></tr>
 <tr class="memdesc:a8e868d645d66bf60e26b457c50cdfc78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance ahead of the character used for gamepad ground-aim when no max distance is supplied.  <br /></td></tr>
 <tr class="memitem:ad84606cd19be6ba8e675854033eb3f8b" id="r_ad84606cd19be6ba8e675854033eb3f8b"><td class="memItemLeft">TEnumAsByte&lt; ECollisionChannel &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad84606cd19be6ba8e675854033eb3f8b">AimGroundTraceChannel</a> = ECC_Visibility</td></tr>
@@ -249,6 +261,7 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a1115ba0e185d44c28d09a5dbfb3956c2 pro_attribs_class_a_d_t_character" id="r_a1115ba0e185d44c28d09a5dbfb3956c2"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_pawn_extension_component.html">UDTPawnExtensionComponent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a1115ba0e185d44c28d09a5dbfb3956c2">PawnExtComponent</a></td></tr>
 <tr class="memitem:a732581f8d38e35971282c5a09038cbf2 pro_attribs_class_a_d_t_character" id="r_a732581f8d38e35971282c5a09038cbf2"><td class="memItemLeft">FGenericTeamId&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a732581f8d38e35971282c5a09038cbf2">TeamId</a> = FGenericTeamId(<a class="el" href="_data_types_8h.html#a8cfa90fbda3ffcea160c25261e8ee0a9">DT_TEAM_NEUTRAL</a>)</td></tr>
 <tr class="memitem:addc28c8657bf577abe931975725ddd7e pro_attribs_class_a_d_t_character" id="r_addc28c8657bf577abe931975725ddd7e"><td class="memItemLeft">FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#addc28c8657bf577abe931975725ddd7e">CharacterTags</a></td></tr>
+<tr class="memitem:ab9dbdef518e482af69d42271d4559fda pro_attribs_class_a_d_t_character" id="r_ab9dbdef518e482af69d42271d4559fda"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_character_data.html">UDTCharacterData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#ab9dbdef518e482af69d42271d4559fda">CharacterData</a></td></tr>
 <tr class="memitem:ac95435e83f3ccf43976a7979c128cbd9 pro_attribs_class_a_d_t_character" id="r_ac95435e83f3ccf43976a7979c128cbd9"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#ac95435e83f3ccf43976a7979c128cbd9">SpawnLocation</a></td></tr>
 <tr class="memitem:a50646ae2ff885a6d130bf8da62f2f02a pro_attribs_class_a_d_t_character" id="r_a50646ae2ff885a6d130bf8da62f2f02a"><td class="memItemLeft"><a class="el" href="struct_f_death_settings.html">FDeathSettings</a>&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a50646ae2ff885a6d130bf8da62f2f02a">DeathSettings</a></td></tr>
 </table><table class="memberdecls">
@@ -260,7 +273,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base Player character class for Dark Tower. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00022">22</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00025">25</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abe93f5a617a89a3e8a27b5ea4267584a" name="abe93f5a617a89a3e8a27b5ea4267584a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abe93f5a617a89a3e8a27b5ea4267584a">&#9670;&#160;</a></span>ADTPlayerCharacter()</h2>
@@ -277,9 +290,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00030">30</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00032">32</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00090">AbilityInputBindingComponent</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00073">Camera</a>, <a class="el" href="_data_types_8h_source.html#l00013">DT_TEAM_PLAYER</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00086">LinkAnimLayersComponent</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00080">ModularMeshComponent</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00083">MotionWarpingComponent</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00069">SpringArm</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00077">TargetingComponent</a>, and <a class="el" href="_d_t_character_8h_source.html#l00086">ADTCharacter::TeamId</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00100">Camera</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00114">CustomizableMeshComponent</a>, <a class="el" href="_data_types_8h_source.html#l00015">DT_TEAM_PLAYER</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00120">LinkAnimLayersComponent</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00117">MotionWarpingComponent</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00107">OcclusionFadeComponent</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00096">SpringArm</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00111">TargetingComponent</a>, and <a class="el" href="_d_t_character_8h_source.html#l00098">ADTCharacter::TeamId</a>.</p>
 
 </div>
 </div>
@@ -302,14 +315,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="class_a_d_t_character.html#af124710122d91fb3afc1786afac938aa">ADTCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00077">77</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00084">84</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
 </div>
 </div>
@@ -338,7 +351,38 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_a_d_t_character.html#a274746bb9bdf67ea6dc712dc72ad8f76">ADTCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00102">102</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00108">108</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa0862d151ccd45cc75acad10e0bc25fb" name="aa0862d151ccd45cc75acad10e0bc25fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0862d151ccd45cc75acad10e0bc25fb">&#9670;&#160;</a></span>CameraZoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerCharacter::CameraZoom </td>
+          <td>(</td>
+          <td class="paramtype">const FInputActionValue &amp;</td>          <td class="paramname"><span class="paramname"><em>Value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00174">174</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00096">SpringArm</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00143">SetupPlayerInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -369,11 +413,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00205">205</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00216">216</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00118">AimAngle</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00125">bUsingMouse</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00151">ADTCharacter::HasMatchingGameplayTag()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00122">PlayerController</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00148">AimAngle</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00155">bUsingMouse</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00152">PlayerController</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00160">StickAim()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00167">StickAim()</a>.</p>
 
 </div>
 </div>
@@ -404,11 +448,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00181">181</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00192">192</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00073">Camera</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00151">ADTCharacter::HasMatchingGameplayTag()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00134">LastMoveInput</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00100">Camera</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00163">ADTCharacter::HasMatchingGameplayTag()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00164">LastMoveInput</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00151">Move()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00160">Move()</a>.</p>
 
 </div>
 </div>
@@ -430,45 +474,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="class_a_d_t_character.html#a42352bdbb4371a8f46247be09df0c6d2">ADTCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00082">82</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a963fa6a3afb33cbc27d7c61fdb614a6d" name="a963fa6a3afb33cbc27d7c61fdb614a6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a963fa6a3afb33cbc27d7c61fdb614a6d">&#9670;&#160;</a></span>GetAbilityInputBindingComponent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual UGSCAbilityInputBindingComponent * ADTPlayerCharacter::GetAbilityInputBindingComponent </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00033">33</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00090">AbilityInputBindingComponent</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00033">GetAbilityInputBindingComponent()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00033">GetAbilityInputBindingComponent()</a>, and <a class="el" href="_d_t_ability_slot_component_8cpp_source.html#l00415">UDTAbilitySlotComponent::GetInputBindingComponent()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00089">89</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
 </div>
 </div>
@@ -497,11 +510,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_a_d_t_character.html#a0f01130d7b35fb5bd9153bf2632ac779">ADTCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00299">299</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00295">295</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00083">ADTCharacter::PawnExtComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00095">ADTCharacter::PawnExtComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00084">UDTCheatManager::God()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00119">UDTCheatManager::DemiGod()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00084">UDTCheatManager::God()</a>.</p>
 
 </div>
 </div>
@@ -529,11 +542,44 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The aim point on the ground </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00269">269</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00265">265</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00128">CurrentAimLocation</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00158">CurrentAimLocation</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ground_trace_target_actor_8cpp_source.html#l00012">ADTGroundTraceTargetActor::PerformTrace()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ground_trace_target_actor_8cpp_source.html#l00012">ADTGroundTraceTargetActor::PerformTrace()</a>, and <a class="el" href="_interaction_statics_8cpp_source.html#l00099">UInteractionStatics::SelectBestInteractableIndex()</a>.</p>
+
+</div>
+</div>
+<a id="a083e39281d2e1fb11aec0cb4b34cc092" name="a083e39281d2e1fb11aec0cb4b34cc092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a083e39281d2e1fb11aec0cb4b34cc092">&#9670;&#160;</a></span>GetCustomizableMeshComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_customizable_mesh_component.html">UDTCustomizableMeshComponent</a> * ADTPlayerCharacter::GetCustomizableMeshComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the customizable (Mutable) mesh component. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00045">45</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00114">CustomizableMeshComponent</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00045">GetCustomizableMeshComponent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00045">GetCustomizableMeshComponent()</a>.</p>
 
 </div>
 </div>
@@ -560,7 +606,46 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00319">319</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00315">315</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00325">GetHitReactMontage()</a>.</p>
+
+</div>
+</div>
+<a id="aea7cdf7b60534cb3bca31dc96b95b04a" name="aea7cdf7b60534cb3bca31dc96b95b04a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7cdf7b60534cb3bca31dc96b95b04a">&#9670;&#160;</a></span>GetHitReactMontage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UAnimMontage * ADTPlayerCharacter::GetHitReactMontage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_d_t_character_data_8h.html#aa04e94846bfcc66be0dba629403fcfec">EDTHitReactTier</a></td>          <td class="paramname"><span class="paramname"><em>Tier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07">EDTHitDirection</a></td>          <td class="paramname"><span class="paramname"><em>Direction</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prefers the per-weapon hit-react override set. </p>
+
+<p>Reimplemented from <a class="el" href="class_a_d_t_character.html#a6e218917de1d07ede417da116a5b0388">ADTCharacter</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00325">325</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00503">UDTEquipmentComponent::GetActiveWeapon()</a>, <a class="el" href="_d_t_character_8h_source.html#l00044">ADTCharacter::GetCharacterData()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00315">GetEquipmentComponent_Implementation()</a>, and <a class="el" href="_d_t_character_data_8cpp_source.html#l00095">UDTCharacterData::GetHitReactMontageForWeapon()</a>.</p>
 
 </div>
 </div>
@@ -587,12 +672,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00309">309</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00305">305</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ac4e1127b9ab7358f0e2b257edd8a8d86" name="ac4e1127b9ab7358f0e2b257edd8a8d86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4e1127b9ab7358f0e2b257edd8a8d86">&#9670;&#160;</a></span>GetLinkAnimLayersComponent()</h2>
+<a id="a20eacd8ef959920c654cbb63c364dd94" name="a20eacd8ef959920c654cbb63c364dd94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20eacd8ef959920c654cbb63c364dd94">&#9670;&#160;</a></span>GetLinkAnimLayersComponent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -601,7 +686,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">UGSCLinkAnimLayersComponent * ADTPlayerCharacter::GetLinkAnimLayersComponent </td>
+          <td class="memname"><a class="el" href="class_u_d_t_link_anim_layers_component.html">UDTLinkAnimLayersComponent</a> * ADTPlayerCharacter::GetLinkAnimLayersComponent </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -616,44 +701,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the Link Anim Layers Component. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00055">55</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00067">67</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00055">GetLinkAnimLayersComponent()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00086">LinkAnimLayersComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00067">GetLinkAnimLayersComponent()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00120">LinkAnimLayersComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00055">GetLinkAnimLayersComponent()</a>.</p>
-
-</div>
-</div>
-<a id="ae50ec79b01850a870c6e6dda3dffcf7b" name="ae50ec79b01850a870c6e6dda3dffcf7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae50ec79b01850a870c6e6dda3dffcf7b">&#9670;&#160;</a></span>GetModularMeshComponent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">UModularMeshComponent * ADTPlayerCharacter::GetModularMeshComponent </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the modular mesh component. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00037">37</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00037">GetModularMeshComponent()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00080">ModularMeshComponent</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00037">GetModularMeshComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00067">GetLinkAnimLayersComponent()</a>.</p>
 
 </div>
 </div>
@@ -682,11 +734,77 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the Motion Warping Component. </p>
 
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00049">49</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00049">GetMotionWarpingComponent()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00117">MotionWarpingComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00049">GetMotionWarpingComponent()</a>.</p>
+
+</div>
+</div>
+<a id="a5a4f94673a1848276e52c9a4cdd5166a" name="a5a4f94673a1848276e52c9a4cdd5166a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a4f94673a1848276e52c9a4cdd5166a">&#9670;&#160;</a></span>GetOcclusionFadeComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UOcclusionFadeComponent * ADTPlayerCharacter::GetOcclusionFadeComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the view-obstruction fade component. </p>
+
 <p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00041">41</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00041">GetMotionWarpingComponent()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00083">MotionWarpingComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00041">GetOcclusionFadeComponent()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00107">OcclusionFadeComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00041">GetMotionWarpingComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00041">GetOcclusionFadeComponent()</a>.</p>
+
+</div>
+</div>
+<a id="a4774bed45b4611ec4475b86bed0ffa15" name="a4774bed45b4611ec4475b86bed0ffa15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4774bed45b4611ec4475b86bed0ffa15">&#9670;&#160;</a></span>GetRPGCameraComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">URPGCameraComponent * ADTPlayerCharacter::GetRPGCameraComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the top-down camera boom. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00037">37</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00037">GetRPGCameraComponent()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00096">SpringArm</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00037">GetRPGCameraComponent()</a>.</p>
 
 </div>
 </div>
@@ -713,16 +831,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00030">30</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00033">33</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00030">GetTargetingComponent()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00077">TargetingComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00033">GetTargetingComponent()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00111">TargetingComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00030">GetTargetingComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00033">GetTargetingComponent()</a>.</p>
 
 </div>
 </div>
-<a id="a731a69e92edc85882144fd358e78299b" name="a731a69e92edc85882144fd358e78299b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a731a69e92edc85882144fd358e78299b">&#9670;&#160;</a></span>HandleDeath_Implementation()</h2>
+<a id="ab22db57574aeaa029eee27de79e3b84a" name="ab22db57574aeaa029eee27de79e3b84a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22db57574aeaa029eee27de79e3b84a">&#9670;&#160;</a></span>HandleDeath_Implementation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -733,20 +851,54 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void ADTPlayerCharacter::HandleDeath_Implementation </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>HitInfo</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00329">329</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00351">351</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_message_types_8h_source.html#l00255">FDTPlayerDeathMessage::bMortalMode</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00251">FDTPlayerDeathMessage::DeadPlayerState</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00135">FDTVerbMessage::Instigator</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00138">FDTVerbMessage::Target</a>, and <a class="el" href="_d_t_message_types_8h_source.html#l00132">FDTVerbMessage::Verb</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_message_types_8h_source.html#l00257">FDTPlayerDeathMessage::bMortalMode</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00253">FDTPlayerDeathMessage::DeadPlayerState</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00137">FDTVerbMessage::Instigator</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00140">FDTVerbMessage::Target</a>, and <a class="el" href="_d_t_message_types_8h_source.html#l00134">FDTVerbMessage::Verb</a>.</p>
+
+</div>
+</div>
+<a id="a354513b78c06e87e463c84204b02ff0d" name="a354513b78c06e87e463c84204b02ff0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354513b78c06e87e463c84204b02ff0d">&#9670;&#160;</a></span>IsUsingMouseAim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ADTPlayerCharacter::IsUsingMouseAim </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True while the player is aiming with the mouse (false = gamepad). </p>
+<p>Drives device-aware interaction focus. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00063">63</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00155">bUsingMouse</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00063">IsUsingMouseAim()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8h_source.html#l00063">IsUsingMouseAim()</a>, and <a class="el" href="_interaction_statics_8cpp_source.html#l00099">UInteractionStatics::SelectBestInteractableIndex()</a>.</p>
 
 </div>
 </div>
@@ -773,11 +925,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00169">169</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00182">182</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00125">bUsingMouse</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00122">PlayerController</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00155">bUsingMouse</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00152">PlayerController</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00139">SetupPlayerInputComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00143">SetupPlayerInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -804,11 +956,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00151">151</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00160">160</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8cpp_source.html#l00181">DoMove()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8cpp_source.html#l00192">DoMove()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00139">SetupPlayerInputComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00143">SetupPlayerInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -830,14 +982,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00087">87</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00094">94</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00122">PlayerController</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00152">PlayerController</a>.</p>
 
 </div>
 </div>
@@ -859,14 +1011,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00289">289</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00285">285</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00083">ADTCharacter::PawnExtComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00095">ADTCharacter::PawnExtComponent</a>.</p>
 
 </div>
 </div>
@@ -888,47 +1040,16 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="class_a_d_t_character.html#a978389139df334910a27d82416ba405e">ADTCharacter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00095">95</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00101">101</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00083">ADTCharacter::PawnExtComponent</a>.</p>
-
-</div>
-</div>
-<a id="a2bcfda891c9481149c92e3b2b9c51a0b" name="a2bcfda891c9481149c92e3b2b9c51a0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bcfda891c9481149c92e3b2b9c51a0b">&#9670;&#160;</a></span>PreInitializeComponents()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ADTPlayerCharacter::PreInitializeComponents </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_a_d_t_character.html#aa39b1c37c059fca8ae84f4cd44d2dbc4">ADTCharacter</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00066">66</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00080">ModularMeshComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00095">ADTCharacter::PawnExtComponent</a>.</p>
 
 </div>
 </div>
@@ -950,14 +1071,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00139">139</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00143">143</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8cpp_source.html#l00169">MouseAim()</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00102">MouseAimAction</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00151">Move()</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00094">MoveAction</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00160">StickAim()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00098">StickAimAction</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8cpp_source.html#l00174">CameraZoom()</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00136">CameraZoomAction</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00182">MouseAim()</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00132">MouseAimAction</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00160">Move()</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00124">MoveAction</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00167">StickAim()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00128">StickAimAction</a>.</p>
 
 </div>
 </div>
@@ -984,11 +1105,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00160">160</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00167">167</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8cpp_source.html#l00205">DoAim()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8cpp_source.html#l00216">DoAim()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00139">SetupPlayerInputComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00143">SetupPlayerInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -1010,14 +1131,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00107">107</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00113">113</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00118">AimAngle</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00106">AimRotationInterpSpeed</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00125">bUsingMouse</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00128">CurrentAimLocation</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00151">ADTCharacter::HasMatchingGameplayTag()</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00122">PlayerController</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00226">UpdateAimLocation()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00148">AimAngle</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00155">bUsingMouse</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00158">CurrentAimLocation</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00163">ADTCharacter::HasMatchingGameplayTag()</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00152">PlayerController</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00227">UpdateAimLocation()</a>.</p>
 
 </div>
 </div>
@@ -1046,43 +1167,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Recomputes CurrentAimLocation from the active input device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00226">226</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8cpp_source.html#l00227">227</a> of file <a class="el" href="_d_t_player_character_8cpp_source.html">DTPlayerCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00118">AimAngle</a>, <a class="el" href="_d_t_targeting_types_8h_source.html#l00026">AimDirection</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00114">AimGroundTraceChannel</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00125">bUsingMouse</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00128">CurrentAimLocation</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00110">DefaultAimDistance</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00122">PlayerController</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_character_8h_source.html#l00148">AimAngle</a>, <a class="el" href="_d_t_targeting_types_8h_source.html#l00026">AimDirection</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00144">AimGroundTraceChannel</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00155">bUsingMouse</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00158">CurrentAimLocation</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00140">DefaultAimDistance</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00152">PlayerController</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00107">Tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00113">Tick()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a902af540d221f8be980e79b303bb055c" name="a902af540d221f8be980e79b303bb055c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a902af540d221f8be980e79b303bb055c">&#9670;&#160;</a></span>AbilityInputBindingComponent</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TObjectPtr&lt;UGSCAbilityInputBindingComponent&gt; ADTPlayerCharacter::AbilityInputBindingComponent</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Input Binding Component. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00090">90</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00030">ADTPlayerCharacter()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00033">GetAbilityInputBindingComponent()</a>.</p>
-
-</div>
-</div>
 <a id="a52becdcaac385e2ade1e1fd78f1e7e02" name="a52becdcaac385e2ade1e1fd78f1e7e02"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a52becdcaac385e2ade1e1fd78f1e7e02">&#9670;&#160;</a></span>AimAngle</h2>
 
@@ -1105,9 +1198,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Aim Yaw Angle in degrees. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00118">118</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00148">148</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00205">DoAim()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00107">Tick()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00226">UpdateAimLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00216">DoAim()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00113">Tick()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00227">UpdateAimLocation()</a>.</p>
 
 </div>
 </div>
@@ -1133,37 +1226,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Collision channel used to resolve/snap aim points to the ground. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00114">114</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00144">144</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00226">UpdateAimLocation()</a>.</p>
-
-</div>
-</div>
-<a id="ad2e8e865205429c5fe6aef73da889dbd" name="ad2e8e865205429c5fe6aef73da889dbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2e8e865205429c5fe6aef73da889dbd">&#9670;&#160;</a></span>AimRotationInterpSpeed</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float ADTPlayerCharacter::AimRotationInterpSpeed = 10.0f</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Speed to blend between our current rotation and the target aim rotation. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00106">106</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00107">Tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00227">UpdateAimLocation()</a>.</p>
 
 </div>
 </div>
@@ -1189,9 +1254,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>If true, the player is using mouse aim. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00125">125</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00155">155</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00205">DoAim()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00169">MouseAim()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00107">Tick()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00226">UpdateAimLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00216">DoAim()</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00063">IsUsingMouseAim()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00182">MouseAim()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00113">Tick()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00227">UpdateAimLocation()</a>.</p>
 
 </div>
 </div>
@@ -1217,9 +1282,38 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Player Camera. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00073">73</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00100">100</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00030">ADTPlayerCharacter()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00181">DoMove()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00032">ADTPlayerCharacter()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00192">DoMove()</a>.</p>
+
+</div>
+</div>
+<a id="a7c2bea57b9946a91244d83191bc6c1b6" name="a7c2bea57b9946a91244d83191bc6c1b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2bea57b9946a91244d83191bc6c1b6">&#9670;&#160;</a></span>CameraZoomAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UInputAction* ADTPlayerCharacter::CameraZoomAction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Camera zoom input action (mouse wheel / gamepad axis). </p>
+<p>Optional. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00136">136</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00143">SetupPlayerInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -1245,9 +1339,35 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Cached world-space aim point on the ground, refreshed each Tick (cursor for mouse, projected for gamepad). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00128">128</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00158">158</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00269">GetAimGroundLocation()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00107">Tick()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00226">UpdateAimLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00265">GetAimGroundLocation()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00113">Tick()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00227">UpdateAimLocation()</a>.</p>
+
+</div>
+</div>
+<a id="a090312f73b55214f578fac64448bf92a" name="a090312f73b55214f578fac64448bf92a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a090312f73b55214f578fac64448bf92a">&#9670;&#160;</a></span>CustomizableMeshComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_customizable_mesh_component.html">UDTCustomizableMeshComponent</a>&gt; ADTPlayerCharacter::CustomizableMeshComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00114">114</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00032">ADTPlayerCharacter()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00045">GetCustomizableMeshComponent()</a>.</p>
 
 </div>
 </div>
@@ -1273,9 +1393,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Distance ahead of the character used for gamepad ground-aim when no max distance is supplied. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00110">110</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00140">140</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00226">UpdateAimLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00227">UpdateAimLocation()</a>.</p>
 
 </div>
 </div>
@@ -1301,14 +1421,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Last held move input. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00134">134</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00164">164</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00181">DoMove()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00192">DoMove()</a>.</p>
 
 </div>
 </div>
-<a id="a0b27d37512f750758079ddafad536602" name="a0b27d37512f750758079ddafad536602"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b27d37512f750758079ddafad536602">&#9670;&#160;</a></span>LinkAnimLayersComponent</h2>
+<a id="a75dc8fbaea863ecc7aef1ae4d1c40fb7" name="a75dc8fbaea863ecc7aef1ae4d1c40fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75dc8fbaea863ecc7aef1ae4d1c40fb7">&#9670;&#160;</a></span>LinkAnimLayersComponent</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1317,7 +1437,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TObjectPtr&lt;UGSCLinkAnimLayersComponent&gt; ADTPlayerCharacter::LinkAnimLayersComponent</td>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_link_anim_layers_component.html">UDTLinkAnimLayersComponent</a>&gt; ADTPlayerCharacter::LinkAnimLayersComponent</td>
         </tr>
       </table>
   </td>
@@ -1327,35 +1447,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00086">86</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00120">120</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00030">ADTPlayerCharacter()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00055">GetLinkAnimLayersComponent()</a>.</p>
-
-</div>
-</div>
-<a id="a499e8aa76547fdf609901da23936e71a" name="a499e8aa76547fdf609901da23936e71a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a499e8aa76547fdf609901da23936e71a">&#9670;&#160;</a></span>ModularMeshComponent</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TObjectPtr&lt;UModularMeshComponent&gt; ADTPlayerCharacter::ModularMeshComponent</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00030">ADTPlayerCharacter()</a>, <a class="el" href="_d_t_player_character_8h_source.html#l00037">GetModularMeshComponent()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00066">PreInitializeComponents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00032">ADTPlayerCharacter()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00067">GetLinkAnimLayersComponent()</a>.</p>
 
 </div>
 </div>
@@ -1379,9 +1473,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00083">83</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00117">117</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00030">ADTPlayerCharacter()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00041">GetMotionWarpingComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00032">ADTPlayerCharacter()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00049">GetMotionWarpingComponent()</a>.</p>
 
 </div>
 </div>
@@ -1407,9 +1501,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Mouse aim input action. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00102">102</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00132">132</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00139">SetupPlayerInputComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00143">SetupPlayerInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -1435,9 +1529,38 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Movement input action. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00094">94</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00124">124</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00139">SetupPlayerInputComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00143">SetupPlayerInputComponent()</a>.</p>
+
+</div>
+</div>
+<a id="af459fe9b7bd2dddd0f39b63ab48c5e82" name="af459fe9b7bd2dddd0f39b63ab48c5e82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af459fe9b7bd2dddd0f39b63ab48c5e82">&#9670;&#160;</a></span>OcclusionFadeComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UOcclusionFadeComponent&gt; ADTPlayerCharacter::OcclusionFadeComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Feeds the MPC cutout materials the camera-relative values they need each frame. </p>
+<p>Also offers trace-based per-mesh fading, which is left off — the materials handle it. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00107">107</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00032">ADTPlayerCharacter()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00041">GetOcclusionFadeComponent()</a>.</p>
 
 </div>
 </div>
@@ -1463,14 +1586,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Pointer to the player controller assigned to this character. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00122">122</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00152">152</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00205">DoAim()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00169">MouseAim()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00087">NotifyControllerChanged()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00107">Tick()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00226">UpdateAimLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00216">DoAim()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00182">MouseAim()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00094">NotifyControllerChanged()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00113">Tick()</a>, and <a class="el" href="_d_t_player_character_8cpp_source.html#l00227">UpdateAimLocation()</a>.</p>
 
 </div>
 </div>
-<a id="a2d2b439cfe46aa3e5846ebfafc9cbf0a" name="a2d2b439cfe46aa3e5846ebfafc9cbf0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d2b439cfe46aa3e5846ebfafc9cbf0a">&#9670;&#160;</a></span>SpringArm</h2>
+<a id="a435e05a92c6d31b4608871a07117551e" name="a435e05a92c6d31b4608871a07117551e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a435e05a92c6d31b4608871a07117551e">&#9670;&#160;</a></span>SpringArm</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1479,7 +1602,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TObjectPtr&lt;USpringArmComponent&gt; ADTPlayerCharacter::SpringArm</td>
+          <td class="memname">TObjectPtr&lt;URPGCameraComponent&gt; ADTPlayerCharacter::SpringArm</td>
         </tr>
       </table>
   </td>
@@ -1490,10 +1613,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Camera boom spring arm. </p>
+<p>Drives follow, zoom, pitch, yaw and free roam. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00069">69</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00096">96</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00030">ADTPlayerCharacter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00032">ADTPlayerCharacter()</a>, <a class="el" href="_d_t_player_character_8cpp_source.html#l00174">CameraZoom()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00037">GetRPGCameraComponent()</a>.</p>
 
 </div>
 </div>
@@ -1519,9 +1643,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Gamepad aim input action. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00098">98</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00128">128</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00139">SetupPlayerInputComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00143">SetupPlayerInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -1547,9 +1671,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Targeting Component. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00077">77</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_character_8h_source.html#l00111">111</a> of file <a class="el" href="_d_t_player_character_8h_source.html">DTPlayerCharacter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00030">ADTPlayerCharacter()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00030">GetTargetingComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_character_8cpp_source.html#l00032">ADTPlayerCharacter()</a>, and <a class="el" href="_d_t_player_character_8h_source.html#l00033">GetTargetingComponent()</a>.</p>
 
 </div>
 </div>

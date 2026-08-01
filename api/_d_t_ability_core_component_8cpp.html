@@ -135,11 +135,62 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_ability_c
 <code>#include &quot;AbilitySystemBlueprintLibrary.h&quot;</code><br />
 <code>#include &quot;AbilitySystemComponent.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_attribute_set_8h_source.html">AbilitySystem/Attributes/DTAttributeSet.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_d_t_blueprint_library_8h_source.html">Core/DTBlueprintLibrary.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_gameplay_tags_8h_source.html">Core/DTGameplayTags.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_log_channels_8h_source.html">Core/DTLogChannels.h</a>&quot;</code><br />
+<code>#include &quot;GameFramework/Character.h&quot;</code><br />
+<code>#include &quot;Net/UnrealNetwork.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_ability_actor_8h_source.html">World/DTAbilityActor.h</a>&quot;</code><br />
 </div>
 <p><a href="_d_t_ability_core_component_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a422c830089d2bfcd6cddde3097ba4876" id="r_a422c830089d2bfcd6cddde3097ba4876"><td class="memItemLeft">static FVector&#160;</td><td class="memItemRight"><a class="el" href="#a422c830089d2bfcd6cddde3097ba4876">ComputeDamageDirection2D</a> (const AActor *Owner, const AActor *SourceActor, const FHitResult *HitResult)</td></tr>
+<tr class="memdesc:a422c830089d2bfcd6cddde3097ba4876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Planar hit direction (attacker → victim), matching the hit-react/knockback convention.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a422c830089d2bfcd6cddde3097ba4876" name="a422c830089d2bfcd6cddde3097ba4876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a422c830089d2bfcd6cddde3097ba4876">&#9670;&#160;</a></span>ComputeDamageDirection2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FVector ComputeDamageDirection2D </td>
+          <td>(</td>
+          <td class="paramtype">const AActor *</td>          <td class="paramname"><span class="paramname"><em>Owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AActor *</td>          <td class="paramname"><span class="paramname"><em>SourceActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FHitResult *</td>          <td class="paramname"><span class="paramname"><em>HitResult</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Planar hit direction (attacker → victim), matching the hit-react/knockback convention. </p>
+<p>Zero when non-directional. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00276">276</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00318">UDTAbilityCoreComponent::HandleDamageEvent()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

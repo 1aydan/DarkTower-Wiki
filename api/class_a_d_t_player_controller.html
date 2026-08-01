@@ -191,6 +191,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a61cf46c4c7466e4fcd6c027acd250dc2" id="r_a61cf46c4c7466e4fcd6c027acd250dc2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a61cf46c4c7466e4fcd6c027acd250dc2">IsInDefaultLobbyMap</a> () const</td></tr>
 <tr class="memitem:a92ac9bdd19c2bc7c2aabb442e37dba8a" id="r_a92ac9bdd19c2bc7c2aabb442e37dba8a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a92ac9bdd19c2bc7c2aabb442e37dba8a">ShowHostMapSetup</a> (const <a class="el" href="struct_f_d_t_host_request.html">FDTHostRequest</a> &amp;Request)</td></tr>
 <tr class="memitem:a9a82f66b6a64b05f43f12f50ef71cdc8" id="r_a9a82f66b6a64b05f43f12f50ef71cdc8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9a82f66b6a64b05f43f12f50ef71cdc8">OpenDefaultLobbyHostMapSetup</a> ()</td></tr>
+<tr class="memitem:a066a06251916483844c966e808b06037" id="r_a066a06251916483844c966e808b06037"><td class="memItemLeft"><a class="el" href="class_u_d_t_input_config.html">UDTInputConfig</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a066a06251916483844c966e808b06037">GetInputConfig</a> () const</td></tr>
+<tr class="memdesc:a066a06251916483844c966e808b06037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ability input config (InputAction -&gt; InputTag mapping, targeting confirm/cancel).  <br /></td></tr>
+<tr class="memitem:af5de165a9eccecdb3753ca51f9246066" id="r_af5de165a9eccecdb3753ca51f9246066"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af5de165a9eccecdb3753ca51f9246066">EndPlay</a> (const EEndPlayReason::Type EndPlayReason) override</td></tr>
+<tr class="memitem:af79aac6e409a1ca34d85dcc4a7d9eff5" id="r_af79aac6e409a1ca34d85dcc4a7d9eff5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af79aac6e409a1ca34d85dcc4a7d9eff5">OnPossess</a> (APawn *InPawn) override</td></tr>
+<tr class="memitem:afbbc0d558eba26564fcbc176cc1572ce" id="r_afbbc0d558eba26564fcbc176cc1572ce"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afbbc0d558eba26564fcbc176cc1572ce">PreClientTravel</a> (const FString &amp;PendingURL, ETravelType TravelType, bool bIsSeamlessTravel) override</td></tr>
+<tr class="memitem:a80a8134e1319224f8a9a89ac2f943b07" id="r_a80a8134e1319224f8a9a89ac2f943b07"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a80a8134e1319224f8a9a89ac2f943b07">CanRestartPlayer</a> () override</td></tr>
+<tr class="memitem:a20dc8808cc61f062d646c52bbb6fff55" id="r_a20dc8808cc61f062d646c52bbb6fff55"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a20dc8808cc61f062d646c52bbb6fff55">PostProcessInput</a> (const float DeltaTime, const bool bGamePaused) override</td></tr>
+<tr class="memitem:a959dc045cf43117c8553bd33ab210223" id="r_a959dc045cf43117c8553bd33ab210223"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a959dc045cf43117c8553bd33ab210223">AcknowledgePossession</a> (APawn *InPawn) override</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -199,15 +207,21 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:ae1388a63b0b7f3328ae8c34951d903c1" id="r_ae1388a63b0b7f3328ae8c34951d903c1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae1388a63b0b7f3328ae8c34951d903c1">UpdateAudioListenerOverride</a> ()</td></tr>
+<tr class="memdesc:ae1388a63b0b7f3328ae8c34951d903c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anchors the audio listener to the possessed pawn's camera boom focus point instead of the camera itself.  <br /></td></tr>
 <tr class="memitem:a90489b182bd21f000d34461313c76a95" id="r_a90489b182bd21f000d34461313c76a95"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a90489b182bd21f000d34461313c76a95">BeginPlay</a> () override</td></tr>
-<tr class="memitem:af5de165a9eccecdb3753ca51f9246066" id="r_af5de165a9eccecdb3753ca51f9246066"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af5de165a9eccecdb3753ca51f9246066">EndPlay</a> (const EEndPlayReason::Type EndPlayReason) override</td></tr>
 <tr class="memitem:a63db4f07420486d29a7ec1d99d455dee" id="r_a63db4f07420486d29a7ec1d99d455dee"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a63db4f07420486d29a7ec1d99d455dee">SetupInputComponent</a> () override</td></tr>
-<tr class="memitem:af79aac6e409a1ca34d85dcc4a7d9eff5" id="r_af79aac6e409a1ca34d85dcc4a7d9eff5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af79aac6e409a1ca34d85dcc4a7d9eff5">OnPossess</a> (APawn *InPawn) override</td></tr>
-<tr class="memitem:afbbc0d558eba26564fcbc176cc1572ce" id="r_afbbc0d558eba26564fcbc176cc1572ce"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afbbc0d558eba26564fcbc176cc1572ce">PreClientTravel</a> (const FString &amp;PendingURL, ETravelType TravelType, bool bIsSeamlessTravel) override</td></tr>
-<tr class="memitem:a80a8134e1319224f8a9a89ac2f943b07" id="r_a80a8134e1319224f8a9a89ac2f943b07"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a80a8134e1319224f8a9a89ac2f943b07">CanRestartPlayer</a> () override</td></tr>
 <tr class="memitem:a02141b37a2468a8a123c762bd25a2d68" id="r_a02141b37a2468a8a123c762bd25a2d68"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a02141b37a2468a8a123c762bd25a2d68">OnRep_PlayerState</a> () override</td></tr>
 <tr class="memitem:a049a0a7e6c07a9a5dd6ce1d95b2610fe" id="r_a049a0a7e6c07a9a5dd6ce1d95b2610fe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a049a0a7e6c07a9a5dd6ce1d95b2610fe">OnPawnDestroyed</a> (AActor *DestroyedActor)</td></tr>
 <tr class="memdesc:a049a0a7e6c07a9a5dd6ce1d95b2610fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called if the possessed pawn is destroyed.  <br /></td></tr>
+<tr class="memitem:aaf37ac36969672cd391662a0338ccead" id="r_aaf37ac36969672cd391662a0338ccead"><td class="memItemLeft"><a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aaf37ac36969672cd391662a0338ccead">GetDTAbilitySystemComponent</a> () const</td></tr>
+<tr class="memdesc:aaf37ac36969672cd391662a0338ccead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the owning player state's ASC, if available.  <br /></td></tr>
+<tr class="memitem:aab0eb6dc717b5823509d1b289928d062" id="r_aab0eb6dc717b5823509d1b289928d062"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aab0eb6dc717b5823509d1b289928d062">Input_AbilityInputTagPressed</a> (FGameplayTag InputTag)</td></tr>
+<tr class="memdesc:aab0eb6dc717b5823509d1b289928d062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward ability input presses/releases to the ASC by input tag.  <br /></td></tr>
+<tr class="memitem:af4b4d4afb1fb3dca7e4f9e576962a59f" id="r_af4b4d4afb1fb3dca7e4f9e576962a59f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af4b4d4afb1fb3dca7e4f9e576962a59f">Input_AbilityInputTagReleased</a> (FGameplayTag InputTag)</td></tr>
+<tr class="memitem:ad5ff4f6a8ec8a09930b8f2c387a5283f" id="r_ad5ff4f6a8ec8a09930b8f2c387a5283f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad5ff4f6a8ec8a09930b8f2c387a5283f">Input_TargetConfirm</a> ()</td></tr>
+<tr class="memdesc:ad5ff4f6a8ec8a09930b8f2c387a5283f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confirm / cancel interactive ability targeting (UserConfirmed target actors).  <br /></td></tr>
+<tr class="memitem:ae78f38127a3319fabb708c3ce07b5b76" id="r_ae78f38127a3319fabb708c3ce07b5b76"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae78f38127a3319fabb708c3ce07b5b76">Input_TargetCancel</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -216,12 +230,14 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ae2236dab2ef85edec6ad0024c4007f31" id="r_ae2236dab2ef85edec6ad0024c4007f31"><td class="memItemLeft">TObjectPtr&lt; UInputAction &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae2236dab2ef85edec6ad0024c4007f31">HostMapSetupAction</a></td></tr>
 <tr class="memitem:accec20753bc67c64992d615e91db2a95" id="r_accec20753bc67c64992d615e91db2a95"><td class="memItemLeft">TObjectPtr&lt; UInputAction &gt;&#160;</td><td class="memItemRight"><a class="el" href="#accec20753bc67c64992d615e91db2a95">EscapeAction</a></td></tr>
 <tr class="memitem:ac57a534f563c3a61dbc849cccef8e7db" id="r_ac57a534f563c3a61dbc849cccef8e7db"><td class="memItemLeft">TObjectPtr&lt; UInputAction &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac57a534f563c3a61dbc849cccef8e7db">CharacterOverviewAction</a></td></tr>
+<tr class="memitem:a5fd39474aa4b25874afc987eaee38a0a" id="r_a5fd39474aa4b25874afc987eaee38a0a"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_input_config.html">UDTInputConfig</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5fd39474aa4b25874afc987eaee38a0a">InputConfig</a></td></tr>
+<tr class="memdesc:a5fd39474aa4b25874afc987eaee38a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ability input config: maps ability input actions to the tags input routes by, plus targeting confirm/cancel.  <br /></td></tr>
 <tr class="memitem:a9aae3935610582f6033c9f430bf1763b" id="r_a9aae3935610582f6033c9f430bf1763b"><td class="memItemLeft">TObjectPtr&lt; UDungeonBuildSystemPlayerControllerComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9aae3935610582f6033c9f430bf1763b">PlayerBuildSystemComponent</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base Player Controller class for Dark Tower. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00028">28</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00030">30</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a22fad5f10e4e2ce1f716ade4d15c62b4" name="a22fad5f10e4e2ce1f716ade4d15c62b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22fad5f10e4e2ce1f716ade4d15c62b4">&#9670;&#160;</a></span>ADTPlayerController()</h2>
@@ -238,13 +254,42 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00036">36</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00038">38</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00150">PlayerBuildSystemComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00183">PlayerBuildSystemComponent</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a959dc045cf43117c8553bd33ab210223" name="a959dc045cf43117c8553bd33ab210223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959dc045cf43117c8553bd33ab210223">&#9670;&#160;</a></span>AcknowledgePossession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::AcknowledgePossession </td>
+          <td>(</td>
+          <td class="paramtype">APawn *</td>          <td class="paramname"><span class="paramname"><em>InPawn</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00272">272</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8cpp_source.html#l00279">UpdateAudioListenerOverride()</a>.</p>
+
+</div>
+</div>
 <a id="a90489b182bd21f000d34461313c76a95" name="a90489b182bd21f000d34461313c76a95"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a90489b182bd21f000d34461313c76a95">&#9670;&#160;</a></span>BeginPlay()</h2>
 
@@ -268,7 +313,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00054">54</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00056">56</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
 </div>
 </div>
@@ -290,12 +335,14 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00250">250</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00312">312</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_state_8h_source.html#l00086">ADTPlayerState::IsSaveInitialized()</a>.</p>
 
 </div>
 </div>
@@ -538,12 +585,78 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00067">67</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00069">69</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aaf37ac36969672cd391662a0338ccead" name="aaf37ac36969672cd391662a0338ccead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf37ac36969672cd391662a0338ccead">&#9670;&#160;</a></span>GetDTAbilitySystemComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> * ADTPlayerController::GetDTAbilitySystemComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the owning player state's ASC, if available. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00337">337</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_state_8cpp_source.html#l00440">ADTPlayerState::GetAbilitySystemComponent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00343">Input_AbilityInputTagPressed()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00352">Input_AbilityInputTagReleased()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00370">Input_TargetCancel()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00361">Input_TargetConfirm()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00326">PostProcessInput()</a>.</p>
+
+</div>
+</div>
+<a id="a066a06251916483844c966e808b06037" name="a066a06251916483844c966e808b06037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a066a06251916483844c966e808b06037">&#9670;&#160;</a></span>GetInputConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_input_config.html">UDTInputConfig</a> * ADTPlayerController::GetInputConfig </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the ability input config (InputAction -&gt; InputTag mapping, targeting confirm/cancel). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00139">139</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00139">GetInputConfig()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00180">InputConfig</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8h_source.html#l00139">GetInputConfig()</a>.</p>
 
 </div>
 </div>
@@ -570,11 +683,139 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00120">120</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00122">122</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00120">GetPlayerBuildSystemComponent()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00150">PlayerBuildSystemComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00122">GetPlayerBuildSystemComponent()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00183">PlayerBuildSystemComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8h_source.html#l00120">GetPlayerBuildSystemComponent()</a>, and <a class="el" href="_d_t_gameplay_game_mode_8cpp_source.html#l00163">ADTGameplayGameMode::InitSeamlessTravelPlayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8h_source.html#l00122">GetPlayerBuildSystemComponent()</a>, and <a class="el" href="_d_t_gameplay_game_mode_8cpp_source.html#l00163">ADTGameplayGameMode::InitSeamlessTravelPlayer()</a>.</p>
+
+</div>
+</div>
+<a id="aab0eb6dc717b5823509d1b289928d062" name="aab0eb6dc717b5823509d1b289928d062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab0eb6dc717b5823509d1b289928d062">&#9670;&#160;</a></span>Input_AbilityInputTagPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::Input_AbilityInputTagPressed </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>InputTag</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Forward ability input presses/releases to the ASC by input tag. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00343">343</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00935">UDTAbilitySystemComponent::AbilityInputTagPressed()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00337">GetDTAbilitySystemComponent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
+
+</div>
+</div>
+<a id="af4b4d4afb1fb3dca7e4f9e576962a59f" name="af4b4d4afb1fb3dca7e4f9e576962a59f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b4d4afb1fb3dca7e4f9e576962a59f">&#9670;&#160;</a></span>Input_AbilityInputTagReleased()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::Input_AbilityInputTagReleased </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>InputTag</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00352">352</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00952">UDTAbilitySystemComponent::AbilityInputTagReleased()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00337">GetDTAbilitySystemComponent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
+
+</div>
+</div>
+<a id="ae78f38127a3319fabb708c3ce07b5b76" name="ae78f38127a3319fabb708c3ce07b5b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae78f38127a3319fabb708c3ce07b5b76">&#9670;&#160;</a></span>Input_TargetCancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::Input_TargetCancel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00370">370</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8cpp_source.html#l00337">GetDTAbilitySystemComponent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
+
+</div>
+</div>
+<a id="ad5ff4f6a8ec8a09930b8f2c387a5283f" name="ad5ff4f6a8ec8a09930b8f2c387a5283f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ff4f6a8ec8a09930b8f2c387a5283f">&#9670;&#160;</a></span>Input_TargetConfirm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::Input_TargetConfirm </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Confirm / cancel interactive ability targeting (UserConfirmed target actors). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00361">361</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8cpp_source.html#l00337">GetDTAbilitySystemComponent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -595,9 +836,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if this controller belongs to the hosting player (listen server or first local player). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00043">43</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00045">45</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00177">OpenDefaultLobbyHostMapSetup()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00121">ShowHostMapSetup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00210">OpenDefaultLobbyHostMapSetup()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00154">ShowHostMapSetup()</a>.</p>
 
 </div>
 </div>
@@ -616,11 +857,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00114">114</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00147">147</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_game_settings_8h_source.html#l00041">UDTGameSettings::GetDefaultLobbyMapName()</a>, and <a class="el" href="_d_t_game_settings_8cpp_source.html#l00010">UDTGameSettings::GetDTGameSettings()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00177">OpenDefaultLobbyHostMapSetup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00210">OpenDefaultLobbyHostMapSetup()</a>.</p>
 
 </div>
 </div>
@@ -647,11 +888,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00090">90</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00092">92</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00090">IsSpectatingDead()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00092">IsSpectatingDead()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8h_source.html#l00090">IsSpectatingDead()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8h_source.html#l00092">IsSpectatingDead()</a>.</p>
 
 </div>
 </div>
@@ -670,7 +911,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00191">191</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00224">224</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_save_subsystem_8cpp_source.html#l00141">UDTSaveSubsystem::LoadCurrentSlot()</a>.</p>
 
@@ -701,9 +942,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Called if the possessed pawn is destroyed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00246">246</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00308">308</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00229">OnPossess()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00263">OnPossess()</a>.</p>
 
 </div>
 </div>
@@ -725,14 +966,14 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00229">229</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00263">263</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_controller_8cpp_source.html#l00246">OnPawnDestroyed()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_controller_8cpp_source.html#l00308">OnPawnDestroyed()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00279">UpdateAudioListenerOverride()</a>.</p>
 
 </div>
 </div>
@@ -759,7 +1000,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00263">263</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00379">379</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
 </div>
 </div>
@@ -778,9 +1019,42 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00177">177</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00210">210</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00045">Campaign</a>, <a class="el" href="_data_types_8h_source.html#l00127">FDTHostRequest::EntryPoint</a>, <a class="el" href="_data_types_8h_source.html#l00130">FDTHostRequest::InitialTab</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00043">IsHost()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00114">IsInDefaultLobbyMap()</a>, <a class="el" href="_data_types_8h_source.html#l00037">LobbyHotkey</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00121">ShowHostMapSetup()</a>.</p>
+<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00057">Campaign</a>, <a class="el" href="_data_types_8h_source.html#l00139">FDTHostRequest::EntryPoint</a>, <a class="el" href="_data_types_8h_source.html#l00142">FDTHostRequest::InitialTab</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00045">IsHost()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00147">IsInDefaultLobbyMap()</a>, <a class="el" href="_data_types_8h_source.html#l00049">LobbyHotkey</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00154">ShowHostMapSetup()</a>.</p>
+
+</div>
+</div>
+<a id="a20dc8808cc61f062d646c52bbb6fff55" name="a20dc8808cc61f062d646c52bbb6fff55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20dc8808cc61f062d646c52bbb6fff55">&#9670;&#160;</a></span>PostProcessInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::PostProcessInput </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>DeltaTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>bGamePaused</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00326">326</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8cpp_source.html#l00337">GetDTAbilitySystemComponent()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00969">UDTAbilitySystemComponent::ProcessAbilityInput()</a>.</p>
 
 </div>
 </div>
@@ -811,14 +1085,14 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00236">236</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00298">298</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_controller_8cpp_source.html#l00203">SavePlayerData()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_controller_8cpp_source.html#l00236">SavePlayerData()</a>.</p>
 
 </div>
 </div>
@@ -837,11 +1111,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00203">203</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00236">236</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_save_subsystem_8cpp_source.html#l00100">UDTSaveSubsystem::SaveCurrentSlot()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_state_8h_source.html#l00086">ADTPlayerState::IsSaveInitialized()</a>, and <a class="el" href="_d_t_save_subsystem_8cpp_source.html#l00100">UDTSaveSubsystem::SaveCurrentSlot()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_game_mode_8cpp_source.html#l00042">ADTGameMode::Logout()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00236">PreClientTravel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_game_mode_8cpp_source.html#l00042">ADTGameMode::Logout()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00298">PreClientTravel()</a>.</p>
 
 </div>
 </div>
@@ -1084,9 +1358,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00073">73</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">75</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00147">CharacterOverviewAction</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00138">DefaultMappingContexts</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00144">EscapeAction</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00141">HostMapSetupAction</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00176">CharacterOverviewAction</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00167">DefaultMappingContexts</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00173">EscapeAction</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00170">HostMapSetupAction</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00343">Input_AbilityInputTagPressed()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00352">Input_AbilityInputTagReleased()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00370">Input_TargetCancel()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00361">Input_TargetConfirm()</a>, <a class="el" href="_d_t_input_config_8h_source.html#l00021">FDTInputAction::InputAction</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00180">InputConfig</a>, and <a class="el" href="_d_t_input_config_8h_source.html#l00024">FDTInputAction::InputTag</a>.</p>
 
 </div>
 </div>
@@ -1105,11 +1379,43 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00121">121</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00154">154</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00045">Campaign</a>, <a class="el" href="_data_types_8h_source.html#l00136">FDTHostRequest::Config</a>, <a class="el" href="_data_types_8h_source.html#l00047">Endgame</a>, <a class="el" href="_d_t_game_settings_8cpp_source.html#l00010">UDTGameSettings::GetDTGameSettings()</a>, <a class="el" href="_d_t_game_settings_8h_source.html#l00047">UDTGameSettings::GetHostMapSetupWidgetClass()</a>, <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00017">UDTMapSetupWidget::InitializeFromRequest()</a>, <a class="el" href="_data_types_8h_source.html#l00130">FDTHostRequest::InitialTab</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00043">IsHost()</a>, <a class="el" href="_data_types_8h_source.html#l00105">FDTHostConfig::ModeDefinitionTag</a>, and <a class="el" href="_data_types_8h_source.html#l00096">FDTHostConfig::StartingFloor</a>.</p>
+<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00057">Campaign</a>, <a class="el" href="_data_types_8h_source.html#l00148">FDTHostRequest::Config</a>, <a class="el" href="_data_types_8h_source.html#l00059">Endgame</a>, <a class="el" href="_d_t_game_settings_8cpp_source.html#l00010">UDTGameSettings::GetDTGameSettings()</a>, <a class="el" href="_d_t_game_settings_8h_source.html#l00047">UDTGameSettings::GetHostMapSetupWidgetClass()</a>, <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00017">UDTMapSetupWidget::InitializeFromRequest()</a>, <a class="el" href="_data_types_8h_source.html#l00142">FDTHostRequest::InitialTab</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00045">IsHost()</a>, <a class="el" href="_data_types_8h_source.html#l00117">FDTHostConfig::ModeDefinitionTag</a>, and <a class="el" href="_data_types_8h_source.html#l00108">FDTHostConfig::StartingFloor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00177">OpenDefaultLobbyHostMapSetup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00210">OpenDefaultLobbyHostMapSetup()</a>.</p>
+
+</div>
+</div>
+<a id="ae1388a63b0b7f3328ae8c34951d903c1" name="ae1388a63b0b7f3328ae8c34951d903c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1388a63b0b7f3328ae8c34951d903c1">&#9670;&#160;</a></span>UpdateAudioListenerOverride()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::UpdateAudioListenerOverride </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Anchors the audio listener to the possessed pawn's camera boom focus point instead of the camera itself. </p>
+<p>By default UE puts the listener on the camera, which rides the RPG camera boom 500-1600cm back from the character depending on zoom. That makes every attenuated sound quieter as the player zooms out and shifts the near/far balance of the mix, since attenuation curves aren't linear. Anchoring to the boom's focus point takes zoom out of the equation entirely while keeping the camera's orientation, so left/right panning still matches the screen. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00279">279</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00272">AcknowledgePossession()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00263">OnPossess()</a>.</p>
 
 </div>
 </div>
@@ -1134,9 +1440,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00147">147</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00176">176</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00073">SetupInputComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -1162,9 +1468,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Input Mapping Contexts. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00138">138</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00167">167</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00073">SetupInputComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -1188,9 +1494,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00144">144</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00173">173</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00073">SetupInputComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -1214,9 +1520,37 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00141">141</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00170">170</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00073">SetupInputComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
+
+</div>
+</div>
+<a id="a5fd39474aa4b25874afc987eaee38a0a" name="a5fd39474aa4b25874afc987eaee38a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd39474aa4b25874afc987eaee38a0a">&#9670;&#160;</a></span>InputConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_input_config.html">UDTInputConfig</a>&gt; ADTPlayerController::InputConfig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ability input config: maps ability input actions to the tags input routes by, plus targeting confirm/cancel. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00180">180</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8h_source.html#l00139">GetInputConfig()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
 
 </div>
 </div>
@@ -1235,7 +1569,7 @@ Protected Attributes</h2></td></tr>
 <p>Fired on the client whenever the spectated teammate changes. </p>
 <p>Bind to this to update spectator UI. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00093">93</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00095">95</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
 </div>
 </div>
@@ -1259,9 +1593,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00150">150</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00183">183</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00036">ADTPlayerController()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00120">GetPlayerBuildSystemComponent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00038">ADTPlayerController()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00122">GetPlayerBuildSystemComponent()</a>.</p>
 
 </div>
 </div>

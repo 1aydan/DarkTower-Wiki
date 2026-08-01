@@ -151,16 +151,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae537ed0d984c44af8192ac6b741af7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the equip animation montage for this item.  <br /></td></tr>
 <tr class="memitem:abfb0e680413a952534ac7709090c8995" id="r_abfb0e680413a952534ac7709090c8995"><td class="memItemLeft">UAnimSequence *&#160;</td><td class="memItemRight"><a class="el" href="#abfb0e680413a952534ac7709090c8995">GetPreviewIdleAnimation</a> () const</td></tr>
 <tr class="memdesc:abfb0e680413a952534ac7709090c8995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the preview idle animation for use in the character preview screen.  <br /></td></tr>
-<tr class="memitem:a2141d01c7680b44f716ca393b2c00f68" id="r_a2141d01c7680b44f716ca393b2c00f68"><td class="memItemLeft">TArray&lt; FEquipmentMeshSlot &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2141d01c7680b44f716ca393b2c00f68">GetMeshSlots</a> () const</td></tr>
-<tr class="memdesc:a2141d01c7680b44f716ca393b2c00f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mesh slots for this equipment item.  <br /></td></tr>
 <tr class="memitem:acc3adb273e8a81f9ea2f74b233a7c263" id="r_acc3adb273e8a81f9ea2f74b233a7c263"><td class="memItemLeft">TArray&lt; FEquipmentComponentEntry &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acc3adb273e8a81f9ea2f74b233a7c263">GetGrantedComponents</a> () const</td></tr>
 <tr class="memdesc:acc3adb273e8a81f9ea2f74b233a7c263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the component entries defined in the equipment fragment.  <br /></td></tr>
 <tr class="memitem:aeb6eb7156725ce8afc4f9945cc846b9d" id="r_aeb6eb7156725ce8afc4f9945cc846b9d"><td class="memItemLeft">TArray&lt; FEquipmentActorEntry &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aeb6eb7156725ce8afc4f9945cc846b9d">GetGrantedActors</a> () const</td></tr>
 <tr class="memdesc:aeb6eb7156725ce8afc4f9945cc846b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the actor entries defined in the equipment fragment.  <br /></td></tr>
-<tr class="memitem:a9fea97bfd3f19c8a535ea6f166048b9f" id="r_a9fea97bfd3f19c8a535ea6f166048b9f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9fea97bfd3f19c8a535ea6f166048b9f">ApplyMeshSlot</a> (const TArray&lt; FEquipmentMeshSlot &gt; &amp;MeshSlots)</td></tr>
-<tr class="memdesc:a9fea97bfd3f19c8a535ea6f166048b9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a set of mesh slots to the modular mesh component.  <br /></td></tr>
-<tr class="memitem:a1849e96e132b22c4a0ecb88ded734e96" id="r_a1849e96e132b22c4a0ecb88ded734e96"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1849e96e132b22c4a0ecb88ded734e96">ClearMeshSlots</a> (const TArray&lt; FEquipmentMeshSlot &gt; &amp;MeshSlots)</td></tr>
-<tr class="memdesc:a1849e96e132b22c4a0ecb88ded734e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears a set of mesh slots from the modular mesh component.  <br /></td></tr>
 <tr class="memitem:a0047c3e2a289893e376e3d98f814f471" id="r_a0047c3e2a289893e376e3d98f814f471"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0047c3e2a289893e376e3d98f814f471">GrantEquipmentAbilities</a> (UAbilitySystemComponent *AbilitySystem)</td></tr>
 <tr class="memdesc:a0047c3e2a289893e376e3d98f814f471"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grant this item's equipment abilities to the provided Ability System.  <br /></td></tr>
 <tr class="memitem:a75ee78bf69ed0d2f81237549a582ef53" id="r_a75ee78bf69ed0d2f81237549a582ef53"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a75ee78bf69ed0d2f81237549a582ef53">RemoveEquipmentAbilities</a> (UAbilitySystemComponent *AbilitySystem)</td></tr>
@@ -193,8 +187,8 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:afc1ce4271f3ff3ad7857d2fbc185a4ef" id="r_afc1ce4271f3ff3ad7857d2fbc185a4ef"><td class="memItemLeft">TArray&lt; FGSCAbilitySetHandle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afc1ce4271f3ff3ad7857d2fbc185a4ef">GrantedEquipmentAbilityHandles</a></td></tr>
-<tr class="memdesc:afc1ce4271f3ff3ad7857d2fbc185a4ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles returned from GSC ability set grants (server-side tracking).  <br /></td></tr>
+<tr class="memitem:a32bc6419e9e07ba26b535f9661eac65d" id="r_a32bc6419e9e07ba26b535f9661eac65d"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_d_t_ability_set_handle.html">FDTAbilitySetHandle</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a32bc6419e9e07ba26b535f9661eac65d">GrantedEquipmentAbilityHandles</a></td></tr>
+<tr class="memdesc:a32bc6419e9e07ba26b535f9661eac65d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles returned from ability set grants (server-side tracking).  <br /></td></tr>
 <tr class="memitem:a32a39572aa8170bcaad4f72bd6144877" id="r_a32a39572aa8170bcaad4f72bd6144877"><td class="memItemLeft"><a class="el" href="struct_f_applied_stat_group.html">FAppliedStatGroup</a>&#160;</td><td class="memItemRight"><a class="el" href="#a32a39572aa8170bcaad4f72bd6144877">UniversalStats</a></td></tr>
 <tr class="memdesc:a32a39572aa8170bcaad4f72bd6144877"><td class="mdescLeft">&#160;</td><td class="mdescRight">BaseStat modifiers — always applied while equipped in any slot.  <br /></td></tr>
 <tr class="memitem:a12874b171dd524ede364f1e9d5a3d140" id="r_a12874b171dd524ede364f1e9d5a3d140"><td class="memItemLeft"><a class="el" href="struct_f_applied_stat_group.html">FAppliedStatGroup</a>&#160;</td><td class="memItemRight"><a class="el" href="#a12874b171dd524ede364f1e9d5a3d140">ActiveStats</a></td></tr>
@@ -205,29 +199,6 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8h_source.html#l00053">53</a> of file <a class="el" href="_d_t_equipment_instance_8h_source.html">DTEquipmentInstance.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a9fea97bfd3f19c8a535ea6f166048b9f" name="a9fea97bfd3f19c8a535ea6f166048b9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fea97bfd3f19c8a535ea6f166048b9f">&#9670;&#160;</a></span>ApplyMeshSlot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void UDTEquipmentInstance::ApplyMeshSlot </td>
-          <td>(</td>
-          <td class="paramtype">const TArray&lt; FEquipmentMeshSlot &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>MeshSlots</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Applies a set of mesh slots to the modular mesh component. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00305">305</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00136">OnEquipped_Implementation()</a>.</p>
-
-</div>
-</div>
 <a id="a6806e239f257a5e71a4b56dfbf2b911a" name="a6806e239f257a5e71a4b56dfbf2b911a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6806e239f257a5e71a4b56dfbf2b911a">&#9670;&#160;</a></span>ApplyStats()</h2>
 
@@ -264,11 +235,11 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00403">403</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00357">357</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00174">ActiveStats</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00449">ApplyStatsByType()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00049">BaseStat</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00363">CollectStats()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00052">ItemStat</a>, and <a class="el" href="_d_t_equipment_instance_8h_source.html#l00170">UniversalStats</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00162">ActiveStats</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00403">ApplyStatsByType()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00040">BaseStat</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00317">CollectStats()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00043">ItemStat</a>, and <a class="el" href="_d_t_equipment_instance_8h_source.html#l00158">UniversalStats</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00075">UDTEquipmentComponent::ApplyServerActiveWeaponStats()</a>, <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00175">UDTEquipmentComponent::HandleItemEquipped()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00540">UDTEquipmentComponent::RefreshOffHandSlot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00075">UDTEquipmentComponent::ApplyServerActiveWeaponStats()</a>, <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00175">UDTEquipmentComponent::HandleItemEquipped()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00558">UDTEquipmentComponent::RefreshOffHandSlot()</a>.</p>
 
 </div>
 </div>
@@ -322,34 +293,11 @@ Protected Attributes</h2></td></tr>
 <p>Apply all stats of a given ApplicationType from CollectionResult into AppliedStatGroup. </p>
 <p>Shared helper used by ApplyStats. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00449">449</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00403">403</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00035">FAppliedStatGroup::AbilityHandles</a>, <a class="el" href="_d_t_equipment_instance_8h_source.html#l00032">FAppliedStatGroup::AffixGEHandles</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00071">FStatCollectionResult::AggregateStatsByTag()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00240">FDTEquipmentStatHelper::ApplyAffixGEsAsEffects()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00216">FDTEquipmentStatHelper::ApplyAggregatedStatsAsEffect()</a>, <a class="el" href="_d_t_equipment_instance_8h_source.html#l00038">FAppliedStatGroup::CombatModifierHandles</a>, <a class="el" href="_d_t_equipment_instance_8h_source.html#l00029">FAppliedStatGroup::EffectHandles</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00045">FStatCollectionResult::GetAbilitySetsByApplicationType()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00032">FStatCollectionResult::GetAffixGEsByApplicationType()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00058">FStatCollectionResult::GetCombatModifiersByApplicationType()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00019">FStatCollectionResult::GetStatsByApplicationType()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00288">FDTEquipmentStatHelper::GrantAbilitySets()</a>, and <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00350">FDTEquipmentStatHelper::RegisterCombatModifiers()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00035">FAppliedStatGroup::AbilityHandles</a>, <a class="el" href="_d_t_equipment_instance_8h_source.html#l00032">FAppliedStatGroup::AffixGEHandles</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00071">FStatCollectionResult::AggregateStatsByTag()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00248">FDTEquipmentStatHelper::ApplyAffixGEsAsEffects()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00224">FDTEquipmentStatHelper::ApplyAggregatedStatsAsEffect()</a>, <a class="el" href="_d_t_equipment_instance_8h_source.html#l00038">FAppliedStatGroup::CombatModifierHandles</a>, <a class="el" href="_d_t_equipment_instance_8h_source.html#l00029">FAppliedStatGroup::EffectHandles</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00045">FStatCollectionResult::GetAbilitySetsByApplicationType()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00032">FStatCollectionResult::GetAffixGEsByApplicationType()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00058">FStatCollectionResult::GetCombatModifiersByApplicationType()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00019">FStatCollectionResult::GetStatsByApplicationType()</a>, <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00296">FDTEquipmentStatHelper::GrantAbilitySets()</a>, and <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00358">FDTEquipmentStatHelper::RegisterCombatModifiers()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00403">ApplyStats()</a>.</p>
-
-</div>
-</div>
-<a id="a1849e96e132b22c4a0ecb88ded734e96" name="a1849e96e132b22c4a0ecb88ded734e96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1849e96e132b22c4a0ecb88ded734e96">&#9670;&#160;</a></span>ClearMeshSlots()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void UDTEquipmentInstance::ClearMeshSlots </td>
-          <td>(</td>
-          <td class="paramtype">const TArray&lt; FEquipmentMeshSlot &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>MeshSlots</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clears a set of mesh slots from the modular mesh component. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00336">336</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00158">OnUnequipped_Implementation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00357">ApplyStats()</a>.</p>
 
 </div>
 </div>
@@ -393,11 +341,11 @@ Protected Attributes</h2></td></tr>
 <p>Collect all stats from this item's definition and item info. </p>
 <p>Shared setup used by ApplyStats overrides to avoid boilerplate duplication. </p><dl class="section return"><dt>Returns</dt><dd>true if collection succeeded and OutResult is populated. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00363">363</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00317">317</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00127">FDTEquipmentStatHelper::CollectAllStats()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00042">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00029">UDTGlobalData::GlobalLootData</a>, <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00146">FStatCollectionResult::HasAbilitySets()</a>, <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00143">FStatCollectionResult::HasAffixGEs()</a>, <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00148">FStatCollectionResult::HasCombatModifiers()</a>, and <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00140">FStatCollectionResult::HasStats()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00136">FDTEquipmentStatHelper::CollectAllStats()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00029">UDTGlobalData::GlobalLootData</a>, <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00151">FStatCollectionResult::HasAbilitySets()</a>, <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00148">FStatCollectionResult::HasAffixGEs()</a>, <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00153">FStatCollectionResult::HasCombatModifiers()</a>, and <a class="el" href="_d_t_equipment_stat_helper_8h_source.html#l00145">FStatCollectionResult::HasStats()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00403">ApplyStats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00357">ApplyStats()</a>.</p>
 
 </div>
 </div>
@@ -420,7 +368,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00082">82</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00136">OnEquipped_Implementation()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00158">OnUnequipped_Implementation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00127">OnEquipped_Implementation()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00147">OnUnequipped_Implementation()</a>.</p>
 
 </div>
 </div>
@@ -441,11 +389,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Resolve which ability sets should be granted for this equipment item. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00276">276</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00263">263</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00037">UDTInventoryItemFragment_Equipment::GrantedAbilitySets</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00008">UDTAbilityDefinition::GetAbilitySet()</a>, and <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00048">UDTInventoryItemFragment_Equipment::GrantedAbilitySets</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00181">GrantEquipmentAbilities()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00168">GrantEquipmentAbilities()</a>.</p>
 
 </div>
 </div>
@@ -487,7 +435,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the actor entries defined in the equipment fragment. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00127">127</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00118">118</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
 </div>
 </div>
@@ -508,7 +456,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the component entries defined in the equipment fragment. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00118">118</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00109">109</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
 </div>
 </div>
@@ -529,32 +477,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the spec handles for any abilities granted by this item's equipment ability sets. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00295">295</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00307">307</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00166">GrantedEquipmentAbilityHandles</a>.</p>
-
-</div>
-</div>
-<a id="a2141d01c7680b44f716ca393b2c00f68" name="a2141d01c7680b44f716ca393b2c00f68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2141d01c7680b44f716ca393b2c00f68">&#9670;&#160;</a></span>GetMeshSlots()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TArray&lt; FEquipmentMeshSlot &gt; UDTEquipmentInstance::GetMeshSlots </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the mesh slots for this equipment item. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00109">109</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00136">OnEquipped_Implementation()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00158">OnUnequipped_Implementation()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00154">GrantedEquipmentAbilityHandles</a>.</p>
 
 </div>
 </div>
@@ -596,11 +521,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the aggregated modifier value by ModifierID from all affixes. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00581">581</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00535">535</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_affix_definition_8h_source.html#l00030">UDTAffixDefinition::DisplayName</a>, <a class="el" href="_d_t_affix_definition_8cpp_source.html#l00042">UDTAffixDefinition::GetStatModifierValueByID()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00581">GetStatModifierValueByID()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_affix_definition_8h_source.html#l00030">UDTAffixDefinition::DisplayName</a>, <a class="el" href="_d_t_affix_definition_8cpp_source.html#l00042">UDTAffixDefinition::GetStatModifierValueByID()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00535">GetStatModifierValueByID()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00581">GetStatModifierValueByID()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00535">GetStatModifierValueByID()</a>.</p>
 
 </div>
 </div>
@@ -621,11 +546,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the total modifier value for a specific attribute from all base stats and affixes. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00503">503</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00457">457</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00037">Add</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00195">UDTLootSubsystem::CalculateActualStatValue()</a>, <a class="el" href="_d_t_affix_definition_8cpp_source.html#l00027">UDTAffixDefinition::CalculateStatModifierValue()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00042">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00503">GetTotalStatModifier()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00029">UDTGlobalData::GlobalLootData</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00038">Multiply</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00081">FDynamicValueDefinitionBase::Operation</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00039">Override</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00132">FStatModifierDef::SetByCallerTag</a>, <a class="el" href="_d_t_affix_definition_8h_source.html#l00058">UDTAffixDefinition::StatModifiers</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00223">FBaseStatTableRow::StatTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00117">Add</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00195">UDTLootSubsystem::CalculateActualStatValue()</a>, <a class="el" href="_d_t_affix_definition_8cpp_source.html#l00027">UDTAffixDefinition::CalculateStatModifierValue()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00457">GetTotalStatModifier()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00029">UDTGlobalData::GlobalLootData</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00118">Multiply</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00162">FDynamicValueDefinitionBase::Operation</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00119">Override</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00073">FStatModifierDef::SetByCallerTag</a>, <a class="el" href="_d_t_affix_definition_8h_source.html#l00058">UDTAffixDefinition::StatModifiers</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00141">FBaseStatTableRow::StatTag</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00503">GetTotalStatModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00457">GetTotalStatModifier()</a>.</p>
 
 </div>
 </div>
@@ -647,9 +572,9 @@ Protected Attributes</h2></td></tr>
 <p>Grant this item's equipment abilities to the provided Ability System. </p>
 <p>Safe to call multiple times; will no-op if already granted. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00181">181</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00168">168</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00276">GetEquipmentAbilitySetsToGrant()</a>, <a class="el" href="_d_t_equipment_instance_8h_source.html#l00166">GrantedEquipmentAbilityHandles</a>, and <a class="el" href="_d_t_equipment_instance_8h_source.html#l00106">HasGrantedEquipmentAbilities()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_set_types_8h_source.html#l00115">FDTAbilitySetHandle::Abilities</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00263">GetEquipmentAbilitySetsToGrant()</a>, <a class="el" href="_d_t_equipment_instance_8h_source.html#l00154">GrantedEquipmentAbilityHandles</a>, and <a class="el" href="_d_t_equipment_instance_8h_source.html#l00094">HasGrantedEquipmentAbilities()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00175">UDTEquipmentComponent::HandleItemEquipped()</a>.</p>
 
@@ -680,11 +605,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns whether this item currently has granted equipment abilities. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8h_source.html#l00106">106</a> of file <a class="el" href="_d_t_equipment_instance_8h_source.html">DTEquipmentInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8h_source.html#l00094">94</a> of file <a class="el" href="_d_t_equipment_instance_8h_source.html">DTEquipmentInstance.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00166">GrantedEquipmentAbilityHandles</a>, and <a class="el" href="_d_t_equipment_instance_8h_source.html#l00106">HasGrantedEquipmentAbilities()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00154">GrantedEquipmentAbilityHandles</a>, and <a class="el" href="_d_t_equipment_instance_8h_source.html#l00094">HasGrantedEquipmentAbilities()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00181">GrantEquipmentAbilities()</a>, and <a class="el" href="_d_t_equipment_instance_8h_source.html#l00106">HasGrantedEquipmentAbilities()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00168">GrantEquipmentAbilities()</a>, and <a class="el" href="_d_t_equipment_instance_8h_source.html#l00094">HasGrantedEquipmentAbilities()</a>.</p>
 
 </div>
 </div>
@@ -711,9 +636,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00136">136</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00127">127</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00305">ApplyMeshSlot()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00082">GetAnimationLayer()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00109">GetMeshSlots()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00082">GetAnimationLayer()</a>.</p>
 
 </div>
 </div>
@@ -740,9 +665,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00158">158</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00147">147</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00336">ClearMeshSlots()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00082">GetAnimationLayer()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00109">GetMeshSlots()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00082">GetAnimationLayer()</a>.</p>
 
 </div>
 </div>
@@ -772,11 +697,11 @@ Protected Attributes</h2></td></tr>
 <p>Remove only "active" stats from the ability system (e.g. </p>
 <p>on weapon switch). Removes ActiveStats (ItemStat modifiers) while leaving UniversalStats intact. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00444">444</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00398">398</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00174">ActiveStats</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00162">ActiveStats</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00075">UDTEquipmentComponent::ApplyServerActiveWeaponStats()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00540">UDTEquipmentComponent::RefreshOffHandSlot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00075">UDTEquipmentComponent::ApplyServerActiveWeaponStats()</a>.</p>
 
 </div>
 </div>
@@ -798,11 +723,11 @@ Protected Attributes</h2></td></tr>
 <p>Remove any previously granted equipment abilities. </p>
 <p>Safe to call even if nothing was granted. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00243">243</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00230">230</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00166">GrantedEquipmentAbilityHandles</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00154">GrantedEquipmentAbilityHandles</a>, and <a class="el" href="_d_t_ability_set_8cpp_source.html#l00074">UDTAbilitySet::RemoveFromAbilitySystem()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00229">UDTEquipmentComponent::HandleItemUnequipped()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00238">UDTEquipmentComponent::HandleItemUnequipped()</a>.</p>
 
 </div>
 </div>
@@ -832,11 +757,11 @@ Protected Attributes</h2></td></tr>
 <p>Remove ALL stats from the ability system (full teardown on unequip). </p>
 <p>Removes both UniversalStats and ActiveStats. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00437">437</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00391">391</a> of file <a class="el" href="_d_t_equipment_instance_8cpp_source.html">DTEquipmentInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00174">ActiveStats</a>, and <a class="el" href="_d_t_equipment_instance_8h_source.html#l00170">UniversalStats</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_equipment_instance_8h_source.html#l00162">ActiveStats</a>, and <a class="el" href="_d_t_equipment_instance_8h_source.html#l00158">UniversalStats</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00229">UDTEquipmentComponent::HandleItemUnequipped()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00238">UDTEquipmentComponent::HandleItemUnequipped()</a>, and <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00558">UDTEquipmentComponent::RefreshOffHandSlot()</a>.</p>
 
 </div>
 </div>
@@ -863,14 +788,14 @@ Protected Attributes</h2></td></tr>
 
 <p>ItemStat modifiers — only applied when this item is the active slot item. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8h_source.html#l00174">174</a> of file <a class="el" href="_d_t_equipment_instance_8h_source.html">DTEquipmentInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8h_source.html#l00162">162</a> of file <a class="el" href="_d_t_equipment_instance_8h_source.html">DTEquipmentInstance.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00403">ApplyStats()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00444">RemoveActiveStats()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00437">RemoveStats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00357">ApplyStats()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00398">RemoveActiveStats()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00391">RemoveStats()</a>.</p>
 
 </div>
 </div>
-<a id="afc1ce4271f3ff3ad7857d2fbc185a4ef" name="afc1ce4271f3ff3ad7857d2fbc185a4ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc1ce4271f3ff3ad7857d2fbc185a4ef">&#9670;&#160;</a></span>GrantedEquipmentAbilityHandles</h2>
+<a id="a32bc6419e9e07ba26b535f9661eac65d" name="a32bc6419e9e07ba26b535f9661eac65d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32bc6419e9e07ba26b535f9661eac65d">&#9670;&#160;</a></span>GrantedEquipmentAbilityHandles</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -879,7 +804,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TArray&lt;FGSCAbilitySetHandle&gt; UDTEquipmentInstance::GrantedEquipmentAbilityHandles</td>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_d_t_ability_set_handle.html">FDTAbilitySetHandle</a>&gt; UDTEquipmentInstance::GrantedEquipmentAbilityHandles</td>
         </tr>
       </table>
   </td>
@@ -889,11 +814,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Handles returned from GSC ability set grants (server-side tracking). </p>
+<p>Handles returned from ability set grants (server-side tracking). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8h_source.html#l00166">166</a> of file <a class="el" href="_d_t_equipment_instance_8h_source.html">DTEquipmentInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8h_source.html#l00154">154</a> of file <a class="el" href="_d_t_equipment_instance_8h_source.html">DTEquipmentInstance.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00295">GetGrantedEquipmentAbilitySpecHandles()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00181">GrantEquipmentAbilities()</a>, <a class="el" href="_d_t_equipment_instance_8h_source.html#l00106">HasGrantedEquipmentAbilities()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00243">RemoveEquipmentAbilities()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00307">GetGrantedEquipmentAbilitySpecHandles()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00168">GrantEquipmentAbilities()</a>, <a class="el" href="_d_t_equipment_instance_8h_source.html#l00094">HasGrantedEquipmentAbilities()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00230">RemoveEquipmentAbilities()</a>.</p>
 
 </div>
 </div>
@@ -919,9 +844,9 @@ Protected Attributes</h2></td></tr>
 
 <p>BaseStat modifiers — always applied while equipped in any slot. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8h_source.html#l00170">170</a> of file <a class="el" href="_d_t_equipment_instance_8h_source.html">DTEquipmentInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_equipment_instance_8h_source.html#l00158">158</a> of file <a class="el" href="_d_t_equipment_instance_8h_source.html">DTEquipmentInstance.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00403">ApplyStats()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00437">RemoveStats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00357">ApplyStats()</a>, and <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00391">RemoveStats()</a>.</p>
 
 </div>
 </div>

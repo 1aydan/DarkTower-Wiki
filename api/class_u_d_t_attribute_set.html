@@ -142,8 +142,8 @@ Inheritance diagram for UDTAttributeSet:</div>
  <div class="center">
   <img src="class_u_d_t_attribute_set.png" usemap="#UDTAttributeSet_map" alt=""/>
   <map id="UDTAttributeSet_map" name="UDTAttributeSet_map">
-<area href="class_u_d_t_attribute_set_base.html" title="Base Attribute Set class for Dark Tower." alt="UDTAttributeSetBase" shape="rect" coords="0,56,139,80"/>
-<area href="class_u_d_t_actor_attribute_set.html" title="Base Attribute Set class for ability actors since they are lazy loaded." alt="UDTActorAttributeSet" shape="rect" coords="0,168,139,192"/>
+<area href="class_u_d_t_attribute_set_base.html" title="Base Attribute Set class for Dark Tower." alt="UDTAttributeSetBase" shape="rect" coords="0,56,132,80"/>
+<area href="class_u_d_t_actor_attribute_set.html" title="Base Attribute Set class for ability actors since they are lazy loaded." alt="UDTActorAttributeSet" shape="rect" coords="0,168,132,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -160,6 +160,15 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_u_d_t_attribute_set_base"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_u_d_t_attribute_set_base.html">UDTAttributeSetBase</a></td></tr>
 <tr class="memitem:aa72cd6ba058f7023fcb711304cbd54e2 pub_methods_class_u_d_t_attribute_set_base" id="r_aa72cd6ba058f7023fcb711304cbd54e2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_attribute_set_base.html#aa72cd6ba058f7023fcb711304cbd54e2">UDTAttributeSetBase</a> ()</td></tr>
 <tr class="memitem:a04b24a6ab1773da13068dd996ee5c9dd pub_methods_class_u_d_t_attribute_set_base" id="r_a04b24a6ab1773da13068dd996ee5c9dd"><td class="memItemLeft"><a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_attribute_set_base.html#a04b24a6ab1773da13068dd996ee5c9dd">GetDTAbilitySystemComponent</a> () const</td></tr>
+<tr class="memitem:a7cab2a262c061c74e63a94416c03a935 pub_methods_class_u_d_t_attribute_set_base" id="r_a7cab2a262c061c74e63a94416c03a935"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_attribute_set_base.html#a7cab2a262c061c74e63a94416c03a935">GetClampMinimumValueFor</a> (const FGameplayAttribute &amp;Attribute)</td></tr>
+<tr class="memdesc:a7cab2a262c061c74e63a94416c03a935 pub_methods_class_u_d_t_attribute_set_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to get the minimum clamp value for a given attribute.  <br /></td></tr>
+<tr class="memitem:a9d092d41caf4cd358e2f231a115661ca pub_methods_class_u_d_t_attribute_set_base" id="r_a9d092d41caf4cd358e2f231a115661ca"><td class="memItemLeft">virtual const FGameplayTagContainer &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_attribute_set_base.html#a9d092d41caf4cd358e2f231a115661ca">GetSourceTagsFromContext</a> (const FGameplayEffectModCallbackData &amp;Data)</td></tr>
+<tr class="memdesc:a9d092d41caf4cd358e2f231a115661ca pub_methods_class_u_d_t_attribute_set_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the aggregated SourceTags for this EffectSpec.  <br /></td></tr>
+<tr class="memitem:a83d7ee1108a27152a616a2ea0984c749 pub_methods_class_u_d_t_attribute_set_base" id="r_a83d7ee1108a27152a616a2ea0984c749"><td class="memTemplParams" colspan="2">template&lt;class TReturnType&gt; </td></tr>
+<tr class="memitem:a83d7ee1108a27152a616a2ea0984c749 pub_methods_class_u_d_t_attribute_set_base template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_attribute_set_base.html#a83d7ee1108a27152a616a2ea0984c749">GetSourceAndTargetFromContext</a> (const FGameplayEffectModCallbackData &amp;Data, TReturnType *&amp;SourceActor, TReturnType *&amp;TargetActor)</td></tr>
+<tr class="memdesc:a83d7ee1108a27152a616a2ea0984c749 pub_methods_class_u_d_t_attribute_set_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts Source and Target actors from the mod callback data.  <br /></td></tr>
+<tr class="memitem:aff866eb6109a6fe402b435d8bbf576c3 pub_methods_class_u_d_t_attribute_set_base" id="r_aff866eb6109a6fe402b435d8bbf576c3"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_attribute_set_base.html#aff866eb6109a6fe402b435d8bbf576c3">AdjustAttributeForMaxChange</a> (FGameplayAttributeData &amp;AffectedAttribute, const FGameplayAttributeData &amp;MaxAttribute, float NewMaxValue, const FGameplayAttribute &amp;AffectedAttributeProperty) const</td></tr>
+<tr class="memdesc:aff866eb6109a6fe402b435d8bbf576c3 pub_methods_class_u_d_t_attribute_set_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to proportionally adjust the value of an attribute when its associated max attribute changes.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -236,11 +245,20 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aa8c19ff229a1d79f51eb3702693a1189" id="r_aa8c19ff229a1d79f51eb3702693a1189"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa8c19ff229a1d79f51eb3702693a1189">OnRep_HealthLeech</a> (const FGameplayAttributeData &amp;OldHealthLeech)</td></tr>
 <tr class="memitem:afdb68ece6bdbd1ce2bd3dff250b6b2ff" id="r_afdb68ece6bdbd1ce2bd3dff250b6b2ff"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afdb68ece6bdbd1ce2bd3dff250b6b2ff">OnRep_IgniteDamage</a> (const FGameplayAttributeData &amp;OldIgniteDamage)</td></tr>
 <tr class="memitem:a2aafdb2dd5b8f91d4db8aa3b31534880" id="r_a2aafdb2dd5b8f91d4db8aa3b31534880"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2aafdb2dd5b8f91d4db8aa3b31534880">SetAttributeClamped</a> (const FGameplayAttribute &amp;Attribute, const float Value, const float MaxValue)</td></tr>
-<tr class="memitem:abe0e507a40d88fa8e1018b8ab6c06817" id="r_abe0e507a40d88fa8e1018b8ab6c06817"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#abe0e507a40d88fa8e1018b8ab6c06817">HandleDamageAttribute</a> (const FGSCAttributeSetExecutionData &amp;ExecutionData)</td></tr>
-<tr class="memitem:a70606b1b408e3d4f78d85a79d600843b" id="r_a70606b1b408e3d4f78d85a79d600843b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a70606b1b408e3d4f78d85a79d600843b">HandleHealthAttribute</a> (const FGSCAttributeSetExecutionData &amp;ExecutionData)</td></tr>
-<tr class="memitem:a9ea892678aaef600e7eff2af34c00142" id="r_a9ea892678aaef600e7eff2af34c00142"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9ea892678aaef600e7eff2af34c00142">HandleManaAttribute</a> (const FGSCAttributeSetExecutionData &amp;ExecutionData)</td></tr>
-<tr class="memitem:ac5d5fbf5da05b7092f540c8845ade493" id="r_ac5d5fbf5da05b7092f540c8845ade493"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac5d5fbf5da05b7092f540c8845ade493">HandleArmorAttribute</a> (const FGSCAttributeSetExecutionData &amp;ExecutionData)</td></tr>
-<tr class="memitem:a253fda995492f8bd598b63794d99d340" id="r_a253fda995492f8bd598b63794d99d340"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a253fda995492f8bd598b63794d99d340">HandleShieldAttribute</a> (const FGSCAttributeSetExecutionData &amp;ExecutionData)</td></tr>
+<tr class="memitem:a1215581507a4f924060bcd2a9255b594" id="r_a1215581507a4f924060bcd2a9255b594"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1215581507a4f924060bcd2a9255b594">HandleDamageAttribute</a> (const <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;ExecutionData)</td></tr>
+<tr class="memitem:a4b0080a44d133fae9562a090d2798eb8" id="r_a4b0080a44d133fae9562a090d2798eb8"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4b0080a44d133fae9562a090d2798eb8">HandleHealthAttribute</a> (const <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;ExecutionData)</td></tr>
+<tr class="memitem:a8d60749c151cb765461d90436d0971e8" id="r_a8d60749c151cb765461d90436d0971e8"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8d60749c151cb765461d90436d0971e8">HandleManaAttribute</a> (const <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;ExecutionData)</td></tr>
+<tr class="memitem:a79204d3b60df9a5a6ed9d13973fa3857" id="r_a79204d3b60df9a5a6ed9d13973fa3857"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a79204d3b60df9a5a6ed9d13973fa3857">HandleArmorAttribute</a> (const <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;ExecutionData)</td></tr>
+<tr class="memitem:a594f28e06385e9ed9db4c017c9950971" id="r_a594f28e06385e9ed9db4c017c9950971"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a594f28e06385e9ed9db4c017c9950971">HandleShieldAttribute</a> (const <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;ExecutionData)</td></tr>
+<tr class="inherit_header pro_methods_class_u_d_t_attribute_set_base"><td colspan="2">Protected Member Functions inherited from <a class="el" href="class_u_d_t_attribute_set_base.html">UDTAttributeSetBase</a></td></tr>
+<tr class="memitem:a52af4df98ddf6ccab9da556b0f194a25 pro_methods_class_u_d_t_attribute_set_base" id="r_a52af4df98ddf6ccab9da556b0f194a25"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_attribute_set_base.html#a52af4df98ddf6ccab9da556b0f194a25">GetExecutionDataFromMod</a> (const FGameplayEffectModCallbackData &amp;Data, OUT <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;OutExecutionData)</td></tr>
+<tr class="memdesc:a52af4df98ddf6ccab9da556b0f194a25 pro_methods_class_u_d_t_attribute_set_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills out an <a class="el" href="struct_f_d_t_attribute_set_execution_data.html" title="Structure holding various information to deal with AttributeSet PostGameplayEffectExecute,...">FDTAttributeSetExecutionData</a> structure based on provided mod callback data.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_static_methods_class_u_d_t_attribute_set_base"><td colspan="2">Static Protected Member Functions inherited from <a class="el" href="class_u_d_t_attribute_set_base.html">UDTAttributeSetBase</a></td></tr>
+<tr class="memitem:a3776894b93435d81e28e6a8db766cc76 pro_static_methods_class_u_d_t_attribute_set_base" id="r_a3776894b93435d81e28e6a8db766cc76"><td class="memItemLeft">static <a class="el" href="class_u_d_t_ability_core_component.html">UDTAbilityCoreComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_attribute_set_base.html#a3776894b93435d81e28e6a8db766cc76">GetCoreComponent</a> (const AActor *Actor)</td></tr>
+<tr class="memdesc:a3776894b93435d81e28e6a8db766cc76 pro_static_methods_class_u_d_t_attribute_set_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_u_d_t_ability_core_component.html" title="The per-actor GAS hub for Dark Tower.">UDTAbilityCoreComponent</a> of an actor, if it has one.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main Attribute Set class for Dark Tower. </p>
@@ -262,7 +280,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00062">62</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00060">60</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 </div>
 </div>
@@ -289,9 +307,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">187</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p>Reimplemented from <a class="el" href="class_u_d_t_attribute_set_base.html#a26b61740d2e5b4d7a67345606ba918fd">UDTAttributeSetBase</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00051">Armor</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00166">BleedChance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00136">BlockChance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00141">BlockEffectiveness</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00151">CloseCombatDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00156">CloseCombatDamageReduction</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00121">ColdResistance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00101">CritChance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00106">CritDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00171">CritDamageReduction</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00176">DamageOverTimeMult</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00111">DamageResistance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00071">Dexterity</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00116">FireResistance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00021">Health</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00181">HealthLeech</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00146">HealthOnBlock</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00031">HealthRegenRate</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00186">IgniteDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00076">Intelligence</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00126">LightningResistance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00036">Mana</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00046">ManaRegenRate</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00026">MaxHealth</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00041">MaxMana</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00061">MaxShield</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00086">PhysicalDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00161">PhysicalPenetration</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00131">PoisonResistance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00096">RangedDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00056">Shield</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00091">SpellDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00066">Strength</a>, and <a class="el" href="_d_t_attribute_set_8h_source.html#l00081">Vitality</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">251</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00051">Armor</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00167">BleedChance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00136">BlockChance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00142">BlockEffectiveness</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00152">CloseCombatDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00157">CloseCombatDamageReduction</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00121">ColdResistance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00101">CritChance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00106">CritDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00172">CritDamageReduction</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00177">DamageOverTimeMult</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00111">DamageResistance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00071">Dexterity</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00116">FireResistance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00021">Health</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00182">HealthLeech</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00147">HealthOnBlock</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00031">HealthRegenRate</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00187">IgniteDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00076">Intelligence</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00126">LightningResistance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00036">Mana</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00046">ManaRegenRate</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00026">MaxHealth</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00041">MaxMana</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00061">MaxShield</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00086">PhysicalDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00162">PhysicalPenetration</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00131">PoisonResistance</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00096">RangedDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00056">Shield</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00091">SpellDamage</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00066">Strength</a>, and <a class="el" href="_d_t_attribute_set_8h_source.html#l00081">Vitality</a>.</p>
 
 </div>
 </div>
@@ -310,7 +330,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00074">74</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00072">72</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 </div>
 </div>
@@ -329,9 +349,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00086">86</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00084">84</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00216">FDTEquipmentStatHelper::ApplyAggregatedStatsAsEffect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_stat_helper_8cpp_source.html#l00224">FDTEquipmentStatHelper::ApplyAggregatedStatsAsEffect()</a>.</p>
 
 </div>
 </div>
@@ -350,12 +370,14 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00050">50</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00048">48</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>.</p>
 
 </div>
 </div>
-<a id="ac5d5fbf5da05b7092f540c8845ade493" name="ac5d5fbf5da05b7092f540c8845ade493"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5d5fbf5da05b7092f540c8845ade493">&#9670;&#160;</a></span>HandleArmorAttribute()</h2>
+<a id="a79204d3b60df9a5a6ed9d13973fa3857" name="a79204d3b60df9a5a6ed9d13973fa3857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79204d3b60df9a5a6ed9d13973fa3857">&#9670;&#160;</a></span>HandleArmorAttribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,7 +388,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void UDTAttributeSet::HandleArmorAttribute </td>
           <td>(</td>
-          <td class="paramtype">const FGSCAttributeSetExecutionData &amp;</td>          <td class="paramname"><span class="paramname"><em>ExecutionData</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ExecutionData</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -377,14 +399,14 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00518">518</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00590">590</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00156">PostGameplayEffectExecute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00220">PostGameplayEffectExecute()</a>.</p>
 
 </div>
 </div>
-<a id="abe0e507a40d88fa8e1018b8ab6c06817" name="abe0e507a40d88fa8e1018b8ab6c06817"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe0e507a40d88fa8e1018b8ab6c06817">&#9670;&#160;</a></span>HandleDamageAttribute()</h2>
+<a id="a1215581507a4f924060bcd2a9255b594" name="a1215581507a4f924060bcd2a9255b594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1215581507a4f924060bcd2a9255b594">&#9670;&#160;</a></span>HandleDamageAttribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,7 +417,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void UDTAttributeSet::HandleDamageAttribute </td>
           <td>(</td>
-          <td class="paramtype">const FGSCAttributeSetExecutionData &amp;</td>          <td class="paramname"><span class="paramname"><em>ExecutionData</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ExecutionData</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -406,16 +428,16 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00419">419</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00483">483</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_modifier_8h_source.html#l00017">EffectCauser</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00362">UDTBlueprintLibrary::EffectContextGetContextTags()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00180">UDTAbilityCoreComponent::HandleDamageDealt()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00201">UDTAbilityCoreComponent::HandleDamageEvent()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00169">UDTAbilityCoreComponent::HandleKill()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00030">UDTAbilityCoreComponent::IsGodMode()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00063">FDTAttributeSetExecutionData::Context</a>, <a class="el" href="_d_t_combat_modifier_8h_source.html#l00017">EffectCauser</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00351">UDTBlueprintLibrary::EffectContextGetContextTags()</a>, <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00062">UDTAttributeSetBase::GetClampMinimumValueFor()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00254">UDTAbilityCoreComponent::HandleDamageDealt()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00318">UDTAbilityCoreComponent::HandleDamageEvent()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00336">UDTAbilityCoreComponent::HandleHealthChange()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00243">UDTAbilityCoreComponent::HandleKill()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00520">UDTAbilityCoreComponent::IsAlive()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00193">UDTAbilityCoreComponent::IsDemiGodMode()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00182">UDTAbilityCoreComponent::IsGodMode()</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00024">FDTAttributeSetExecutionData::SourceActor</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00036">FDTAttributeSetExecutionData::SourceCoreComponent</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00066">FDTAttributeSetExecutionData::SourceTags</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00028">FDTAttributeSetExecutionData::TargetActor</a>, and <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00040">FDTAttributeSetExecutionData::TargetCoreComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00156">PostGameplayEffectExecute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00220">PostGameplayEffectExecute()</a>.</p>
 
 </div>
 </div>
-<a id="a70606b1b408e3d4f78d85a79d600843b" name="a70606b1b408e3d4f78d85a79d600843b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70606b1b408e3d4f78d85a79d600843b">&#9670;&#160;</a></span>HandleHealthAttribute()</h2>
+<a id="a4b0080a44d133fae9562a090d2798eb8" name="a4b0080a44d133fae9562a090d2798eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b0080a44d133fae9562a090d2798eb8">&#9670;&#160;</a></span>HandleHealthAttribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +448,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void UDTAttributeSet::HandleHealthAttribute </td>
           <td>(</td>
-          <td class="paramtype">const FGSCAttributeSetExecutionData &amp;</td>          <td class="paramname"><span class="paramname"><em>ExecutionData</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ExecutionData</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -437,14 +459,16 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00488">488</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00560">560</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00156">PostGameplayEffectExecute()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00072">FDTAttributeSetExecutionData::DeltaValue</a>, <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00062">UDTAttributeSetBase::GetClampMinimumValueFor()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00336">UDTAbilityCoreComponent::HandleHealthChange()</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00066">FDTAttributeSetExecutionData::SourceTags</a>, and <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00040">FDTAttributeSetExecutionData::TargetCoreComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00220">PostGameplayEffectExecute()</a>.</p>
 
 </div>
 </div>
-<a id="a9ea892678aaef600e7eff2af34c00142" name="a9ea892678aaef600e7eff2af34c00142"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ea892678aaef600e7eff2af34c00142">&#9670;&#160;</a></span>HandleManaAttribute()</h2>
+<a id="a8d60749c151cb765461d90436d0971e8" name="a8d60749c151cb765461d90436d0971e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d60749c151cb765461d90436d0971e8">&#9670;&#160;</a></span>HandleManaAttribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -455,7 +479,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void UDTAttributeSet::HandleManaAttribute </td>
           <td>(</td>
-          <td class="paramtype">const FGSCAttributeSetExecutionData &amp;</td>          <td class="paramname"><span class="paramname"><em>ExecutionData</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ExecutionData</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -466,14 +490,16 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00503">503</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00575">575</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00156">PostGameplayEffectExecute()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00072">FDTAttributeSetExecutionData::DeltaValue</a>, <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00062">UDTAttributeSetBase::GetClampMinimumValueFor()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00351">UDTAbilityCoreComponent::HandleManaChange()</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00066">FDTAttributeSetExecutionData::SourceTags</a>, and <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00040">FDTAttributeSetExecutionData::TargetCoreComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00220">PostGameplayEffectExecute()</a>.</p>
 
 </div>
 </div>
-<a id="a253fda995492f8bd598b63794d99d340" name="a253fda995492f8bd598b63794d99d340"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a253fda995492f8bd598b63794d99d340">&#9670;&#160;</a></span>HandleShieldAttribute()</h2>
+<a id="a594f28e06385e9ed9db4c017c9950971" name="a594f28e06385e9ed9db4c017c9950971"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a594f28e06385e9ed9db4c017c9950971">&#9670;&#160;</a></span>HandleShieldAttribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,7 +510,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void UDTAttributeSet::HandleShieldAttribute </td>
           <td>(</td>
-          <td class="paramtype">const FGSCAttributeSetExecutionData &amp;</td>          <td class="paramname"><span class="paramname"><em>ExecutionData</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_attribute_set_execution_data.html">FDTAttributeSetExecutionData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ExecutionData</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -495,9 +521,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00524">524</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00596">596</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00156">PostGameplayEffectExecute()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00062">UDTAttributeSetBase::GetClampMinimumValueFor()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00220">PostGameplayEffectExecute()</a>.</p>
 
 </div>
 </div>
@@ -524,7 +552,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00370">370</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00434">434</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00051">Armor</a>.</p>
 
@@ -553,9 +581,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00340">340</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00404">404</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00166">BleedChance</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00167">BleedChance</a>.</p>
 
 </div>
 </div>
@@ -582,7 +610,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00310">310</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00374">374</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00136">BlockChance</a>.</p>
 
@@ -611,9 +639,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00315">315</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00379">379</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00141">BlockEffectiveness</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00142">BlockEffectiveness</a>.</p>
 
 </div>
 </div>
@@ -640,9 +668,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00325">325</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00389">389</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00151">CloseCombatDamage</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00152">CloseCombatDamage</a>.</p>
 
 </div>
 </div>
@@ -669,9 +697,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00330">330</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00394">394</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00156">CloseCombatDamageReduction</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00157">CloseCombatDamageReduction</a>.</p>
 
 </div>
 </div>
@@ -698,7 +726,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00295">295</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00359">359</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00121">ColdResistance</a>.</p>
 
@@ -727,7 +755,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00275">275</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00339">339</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00101">CritChance</a>.</p>
 
@@ -756,7 +784,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00280">280</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00344">344</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00106">CritDamage</a>.</p>
 
@@ -785,9 +813,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00345">345</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00409">409</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00171">CritDamageReduction</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00172">CritDamageReduction</a>.</p>
 
 </div>
 </div>
@@ -814,9 +842,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00350">350</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00414">414</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00176">DamageOverTimeMult</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00177">DamageOverTimeMult</a>.</p>
 
 </div>
 </div>
@@ -843,7 +871,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00285">285</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00349">349</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00111">DamageResistance</a>.</p>
 
@@ -872,7 +900,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00390">390</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00454">454</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00071">Dexterity</a>.</p>
 
@@ -901,7 +929,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00290">290</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00354">354</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00116">FireResistance</a>.</p>
 
@@ -932,7 +960,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_u_d_t_actor_attribute_set.html#a4f29b1e6eb179120358b05a51e52aa78">UDTActorAttributeSet</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00235">235</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00299">299</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00021">Health</a>.</p>
 
@@ -961,9 +989,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00355">355</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00419">419</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00181">HealthLeech</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00182">HealthLeech</a>.</p>
 
 </div>
 </div>
@@ -990,9 +1018,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00320">320</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00384">384</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00146">HealthOnBlock</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00147">HealthOnBlock</a>.</p>
 
 </div>
 </div>
@@ -1021,7 +1049,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_u_d_t_actor_attribute_set.html#af28b456af46e9d77d5d831d55e4b12f8">UDTActorAttributeSet</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00245">245</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00309">309</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00031">HealthRegenRate</a>.</p>
 
@@ -1050,9 +1078,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00360">360</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00424">424</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00186">IgniteDamage</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00187">IgniteDamage</a>.</p>
 
 </div>
 </div>
@@ -1079,7 +1107,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00395">395</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00459">459</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00076">Intelligence</a>.</p>
 
@@ -1108,7 +1136,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00300">300</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00364">364</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00126">LightningResistance</a>.</p>
 
@@ -1137,7 +1165,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00250">250</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00314">314</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00036">Mana</a>.</p>
 
@@ -1166,7 +1194,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00365">365</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00429">429</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00046">ManaRegenRate</a>.</p>
 
@@ -1197,7 +1225,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_u_d_t_actor_attribute_set.html#a5c369ba864c73fa0c4718ece99aa6000">UDTActorAttributeSet</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00240">240</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00304">304</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00026">MaxHealth</a>.</p>
 
@@ -1226,7 +1254,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00255">255</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00319">319</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00041">MaxMana</a>.</p>
 
@@ -1255,7 +1283,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00380">380</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00444">444</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00061">MaxShield</a>.</p>
 
@@ -1284,7 +1312,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00260">260</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00324">324</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00086">PhysicalDamage</a>.</p>
 
@@ -1313,9 +1341,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00335">335</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00399">399</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00161">PhysicalPenetration</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00162">PhysicalPenetration</a>.</p>
 
 </div>
 </div>
@@ -1342,7 +1370,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00305">305</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00369">369</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00131">PoisonResistance</a>.</p>
 
@@ -1371,7 +1399,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00270">270</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00334">334</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00096">RangedDamage</a>.</p>
 
@@ -1400,7 +1428,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00375">375</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00439">439</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00056">Shield</a>.</p>
 
@@ -1429,7 +1457,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00265">265</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00329">329</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00091">SpellDamage</a>.</p>
 
@@ -1458,7 +1486,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00385">385</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00449">449</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00066">Strength</a>.</p>
 
@@ -1487,7 +1515,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00400">400</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00464">464</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00081">Vitality</a>.</p>
 
@@ -1525,7 +1553,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00151">151</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00198">198</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>.</p>
 
 </div>
 </div>
@@ -1552,9 +1582,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00156">156</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p>Reimplemented from <a class="el" href="class_u_d_t_attribute_set_base.html#a9d32dcb3568ac856908c052f1c2fce11">UDTAttributeSetBase</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00518">HandleArmorAttribute()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00419">HandleDamageAttribute()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00488">HandleHealthAttribute()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00503">HandleManaAttribute()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00524">HandleShieldAttribute()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00220">220</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00094">UDTAttributeSetBase::GetExecutionDataFromMod()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00590">HandleArmorAttribute()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00483">HandleDamageAttribute()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00560">HandleHealthAttribute()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00575">HandleManaAttribute()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00596">HandleShieldAttribute()</a>.</p>
 
 </div>
 </div>
@@ -1585,9 +1617,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00094">94</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p>Reimplemented from <a class="el" href="class_u_d_t_attribute_set_base.html#a1a73097f7c1cfcc90abd8537691c0fdc">UDTAttributeSetBase</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_attribute_set_8h_source.html#l00021">Health</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00036">Mana</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00026">MaxHealth</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00041">MaxMana</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00061">MaxShield</a>, and <a class="el" href="_d_t_attribute_set_8h_source.html#l00056">Shield</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00092">92</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00073">UDTAttributeSetBase::AdjustAttributeForMaxChange()</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00021">Health</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00036">Mana</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00026">MaxHealth</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00041">MaxMana</a>, <a class="el" href="_d_t_attribute_set_8h_source.html#l00061">MaxShield</a>, and <a class="el" href="_d_t_attribute_set_8h_source.html#l00056">Shield</a>.</p>
 
 </div>
 </div>
@@ -1623,7 +1657,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00405">405</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00469">469</a> of file <a class="el" href="_d_t_attribute_set_8cpp_source.html">DTAttributeSet.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, and <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00062">UDTAttributeSetBase::GetClampMinimumValueFor()</a>.</p>
 
 </div>
 </div>
@@ -1642,7 +1678,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00051">51</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00370">OnRep_Armor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00434">OnRep_Armor()</a>.</p>
 
 </div>
 </div>
@@ -1658,9 +1694,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00166">166</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00167">167</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00340">OnRep_BleedChance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00404">OnRep_BleedChance()</a>.</p>
 
 </div>
 </div>
@@ -1678,7 +1714,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00136">136</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00310">OnRep_BlockChance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00374">OnRep_BlockChance()</a>.</p>
 
 </div>
 </div>
@@ -1694,9 +1730,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00141">141</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00142">142</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00315">OnRep_BlockEffectiveness()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00379">OnRep_BlockEffectiveness()</a>.</p>
 
 </div>
 </div>
@@ -1712,9 +1748,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00151">151</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00152">152</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00325">OnRep_CloseCombatDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00389">OnRep_CloseCombatDamage()</a>.</p>
 
 </div>
 </div>
@@ -1730,9 +1766,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00156">156</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00157">157</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00330">OnRep_CloseCombatDamageReduction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00394">OnRep_CloseCombatDamageReduction()</a>.</p>
 
 </div>
 </div>
@@ -1750,7 +1786,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00121">121</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00295">OnRep_ColdResistance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00359">OnRep_ColdResistance()</a>.</p>
 
 </div>
 </div>
@@ -1768,7 +1804,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00101">101</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00275">OnRep_CritChance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00339">OnRep_CritChance()</a>.</p>
 
 </div>
 </div>
@@ -1786,7 +1822,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00106">106</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00280">OnRep_CritDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00344">OnRep_CritDamage()</a>.</p>
 
 </div>
 </div>
@@ -1802,9 +1838,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00171">171</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00172">172</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00345">OnRep_CritDamageReduction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00409">OnRep_CritDamageReduction()</a>.</p>
 
 </div>
 </div>
@@ -1820,7 +1856,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00192">192</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00193">193</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
 </div>
 </div>
@@ -1836,9 +1872,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00176">176</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00177">177</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00350">OnRep_DamageOverTimeMult()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00414">OnRep_DamageOverTimeMult()</a>.</p>
 
 </div>
 </div>
@@ -1856,7 +1892,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00111">111</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00285">OnRep_DamageResistance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00349">OnRep_DamageResistance()</a>.</p>
 
 </div>
 </div>
@@ -1874,7 +1910,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00390">OnRep_Dexterity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00454">OnRep_Dexterity()</a>.</p>
 
 </div>
 </div>
@@ -1892,7 +1928,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00116">116</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00290">OnRep_FireResistance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00354">OnRep_FireResistance()</a>.</p>
 
 </div>
 </div>
@@ -1910,7 +1946,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00021">21</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_actor_attribute_set_8cpp_source.html#l00006">UDTActorAttributeSet::OnRep_Health()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00235">OnRep_Health()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00094">PreAttributeChange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_actor_attribute_set_8cpp_source.html#l00006">UDTActorAttributeSet::OnRep_Health()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00299">OnRep_Health()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00092">PreAttributeChange()</a>.</p>
 
 </div>
 </div>
@@ -1926,9 +1962,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00181">181</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00182">182</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00355">OnRep_HealthLeech()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00419">OnRep_HealthLeech()</a>.</p>
 
 </div>
 </div>
@@ -1944,9 +1980,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00146">146</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00147">147</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00320">OnRep_HealthOnBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00384">OnRep_HealthOnBlock()</a>.</p>
 
 </div>
 </div>
@@ -1964,7 +2000,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00031">31</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_actor_attribute_set_8cpp_source.html#l00016">UDTActorAttributeSet::OnRep_HealthRegenRate()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00245">OnRep_HealthRegenRate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_actor_attribute_set_8cpp_source.html#l00016">UDTActorAttributeSet::OnRep_HealthRegenRate()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00309">OnRep_HealthRegenRate()</a>.</p>
 
 </div>
 </div>
@@ -1980,9 +2016,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00186">186</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00187">187</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00360">OnRep_IgniteDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00424">OnRep_IgniteDamage()</a>.</p>
 
 </div>
 </div>
@@ -2000,7 +2036,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00076">76</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00395">OnRep_Intelligence()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00459">OnRep_Intelligence()</a>.</p>
 
 </div>
 </div>
@@ -2018,7 +2054,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00126">126</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00300">OnRep_LightningResistance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00364">OnRep_LightningResistance()</a>.</p>
 
 </div>
 </div>
@@ -2036,7 +2072,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00036">36</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00250">OnRep_Mana()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00094">PreAttributeChange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00314">OnRep_Mana()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00092">PreAttributeChange()</a>.</p>
 
 </div>
 </div>
@@ -2054,7 +2090,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00046">46</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00365">OnRep_ManaRegenRate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00429">OnRep_ManaRegenRate()</a>.</p>
 
 </div>
 </div>
@@ -2072,7 +2108,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00026">26</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_actor_attribute_set_8cpp_source.html#l00011">UDTActorAttributeSet::OnRep_MaxHealth()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00240">OnRep_MaxHealth()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00094">PreAttributeChange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_actor_attribute_set_8cpp_source.html#l00011">UDTActorAttributeSet::OnRep_MaxHealth()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00304">OnRep_MaxHealth()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00092">PreAttributeChange()</a>.</p>
 
 </div>
 </div>
@@ -2090,7 +2126,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00041">41</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00255">OnRep_MaxMana()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00094">PreAttributeChange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00319">OnRep_MaxMana()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00092">PreAttributeChange()</a>.</p>
 
 </div>
 </div>
@@ -2108,7 +2144,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00061">61</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00380">OnRep_MaxShield()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00094">PreAttributeChange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00444">OnRep_MaxShield()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00092">PreAttributeChange()</a>.</p>
 
 </div>
 </div>
@@ -2126,7 +2162,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00086">86</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00260">OnRep_PhysicalDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00324">OnRep_PhysicalDamage()</a>.</p>
 
 </div>
 </div>
@@ -2142,9 +2178,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00161">161</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00162">162</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00335">OnRep_PhysicalPenetration()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00399">OnRep_PhysicalPenetration()</a>.</p>
 
 </div>
 </div>
@@ -2162,7 +2198,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00131">131</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00305">OnRep_PoisonResistance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00369">OnRep_PoisonResistance()</a>.</p>
 
 </div>
 </div>
@@ -2180,7 +2216,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00096">96</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00270">OnRep_RangedDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00334">OnRep_RangedDamage()</a>.</p>
 
 </div>
 </div>
@@ -2198,7 +2234,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00056">56</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00375">OnRep_Shield()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00094">PreAttributeChange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00439">OnRep_Shield()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00092">PreAttributeChange()</a>.</p>
 
 </div>
 </div>
@@ -2216,7 +2252,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00091">91</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00265">OnRep_SpellDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00329">OnRep_SpellDamage()</a>.</p>
 
 </div>
 </div>
@@ -2234,7 +2270,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00066">66</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00385">OnRep_Strength()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00449">OnRep_Strength()</a>.</p>
 
 </div>
 </div>
@@ -2252,7 +2288,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_attribute_set_8h_source.html#l00081">81</a> of file <a class="el" href="_d_t_attribute_set_8h_source.html">DTAttributeSet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00187">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00400">OnRep_Vitality()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00251">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00464">OnRep_Vitality()</a>.</p>
 
 </div>
 </div>

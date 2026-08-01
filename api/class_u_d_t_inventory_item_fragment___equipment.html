@@ -147,18 +147,64 @@ Inheritance diagram for UDTInventoryItemFragment_Equipment:</div>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af5f1362f94bbd289c95840fb293104cb" id="r_af5f1362f94bbd289c95840fb293104cb"><td class="memItemLeft">TArray&lt; FItemStatEntry &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af5f1362f94bbd289c95840fb293104cb">ForcedBaseStats</a></td></tr>
 <tr class="memdesc:af5f1362f94bbd289c95840fb293104cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stats that are guaranteed to roll on this item.  <br /></td></tr>
+<tr class="memitem:a50ef08e1df92e1f00a628bbbe682b054" id="r_a50ef08e1df92e1f00a628bbbe682b054"><td class="memItemLeft">TArray&lt; TObjectPtr&lt; UDataTable &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a50ef08e1df92e1f00a628bbbe682b054">ItemStatTables</a></td></tr>
+<tr class="memdesc:a50ef08e1df92e1f00a628bbbe682b054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-item stat tables rolled for this item in addition to the item type's global stat table.  <br /></td></tr>
+<tr class="memitem:a21cefa057d3d13aea3ab3a66d3159d21" id="r_a21cefa057d3d13aea3ab3a66d3159d21"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a21cefa057d3d13aea3ab3a66d3159d21">bIgnoreTypeStatTable</a> = false</td></tr>
+<tr class="memdesc:a21cefa057d3d13aea3ab3a66d3159d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, only ItemStatTables feed this item's stat pool and the item type's global stat table is ignored entirely.  <br /></td></tr>
 <tr class="memitem:a5ec2577a17ef201f30bd9f00f942fe9a" id="r_a5ec2577a17ef201f30bd9f00f942fe9a"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a5ec2577a17ef201f30bd9f00f942fe9a">NumBaseStatsToRoll</a> = 2</td></tr>
 <tr class="memdesc:a5ec2577a17ef201f30bd9f00f942fe9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of base stats to roll on this item (includes forced stats).  <br /></td></tr>
 <tr class="memitem:a12e856c49bda9b569cc9c99c90c1f8ff" id="r_a12e856c49bda9b569cc9c99c90c1f8ff"><td class="memItemLeft">TArray&lt; TObjectPtr&lt; <a class="el" href="class_u_d_t_ability_set.html">UDTAbilitySet</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a12e856c49bda9b569cc9c99c90c1f8ff">GrantedAbilitySets</a></td></tr>
-<tr class="memdesc:a12e856c49bda9b569cc9c99c90c1f8ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline ability sets to grant to the instigator when this item is equipped.  <br /></td></tr>
+<tr class="memdesc:a12e856c49bda9b569cc9c99c90c1f8ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">ability sets to grant to the instigator when this item is equipped  <br /></td></tr>
+<tr class="memitem:a3c0a60a357f4a8320dc80c0a701544be" id="r_a3c0a60a357f4a8320dc80c0a701544be"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_d_t_rollable_ability_slot.html">FDTRollableAbilitySlot</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3c0a60a357f4a8320dc80c0a701544be">AbilitySlots</a></td></tr>
+<tr class="memdesc:a3c0a60a357f4a8320dc80c0a701544be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ability slots this item rolls.  <br /></td></tr>
 <tr class="memitem:a03c14cb0f07f982e0c87e2ce3248422e" id="r_a03c14cb0f07f982e0c87e2ce3248422e"><td class="memItemLeft">TObjectPtr&lt; UAnimSequence &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a03c14cb0f07f982e0c87e2ce3248422e">PreviewIdleAnimation</a></td></tr>
 <tr class="memdesc:a03c14cb0f07f982e0c87e2ce3248422e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Animation sequence to play on the preview character in the character select/inventory screen.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Dark Tower project-specific equipment fragment. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00018">18</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00019">19</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a3c0a60a357f4a8320dc80c0a701544be" name="a3c0a60a357f4a8320dc80c0a701544be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c0a60a357f4a8320dc80c0a701544be">&#9670;&#160;</a></span>AbilitySlots</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_d_t_rollable_ability_slot.html">FDTRollableAbilitySlot</a>&gt; UDTInventoryItemFragment_Equipment::AbilitySlots</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ability slots this item rolls. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00054">54</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00363">UDTLootSubsystem::RollItemAbilities()</a>.</p>
+
+</div>
+</div>
+<a id="a21cefa057d3d13aea3ab3a66d3159d21" name="a21cefa057d3d13aea3ab3a66d3159d21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21cefa057d3d13aea3ab3a66d3159d21">&#9670;&#160;</a></span>bIgnoreTypeStatTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTInventoryItemFragment_Equipment::bIgnoreTypeStatTable = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If true, only ItemStatTables feed this item's stat pool and the item type's global stat table is ignored entirely. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00040">40</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00113">UDTGlobalLootData::GetStatTablesForItem()</a>.</p>
+
+</div>
+</div>
 <a id="af5f1362f94bbd289c95840fb293104cb" name="af5f1362f94bbd289c95840fb293104cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5f1362f94bbd289c95840fb293104cb">&#9670;&#160;</a></span>ForcedBaseStats</h2>
 
@@ -174,9 +220,9 @@ Public Attributes</h2></td></tr>
 <p>Stats that are guaranteed to roll on this item. </p>
 <p>If StatRollValue is 0.0, the value will be rolled from the stat table. If StatRollValue is non-zero, that value is used directly without rolling. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00029">29</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00030">30</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01069">UDTLootSubsystem::RollForcedBaseStats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01144">UDTLootSubsystem::RollForcedBaseStats()</a>.</p>
 
 </div>
 </div>
@@ -192,11 +238,31 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Inline ability sets to grant to the instigator when this item is equipped. </p>
+<p>ability sets to grant to the instigator when this item is equipped </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00037">37</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00048">48</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00276">UDTEquipmentInstance::GetEquipmentAbilitySetsToGrant()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00263">UDTEquipmentInstance::GetEquipmentAbilitySetsToGrant()</a>.</p>
+
+</div>
+</div>
+<a id="a50ef08e1df92e1f00a628bbbe682b054" name="a50ef08e1df92e1f00a628bbbe682b054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ef08e1df92e1f00a628bbbe682b054">&#9670;&#160;</a></span>ItemStatTables</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;TObjectPtr&lt;UDataTable&gt; &gt; UDTInventoryItemFragment_Equipment::ItemStatTables</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Per-item stat tables rolled for this item in addition to the item type's global stat table. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00036">36</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_global_loot_data_8cpp_source.html#l00113">UDTGlobalLootData::GetStatTablesForItem()</a>.</p>
 
 </div>
 </div>
@@ -214,9 +280,9 @@ Public Attributes</h2></td></tr>
 
 <p>Total number of base stats to roll on this item (includes forced stats). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00033">33</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00044">44</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00981">UDTLootSubsystem::RollBaseStats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l01048">UDTLootSubsystem::RollBaseStats()</a>.</p>
 
 </div>
 </div>
@@ -235,7 +301,7 @@ Public Attributes</h2></td></tr>
 <p>Animation sequence to play on the preview character in the character select/inventory screen. </p>
 <p>Should be a relaxed idle appropriate for the weapon type (e.g. sword-at-rest, staff-held). Leave unset to use the character's default idle. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00045">45</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html#l00062">62</a> of file <a class="el" href="_d_t_inventory_item_fragment___equipment_8h_source.html">DTInventoryItemFragment_Equipment.h</a>.</p>
 
 </div>
 </div>

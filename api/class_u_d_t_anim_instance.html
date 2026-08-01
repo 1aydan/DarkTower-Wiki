@@ -146,6 +146,14 @@ Inheritance diagram for UDTAnimInstance:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac527274999e9218f64373359387cbb54" id="r_ac527274999e9218f64373359387cbb54"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac527274999e9218f64373359387cbb54">UDTAnimInstance</a> (const FObjectInitializer &amp;ObjectInitializer)</td></tr>
+<tr class="memitem:a60d2e70fe38e7c031b50bc2045e197b0" id="r_a60d2e70fe38e7c031b50bc2045e197b0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a60d2e70fe38e7c031b50bc2045e197b0">InitializeWithAbilitySystem</a> (UAbilitySystemComponent *ASC)</td></tr>
+<tr class="memdesc:a60d2e70fe38e7c031b50bc2045e197b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hooks the tag property map up to the given ASC.  <br /></td></tr>
+<tr class="memitem:a51b76c72ff9ffe579ff295cf711f218f" id="r_a51b76c72ff9ffe579ff295cf711f218f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a51b76c72ff9ffe579ff295cf711f218f">NativeInitializeAnimation</a> () override</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ae9f7e82ea6b573a9584e73d709976d07" id="r_ae9f7e82ea6b573a9584e73d709976d07"><td class="memItemLeft">FGameplayTagBlueprintPropertyMap&#160;</td><td class="memItemRight"><a class="el" href="#ae9f7e82ea6b573a9584e73d709976d07">GameplayTagPropertyMap</a></td></tr>
+<tr class="memdesc:ae9f7e82ea6b573a9584e73d709976d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gameplay tags that can be mapped to blueprint variables.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -157,8 +165,9 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>AnimInstance class for Dark Tower characters. </p>
+<p>Supports gameplay tag to blueprint variable mapping via GameplayTagPropertyMap. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_anim_instance_8h_source.html#l00013">13</a> of file <a class="el" href="_d_t_anim_instance_8h_source.html">DTAnimInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_anim_instance_8h_source.html#l00017">17</a> of file <a class="el" href="_d_t_anim_instance_8h_source.html">DTAnimInstance.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac527274999e9218f64373359387cbb54" name="ac527274999e9218f64373359387cbb54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac527274999e9218f64373359387cbb54">&#9670;&#160;</a></span>UDTAnimInstance()</h2>
@@ -175,11 +184,74 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00016">16</a> of file <a class="el" href="_d_t_anim_instance_8cpp_source.html">DTAnimInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00018">18</a> of file <a class="el" href="_d_t_anim_instance_8cpp_source.html">DTAnimInstance.cpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a60d2e70fe38e7c031b50bc2045e197b0" name="a60d2e70fe38e7c031b50bc2045e197b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d2e70fe38e7c031b50bc2045e197b0">&#9670;&#160;</a></span>InitializeWithAbilitySystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAnimInstance::InitializeWithAbilitySystem </td>
+          <td>(</td>
+          <td class="paramtype">UAbilitySystemComponent *</td>          <td class="paramname"><span class="paramname"><em>ASC</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Hooks the tag property map up to the given ASC. </p>
+<p>Called by <a class="el" href="class_u_d_t_ability_system_component.html#a54b02707495d2a7cf4f61b20b5db475f">UDTAbilitySystemComponent::InitAbilityActorInfo</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00023">23</a> of file <a class="el" href="_d_t_anim_instance_8cpp_source.html">DTAnimInstance.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_anim_instance_8h_source.html#l00029">GameplayTagPropertyMap</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>, and <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00037">NativeInitializeAnimation()</a>.</p>
+
+</div>
+</div>
+<a id="a51b76c72ff9ffe579ff295cf711f218f" name="a51b76c72ff9ffe579ff295cf711f218f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b76c72ff9ffe579ff295cf711f218f">&#9670;&#160;</a></span>NativeInitializeAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAnimInstance::NativeInitializeAnimation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00037">37</a> of file <a class="el" href="_d_t_anim_instance_8cpp_source.html">DTAnimInstance.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00023">InitializeWithAbilitySystem()</a>.</p>
+
+</div>
+</div>
 <a id="a392346739e5e34021785bb38cb05e14c" name="a392346739e5e34021785bb38cb05e14c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a392346739e5e34021785bb38cb05e14c">&#9670;&#160;</a></span>NativeUpdateAnimation()</h2>
 
@@ -203,13 +275,34 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00021">21</a> of file <a class="el" href="_d_t_anim_instance_8cpp_source.html">DTAnimInstance.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00047">47</a> of file <a class="el" href="_d_t_anim_instance_8cpp_source.html">DTAnimInstance.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00046">UDTCharacterMovementComponent::GetGroundInfo()</a>, <a class="el" href="_d_t_character_movement_component_8h_source.html#l00032">FCharacterGroundInfo::GroundDistance</a>, and <a class="el" href="_d_t_anim_instance_8h_source.html#l00022">GroundDistance</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00047">UDTCharacterMovementComponent::GetGroundInfo()</a>, <a class="el" href="_d_t_character_movement_component_8h_source.html#l00032">FCharacterGroundInfo::GroundDistance</a>, and <a class="el" href="_d_t_anim_instance_8h_source.html#l00046">GroundDistance</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ae9f7e82ea6b573a9584e73d709976d07" name="ae9f7e82ea6b573a9584e73d709976d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9f7e82ea6b573a9584e73d709976d07">&#9670;&#160;</a></span>GameplayTagPropertyMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayTagBlueprintPropertyMap UDTAnimInstance::GameplayTagPropertyMap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gameplay tags that can be mapped to blueprint variables. </p>
+<p>The variables will automatically update as the tags are added or removed. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_anim_instance_8h_source.html#l00029">29</a> of file <a class="el" href="_d_t_anim_instance_8h_source.html">DTAnimInstance.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00023">InitializeWithAbilitySystem()</a>.</p>
+
+</div>
+</div>
 <a id="a7b4b245626234099314612c4ff37c728" name="a7b4b245626234099314612c4ff37c728"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7b4b245626234099314612c4ff37c728">&#9670;&#160;</a></span>GroundDistance</h2>
 
@@ -230,9 +323,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_anim_instance_8h_source.html#l00022">22</a> of file <a class="el" href="_d_t_anim_instance_8h_source.html">DTAnimInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_anim_instance_8h_source.html#l00046">46</a> of file <a class="el" href="_d_t_anim_instance_8h_source.html">DTAnimInstance.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00021">NativeUpdateAnimation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00047">NativeUpdateAnimation()</a>.</p>
 
 </div>
 </div>

@@ -149,6 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26b921f045822a0f5a866c3d2d7c138d" id="r_a26b921f045822a0f5a866c3d2d7c138d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a26b921f045822a0f5a866c3d2d7c138d">AppendContextTags</a> (const FGameplayTagContainer &amp;InTags)</td></tr>
 <tr class="memitem:ae03c1ff75c424ddd65771717e4de8aee" id="r_ae03c1ff75c424ddd65771717e4de8aee"><td class="memItemLeft">const FGameplayTagContainer &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae03c1ff75c424ddd65771717e4de8aee">GetContextTags</a> () const</td></tr>
 <tr class="memitem:ac73f3fc45653100b374ec1dd9c9ca6de" id="r_ac73f3fc45653100b374ec1dd9c9ca6de"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac73f3fc45653100b374ec1dd9c9ca6de">HasContextTags</a> () const</td></tr>
+<tr class="memitem:aa85ad77fbda9bfb8e94cde98d1244c48" id="r_aa85ad77fbda9bfb8e94cde98d1244c48"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa85ad77fbda9bfb8e94cde98d1244c48">SetKnockbackMagnitude</a> (const float InMagnitude)</td></tr>
+<tr class="memdesc:aa85ad77fbda9bfb8e94cde98d1244c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-hit raw knockback force.  <br /></td></tr>
+<tr class="memitem:a7dd21efc4b32001a7785bcaac74830b0" id="r_a7dd21efc4b32001a7785bcaac74830b0"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a7dd21efc4b32001a7785bcaac74830b0">GetKnockbackMagnitude</a> () const</td></tr>
 <tr class="memitem:afb04b4261c84684446439527f858abd3" id="r_afb04b4261c84684446439527f858abd3"><td class="memItemLeft">virtual UScriptStruct *&#160;</td><td class="memItemRight"><a class="el" href="#afb04b4261c84684446439527f858abd3">GetScriptStruct</a> () const override</td></tr>
 <tr class="memitem:adf0a497df5d8cefaaf8d39b16b3dc1a7" id="r_adf0a497df5d8cefaaf8d39b16b3dc1a7"><td class="memItemLeft">virtual FGameplayEffectContext *&#160;</td><td class="memItemRight"><a class="el" href="#adf0a497df5d8cefaaf8d39b16b3dc1a7">Duplicate</a> () const override</td></tr>
 <tr class="memitem:a0695b97af2efeeebe3bc1d0e11d24ebc" id="r_a0695b97af2efeeebe3bc1d0e11d24ebc"><td class="memItemLeft">virtual FString&#160;</td><td class="memItemRight"><a class="el" href="#a0695b97af2efeeebe3bc1d0e11d24ebc">ToString</a> () const override</td></tr>
@@ -157,6 +160,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a861a2d0eeac382b5bb381a34d4155fd1" id="r_a861a2d0eeac382b5bb381a34d4155fd1"><td class="memItemLeft">FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="#a861a2d0eeac382b5bb381a34d4155fd1">ContextTags</a></td></tr>
+<tr class="memitem:a553775eb9dd5278e924b4fe7255eb195" id="r_a553775eb9dd5278e924b4fe7255eb195"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a553775eb9dd5278e924b4fe7255eb195">KnockbackMagnitude</a> = 0.0f</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -242,9 +246,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00010">10</a> of file <a class="el" href="_d_t_ability_system_types_8cpp_source.html">DTAbilitySystemTypes.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00037">ContextTags</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00041">ContextTags</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00381">UDTBlueprintLibrary::EffectContextAppendContextTags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00376">UDTBlueprintLibrary::EffectContextAppendContextTags()</a>.</p>
 
 </div>
 </div>
@@ -294,7 +298,38 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_ability_system_types_8cpp_source.html">DTAbilitySystemTypes.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00037">ContextTags</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00041">ContextTags</a>.</p>
+
+</div>
+</div>
+<a id="a7dd21efc4b32001a7785bcaac74830b0" name="a7dd21efc4b32001a7785bcaac74830b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd21efc4b32001a7785bcaac74830b0">&#9670;&#160;</a></span>GetKnockbackMagnitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float FDTGameplayEffectContext::GetKnockbackMagnitude </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_types_8h_source.html#l00032">32</a> of file <a class="el" href="_d_t_ability_system_types_8h_source.html">DTAbilitySystemTypes.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00044">KnockbackMagnitude</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00361">UDTBlueprintLibrary::EffectContextGetKnockbackMagnitude()</a>.</p>
 
 </div>
 </div>
@@ -342,7 +377,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00020">20</a> of file <a class="el" href="_d_t_ability_system_types_8cpp_source.html">DTAbilitySystemTypes.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00037">ContextTags</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00041">ContextTags</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00041">ToString()</a>.</p>
 
@@ -382,7 +417,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00048">48</a> of file <a class="el" href="_d_t_ability_system_types_8cpp_source.html">DTAbilitySystemTypes.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00037">ContextTags</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00041">ContextTags</a>, and <a class="el" href="_d_t_ability_system_types_8h_source.html#l00044">KnockbackMagnitude</a>.</p>
 
 </div>
 </div>
@@ -405,9 +440,43 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00005">5</a> of file <a class="el" href="_d_t_ability_system_types_8cpp_source.html">DTAbilitySystemTypes.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00037">ContextTags</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00041">ContextTags</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00372">UDTBlueprintLibrary::EffectContextSetContextTags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00367">UDTBlueprintLibrary::EffectContextSetContextTags()</a>.</p>
+
+</div>
+</div>
+<a id="aa85ad77fbda9bfb8e94cde98d1244c48" name="aa85ad77fbda9bfb8e94cde98d1244c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa85ad77fbda9bfb8e94cde98d1244c48">&#9670;&#160;</a></span>SetKnockbackMagnitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FDTGameplayEffectContext::SetKnockbackMagnitude </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>InMagnitude</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Per-hit raw knockback force. </p>
+<p>0 = none; the target's character data may remap and caps it. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_types_8h_source.html#l00031">31</a> of file <a class="el" href="_d_t_ability_system_types_8h_source.html">DTAbilitySystemTypes.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00044">KnockbackMagnitude</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>.</p>
 
 </div>
 </div>
@@ -436,7 +505,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00041">41</a> of file <a class="el" href="_d_t_ability_system_types_8cpp_source.html">DTAbilitySystemTypes.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00037">ContextTags</a>, and <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00020">HasContextTags()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_types_8h_source.html#l00041">ContextTags</a>, and <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00020">HasContextTags()</a>.</p>
 
 </div>
 </div>
@@ -461,9 +530,35 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_types_8h_source.html#l00037">37</a> of file <a class="el" href="_d_t_ability_system_types_8h_source.html">DTAbilitySystemTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_types_8h_source.html#l00041">41</a> of file <a class="el" href="_d_t_ability_system_types_8h_source.html">DTAbilitySystemTypes.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00010">AppendContextTags()</a>, <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00015">GetContextTags()</a>, <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00020">HasContextTags()</a>, <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00048">NetSerialize()</a>, <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00005">SetContextTags()</a>, and <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00041">ToString()</a>.</p>
+
+</div>
+</div>
+<a id="a553775eb9dd5278e924b4fe7255eb195" name="a553775eb9dd5278e924b4fe7255eb195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a553775eb9dd5278e924b4fe7255eb195">&#9670;&#160;</a></span>KnockbackMagnitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float FDTGameplayEffectContext::KnockbackMagnitude = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_system_types_8h_source.html#l00044">44</a> of file <a class="el" href="_d_t_ability_system_types_8h_source.html">DTAbilitySystemTypes.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_types_8h_source.html#l00032">GetKnockbackMagnitude()</a>, <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00048">NetSerialize()</a>, and <a class="el" href="_d_t_ability_system_types_8h_source.html#l00031">SetKnockbackMagnitude()</a>.</p>
 
 </div>
 </div>

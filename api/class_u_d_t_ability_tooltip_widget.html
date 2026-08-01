@@ -148,6 +148,7 @@ Inheritance diagram for UDTAbilityTooltipWidget:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a170dbbf39a4c7f5e47c50cef1dceac0f" id="r_a170dbbf39a4c7f5e47c50cef1dceac0f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a170dbbf39a4c7f5e47c50cef1dceac0f">UDTAbilityTooltipWidget</a> (const FObjectInitializer &amp;ObjectInitializer)</td></tr>
 <tr class="memitem:a12d7724d539d55fda9ce5548a93e61e0" id="r_a12d7724d539d55fda9ce5548a93e61e0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a12d7724d539d55fda9ce5548a93e61e0">SetAbility</a> (<a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a> *InAbility)</td></tr>
 <tr class="memdesc:a12d7724d539d55fda9ce5548a93e61e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate from a live or default ability.  <br /></td></tr>
 <tr class="memitem:add0f95fde3389acc19456d927a58de4d" id="r_add0f95fde3389acc19456d927a58de4d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#add0f95fde3389acc19456d927a58de4d">SetAbilityClass</a> (TSubclassOf&lt; <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a> &gt; InAbilityClass)</td></tr>
@@ -170,22 +171,77 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae931b93348769cc028067f750a4e3b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">The resolved definition backing this tooltip (may be null).  <br /></td></tr>
 <tr class="memitem:a3fc2b9055748d713037d6ca43915b5f3" id="r_a3fc2b9055748d713037d6ca43915b5f3"><td class="memItemLeft"><a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3fc2b9055748d713037d6ca43915b5f3">GetSourceAbility</a> () const</td></tr>
 <tr class="memdesc:a3fc2b9055748d713037d6ca43915b5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ability used as context for property-bound values (may be a CDO; may be null).  <br /></td></tr>
+<tr class="memitem:aa5898bd61174dd27e786101284a4f9a4" id="r_aa5898bd61174dd27e786101284a4f9a4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa5898bd61174dd27e786101284a4f9a4">RefreshTooltip</a> ()</td></tr>
+<tr class="memdesc:aa5898bd61174dd27e786101284a4f9a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recomputes and re-pushes all tooltip data from the current ability/definition/state.  <br /></td></tr>
+<tr class="memitem:ad3818424e37688280d174ba14af90acf" id="r_ad3818424e37688280d174ba14af90acf"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#ad3818424e37688280d174ba14af90acf">GetTooltipAbilityLevel</a> () const</td></tr>
+<tr class="memdesc:ad3818424e37688280d174ba14af90acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ability's current level/rank, for display.  <br /></td></tr>
+<tr class="memitem:a9ca22551cbdff0cce3f34ab29559d125" id="r_a9ca22551cbdff0cce3f34ab29559d125"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a9ca22551cbdff0cce3f34ab29559d125">GetTooltipCooldown</a> () const</td></tr>
+<tr class="memdesc:a9ca22551cbdff0cce3f34ab29559d125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total cooldown in seconds at the ability's current level (0 if none).  <br /></td></tr>
+<tr class="memitem:a5a31a75f0772e6a93458891b6e45b79c" id="r_a5a31a75f0772e6a93458891b6e45b79c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a5a31a75f0772e6a93458891b6e45b79c">GetTooltipManaCost</a> () const</td></tr>
+<tr class="memdesc:a5a31a75f0772e6a93458891b6e45b79c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mana cost at the ability's current level (0 if none).  <br /></td></tr>
+<tr class="memitem:ac7240e9282c9d7d0858aafcbe45a365c" id="r_ac7240e9282c9d7d0858aafcbe45a365c"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#ac7240e9282c9d7d0858aafcbe45a365c">GetTooltipAbilityType</a> () const</td></tr>
+<tr class="memdesc:ac7240e9282c9d7d0858aafcbe45a365c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ability's type tag (e.g.  <br /></td></tr>
+<tr class="memitem:aa8cb292b2fe08f5e4cfa5c9f234823ac" id="r_aa8cb292b2fe08f5e4cfa5c9f234823ac"><td class="memItemLeft">FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="#aa8cb292b2fe08f5e4cfa5c9f234823ac">GetTooltipRequirements</a> () const</td></tr>
+<tr class="memdesc:aa8cb292b2fe08f5e4cfa5c9f234823ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tags required to use this ability (e.g.  <br /></td></tr>
+<tr class="memitem:aafb75b25014b853d7d59f52e563f6e0b" id="r_aafb75b25014b853d7d59f52e563f6e0b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aafb75b25014b853d7d59f52e563f6e0b">AreTooltipRequirementsMet</a> () const</td></tr>
+<tr class="memdesc:aafb75b25014b853d7d59f52e563f6e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the local player currently satisfies all of the ability's required tags (use to color requirements met/unmet).  <br /></td></tr>
+<tr class="memitem:a352dbbd4115cb75bc90cc8fc001063a2" id="r_a352dbbd4115cb75bc90cc8fc001063a2"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#a352dbbd4115cb75bc90cc8fc001063a2">GetTooltipLevelText</a> () const</td></tr>
+<tr class="memdesc:a352dbbd4115cb75bc90cc8fc001063a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Level line, pre-decorated with LevelFormat (e.g.  <br /></td></tr>
+<tr class="memitem:a093dde1b7a2e129c1480f71f16c33a8a" id="r_a093dde1b7a2e129c1480f71f16c33a8a"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#a093dde1b7a2e129c1480f71f16c33a8a">GetTooltipCooldownText</a> () const</td></tr>
+<tr class="memdesc:a093dde1b7a2e129c1480f71f16c33a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cooldown line, pre-decorated with CooldownFormat (e.g.  <br /></td></tr>
+<tr class="memitem:a8666fea042161dfc8198010ec473b0a0" id="r_a8666fea042161dfc8198010ec473b0a0"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#a8666fea042161dfc8198010ec473b0a0">GetTooltipManaCostText</a> () const</td></tr>
+<tr class="memdesc:a8666fea042161dfc8198010ec473b0a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mana-cost line, pre-decorated with ManaCostFormat (e.g.  <br /></td></tr>
+<tr class="memitem:a543d007973dcc970cb2aa145ed6688d7" id="r_a543d007973dcc970cb2aa145ed6688d7"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#a543d007973dcc970cb2aa145ed6688d7">GetTooltipAbilityTypeText</a> () const</td></tr>
+<tr class="memdesc:a543d007973dcc970cb2aa145ed6688d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friendly ability-type line (e.g.  <br /></td></tr>
+<tr class="memitem:aa5c901757b1d68fabc7b61a33024016d" id="r_aa5c901757b1d68fabc7b61a33024016d"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#aa5c901757b1d68fabc7b61a33024016d">GetTooltipRequirementsText</a> () const</td></tr>
+<tr class="memdesc:aa5c901757b1d68fabc7b61a33024016d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requirements line, pre-decorated with RequirementsFormat (e.g.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a9b0e5a292438de7fb23b14625b3f7cd3" id="r_a9b0e5a292438de7fb23b14625b3f7cd3"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#a9b0e5a292438de7fb23b14625b3f7cd3">GetFriendlyTagName</a> (FGameplayTag Tag) const</td></tr>
+<tr class="memdesc:a9b0e5a292438de7fb23b14625b3f7cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friendly display name for a tag: a TagDisplayNames override if present, otherwise the tag's humanized leaf segment.  <br /></td></tr>
 <tr class="memitem:a7aa3e9fceb71fe7e77c146b3b053c2c3" id="r_a7aa3e9fceb71fe7e77c146b3b053c2c3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated</a> ()</td></tr>
 <tr class="memdesc:a7aa3e9fceb71fe7e77c146b3b053c2c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired after a Set* call populates data, so the Blueprint can refresh its bound widgets.  <br /></td></tr>
-<tr class="memitem:aa5898bd61174dd27e786101284a4f9a4" id="r_aa5898bd61174dd27e786101284a4f9a4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa5898bd61174dd27e786101284a4f9a4">RefreshTooltip</a> ()</td></tr>
-<tr class="memdesc:aa5898bd61174dd27e786101284a4f9a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the current data into the bound widgets, then fires OnTooltipDataUpdated.  <br /></td></tr>
+<tr class="memitem:abf7dc9c9fbf6c4a142a611759936dd16" id="r_abf7dc9c9fbf6c4a142a611759936dd16"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#abf7dc9c9fbf6c4a142a611759936dd16">GetEffectiveAbilityLevel</a> () const</td></tr>
+<tr class="memdesc:abf7dc9c9fbf6c4a142a611759936dd16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves the ability's current level/rank for value scaling: a live instance's own level, else the granted spec's level on the player's ASC (matched by class or ability tag), else the authored EvaluationLevel.  <br /></td></tr>
+<tr class="memitem:a7bb4a24697efc1f585c1b1490d6876ad" id="r_a7bb4a24697efc1f585c1b1490d6876ad"><td class="memItemLeft">UAbilitySystemComponent *&#160;</td><td class="memItemRight"><a class="el" href="#a7bb4a24697efc1f585c1b1490d6876ad">GetPlayerASC</a> () const</td></tr>
+<tr class="memdesc:a7bb4a24697efc1f585c1b1490d6876ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The local player's ASC (resolved from the owning player pawn), or null.  <br /></td></tr>
+<tr class="memitem:ab4d1eae3c8a8e248137dbb4182081e43" id="r_ab4d1eae3c8a8e248137dbb4182081e43"><td class="memItemLeft">const FGameplayAbilitySpec *&#160;</td><td class="memItemRight"><a class="el" href="#ab4d1eae3c8a8e248137dbb4182081e43">FindGrantedSpec</a> () const</td></tr>
+<tr class="memdesc:ab4d1eae3c8a8e248137dbb4182081e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds this ability's granted spec on the local player's ASC (matched by class or ability tag), or null.  <br /></td></tr>
+<tr class="memitem:a62af7cb8037003d6bce2149cc7ab2566" id="r_a62af7cb8037003d6bce2149cc7ab2566"><td class="memItemLeft">const <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a62af7cb8037003d6bce2149cc7ab2566">GetActiveAbility</a> () const</td></tr>
+<tr class="memdesc:a62af7cb8037003d6bce2149cc7ab2566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves the ability to read cooldown from: the granted spec's live instance when available (so per-instance overrides like a flask's rolled recharge resolve, and GetCooldownDuration isn't evaluated against a CDO), else SourceAbility.  <br /></td></tr>
+<tr class="memitem:a1819f14b50a1925050313c4141bf8b9a" id="r_a1819f14b50a1925050313c4141bf8b9a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1819f14b50a1925050313c4141bf8b9a">GetCooldownAtLevel</a> (int32 Level) const</td></tr>
+<tr class="memdesc:a1819f14b50a1925050313c4141bf8b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cooldown in seconds at an explicit level (0 if none), using the resolved instance/CDO.  <br /></td></tr>
+<tr class="memitem:a340e7bdaaa0f68144df7f7cb8464ffe7" id="r_a340e7bdaaa0f68144df7f7cb8464ffe7"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a340e7bdaaa0f68144df7f7cb8464ffe7">GetManaCostAtLevel</a> (int32 Level) const</td></tr>
+<tr class="memdesc:a340e7bdaaa0f68144df7f7cb8464ffe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mana cost at an explicit level (0 if none).  <br /></td></tr>
+<tr class="memitem:ae61819785e253a5c4f3203cf85812743" id="r_ae61819785e253a5c4f3203cf85812743"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#ae61819785e253a5c4f3203cf85812743">FormatValueComparison</a> (const FText &amp;Format, float CurrentValue, float NextValue) const</td></tr>
+<tr class="memdesc:ae61819785e253a5c4f3203cf85812743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats an upgrade-preview value line: "Current -&gt; Next" in the value slot when the two differ, else a single value (empty when zero).  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a83c7788173179a3f08fdb732d73bc6e8" id="r_a83c7788173179a3f08fdb732d73bc6e8"><td class="memItemLeft">TObjectPtr&lt; UImage &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a83c7788173179a3f08fdb732d73bc6e8">Img_Icon</a></td></tr>
-<tr class="memdesc:a83c7788173179a3f08fdb732d73bc6e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional bound icon image; auto-populated from the definition icon.  <br /></td></tr>
+<tr class="memdesc:a83c7788173179a3f08fdb732d73bc6e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image icon auto-populated from the definition icon.  <br /></td></tr>
 <tr class="memitem:a387ea151d97884989fa5140c06baa7e9" id="r_a387ea151d97884989fa5140c06baa7e9"><td class="memItemLeft">TObjectPtr&lt; UCommonTextBlock &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a387ea151d97884989fa5140c06baa7e9">TXT_AbilityName</a></td></tr>
-<tr class="memdesc:a387ea151d97884989fa5140c06baa7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional bound title text; auto-populated from the definition display name.  <br /></td></tr>
+<tr class="memdesc:a387ea151d97884989fa5140c06baa7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text auto-populated from the definition display name.  <br /></td></tr>
+<tr class="memitem:a285e36060718dcda2c2b3e7c2e7ce34a" id="r_a285e36060718dcda2c2b3e7c2e7ce34a"><td class="memItemLeft">TObjectPtr&lt; UCommonTextBlock &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a285e36060718dcda2c2b3e7c2e7ce34a">TXT_AbilityLevel</a></td></tr>
+<tr class="memitem:ab1fd4f28d54c82072186873a00c6402a" id="r_ab1fd4f28d54c82072186873a00c6402a"><td class="memItemLeft">TObjectPtr&lt; UCommonTextBlock &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab1fd4f28d54c82072186873a00c6402a">TXT_AbilityType</a></td></tr>
+<tr class="memitem:a359630a846f29ffa5d40831e65a45bcb" id="r_a359630a846f29ffa5d40831e65a45bcb"><td class="memItemLeft">TObjectPtr&lt; UCommonTextBlock &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a359630a846f29ffa5d40831e65a45bcb">TXT_Requirements</a></td></tr>
+<tr class="memitem:a59b738a53f6b849e2cbec7c4a2a2be96" id="r_a59b738a53f6b849e2cbec7c4a2a2be96"><td class="memItemLeft">TObjectPtr&lt; UCommonTextBlock &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a59b738a53f6b849e2cbec7c4a2a2be96">TXT_Cooldown</a></td></tr>
+<tr class="memitem:a92142f94c1be93885cd623c85f49640b" id="r_a92142f94c1be93885cd623c85f49640b"><td class="memItemLeft">TObjectPtr&lt; UCommonTextBlock &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a92142f94c1be93885cd623c85f49640b">TXT_Cost</a></td></tr>
 <tr class="memitem:a964b5beda00b9e13c3a7c225f3aad37e" id="r_a964b5beda00b9e13c3a7c225f3aad37e"><td class="memItemLeft">TObjectPtr&lt; UCommonRichTextBlock &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a964b5beda00b9e13c3a7c225f3aad37e">RTXT_Description</a></td></tr>
-<tr class="memdesc:a964b5beda00b9e13c3a7c225f3aad37e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional bound description block; auto-populated with the formatted rich-text description.  <br /></td></tr>
+<tr class="memdesc:a964b5beda00b9e13c3a7c225f3aad37e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text auto-populated with the formatted rich-text description.  <br /></td></tr>
+<tr class="memitem:ab772fce042c0636ca7b2306b7a7af63f" id="r_ab772fce042c0636ca7b2306b7a7af63f"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#ab772fce042c0636ca7b2306b7a7af63f">LevelFormat</a></td></tr>
+<tr class="memdesc:ab772fce042c0636ca7b2306b7a7af63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format for the level line.  <br /></td></tr>
+<tr class="memitem:ab40d5dea45b3e59120f565ea258d6bd0" id="r_ab40d5dea45b3e59120f565ea258d6bd0"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#ab40d5dea45b3e59120f565ea258d6bd0">CooldownFormat</a></td></tr>
+<tr class="memdesc:ab40d5dea45b3e59120f565ea258d6bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format for the cooldown line.  <br /></td></tr>
+<tr class="memitem:ab373168dd4ce6a674e82243aaf03fed4" id="r_ab373168dd4ce6a674e82243aaf03fed4"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#ab373168dd4ce6a674e82243aaf03fed4">ManaCostFormat</a></td></tr>
+<tr class="memdesc:ab373168dd4ce6a674e82243aaf03fed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format for the mana-cost line.  <br /></td></tr>
+<tr class="memitem:a328a9004e0cd2fdb830a5e3133aabe55" id="r_a328a9004e0cd2fdb830a5e3133aabe55"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#a328a9004e0cd2fdb830a5e3133aabe55">AbilityTypeFormat</a></td></tr>
+<tr class="memdesc:a328a9004e0cd2fdb830a5e3133aabe55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format for the ability-type line.  <br /></td></tr>
+<tr class="memitem:a047dac4861b87b55a6ed72be068fef79" id="r_a047dac4861b87b55a6ed72be068fef79"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#a047dac4861b87b55a6ed72be068fef79">RequirementsFormat</a></td></tr>
+<tr class="memdesc:a047dac4861b87b55a6ed72be068fef79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format for the requirements line.  <br /></td></tr>
+<tr class="memitem:a244f9b2d93e2a43484480bfeb52a2208" id="r_a244f9b2d93e2a43484480bfeb52a2208"><td class="memItemLeft">TMap&lt; FGameplayTag, FText &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a244f9b2d93e2a43484480bfeb52a2208">TagDisplayNames</a></td></tr>
+<tr class="memdesc:a244f9b2d93e2a43484480bfeb52a2208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional friendly display names for ability-type and requirement tags (e.g.  <br /></td></tr>
 <tr class="memitem:ab159503ea8d337e818c9fbef56cd343d" id="r_ab159503ea8d337e818c9fbef56cd343d"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab159503ea8d337e818c9fbef56cd343d">SourceAbility</a></td></tr>
 <tr class="memdesc:ab159503ea8d337e818c9fbef56cd343d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ability used as the context object for "Ability Property" tooltip values.  <br /></td></tr>
 <tr class="memitem:ae027eb8b3181f8c2ac02c54a2b57bf4d" id="r_ae027eb8b3181f8c2ac02c54a2b57bf4d"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae027eb8b3181f8c2ac02c54a2b57bf4d">AbilityDefinition</a></td></tr>
@@ -203,8 +259,127 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>Base Ability Tooltip Widget. </p>
 <p>Holds an ability definition and optional source ability for property-bound values, and provides display data for the tooltip. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00022">22</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00024">24</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a170dbbf39a4c7f5e47c50cef1dceac0f" name="a170dbbf39a4c7f5e47c50cef1dceac0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a170dbbf39a4c7f5e47c50cef1dceac0f">&#9670;&#160;</a></span>UDTAbilityTooltipWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UDTAbilityTooltipWidget::UDTAbilityTooltipWidget </td>
+          <td>(</td>
+          <td class="paramtype">const FObjectInitializer &amp;</td>          <td class="paramname"><span class="paramname"><em>ObjectInitializer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00019">19</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00174">AbilityTypeFormat</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00166">CooldownFormat</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00162">LevelFormat</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00170">ManaCostFormat</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00178">RequirementsFormat</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aafb75b25014b853d7d59f52e563f6e0b" name="aafb75b25014b853d7d59f52e563f6e0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb75b25014b853d7d59f52e563f6e0b">&#9670;&#160;</a></span>AreTooltipRequirementsMet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityTooltipWidget::AreTooltipRequirementsMet </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>True if the local player currently satisfies all of the ability's required tags (use to color requirements met/unmet). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00265">265</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">AbilityDefinition</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00133">GetPlayerASC()</a>.</p>
+
+</div>
+</div>
+<a id="ab4d1eae3c8a8e248137dbb4182081e43" name="ab4d1eae3c8a8e248137dbb4182081e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4d1eae3c8a8e248137dbb4182081e43">&#9670;&#160;</a></span>FindGrantedSpec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const FGameplayAbilitySpec * UDTAbilityTooltipWidget::FindGrantedSpec </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds this ability's granted spec on the local player's ASC (matched by class or ability tag), or null. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00138">138</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">AbilityDefinition</a>, <a class="el" href="_d_t_ability_definition_8h_source.html#l00034">UDTAbilityDefinition::AbilityTag</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00087">UDTGameplayAbility::GetAbilityDefinition()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00133">GetPlayerASC()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00189">SourceAbility</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00189">GetActiveAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00168">GetEffectiveAbilityLevel()</a>, and <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>.</p>
+
+</div>
+</div>
+<a id="ae61819785e253a5c4f3203cf85812743" name="ae61819785e253a5c4f3203cf85812743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61819785e253a5c4f3203cf85812743">&#9670;&#160;</a></span>FormatValueComparison()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::FormatValueComparison </td>
+          <td>(</td>
+          <td class="paramtype">const FText &amp;</td>          <td class="paramname"><span class="paramname"><em>Format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>CurrentValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>NextValue</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Formats an upgrade-preview value line: "Current -&gt; Next" in the value slot when the two differ, else a single value (empty when zero). </p>
+<p>Used by the cooldown/cost lines in comparison mode. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00311">311</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00329">GetTooltipCooldownText()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00345">GetTooltipManaCostText()</a>, and <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>.</p>
+
+</div>
+</div>
 <a id="ae931b93348769cc028067f750a4e3b80" name="ae931b93348769cc028067f750a4e3b80"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae931b93348769cc028067f750a4e3b80">&#9670;&#160;</a></span>GetAbilityDefinition()</h2>
 
@@ -230,11 +405,207 @@ Protected Attributes</h2></td></tr>
 
 <p>The resolved definition backing this tooltip (may be null). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00067">67</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00092">AbilityDefinition</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00067">GetAbilityDefinition()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">AbilityDefinition</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00071">GetAbilityDefinition()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00067">GetAbilityDefinition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00071">GetAbilityDefinition()</a>.</p>
+
+</div>
+</div>
+<a id="a62af7cb8037003d6bce2149cc7ab2566" name="a62af7cb8037003d6bce2149cc7ab2566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62af7cb8037003d6bce2149cc7ab2566">&#9670;&#160;</a></span>GetActiveAbility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a> * UDTAbilityTooltipWidget::GetActiveAbility </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolves the ability to read cooldown from: the granted spec's live instance when available (so per-instance overrides like a flask's rolled recharge resolve, and GetCooldownDuration isn't evaluated against a CDO), else SourceAbility. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00189">189</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00138">FindGrantedSpec()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00189">SourceAbility</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00206">GetCooldownAtLevel()</a>, and <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>.</p>
+
+</div>
+</div>
+<a id="a1819f14b50a1925050313c4141bf8b9a" name="a1819f14b50a1925050313c4141bf8b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1819f14b50a1925050313c4141bf8b9a">&#9670;&#160;</a></span>GetCooldownAtLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityTooltipWidget::GetCooldownAtLevel </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>Level</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cooldown in seconds at an explicit level (0 if none), using the resolved instance/CDO. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00206">206</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00189">GetActiveAbility()</a>, and <a class="el" href="class_u_d_t_gameplay_ability.html#a6df7457255669b859fd281d2300602a6">UDTGameplayAbility::GetCooldownDuration()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00212">GetTooltipCooldown()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00329">GetTooltipCooldownText()</a>, and <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>.</p>
+
+</div>
+</div>
+<a id="abf7dc9c9fbf6c4a142a611759936dd16" name="abf7dc9c9fbf6c4a142a611759936dd16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf7dc9c9fbf6c4a142a611759936dd16">&#9670;&#160;</a></span>GetEffectiveAbilityLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTAbilityTooltipWidget::GetEffectiveAbilityLevel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolves the ability's current level/rank for value scaling: a live instance's own level, else the granted spec's level on the player's ASC (matched by class or ability tag), else the authored EvaluationLevel. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00168">168</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00197">EvaluationLevel</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00138">FindGrantedSpec()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00189">SourceAbility</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00184">GetTooltipAbilityLevel()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00212">GetTooltipCooldown()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00121">GetTooltipDescription()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00217">GetTooltipManaCost()</a>, and <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>.</p>
+
+</div>
+</div>
+<a id="a9b0e5a292438de7fb23b14625b3f7cd3" name="a9b0e5a292438de7fb23b14625b3f7cd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0e5a292438de7fb23b14625b3f7cd3">&#9670;&#160;</a></span>GetFriendlyTagName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::GetFriendlyTagName </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>Tag</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Friendly display name for a tag: a TagDisplayNames override if present, otherwise the tag's humanized leaf segment. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00276">276</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_combat_types_8h_source.html#l00033">Override</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00185">TagDisplayNames</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00361">GetTooltipAbilityTypeText()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00372">GetTooltipRequirementsText()</a>.</p>
+
+</div>
+</div>
+<a id="a340e7bdaaa0f68144df7f7cb8464ffe7" name="a340e7bdaaa0f68144df7f7cb8464ffe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a340e7bdaaa0f68144df7f7cb8464ffe7">&#9670;&#160;</a></span>GetManaCostAtLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityTooltipWidget::GetManaCostAtLevel </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>Level</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mana cost at an explicit level (0 if none). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00222">222</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00133">GetPlayerASC()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00189">SourceAbility</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00217">GetTooltipManaCost()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00345">GetTooltipManaCostText()</a>, and <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>.</p>
+
+</div>
+</div>
+<a id="a7bb4a24697efc1f585c1b1490d6876ad" name="a7bb4a24697efc1f585c1b1490d6876ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bb4a24697efc1f585c1b1490d6876ad">&#9670;&#160;</a></span>GetPlayerASC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UAbilitySystemComponent * UDTAbilityTooltipWidget::GetPlayerASC </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The local player's ASC (resolved from the owning player pawn), or null. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00133">133</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00265">AreTooltipRequirementsMet()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00138">FindGrantedSpec()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00222">GetManaCostAtLevel()</a>, and <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>.</p>
 
 </div>
 </div>
@@ -263,11 +634,36 @@ Protected Attributes</h2></td></tr>
 
 <p>The ability used as context for property-bound values (may be a CDO; may be null). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00075">75</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00071">GetSourceAbility()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00088">SourceAbility</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00075">GetSourceAbility()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00189">SourceAbility</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00071">GetSourceAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00075">GetSourceAbility()</a>.</p>
+
+</div>
+</div>
+<a id="ad3818424e37688280d174ba14af90acf" name="ad3818424e37688280d174ba14af90acf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3818424e37688280d174ba14af90acf">&#9670;&#160;</a></span>GetTooltipAbilityLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTAbilityTooltipWidget::GetTooltipAbilityLevel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ability's current level/rank, for display. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00184">184</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00168">GetEffectiveAbilityLevel()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00300">GetTooltipLevelText()</a>.</p>
 
 </div>
 </div>
@@ -288,9 +684,113 @@ Protected Attributes</h2></td></tr>
 
 <p>The ability's gameplay tag from the definition. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00096">96</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00400">400</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00092">AbilityDefinition</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">AbilityDefinition</a>.</p>
+
+</div>
+</div>
+<a id="ac7240e9282c9d7d0858aafcbe45a365c" name="ac7240e9282c9d7d0858aafcbe45a365c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7240e9282c9d7d0858aafcbe45a365c">&#9670;&#160;</a></span>GetTooltipAbilityType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayTag UDTAbilityTooltipWidget::GetTooltipAbilityType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ability's type tag (e.g. </p>
+<p>Ability.Type.Weapon / Ability.Type.Spell), read from its asset tags. Map to display text in the widget. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00246">246</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00189">SourceAbility</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00361">GetTooltipAbilityTypeText()</a>.</p>
+
+</div>
+</div>
+<a id="a543d007973dcc970cb2aa145ed6688d7" name="a543d007973dcc970cb2aa145ed6688d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a543d007973dcc970cb2aa145ed6688d7">&#9670;&#160;</a></span>GetTooltipAbilityTypeText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::GetTooltipAbilityTypeText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Friendly ability-type line (e.g. </p>
+<p>"Weapon Ability"), built from the type tag via AbilityTypeFormat + TagDisplayNames. Empty when untyped. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00361">361</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00174">AbilityTypeFormat</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00276">GetFriendlyTagName()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00246">GetTooltipAbilityType()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
+
+</div>
+</div>
+<a id="a9ca22551cbdff0cce3f34ab29559d125" name="a9ca22551cbdff0cce3f34ab29559d125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ca22551cbdff0cce3f34ab29559d125">&#9670;&#160;</a></span>GetTooltipCooldown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityTooltipWidget::GetTooltipCooldown </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Total cooldown in seconds at the ability's current level (0 if none). </p>
+<p>Note: cooldowns authored via SetByCaller read as 0. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00212">212</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00206">GetCooldownAtLevel()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00168">GetEffectiveAbilityLevel()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00329">GetTooltipCooldownText()</a>.</p>
+
+</div>
+</div>
+<a id="a093dde1b7a2e129c1480f71f16c33a8a" name="a093dde1b7a2e129c1480f71f16c33a8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a093dde1b7a2e129c1480f71f16c33a8a">&#9670;&#160;</a></span>GetTooltipCooldownText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::GetTooltipCooldownText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cooldown line, pre-decorated with CooldownFormat (e.g. </p>
+<p>"10 Second Cooldown"). Empty when there is no cooldown. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00329">329</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00201">bShowUpgradePreview</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00166">CooldownFormat</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00205">CurrentUpgradeLevel</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00311">FormatValueComparison()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00206">GetCooldownAtLevel()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00212">GetTooltipCooldown()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00209">NextUpgradeLevel</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
 
 </div>
 </div>
@@ -311,11 +811,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Fully formatted, rich-text description with all {Placeholder} tokens resolved. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00076">76</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00121">121</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00092">AbilityDefinition</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00100">bShowUpgradePreview</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00104">CurrentUpgradeLevel</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00096">EvaluationLevel</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00275">UDTUIBlueprintLibrary::FormatAbilityDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00285">UDTUIBlueprintLibrary::FormatAbilityDescriptionComparison()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00108">NextUpgradeLevel</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00088">SourceAbility</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">AbilityDefinition</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00201">bShowUpgradePreview</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00205">CurrentUpgradeLevel</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00257">UDTUIBlueprintLibrary::FormatAbilityDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00268">UDTUIBlueprintLibrary::FormatAbilityDescriptionComparison()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00168">GetEffectiveAbilityLevel()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00209">NextUpgradeLevel</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">RefreshTooltip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
 
 </div>
 </div>
@@ -336,11 +836,141 @@ Protected Attributes</h2></td></tr>
 
 <p>Ability icon from the definition (synchronously loaded if needed). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00086">86</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00390">390</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00092">AbilityDefinition</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">AbilityDefinition</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">RefreshTooltip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
+
+</div>
+</div>
+<a id="a352dbbd4115cb75bc90cc8fc001063a2" name="a352dbbd4115cb75bc90cc8fc001063a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352dbbd4115cb75bc90cc8fc001063a2">&#9670;&#160;</a></span>GetTooltipLevelText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::GetTooltipLevelText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Level line, pre-decorated with LevelFormat (e.g. </p>
+<p>"Level : 1"). Empty when the ability has no level. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00300">300</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00184">GetTooltipAbilityLevel()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00162">LevelFormat</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
+
+</div>
+</div>
+<a id="a5a31a75f0772e6a93458891b6e45b79c" name="a5a31a75f0772e6a93458891b6e45b79c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a31a75f0772e6a93458891b6e45b79c">&#9670;&#160;</a></span>GetTooltipManaCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityTooltipWidget::GetTooltipManaCost </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mana cost at the ability's current level (0 if none). </p>
+<p>Note: costs authored via SetByCaller read as 0. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00217">217</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00168">GetEffectiveAbilityLevel()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00222">GetManaCostAtLevel()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00345">GetTooltipManaCostText()</a>.</p>
+
+</div>
+</div>
+<a id="a8666fea042161dfc8198010ec473b0a0" name="a8666fea042161dfc8198010ec473b0a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8666fea042161dfc8198010ec473b0a0">&#9670;&#160;</a></span>GetTooltipManaCostText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::GetTooltipManaCostText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mana-cost line, pre-decorated with ManaCostFormat (e.g. </p>
+<p>"25 Mana"). Empty when the ability is free. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00345">345</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00201">bShowUpgradePreview</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00205">CurrentUpgradeLevel</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00311">FormatValueComparison()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00222">GetManaCostAtLevel()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00217">GetTooltipManaCost()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00170">ManaCostFormat</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00209">NextUpgradeLevel</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
+
+</div>
+</div>
+<a id="aa8cb292b2fe08f5e4cfa5c9f234823ac" name="aa8cb292b2fe08f5e4cfa5c9f234823ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cb292b2fe08f5e4cfa5c9f234823ac">&#9670;&#160;</a></span>GetTooltipRequirements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayTagContainer UDTAbilityTooltipWidget::GetTooltipRequirements </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tags required to use this ability (e.g. </p>
+<p>an equipped weapon type), from the definition. Map to display text in the widget. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00260">260</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">AbilityDefinition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00372">GetTooltipRequirementsText()</a>.</p>
+
+</div>
+</div>
+<a id="aa5c901757b1d68fabc7b61a33024016d" name="aa5c901757b1d68fabc7b61a33024016d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5c901757b1d68fabc7b61a33024016d">&#9670;&#160;</a></span>GetTooltipRequirementsText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::GetTooltipRequirementsText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requirements line, pre-decorated with RequirementsFormat (e.g. </p>
+<p>"Requires : Bow Weapon"). Empty when there are no requirements. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00372">372</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00276">GetFriendlyTagName()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00260">GetTooltipRequirements()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00178">RequirementsFormat</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
 
 </div>
 </div>
@@ -361,11 +991,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Ability display name from the definition. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00071">71</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00116">116</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00092">AbilityDefinition</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">AbilityDefinition</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">RefreshTooltip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
 
 </div>
 </div>
@@ -394,9 +1024,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Fired after a Set* call populates data, so the Blueprint can refresh its bound widgets. </p>
 
-<p class="reference">References <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">RefreshTooltip()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00138">FindGrantedSpec()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00311">FormatValueComparison()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00189">GetActiveAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00206">GetCooldownAtLevel()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00168">GetEffectiveAbilityLevel()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00222">GetManaCostAtLevel()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00133">GetPlayerASC()</a>, and <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">RefreshTooltip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
 
 </div>
 </div>
@@ -405,9 +1035,6 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void UDTAbilityTooltipWidget::RefreshTooltip </td>
@@ -416,20 +1043,16 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Pushes the current data into the bound widgets, then fires OnTooltipDataUpdated. </p>
+<p>Recomputes and re-pushes all tooltip data from the current ability/definition/state. </p>
+<p>The getters read the player's ASC live, so call this whenever the tooltip is shown (e.g. on hover/overlap begin) to reflect attribute and rank changes since the last populate. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">49</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">69</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00076">GetTooltipDescription()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00086">GetTooltipIcon()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00071">GetTooltipTitle()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00076">Img_Icon</a>, <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00084">RTXT_Description</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00080">TXT_AbilityName</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00361">GetTooltipAbilityTypeText()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00329">GetTooltipCooldownText()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00121">GetTooltipDescription()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00390">GetTooltipIcon()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00300">GetTooltipLevelText()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00345">GetTooltipManaCostText()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00372">GetTooltipRequirementsText()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00116">GetTooltipTitle()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00135">Img_Icon</a>, <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00158">RTXT_Description</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00142">TXT_AbilityLevel</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00139">TXT_AbilityName</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00145">TXT_AbilityType</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00151">TXT_Cooldown</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00154">TXT_Cost</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00148">TXT_Requirements</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a7aa3e9fceb71fe7e77c146b3b053c2c3">OnTooltipDataUpdated()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00012">SetAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00033">SetAbilityComparison()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00025">SetAbilityDefinition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00029">SetAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00052">SetAbilityComparison()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00043">SetAbilityDefinition()</a>.</p>
 
 </div>
 </div>
@@ -451,11 +1074,11 @@ Protected Attributes</h2></td></tr>
 <p>Populate from a live or default ability. </p>
 <p>Its definition supplies metadata; the ability supplies property-bound values. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00012">12</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00029">29</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00092">AbilityDefinition</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00100">bShowUpgradePreview</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00085">UDTGameplayAbility::GetAbilityDefinition()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">RefreshTooltip()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00088">SourceAbility</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">AbilityDefinition</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00201">bShowUpgradePreview</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00087">UDTGameplayAbility::GetAbilityDefinition()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00189">SourceAbility</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00027">UDTAbilityWidget::GetAbilityTooltipWidget()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00020">SetAbilityClass()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00028">UDTAbilityWidget::GetAbilityTooltipWidget()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00038">SetAbilityClass()</a>.</p>
 
 </div>
 </div>
@@ -476,9 +1099,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Populate from an ability class, using its CDO as context (for menus/codex with no spawned ability). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00020">20</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00038">38</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00012">SetAbility()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00029">SetAbility()</a>.</p>
 
 </div>
 </div>
@@ -508,9 +1131,11 @@ Protected Attributes</h2></td></tr>
 
 <p>SetAbilityComparison variant using an ability class CDO (for menus/codex with no spawned ability). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00044">44</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00064">64</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00033">SetAbilityComparison()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00052">SetAbilityComparison()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00118">UDTSkillTreeNodeWidget::PopulateAbilityTooltip()</a>.</p>
 
 </div>
 </div>
@@ -540,11 +1165,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Populate in upgrade-preview mode: the description renders each value as "current -&gt; next". </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00033">33</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00052">52</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00092">AbilityDefinition</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00100">bShowUpgradePreview</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00104">CurrentUpgradeLevel</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00096">EvaluationLevel</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00085">UDTGameplayAbility::GetAbilityDefinition()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00108">NextUpgradeLevel</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">RefreshTooltip()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00088">SourceAbility</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">AbilityDefinition</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00201">bShowUpgradePreview</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00205">CurrentUpgradeLevel</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00197">EvaluationLevel</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00087">UDTGameplayAbility::GetAbilityDefinition()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00209">NextUpgradeLevel</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00189">SourceAbility</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00044">SetAbilityClassComparison()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00064">SetAbilityClassComparison()</a>.</p>
 
 </div>
 </div>
@@ -565,11 +1190,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Populate from a bare definition with no ability context (only static Range/Scalable values resolve). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00025">25</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00043">43</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html">DTAbilityTooltipWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00092">AbilityDefinition</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00100">bShowUpgradePreview</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">RefreshTooltip()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00088">SourceAbility</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">AbilityDefinition</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00201">bShowUpgradePreview</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00189">SourceAbility</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00027">UDTAbilityWidget::GetAbilityTooltipWidget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00028">UDTAbilityWidget::GetAbilityTooltipWidget()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00118">UDTSkillTreeNodeWidget::PopulateAbilityTooltip()</a>.</p>
 
 </div>
 </div>
@@ -596,9 +1221,38 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition supplying the description template, tooltip values, name and icon. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00092">92</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00193">193</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00067">GetAbilityDefinition()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00096">GetTooltipAbilityTag()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00076">GetTooltipDescription()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00086">GetTooltipIcon()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00071">GetTooltipTitle()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00012">SetAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00033">SetAbilityComparison()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00025">SetAbilityDefinition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00265">AreTooltipRequirementsMet()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00138">FindGrantedSpec()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00071">GetAbilityDefinition()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00400">GetTooltipAbilityTag()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00121">GetTooltipDescription()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00390">GetTooltipIcon()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00260">GetTooltipRequirements()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00116">GetTooltipTitle()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00029">SetAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00052">SetAbilityComparison()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00043">SetAbilityDefinition()</a>.</p>
+
+</div>
+</div>
+<a id="a328a9004e0cd2fdb830a5e3133aabe55" name="a328a9004e0cd2fdb830a5e3133aabe55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a328a9004e0cd2fdb830a5e3133aabe55">&#9670;&#160;</a></span>AbilityTypeFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::AbilityTypeFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Format for the ability-type line. </p>
+<p>{0} = friendly type name (resolved via TagDisplayNames or the tag's humanized leaf). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00174">174</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00361">GetTooltipAbilityTypeText()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00019">UDTAbilityTooltipWidget()</a>.</p>
 
 </div>
 </div>
@@ -625,9 +1279,38 @@ Protected Attributes</h2></td></tr>
 <p>When true, the description renders as a current -&gt; next upgrade preview. </p>
 <p>Set via SetAbilityComparison. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00100">100</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00201">201</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00076">GetTooltipDescription()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00012">SetAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00033">SetAbilityComparison()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00025">SetAbilityDefinition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00329">GetTooltipCooldownText()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00121">GetTooltipDescription()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00345">GetTooltipManaCostText()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00029">SetAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00052">SetAbilityComparison()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00043">SetAbilityDefinition()</a>.</p>
+
+</div>
+</div>
+<a id="ab40d5dea45b3e59120f565ea258d6bd0" name="ab40d5dea45b3e59120f565ea258d6bd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab40d5dea45b3e59120f565ea258d6bd0">&#9670;&#160;</a></span>CooldownFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::CooldownFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Format for the cooldown line. </p>
+<p>{0} = cooldown in seconds. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00166">166</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00329">GetTooltipCooldownText()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00019">UDTAbilityTooltipWidget()</a>.</p>
 
 </div>
 </div>
@@ -653,9 +1336,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Upgrade level shown on the left of the arrow in comparison mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00104">104</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00205">205</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00076">GetTooltipDescription()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00033">SetAbilityComparison()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00329">GetTooltipCooldownText()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00121">GetTooltipDescription()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00345">GetTooltipManaCostText()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00052">SetAbilityComparison()</a>.</p>
 
 </div>
 </div>
@@ -681,9 +1364,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Level passed to scalable tooltip values in single (non-comparison) mode (0 = base). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00096">96</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00197">197</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00076">GetTooltipDescription()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00033">SetAbilityComparison()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00168">GetEffectiveAbilityLevel()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00052">SetAbilityComparison()</a>.</p>
 
 </div>
 </div>
@@ -707,11 +1390,69 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Optional bound icon image; auto-populated from the definition icon. </p>
+<p>Image icon auto-populated from the definition icon. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00076">76</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00135">135</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">RefreshTooltip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
+
+</div>
+</div>
+<a id="ab772fce042c0636ca7b2306b7a7af63f" name="ab772fce042c0636ca7b2306b7a7af63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab772fce042c0636ca7b2306b7a7af63f">&#9670;&#160;</a></span>LevelFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::LevelFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Format for the level line. </p>
+<p>{0} = current level/rank. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00162">162</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00300">GetTooltipLevelText()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00019">UDTAbilityTooltipWidget()</a>.</p>
+
+</div>
+</div>
+<a id="ab373168dd4ce6a674e82243aaf03fed4" name="ab373168dd4ce6a674e82243aaf03fed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab373168dd4ce6a674e82243aaf03fed4">&#9670;&#160;</a></span>ManaCostFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::ManaCostFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Format for the mana-cost line. </p>
+<p>{0} = mana cost. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00170">170</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00345">GetTooltipManaCostText()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00019">UDTAbilityTooltipWidget()</a>.</p>
 
 </div>
 </div>
@@ -737,9 +1478,38 @@ Protected Attributes</h2></td></tr>
 
 <p>Upgrade level shown on the right of the arrow in comparison mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00108">108</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00209">209</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00076">GetTooltipDescription()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00033">SetAbilityComparison()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00329">GetTooltipCooldownText()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00121">GetTooltipDescription()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00345">GetTooltipManaCostText()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00052">SetAbilityComparison()</a>.</p>
+
+</div>
+</div>
+<a id="a047dac4861b87b55a6ed72be068fef79" name="a047dac4861b87b55a6ed72be068fef79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047dac4861b87b55a6ed72be068fef79">&#9670;&#160;</a></span>RequirementsFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText UDTAbilityTooltipWidget::RequirementsFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Format for the requirements line. </p>
+<p>{0} = comma-separated friendly requirement names. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00178">178</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00372">GetTooltipRequirementsText()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00019">UDTAbilityTooltipWidget()</a>.</p>
 
 </div>
 </div>
@@ -763,11 +1533,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Optional bound description block; auto-populated with the formatted rich-text description. </p>
+<p>Text auto-populated with the formatted rich-text description. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00084">84</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00158">158</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">RefreshTooltip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
 
 </div>
 </div>
@@ -794,9 +1564,64 @@ Protected Attributes</h2></td></tr>
 <p>Ability used as the context object for "Ability Property" tooltip values. </p>
 <p>May be a CDO; may be null. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00088">88</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00189">189</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00071">GetSourceAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00076">GetTooltipDescription()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00012">SetAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00033">SetAbilityComparison()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00025">SetAbilityDefinition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00138">FindGrantedSpec()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00189">GetActiveAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00168">GetEffectiveAbilityLevel()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00222">GetManaCostAtLevel()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00075">GetSourceAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00246">GetTooltipAbilityType()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00029">SetAbility()</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00052">SetAbilityComparison()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00043">SetAbilityDefinition()</a>.</p>
+
+</div>
+</div>
+<a id="a244f9b2d93e2a43484480bfeb52a2208" name="a244f9b2d93e2a43484480bfeb52a2208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a244f9b2d93e2a43484480bfeb52a2208">&#9670;&#160;</a></span>TagDisplayNames</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMap&lt;FGameplayTag, FText&gt; UDTAbilityTooltipWidget::TagDisplayNames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optional friendly display names for ability-type and requirement tags (e.g. </p>
+<p>Equipment.Weapon.Bow -&gt; "Bow Weapon"). Tags with no entry fall back to a humanized version of the tag's leaf segment. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00185">185</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00276">GetFriendlyTagName()</a>.</p>
+
+</div>
+</div>
+<a id="a285e36060718dcda2c2b3e7c2e7ce34a" name="a285e36060718dcda2c2b3e7c2e7ce34a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a285e36060718dcda2c2b3e7c2e7ce34a">&#9670;&#160;</a></span>TXT_AbilityLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UCommonTextBlock&gt; UDTAbilityTooltipWidget::TXT_AbilityLevel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00142">142</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
 
 </div>
 </div>
@@ -820,11 +1645,115 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Optional bound title text; auto-populated from the definition display name. </p>
+<p>Text auto-populated from the definition display name. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00139">139</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00049">RefreshTooltip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
+
+</div>
+</div>
+<a id="ab1fd4f28d54c82072186873a00c6402a" name="ab1fd4f28d54c82072186873a00c6402a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1fd4f28d54c82072186873a00c6402a">&#9670;&#160;</a></span>TXT_AbilityType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UCommonTextBlock&gt; UDTAbilityTooltipWidget::TXT_AbilityType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00145">145</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
+
+</div>
+</div>
+<a id="a59b738a53f6b849e2cbec7c4a2a2be96" name="a59b738a53f6b849e2cbec7c4a2a2be96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59b738a53f6b849e2cbec7c4a2a2be96">&#9670;&#160;</a></span>TXT_Cooldown</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UCommonTextBlock&gt; UDTAbilityTooltipWidget::TXT_Cooldown</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00151">151</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
+
+</div>
+</div>
+<a id="a92142f94c1be93885cd623c85f49640b" name="a92142f94c1be93885cd623c85f49640b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92142f94c1be93885cd623c85f49640b">&#9670;&#160;</a></span>TXT_Cost</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UCommonTextBlock&gt; UDTAbilityTooltipWidget::TXT_Cost</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00154">154</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
+
+</div>
+</div>
+<a id="a359630a846f29ffa5d40831e65a45bcb" name="a359630a846f29ffa5d40831e65a45bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a359630a846f29ffa5d40831e65a45bcb">&#9670;&#160;</a></span>TXT_Requirements</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UCommonTextBlock&gt; UDTAbilityTooltipWidget::TXT_Requirements</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html#l00148">148</a> of file <a class="el" href="_d_t_ability_tooltip_widget_8h_source.html">DTAbilityTooltipWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00069">RefreshTooltip()</a>.</p>
 
 </div>
 </div>

@@ -149,16 +149,16 @@ Inheritance diagram for UDTGameplayAbility_Melee:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afa85b7b81b775d1e661c0b044f96798e" id="r_afa85b7b81b775d1e661c0b044f96798e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afa85b7b81b775d1e661c0b044f96798e">UDTGameplayAbility_Melee</a> (const FObjectInitializer &amp;ObjectInitializer=FObjectInitializer::Get())</td></tr>
-<tr class="memitem:a0e66110f51c9065fb85bf512ed38040f" id="r_a0e66110f51c9065fb85bf512ed38040f"><td class="memItemLeft">TArray&lt; FHitResult &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0e66110f51c9065fb85bf512ed38040f">GetMeleeHitActors</a> ()</td></tr>
-<tr class="memdesc:a0e66110f51c9065fb85bf512ed38040f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the hits produced by the melee attack.  <br /></td></tr>
+<tr class="memitem:ac2ad2324c73ab0c436c7eea800d72651" id="r_ac2ad2324c73ab0c436c7eea800d72651"><td class="memItemLeft">TArray&lt; FHitResult &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac2ad2324c73ab0c436c7eea800d72651">GetMeleeHitActors</a> (const <a class="el" href="struct_f_d_t_melee_hitbox_params.html">FDTMeleeHitboxParams</a> &amp;HitboxParams)</td></tr>
+<tr class="memdesc:ac2ad2324c73ab0c436c7eea800d72651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the hits produced by one melee hit event.  <br /></td></tr>
 <tr class="memitem:adae975e5490f2d77931e3a4435b239d9" id="r_adae975e5490f2d77931e3a4435b239d9"><td class="memItemLeft"><a class="el" href="struct_f_melee_attack_params.html">FMeleeAttackParams</a>&#160;</td><td class="memItemRight"><a class="el" href="#adae975e5490f2d77931e3a4435b239d9">GetCurrentMeleeParams</a> ()</td></tr>
 <tr class="memdesc:adae975e5490f2d77931e3a4435b239d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current melee parameters.  <br /></td></tr>
-<tr class="memitem:a8cdffcea1649bffbc6adc1bcb9c1d1b9" id="r_a8cdffcea1649bffbc6adc1bcb9c1d1b9"><td class="memItemLeft"><a class="el" href="_d_t_gameplay_ability___melee_8h.html#af27cb4236226c373b47a1c21beab6052">EMeleeAttackType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8cdffcea1649bffbc6adc1bcb9c1d1b9">GetMeleeAttackType</a> () const</td></tr>
-<tr class="memdesc:a8cdffcea1649bffbc6adc1bcb9c1d1b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current melee attack type.  <br /></td></tr>
+<tr class="memitem:a5a61c4df75b962aab4b3028cb37f03a9" id="r_a5a61c4df75b962aab4b3028cb37f03a9"><td class="memItemLeft"><a class="el" href="struct_f_d_t_melee_hitbox_params.html">FDTMeleeHitboxParams</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5a61c4df75b962aab4b3028cb37f03a9">GetCurrentHitboxParams</a> (bool &amp;bOutValid) const</td></tr>
+<tr class="memdesc:a5a61c4df75b962aab4b3028cb37f03a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the hitbox params of the most recent Melee Hitbox notify event received this activation.  <br /></td></tr>
 <tr class="memitem:abe9bd47fd977fd2b239d1dd8ba8212cd" id="r_abe9bd47fd977fd2b239d1dd8ba8212cd"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#abe9bd47fd977fd2b239d1dd8ba8212cd">GetMeleeDamage</a> () const</td></tr>
 <tr class="memdesc:abe9bd47fd977fd2b239d1dd8ba8212cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the damage value for this melee attack, calculated from the BaseDamageAttribute and DamageScalar.  <br /></td></tr>
 <tr class="memitem:ad0f09ef276b8e3e30ce6cfc46b3d9b90" id="r_ad0f09ef276b8e3e30ce6cfc46b3d9b90"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ad0f09ef276b8e3e30ce6cfc46b3d9b90">GetMeleeRange</a> () const</td></tr>
-<tr class="memdesc:ad0f09ef276b8e3e30ce6cfc46b3d9b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the effective melee reach for this attack: the forward extent of the configured shape (cone range, sphere radius, or box half-extent length) plus the offset distance.  <br /></td></tr>
+<tr class="memdesc:ad0f09ef276b8e3e30ce6cfc46b3d9b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the effective melee reach of the most recent hit event this activation (cached hitbox params).  <br /></td></tr>
 <tr class="memitem:a220d6df7756756b01515c61bfa8e7db6" id="r_a220d6df7756756b01515c61bfa8e7db6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a220d6df7756756b01515c61bfa8e7db6">OnMeleeHitActor</a> (AActor *HitActor, const FHitResult &amp;HitResult)</td></tr>
 <tr class="memdesc:a220d6df7756756b01515c61bfa8e7db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blueprint event called for each hit actor when the melee attack hits.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_u_d_t_gameplay_ability"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a></td></tr>
@@ -179,10 +179,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9e7af1a508d2395f526585eb004bb58c pub_methods_class_u_d_t_gameplay_ability" id="r_a9e7af1a508d2395f526585eb004bb58c"><td class="memItemLeft">UAnimMontage *&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a9e7af1a508d2395f526585eb004bb58c">GetRandomAbilityMontage</a> () const</td></tr>
 <tr class="memdesc:a9e7af1a508d2395f526585eb004bb58c pub_methods_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random montage from the ability montages.  <br /></td></tr>
 <tr class="memitem:afd26dead01cdcfc5ed5e186bd6c8b0fb pub_methods_class_u_d_t_gameplay_ability" id="r_afd26dead01cdcfc5ed5e186bd6c8b0fb"><td class="memItemLeft"><a class="el" href="_d_t_gameplay_ability_8h.html#a7770945a7f48a5b53a0c0de7ecaf93a0">EAbilityActivationGroup</a>&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#afd26dead01cdcfc5ed5e186bd6c8b0fb">GetActivationGroup</a> () const</td></tr>
+<tr class="memitem:a716f76246b36c09b7411fa90187fb0e6 pub_methods_class_u_d_t_gameplay_ability" id="r_a716f76246b36c09b7411fa90187fb0e6"><td class="memItemLeft"><a class="el" href="_d_t_gameplay_ability_8h.html#a5f5c7ed49a4da18165fceeb5a8205c08">EDTAbilityActivationPolicy</a>&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a716f76246b36c09b7411fa90187fb0e6">GetActivationPolicy</a> () const</td></tr>
 <tr class="memitem:ab2d6405cc1c4c7685d601da1b6c85227 pub_methods_class_u_d_t_gameplay_ability" id="r_ab2d6405cc1c4c7685d601da1b6c85227"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#ab2d6405cc1c4c7685d601da1b6c85227">CanSendActivationEvents</a> () const</td></tr>
 <tr class="memdesc:ab2d6405cc1c4c7685d601da1b6c85227 pub_methods_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this ability should send TAG_EVENT_ABILITY_ACTIVATED / DEACTIVATED / FAILED events.  <br /></td></tr>
 <tr class="memitem:aefb75aa804f8dfce04ed3a099c799d71 pub_methods_class_u_d_t_gameplay_ability" id="r_aefb75aa804f8dfce04ed3a099c799d71"><td class="memItemLeft"><a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#aefb75aa804f8dfce04ed3a099c799d71">GetAbilityDefinition</a> () const</td></tr>
 <tr class="memdesc:aefb75aa804f8dfce04ed3a099c799d71 pub_methods_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the ability definition associated with this ability.  <br /></td></tr>
+<tr class="memitem:a6dd44cd5e79b3b24f0e3a355ce9a06b9 pub_methods_class_u_d_t_gameplay_ability" id="r_a6dd44cd5e79b3b24f0e3a355ce9a06b9"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a6dd44cd5e79b3b24f0e3a355ce9a06b9">GetDynamicValueByTag</a> (FGameplayTag ValueTag, bool &amp;bFound) const</td></tr>
+<tr class="memdesc:a6dd44cd5e79b3b24f0e3a355ce9a06b9 pub_methods_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves a dynamic value authored on this ability's definition by tag, at this ability's level, reading any Attribute-sourced values from the caster ASC.  <br /></td></tr>
+<tr class="memitem:a6df7457255669b859fd281d2300602a6 pub_methods_class_u_d_t_gameplay_ability" id="r_a6df7457255669b859fd281d2300602a6"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a6df7457255669b859fd281d2300602a6">GetCooldownDuration</a> (int32 Level) const</td></tr>
+<tr class="memdesc:a6df7457255669b859fd281d2300602a6 pub_methods_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">The nominal cooldown duration (seconds) this ability would apply on use, evaluated at Level.  <br /></td></tr>
 <tr class="memitem:ad855a16d964d6d6fa41b063d7ab1e6f6 pub_methods_class_u_d_t_gameplay_ability" id="r_ad855a16d964d6d6fa41b063d7ab1e6f6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#ad855a16d964d6d6fa41b063d7ab1e6f6">CanChangeActivationGroup</a> (<a class="el" href="_d_t_gameplay_ability_8h.html#a7770945a7f48a5b53a0c0de7ecaf93a0">EAbilityActivationGroup</a> NewGroup) const</td></tr>
 <tr class="memitem:aa008fab59a81ec90a42e9824ee4a2246 pub_methods_class_u_d_t_gameplay_ability" id="r_aa008fab59a81ec90a42e9824ee4a2246"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#aa008fab59a81ec90a42e9824ee4a2246">ChangeActivationGroup</a> (<a class="el" href="_d_t_gameplay_ability_8h.html#a7770945a7f48a5b53a0c0de7ecaf93a0">EAbilityActivationGroup</a> NewGroup)</td></tr>
 <tr class="memitem:a97d4e8d4f70190fb63ca10fcd67347ff pub_methods_class_u_d_t_gameplay_ability" id="r_a97d4e8d4f70190fb63ca10fcd67347ff"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a97d4e8d4f70190fb63ca10fcd67347ff">HasStacks</a> () const</td></tr>
@@ -201,8 +206,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aae59f54d9261bf61ded4ad23c650aa02 pub_methods_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a single charge (clamped to max).  <br /></td></tr>
 <tr class="memitem:a796cd62f287c73279ad18fd1018723da pub_methods_class_u_d_t_gameplay_ability" id="r_a796cd62f287c73279ad18fd1018723da"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a796cd62f287c73279ad18fd1018723da">ResetStacks</a> ()</td></tr>
 <tr class="memdesc:a796cd62f287c73279ad18fd1018723da pub_methods_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset charges to the maximum value.  <br /></td></tr>
+<tr class="memitem:a880b81ee87f28c71d22c66829e7ad685 pub_methods_class_u_d_t_gameplay_ability" id="r_a880b81ee87f28c71d22c66829e7ad685"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a880b81ee87f28c71d22c66829e7ad685">TryActivateAbilityOnSpawn</a> (const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilitySpec &amp;Spec) const</td></tr>
 <tr class="memitem:a84cea1f4451bd0531c2666e3634d5c5f pub_methods_class_u_d_t_gameplay_ability" id="r_a84cea1f4451bd0531c2666e3634d5c5f"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a84cea1f4451bd0531c2666e3634d5c5f">CanActivateAbility</a> (const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayTagContainer *SourceTags, const FGameplayTagContainer *TargetTags, FGameplayTagContainer *OptionalRelevantTags) const override</td></tr>
 <tr class="memitem:ab7af49289a0082b404caa9532fd70f5d pub_methods_class_u_d_t_gameplay_ability" id="r_ab7af49289a0082b404caa9532fd70f5d"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#ab7af49289a0082b404caa9532fd70f5d">CheckCooldown</a> (const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, FGameplayTagContainer *OptionalRelevantTags) const override</td></tr>
+<tr class="memitem:aff2b42c02eef57e873c4f3f1eda80136 pub_methods_class_u_d_t_gameplay_ability" id="r_aff2b42c02eef57e873c4f3f1eda80136"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#aff2b42c02eef57e873c4f3f1eda80136">ApplyCooldown</a> (const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo) const override</td></tr>
 <tr class="memitem:af044e57dbb337b122a3a6ce74614c0d7 pub_methods_class_u_d_t_gameplay_ability" id="r_af044e57dbb337b122a3a6ce74614c0d7"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#af044e57dbb337b122a3a6ce74614c0d7">OnGiveAbility</a> (const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilitySpec &amp;Spec) override</td></tr>
 <tr class="memitem:ad28e868382b9feeb5eb76598c774c315 pub_methods_class_u_d_t_gameplay_ability" id="r_ad28e868382b9feeb5eb76598c774c315"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#ad28e868382b9feeb5eb76598c774c315">OnRemoveAbility</a> (const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilitySpec &amp;Spec) override</td></tr>
 <tr class="memitem:aabf713d658d7f6b30ea16459f1571b46 pub_methods_class_u_d_t_gameplay_ability" id="r_aabf713d658d7f6b30ea16459f1571b46"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#aabf713d658d7f6b30ea16459f1571b46">SetCanBeCanceled</a> (bool bCanBeCanceled) override</td></tr>
@@ -215,8 +222,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:aeb5baa464b072d98245cf660d34b08b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the validity of the target actor for the melee attack.  <br /></td></tr>
 <tr class="memitem:a9dee9788e6499673c0fafa23349ed115" id="r_a9dee9788e6499673c0fafa23349ed115"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage</a> (FGameplayEventData Payload)</td></tr>
 <tr class="memdesc:a9dee9788e6499673c0fafa23349ed115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deals Damage to all melee actors.  <br /></td></tr>
-<tr class="memitem:a10370198d1b3ce95cec3f01438575376" id="r_a10370198d1b3ce95cec3f01438575376"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a10370198d1b3ce95cec3f01438575376">HandleMeleeTargetingComplete</a> (FTargetingRequestHandle TargetingHandle)</td></tr>
-<tr class="memdesc:a10370198d1b3ce95cec3f01438575376"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completion callback for the targeting-preset hit query.  <br /></td></tr>
 <tr class="memitem:a1e134fdec49dace715ab1583c832fb8d" id="r_a1e134fdec49dace715ab1583c832fb8d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1e134fdec49dace715ab1583c832fb8d">ProcessMeleeHits</a> (const TArray&lt; FHitResult &gt; &amp;Hits)</td></tr>
 <tr class="memdesc:a1e134fdec49dace715ab1583c832fb8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routes a locally-gathered hit set to the right place: an owning client ships it to the server as target data, while authority (host/AI/standalone) applies it directly.  <br /></td></tr>
 <tr class="memitem:a15e2d589ab3bdf15ea86d454ca54a51a" id="r_a15e2d589ab3bdf15ea86d454ca54a51a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a15e2d589ab3bdf15ea86d454ca54a51a">SendTargetDataToServer</a> (const TArray&lt; FHitResult &gt; &amp;Hits)</td></tr>
@@ -232,8 +237,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:acf3f17d87b818aad9c57f19644d0b0ff pro_methods_class_u_d_t_gameplay_ability" id="r_acf3f17d87b818aad9c57f19644d0b0ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#acf3f17d87b818aad9c57f19644d0b0ff">HandleAbilityStackChanged</a> (FGameplayAbilitySpecHandle ChangedAbilityHandle, int32 NewStacks, int32 OldStacks)</td></tr>
 <tr class="memitem:aad2fd13be81a3fbf8cbe3bc2c0a9cb7c pro_methods_class_u_d_t_gameplay_ability" id="r_aad2fd13be81a3fbf8cbe3bc2c0a9cb7c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#aad2fd13be81a3fbf8cbe3bc2c0a9cb7c">SetCurrentStacks</a> (int32 NewStacks)</td></tr>
 <tr class="memdesc:aad2fd13be81a3fbf8cbe3bc2c0a9cb7c pro_methods_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current stack count directly (clamped to [0, MaxStacks]) and broadcasts the delegate.  <br /></td></tr>
-<tr class="memitem:a9a05e59f17d4e53e5c831ba09600c7ca pro_methods_class_u_d_t_gameplay_ability" id="r_a9a05e59f17d4e53e5c831ba09600c7ca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a9a05e59f17d4e53e5c831ba09600c7ca">StartStackRegeneration</a> ()</td></tr>
-<tr class="memdesc:a9a05e59f17d4e53e5c831ba09600c7ca pro_methods_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the cooldown-based charge regeneration loop if below max stacks.  <br /></td></tr>
+<tr class="memitem:a03281529ba0b9bb24081bcf5d10a4fd6 pro_methods_class_u_d_t_gameplay_ability" id="r_a03281529ba0b9bb24081bcf5d10a4fd6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a03281529ba0b9bb24081bcf5d10a4fd6">StartStackRegeneration</a> () const</td></tr>
+<tr class="memdesc:a03281529ba0b9bb24081bcf5d10a4fd6 pro_methods_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the cooldown-based charge regeneration loop if below max stacks.  <br /></td></tr>
 <tr class="memitem:a106b8fde3bb10bbf6ff1e31b552c0d43 pro_methods_class_u_d_t_gameplay_ability" id="r_a106b8fde3bb10bbf6ff1e31b552c0d43"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a106b8fde3bb10bbf6ff1e31b552c0d43">HandleCooldownTagChanged</a> (FGameplayTag CooldownTag, int32 NewCount)</td></tr>
 <tr class="memdesc:a106b8fde3bb10bbf6ff1e31b552c0d43 pro_methods_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a cooldown tag count changes.  <br /></td></tr>
 <tr class="memitem:a0afa3a97bd9e57379f94e614a970b0d9 pro_methods_class_u_d_t_gameplay_ability" id="r_a0afa3a97bd9e57379f94e614a970b0d9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a0afa3a97bd9e57379f94e614a970b0d9">RegisterCooldownTagDelegates</a> ()</td></tr>
@@ -247,7 +252,6 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a4f24364ae3cda7e3b3ec475c06063cf1" id="r_a4f24364ae3cda7e3b3ec475c06063cf1"><td class="memItemLeft"><a class="el" href="struct_f_melee_attack_params.html">FMeleeAttackParams</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4f24364ae3cda7e3b3ec475c06063cf1">MeleeAttackParams</a></td></tr>
 <tr class="memitem:ab4d077a3b2c4f1996a0204e7d4e3c878" id="r_ab4d077a3b2c4f1996a0204e7d4e3c878"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#ab4d077a3b2c4f1996a0204e7d4e3c878">DamageEventTag</a></td></tr>
 <tr class="inherit_header pro_attribs_class_u_d_t_gameplay_ability"><td colspan="2">Protected Attributes inherited from <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a></td></tr>
-<tr class="memitem:a738f9c34916134146933b7e4b4da47e6 pro_attribs_class_u_d_t_gameplay_ability" id="r_a738f9c34916134146933b7e4b4da47e6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a738f9c34916134146933b7e4b4da47e6">bActivateOnGranted</a> = false</td></tr>
 <tr class="memitem:aa4a11d7193c80c1271985c0691c64abe pro_attribs_class_u_d_t_gameplay_ability" id="r_aa4a11d7193c80c1271985c0691c64abe"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#aa4a11d7193c80c1271985c0691c64abe">bDoActivationEvents</a> = true</td></tr>
 <tr class="memdesc:aa4a11d7193c80c1271985c0691c64abe pro_attribs_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true (default), this ability broadcasts ability lifecycle events.  <br /></td></tr>
 <tr class="memitem:a73c58de96499514529f5268f56b2caf7 pro_attribs_class_u_d_t_gameplay_ability" id="r_a73c58de96499514529f5268f56b2caf7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a73c58de96499514529f5268f56b2caf7">bUseAbilityStacks</a> = false</td></tr>
@@ -262,6 +266,8 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a9ed1bdb29a433668c64b696e8b31a9f4 pro_attribs_class_u_d_t_gameplay_ability" id="r_a9ed1bdb29a433668c64b696e8b31a9f4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a9ed1bdb29a433668c64b696e8b31a9f4">bUseRandomAbilityMontage</a> = false</td></tr>
 <tr class="memitem:a191c55f4ab27513a2460cda71e6be7dc pro_attribs_class_u_d_t_gameplay_ability" id="r_a191c55f4ab27513a2460cda71e6be7dc"><td class="memItemLeft">TArray&lt; UAnimMontage * &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a191c55f4ab27513a2460cda71e6be7dc">AbilityMontages</a></td></tr>
 <tr class="memitem:ae7591c233f93aa0dfcb281f23e5a2eed pro_attribs_class_u_d_t_gameplay_ability" id="r_ae7591c233f93aa0dfcb281f23e5a2eed"><td class="memItemLeft"><a class="el" href="_d_t_gameplay_ability_8h.html#a7770945a7f48a5b53a0c0de7ecaf93a0">EAbilityActivationGroup</a>&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#ae7591c233f93aa0dfcb281f23e5a2eed">ActivationGroup</a></td></tr>
+<tr class="memitem:a173060d2b4bc6cb0bfa6aad1127cadc9 pro_attribs_class_u_d_t_gameplay_ability" id="r_a173060d2b4bc6cb0bfa6aad1127cadc9"><td class="memItemLeft"><a class="el" href="_d_t_gameplay_ability_8h.html#a5f5c7ed49a4da18165fceeb5a8205c08">EDTAbilityActivationPolicy</a>&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a173060d2b4bc6cb0bfa6aad1127cadc9">ActivationPolicy</a> = <a class="el" href="_d_t_gameplay_ability_8h.html#a5f5c7ed49a4da18165fceeb5a8205c08a82db7a1dadfda8ba50b0665f651d567d">EDTAbilityActivationPolicy::OnInputTriggered</a></td></tr>
+<tr class="memdesc:a173060d2b4bc6cb0bfa6aad1127cadc9 pro_attribs_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">How this ability activates from tag-routed player input.  <br /></td></tr>
 <tr class="memitem:aec6449460dc1082656be0f0d8d56bfda pro_attribs_class_u_d_t_gameplay_ability" id="r_aec6449460dc1082656be0f0d8d56bfda"><td class="memItemLeft">TArray&lt; TPair&lt; FGameplayTag, FDelegateHandle &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#aec6449460dc1082656be0f0d8d56bfda">CooldownTagDelegateHandles</a></td></tr>
 <tr class="memdesc:aec6449460dc1082656be0f0d8d56bfda pro_attribs_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delegate handles for the cooldown tag events we're listening to.  <br /></td></tr>
 <tr class="memitem:ab60f474aeb5c75709872a23c80691656 pro_attribs_class_u_d_t_gameplay_ability" id="r_ab60f474aeb5c75709872a23c80691656"><td class="memItemLeft">FDelegateHandle&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#ab60f474aeb5c75709872a23c80691656">AbilityStackChangedDelegateHandle</a></td></tr>
@@ -276,7 +282,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base Melee Gameplay Ability class for Dark Tower. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00081">81</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00057">57</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afa85b7b81b775d1e661c0b044f96798e" name="afa85b7b81b775d1e661c0b044f96798e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa85b7b81b775d1e661c0b044f96798e">&#9670;&#160;</a></span>UDTGameplayAbility_Melee()</h2>
@@ -293,9 +299,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00023">23</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00032">32</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00218">UDTGameplayAbility::ActivationGroup</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00025">Exclusive_Replaceable</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00135">MeleeAttackParams</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00250">UDTGameplayAbility::ActivationGroup</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00025">Exclusive_Replaceable</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00112">MeleeAttackParams</a>.</p>
 
 </div>
 </div>
@@ -339,9 +345,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_u_d_t_gameplay_ability.html#ae9e9f3ad2453f04e743586361d7d7add">UDTGameplayAbility</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00363">363</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00355">355</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00411">UDTGameplayAbility::CommitAbility()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00138">DamageEventTag</a>, <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00392">EndAbility()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00267">OnClientTargetDataReceived()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00505">UDTGameplayAbility::CommitAbility()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00115">DamageEventTag</a>, <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00387">EndAbility()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00260">OnClientTargetDataReceived()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>.</p>
 
@@ -373,11 +379,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Deals damage to all hit actors. </p>
 <p>Re-validates each target (team/dead/reach) so it is safe to call with client-supplied target data. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00288">288</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00281">281</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="#abe9bd47fd977fd2b239d1dd8ba8212cd">GetMeleeDamage()</a>, <a class="el" href="#aeb5baa464b072d98245cf660d34b08b1">IsTargetValid()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00135">MeleeAttackParams</a>, and <a class="el" href="#a220d6df7756756b01515c61bfa8e7db6">OnMeleeHitActor()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00037">UDTCombatSubsystem::DealDamageToTarget()</a>, <a class="el" href="#abe9bd47fd977fd2b239d1dd8ba8212cd">GetMeleeDamage()</a>, <a class="el" href="#aeb5baa464b072d98245cf660d34b08b1">IsTargetValid()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00112">MeleeAttackParams</a>, and <a class="el" href="#a220d6df7756756b01515c61bfa8e7db6">OnMeleeHitActor()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00267">OnClientTargetDataReceived()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00229">ProcessMeleeHits()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00260">OnClientTargetDataReceived()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00222">ProcessMeleeHits()</a>.</p>
 
 </div>
 </div>
@@ -406,9 +412,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Deals Damage to all melee actors. </p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00363">ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00288">ApplyMeleeDamage()</a>, <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00392">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00214">HandleMeleeTargetingComplete()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00267">OnClientTargetDataReceived()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00229">ProcessMeleeHits()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00244">SendTargetDataToServer()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00355">ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00281">ApplyMeleeDamage()</a>, <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00387">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00260">OnClientTargetDataReceived()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00222">ProcessMeleeHits()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00237">SendTargetDataToServer()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00363">ActivateAbility()</a>, and <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00355">ActivateAbility()</a>, and <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>.</p>
 
 </div>
 </div>
@@ -456,9 +462,39 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_u_d_t_gameplay_ability.html#a0ae92fae63789405d27a2063d3073014">UDTGameplayAbility</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00392">392</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00387">387</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00363">ActivateAbility()</a>, and <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00355">ActivateAbility()</a>, and <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>.</p>
+
+</div>
+</div>
+<a id="a5a61c4df75b962aab4b3028cb37f03a9" name="a5a61c4df75b962aab4b3028cb37f03a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a61c4df75b962aab4b3028cb37f03a9">&#9670;&#160;</a></span>GetCurrentHitboxParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_d_t_melee_hitbox_params.html">FDTMeleeHitboxParams</a> UDTGameplayAbility_Melee::GetCurrentHitboxParams </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>bOutValid</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the hitbox params of the most recent Melee Hitbox notify event received this activation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bOutValid</td><td>False until the first hit event of the activation has fired </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The cached hitbox params (default-constructed when bOutValid is false) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00157">157</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ac2ad2324c73ab0c436c7eea800d72651">GetMeleeHitActors()</a>.</p>
 
 </div>
 </div>
@@ -480,45 +516,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Gets the current melee parameters. </p>
 <dl class="section return"><dt>Returns</dt><dd>Current melee attack parameters </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00141">141</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00152">152</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00135">MeleeAttackParams</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00112">MeleeAttackParams</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a0e66110f51c9065fb85bf512ed38040f">GetMeleeHitActors()</a>.</p>
-
-</div>
-</div>
-<a id="a8cdffcea1649bffbc6adc1bcb9c1d1b9" name="a8cdffcea1649bffbc6adc1bcb9c1d1b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cdffcea1649bffbc6adc1bcb9c1d1b9">&#9670;&#160;</a></span>GetMeleeAttackType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_d_t_gameplay_ability___melee_8h.html#af27cb4236226c373b47a1c21beab6052">EMeleeAttackType</a> UDTGameplayAbility_Melee::GetMeleeAttackType </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the current melee attack type. </p>
-<dl class="section return"><dt>Returns</dt><dd>Current melee attack type </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00108">108</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00108">GetMeleeAttackType()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00135">MeleeAttackParams</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00108">GetMeleeAttackType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ac2ad2324c73ab0c436c7eea800d72651">GetMeleeHitActors()</a>.</p>
 
 </div>
 </div>
@@ -542,12 +544,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#abe9bd47fd977fd2b239d1dd8ba8212cd">GetMeleeDamage()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00288">ApplyMeleeDamage()</a>, and <a class="el" href="#abe9bd47fd977fd2b239d1dd8ba8212cd">GetMeleeDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00281">ApplyMeleeDamage()</a>, and <a class="el" href="#abe9bd47fd977fd2b239d1dd8ba8212cd">GetMeleeDamage()</a>.</p>
 
 </div>
 </div>
-<a id="a0e66110f51c9065fb85bf512ed38040f" name="a0e66110f51c9065fb85bf512ed38040f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e66110f51c9065fb85bf512ed38040f">&#9670;&#160;</a></span>GetMeleeHitActors()</h2>
+<a id="ac2ad2324c73ab0c436c7eea800d72651" name="ac2ad2324c73ab0c436c7eea800d72651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ad2324c73ab0c436c7eea800d72651">&#9670;&#160;</a></span>GetMeleeHitActors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -555,18 +557,24 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">TArray&lt; FHitResult &gt; UDTGameplayAbility_Melee::GetMeleeHitActors </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_melee_hitbox_params.html">FDTMeleeHitboxParams</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>HitboxParams</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the hits produced by the melee attack. </p>
-<p>Detection uses overlaps, so each result is synthesized with a contact point on the hit actor's collision toward the attack origin. </p><dl class="section return"><dt>Returns</dt><dd>Array of hit results, one per valid actor hit by the melee attack </dd></dl>
+<p>Gets the hits produced by one melee hit event. </p>
+<p>Detection uses overlaps, so each result is synthesized with a contact point on the hit actor's collision toward the attack origin. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">HitboxParams</td><td>Per-animation hit volume supplied by the Melee Hitbox notify that fired </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Array of hit results, one per valid actor hit by the melee attack </dd></dl>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00141">GetCurrentMeleeParams()</a>, and <a class="el" href="#a0e66110f51c9065fb85bf512ed38040f">GetMeleeHitActors()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00157">GetCurrentHitboxParams()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00152">GetCurrentMeleeParams()</a>, and <a class="el" href="#ac2ad2324c73ab0c436c7eea800d72651">GetMeleeHitActors()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a0e66110f51c9065fb85bf512ed38040f">GetMeleeHitActors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ac2ad2324c73ab0c436c7eea800d72651">GetMeleeHitActors()</a>.</p>
 
 </div>
 </div>
@@ -585,46 +593,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the effective melee reach for this attack: the forward extent of the configured shape (cone range, sphere radius, or box half-extent length) plus the offset distance. </p>
-<dl class="section return"><dt>Returns</dt><dd>Melee range from the avatar's origin </dd></dl>
+<p>Gets the effective melee reach of the most recent hit event this activation (cached hitbox params). </p>
+<dl class="section return"><dt>Returns</dt><dd>Melee range from the avatar's origin, or 0 before the first hit event has fired </dd></dl>
 
 <p class="reference">References <a class="el" href="#ad0f09ef276b8e3e30ce6cfc46b3d9b90">GetMeleeRange()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#ad0f09ef276b8e3e30ce6cfc46b3d9b90">GetMeleeRange()</a>.</p>
-
-</div>
-</div>
-<a id="a10370198d1b3ce95cec3f01438575376" name="a10370198d1b3ce95cec3f01438575376"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10370198d1b3ce95cec3f01438575376">&#9670;&#160;</a></span>HandleMeleeTargetingComplete()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void UDTGameplayAbility_Melee::HandleMeleeTargetingComplete </td>
-          <td>(</td>
-          <td class="paramtype">FTargetingRequestHandle</td>          <td class="paramname"><span class="paramname"><em>TargetingHandle</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Completion callback for the targeting-preset hit query. </p>
-<p>Extracts the hit results from the request handle and routes them to ProcessMeleeHits. Bound when TargetingPreset is used. </p>
-
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00214">214</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00229">ProcessMeleeHits()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>.</p>
 
 </div>
 </div>
@@ -662,7 +636,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#aeb5baa464b072d98245cf660d34b08b1">IsTargetValid()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00288">ApplyMeleeDamage()</a>, and <a class="el" href="#aeb5baa464b072d98245cf660d34b08b1">IsTargetValid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00281">ApplyMeleeDamage()</a>, and <a class="el" href="#aeb5baa464b072d98245cf660d34b08b1">IsTargetValid()</a>.</p>
 
 </div>
 </div>
@@ -696,11 +670,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Server-side receipt of the client's hit target data. </p>
 <p>Applies damage after validation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00267">267</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00260">260</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00288">ApplyMeleeDamage()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00281">ApplyMeleeDamage()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00363">ActivateAbility()</a>, and <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00355">ActivateAbility()</a>, and <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>.</p>
 
 </div>
 </div>
@@ -734,7 +708,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a220d6df7756756b01515c61bfa8e7db6">OnMeleeHitActor()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00288">ApplyMeleeDamage()</a>, and <a class="el" href="#a220d6df7756756b01515c61bfa8e7db6">OnMeleeHitActor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00281">ApplyMeleeDamage()</a>, and <a class="el" href="#a220d6df7756756b01515c61bfa8e7db6">OnMeleeHitActor()</a>.</p>
 
 </div>
 </div>
@@ -763,11 +737,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Routes a locally-gathered hit set to the right place: an owning client ships it to the server as target data, while authority (host/AI/standalone) applies it directly. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00229">229</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00222">222</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00288">ApplyMeleeDamage()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00244">SendTargetDataToServer()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00281">ApplyMeleeDamage()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00237">SendTargetDataToServer()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00214">HandleMeleeTargetingComplete()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>.</p>
 
 </div>
 </div>
@@ -796,9 +770,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Packages the locally-gathered hits into target data and sends them to the server for validation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00244">244</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00237">237</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html">DTGameplayAbility_Melee.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00229">ProcessMeleeHits()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a9dee9788e6499673c0fafa23349ed115">DealDamage()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00222">ProcessMeleeHits()</a>.</p>
 
 </div>
 </div>
@@ -823,9 +797,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00138">138</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00115">115</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00363">ActivateAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00355">ActivateAbility()</a>.</p>
 
 </div>
 </div>
@@ -849,9 +823,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00135">135</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00112">112</a> of file <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html">DTGameplayAbility_Melee.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00288">ApplyMeleeDamage()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00141">GetCurrentMeleeParams()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00108">GetMeleeAttackType()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00023">UDTGameplayAbility_Melee()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00281">ApplyMeleeDamage()</a>, <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00152">GetCurrentMeleeParams()</a>, and <a class="el" href="_d_t_gameplay_ability___melee_8cpp_source.html#l00032">UDTGameplayAbility_Melee()</a>.</p>
 
 </div>
 </div>

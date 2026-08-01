@@ -132,10 +132,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_f_dynam
 </div><!--header-->
 <div class="contents">
 
-<p>Place holder driven description value definition used for dynamic tooltip generation.  
+<p>Place holder driven description value definition used for dynamic tooltip generation (item affixes, etc.).  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_d_t_ability_types_8h_source.html">DTAbilityTypes.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for FDynamicDescriptionValue:</div>
 <div class="dyncontent">
@@ -151,6 +151,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a88de7ce0b8c28b6819cda332eebd77ef" id="r_a88de7ce0b8c28b6819cda332eebd77ef"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a88de7ce0b8c28b6819cda332eebd77ef">FDynamicDescriptionValue</a> ()</td></tr>
 <tr class="inherit_header pub_methods_struct_f_dynamic_value_definition_base"><td colspan="2">Public Member Functions inherited from <a class="el" href="struct_f_dynamic_value_definition_base.html">FDynamicValueDefinitionBase</a></td></tr>
 <tr class="memitem:a8d38441ee4895752b2bab743e9298910 pub_methods_struct_f_dynamic_value_definition_base" id="r_a8d38441ee4895752b2bab743e9298910"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a8d38441ee4895752b2bab743e9298910">FDynamicValueDefinitionBase</a> ()</td></tr>
+<tr class="memitem:a81ebb00f3fe0b8a02d72388fe9b00022 pub_methods_struct_f_dynamic_value_definition_base" id="r_a81ebb00f3fe0b8a02d72388fe9b00022"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a81ebb00f3fe0b8a02d72388fe9b00022">EvaluateScalarAtLevel</a> (int32 EvaluationLevel, float NormalizedValue=0.0f) const</td></tr>
+<tr class="memdesc:a81ebb00f3fe0b8a02d72388fe9b00022 pub_methods_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the Range/ScalableFloat scalar at a level (or at NormalizedValue when EvaluationLevel &lt;= 0).  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -160,12 +162,14 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a0539fce283a438c7ac551c2aaa657830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional inline display template or label for tooltip values.  <br /></td></tr>
 <tr class="memitem:a60e176b42d5309505a124ce49eed4b95" id="r_a60e176b42d5309505a124ce49eed4b95"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a60e176b42d5309505a124ce49eed4b95">DecimalPlaces</a> = 0</td></tr>
 <tr class="memdesc:a60e176b42d5309505a124ce49eed4b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of decimals to retain for percentage or fractional displays.  <br /></td></tr>
-<tr class="memitem:a2f3496a7745a7909065b172bece4f582" id="r_a2f3496a7745a7909065b172bece4f582"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#a2f3496a7745a7909065b172bece4f582">BoundPropertyName</a> = NAME_None</td></tr>
-<tr class="memdesc:a2f3496a7745a7909065b172bece4f582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the numeric UPROPERTY (or FScalableFloat) read off the format-time context object when ValueSource is Ability Property (EX: ChainCount, DamageScalar).  <br /></td></tr>
+<tr class="memitem:ab4fa194dbbbc899c10ac747e406bc7e0" id="r_ab4fa194dbbbc899c10ac747e406bc7e0"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab4fa194dbbbc899c10ac747e406bc7e0">bShowAsPercent</a> = false</td></tr>
+<tr class="memdesc:ab4fa194dbbbc899c10ac747e406bc7e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the number as a percentage (additive 0-1 fractions show value x100, e.g.  <br /></td></tr>
+<tr class="memitem:a9a603f18036a5a79cace688aa8e77588" id="r_a9a603f18036a5a79cace688aa8e77588"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9a603f18036a5a79cace688aa8e77588">bShowSign</a> = false</td></tr>
+<tr class="memdesc:a9a603f18036a5a79cace688aa8e77588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to show an explicit +/- prefix.  <br /></td></tr>
 <tr class="inherit_header pub_attribs_struct_f_dynamic_value_definition_base"><td colspan="2">Public Attributes inherited from <a class="el" href="struct_f_dynamic_value_definition_base.html">FDynamicValueDefinitionBase</a></td></tr>
-<tr class="memitem:a5f079cbb5f39d905681ccde3a5bac94c pub_attribs_struct_f_dynamic_value_definition_base" id="r_a5f079cbb5f39d905681ccde3a5bac94c"><td class="memItemLeft"><a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a5f079cbb5f39d905681ccde3a5bac94c">Operation</a> = <a class="el" href="_d_t_inventory_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a></td></tr>
+<tr class="memitem:a5f079cbb5f39d905681ccde3a5bac94c pub_attribs_struct_f_dynamic_value_definition_base" id="r_a5f079cbb5f39d905681ccde3a5bac94c"><td class="memItemLeft"><a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82b">EStatModifierOp</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a5f079cbb5f39d905681ccde3a5bac94c">Operation</a> = <a class="el" href="_d_t_ability_types_8h.html#af838fad222c2a4326c9170fb186dc82baec211f7c20af43e742bf2570c3cb84f9">EStatModifierOp::Add</a></td></tr>
 <tr class="memdesc:a5f079cbb5f39d905681ccde3a5bac94c pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display operation used to decide percent vs flat formatting.  <br /></td></tr>
-<tr class="memitem:a6e987fe32ec55f13d834dec3be7b5b5e pub_attribs_struct_f_dynamic_value_definition_base" id="r_a6e987fe32ec55f13d834dec3be7b5b5e"><td class="memItemLeft"><a class="el" href="_d_t_inventory_types_8h.html#ae119a4b43145a9470312810d6cda32ad">EDynamicDescriptionValueSource</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a6e987fe32ec55f13d834dec3be7b5b5e">ValueSource</a> = <a class="el" href="_d_t_inventory_types_8h.html#ae119a4b43145a9470312810d6cda32ada87ba2ecc8b6915e8bd6f5089918229fd">EDynamicDescriptionValueSource::Range</a></td></tr>
+<tr class="memitem:a6e987fe32ec55f13d834dec3be7b5b5e pub_attribs_struct_f_dynamic_value_definition_base" id="r_a6e987fe32ec55f13d834dec3be7b5b5e"><td class="memItemLeft"><a class="el" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32ad">EDynamicDescriptionValueSource</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a6e987fe32ec55f13d834dec3be7b5b5e">ValueSource</a> = <a class="el" href="_d_t_ability_types_8h.html#ae119a4b43145a9470312810d6cda32ada87ba2ecc8b6915e8bd6f5089918229fd">EDynamicDescriptionValueSource::Range</a></td></tr>
 <tr class="memdesc:a6e987fe32ec55f13d834dec3be7b5b5e pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether this value comes from a min/max range or a scalable float.  <br /></td></tr>
 <tr class="memitem:a7d569992f04b3ac19070635dbdfeaacb pub_attribs_struct_f_dynamic_value_definition_base" id="r_a7d569992f04b3ac19070635dbdfeaacb"><td class="memItemLeft">FScalableFloat&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a7d569992f04b3ac19070635dbdfeaacb">ScalableValue</a></td></tr>
 <tr class="memdesc:a7d569992f04b3ac19070635dbdfeaacb pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalable float that can point to a Curve Table row when ValueSource is set to Scalable Float.  <br /></td></tr>
@@ -173,15 +177,21 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:ac2d1eb60fe4aa303436ff2373b81595b pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value at the start of the interpolation range.  <br /></td></tr>
 <tr class="memitem:adf1843731f46106363c93d36c9731d1e pub_attribs_struct_f_dynamic_value_definition_base" id="r_adf1843731f46106363c93d36c9731d1e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#adf1843731f46106363c93d36c9731d1e">MaxValue</a> = 0.0f</td></tr>
 <tr class="memdesc:adf1843731f46106363c93d36c9731d1e pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value at the end of the interpolation range.  <br /></td></tr>
-<tr class="memitem:a375e3f8d8560121f287502cf1755022d pub_attribs_struct_f_dynamic_value_definition_base" id="r_a375e3f8d8560121f287502cf1755022d"><td class="memItemLeft"><a class="el" href="_d_t_inventory_types_8h.html#a603a57c88d2ff0542f64e2028aae8d16">EScalableValueEvaluationMode</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a375e3f8d8560121f287502cf1755022d">ScalableEvaluationMode</a> = <a class="el" href="_d_t_inventory_types_8h.html#a603a57c88d2ff0542f64e2028aae8d16afd1dd0c603be8170f9eae0be9f2f6afb">EScalableValueEvaluationMode::Direct</a></td></tr>
+<tr class="memitem:a375e3f8d8560121f287502cf1755022d pub_attribs_struct_f_dynamic_value_definition_base" id="r_a375e3f8d8560121f287502cf1755022d"><td class="memItemLeft"><a class="el" href="_d_t_ability_types_8h.html#a603a57c88d2ff0542f64e2028aae8d16">EScalableValueEvaluationMode</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a375e3f8d8560121f287502cf1755022d">ScalableEvaluationMode</a> = <a class="el" href="_d_t_ability_types_8h.html#a603a57c88d2ff0542f64e2028aae8d16afd1dd0c603be8170f9eae0be9f2f6afb">EScalableValueEvaluationMode::Direct</a></td></tr>
 <tr class="memdesc:a375e3f8d8560121f287502cf1755022d pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls whether scalable values are read directly at the evaluation level or accumulated up to it.  <br /></td></tr>
-<tr class="memitem:a9c0f98757fbfdb649bfc44b4caace72e pub_attribs_struct_f_dynamic_value_definition_base" id="r_a9c0f98757fbfdb649bfc44b4caace72e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a9c0f98757fbfdb649bfc44b4caace72e">bShowSign</a> = true</td></tr>
-<tr class="memdesc:a9c0f98757fbfdb649bfc44b4caace72e pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to show an explicit +/- prefix.  <br /></td></tr>
+<tr class="memitem:adf35b0b56b95dba54bf5e3054c2da556 pub_attribs_struct_f_dynamic_value_definition_base" id="r_adf35b0b56b95dba54bf5e3054c2da556"><td class="memItemLeft">FGameplayAttribute&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#adf35b0b56b95dba54bf5e3054c2da556">SourceAttribute</a></td></tr>
+<tr class="memdesc:adf35b0b56b95dba54bf5e3054c2da556 pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute captured when ValueSource == Attribute.  <br /></td></tr>
+<tr class="memitem:aa1e1e3edc3ec7b6bcf48121ed2d1ce23 pub_attribs_struct_f_dynamic_value_definition_base" id="r_aa1e1e3edc3ec7b6bcf48121ed2d1ce23"><td class="memItemLeft">FScalableFloat&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#aa1e1e3edc3ec7b6bcf48121ed2d1ce23">Coefficient</a> = FScalableFloat(1.0f)</td></tr>
+<tr class="memdesc:aa1e1e3edc3ec7b6bcf48121ed2d1ce23 pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplier applied to the captured attribute when ValueSource == Attribute (e.g.  <br /></td></tr>
+<tr class="memitem:a2b7415f5791a900db9021a29430297c0 pub_attribs_struct_f_dynamic_value_definition_base" id="r_a2b7415f5791a900db9021a29430297c0"><td class="memItemLeft"><a class="el" href="_d_t_ability_types_8h.html#adc9d33262fca0a8be960025c6c61f93d">EDynamicValueAttributeCaptureSource</a>&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a2b7415f5791a900db9021a29430297c0">CaptureSource</a> = <a class="el" href="_d_t_ability_types_8h.html#adc9d33262fca0a8be960025c6c61f93daf31bbdd1b3e85bccd652680e16935819">EDynamicValueAttributeCaptureSource::Source</a></td></tr>
+<tr class="memdesc:a2b7415f5791a900db9021a29430297c0 pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which ASC the attribute is read from when ValueSource == Attribute.  <br /></td></tr>
+<tr class="memitem:a3592493afad95bca7c8673ef987d1a95 pub_attribs_struct_f_dynamic_value_definition_base" id="r_a3592493afad95bca7c8673ef987d1a95"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="struct_f_dynamic_value_definition_base.html#a3592493afad95bca7c8673ef987d1a95">SourceValueTag</a></td></tr>
+<tr class="memdesc:a3592493afad95bca7c8673ef987d1a95 pub_attribs_struct_f_dynamic_value_definition_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag of another dynamic ability value (on the owning definition) to pull from when ValueSource == AbilityValue.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Place holder driven description value definition used for dynamic tooltip generation. </p>
+<div class="textblock"><p>Place holder driven description value definition used for dynamic tooltip generation (item affixes, etc.). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00183">183</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_types_8h_source.html#l00220">220</a> of file <a class="el" href="_d_t_ability_types_8h_source.html">DTAbilityTypes.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a88de7ce0b8c28b6819cda332eebd77ef" name="a88de7ce0b8c28b6819cda332eebd77ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88de7ce0b8c28b6819cda332eebd77ef">&#9670;&#160;</a></span>FDynamicDescriptionValue()</h2>
@@ -206,32 +216,53 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00203">203</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_types_8h_source.html#l00244">244</a> of file <a class="el" href="_d_t_ability_types_8h_source.html">DTAbilityTypes.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00068">AccumulateByLevel</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00197">DecimalPlaces</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00193">DisplayLabel</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00203">FDynamicDescriptionValue()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00107">FDynamicValueDefinitionBase::FDynamicValueDefinitionBase()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00189">Placeholder</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00101">FDynamicValueDefinitionBase::ScalableEvaluationMode</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00140">AccumulateByLevel</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00234">DecimalPlaces</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00230">DisplayLabel</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00244">FDynamicDescriptionValue()</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00200">FDynamicValueDefinitionBase::FDynamicValueDefinitionBase()</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00226">Placeholder</a>, and <a class="el" href="_d_t_ability_types_8h_source.html#l00182">FDynamicValueDefinitionBase::ScalableEvaluationMode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_inventory_types_8h_source.html#l00203">FDynamicDescriptionValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_types_8h_source.html#l00244">FDynamicDescriptionValue()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a2f3496a7745a7909065b172bece4f582" name="a2f3496a7745a7909065b172bece4f582"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f3496a7745a7909065b172bece4f582">&#9670;&#160;</a></span>BoundPropertyName</h2>
+<a id="ab4fa194dbbbc899c10ac747e406bc7e0" name="ab4fa194dbbbc899c10ac747e406bc7e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4fa194dbbbc899c10ac747e406bc7e0">&#9670;&#160;</a></span>bShowAsPercent</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FName FDynamicDescriptionValue::BoundPropertyName = NAME_None</td>
+          <td class="memname">bool FDynamicDescriptionValue::bShowAsPercent = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Name of the numeric UPROPERTY (or FScalableFloat) read off the format-time context object when ValueSource is Ability Property (EX: ChainCount, DamageScalar). </p>
+<p>Show the number as a percentage (additive 0-1 fractions show value x100, e.g. </p>
+<p>0.01 -&gt; "1%"). A Multiply Operation is always shown as a percentage regardless of this flag. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00201">201</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_types_8h_source.html#l00238">238</a> of file <a class="el" href="_d_t_ability_types_8h_source.html">DTAbilityTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00113">EvaluateDescriptionValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00117">DisplaysAsPercent()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00035">MakeDescriptionValueDefFromStatModifier()</a>.</p>
+
+</div>
+</div>
+<a id="a9a603f18036a5a79cace688aa8e77588" name="a9a603f18036a5a79cace688aa8e77588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a603f18036a5a79cace688aa8e77588">&#9670;&#160;</a></span>bShowSign</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FDynamicDescriptionValue::bShowSign = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to show an explicit +/- prefix. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_types_8h_source.html#l00242">242</a> of file <a class="el" href="_d_t_ability_types_8h_source.html">DTAbilityTypes.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00035">MakeDescriptionValueDefFromStatModifier()</a>.</p>
 
 </div>
 </div>
@@ -249,9 +280,9 @@ Public Attributes</h2></td></tr>
 
 <p>Number of decimals to retain for percentage or fractional displays. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00197">197</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_types_8h_source.html#l00234">234</a> of file <a class="el" href="_d_t_ability_types_8h_source.html">DTAbilityTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_inventory_types_8h_source.html#l00203">FDynamicDescriptionValue()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00133">FormatDescriptionValuePlainString()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00018">MakeDescriptionValueDefFromStatModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_types_8h_source.html#l00244">FDynamicDescriptionValue()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00035">MakeDescriptionValueDefFromStatModifier()</a>.</p>
 
 </div>
 </div>
@@ -270,9 +301,9 @@ Public Attributes</h2></td></tr>
 <p>Optional inline display template or label for tooltip values. </p>
 <p>Use {Value} to place the formatted value inside authored text; otherwise the label is appended as a suffix. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00193">193</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_types_8h_source.html#l00230">230</a> of file <a class="el" href="_d_t_ability_types_8h_source.html">DTAbilityTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00168">ApplyDisplayLabel()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00203">FDynamicDescriptionValue()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00517">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_types_8h_source.html#l00244">FDynamicDescriptionValue()</a>.</p>
 
 </div>
 </div>
@@ -290,14 +321,14 @@ Public Attributes</h2></td></tr>
 
 <p>Placeholder token inside a description template (EX: Value_0. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_inventory_types_8h_source.html#l00189">189</a> of file <a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_types_8h_source.html#l00226">226</a> of file <a class="el" href="_d_t_ability_types_8h_source.html">DTAbilityTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_inventory_types_8h_source.html#l00203">FDynamicDescriptionValue()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00187">FormatResolvedDynamicDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00517">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00018">MakeDescriptionValueDefFromStatModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_types_8h_source.html#l00244">FDynamicDescriptionValue()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00035">MakeDescriptionValueDefFromStatModifier()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>F:/Work/SecondShift/DarkTower/Source/DarkTower/Public/Inventory/<a class="el" href="_d_t_inventory_types_8h_source.html">DTInventoryTypes.h</a></li>
+<li>F:/Work/SecondShift/DarkTower/Source/DarkTower/Public/AbilitySystem/<a class="el" href="_d_t_ability_types_8h_source.html">DTAbilityTypes.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_u_d_t_ab
 </div><!--header-->
 <div class="contents">
 
-<p>Base Ability Core Component class for Dark Tower.  
+<p>The per-actor GAS hub for Dark Tower.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>&gt;</code></p>
@@ -146,51 +146,162 @@ Inheritance diagram for UDTAbilityCoreComponent:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a291a06b3a9f63284c40cd72024b89a0b" id="r_a291a06b3a9f63284c40cd72024b89a0b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a291a06b3a9f63284c40cd72024b89a0b">UDTAbilityCoreComponent</a> ()</td></tr>
+<tr class="memitem:ac13df1d349d52b5d6dac6812f405da4d" id="r_ac13df1d349d52b5d6dac6812f405da4d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac13df1d349d52b5d6dac6812f405da4d">OnAttributeChanged</a> (const FOnAttributeChangeData &amp;Data)</td></tr>
+<tr class="memitem:adccf42e77c143575c4e40d0ef00217b1" id="r_adccf42e77c143575c4e40d0ef00217b1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#adccf42e77c143575c4e40d0ef00217b1">OnDamageAttributeChanged</a> (const FOnAttributeChangeData &amp;Data)</td></tr>
+<tr class="memitem:afdf17fa7f0154f1dfdf98da23db456a3" id="r_afdf17fa7f0154f1dfdf98da23db456a3"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afdf17fa7f0154f1dfdf98da23db456a3">Die</a> ()</td></tr>
+<tr class="memdesc:afdf17fa7f0154f1dfdf98da23db456a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers death events for the owner actor.  <br /></td></tr>
+<tr class="memitem:a59ac32d4d8ca6973bb545dcb2808b3c4" id="r_a59ac32d4d8ca6973bb545dcb2808b3c4"><td class="memItemLeft"><a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a>&#160;</td><td class="memItemRight"><a class="el" href="#a59ac32d4d8ca6973bb545dcb2808b3c4">GetLastHitInfo</a> () const</td></tr>
 <tr class="memitem:a3bca11302260aadd7e8238e97b0f75d1" id="r_a3bca11302260aadd7e8238e97b0f75d1"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a3bca11302260aadd7e8238e97b0f75d1">IsGodMode</a> () const</td></tr>
+<tr class="memitem:a1240ffe4a14c951b20db1f0ce1ee7ebd" id="r_a1240ffe4a14c951b20db1f0ce1ee7ebd"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a1240ffe4a14c951b20db1f0ce1ee7ebd">IsDemiGodMode</a> () const</td></tr>
+<tr class="memdesc:a1240ffe4a14c951b20db1f0ce1ee7ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demi god mode: damage is applied normally, but health wraps back around to max instead of reaching zero.  <br /></td></tr>
 <tr class="memitem:addeb3e9e1d55ee0fe4283b7ee5b4d265" id="r_addeb3e9e1d55ee0fe4283b7ee5b4d265"><td class="memItemLeft"><a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#addeb3e9e1d55ee0fe4283b7ee5b4d265">GetAbilitySystemComponent</a> () const</td></tr>
-<tr class="memitem:a315e199b7fdace32f1697477256f877c" id="r_a315e199b7fdace32f1697477256f877c"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#a315e199b7fdace32f1697477256f877c">GetHealth</a> () const override</td></tr>
-<tr class="memdesc:a315e199b7fdace32f1697477256f877c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override to uUDTAttributeSet health attributes.  <br /></td></tr>
-<tr class="memitem:a90ccfba50b5f87668e523f986c250d4a" id="r_a90ccfba50b5f87668e523f986c250d4a"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#a90ccfba50b5f87668e523f986c250d4a">GetMaxHealth</a> () const override</td></tr>
-<tr class="memdesc:a90ccfba50b5f87668e523f986c250d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override to use <a class="el" href="class_u_d_t_attribute_set.html" title="Main Attribute Set class for Dark Tower.">UDTAttributeSet</a> max health attributes.  <br /></td></tr>
-<tr class="memitem:aa6c202a3a741cef53d017daf0f6e665d" id="r_aa6c202a3a741cef53d017daf0f6e665d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa6c202a3a741cef53d017daf0f6e665d">Die</a> () override</td></tr>
-<tr class="memdesc:aa6c202a3a741cef53d017daf0f6e665d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override to add Status.Dead tag when dying to block incoming damage.  <br /></td></tr>
+<tr class="memitem:ad1ec05c6cad638e6663e5ee42795c65f" id="r_ad1ec05c6cad638e6663e5ee42795c65f"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#ad1ec05c6cad638e6663e5ee42795c65f">GetHealth</a> () const</td></tr>
+<tr class="memitem:a7c6dfc71d50d442fbf46ed3bc58222af" id="r_a7c6dfc71d50d442fbf46ed3bc58222af"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#a7c6dfc71d50d442fbf46ed3bc58222af">GetMaxHealth</a> () const</td></tr>
+<tr class="memitem:a9fa10449330eec8f002db3a4513bae99" id="r_a9fa10449330eec8f002db3a4513bae99"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#a9fa10449330eec8f002db3a4513bae99">GetMana</a> () const</td></tr>
+<tr class="memitem:a07fafcdc9c128d7df60b7dcda3602986" id="r_a07fafcdc9c128d7df60b7dcda3602986"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#a07fafcdc9c128d7df60b7dcda3602986">GetMaxMana</a> () const</td></tr>
+<tr class="memitem:a2e518f24c1a07085bad40fce2c558633" id="r_a2e518f24c1a07085bad40fce2c558633"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#a2e518f24c1a07085bad40fce2c558633">GetAttributeValue</a> (FGameplayAttribute Attribute) const</td></tr>
+<tr class="memdesc:a2e518f24c1a07085bad40fce2c558633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the base value of an attribute (the value with no stateful modifiers applied).  <br /></td></tr>
+<tr class="memitem:a4224b279618a3fd64610f2f9f272b740" id="r_a4224b279618a3fd64610f2f9f272b740"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#a4224b279618a3fd64610f2f9f272b740">GetCurrentAttributeValue</a> (FGameplayAttribute Attribute) const</td></tr>
+<tr class="memdesc:a4224b279618a3fd64610f2f9f272b740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current (final) value of an attribute.  <br /></td></tr>
+<tr class="memitem:ada2ff30284cb413f8af5e3eda71bde89" id="r_ada2ff30284cb413f8af5e3eda71bde89"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ada2ff30284cb413f8af5e3eda71bde89">IsAlive</a> () const</td></tr>
+<tr class="memdesc:ada2ff30284cb413f8af5e3eda71bde89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the Actor is considered alive (Health &gt; 0).  <br /></td></tr>
+<tr class="memitem:aaf1e14a55147590d4a068139789c1b5f" id="r_aaf1e14a55147590d4a068139789c1b5f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aaf1e14a55147590d4a068139789c1b5f">GrantAbility</a> (TSubclassOf&lt; UGameplayAbility &gt; Ability, int32 Level=1)</td></tr>
+<tr class="memdesc:aaf1e14a55147590d4a068139789c1b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grants the owner the given ability, making it available for activation.  <br /></td></tr>
+<tr class="memitem:a75bcb866f113085fbd9403595c528d2d" id="r_a75bcb866f113085fbd9403595c528d2d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a75bcb866f113085fbd9403595c528d2d">ClearAbility</a> (TSubclassOf&lt; UGameplayAbility &gt; Ability)</td></tr>
+<tr class="memdesc:a75bcb866f113085fbd9403595c528d2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an ability from the owner's Ability System Component.  <br /></td></tr>
+<tr class="memitem:a07de3de65c68d4497d214bf081ff6d23" id="r_a07de3de65c68d4497d214bf081ff6d23"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a07de3de65c68d4497d214bf081ff6d23">ClearAbilities</a> (TArray&lt; TSubclassOf&lt; UGameplayAbility &gt; &gt; Abilities)</td></tr>
+<tr class="memdesc:a07de3de65c68d4497d214bf081ff6d23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a set of abilities from the owner's Ability System Component.  <br /></td></tr>
+<tr class="memitem:a430e184a3d90428944dca002acdc8bb7" id="r_a430e184a3d90428944dca002acdc8bb7"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a430e184a3d90428944dca002acdc8bb7">HasAnyMatchingGameplayTags</a> (const FGameplayTagContainer TagContainer) const</td></tr>
+<tr class="memdesc:a430e184a3d90428944dca002acdc8bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the owner's ASC has any of the matching tags.  <br /></td></tr>
+<tr class="memitem:a38849be89d4ab3ad4ddcb410abd8e4d4" id="r_a38849be89d4ab3ad4ddcb410abd8e4d4"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a38849be89d4ab3ad4ddcb410abd8e4d4">HasMatchingGameplayTag</a> (const FGameplayTag TagToCheck) const</td></tr>
+<tr class="memdesc:a38849be89d4ab3ad4ddcb410abd8e4d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the owner's ASC has the specified tag.  <br /></td></tr>
+<tr class="memitem:a519717bc69d6aa0a4a45eb390f46e89f" id="r_a519717bc69d6aa0a4a45eb390f46e89f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a519717bc69d6aa0a4a45eb390f46e89f">IsUsingAbilityByClass</a> (TSubclassOf&lt; UGameplayAbility &gt; AbilityClass)</td></tr>
+<tr class="memdesc:a519717bc69d6aa0a4a45eb390f46e89f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether one of the owner's active abilities matches the provided Ability Class.  <br /></td></tr>
+<tr class="memitem:a3baef50dd29bccc1e397e5237251b049" id="r_a3baef50dd29bccc1e397e5237251b049"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3baef50dd29bccc1e397e5237251b049">IsUsingAbilityByTags</a> (FGameplayTagContainer AbilityTags)</td></tr>
+<tr class="memdesc:a3baef50dd29bccc1e397e5237251b049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether one of the owner's active abilities matches the provided tags.  <br /></td></tr>
+<tr class="memitem:ad85783af6087dcca6d1d7b2962e187d4" id="r_ad85783af6087dcca6d1d7b2962e187d4"><td class="memItemLeft">TArray&lt; UGameplayAbility * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad85783af6087dcca6d1d7b2962e187d4">GetActiveAbilitiesByClass</a> (TSubclassOf&lt; UGameplayAbility &gt; AbilityToSearch) const</td></tr>
+<tr class="memdesc:ad85783af6087dcca6d1d7b2962e187d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of currently active ability instances that match the given class.  <br /></td></tr>
+<tr class="memitem:a09edee157c954e44b44ebd72b8a88f3b" id="r_a09edee157c954e44b44ebd72b8a88f3b"><td class="memItemLeft">virtual TArray&lt; UGameplayAbility * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a09edee157c954e44b44ebd72b8a88f3b">GetActiveAbilitiesByTags</a> (const FGameplayTagContainer GameplayTagContainer) const</td></tr>
+<tr class="memdesc:a09edee157c954e44b44ebd72b8a88f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of currently active ability instances that match the given tags.  <br /></td></tr>
+<tr class="memitem:a9220ec62e51cc0330174ee714bad14c6" id="r_a9220ec62e51cc0330174ee714bad14c6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9220ec62e51cc0330174ee714bad14c6">SetAttributeValue</a> (FGameplayAttribute Attribute, float NewValue)</td></tr>
+<tr class="memdesc:a9220ec62e51cc0330174ee714bad14c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the base value of an attribute.  <br /></td></tr>
+<tr class="memitem:a3b8ae8c3bad563a53cd615dbe5a357a9" id="r_a3b8ae8c3bad563a53cd615dbe5a357a9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a3b8ae8c3bad563a53cd615dbe5a357a9">ClampAttributeValue</a> (FGameplayAttribute Attribute, float MinValue, float MaxValue)</td></tr>
+<tr class="memdesc:a3b8ae8c3bad563a53cd615dbe5a357a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps the Attribute from MinValue to MaxValue.  <br /></td></tr>
+<tr class="memitem:a86d9d8b8c4d0af543c33fa35741c1188" id="r_a86d9d8b8c4d0af543c33fa35741c1188"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a86d9d8b8c4d0af543c33fa35741c1188">AdjustAttributeForMaxChange</a> (<a class="el" href="class_u_d_t_attribute_set_base.html">UDTAttributeSetBase</a> *AttributeSet, const FGameplayAttribute AffectedAttributeProperty, const FGameplayAttribute MaxAttribute, float NewMaxValue)</td></tr>
+<tr class="memdesc:a86d9d8b8c4d0af543c33fa35741c1188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to proportionally adjust the value of an attribute when its associated max attribute changes.  <br /></td></tr>
+<tr class="memitem:ab06f69d5d7315be28aa0a1ae417b3532" id="r_ab06f69d5d7315be28aa0a1ae417b3532"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab06f69d5d7315be28aa0a1ae417b3532">PreAttributeChange</a> (<a class="el" href="class_u_d_t_attribute_set_base.html">UDTAttributeSetBase</a> *AttributeSet, const FGameplayAttribute &amp;Attribute, float NewValue)</td></tr>
+<tr class="memitem:a777f42100e8ec7790afb788c2609f2e0" id="r_a777f42100e8ec7790afb788c2609f2e0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a777f42100e8ec7790afb788c2609f2e0">PostGameplayEffectExecute</a> (<a class="el" href="class_u_d_t_attribute_set_base.html">UDTAttributeSetBase</a> *AttributeSet, const FGameplayEffectModCallbackData &amp;Data)</td></tr>
+<tr class="memitem:ab405a837d383c9302eea36b414186d4a" id="r_ab405a837d383c9302eea36b414186d4a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab405a837d383c9302eea36b414186d4a">SetupOwner</a> ()</td></tr>
+<tr class="memdesc:ab405a837d383c9302eea36b414186d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caches owner actor/pawn/character and resolves the owner's Ability System Component.  <br /></td></tr>
+<tr class="memitem:afee02247f2aadf347af4a474a978db19" id="r_afee02247f2aadf347af4a474a978db19"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afee02247f2aadf347af4a474a978db19">RegisterAbilitySystemDelegates</a> (UAbilitySystemComponent *ASC)</td></tr>
+<tr class="memdesc:afee02247f2aadf347af4a474a978db19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register Ability System delegates to broadcast blueprint assignable events.  <br /></td></tr>
+<tr class="memitem:a85d2dffa7e32238088117caf2040876d" id="r_a85d2dffa7e32238088117caf2040876d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a85d2dffa7e32238088117caf2040876d">ShutdownAbilitySystemDelegates</a> (UAbilitySystemComponent *ASC)</td></tr>
+<tr class="memdesc:a85d2dffa7e32238088117caf2040876d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean up any bound Ability System delegates.  <br /></td></tr>
+<tr class="memitem:af9e88724331b0ee181849e3dd04cbfdc" id="r_af9e88724331b0ee181849e3dd04cbfdc"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af9e88724331b0ee181849e3dd04cbfdc">HandleDamage</a> (float DamageAmount, const FGameplayTagContainer &amp;DamageTags, AActor *SourceActor)</td></tr>
+<tr class="memitem:aeb7b3bf01952a837fec5a6e2bc30a4bd" id="r_aeb7b3bf01952a837fec5a6e2bc30a4bd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aeb7b3bf01952a837fec5a6e2bc30a4bd">HandleDamageEvent</a> (float DamageAmount, const FGameplayTagContainer &amp;DamageTags, AActor *SourceActor, AActor *DamageCauser=nullptr, const FHitResult *HitResult=nullptr, const FGameplayEffectContextHandle &amp;SourceEffectContext=FGameplayEffectContextHandle())</td></tr>
+<tr class="memitem:a87991e15b5bf3ff1656296873f56a2f7" id="r_a87991e15b5bf3ff1656296873f56a2f7"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a87991e15b5bf3ff1656296873f56a2f7">HandleHealthChange</a> (float DeltaValue, const FGameplayTagContainer &amp;EventTags)</td></tr>
+<tr class="memitem:a4e8de8dc2bfbef7aa403d3ad3f8a8a53" id="r_a4e8de8dc2bfbef7aa403d3ad3f8a8a53"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4e8de8dc2bfbef7aa403d3ad3f8a8a53">HandleManaChange</a> (float DeltaValue, const FGameplayTagContainer &amp;EventTags)</td></tr>
+<tr class="memitem:a6dde1c36e2b7b9c7a4e7738c197dde27" id="r_a6dde1c36e2b7b9c7a4e7738c197dde27"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6dde1c36e2b7b9c7a4e7738c197dde27">HandleAttributeChange</a> (FGameplayAttribute Attribute, float DeltaValue, const FGameplayTagContainer &amp;EventTags)</td></tr>
 <tr class="memitem:a72376658b7a1bd38d34b87b7e96056df" id="r_a72376658b7a1bd38d34b87b7e96056df"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a72376658b7a1bd38d34b87b7e96056df">HandleKill</a> (AActor *KilledActor, float DamageAmount, const FGameplayTagContainer &amp;DamageTags, AActor *DamageCauser=nullptr, const FHitResult *HitResult=nullptr, const FGameplayEffectContextHandle &amp;SourceEffectContext=FGameplayEffectContextHandle())</td></tr>
 <tr class="memdesc:a72376658b7a1bd38d34b87b7e96056df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when this component's owner kills another actor.  <br /></td></tr>
 <tr class="memitem:a581cd6f977feca8b18c88cbe5dadb9e9" id="r_a581cd6f977feca8b18c88cbe5dadb9e9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a581cd6f977feca8b18c88cbe5dadb9e9">HandleDamageDealt</a> (AActor *TargetActor, float DamageAmount, const FGameplayTagContainer &amp;DamageTags, const bool bWasKill=false, AActor *DamageCauser=nullptr, const FHitResult *HitResult=nullptr, const FGameplayEffectContextHandle &amp;SourceEffectContext=FGameplayEffectContextHandle())</td></tr>
 <tr class="memdesc:a581cd6f977feca8b18c88cbe5dadb9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when this component's owner deals damage to another actor.  <br /></td></tr>
-<tr class="memitem:ab731807192f64f6c3c749ab965ee0cfa" id="r_ab731807192f64f6c3c749ab965ee0cfa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab731807192f64f6c3c749ab965ee0cfa">MulticastHandleDamage</a> (float DamageAmount, const FGameplayTagContainer &amp;DamageTags, AActor *SourceActor)</td></tr>
-<tr class="memdesc:ab731807192f64f6c3c749ab965ee0cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">This should be for visual cues only like damage numbers.  <br /></td></tr>
+<tr class="memitem:aba8e9859515c4893b321acf2e46a12d4" id="r_aba8e9859515c4893b321acf2e46a12d4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aba8e9859515c4893b321acf2e46a12d4">SetStartupAbilitiesGranted</a> (bool bGranted)</td></tr>
+<tr class="memdesc:aba8e9859515c4893b321acf2e46a12d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify component that ASC startup abilities have been granted.  <br /></td></tr>
+<tr class="memitem:aae9adfb3a527a9af82c41558a31d62e5" id="r_aae9adfb3a527a9af82c41558a31d62e5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aae9adfb3a527a9af82c41558a31d62e5">MulticastHandleDamage</a> (float DamageAmount, const FGameplayTagContainer &amp;DamageTags, AActor *SourceActor, FVector_NetQuantizeNormal HitDirection)</td></tr>
+<tr class="memdesc:aae9adfb3a527a9af82c41558a31d62e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This should be for visual cues only like damage numbers.  <br /></td></tr>
 <tr class="memitem:a8873cd506127ca50337299b4c54a2f00" id="r_a8873cd506127ca50337299b4c54a2f00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8873cd506127ca50337299b4c54a2f00">ClientHandleDamageDealt</a> (AActor *TargetActor, float Amount, FGameplayTagContainer DamageTags)</td></tr>
 <tr class="memdesc:a8873cd506127ca50337299b4c54a2f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sent only to the owning client to drive personal damage numbers.  <br /></td></tr>
 <tr class="memitem:a74e99e9029140b118a0393b441a5ee87" id="r_a74e99e9029140b118a0393b441a5ee87"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a74e99e9029140b118a0393b441a5ee87">MulticastHandleKill</a> (AActor *KilledActor, float DamageAmount, const FGameplayTagContainer &amp;DamageTags)</td></tr>
-<tr class="memitem:ad3e71636050f6cf6aa2a48a5a1654572" id="r_ad3e71636050f6cf6aa2a48a5a1654572"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad3e71636050f6cf6aa2a48a5a1654572">MulticastHandleDeath</a> ()</td></tr>
-<tr class="memitem:ac28b0fc0b9c8a9122ca8b152065bee3d" id="r_ac28b0fc0b9c8a9122ca8b152065bee3d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac28b0fc0b9c8a9122ca8b152065bee3d">HandleDamage</a> (float DamageAmount, const FGameplayTagContainer &amp;DamageTags, AActor *SourceActor) override</td></tr>
-<tr class="memitem:aeb7b3bf01952a837fec5a6e2bc30a4bd" id="r_aeb7b3bf01952a837fec5a6e2bc30a4bd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aeb7b3bf01952a837fec5a6e2bc30a4bd">HandleDamageEvent</a> (float DamageAmount, const FGameplayTagContainer &amp;DamageTags, AActor *SourceActor, AActor *DamageCauser=nullptr, const FHitResult *HitResult=nullptr, const FGameplayEffectContextHandle &amp;SourceEffectContext=FGameplayEffectContextHandle())</td></tr>
+<tr class="memitem:a3b25d1385b978aa2859fb810522e5d74" id="r_a3b25d1385b978aa2859fb810522e5d74"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3b25d1385b978aa2859fb810522e5d74">MulticastHandleDeath</a> (const <a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a> &amp;HitInfo)</td></tr>
+<tr class="memitem:ab3229e67c20a145913a643bb593e731f" id="r_ab3229e67c20a145913a643bb593e731f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab3229e67c20a145913a643bb593e731f">BeginPlay</a> () override</td></tr>
+<tr class="memitem:a9c3f1f4c5754f37d752314dd866b9021" id="r_a9c3f1f4c5754f37d752314dd866b9021"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9c3f1f4c5754f37d752314dd866b9021">BeginDestroy</a> () override</td></tr>
+<tr class="memitem:a013e1520bec633dc787796b2ff8d59fc" id="r_a013e1520bec633dc787796b2ff8d59fc"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a013e1520bec633dc787796b2ff8d59fc">GetLifetimeReplicatedProps</a> (TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:acb4aa255726ca8837e4c28a765267c72" id="r_acb4aa255726ca8837e4c28a765267c72"><td class="memItemLeft">FDTOnInitAbilityActorInfoCore&#160;</td><td class="memItemRight"><a class="el" href="#acb4aa255726ca8837e4c28a765267c72">OnInitAbilityActorInfo</a></td></tr>
+<tr class="memdesc:acb4aa255726ca8837e4c28a765267c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called just after InitAbilityActorInfo on the ASC, once abilities and attributes have been granted.  <br /></td></tr>
+<tr class="memitem:a9475369d770b92cb5653bf9baff70034" id="r_a9475369d770b92cb5653bf9baff70034"><td class="memItemLeft">FDTOnDamage&#160;</td><td class="memItemRight"><a class="el" href="#a9475369d770b92cb5653bf9baff70034">OnDamage</a></td></tr>
+<tr class="memdesc:a9475369d770b92cb5653bf9baff70034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the owner takes damage, which may have killed them.  <br /></td></tr>
+<tr class="memitem:aa1c82d78318394209d53a6418baa285f" id="r_aa1c82d78318394209d53a6418baa285f"><td class="memItemLeft">FDTOnDefaultAttributeChange&#160;</td><td class="memItemRight"><a class="el" href="#aa1c82d78318394209d53a6418baa285f">OnHealthChange</a></td></tr>
+<tr class="memdesc:aa1c82d78318394209d53a6418baa285f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when health is changed, either from healing or from being damaged.  <br /></td></tr>
+<tr class="memitem:a720eb69b26107607228a175a546cfa2a" id="r_a720eb69b26107607228a175a546cfa2a"><td class="memItemLeft">FDTOnDefaultAttributeChange&#160;</td><td class="memItemRight"><a class="el" href="#a720eb69b26107607228a175a546cfa2a">OnManaChange</a></td></tr>
+<tr class="memdesc:a720eb69b26107607228a175a546cfa2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when mana is changed, either from regen or from being used as a cost.  <br /></td></tr>
+<tr class="memitem:a052d33739a6165e1983cf9efd2f9ac73" id="r_a052d33739a6165e1983cf9efd2f9ac73"><td class="memItemLeft">FDTOnAttributeChange&#160;</td><td class="memItemRight"><a class="el" href="#a052d33739a6165e1983cf9efd2f9ac73">OnAttributeChange</a></td></tr>
+<tr class="memdesc:a052d33739a6165e1983cf9efd2f9ac73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when any of the attributes owned by this actor are changed.  <br /></td></tr>
+<tr class="memitem:a8245a9343c811c79c37619a48fc44e8e" id="r_a8245a9343c811c79c37619a48fc44e8e"><td class="memItemLeft">FDTOnDeath&#160;</td><td class="memItemRight"><a class="el" href="#a8245a9343c811c79c37619a48fc44e8e">OnDeath</a></td></tr>
+<tr class="memdesc:a8245a9343c811c79c37619a48fc44e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the owner dies.  <br /></td></tr>
 <tr class="memitem:a49debc413772679cb360bd06e3e67c66" id="r_a49debc413772679cb360bd06e3e67c66"><td class="memItemLeft">FDTCoreAbilityEventDelegate&#160;</td><td class="memItemRight"><a class="el" href="#a49debc413772679cb360bd06e3e67c66">OnAbilityEvent</a></td></tr>
 <tr class="memdesc:a49debc413772679cb360bd06e3e67c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired whenever this actor emits a generic ability event.  <br /></td></tr>
 <tr class="memitem:ac42a364f99828c0591f8d09d8f0bbb9e" id="r_ac42a364f99828c0591f8d09d8f0bbb9e"><td class="memItemLeft">FDTOnDamageDealtDelegate&#160;</td><td class="memItemRight"><a class="el" href="#ac42a364f99828c0591f8d09d8f0bbb9e">OnDamageDealt</a></td></tr>
-<tr class="memdesc:ac42a364f99828c0591f8d09d8f0bbb9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when this actor deals damage to another (C++ only, server-side).  <br /></td></tr>
+<tr class="memdesc:ac42a364f99828c0591f8d09d8f0bbb9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when this actor deals damage to another (server-side).  <br /></td></tr>
 <tr class="memitem:a1b92d3ddfa3567cd5e8106a443ab59e9" id="r_a1b92d3ddfa3567cd5e8106a443ab59e9"><td class="memItemLeft">FDTOnDamageDealtClientDelegate&#160;</td><td class="memItemRight"><a class="el" href="#a1b92d3ddfa3567cd5e8106a443ab59e9">OnDamageDealtToClient</a></td></tr>
 <tr class="memdesc:a1b92d3ddfa3567cd5e8106a443ab59e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired on the owning client only when this actor deals damage.  <br /></td></tr>
+<tr class="memitem:a54bef409887f4588eff183a46d69131a" id="r_a54bef409887f4588eff183a46d69131a"><td class="memItemLeft">FDTOnPostGameplayEffectExecute&#160;</td><td class="memItemRight"><a class="el" href="#a54bef409887f4588eff183a46d69131a">OnPostGameplayEffectExecute</a></td></tr>
+<tr class="memdesc:a54bef409887f4588eff183a46d69131a"><td class="mdescLeft">&#160;</td><td class="mdescRight">PostGameplayEffectExecute event fired off from native AttributeSets.  <br /></td></tr>
+<tr class="memitem:ac31ceeef3cb2da9713e29ce577340693" id="r_ac31ceeef3cb2da9713e29ce577340693"><td class="memItemLeft">FDTOnPreAttributeChange&#160;</td><td class="memItemRight"><a class="el" href="#ac31ceeef3cb2da9713e29ce577340693">OnPreAttributeChange</a></td></tr>
+<tr class="memdesc:ac31ceeef3cb2da9713e29ce577340693"><td class="mdescLeft">&#160;</td><td class="mdescRight">PreAttributeChange event fired off from native AttributeSets.  <br /></td></tr>
+<tr class="memitem:a9a94e41fa14e2f320e32232e32806075" id="r_a9a94e41fa14e2f320e32232e32806075"><td class="memItemLeft">FDTOnAbilityActivated&#160;</td><td class="memItemRight"><a class="el" href="#a9a94e41fa14e2f320e32232e32806075">OnAbilityActivated</a></td></tr>
+<tr class="memdesc:a9a94e41fa14e2f320e32232e32806075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an ability is activated for the owner actor.  <br /></td></tr>
+<tr class="memitem:a6227efb05109c27524f934ae9fe5f3ad" id="r_a6227efb05109c27524f934ae9fe5f3ad"><td class="memItemLeft">FDTOnCoreAbilityEnded&#160;</td><td class="memItemRight"><a class="el" href="#a6227efb05109c27524f934ae9fe5f3ad">OnAbilityEnded</a></td></tr>
+<tr class="memdesc:a6227efb05109c27524f934ae9fe5f3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an ability has ended for the owner actor.  <br /></td></tr>
+<tr class="memitem:a6ec252aa0328cbdbe6883b5d2dd02153" id="r_a6ec252aa0328cbdbe6883b5d2dd02153"><td class="memItemLeft">FDTOnAbilityFailed&#160;</td><td class="memItemRight"><a class="el" href="#a6ec252aa0328cbdbe6883b5d2dd02153">OnAbilityFailed</a></td></tr>
+<tr class="memdesc:a6ec252aa0328cbdbe6883b5d2dd02153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an ability failed to activate for the owner actor.  <br /></td></tr>
+<tr class="memitem:a27c225a52bb4de4dded90dfa78ba00e9" id="r_a27c225a52bb4de4dded90dfa78ba00e9"><td class="memItemLeft">FDTOnGameplayEffectStackChange&#160;</td><td class="memItemRight"><a class="el" href="#a27c225a52bb4de4dded90dfa78ba00e9">OnGameplayEffectStackChange</a></td></tr>
+<tr class="memdesc:a27c225a52bb4de4dded90dfa78ba00e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a GameplayEffect stack count changes.  <br /></td></tr>
+<tr class="memitem:a2ac3055311ccfbd5c100dcfff2d420c0" id="r_a2ac3055311ccfbd5c100dcfff2d420c0"><td class="memItemLeft">FDTOnGameplayEffectTimeChange&#160;</td><td class="memItemRight"><a class="el" href="#a2ac3055311ccfbd5c100dcfff2d420c0">OnGameplayEffectTimeChange</a></td></tr>
+<tr class="memdesc:a2ac3055311ccfbd5c100dcfff2d420c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a GameplayEffect duration is changed (for instance when duration is refreshed).  <br /></td></tr>
+<tr class="memitem:aef3043d69dae0821ddb3e0409135fd23" id="r_aef3043d69dae0821ddb3e0409135fd23"><td class="memItemLeft">FDTOnGameplayEffectAdded&#160;</td><td class="memItemRight"><a class="el" href="#aef3043d69dae0821ddb3e0409135fd23">OnGameplayEffectAdded</a></td></tr>
+<tr class="memdesc:aef3043d69dae0821ddb3e0409135fd23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a GameplayEffect is added.  <br /></td></tr>
+<tr class="memitem:ae72dd03730c0f0de68d0adbb06f00bc5" id="r_ae72dd03730c0f0de68d0adbb06f00bc5"><td class="memItemLeft">FDTOnGameplayEffectRemoved&#160;</td><td class="memItemRight"><a class="el" href="#ae72dd03730c0f0de68d0adbb06f00bc5">OnGameplayEffectRemoved</a></td></tr>
+<tr class="memdesc:ae72dd03730c0f0de68d0adbb06f00bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a GameplayEffect is removed.  <br /></td></tr>
+<tr class="memitem:ac15e408998d8b502e7aae64d57ea52c9" id="r_ac15e408998d8b502e7aae64d57ea52c9"><td class="memItemLeft">FDTOnGameplayTagStackChange&#160;</td><td class="memItemRight"><a class="el" href="#ac15e408998d8b502e7aae64d57ea52c9">OnGameplayTagChange</a></td></tr>
+<tr class="memdesc:ac15e408998d8b502e7aae64d57ea52c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called whenever a tag is added or removed (but not if just the count changed).  <br /></td></tr>
+<tr class="memitem:a15d6a1a0bde4cabe3e766e06275b4c7c" id="r_a15d6a1a0bde4cabe3e766e06275b4c7c"><td class="memItemLeft">FDTOnAbilityCommit&#160;</td><td class="memItemRight"><a class="el" href="#a15d6a1a0bde4cabe3e766e06275b4c7c">OnAbilityCommit</a></td></tr>
+<tr class="memdesc:a15d6a1a0bde4cabe3e766e06275b4c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called whenever an ability is committed (cost / cooldown are applied).  <br /></td></tr>
+<tr class="memitem:a6ebf9fad79bd07b9183f44108ecab2cb" id="r_a6ebf9fad79bd07b9183f44108ecab2cb"><td class="memItemLeft">FDTOnCooldownChanged&#160;</td><td class="memItemRight"><a class="el" href="#a6ebf9fad79bd07b9183f44108ecab2cb">OnCooldownStart</a></td></tr>
+<tr class="memdesc:a6ebf9fad79bd07b9183f44108ecab2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an ability with a valid cooldown is committed and cooldown is applied.  <br /></td></tr>
+<tr class="memitem:a889de55464dba1828dbfe6819d4f5a19" id="r_a889de55464dba1828dbfe6819d4f5a19"><td class="memItemLeft">FDTOnCooldownEnd&#160;</td><td class="memItemRight"><a class="el" href="#a889de55464dba1828dbfe6819d4f5a19">OnCooldownEnd</a></td></tr>
+<tr class="memdesc:a889de55464dba1828dbfe6819d4f5a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a cooldown gameplay tag is removed, meaning cooldown expired.  <br /></td></tr>
+<tr class="memitem:a95191f0594cb3790233bf5a61b475d79" id="r_a95191f0594cb3790233bf5a61b475d79"><td class="memItemLeft">TObjectPtr&lt; AActor &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a95191f0594cb3790233bf5a61b475d79">OwnerActor</a></td></tr>
+<tr class="memitem:a24175afcd33f52c84da9a928a373d80e" id="r_a24175afcd33f52c84da9a928a373d80e"><td class="memItemLeft">TObjectPtr&lt; APawn &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a24175afcd33f52c84da9a928a373d80e">OwnerPawn</a></td></tr>
+<tr class="memitem:ad62a9d757b6ca5931d90a0f227424811" id="r_ad62a9d757b6ca5931d90a0f227424811"><td class="memItemLeft">TObjectPtr&lt; ACharacter &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad62a9d757b6ca5931d90a0f227424811">OwnerCharacter</a></td></tr>
+<tr class="memitem:af07353a1b3e243e5921430b434a1b918" id="r_af07353a1b3e243e5921430b434a1b918"><td class="memItemLeft">TObjectPtr&lt; UAbilitySystemComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af07353a1b3e243e5921430b434a1b918">OwnerAbilitySystemComponent</a></td></tr>
 <tr class="memitem:a72db2bd3833ad49232209ac7b8ebc36e" id="r_a72db2bd3833ad49232209ac7b8ebc36e"><td class="memItemLeft">FDTOnKillDelegate&#160;</td><td class="memItemRight"><a class="el" href="#a72db2bd3833ad49232209ac7b8ebc36e">OnKill</a></td></tr>
-<tr class="memdesc:a72db2bd3833ad49232209ac7b8ebc36e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when this character kills another actor.  <br /></td></tr>
+<tr class="memdesc:a72db2bd3833ad49232209ac7b8ebc36e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when this component's owner kills another actor.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a754717e4398908a93bea62cdc05f76fd" id="r_a754717e4398908a93bea62cdc05f76fd"><td class="memItemLeft">FGameplayEventData&#160;</td><td class="memItemRight"><a class="el" href="#a754717e4398908a93bea62cdc05f76fd">MakeGameplayEventData</a> (const FGameplayTag &amp;EventTag, float Magnitude, AActor *Instigator, AActor *Target, AActor *Causer, const FGameplayTagContainer &amp;ContextTags=FGameplayTagContainer(), const FHitResult *HitResult=nullptr, bool bWasFatal=false, bool bWasKill=false, const FGameplayEffectContextHandle &amp;SourceEffectContext=FGameplayEffectContextHandle()) const</td></tr>
 <tr class="memdesc:a754717e4398908a93bea62cdc05f76fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a FGameplayEventData with all context fields properly set on the <a class="el" href="struct_f_d_t_gameplay_effect_context.html">FDTGameplayEffectContext</a>.  <br /></td></tr>
 <tr class="memitem:a00695978dd144c5c2f00a82c1a002efa" id="r_a00695978dd144c5c2f00a82c1a002efa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a00695978dd144c5c2f00a82c1a002efa">SendAbilityEvent</a> (const FGameplayTag &amp;EventTag, const FGameplayEventData &amp;EventPayload)</td></tr>
-<tr class="memitem:a1bad242ca012d269f7c45a510a0f102a" id="r_a1bad242ca012d269f7c45a510a0f102a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1bad242ca012d269f7c45a510a0f102a">RegisterAbilitySystemDelegates</a> (UAbilitySystemComponent *ASC) override</td></tr>
-<tr class="memitem:a265327ea11fcd8c7ec18391baa6ed65c" id="r_a265327ea11fcd8c7ec18391baa6ed65c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a265327ea11fcd8c7ec18391baa6ed65c">ShutdownAbilitySystemDelegates</a> (UAbilitySystemComponent *ASC) override</td></tr>
-<tr class="memitem:ab3229e67c20a145913a643bb593e731f" id="r_ab3229e67c20a145913a643bb593e731f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab3229e67c20a145913a643bb593e731f">BeginPlay</a> () override</td></tr>
+<tr class="memitem:ab6165c33ecec0976ce9c03f9c9fa2fc3" id="r_ab6165c33ecec0976ce9c03f9c9fa2fc3"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab6165c33ecec0976ce9c03f9c9fa2fc3">OnActiveGameplayEffectAdded</a> (UAbilitySystemComponent *Target, const FGameplayEffectSpec &amp;SpecApplied, FActiveGameplayEffectHandle ActiveHandle)</td></tr>
+<tr class="memdesc:ab6165c33ecec0976ce9c03f9c9fa2fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered by ASC when GEs are added.  <br /></td></tr>
+<tr class="memitem:af571cf9ee2d3beeaea7ea4c274838607" id="r_af571cf9ee2d3beeaea7ea4c274838607"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af571cf9ee2d3beeaea7ea4c274838607">OnActiveGameplayEffectStackChanged</a> (FActiveGameplayEffectHandle ActiveHandle, int32 NewStackCount, int32 PreviousStackCount)</td></tr>
+<tr class="memdesc:af571cf9ee2d3beeaea7ea4c274838607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered by ASC when GE stack count changes.  <br /></td></tr>
+<tr class="memitem:a63cc4d9828f36b4d2b868293ba61c3d2" id="r_a63cc4d9828f36b4d2b868293ba61c3d2"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a63cc4d9828f36b4d2b868293ba61c3d2">OnActiveGameplayEffectTimeChanged</a> (FActiveGameplayEffectHandle ActiveHandle, float NewStartTime, float NewDuration)</td></tr>
+<tr class="memdesc:a63cc4d9828f36b4d2b868293ba61c3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered by ASC when GE time changes.  <br /></td></tr>
+<tr class="memitem:aca1c9026afbc6d56f66877e2ee01e9de" id="r_aca1c9026afbc6d56f66877e2ee01e9de"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aca1c9026afbc6d56f66877e2ee01e9de">OnAnyGameplayEffectRemoved</a> (const FActiveGameplayEffect &amp;EffectRemoved)</td></tr>
+<tr class="memdesc:aca1c9026afbc6d56f66877e2ee01e9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered by ASC when any GEs are removed.  <br /></td></tr>
+<tr class="memitem:af8dac804c652a265730caf05b8120b53" id="r_af8dac804c652a265730caf05b8120b53"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af8dac804c652a265730caf05b8120b53">OnAnyGameplayTagChanged</a> (FGameplayTag GameplayTag, int32 NewCount) const</td></tr>
+<tr class="memdesc:af8dac804c652a265730caf05b8120b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered by ASC when any gameplay tag is added or removed (but not if just count changed).  <br /></td></tr>
+<tr class="memitem:abf0afe35756439bbf96cb84fd3ab1a37" id="r_abf0afe35756439bbf96cb84fd3ab1a37"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abf0afe35756439bbf96cb84fd3ab1a37">OnAbilityCommitted</a> (UGameplayAbility *ActivatedAbility)</td></tr>
+<tr class="memdesc:abf0afe35756439bbf96cb84fd3ab1a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered by ASC when an ability is committed (cost / cooldown are applied).  <br /></td></tr>
+<tr class="memitem:a89f099aeccef6bf20f559ccc1c5a6a8e" id="r_a89f099aeccef6bf20f559ccc1c5a6a8e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a89f099aeccef6bf20f559ccc1c5a6a8e">OnCooldownGameplayTagChanged</a> (FGameplayTag GameplayTag, int32 NewCount, FGameplayAbilitySpecHandle AbilitySpecHandle, float Duration)</td></tr>
+<tr class="memdesc:a89f099aeccef6bf20f559ccc1c5a6a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered by ASC when a cooldown tag is changed (new or removed).  <br /></td></tr>
+<tr class="memitem:ab6f67a76c524977633d4d77f1e900cf9" id="r_ab6f67a76c524977633d4d77f1e900cf9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab6f67a76c524977633d4d77f1e900cf9">HandleCooldownOnAbilityCommit</a> (UGameplayAbility *ActivatedAbility)</td></tr>
+<tr class="memdesc:ab6f67a76c524977633d4d77f1e900cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manage cooldown events trigger when an ability is committed.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a613d00fd4e57a1353b388a3d5dfa767d" id="r_a613d00fd4e57a1353b388a3d5dfa767d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a613d00fd4e57a1353b388a3d5dfa767d">bStartupAbilitiesGranted</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base Ability Core Component class for Dark Tower. </p>
+<div class="textblock"><p>The per-actor GAS hub for Dark Tower. </p>
+<p>Abstracts owner/avatar setup for the Ability System Component (which lives on the PlayerState for players) and relays attribute/effect/ability/tag changes to Blueprint-assignable delegates. Every DT actor reaches GAS through this component via IDTAbilityTarget::GetAbilityCoreComponent(). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00021">21</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00111">111</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a291a06b3a9f63284c40cd72024b89a0b" name="a291a06b3a9f63284c40cd72024b89a0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a291a06b3a9f63284c40cd72024b89a0b">&#9670;&#160;</a></span>UDTAbilityCoreComponent()</h2>
@@ -207,11 +318,89 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00012">12</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00043">GetLifetimeReplicatedProps()</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a86d9d8b8c4d0af543c33fa35741c1188" name="a86d9d8b8c4d0af543c33fa35741c1188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d9d8b8c4d0af543c33fa35741c1188">&#9670;&#160;</a></span>AdjustAttributeForMaxChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::AdjustAttributeForMaxChange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_u_d_t_attribute_set_base.html">UDTAttributeSetBase</a> *</td>          <td class="paramname"><span class="paramname"><em>AttributeSet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayAttribute</td>          <td class="paramname"><span class="paramname"><em>AffectedAttributeProperty</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayAttribute</td>          <td class="paramname"><span class="paramname"><em>MaxAttribute</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>NewMaxValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper to proportionally adjust the value of an attribute when its associated max attribute changes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00691">691</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00073">UDTAttributeSetBase::AdjustAttributeForMaxChange()</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+</div>
+</div>
+<a id="a9c3f1f4c5754f37d752314dd866b9021" name="a9c3f1f4c5754f37d752314dd866b9021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c3f1f4c5754f37d752314dd866b9021">&#9670;&#160;</a></span>BeginDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::BeginDestroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00035">35</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00111">ShutdownAbilitySystemDelegates()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a3b25d1385b978aa2859fb810522e5d74">MulticastHandleDeath()</a>.</p>
+
+</div>
+</div>
 <a id="ab3229e67c20a145913a643bb593e731f" name="ab3229e67c20a145913a643bb593e731f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3229e67c20a145913a643bb593e731f">&#9670;&#160;</a></span>BeginPlay()</h2>
 
@@ -230,14 +419,120 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00016">16</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00021">21</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ad3e71636050f6cf6aa2a48a5a1654572">MulticastHandleDeath()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00050">SetupOwner()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a3b25d1385b978aa2859fb810522e5d74">MulticastHandleDeath()</a>.</p>
+
+</div>
+</div>
+<a id="a3b8ae8c3bad563a53cd615dbe5a357a9" name="a3b8ae8c3bad563a53cd615dbe5a357a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b8ae8c3bad563a53cd615dbe5a357a9">&#9670;&#160;</a></span>ClampAttributeValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::ClampAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayAttribute</td>          <td class="paramname"><span class="paramname"><em>Attribute</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>MinValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>MaxValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clamps the Attribute from MinValue to MaxValue. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00684">684</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00462">GetAttributeValue()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00673">SetAttributeValue()</a>.</p>
+
+</div>
+</div>
+<a id="a07de3de65c68d4497d214bf081ff6d23" name="a07de3de65c68d4497d214bf081ff6d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07de3de65c68d4497d214bf081ff6d23">&#9670;&#160;</a></span>ClearAbilities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::ClearAbilities </td>
+          <td>(</td>
+          <td class="paramtype">TArray&lt; TSubclassOf&lt; UGameplayAbility &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>Abilities</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a set of abilities from the owner's Ability System Component. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00549">549</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00219">OwnerActor</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00542">ClearAbility()</a>.</p>
+
+</div>
+</div>
+<a id="a75bcb866f113085fbd9403595c528d2d" name="a75bcb866f113085fbd9403595c528d2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75bcb866f113085fbd9403595c528d2d">&#9670;&#160;</a></span>ClearAbility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::ClearAbility </td>
+          <td>(</td>
+          <td class="paramtype">TSubclassOf&lt; UGameplayAbility &gt;</td>          <td class="paramname"><span class="paramname"><em>Ability</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove an ability from the owner's Ability System Component. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00542">542</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00549">ClearAbilities()</a>.</p>
 
 </div>
 </div>
@@ -269,12 +564,12 @@ Protected Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a8873cd506127ca50337299b4c54a2f00">ClientHandleDamageDealt()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a8873cd506127ca50337299b4c54a2f00">ClientHandleDamageDealt()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00180">HandleDamageDealt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a8873cd506127ca50337299b4c54a2f00">ClientHandleDamageDealt()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00254">HandleDamageDealt()</a>.</p>
 
 </div>
 </div>
-<a id="aa6c202a3a741cef53d017daf0f6e665d" name="aa6c202a3a741cef53d017daf0f6e665d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6c202a3a741cef53d017daf0f6e665d">&#9670;&#160;</a></span>Die()</h2>
+<a id="afdf17fa7f0154f1dfdf98da23db456a3" name="afdf17fa7f0154f1dfdf98da23db456a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdf17fa7f0154f1dfdf98da23db456a3">&#9670;&#160;</a></span>Die()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -291,16 +586,18 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Override to add Status.Dead tag when dying to block incoming damage. </p>
+<p>Triggers death events for the owner actor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00073">73</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00395">395</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00100">MakeGameplayEventData()</a>, <a class="el" href="#ad3e71636050f6cf6aa2a48a5a1654572">MulticastHandleDeath()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00130">SendAbilityEvent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00204">MakeGameplayEventData()</a>, <a class="el" href="#a3b25d1385b978aa2859fb810522e5d74">MulticastHandleDeath()</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00152">OnDeath</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00234">SendAbilityEvent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00336">HandleHealthChange()</a>.</p>
 
 </div>
 </div>
@@ -319,14 +616,140 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00041">41</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00172">172</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00100">MakeGameplayEventData()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00130">SendAbilityEvent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00204">MakeGameplayEventData()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00234">SendAbilityEvent()</a>.</p>
 
 </div>
 </div>
-<a id="a315e199b7fdace32f1697477256f877c" name="a315e199b7fdace32f1697477256f877c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a315e199b7fdace32f1697477256f877c">&#9670;&#160;</a></span>GetHealth()</h2>
+<a id="ad85783af6087dcca6d1d7b2962e187d4" name="ad85783af6087dcca6d1d7b2962e187d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad85783af6087dcca6d1d7b2962e187d4">&#9670;&#160;</a></span>GetActiveAbilitiesByClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt; UGameplayAbility * &gt; UDTAbilityCoreComponent::GetActiveAbilitiesByClass </td>
+          <td>(</td>
+          <td class="paramtype">TSubclassOf&lt; UGameplayAbility &gt;</td>          <td class="paramname"><span class="paramname"><em>AbilityToSearch</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of currently active ability instances that match the given class. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00614">614</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00592">IsUsingAbilityByClass()</a>.</p>
+
+</div>
+</div>
+<a id="a09edee157c954e44b44ebd72b8a88f3b" name="a09edee157c954e44b44ebd72b8a88f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09edee157c954e44b44ebd72b8a88f3b">&#9670;&#160;</a></span>GetActiveAbilitiesByTags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt; UGameplayAbility * &gt; UDTAbilityCoreComponent::GetActiveAbilitiesByTags </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayTagContainer</td>          <td class="paramname"><span class="paramname"><em>GameplayTagContainer</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a list of currently active ability instances that match the given tags. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00646">646</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00603">IsUsingAbilityByTags()</a>.</p>
+
+</div>
+</div>
+<a id="a2e518f24c1a07085bad40fce2c558633" name="a2e518f24c1a07085bad40fce2c558633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e518f24c1a07085bad40fce2c558633">&#9670;&#160;</a></span>GetAttributeValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityCoreComponent::GetAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayAttribute</td>          <td class="paramname"><span class="paramname"><em>Attribute</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the base value of an attribute (the value with no stateful modifiers applied). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00462">462</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00684">ClampAttributeValue()</a>.</p>
+
+</div>
+</div>
+<a id="a4224b279618a3fd64610f2f9f272b740" name="a4224b279618a3fd64610f2f9f272b740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4224b279618a3fd64610f2f9f272b740">&#9670;&#160;</a></span>GetCurrentAttributeValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityCoreComponent::GetCurrentAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayAttribute</td>          <td class="paramname"><span class="paramname"><em>Attribute</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current (final) value of an attribute. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00491">491</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00422">GetHealth()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00442">GetMana()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00432">GetMaxHealth()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00452">GetMaxMana()</a>.</p>
+
+</div>
+</div>
+<a id="ad1ec05c6cad638e6663e5ee42795c65f" name="ad1ec05c6cad638e6663e5ee42795c65f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1ec05c6cad638e6663e5ee42795c65f">&#9670;&#160;</a></span>GetHealth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,21 +766,112 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00422">422</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00491">GetCurrentAttributeValue()</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00520">IsAlive()</a>, and <a class="el" href="_d_t_targeting_filter_task___health_8cpp_source.html#l00013">UDTTargetingFilterTask_Health::ShouldFilterTarget()</a>.</p>
+
+</div>
+</div>
+<a id="a59ac32d4d8ca6973bb545dcb2808b3c4" name="a59ac32d4d8ca6973bb545dcb2808b3c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59ac32d4d8ca6973bb545dcb2808b3c4">&#9670;&#160;</a></span>GetLastHitInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a> UDTAbilityCoreComponent::GetLastHitInfo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00246">246</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00246">GetLastHitInfo()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8h_source.html#l00246">GetLastHitInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a013e1520bec633dc787796b2ff8d59fc" name="a013e1520bec633dc787796b2ff8d59fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a013e1520bec633dc787796b2ff8d59fc">&#9670;&#160;</a></span>GetLifetimeReplicatedProps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::GetLifetimeReplicatedProps </td>
+          <td>(</td>
+          <td class="paramtype">TArray&lt; class FLifetimeProperty &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>OutLifetimeProps</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Override to uUDTAttributeSet health attributes. </p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00043">43</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00051">51</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00015">UDTAbilityCoreComponent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_targeting_filter_task___health_8cpp_source.html#l00013">UDTTargetingFilterTask_Health::ShouldFilterTarget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a3b25d1385b978aa2859fb810522e5d74">MulticastHandleDeath()</a>.</p>
 
 </div>
 </div>
-<a id="a90ccfba50b5f87668e523f986c250d4a" name="a90ccfba50b5f87668e523f986c250d4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90ccfba50b5f87668e523f986c250d4a">&#9670;&#160;</a></span>GetMaxHealth()</h2>
+<a id="a9fa10449330eec8f002db3a4513bae99" name="a9fa10449330eec8f002db3a4513bae99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa10449330eec8f002db3a4513bae99">&#9670;&#160;</a></span>GetMana()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityCoreComponent::GetMana </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00442">442</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00491">GetCurrentAttributeValue()</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+</div>
+</div>
+<a id="a7c6dfc71d50d442fbf46ed3bc58222af" name="a7c6dfc71d50d442fbf46ed3bc58222af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6dfc71d50d442fbf46ed3bc58222af">&#9670;&#160;</a></span>GetMaxHealth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,21 +888,156 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Override to use <a class="el" href="class_u_d_t_attribute_set.html" title="Main Attribute Set class for Dark Tower.">UDTAttributeSet</a> max health attributes. </p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00432">432</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00062">62</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00491">GetCurrentAttributeValue()</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_targeting_filter_task___health_8cpp_source.html#l00013">UDTTargetingFilterTask_Health::ShouldFilterTarget()</a>.</p>
 
 </div>
 </div>
-<a id="ac28b0fc0b9c8a9122ca8b152065bee3d" name="ac28b0fc0b9c8a9122ca8b152065bee3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac28b0fc0b9c8a9122ca8b152065bee3d">&#9670;&#160;</a></span>HandleDamage()</h2>
+<a id="a07fafcdc9c128d7df60b7dcda3602986" name="a07fafcdc9c128d7df60b7dcda3602986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07fafcdc9c128d7df60b7dcda3602986">&#9670;&#160;</a></span>GetMaxMana()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityCoreComponent::GetMaxMana </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00452">452</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00491">GetCurrentAttributeValue()</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+</div>
+</div>
+<a id="aaf1e14a55147590d4a068139789c1b5f" name="aaf1e14a55147590d4a068139789c1b5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf1e14a55147590d4a068139789c1b5f">&#9670;&#160;</a></span>GrantAbility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::GrantAbility </td>
+          <td>(</td>
+          <td class="paramtype">TSubclassOf&lt; UGameplayAbility &gt;</td>          <td class="paramname"><span class="paramname"><em>Ability</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>Level</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Grants the owner the given ability, making it available for activation. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00525">525</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00219">OwnerActor</a>.</p>
+
+</div>
+</div>
+<a id="a6dde1c36e2b7b9c7a4e7738c197dde27" name="a6dde1c36e2b7b9c7a4e7738c197dde27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dde1c36e2b7b9c7a4e7738c197dde27">&#9670;&#160;</a></span>HandleAttributeChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::HandleAttributeChange </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayAttribute</td>          <td class="paramname"><span class="paramname"><em>Attribute</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>DeltaValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayTagContainer &amp;</td>          <td class="paramname"><span class="paramname"><em>EventTags</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00362">362</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00148">OnAttributeChange</a>.</p>
+
+</div>
+</div>
+<a id="ab6f67a76c524977633d4d77f1e900cf9" name="ab6f67a76c524977633d4d77f1e900cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f67a76c524977633d4d77f1e900cf9">&#9670;&#160;</a></span>HandleCooldownOnAbilityCommit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::HandleCooldownOnAbilityCommit </td>
+          <td>(</td>
+          <td class="paramtype">UGameplayAbility *</td>          <td class="paramname"><span class="paramname"><em>ActivatedAbility</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manage cooldown events trigger when an ability is committed. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00896">896</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00866">OnCooldownGameplayTagChanged()</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00212">OnCooldownStart</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00854">OnAbilityCommitted()</a>.</p>
+
+</div>
+</div>
+<a id="af9e88724331b0ee181849e3dd04cbfdc" name="af9e88724331b0ee181849e3dd04cbfdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9e88724331b0ee181849e3dd04cbfdc">&#9670;&#160;</a></span>HandleDamage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -414,16 +1063,14 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00196">196</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00270">270</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00201">HandleDamageEvent()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="#ad3e71636050f6cf6aa2a48a5a1654572">MulticastHandleDeath()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00318">HandleDamageEvent()</a>.</p>
 
 </div>
 </div>
@@ -481,11 +1128,11 @@ Protected Member Functions</h2></td></tr>
 
 <p>Called when this component's owner deals damage to another actor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00180">180</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00254">254</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="#a8873cd506127ca50337299b4c54a2f00">ClientHandleDamageDealt()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00100">MakeGameplayEventData()</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00034">OnDamageDealt</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00130">SendAbilityEvent()</a>.</p>
+<p class="reference">References <a class="el" href="#a8873cd506127ca50337299b4c54a2f00">ClientHandleDamageDealt()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00204">MakeGameplayEventData()</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00160">OnDamageDealt</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00234">SendAbilityEvent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00419">UDTAttributeSet::HandleDamageAttribute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00483">UDTAttributeSet::HandleDamageAttribute()</a>.</p>
 
 </div>
 </div>
@@ -536,11 +1183,46 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00201">201</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00318">318</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00100">MakeGameplayEventData()</a>, <a class="el" href="#ab731807192f64f6c3c749ab965ee0cfa">MulticastHandleDamage()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00130">SendAbilityEvent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00276">ComputeDamageDirection2D()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00520">IsAlive()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00204">MakeGameplayEventData()</a>, <a class="el" href="#aae9adfb3a527a9af82c41558a31d62e5">MulticastHandleDamage()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00234">SendAbilityEvent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00196">HandleDamage()</a>, <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00419">UDTAttributeSet::HandleDamageAttribute()</a>, and <a class="el" href="#ad3e71636050f6cf6aa2a48a5a1654572">MulticastHandleDeath()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00270">HandleDamage()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00483">UDTAttributeSet::HandleDamageAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a87991e15b5bf3ff1656296873f56a2f7" name="a87991e15b5bf3ff1656296873f56a2f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87991e15b5bf3ff1656296873f56a2f7">&#9670;&#160;</a></span>HandleHealthChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::HandleHealthChange </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>DeltaValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayTagContainer &amp;</td>          <td class="paramname"><span class="paramname"><em>EventTags</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00336">336</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00385">bStartupAbilitiesGranted</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00395">Die()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00520">IsAlive()</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00140">OnHealthChange</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00483">UDTAttributeSet::HandleDamageAttribute()</a>, and <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00560">UDTAttributeSet::HandleHealthAttribute()</a>.</p>
 
 </div>
 </div>
@@ -593,11 +1275,176 @@ Protected Member Functions</h2></td></tr>
 
 <p>Called when this component's owner kills another actor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00169">169</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00243">243</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="#a74e99e9029140b118a0393b441a5ee87">MulticastHandleKill()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00419">UDTAttributeSet::HandleDamageAttribute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00483">UDTAttributeSet::HandleDamageAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a4e8de8dc2bfbef7aa403d3ad3f8a8a53" name="a4e8de8dc2bfbef7aa403d3ad3f8a8a53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e8de8dc2bfbef7aa403d3ad3f8a8a53">&#9670;&#160;</a></span>HandleManaChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::HandleManaChange </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>DeltaValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayTagContainer &amp;</td>          <td class="paramname"><span class="paramname"><em>EventTags</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00351">351</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00385">bStartupAbilitiesGranted</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00144">OnManaChange</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00575">UDTAttributeSet::HandleManaAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a430e184a3d90428944dca002acdc8bb7" name="a430e184a3d90428944dca002acdc8bb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a430e184a3d90428944dca002acdc8bb7">&#9670;&#160;</a></span>HasAnyMatchingGameplayTags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityCoreComponent::HasAnyMatchingGameplayTags </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayTagContainer</td>          <td class="paramname"><span class="paramname"><em>TagContainer</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the owner's ASC has any of the matching tags. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00572">572</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+</div>
+</div>
+<a id="a38849be89d4ab3ad4ddcb410abd8e4d4" name="a38849be89d4ab3ad4ddcb410abd8e4d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38849be89d4ab3ad4ddcb410abd8e4d4">&#9670;&#160;</a></span>HasMatchingGameplayTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityCoreComponent::HasMatchingGameplayTag </td>
+          <td>(</td>
+          <td class="paramtype">const FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>TagToCheck</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the owner's ASC has the specified tag. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00582">582</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00193">IsDemiGodMode()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00182">IsGodMode()</a>.</p>
+
+</div>
+</div>
+<a id="ada2ff30284cb413f8af5e3eda71bde89" name="ada2ff30284cb413f8af5e3eda71bde89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2ff30284cb413f8af5e3eda71bde89">&#9670;&#160;</a></span>IsAlive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityCoreComponent::IsAlive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the Actor is considered alive (Health &gt; 0). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00520">520</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00422">GetHealth()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00483">UDTAttributeSet::HandleDamageAttribute()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00318">HandleDamageEvent()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00336">HandleHealthChange()</a>.</p>
+
+</div>
+</div>
+<a id="a1240ffe4a14c951b20db1f0ce1ee7ebd" name="a1240ffe4a14c951b20db1f0ce1ee7ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1240ffe4a14c951b20db1f0ce1ee7ebd">&#9670;&#160;</a></span>IsDemiGodMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityCoreComponent::IsDemiGodMode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Demi god mode: damage is applied normally, but health wraps back around to max instead of reaching zero. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00193">193</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00582">HasMatchingGameplayTag()</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00483">UDTAttributeSet::HandleDamageAttribute()</a>.</p>
 
 </div>
 </div>
@@ -624,9 +1471,57 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00030">30</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00182">182</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00419">UDTAttributeSet::HandleDamageAttribute()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00582">HasMatchingGameplayTag()</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00483">UDTAttributeSet::HandleDamageAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a519717bc69d6aa0a4a45eb390f46e89f" name="a519717bc69d6aa0a4a45eb390f46e89f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519717bc69d6aa0a4a45eb390f46e89f">&#9670;&#160;</a></span>IsUsingAbilityByClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityCoreComponent::IsUsingAbilityByClass </td>
+          <td>(</td>
+          <td class="paramtype">TSubclassOf&lt; UGameplayAbility &gt;</td>          <td class="paramname"><span class="paramname"><em>AbilityClass</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether one of the owner's active abilities matches the provided Ability Class. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00592">592</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00614">GetActiveAbilitiesByClass()</a>.</p>
+
+</div>
+</div>
+<a id="a3baef50dd29bccc1e397e5237251b049" name="a3baef50dd29bccc1e397e5237251b049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3baef50dd29bccc1e397e5237251b049">&#9670;&#160;</a></span>IsUsingAbilityByTags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityCoreComponent::IsUsingAbilityByTags </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTagContainer</td>          <td class="paramname"><span class="paramname"><em>AbilityTags</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether one of the owner's active abilities matches the provided tags. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00603">603</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00646">GetActiveAbilitiesByTags()</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
 
 </div>
 </div>
@@ -699,16 +1594,16 @@ Protected Member Functions</h2></td></tr>
 
 <p>Builds a FGameplayEventData with all context fields properly set on the <a class="el" href="struct_f_d_t_gameplay_effect_context.html">FDTGameplayEffectContext</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00100">100</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00204">204</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00678">UDTAbilitySystemComponent::BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00041">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00025">Instigator</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00028">Target</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00777">UDTAbilitySystemComponent::BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00172">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00021">Instigator</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00024">Target</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00073">Die()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00180">HandleDamageDealt()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00201">HandleDamageEvent()</a>, and <a class="el" href="#ad3e71636050f6cf6aa2a48a5a1654572">MulticastHandleDeath()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00395">Die()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00254">HandleDamageDealt()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00318">HandleDamageEvent()</a>.</p>
 
 </div>
 </div>
-<a id="ab731807192f64f6c3c749ab965ee0cfa" name="ab731807192f64f6c3c749ab965ee0cfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab731807192f64f6c3c749ab965ee0cfa">&#9670;&#160;</a></span>MulticastHandleDamage()</h2>
+<a id="aae9adfb3a527a9af82c41558a31d62e5" name="aae9adfb3a527a9af82c41558a31d62e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae9adfb3a527a9af82c41558a31d62e5">&#9670;&#160;</a></span>MulticastHandleDamage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -726,21 +1621,27 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>SourceActor</em></span>&#160;)</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>SourceActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FVector_NetQuantizeNormal</td>          <td class="paramname"><span class="paramname"><em>HitDirection</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>This should be for visual cues only like damage numbers. </p>
+<p>HitDirection lets clients maintain LastHitInfo without recomputing. </p>
 
-<p class="reference">References <a class="el" href="#ab731807192f64f6c3c749ab965ee0cfa">MulticastHandleDamage()</a>.</p>
+<p class="reference">References <a class="el" href="#aae9adfb3a527a9af82c41558a31d62e5">MulticastHandleDamage()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00201">HandleDamageEvent()</a>, and <a class="el" href="#ab731807192f64f6c3c749ab965ee0cfa">MulticastHandleDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00318">HandleDamageEvent()</a>, and <a class="el" href="#aae9adfb3a527a9af82c41558a31d62e5">MulticastHandleDamage()</a>.</p>
 
 </div>
 </div>
-<a id="ad3e71636050f6cf6aa2a48a5a1654572" name="ad3e71636050f6cf6aa2a48a5a1654572"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3e71636050f6cf6aa2a48a5a1654572">&#9670;&#160;</a></span>MulticastHandleDeath()</h2>
+<a id="a3b25d1385b978aa2859fb810522e5d74" name="a3b25d1385b978aa2859fb810522e5d74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b25d1385b978aa2859fb810522e5d74">&#9670;&#160;</a></span>MulticastHandleDeath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -748,15 +1649,15 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void UDTAbilityCoreComponent::MulticastHandleDeath </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_last_hit_info.html">FDTLastHitInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>HitInfo</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00016">BeginPlay()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00196">HandleDamage()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00201">HandleDamageEvent()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00100">MakeGameplayEventData()</a>, <a class="el" href="#ad3e71636050f6cf6aa2a48a5a1654572">MulticastHandleDeath()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00139">RegisterAbilitySystemDelegates()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00130">SendAbilityEvent()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00150">ShutdownAbilitySystemDelegates()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00035">BeginDestroy()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00021">BeginPlay()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00043">GetLifetimeReplicatedProps()</a>, and <a class="el" href="#a3b25d1385b978aa2859fb810522e5d74">MulticastHandleDeath()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00073">Die()</a>, and <a class="el" href="#ad3e71636050f6cf6aa2a48a5a1654572">MulticastHandleDeath()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00395">Die()</a>, and <a class="el" href="#a3b25d1385b978aa2859fb810522e5d74">MulticastHandleDeath()</a>.</p>
 
 </div>
 </div>
@@ -786,12 +1687,419 @@ Protected Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a74e99e9029140b118a0393b441a5ee87">MulticastHandleKill()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00169">HandleKill()</a>, and <a class="el" href="#a74e99e9029140b118a0393b441a5ee87">MulticastHandleKill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00243">HandleKill()</a>, and <a class="el" href="#a74e99e9029140b118a0393b441a5ee87">MulticastHandleKill()</a>.</p>
 
 </div>
 </div>
-<a id="a1bad242ca012d269f7c45a510a0f102a" name="a1bad242ca012d269f7c45a510a0f102a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bad242ca012d269f7c45a510a0f102a">&#9670;&#160;</a></span>RegisterAbilitySystemDelegates()</h2>
+<a id="abf0afe35756439bbf96cb84fd3ab1a37" name="abf0afe35756439bbf96cb84fd3ab1a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0afe35756439bbf96cb84fd3ab1a37">&#9670;&#160;</a></span>OnAbilityCommitted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::OnAbilityCommitted </td>
+          <td>(</td>
+          <td class="paramtype">UGameplayAbility *</td>          <td class="paramname"><span class="paramname"><em>ActivatedAbility</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Triggered by ASC when an ability is committed (cost / cooldown are applied). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00854">854</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00896">HandleCooldownOnAbilityCommit()</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00208">OnAbilityCommit</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00069">RegisterAbilitySystemDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="ab6165c33ecec0976ce9c03f9c9fa2fc3" name="ab6165c33ecec0976ce9c03f9c9fa2fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6165c33ecec0976ce9c03f9c9fa2fc3">&#9670;&#160;</a></span>OnActiveGameplayEffectAdded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::OnActiveGameplayEffectAdded </td>
+          <td>(</td>
+          <td class="paramtype">UAbilitySystemComponent *</td>          <td class="paramname"><span class="paramname"><em>Target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayEffectSpec &amp;</td>          <td class="paramname"><span class="paramname"><em>SpecApplied</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FActiveGameplayEffectHandle</td>          <td class="paramname"><span class="paramname"><em>ActiveHandle</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Triggered by ASC when GEs are added. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00759">759</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00788">OnActiveGameplayEffectStackChanged()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00810">OnActiveGameplayEffectTimeChanged()</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00196">OnGameplayEffectAdded</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00069">RegisterAbilitySystemDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="af571cf9ee2d3beeaea7ea4c274838607" name="af571cf9ee2d3beeaea7ea4c274838607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af571cf9ee2d3beeaea7ea4c274838607">&#9670;&#160;</a></span>OnActiveGameplayEffectStackChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::OnActiveGameplayEffectStackChanged </td>
+          <td>(</td>
+          <td class="paramtype">FActiveGameplayEffectHandle</td>          <td class="paramname"><span class="paramname"><em>ActiveHandle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>NewStackCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>PreviousStackCount</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Triggered by ASC when GE stack count changes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00788">788</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00188">OnGameplayEffectStackChange</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00759">OnActiveGameplayEffectAdded()</a>.</p>
+
+</div>
+</div>
+<a id="a63cc4d9828f36b4d2b868293ba61c3d2" name="a63cc4d9828f36b4d2b868293ba61c3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63cc4d9828f36b4d2b868293ba61c3d2">&#9670;&#160;</a></span>OnActiveGameplayEffectTimeChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::OnActiveGameplayEffectTimeChanged </td>
+          <td>(</td>
+          <td class="paramtype">FActiveGameplayEffectHandle</td>          <td class="paramname"><span class="paramname"><em>ActiveHandle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>NewStartTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>NewDuration</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Triggered by ASC when GE time changes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00810">810</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00192">OnGameplayEffectTimeChange</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00759">OnActiveGameplayEffectAdded()</a>.</p>
+
+</div>
+</div>
+<a id="aca1c9026afbc6d56f66877e2ee01e9de" name="aca1c9026afbc6d56f66877e2ee01e9de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca1c9026afbc6d56f66877e2ee01e9de">&#9670;&#160;</a></span>OnAnyGameplayEffectRemoved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::OnAnyGameplayEffectRemoved </td>
+          <td>(</td>
+          <td class="paramtype">const FActiveGameplayEffect &amp;</td>          <td class="paramname"><span class="paramname"><em>EffectRemoved</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Triggered by ASC when any GEs are removed. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00832">832</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00200">OnGameplayEffectRemoved</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00188">OnGameplayEffectStackChange</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00069">RegisterAbilitySystemDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="af8dac804c652a265730caf05b8120b53" name="af8dac804c652a265730caf05b8120b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8dac804c652a265730caf05b8120b53">&#9670;&#160;</a></span>OnAnyGameplayTagChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::OnAnyGameplayTagChanged </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>GameplayTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>NewCount</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Triggered by ASC when any gameplay tag is added or removed (but not if just count changed). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00849">849</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00204">OnGameplayTagChange</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00069">RegisterAbilitySystemDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="ac13df1d349d52b5d6dac6812f405da4d" name="ac13df1d349d52b5d6dac6812f405da4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac13df1d349d52b5d6dac6812f405da4d">&#9670;&#160;</a></span>OnAttributeChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::OnAttributeChanged </td>
+          <td>(</td>
+          <td class="paramtype">const FOnAttributeChangeData &amp;</td>          <td class="paramname"><span class="paramname"><em>Data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00367">367</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00148">OnAttributeChange</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00069">RegisterAbilitySystemDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="a89f099aeccef6bf20f559ccc1c5a6a8e" name="a89f099aeccef6bf20f559ccc1c5a6a8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f099aeccef6bf20f559ccc1c5a6a8e">&#9670;&#160;</a></span>OnCooldownGameplayTagChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::OnCooldownGameplayTagChanged </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>GameplayTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>NewCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGameplayAbilitySpecHandle</td>          <td class="paramname"><span class="paramname"><em>AbilitySpecHandle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Duration</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Triggered by ASC when a cooldown tag is changed (new or removed). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00866">866</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00216">OnCooldownEnd</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00896">HandleCooldownOnAbilityCommit()</a>.</p>
+
+</div>
+</div>
+<a id="adccf42e77c143575c4e40d0ef00217b1" name="adccf42e77c143575c4e40d0ef00217b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adccf42e77c143575c4e40d0ef00217b1">&#9670;&#160;</a></span>OnDamageAttributeChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::OnDamageAttributeChanged </td>
+          <td>(</td>
+          <td class="paramtype">const FOnAttributeChangeData &amp;</td>          <td class="paramname"><span class="paramname"><em>Data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00390">390</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00069">RegisterAbilitySystemDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="a777f42100e8ec7790afb788c2609f2e0" name="a777f42100e8ec7790afb788c2609f2e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a777f42100e8ec7790afb788c2609f2e0">&#9670;&#160;</a></span>PostGameplayEffectExecute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::PostGameplayEffectExecute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_u_d_t_attribute_set_base.html">UDTAttributeSetBase</a> *</td>          <td class="paramname"><span class="paramname"><em>AttributeSet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayEffectModCallbackData &amp;</td>          <td class="paramname"><span class="paramname"><em>Data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00721">721</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00032">FDTGameplayEffectExecuteData::AbilitySystemComponent</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00028">FDTGameplayEffectExecuteData::AttributeSet</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00040">FDTGameplayEffectExecuteData::ClampMinimumValue</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00036">FDTGameplayEffectExecuteData::DeltaValue</a>, <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00062">UDTAttributeSetBase::GetClampMinimumValueFor()</a>, <a class="el" href="_d_t_attribute_set_base_8h_source.html#l00136">UDTAttributeSetBase::GetSourceAndTargetFromContext()</a>, <a class="el" href="_d_t_attribute_set_base_8cpp_source.html#l00068">UDTAttributeSetBase::GetSourceTagsFromContext()</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00168">OnPostGameplayEffectExecute</a>.</p>
+
+</div>
+</div>
+<a id="ab06f69d5d7315be28aa0a1ae417b3532" name="ab06f69d5d7315be28aa0a1ae417b3532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab06f69d5d7315be28aa0a1ae417b3532">&#9670;&#160;</a></span>PreAttributeChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::PreAttributeChange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_u_d_t_attribute_set_base.html">UDTAttributeSetBase</a> *</td>          <td class="paramname"><span class="paramname"><em>AttributeSet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayAttribute &amp;</td>          <td class="paramname"><span class="paramname"><em>Attribute</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>NewValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00716">716</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00172">OnPreAttributeChange</a>.</p>
+
+</div>
+</div>
+<a id="afee02247f2aadf347af4a474a978db19" name="afee02247f2aadf347af4a474a978db19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee02247f2aadf347af4a474a978db19">&#9670;&#160;</a></span>RegisterAbilitySystemDelegates()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -808,16 +2116,18 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00139">139</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p>Register Ability System delegates to broadcast blueprint assignable events. </p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00073">UDTAbilitySystemComponent::OnAbilityEvent</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00069">69</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ad3e71636050f6cf6aa2a48a5a1654572">MulticastHandleDeath()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00854">OnAbilityCommitted()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00759">OnActiveGameplayEffectAdded()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00832">OnAnyGameplayEffectRemoved()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00849">OnAnyGameplayTagChanged()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00367">OnAttributeChanged()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00390">OnDamageAttributeChanged()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00111">ShutdownAbilitySystemDelegates()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>.</p>
 
 </div>
 </div>
@@ -848,16 +2158,105 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00130">130</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00234">234</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00041">GetAbilitySystemComponent()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00655">UDTAbilitySystemComponent::SendAbilityEvent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00172">GetAbilitySystemComponent()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00754">UDTAbilitySystemComponent::SendAbilityEvent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00073">Die()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00180">HandleDamageDealt()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00201">HandleDamageEvent()</a>, and <a class="el" href="#ad3e71636050f6cf6aa2a48a5a1654572">MulticastHandleDeath()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00395">Die()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00254">HandleDamageDealt()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00318">HandleDamageEvent()</a>.</p>
 
 </div>
 </div>
-<a id="a265327ea11fcd8c7ec18391baa6ed65c" name="a265327ea11fcd8c7ec18391baa6ed65c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a265327ea11fcd8c7ec18391baa6ed65c">&#9670;&#160;</a></span>ShutdownAbilitySystemDelegates()</h2>
+<a id="a9220ec62e51cc0330174ee714bad14c6" name="a9220ec62e51cc0330174ee714bad14c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9220ec62e51cc0330174ee714bad14c6">&#9670;&#160;</a></span>SetAttributeValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::SetAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayAttribute</td>          <td class="paramname"><span class="paramname"><em>Attribute</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>NewValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the base value of an attribute. </p>
+<p>Existing active modifiers are NOT cleared and will act upon the new base value. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00673">673</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00684">ClampAttributeValue()</a>.</p>
+
+</div>
+</div>
+<a id="aba8e9859515c4893b321acf2e46a12d4" name="aba8e9859515c4893b321acf2e46a12d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba8e9859515c4893b321acf2e46a12d4">&#9670;&#160;</a></span>SetStartupAbilitiesGranted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::SetStartupAbilitiesGranted </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bGranted</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notify component that ASC startup abilities have been granted. </p>
+<p>Gates events like OnHealthChange / OnDeath during initial setup. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00754">754</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00385">bStartupAbilitiesGranted</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>.</p>
+
+</div>
+</div>
+<a id="ab405a837d383c9302eea36b414186d4a" name="ab405a837d383c9302eea36b414186d4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab405a837d383c9302eea36b414186d4a">&#9670;&#160;</a></span>SetupOwner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityCoreComponent::SetupOwner </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Caches owner actor/pawn/character and resolves the owner's Ability System Component. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00050">50</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">OwnerAbilitySystemComponent</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00219">OwnerActor</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00225">OwnerCharacter</a>, and <a class="el" href="_d_t_ability_core_component_8h_source.html#l00222">OwnerPawn</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00021">BeginPlay()</a>, and <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a85d2dffa7e32238088117caf2040876d" name="a85d2dffa7e32238088117caf2040876d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d2dffa7e32238088117caf2040876d">&#9670;&#160;</a></span>ShutdownAbilitySystemDelegates()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -874,20 +2273,108 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00150">150</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
+<p>Clean up any bound Ability System delegates. </p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_component_8h_source.html#l00073">UDTAbilitySystemComponent::OnAbilityEvent</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00111">111</a> of file <a class="el" href="_d_t_ability_core_component_8cpp_source.html">DTAbilityCoreComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ad3e71636050f6cf6aa2a48a5a1654572">MulticastHandleDeath()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00035">BeginDestroy()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00038">UDTAbilitySystemComponent::BeginDestroy()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00069">RegisterAbilitySystemDelegates()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a613d00fd4e57a1353b388a3d5dfa767d" name="a613d00fd4e57a1353b388a3d5dfa767d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a613d00fd4e57a1353b388a3d5dfa767d">&#9670;&#160;</a></span>bStartupAbilitiesGranted</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityCoreComponent::bStartupAbilitiesGranted = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00385">385</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00336">HandleHealthChange()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00351">HandleManaChange()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00754">SetStartupAbilitiesGranted()</a>.</p>
+
+</div>
+</div>
+<a id="a9a94e41fa14e2f320e32232e32806075" name="a9a94e41fa14e2f320e32232e32806075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a94e41fa14e2f320e32232e32806075">&#9670;&#160;</a></span>OnAbilityActivated</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnAbilityActivated UDTAbilityCoreComponent::OnAbilityActivated</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when an ability is activated for the owner actor. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00176">176</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00360">UDTAbilityWidget::BindAbilitySystemDelegates()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01092">UDTAbilitySystemComponent::OnAbilityActivatedCallback()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00385">UDTAbilityWidget::UnbindAbilitySystemDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="a15d6a1a0bde4cabe3e766e06275b4c7c" name="a15d6a1a0bde4cabe3e766e06275b4c7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15d6a1a0bde4cabe3e766e06275b4c7c">&#9670;&#160;</a></span>OnAbilityCommit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnAbilityCommit UDTAbilityCoreComponent::OnAbilityCommit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called whenever an ability is committed (cost / cooldown are applied). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00208">208</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00854">OnAbilityCommitted()</a>.</p>
+
+</div>
+</div>
+<a id="a6227efb05109c27524f934ae9fe5f3ad" name="a6227efb05109c27524f934ae9fe5f3ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6227efb05109c27524f934ae9fe5f3ad">&#9670;&#160;</a></span>OnAbilityEnded</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnCoreAbilityEnded UDTAbilityCoreComponent::OnAbilityEnded</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when an ability has ended for the owner actor. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00180">180</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00360">UDTAbilityWidget::BindAbilitySystemDelegates()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01122">UDTAbilitySystemComponent::OnAbilityEndedCallback()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00385">UDTAbilityWidget::UnbindAbilitySystemDelegates()</a>.</p>
+
+</div>
+</div>
 <a id="a49debc413772679cb360bd06e3e67c66" name="a49debc413772679cb360bd06e3e67c66"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49debc413772679cb360bd06e3e67c66">&#9670;&#160;</a></span>OnAbilityEvent</h2>
 
@@ -902,7 +2389,115 @@ Protected Member Functions</h2></td></tr>
 
 <p>Fired whenever this actor emits a generic ability event. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00030">30</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00156">156</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+</div>
+</div>
+<a id="a6ec252aa0328cbdbe6883b5d2dd02153" name="a6ec252aa0328cbdbe6883b5d2dd02153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ec252aa0328cbdbe6883b5d2dd02153">&#9670;&#160;</a></span>OnAbilityFailed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnAbilityFailed UDTAbilityCoreComponent::OnAbilityFailed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when an ability failed to activate for the owner actor. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00184">184</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l01107">UDTAbilitySystemComponent::OnAbilityFailedCallback()</a>.</p>
+
+</div>
+</div>
+<a id="a052d33739a6165e1983cf9efd2f9ac73" name="a052d33739a6165e1983cf9efd2f9ac73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a052d33739a6165e1983cf9efd2f9ac73">&#9670;&#160;</a></span>OnAttributeChange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnAttributeChange UDTAbilityCoreComponent::OnAttributeChange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when any of the attributes owned by this actor are changed. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00148">148</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00362">HandleAttributeChange()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00367">OnAttributeChanged()</a>.</p>
+
+</div>
+</div>
+<a id="a889de55464dba1828dbfe6819d4f5a19" name="a889de55464dba1828dbfe6819d4f5a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a889de55464dba1828dbfe6819d4f5a19">&#9670;&#160;</a></span>OnCooldownEnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnCooldownEnd UDTAbilityCoreComponent::OnCooldownEnd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when a cooldown gameplay tag is removed, meaning cooldown expired. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00216">216</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00866">OnCooldownGameplayTagChanged()</a>.</p>
+
+</div>
+</div>
+<a id="a6ebf9fad79bd07b9183f44108ecab2cb" name="a6ebf9fad79bd07b9183f44108ecab2cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ebf9fad79bd07b9183f44108ecab2cb">&#9670;&#160;</a></span>OnCooldownStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnCooldownChanged UDTAbilityCoreComponent::OnCooldownStart</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when an ability with a valid cooldown is committed and cooldown is applied. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00212">212</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00896">HandleCooldownOnAbilityCommit()</a>.</p>
+
+</div>
+</div>
+<a id="a9475369d770b92cb5653bf9baff70034" name="a9475369d770b92cb5653bf9baff70034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9475369d770b92cb5653bf9baff70034">&#9670;&#160;</a></span>OnDamage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnDamage UDTAbilityCoreComponent::OnDamage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when the owner takes damage, which may have killed them. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DamageAmount</td><td>Amount of damage that was done, not clamped based on current health </td></tr>
+    <tr><td class="paramname">SourceCharacter</td><td>The actual actor that did the damage </td></tr>
+    <tr><td class="paramname">DamageTags</td><td>The gameplay tags of the event that did the damage </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00133">133</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00110">ADTAIController::OnPossess()</a>, and <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00153">ADTAIController::OnUnPossess()</a>.</p>
 
 </div>
 </div>
@@ -918,11 +2513,11 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Fired when this actor deals damage to another (C++ only, server-side). </p>
+<p>Fired when this actor deals damage to another (server-side). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00034">34</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00160">160</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00180">HandleDamageDealt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00254">HandleDamageDealt()</a>.</p>
 
 </div>
 </div>
@@ -940,7 +2535,169 @@ Protected Member Functions</h2></td></tr>
 
 <p>Fired on the owning client only when this actor deals damage. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00040">40</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00164">164</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+</div>
+</div>
+<a id="a8245a9343c811c79c37619a48fc44e8e" name="a8245a9343c811c79c37619a48fc44e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8245a9343c811c79c37619a48fc44e8e">&#9670;&#160;</a></span>OnDeath</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnDeath UDTAbilityCoreComponent::OnDeath</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when the owner dies. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00152">152</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00395">Die()</a>.</p>
+
+</div>
+</div>
+<a id="aef3043d69dae0821ddb3e0409135fd23" name="aef3043d69dae0821ddb3e0409135fd23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef3043d69dae0821ddb3e0409135fd23">&#9670;&#160;</a></span>OnGameplayEffectAdded</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnGameplayEffectAdded UDTAbilityCoreComponent::OnGameplayEffectAdded</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when a GameplayEffect is added. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00196">196</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00759">OnActiveGameplayEffectAdded()</a>.</p>
+
+</div>
+</div>
+<a id="ae72dd03730c0f0de68d0adbb06f00bc5" name="ae72dd03730c0f0de68d0adbb06f00bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae72dd03730c0f0de68d0adbb06f00bc5">&#9670;&#160;</a></span>OnGameplayEffectRemoved</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnGameplayEffectRemoved UDTAbilityCoreComponent::OnGameplayEffectRemoved</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when a GameplayEffect is removed. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00200">200</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00832">OnAnyGameplayEffectRemoved()</a>.</p>
+
+</div>
+</div>
+<a id="a27c225a52bb4de4dded90dfa78ba00e9" name="a27c225a52bb4de4dded90dfa78ba00e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c225a52bb4de4dded90dfa78ba00e9">&#9670;&#160;</a></span>OnGameplayEffectStackChange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnGameplayEffectStackChange UDTAbilityCoreComponent::OnGameplayEffectStackChange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when a GameplayEffect stack count changes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00188">188</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00788">OnActiveGameplayEffectStackChanged()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00832">OnAnyGameplayEffectRemoved()</a>.</p>
+
+</div>
+</div>
+<a id="a2ac3055311ccfbd5c100dcfff2d420c0" name="a2ac3055311ccfbd5c100dcfff2d420c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ac3055311ccfbd5c100dcfff2d420c0">&#9670;&#160;</a></span>OnGameplayEffectTimeChange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnGameplayEffectTimeChange UDTAbilityCoreComponent::OnGameplayEffectTimeChange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when a GameplayEffect duration is changed (for instance when duration is refreshed). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00192">192</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00810">OnActiveGameplayEffectTimeChanged()</a>.</p>
+
+</div>
+</div>
+<a id="ac15e408998d8b502e7aae64d57ea52c9" name="ac15e408998d8b502e7aae64d57ea52c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac15e408998d8b502e7aae64d57ea52c9">&#9670;&#160;</a></span>OnGameplayTagChange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnGameplayTagStackChange UDTAbilityCoreComponent::OnGameplayTagChange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called whenever a tag is added or removed (but not if just the count changed). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00204">204</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00849">OnAnyGameplayTagChanged()</a>.</p>
+
+</div>
+</div>
+<a id="aa1c82d78318394209d53a6418baa285f" name="aa1c82d78318394209d53a6418baa285f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1c82d78318394209d53a6418baa285f">&#9670;&#160;</a></span>OnHealthChange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnDefaultAttributeChange UDTAbilityCoreComponent::OnHealthChange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when health is changed, either from healing or from being damaged. </p>
+<p>For damage this is called in addition to OnDamage/OnDeath. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00140">140</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00336">HandleHealthChange()</a>.</p>
+
+</div>
+</div>
+<a id="acb4aa255726ca8837e4c28a765267c72" name="acb4aa255726ca8837e4c28a765267c72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb4aa255726ca8837e4c28a765267c72">&#9670;&#160;</a></span>OnInitAbilityActorInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnInitAbilityActorInfoCore UDTAbilityCoreComponent::OnInitAbilityActorInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event called just after InitAbilityActorInfo on the ASC, once abilities and attributes have been granted. </p>
+<p>Happens multiple times for both client / server (component init + owning-actor replication). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00123">123</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>.</p>
 
 </div>
 </div>
@@ -956,18 +2713,141 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Called when this character kills another actor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">KilledActor</td><td>The actor that was killed </td></tr>
-    <tr><td class="paramname">DamageAmount</td><td>Amount of damage that caused the kill </td></tr>
-    <tr><td class="paramname">KillerPlayerState</td><td>The player state of the killer (owner of this component) </td></tr>
-    <tr><td class="paramname">DamageTags</td><td>The gameplay tags of the damage that caused the kill </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Called when this component's owner kills another actor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00050">50</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00233">233</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+</div>
+</div>
+<a id="a720eb69b26107607228a175a546cfa2a" name="a720eb69b26107607228a175a546cfa2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a720eb69b26107607228a175a546cfa2a">&#9670;&#160;</a></span>OnManaChange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnDefaultAttributeChange UDTAbilityCoreComponent::OnManaChange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when mana is changed, either from regen or from being used as a cost. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00144">144</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00351">HandleManaChange()</a>.</p>
+
+</div>
+</div>
+<a id="a54bef409887f4588eff183a46d69131a" name="a54bef409887f4588eff183a46d69131a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54bef409887f4588eff183a46d69131a">&#9670;&#160;</a></span>OnPostGameplayEffectExecute</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnPostGameplayEffectExecute UDTAbilityCoreComponent::OnPostGameplayEffectExecute</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PostGameplayEffectExecute event fired off from native AttributeSets. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00168">168</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00721">PostGameplayEffectExecute()</a>.</p>
+
+</div>
+</div>
+<a id="ac31ceeef3cb2da9713e29ce577340693" name="ac31ceeef3cb2da9713e29ce577340693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac31ceeef3cb2da9713e29ce577340693">&#9670;&#160;</a></span>OnPreAttributeChange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTOnPreAttributeChange UDTAbilityCoreComponent::OnPreAttributeChange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PreAttributeChange event fired off from native AttributeSets. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00172">172</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00716">PreAttributeChange()</a>.</p>
+
+</div>
+</div>
+<a id="af07353a1b3e243e5921430b434a1b918" name="af07353a1b3e243e5921430b434a1b918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af07353a1b3e243e5921430b434a1b918">&#9670;&#160;</a></span>OwnerAbilitySystemComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UAbilitySystemComponent&gt; UDTAbilityCoreComponent::OwnerAbilitySystemComponent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00228">228</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00691">AdjustAttributeForMaxChange()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00035">BeginDestroy()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00549">ClearAbilities()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00395">Die()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00172">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00614">GetActiveAbilitiesByClass()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00646">GetActiveAbilitiesByTags()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00462">GetAttributeValue()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00491">GetCurrentAttributeValue()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00422">GetHealth()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00442">GetMana()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00432">GetMaxHealth()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00452">GetMaxMana()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00525">GrantAbility()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00896">HandleCooldownOnAbilityCommit()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00572">HasAnyMatchingGameplayTags()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00582">HasMatchingGameplayTag()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00193">IsDemiGodMode()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00182">IsGodMode()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00603">IsUsingAbilityByTags()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00759">OnActiveGameplayEffectAdded()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00788">OnActiveGameplayEffectStackChanged()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00810">OnActiveGameplayEffectTimeChanged()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00832">OnAnyGameplayEffectRemoved()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00866">OnCooldownGameplayTagChanged()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00673">SetAttributeValue()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00050">SetupOwner()</a>.</p>
+
+</div>
+</div>
+<a id="a95191f0594cb3790233bf5a61b475d79" name="a95191f0594cb3790233bf5a61b475d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95191f0594cb3790233bf5a61b475d79">&#9670;&#160;</a></span>OwnerActor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;AActor&gt; UDTAbilityCoreComponent::OwnerActor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00219">219</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00549">ClearAbilities()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00525">GrantAbility()</a>, and <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00050">SetupOwner()</a>.</p>
+
+</div>
+</div>
+<a id="ad62a9d757b6ca5931d90a0f227424811" name="ad62a9d757b6ca5931d90a0f227424811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad62a9d757b6ca5931d90a0f227424811">&#9670;&#160;</a></span>OwnerCharacter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;ACharacter&gt; UDTAbilityCoreComponent::OwnerCharacter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00225">225</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00050">SetupOwner()</a>.</p>
+
+</div>
+</div>
+<a id="a24175afcd33f52c84da9a928a373d80e" name="a24175afcd33f52c84da9a928a373d80e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24175afcd33f52c84da9a928a373d80e">&#9670;&#160;</a></span>OwnerPawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;APawn&gt; UDTAbilityCoreComponent::OwnerPawn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_core_component_8h_source.html#l00222">222</a> of file <a class="el" href="_d_t_ability_core_component_8h_source.html">DTAbilityCoreComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00050">SetupOwner()</a>.</p>
 
 </div>
 </div>

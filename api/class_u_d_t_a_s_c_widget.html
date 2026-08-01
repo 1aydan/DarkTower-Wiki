@@ -142,10 +142,11 @@ Inheritance diagram for UDTASCWidget:</div>
  <div class="center">
   <img src="class_u_d_t_a_s_c_widget.png" usemap="#UDTASCWidget_map" alt=""/>
   <map id="UDTASCWidget_map" name="UDTASCWidget_map">
-<area href="class_u_d_t_user_widget.html" title="Base class for all user widgets in Dark Tower." alt="UDTUserWidget" shape="rect" coords="178,56,346,80"/>
+<area href="class_u_d_t_user_widget.html" title="Base class for all user widgets in Dark Tower." alt="UDTUserWidget" shape="rect" coords="267,56,435,80"/>
 <area href="class_u_d_t_a_s_c_attribute_widget.html" title="Base class for widgets that track and display gameplay attributes." alt="UDTASCAttributeWidget" shape="rect" coords="0,168,168,192"/>
 <area href="class_u_d_t_ability_bar_widget.html" title="A widget for displaying the player&#39;s ability bar with slotted abilities." alt="UDTAbilityBarWidget" shape="rect" coords="178,168,346,192"/>
 <area href="class_u_d_t_ability_widget.html" title="Base class for ability widgets in Dark Tower." alt="UDTAbilityWidget" shape="rect" coords="356,168,524,192"/>
+<area href="class_u_d_t_player_damaged_widget.html" title="Flashes a hit-reaction overlay when the locally owned player character takes damage." alt="UDTPlayerDamagedWidget" shape="rect" coords="534,168,702,192"/>
 <area href="class_u_d_t_a_s_c_attribute_bar_widget.html" title="attribute widget that displays attributes using a progress bar / image material and text" alt="UDTASCAttributeBarWidget" shape="rect" coords="0,224,168,248"/>
 <area href="class_u_d_t_spell_loadout_slot_widget.html" title="A single spell slot in the loadout screen." alt="UDTSpellLoadoutSlotWidget" shape="rect" coords="356,224,524,248"/>
   </map>
@@ -318,7 +319,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_u_d_t_ability_bar_widget.html#a2417981c1434533e64ded89b8044532e">UDTAbilityBarWidget</a>, <a class="el" href="class_u_d_t_ability_widget.html#a153c763bd1f5b435c7b1604e6ea45c40">UDTAbilityWidget</a>, and <a class="el" href="class_u_d_t_a_s_c_attribute_widget.html#a7769f580a7c0f66658f74ace85abc6e5">UDTASCAttributeWidget</a>.</p>
+<p>Reimplemented in <a class="el" href="class_u_d_t_ability_bar_widget.html#a2417981c1434533e64ded89b8044532e">UDTAbilityBarWidget</a>, <a class="el" href="class_u_d_t_ability_widget.html#a153c763bd1f5b435c7b1604e6ea45c40">UDTAbilityWidget</a>, <a class="el" href="class_u_d_t_a_s_c_attribute_widget.html#a7769f580a7c0f66658f74ace85abc6e5">UDTASCAttributeWidget</a>, and <a class="el" href="class_u_d_t_player_damaged_widget.html#af128abf993cf6c950767377c58ebd642">UDTPlayerDamagedWidget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_widget_8cpp_source.html#l00027">27</a> of file <a class="el" href="_d_t_a_s_c_widget_8cpp_source.html">DTASCWidget.cpp</a>.</p>
 
@@ -351,7 +352,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">27</a> of file <a class="el" href="_d_t_a_s_c_widget_8h_source.html">DTASCWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00349">UDTAbilityWidget::BindAbilitySystemDelegates()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00047">UDTASCAttributeWidget::BindToAttribute()</a>, <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00023">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00027">UDTASCAttributeWidget::GetCurrentValue()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00037">UDTASCAttributeWidget::GetMaxValue()</a>, <a class="el" href="_d_t_a_s_c_widget_8cpp_source.html#l00011">InitializeWithAbilitySystem()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00108">UDTASCAttributeWidget::OnAbilitySystemInitialized()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00318">UDTAbilityWidget::SetAbilitySlot()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00374">UDTAbilityWidget::UnbindAbilitySystemDelegates()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00090">UDTASCAttributeWidget::UnbindFromAllAttributes()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00075">UDTASCAttributeWidget::UnbindFromAttribute()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00150">UDTAbilityWidget::UpdateAbilityInfo()</a>, and <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html#l00081">UDTASCAttributeBarWidget::UpdateDisplay_Implementation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00360">UDTAbilityWidget::BindAbilitySystemDelegates()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00047">UDTASCAttributeWidget::BindToAttribute()</a>, <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00023">GetAbilitySystemComponent()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00027">UDTASCAttributeWidget::GetCurrentValue()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00037">UDTASCAttributeWidget::GetMaxValue()</a>, <a class="el" href="_d_t_a_s_c_widget_8cpp_source.html#l00011">InitializeWithAbilitySystem()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00108">UDTASCAttributeWidget::OnAbilitySystemInitialized()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00319">UDTAbilityWidget::SetAbilitySlot()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00385">UDTAbilityWidget::UnbindAbilitySystemDelegates()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00090">UDTASCAttributeWidget::UnbindFromAllAttributes()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00075">UDTASCAttributeWidget::UnbindFromAttribute()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00151">UDTAbilityWidget::UpdateAbilityInfo()</a>, and <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html#l00081">UDTASCAttributeBarWidget::UpdateDisplay_Implementation()</a>.</p>
 
 </div>
 </div>
@@ -377,7 +378,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00030">30</a> of file <a class="el" href="_d_t_a_s_c_widget_8h_source.html">DTASCWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00349">UDTAbilityWidget::BindAbilitySystemDelegates()</a>, <a class="el" href="_d_t_a_s_c_widget_8cpp_source.html#l00011">InitializeWithAbilitySystem()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00106">UDTAbilityWidget::NativeOnDrop()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00374">UDTAbilityWidget::UnbindAbilitySystemDelegates()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00360">UDTAbilityWidget::BindAbilitySystemDelegates()</a>, <a class="el" href="_d_t_a_s_c_widget_8cpp_source.html#l00011">InitializeWithAbilitySystem()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00107">UDTAbilityWidget::NativeOnDrop()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00385">UDTAbilityWidget::UnbindAbilitySystemDelegates()</a>.</p>
 
 </div>
 </div>

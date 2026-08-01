@@ -9,5 +9,6 @@ var dir_c8390e5c7f45488ff387d073c9258221 =
     [ "SkillTree", "dir_33e0349574e7890a3cf9830442b4368f.html", "dir_33e0349574e7890a3cf9830442b4368f" ],
     [ "Targeting", "dir_1ec1b4000f008787cdba869e51670a4d.html", "dir_1ec1b4000f008787cdba869e51670a4d" ],
     [ "Tasks", "dir_c46ea683c061774ea45e9fd43ec10169.html", "dir_c46ea683c061774ea45e9fd43ec10169" ],
+    [ "DTAbilityTypes.cpp", "_d_t_ability_types_8cpp.html", "_d_t_ability_types_8cpp" ],
     [ "DTGameplayCueManager.cpp", "_d_t_gameplay_cue_manager_8cpp.html", null ]
 ];

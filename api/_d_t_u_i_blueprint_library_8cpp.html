@@ -134,14 +134,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_u_i_bluep
 <div class="textblock"><code>#include &quot;<a class="el" href="_d_t_u_i_blueprint_library_8h_source.html">UI/Core/DTUIBlueprintLibrary.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_gameplay_ability_8h_source.html">AbilitySystem/Abilities/DTGameplayAbility.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_ability_definition_8h_source.html">AbilitySystem/Core/DTAbilityDefinition.h</a>&quot;</code><br />
+<code>#include &quot;AbilitySystemComponent.h&quot;</code><br />
+<code>#include &quot;AbilitySystemGlobals.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_blueprint_library_8h_source.html">Core/DTBlueprintLibrary.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_d_t_gameplay_tags_8h_source.html">Core/DTGameplayTags.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_log_channels_8h_source.html">Core/DTLogChannels.h</a>&quot;</code><br />
 <code>#include &quot;DefinitionAssetManager.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_affix_definition_8h_source.html">Inventory/DTAffixDefinition.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_global_loot_data_8h_source.html">Inventory/DTGlobalLootData.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_inventory_types_8h_source.html">Inventory/DTInventoryTypes.h</a>&quot;</code><br />
 <code>#include &quot;InventoryItemDefinition.h&quot;</code><br />
+<code>#include &quot;Kismet/GameplayStatics.h&quot;</code><br />
 <code>#include &quot;ScalableFloat.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_t_loot_subsystem_8h_source.html">Systems/DTLootSubsystem.h</a>&quot;</code><br />
 </div>
@@ -149,27 +151,45 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_u_i_bluep
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4aae8f480890757d34ea6322784c1071" id="r_a4aae8f480890757d34ea6322784c1071"><td class="memItemLeft">static <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4aae8f480890757d34ea6322784c1071">MakeDescriptionValueDefFromStatModifier</a> (const <a class="el" href="struct_f_stat_modifier_def.html">FStatModifierDef</a> &amp;StatModifier, const int32 DecimalPlaces, const FName Placeholder)</td></tr>
-<tr class="memitem:ac1d1c0bc7d5409d2cf956ca19aeff7f8" id="r_ac1d1c0bc7d5409d2cf956ca19aeff7f8"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#ac1d1c0bc7d5409d2cf956ca19aeff7f8">EvaluateScalableDescriptionValueForLevel</a> (const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;ValueDef, const int32 EvaluationLevel)</td></tr>
-<tr class="memitem:a0df9f9a807b80c999a9fa6c07f21166b" id="r_a0df9f9a807b80c999a9fa6c07f21166b"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a0df9f9a807b80c999a9fa6c07f21166b">ReadObjectPropertyValue</a> (const UObject *Object, const FName PropertyName, const float Level)</td></tr>
-<tr class="memitem:aa2cce243951bba9ac44535096827a8fc" id="r_aa2cce243951bba9ac44535096827a8fc"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#aa2cce243951bba9ac44535096827a8fc">EvaluateDescriptionValue</a> (const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;ValueDef, const float NormalizedValue, const int32 EvaluationLevel=0, const UObject *PropertyContext=nullptr)</td></tr>
-<tr class="memitem:aa8a8671f14a42f079515ed4bc018d28f" id="r_aa8a8671f14a42f079515ed4bc018d28f"><td class="memItemLeft">static FString&#160;</td><td class="memItemRight"><a class="el" href="#aa8a8671f14a42f079515ed4bc018d28f">FormatDescriptionValuePlainString</a> (const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;ValueDef, float RawValue)</td></tr>
-<tr class="memitem:a4ca5c49e6c1b0ed33270f8a7cc53695b" id="r_a4ca5c49e6c1b0ed33270f8a7cc53695b"><td class="memItemLeft">static FString&#160;</td><td class="memItemRight"><a class="el" href="#a4ca5c49e6c1b0ed33270f8a7cc53695b">FormatDescriptionValueString</a> (const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;ValueDef, float RawValue)</td></tr>
-<tr class="memitem:ab8529c2c537016a4b45d25a2e012e568" id="r_ab8529c2c537016a4b45d25a2e012e568"><td class="memItemLeft">static FString&#160;</td><td class="memItemRight"><a class="el" href="#ab8529c2c537016a4b45d25a2e012e568">ApplyDisplayLabel</a> (const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;ValueDef, float RawValue)</td></tr>
-<tr class="memitem:a3c9133be12d05010cac25ab6c95bfbdd" id="r_a3c9133be12d05010cac25ab6c95bfbdd"><td class="memItemLeft">static FText&#160;</td><td class="memItemRight"><a class="el" href="#a3c9133be12d05010cac25ab6c95bfbdd">FormatResolvedDynamicDescription</a> (const FText &amp;DescriptionTemplate, const TArray&lt; <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &gt; &amp;DescriptionValues, const TArray&lt; FString &gt; &amp;ResolvedValues)</td></tr>
-<tr class="memitem:a08f562ec1f809c8a8eb2ff1e010df599" id="r_a08f562ec1f809c8a8eb2ff1e010df599"><td class="memItemLeft">static FText&#160;</td><td class="memItemRight"><a class="el" href="#a08f562ec1f809c8a8eb2ff1e010df599">FormatDynamicDescriptionResolved</a> (const FText &amp;DescriptionTemplate, const TArray&lt; <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &gt; &amp;DescriptionValues, const float NormalizedValue, const int32 EvaluationLevel=0, const UObject *PropertyContext=nullptr)</td></tr>
-<tr class="memitem:a90ccc1139e5bfd928839d418ac9db487" id="r_a90ccc1139e5bfd928839d418ac9db487"><td class="memItemLeft">static FText&#160;</td><td class="memItemRight"><a class="el" href="#a90ccc1139e5bfd928839d418ac9db487">FormatDynamicDescriptionComparison</a> (const FText &amp;DescriptionTemplate, const TArray&lt; <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &gt; &amp;DescriptionValues, const float CurrentNormalizedValue, const float NextNormalizedValue, const int32 CurrentEvaluationLevel=0, const int32 NextEvaluationLevel=0, const UObject *PropertyContext=nullptr)</td></tr>
+<tr class="memitem:a2153d4912af0d9bd0f14faad7c5ca919" id="r_a2153d4912af0d9bd0f14faad7c5ca919"><td class="memItemLeft">static const UAbilitySystemComponent *&#160;</td><td class="memItemRight"><a class="el" href="#a2153d4912af0d9bd0f14faad7c5ca919">GetSourceASC</a> (const AActor *SourceActor)</td></tr>
+<tr class="memitem:a72b632ffa8f0b94c12898ba3e3bc28de" id="r_a72b632ffa8f0b94c12898ba3e3bc28de"><td class="memItemLeft">static <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a>&#160;</td><td class="memItemRight"><a class="el" href="#a72b632ffa8f0b94c12898ba3e3bc28de">MakeDescriptionValueDefFromStatModifier</a> (const <a class="el" href="struct_f_stat_modifier_def.html">FStatModifierDef</a> &amp;StatModifier, const FName Placeholder)</td></tr>
+<tr class="memitem:a90810dcc2c8135e6e831ad21223f554d" id="r_a90810dcc2c8135e6e831ad21223f554d"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a90810dcc2c8135e6e831ad21223f554d">CalcValue</a> (const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;ValueDef, const <a class="el" href="struct_f_d_t_dynamic_value_context.html">FDTDynamicValueContext</a> &amp;Context)</td></tr>
+<tr class="memitem:a5c360e99868781b745a6594fc1115ba0" id="r_a5c360e99868781b745a6594fc1115ba0"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a5c360e99868781b745a6594fc1115ba0">CalcValue</a> (const <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &amp;ValueDef, const <a class="el" href="struct_f_d_t_dynamic_value_context.html">FDTDynamicValueContext</a> &amp;Context)</td></tr>
+<tr class="memitem:a5fb2beb17f0faa9f187164de776d24fb" id="r_a5fb2beb17f0faa9f187164de776d24fb"><td class="memTemplParams" colspan="2">template&lt;typename TValue&gt; </td></tr>
+<tr class="memitem:a5fb2beb17f0faa9f187164de776d24fb template"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a5fb2beb17f0faa9f187164de776d24fb">ResolveValueNumber</a> (const TValue &amp;ValueDef, const float NormalizedValue, const int32 EvaluationLevel=0, const <a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> *OwningDefinition=nullptr, const UAbilitySystemComponent *SourceASC=nullptr)</td></tr>
+<tr class="memitem:a199bd5aaa08c5a7c9ca093ffa492dceb" id="r_a199bd5aaa08c5a7c9ca093ffa492dceb"><td class="memItemLeft">static FString&#160;</td><td class="memItemRight"><a class="el" href="#a199bd5aaa08c5a7c9ca093ffa492dceb">FormatStatNumber</a> (bool bIsPercent, bool bPercentFromMultiplier, int32 DecimalPlaces, bool bShowSign, bool bRoundToNearest, float RawValue)</td></tr>
+<tr class="memitem:a493d41db75e42919f6a5297bdc1895bd" id="r_a493d41db75e42919f6a5297bdc1895bd"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a493d41db75e42919f6a5297bdc1895bd">DisplaysAsPercent</a> (const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;ValueDef)</td></tr>
+<tr class="memitem:a0b28ae497a3179645e93e5053fd32b83" id="r_a0b28ae497a3179645e93e5053fd32b83"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a0b28ae497a3179645e93e5053fd32b83">DisplaysAsPercent</a> (const <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &amp;ValueDef)</td></tr>
+<tr class="memitem:a8c80a245fe6988c7b1579989702b65ec" id="r_a8c80a245fe6988c7b1579989702b65ec"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a8c80a245fe6988c7b1579989702b65ec">PercentIsFromMultiplier</a> (const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;ValueDef)</td></tr>
+<tr class="memitem:a6ccc70432f6600220460a984300e797d" id="r_a6ccc70432f6600220460a984300e797d"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a6ccc70432f6600220460a984300e797d">PercentIsFromMultiplier</a> (const <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &amp;ValueDef)</td></tr>
+<tr class="memitem:a01705109e4cc60de19aa991e6adcb626" id="r_a01705109e4cc60de19aa991e6adcb626"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a01705109e4cc60de19aa991e6adcb626">DisplayRoundsToNearest</a> (const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;)</td></tr>
+<tr class="memitem:aa79d1697e6bb04c05ceaff7f89bae012" id="r_aa79d1697e6bb04c05ceaff7f89bae012"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#aa79d1697e6bb04c05ceaff7f89bae012">DisplayRoundsToNearest</a> (const <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &amp;)</td></tr>
+<tr class="memitem:ad6ee59c31dd1c1eba8ae18741b25bbe4" id="r_ad6ee59c31dd1c1eba8ae18741b25bbe4"><td class="memTemplParams" colspan="2">template&lt;typename TValue&gt; </td></tr>
+<tr class="memitem:ad6ee59c31dd1c1eba8ae18741b25bbe4 template"><td class="memItemLeft">static FString&#160;</td><td class="memItemRight"><a class="el" href="#ad6ee59c31dd1c1eba8ae18741b25bbe4">FormatDescriptionValuePlainString</a> (const TValue &amp;ValueDef, float RawValue)</td></tr>
+<tr class="memitem:a42acfb703f0c2bfca8720ffbe1cab558" id="r_a42acfb703f0c2bfca8720ffbe1cab558"><td class="memTemplParams" colspan="2">template&lt;typename TValue&gt; </td></tr>
+<tr class="memitem:a42acfb703f0c2bfca8720ffbe1cab558 template"><td class="memItemLeft">static FString&#160;</td><td class="memItemRight"><a class="el" href="#a42acfb703f0c2bfca8720ffbe1cab558">FormatDescriptionValueString</a> (const TValue &amp;ValueDef, float RawValue)</td></tr>
+<tr class="memitem:a1d286e3bb8c75f2e50bc69bba32515b9" id="r_a1d286e3bb8c75f2e50bc69bba32515b9"><td class="memTemplParams" colspan="2">template&lt;typename TValue&gt; </td></tr>
+<tr class="memitem:a1d286e3bb8c75f2e50bc69bba32515b9 template"><td class="memItemLeft">static FString&#160;</td><td class="memItemRight"><a class="el" href="#a1d286e3bb8c75f2e50bc69bba32515b9">ApplyDisplayLabel</a> (const TValue &amp;ValueDef, float RawValue)</td></tr>
+<tr class="memitem:a80e9776b2eec218375142fe1e327d696" id="r_a80e9776b2eec218375142fe1e327d696"><td class="memTemplParams" colspan="2">template&lt;typename TValue&gt; </td></tr>
+<tr class="memitem:a80e9776b2eec218375142fe1e327d696 template"><td class="memItemLeft">static FText&#160;</td><td class="memItemRight"><a class="el" href="#a80e9776b2eec218375142fe1e327d696">FormatResolvedDynamicDescription</a> (const FText &amp;DescriptionTemplate, const TArray&lt; TValue &gt; &amp;DescriptionValues, const TArray&lt; FString &gt; &amp;ResolvedValues)</td></tr>
+<tr class="memitem:aae99838a973b300c7bf15abe141c0d71" id="r_aae99838a973b300c7bf15abe141c0d71"><td class="memTemplParams" colspan="2">template&lt;typename TValue&gt; </td></tr>
+<tr class="memitem:aae99838a973b300c7bf15abe141c0d71 template"><td class="memItemLeft">static FText&#160;</td><td class="memItemRight"><a class="el" href="#aae99838a973b300c7bf15abe141c0d71">FormatDynamicDescriptionResolved</a> (const FText &amp;DescriptionTemplate, const TArray&lt; TValue &gt; &amp;DescriptionValues, const float NormalizedValue, const int32 EvaluationLevel=0, const <a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> *OwningDefinition=nullptr, const UAbilitySystemComponent *SourceASC=nullptr)</td></tr>
+<tr class="memitem:aad8a5bdb827845fa17f2d6661ea71d64" id="r_aad8a5bdb827845fa17f2d6661ea71d64"><td class="memTemplParams" colspan="2">template&lt;typename TValue&gt; </td></tr>
+<tr class="memitem:aad8a5bdb827845fa17f2d6661ea71d64 template"><td class="memItemLeft">static FText&#160;</td><td class="memItemRight"><a class="el" href="#aad8a5bdb827845fa17f2d6661ea71d64">FormatDynamicDescriptionComparison</a> (const FText &amp;DescriptionTemplate, const TArray&lt; TValue &gt; &amp;DescriptionValues, const float CurrentNormalizedValue, const float NextNormalizedValue, const int32 CurrentEvaluationLevel=0, const int32 NextEvaluationLevel=0, const <a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> *OwningDefinition=nullptr, const UAbilitySystemComponent *SourceASC=nullptr)</td></tr>
 <tr class="memitem:ada81746f25ae630e888722f3fd604d6c" id="r_ada81746f25ae630e888722f3fd604d6c"><td class="memItemLeft">static int32&#160;</td><td class="memItemRight"><a class="el" href="#ada81746f25ae630e888722f3fd604d6c">ClampDisplayRank</a> (const int32 Rank, const int32 MaxRank)</td></tr>
 <tr class="memitem:a8bd7b1b7414cdc7d6f02477020b8d763" id="r_a8bd7b1b7414cdc7d6f02477020b8d763"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a8bd7b1b7414cdc7d6f02477020b8d763">RankToNormalizedValue</a> (const int32 Rank, const int32 MaxRank)</td></tr>
+<tr class="memitem:aac78db13dba64cfd47fc6ad43885872d" id="r_aac78db13dba64cfd47fc6ad43885872d"><td class="memItemLeft">static FText&#160;</td><td class="memItemRight"><a class="el" href="#aac78db13dba64cfd47fc6ad43885872d">FormatBaseStatDisplayFromRow</a> (const <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> &amp;StatRow, float Value)</td></tr>
 <tr class="memitem:a24a8ac4d9ae4ac2861eb4aa8c7498586" id="r_a24a8ac4d9ae4ac2861eb4aa8c7498586"><td class="memItemLeft">static const <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a24a8ac4d9ae4ac2861eb4aa8c7498586">GetNodeGrantedAbilityCDO</a> (const <a class="el" href="struct_f_skill_tree_node.html">FSkillTreeNode</a> &amp;Node)</td></tr>
-<tr class="memitem:aec134607d9e4f1a5e942ed6a2aa9f894" id="r_aec134607d9e4f1a5e942ed6a2aa9f894"><td class="memItemLeft">static const UObject *&#160;</td><td class="memItemRight"><a class="el" href="#aec134607d9e4f1a5e942ed6a2aa9f894">ResolveSkillNodeTooltipSource</a> (const <a class="el" href="struct_f_skill_tree_node.html">FSkillTreeNode</a> &amp;Node, FText &amp;OutDescription, const TArray&lt; <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &gt; *&amp;OutValues)</td></tr>
+<tr class="memitem:a012e0468911f74f480b76ef7d28567f0" id="r_a012e0468911f74f480b76ef7d28567f0"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a012e0468911f74f480b76ef7d28567f0">ResolveSkillNodeTooltipSource</a> (const <a class="el" href="struct_f_skill_tree_node.html">FSkillTreeNode</a> &amp;Node, FText &amp;OutDescription, const TArray&lt; <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &gt; *&amp;OutValues, const <a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> *&amp;OutDefinition)</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ab8529c2c537016a4b45d25a2e012e568" name="ab8529c2c537016a4b45d25a2e012e568"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8529c2c537016a4b45d25a2e012e568">&#9670;&#160;</a></span>ApplyDisplayLabel()</h2>
+<a id="a1d286e3bb8c75f2e50bc69bba32515b9" name="a1d286e3bb8c75f2e50bc69bba32515b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d286e3bb8c75f2e50bc69bba32515b9">&#9670;&#160;</a></span>ApplyDisplayLabel()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename TValue&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -177,7 +197,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">FString ApplyDisplayLabel </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span>, </td>
+          <td class="paramtype">const TValue &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -192,11 +212,79 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00168">168</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00147">147</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00193">FDynamicDescriptionValue::DisplayLabel</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00133">FormatDescriptionValuePlainString()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00135">FormatDescriptionValuePlainString()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00219">FormatDynamicDescriptionComparison()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00207">FormatDynamicDescriptionResolved()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00201">FormatDynamicDescriptionComparison()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00188">FormatDynamicDescriptionResolved()</a>.</p>
+
+</div>
+</div>
+<a id="a5c360e99868781b745a6594fc1115ba0" name="a5c360e99868781b745a6594fc1115ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c360e99868781b745a6594fc1115ba0">&#9670;&#160;</a></span>CalcValue() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CalcValue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_dynamic_value_context.html">FDTDynamicValueContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Context</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00058">58</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8cpp_source.html#l00207">CalculateAbilityValue()</a>.</p>
+
+</div>
+</div>
+<a id="a90810dcc2c8135e6e831ad21223f554d" name="a90810dcc2c8135e6e831ad21223f554d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90810dcc2c8135e6e831ad21223f554d">&#9670;&#160;</a></span>CalcValue() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CalcValue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_dynamic_value_context.html">FDTDynamicValueContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Context</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00053">53</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8cpp_source.html#l00202">CalculateDynamicValue()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00065">ResolveValueNumber()</a>.</p>
 
 </div>
 </div>
@@ -227,14 +315,14 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00238">238</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00220">220</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00608">UDTUIBlueprintLibrary::FormatSkillTreeNodeDescriptionForRank()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00517">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00243">RankToNormalizedValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00599">UDTUIBlueprintLibrary::FormatSkillTreeNodeDescriptionForRank()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00505">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00225">RankToNormalizedValue()</a>.</p>
 
 </div>
 </div>
-<a id="aa2cce243951bba9ac44535096827a8fc" name="aa2cce243951bba9ac44535096827a8fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2cce243951bba9ac44535096827a8fc">&#9670;&#160;</a></span>EvaluateDescriptionValue()</h2>
+<a id="aa79d1697e6bb04c05ceaff7f89bae012" name="aa79d1697e6bb04c05ceaff7f89bae012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa79d1697e6bb04c05ceaff7f89bae012">&#9670;&#160;</a></span>DisplayRoundsToNearest() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,24 +331,10 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float EvaluateDescriptionValue </td>
+          <td class="memname">bool DisplayRoundsToNearest </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>NormalizedValue</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int32</td>          <td class="paramname"><span class="paramname"><em>EvaluationLevel</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const UObject *</td>          <td class="paramname"><span class="paramname"><em>PropertyContext</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -270,16 +344,12 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00113">113</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00061">AbilityProperty</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00201">FDynamicDescriptionValue::BoundPropertyName</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00033">EvaluateScalableDescriptionValueForLevel()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00097">FDynamicValueDefinitionBase::MaxValue</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00093">FDynamicValueDefinitionBase::MinValue</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00073">ReadObjectPropertyValue()</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00059">ScalableFloat</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00089">FDynamicValueDefinitionBase::ScalableValue</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00085">FDynamicValueDefinitionBase::ValueSource</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00219">FormatDynamicDescriptionComparison()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00207">FormatDynamicDescriptionResolved()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00517">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00130">130</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ac1d1c0bc7d5409d2cf956ca19aeff7f8" name="ac1d1c0bc7d5409d2cf956ca19aeff7f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1d1c0bc7d5409d2cf956ca19aeff7f8">&#9670;&#160;</a></span>EvaluateScalableDescriptionValueForLevel()</h2>
+<a id="a01705109e4cc60de19aa991e6adcb626" name="a01705109e4cc60de19aa991e6adcb626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01705109e4cc60de19aa991e6adcb626">&#9670;&#160;</a></span>DisplayRoundsToNearest() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,14 +358,10 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float EvaluateScalableDescriptionValueForLevel </td>
+          <td class="memname">bool DisplayRoundsToNearest </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const int32</td>          <td class="paramname"><span class="paramname"><em>EvaluationLevel</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -305,19 +371,114 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00033">33</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00129">129</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00037">Add</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00067">Direct</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00038">Multiply</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00081">FDynamicValueDefinitionBase::Operation</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00039">Override</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00101">FDynamicValueDefinitionBase::ScalableEvaluationMode</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00089">FDynamicValueDefinitionBase::ScalableValue</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00113">EvaluateDescriptionValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00135">FormatDescriptionValuePlainString()</a>.</p>
 
 </div>
 </div>
-<a id="aa8a8671f14a42f079515ed4bc018d28f" name="aa8a8671f14a42f079515ed4bc018d28f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8a8671f14a42f079515ed4bc018d28f">&#9670;&#160;</a></span>FormatDescriptionValuePlainString()</h2>
+<a id="a0b28ae497a3179645e93e5053fd32b83" name="a0b28ae497a3179645e93e5053fd32b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b28ae497a3179645e93e5053fd32b83">&#9670;&#160;</a></span>DisplaysAsPercent() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DisplaysAsPercent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00118">118</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00294">FDynamicAbilityValue::bShowAsPercent</a>.</p>
+
+</div>
+</div>
+<a id="a493d41db75e42919f6a5297bdc1895bd" name="a493d41db75e42919f6a5297bdc1895bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a493d41db75e42919f6a5297bdc1895bd">&#9670;&#160;</a></span>DisplaysAsPercent() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DisplaysAsPercent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00117">117</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00238">FDynamicDescriptionValue::bShowAsPercent</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00120">Increase</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00118">Multiply</a>, and <a class="el" href="_d_t_ability_types_8h_source.html#l00162">FDynamicValueDefinitionBase::Operation</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00135">FormatDescriptionValuePlainString()</a>.</p>
+
+</div>
+</div>
+<a id="aac78db13dba64cfd47fc6ad43885872d" name="aac78db13dba64cfd47fc6ad43885872d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac78db13dba64cfd47fc6ad43885872d">&#9670;&#160;</a></span>FormatBaseStatDisplayFromRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FText FormatBaseStatDisplayFromRow </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_base_stat_table_row.html">FBaseStatTableRow</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>StatRow</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00297">297</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00153">FBaseStatTableRow::bShowAsPercent</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00157">FBaseStatTableRow::DecimalPlaces</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00145">FBaseStatTableRow::DisplayName</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00083">FormatStatNumber()</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00118">Multiply</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00149">FBaseStatTableRow::Operation</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00307">UDTUIBlueprintLibrary::FormatBaseStatDisplay()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00424">UDTUIBlueprintLibrary::GetItemBaseStatDisplayInfo()</a>.</p>
+
+</div>
+</div>
+<a id="ad6ee59c31dd1c1eba8ae18741b25bbe4" name="ad6ee59c31dd1c1eba8ae18741b25bbe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ee59c31dd1c1eba8ae18741b25bbe4">&#9670;&#160;</a></span>FormatDescriptionValuePlainString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TValue&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -325,7 +486,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">FString FormatDescriptionValuePlainString </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span>, </td>
+          <td class="paramtype">const TValue &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -340,19 +501,21 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00133">133</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00135">135</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00105">FDynamicValueDefinitionBase::bShowSign</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00197">FDynamicDescriptionValue::DecimalPlaces</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00038">Multiply</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00081">FDynamicValueDefinitionBase::Operation</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00129">DisplayRoundsToNearest()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00117">DisplaysAsPercent()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00083">FormatStatNumber()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00123">PercentIsFromMultiplier()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00168">ApplyDisplayLabel()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00163">FormatDescriptionValueString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00147">ApplyDisplayLabel()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00141">FormatDescriptionValueString()</a>.</p>
 
 </div>
 </div>
-<a id="a4ca5c49e6c1b0ed33270f8a7cc53695b" name="a4ca5c49e6c1b0ed33270f8a7cc53695b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ca5c49e6c1b0ed33270f8a7cc53695b">&#9670;&#160;</a></span>FormatDescriptionValueString()</h2>
+<a id="a42acfb703f0c2bfca8720ffbe1cab558" name="a42acfb703f0c2bfca8720ffbe1cab558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42acfb703f0c2bfca8720ffbe1cab558">&#9670;&#160;</a></span>FormatDescriptionValueString()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename TValue&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -360,7 +523,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">FString FormatDescriptionValueString </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span>, </td>
+          <td class="paramtype">const TValue &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -375,19 +538,21 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00163">163</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00141">141</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00133">FormatDescriptionValuePlainString()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00135">FormatDescriptionValuePlainString()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00517">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00505">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
 
 </div>
 </div>
-<a id="a90ccc1139e5bfd928839d418ac9db487" name="a90ccc1139e5bfd928839d418ac9db487"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90ccc1139e5bfd928839d418ac9db487">&#9670;&#160;</a></span>FormatDynamicDescriptionComparison()</h2>
+<a id="aad8a5bdb827845fa17f2d6661ea71d64" name="aad8a5bdb827845fa17f2d6661ea71d64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad8a5bdb827845fa17f2d6661ea71d64">&#9670;&#160;</a></span>FormatDynamicDescriptionComparison()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename TValue&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -400,7 +565,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const TArray&lt; <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>DescriptionValues</em></span>, </td>
+          <td class="paramtype">const TArray&lt; TValue &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>DescriptionValues</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -425,7 +590,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const UObject *</td>          <td class="paramname"><span class="paramname"><em>PropertyContext</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> *</td>          <td class="paramname"><span class="paramname"><em>OwningDefinition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const UAbilitySystemComponent *</td>          <td class="paramname"><span class="paramname"><em>SourceASC</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -435,19 +605,21 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00219">219</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00201">201</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00168">ApplyDisplayLabel()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00113">EvaluateDescriptionValue()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00187">FormatResolvedDynamicDescription()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00147">ApplyDisplayLabel()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00167">FormatResolvedDynamicDescription()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00065">ResolveValueNumber()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00285">UDTUIBlueprintLibrary::FormatAbilityDescriptionComparison()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00517">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00268">UDTUIBlueprintLibrary::FormatAbilityDescriptionComparison()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00505">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
 
 </div>
 </div>
-<a id="a08f562ec1f809c8a8eb2ff1e010df599" name="a08f562ec1f809c8a8eb2ff1e010df599"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08f562ec1f809c8a8eb2ff1e010df599">&#9670;&#160;</a></span>FormatDynamicDescriptionResolved()</h2>
+<a id="aae99838a973b300c7bf15abe141c0d71" name="aae99838a973b300c7bf15abe141c0d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae99838a973b300c7bf15abe141c0d71">&#9670;&#160;</a></span>FormatDynamicDescriptionResolved()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename TValue&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -460,7 +632,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const TArray&lt; <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>DescriptionValues</em></span>, </td>
+          <td class="paramtype">const TArray&lt; TValue &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>DescriptionValues</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -475,7 +647,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const UObject *</td>          <td class="paramname"><span class="paramname"><em>PropertyContext</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> *</td>          <td class="paramname"><span class="paramname"><em>OwningDefinition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const UAbilitySystemComponent *</td>          <td class="paramname"><span class="paramname"><em>SourceASC</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -485,19 +662,21 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00207">207</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00188">188</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00168">ApplyDisplayLabel()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00113">EvaluateDescriptionValue()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00187">FormatResolvedDynamicDescription()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00147">ApplyDisplayLabel()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00167">FormatResolvedDynamicDescription()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00065">ResolveValueNumber()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00275">UDTUIBlueprintLibrary::FormatAbilityDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00270">UDTUIBlueprintLibrary::FormatDynamicDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00608">UDTUIBlueprintLibrary::FormatSkillTreeNodeDescriptionForRank()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00517">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00257">UDTUIBlueprintLibrary::FormatAbilityDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00252">UDTUIBlueprintLibrary::FormatDynamicDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00599">UDTUIBlueprintLibrary::FormatSkillTreeNodeDescriptionForRank()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00505">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
 
 </div>
 </div>
-<a id="a3c9133be12d05010cac25ab6c95bfbdd" name="a3c9133be12d05010cac25ab6c95bfbdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c9133be12d05010cac25ab6c95bfbdd">&#9670;&#160;</a></span>FormatResolvedDynamicDescription()</h2>
+<a id="a80e9776b2eec218375142fe1e327d696" name="a80e9776b2eec218375142fe1e327d696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e9776b2eec218375142fe1e327d696">&#9670;&#160;</a></span>FormatResolvedDynamicDescription()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename TValue&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -510,7 +689,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const TArray&lt; <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>DescriptionValues</em></span>, </td>
+          <td class="paramtype">const TArray&lt; TValue &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>DescriptionValues</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -525,11 +704,62 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00187">187</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00167">167</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00189">FDynamicDescriptionValue::Placeholder</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00201">FormatDynamicDescriptionComparison()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00188">FormatDynamicDescriptionResolved()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00219">FormatDynamicDescriptionComparison()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00207">FormatDynamicDescriptionResolved()</a>.</p>
+</div>
+</div>
+<a id="a199bd5aaa08c5a7c9ca093ffa492dceb" name="a199bd5aaa08c5a7c9ca093ffa492dceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a199bd5aaa08c5a7c9ca093ffa492dceb">&#9670;&#160;</a></span>FormatStatNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FString FormatStatNumber </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bIsPercent</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bPercentFromMultiplier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>DecimalPlaces</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bShowSign</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bRoundToNearest</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>RawValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00083">83</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00297">FormatBaseStatDisplayFromRow()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00135">FormatDescriptionValuePlainString()</a>.</p>
 
 </div>
 </div>
@@ -556,16 +786,45 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00484">484</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00473">473</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8cpp_source.html#l00064">FSkillTreeNode::GetGrantedAbilityClass()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8cpp_source.html#l00069">FSkillTreeNode::GetGrantedAbilityClass()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00494">ResolveSkillNodeTooltipSource()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00483">ResolveSkillNodeTooltipSource()</a>.</p>
 
 </div>
 </div>
-<a id="a4aae8f480890757d34ea6322784c1071" name="a4aae8f480890757d34ea6322784c1071"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4aae8f480890757d34ea6322784c1071">&#9670;&#160;</a></span>MakeDescriptionValueDefFromStatModifier()</h2>
+<a id="a2153d4912af0d9bd0f14faad7c5ca919" name="a2153d4912af0d9bd0f14faad7c5ca919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2153d4912af0d9bd0f14faad7c5ca919">&#9670;&#160;</a></span>GetSourceASC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const UAbilitySystemComponent * GetSourceASC </td>
+          <td>(</td>
+          <td class="paramtype">const AActor *</td>          <td class="paramname"><span class="paramname"><em>SourceActor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00020">20</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00257">UDTUIBlueprintLibrary::FormatAbilityDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00268">UDTUIBlueprintLibrary::FormatAbilityDescriptionComparison()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00599">UDTUIBlueprintLibrary::FormatSkillTreeNodeDescriptionForRank()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00505">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a72b632ffa8f0b94c12898ba3e3bc28de" name="a72b632ffa8f0b94c12898ba3e3bc28de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b632ffa8f0b94c12898ba3e3bc28de">&#9670;&#160;</a></span>MakeDescriptionValueDefFromStatModifier()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -581,11 +840,6 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int32</td>          <td class="paramname"><span class="paramname"><em>DecimalPlaces</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const FName</td>          <td class="paramname"><span class="paramname"><em>Placeholder</em></span>&#160;)</td>
         </tr>
       </table>
@@ -596,11 +850,69 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00018">18</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00035">35</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00105">FDynamicValueDefinitionBase::bShowSign</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00197">FDynamicDescriptionValue::DecimalPlaces</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00097">FDynamicValueDefinitionBase::MaxValue</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00093">FDynamicValueDefinitionBase::MinValue</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00081">FDynamicValueDefinitionBase::Operation</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00189">FDynamicDescriptionValue::Placeholder</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00101">FDynamicValueDefinitionBase::ScalableEvaluationMode</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00089">FDynamicValueDefinitionBase::ScalableValue</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00085">FDynamicValueDefinitionBase::ValueSource</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00238">FDynamicDescriptionValue::bShowAsPercent</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00081">FStatModifierDef::bShowAsPercent</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00242">FDynamicDescriptionValue::bShowSign</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00077">FStatModifierDef::bShowSign</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00234">FDynamicDescriptionValue::DecimalPlaces</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00085">FStatModifierDef::DecimalPlaces</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00178">FDynamicValueDefinitionBase::MaxValue</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00174">FDynamicValueDefinitionBase::MinValue</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00162">FDynamicValueDefinitionBase::Operation</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00226">FDynamicDescriptionValue::Placeholder</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00182">FDynamicValueDefinitionBase::ScalableEvaluationMode</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00170">FDynamicValueDefinitionBase::ScalableValue</a>, and <a class="el" href="_d_t_ability_types_8h_source.html#l00166">FDynamicValueDefinitionBase::ValueSource</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00253">UDTUIBlueprintLibrary::FormatAffixDescription()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00235">UDTUIBlueprintLibrary::FormatAffixDescription()</a>.</p>
+
+</div>
+</div>
+<a id="a6ccc70432f6600220460a984300e797d" name="a6ccc70432f6600220460a984300e797d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ccc70432f6600220460a984300e797d">&#9670;&#160;</a></span>PercentIsFromMultiplier() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PercentIsFromMultiplier </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00124">124</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8c80a245fe6988c7b1579989702b65ec" name="a8c80a245fe6988c7b1579989702b65ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c80a245fe6988c7b1579989702b65ec">&#9670;&#160;</a></span>PercentIsFromMultiplier() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PercentIsFromMultiplier </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00123">123</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8h_source.html#l00118">Multiply</a>, and <a class="el" href="_d_t_ability_types_8h_source.html#l00162">FDynamicValueDefinitionBase::Operation</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00135">FormatDescriptionValuePlainString()</a>.</p>
 
 </div>
 </div>
@@ -631,16 +943,16 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00243">243</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00225">225</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00238">ClampDisplayRank()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00220">ClampDisplayRank()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00608">UDTUIBlueprintLibrary::FormatSkillTreeNodeDescriptionForRank()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00517">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00599">UDTUIBlueprintLibrary::FormatSkillTreeNodeDescriptionForRank()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00505">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
 
 </div>
 </div>
-<a id="a0df9f9a807b80c999a9fa6c07f21166b" name="a0df9f9a807b80c999a9fa6c07f21166b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0df9f9a807b80c999a9fa6c07f21166b">&#9670;&#160;</a></span>ReadObjectPropertyValue()</h2>
+<a id="a012e0468911f74f480b76ef7d28567f0" name="a012e0468911f74f480b76ef7d28567f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a012e0468911f74f480b76ef7d28567f0">&#9670;&#160;</a></span>ResolveSkillNodeTooltipSource()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -649,45 +961,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float ReadObjectPropertyValue </td>
-          <td>(</td>
-          <td class="paramtype">const UObject *</td>          <td class="paramname"><span class="paramname"><em>Object</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const FName</td>          <td class="paramname"><span class="paramname"><em>PropertyName</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>Level</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00073">73</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00113">EvaluateDescriptionValue()</a>.</p>
-
-</div>
-</div>
-<a id="aec134607d9e4f1a5e942ed6a2aa9f894" name="aec134607d9e4f1a5e942ed6a2aa9f894"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec134607d9e4f1a5e942ed6a2aa9f894">&#9670;&#160;</a></span>ResolveSkillNodeTooltipSource()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const UObject * ResolveSkillNodeTooltipSource </td>
+          <td class="memname">void ResolveSkillNodeTooltipSource </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_f_skill_tree_node.html">FSkillTreeNode</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Node</em></span>, </td>
         </tr>
@@ -699,7 +973,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const TArray&lt; <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &gt; *&amp;</td>          <td class="paramname"><span class="paramname"><em>OutValues</em></span>&#160;)</td>
+          <td class="paramtype">const TArray&lt; <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &gt; *&amp;</td>          <td class="paramname"><span class="paramname"><em>OutValues</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> *&amp;</td>          <td class="paramname"><span class="paramname"><em>OutDefinition</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -709,11 +988,63 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00494">494</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00483">483</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8cpp_source.html#l00022">FSkillTreeNode::GetDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00484">GetNodeGrantedAbilityCDO()</a>, and <a class="el" href="_d_t_skill_tree_types_8cpp_source.html#l00027">FSkillTreeNode::GetTooltipValues()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8cpp_source.html#l00027">FSkillTreeNode::GetDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00473">GetNodeGrantedAbilityCDO()</a>, and <a class="el" href="_d_t_skill_tree_types_8cpp_source.html#l00032">FSkillTreeNode::GetTooltipValues()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00608">UDTUIBlueprintLibrary::FormatSkillTreeNodeDescriptionForRank()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00517">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00599">UDTUIBlueprintLibrary::FormatSkillTreeNodeDescriptionForRank()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00505">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a5fb2beb17f0faa9f187164de776d24fb" name="a5fb2beb17f0faa9f187164de776d24fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb2beb17f0faa9f187164de776d24fb">&#9670;&#160;</a></span>ResolveValueNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TValue&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ResolveValueNumber </td>
+          <td>(</td>
+          <td class="paramtype">const TValue &amp;</td>          <td class="paramname"><span class="paramname"><em>ValueDef</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>NormalizedValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int32</td>          <td class="paramname"><span class="paramname"><em>EvaluationLevel</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> *</td>          <td class="paramname"><span class="paramname"><em>OwningDefinition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const UAbilitySystemComponent *</td>          <td class="paramname"><span class="paramname"><em>SourceASC</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00065">65</a> of file <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html">DTUIBlueprintLibrary.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00053">CalcValue()</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00318">FDTDynamicValueContext::EvaluationLevel</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00321">FDTDynamicValueContext::NormalizedValue</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00315">FDTDynamicValueContext::OwningDefinition</a>, and <a class="el" href="_d_t_ability_types_8h_source.html#l00309">FDTDynamicValueContext::SourceASC</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00201">FormatDynamicDescriptionComparison()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00188">FormatDynamicDescriptionResolved()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00505">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>.</p>
 
 </div>
 </div>

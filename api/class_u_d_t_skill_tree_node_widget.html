@@ -176,11 +176,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a89554c44c5199e79e2c4d6db15516e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy accessor that returns the primary tooltip description.  <br /></td></tr>
 <tr class="memitem:a2d0ab147066564fddfa48b0495af4d53" id="r_a2d0ab147066564fddfa48b0495af4d53"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2d0ab147066564fddfa48b0495af4d53">HasTooltipNextRank</a> () const</td></tr>
 <tr class="memdesc:a2d0ab147066564fddfa48b0495af4d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the node has another rank available to preview.  <br /></td></tr>
+<tr class="memitem:a4cf56e44cf4bee98178ba30c7bc1481d" id="r_a4cf56e44cf4bee98178ba30c7bc1481d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4cf56e44cf4bee98178ba30c7bc1481d">IsAbilityNode</a> () const</td></tr>
+<tr class="memdesc:a4cf56e44cf4bee98178ba30c7bc1481d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this node represents an ability (it grants one, or carries an ability definition for display).  <br /></td></tr>
+<tr class="memitem:a3c2d3d6c807ebb2fc040ae0e45af77a3" id="r_a3c2d3d6c807ebb2fc040ae0e45af77a3"><td class="memItemLeft"><a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3c2d3d6c807ebb2fc040ae0e45af77a3">GetNodeAbilityDefinition</a> () const</td></tr>
+<tr class="memdesc:a3c2d3d6c807ebb2fc040ae0e45af77a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ability definition backing this node, from the node's authored definition or its granted ability.  <br /></td></tr>
+<tr class="memitem:a4d4aa79b7deeb0adec7fe59b25264b2b" id="r_a4d4aa79b7deeb0adec7fe59b25264b2b"><td class="memItemLeft">TSubclassOf&lt; <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4d4aa79b7deeb0adec7fe59b25264b2b">GetNodeGrantedAbilityClass</a> () const</td></tr>
+<tr class="memdesc:a4d4aa79b7deeb0adec7fe59b25264b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ability class this node grants, if any.  <br /></td></tr>
+<tr class="memitem:aeb921cd5926d84b8feeb2cb5cfa776bf" id="r_aeb921cd5926d84b8feeb2cb5cfa776bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeb921cd5926d84b8feeb2cb5cfa776bf">PopulateAbilityTooltip</a> (<a class="el" href="class_u_d_t_ability_tooltip_widget.html">UDTAbilityTooltipWidget</a> *InTooltipWidget) const</td></tr>
+<tr class="memdesc:aeb921cd5926d84b8feeb2cb5cfa776bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate an ability tooltip widget from this node.  <br /></td></tr>
+<tr class="memitem:a830af62d3248d9e604424bbf02fc5d3c" id="r_a830af62d3248d9e604424bbf02fc5d3c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a830af62d3248d9e604424bbf02fc5d3c">NativeOnInitialized</a> () override</td></tr>
+<tr class="memitem:a929afcbdf2cc578b71251c36fc27cd2d" id="r_a929afcbdf2cc578b71251c36fc27cd2d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a929afcbdf2cc578b71251c36fc27cd2d">NativeConstruct</a> () override</td></tr>
 <tr class="memitem:a38c36acaaef7ea82916f17d004164f37" id="r_a38c36acaaef7ea82916f17d004164f37"><td class="memItemLeft">virtual FReply&#160;</td><td class="memItemRight"><a class="el" href="#a38c36acaaef7ea82916f17d004164f37">NativeOnMouseButtonDown</a> (const FGeometry &amp;InGeometry, const FPointerEvent &amp;InMouseEvent) override</td></tr>
+<tr class="memitem:aee02fcc2723e790efe75a54f17cd55e4" id="r_aee02fcc2723e790efe75a54f17cd55e4"><td class="memItemLeft">virtual FReply&#160;</td><td class="memItemRight"><a class="el" href="#aee02fcc2723e790efe75a54f17cd55e4">NativeOnMouseButtonUp</a> (const FGeometry &amp;InGeometry, const FPointerEvent &amp;InMouseEvent) override</td></tr>
 <tr class="memitem:ace379fb17f46748d716aa86a283e77a4" id="r_ace379fb17f46748d716aa86a283e77a4"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ace379fb17f46748d716aa86a283e77a4">NativeOnDragDetected</a> (const FGeometry &amp;InGeometry, const FPointerEvent &amp;InMouseEvent, UDragDropOperation *&amp;OutOperation) override</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:adcf5aeb8012b4ac436a60a3e7605bbc1" id="r_adcf5aeb8012b4ac436a60a3e7605bbc1"><td class="memItemLeft">UWidget *&#160;</td><td class="memItemRight"><a class="el" href="#adcf5aeb8012b4ac436a60a3e7605bbc1">GetSkillNodeTooltipWidget</a> ()</td></tr>
+<tr class="memdesc:adcf5aeb8012b4ac436a60a3e7605bbc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ToolTipWidgetDelegate target: builds and populates the right tooltip on hover (rebuilt each hover, never stale).  <br /></td></tr>
 <tr class="memitem:a9bdaabcddc022147cadb1f164f2d6d8c" id="r_a9bdaabcddc022147cadb1f164f2d6d8c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9bdaabcddc022147cadb1f164f2d6d8c">OnNodeDataUpdated</a> ()</td></tr>
 <tr class="memdesc:a9bdaabcddc022147cadb1f164f2d6d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called in Blueprint when node data is set/refreshed.  <br /></td></tr>
 <tr class="memitem:a5d47796399903b6ab986824d06673adc" id="r_a5d47796399903b6ab986824d06673adc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5d47796399903b6ab986824d06673adc">OnInvestSucceeded</a> (int32 NewRank)</td></tr>
@@ -190,6 +203,10 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a2566dc114f6fafcc8b893b0c47feef81" id="r_a2566dc114f6fafcc8b893b0c47feef81"><td class="memItemLeft">TSubclassOf&lt; <a class="el" href="class_u_d_t_ability_tooltip_widget.html">UDTAbilityTooltipWidget</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2566dc114f6fafcc8b893b0c47feef81">AbilityTooltipWidgetClass</a></td></tr>
+<tr class="memdesc:a2566dc114f6fafcc8b893b0c47feef81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tooltip class used on hover for ability nodes (rich ability tooltip).  <br /></td></tr>
+<tr class="memitem:a37a60bb5577200bd7d0cfb4cc8732f18" id="r_a37a60bb5577200bd7d0cfb4cc8732f18"><td class="memItemLeft">TSubclassOf&lt; UUserWidget &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a37a60bb5577200bd7d0cfb4cc8732f18">NodeTooltipWidgetClass</a></td></tr>
+<tr class="memdesc:a37a60bb5577200bd7d0cfb4cc8732f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tooltip class used on hover for non-ability (stat/passive) nodes.  <br /></td></tr>
 <tr class="memitem:ae435c97d5d6c13acefe5edb859e858a2" id="r_ae435c97d5d6c13acefe5edb859e858a2"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#ae435c97d5d6c13acefe5edb859e858a2">TreeTag</a></td></tr>
 <tr class="memitem:ab07b1d536f6956ccc97d465992d941c1" id="r_ab07b1d536f6956ccc97d465992d941c1"><td class="memItemLeft"><a class="el" href="struct_f_skill_tree_node.html">FSkillTreeNode</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab07b1d536f6956ccc97d465992d941c1">NodeDefinition</a></td></tr>
 <tr class="memitem:a64d1de828b3cc9eb39b1e64fd9c1bf65" id="r_a64d1de828b3cc9eb39b1e64fd9c1bf65"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a64d1de828b3cc9eb39b1e64fd9c1bf65">CurrentNodeRank</a> = 0</td></tr>
@@ -200,7 +217,7 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>Widget representing a single node in a skill tree. </p>
 <p>Displays icon, name, rank pips (e.g., "3/5"), and locked/unlocked state. Nodes that grant active abilities can be dragged onto ability bar slots. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00022">22</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00027">27</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a315fff3396c18e1fd3b5b05f20683852" name="a315fff3396c18e1fd3b5b05f20683852"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a315fff3396c18e1fd3b5b05f20683852">&#9670;&#160;</a></span>CanDragAbility()</h2>
@@ -219,11 +236,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Whether this node has a granted active ability that can be dragged to a slot. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00085">85</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00178">178</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00095">CurrentNodeRank</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00096">GetGrantedAbilityHandle()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00092">NodeDefinition</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00137">CurrentNodeRank</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00189">GetGrantedAbilityHandle()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00134">NodeDefinition</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00117">NativeOnDragDetected()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00107">NativeOnMouseButtonDown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00258">NativeOnDragDetected()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00219">NativeOnMouseButtonDown()</a>.</p>
 
 </div>
 </div>
@@ -244,11 +261,60 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the granted ability handle for this node (if it was invested and grants an active ability). </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00096">96</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00189">189</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00493">UDTSkillTreeComponent::GetGrantedAbilityHandle()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00136">GetSkillTreeComponent()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00092">NodeDefinition</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00089">TreeTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00498">UDTSkillTreeComponent::GetGrantedAbilityHandle()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00280">GetSkillTreeComponent()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00134">NodeDefinition</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00131">TreeTag</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00085">CanDragAbility()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00117">NativeOnDragDetected()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00178">CanDragAbility()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00258">NativeOnDragDetected()</a>.</p>
+
+</div>
+</div>
+<a id="a3c2d3d6c807ebb2fc040ae0e45af77a3" name="a3c2d3d6c807ebb2fc040ae0e45af77a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c2d3d6c807ebb2fc040ae0e45af77a3">&#9670;&#160;</a></span>GetNodeAbilityDefinition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_ability_definition.html">UDTAbilityDefinition</a> * UDTSkillTreeNodeWidget::GetNodeAbilityDefinition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ability definition backing this node, from the node's authored definition or its granted ability. </p>
+<p>May be null. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00094">94</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00134">NodeDefinition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00089">IsAbilityNode()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00118">PopulateAbilityTooltip()</a>.</p>
+
+</div>
+</div>
+<a id="a4d4aa79b7deeb0adec7fe59b25264b2b" name="a4d4aa79b7deeb0adec7fe59b25264b2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d4aa79b7deeb0adec7fe59b25264b2b">&#9670;&#160;</a></span>GetNodeGrantedAbilityClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSubclassOf&lt; <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a> &gt; UDTSkillTreeNodeWidget::GetNodeGrantedAbilityClass </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ability class this node grants, if any. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00113">113</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00134">NodeDefinition</a>.</p>
 
 </div>
 </div>
@@ -277,11 +343,44 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the authored node tag for this widget instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00049">49</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00054">54</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00049">GetNodeTag()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00092">NodeDefinition</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00054">GetNodeTag()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00134">NodeDefinition</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00049">GetNodeTag()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00054">GetNodeTag()</a>.</p>
+
+</div>
+</div>
+<a id="adcf5aeb8012b4ac436a60a3e7605bbc1" name="adcf5aeb8012b4ac436a60a3e7605bbc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf5aeb8012b4ac436a60a3e7605bbc1">&#9670;&#160;</a></span>GetSkillNodeTooltipWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UWidget * UDTSkillTreeNodeWidget::GetSkillNodeTooltipWidget </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ToolTipWidgetDelegate target: builds and populates the right tooltip on hover (rebuilt each hover, never stale). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00150">150</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00120">AbilityTooltipWidgetClass</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00089">IsAbilityNode()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00124">NodeTooltipWidgetClass</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00118">PopulateAbilityTooltip()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00200">NativeOnInitialized()</a>.</p>
 
 </div>
 </div>
@@ -302,9 +401,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the skill tree component from the owning player. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00136">136</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00280">280</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00096">GetGrantedAbilityHandle()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00022">TryInvestPoint()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00189">GetGrantedAbilityHandle()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00026">TryInvestPoint()</a>.</p>
 
 </div>
 </div>
@@ -325,9 +424,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Legacy accessor that returns the primary tooltip description. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00064">64</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00068">68</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00058">GetTooltipPrimaryDescription()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00062">GetTooltipPrimaryDescription()</a>.</p>
 
 </div>
 </div>
@@ -348,11 +447,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Build the resolved tooltip display info for this node's current rank. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00047">47</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00051">51</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00095">CurrentNodeRank</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00517">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00092">NodeDefinition</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00137">CurrentNodeRank</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00505">UDTUIBlueprintLibrary::GetSkillTreeNodeTooltipDisplayInfo()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00134">NodeDefinition</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00052">GetTooltipDisplayName()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00058">GetTooltipPrimaryDescription()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00079">HasTooltipNextRank()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00056">GetTooltipDisplayName()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00062">GetTooltipPrimaryDescription()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00083">HasTooltipNextRank()</a>.</p>
 
 </div>
 </div>
@@ -373,9 +472,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Preferred tooltip title for this node. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00052">52</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00056">56</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8h_source.html#l00042">FSkillTreeNodeTooltipDisplayInfo::DisplayName</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00047">GetTooltipDisplayInfo()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8h_source.html#l00043">FSkillTreeNodeTooltipDisplayInfo::DisplayName</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00051">GetTooltipDisplayInfo()</a>.</p>
 
 </div>
 </div>
@@ -396,9 +495,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Legacy accessor that returns the primary tooltip description. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00074">74</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00078">78</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00058">GetTooltipPrimaryDescription()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00062">GetTooltipPrimaryDescription()</a>.</p>
 
 </div>
 </div>
@@ -419,9 +518,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Legacy accessor that returns the primary tooltip description. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00069">69</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00073">73</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00058">GetTooltipPrimaryDescription()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00062">GetTooltipPrimaryDescription()</a>.</p>
 
 </div>
 </div>
@@ -443,11 +542,11 @@ Protected Attributes</h2></td></tr>
 <p>Primary description for the tooltip body. </p>
 <p>Defaults to a current-to-next upgrade preview when available. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00058">58</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00062">62</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00047">GetTooltipDisplayInfo()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8h_source.html#l00048">FSkillTreeNodeTooltipDisplayInfo::PrimaryDescription</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00051">GetTooltipDisplayInfo()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8h_source.html#l00049">FSkillTreeNodeTooltipDisplayInfo::PrimaryDescription</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00064">GetTooltipCurrentDescription()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00074">GetTooltipMaxDescription()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00069">GetTooltipNextDescription()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00068">GetTooltipCurrentDescription()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00078">GetTooltipMaxDescription()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00073">GetTooltipNextDescription()</a>.</p>
 
 </div>
 </div>
@@ -468,9 +567,35 @@ Protected Attributes</h2></td></tr>
 
 <p>Whether the node has another rank available to preview. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00079">79</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00083">83</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8h_source.html#l00063">FSkillTreeNodeTooltipDisplayInfo::bHasNextRank</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00047">GetTooltipDisplayInfo()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_u_i_blueprint_library_8h_source.html#l00064">FSkillTreeNodeTooltipDisplayInfo::bHasNextRank</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00051">GetTooltipDisplayInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a4cf56e44cf4bee98178ba30c7bc1481d" name="a4cf56e44cf4bee98178ba30c7bc1481d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cf56e44cf4bee98178ba30c7bc1481d">&#9670;&#160;</a></span>IsAbilityNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTSkillTreeNodeWidget::IsAbilityNode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether this node represents an ability (it grants one, or carries an ability definition for display). </p>
+<p>Use this to choose the rich ability tooltip over the generic node tooltip. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00089">89</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00094">GetNodeAbilityDefinition()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00134">NodeDefinition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00150">GetSkillNodeTooltipWidget()</a>.</p>
 
 </div>
 </div>
@@ -499,11 +624,38 @@ Protected Attributes</h2></td></tr>
 
 <p>Whether this node is currently available for investment/display. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00053">53</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00058">58</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00098">bIsNodeUnlocked</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00053">IsNodeUnlocked()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00140">bIsNodeUnlocked</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00058">IsNodeUnlocked()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00053">IsNodeUnlocked()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00058">IsNodeUnlocked()</a>.</p>
+
+</div>
+</div>
+<a id="a929afcbdf2cc578b71251c36fc27cd2d" name="a929afcbdf2cc578b71251c36fc27cd2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a929afcbdf2cc578b71251c36fc27cd2d">&#9670;&#160;</a></span>NativeConstruct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTSkillTreeNodeWidget::NativeConstruct </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00210">210</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
 </div>
 </div>
@@ -539,9 +691,38 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00117">117</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00258">258</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_drag_payload_8h_source.html#l00025">UDTAbilityDragPayload::AbilityHandle</a>, <a class="el" href="_d_t_ability_drag_payload_8h_source.html#l00041">UDTAbilityDragPayload::bIsFromSlot</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00085">CanDragAbility()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00096">GetGrantedAbilityHandle()</a>, <a class="el" href="_d_t_ability_drag_payload_8h_source.html#l00029">UDTAbilityDragPayload::SourceSlotTag</a>, and <a class="el" href="_d_t_ability_drag_payload_8h_source.html#l00033">UDTAbilityDragPayload::SourceWidget</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_drag_payload_8h_source.html#l00025">UDTAbilityDragPayload::AbilityHandle</a>, <a class="el" href="_d_t_ability_drag_payload_8h_source.html#l00041">UDTAbilityDragPayload::bIsFromSlot</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00178">CanDragAbility()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00189">GetGrantedAbilityHandle()</a>, <a class="el" href="_d_t_ability_drag_payload_8h_source.html#l00029">UDTAbilityDragPayload::SourceSlotTag</a>, and <a class="el" href="_d_t_ability_drag_payload_8h_source.html#l00033">UDTAbilityDragPayload::SourceWidget</a>.</p>
+
+</div>
+</div>
+<a id="a830af62d3248d9e604424bbf02fc5d3c" name="a830af62d3248d9e604424bbf02fc5d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a830af62d3248d9e604424bbf02fc5d3c">&#9670;&#160;</a></span>NativeOnInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTSkillTreeNodeWidget::NativeOnInitialized </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00200">200</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00150">GetSkillNodeTooltipWidget()</a>.</p>
 
 </div>
 </div>
@@ -572,9 +753,42 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00107">107</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00219">219</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00085">CanDragAbility()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00178">CanDragAbility()</a>.</p>
+
+</div>
+</div>
+<a id="aee02fcc2723e790efe75a54f17cd55e4" name="aee02fcc2723e790efe75a54f17cd55e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee02fcc2723e790efe75a54f17cd55e4">&#9670;&#160;</a></span>NativeOnMouseButtonUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FReply UDTSkillTreeNodeWidget::NativeOnMouseButtonUp </td>
+          <td>(</td>
+          <td class="paramtype">const FGeometry &amp;</td>          <td class="paramname"><span class="paramname"><em>InGeometry</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FPointerEvent &amp;</td>          <td class="paramname"><span class="paramname"><em>InMouseEvent</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00239">239</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00026">TryInvestPoint()</a>.</p>
 
 </div>
 </div>
@@ -605,7 +819,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a82077619c7b579ff2cec1202d130ee86">OnInvestFailed()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a82077619c7b579ff2cec1202d130ee86">OnInvestFailed()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00022">TryInvestPoint()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a82077619c7b579ff2cec1202d130ee86">OnInvestFailed()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00026">TryInvestPoint()</a>.</p>
 
 </div>
 </div>
@@ -636,7 +850,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a5d47796399903b6ab986824d06673adc">OnInvestSucceeded()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a5d47796399903b6ab986824d06673adc">OnInvestSucceeded()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00022">TryInvestPoint()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a5d47796399903b6ab986824d06673adc">OnInvestSucceeded()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00026">TryInvestPoint()</a>.</p>
 
 </div>
 </div>
@@ -667,7 +881,33 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a9bdaabcddc022147cadb1f164f2d6d8c">OnNodeDataUpdated()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a9bdaabcddc022147cadb1f164f2d6d8c">OnNodeDataUpdated()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00011">SetNodeData()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00022">TryInvestPoint()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a9bdaabcddc022147cadb1f164f2d6d8c">OnNodeDataUpdated()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00015">SetNodeData()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00026">TryInvestPoint()</a>.</p>
+
+</div>
+</div>
+<a id="aeb921cd5926d84b8feeb2cb5cfa776bf" name="aeb921cd5926d84b8feeb2cb5cfa776bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb921cd5926d84b8feeb2cb5cfa776bf">&#9670;&#160;</a></span>PopulateAbilityTooltip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTSkillTreeNodeWidget::PopulateAbilityTooltip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_u_d_t_ability_tooltip_widget.html">UDTAbilityTooltipWidget</a> *</td>          <td class="paramname"><span class="paramname"><em>InTooltipWidget</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Populate an ability tooltip widget from this node. </p>
+<p>Shows a current-&gt;next rank upgrade preview when the node is invested with a rank remaining, the rank-1 preview when not yet invested, or the current rank when maxed. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00118">118</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00137">CurrentNodeRank</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00094">GetNodeAbilityDefinition()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00134">NodeDefinition</a>, <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00064">UDTAbilityTooltipWidget::SetAbilityClassComparison()</a>, and <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00043">UDTAbilityTooltipWidget::SetAbilityDefinition()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00150">GetSkillNodeTooltipWidget()</a>.</p>
 
 </div>
 </div>
@@ -702,9 +942,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Set node data for display. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00011">11</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00101">bIsMaxRank</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00098">bIsNodeUnlocked</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00095">CurrentNodeRank</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00092">NodeDefinition</a>, <a class="el" href="#a9bdaabcddc022147cadb1f164f2d6d8c">OnNodeDataUpdated()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00089">TreeTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00143">bIsMaxRank</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00140">bIsNodeUnlocked</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00137">CurrentNodeRank</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00134">NodeDefinition</a>, <a class="el" href="#a9bdaabcddc022147cadb1f164f2d6d8c">OnNodeDataUpdated()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00131">TreeTag</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_panel_widget_8cpp_source.html#l00289">UDTSkillTreePanelWidget::BuildGraphNodes()</a>.</p>
 
@@ -727,13 +967,44 @@ Protected Attributes</h2></td></tr>
 
 <p>Attempt to invest a point in this node. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00022">22</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00026">26</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html">DTSkillTreeNodeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00101">bIsMaxRank</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00092">UDTSkillTreeComponent::CanInvestPoint()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00095">CurrentNodeRank</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00136">GetSkillTreeComponent()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00183">UDTSkillTreeComponent::InvestPoint()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00092">NodeDefinition</a>, <a class="el" href="#a82077619c7b579ff2cec1202d130ee86">OnInvestFailed()</a>, <a class="el" href="#a5d47796399903b6ab986824d06673adc">OnInvestSucceeded()</a>, <a class="el" href="#a9bdaabcddc022147cadb1f164f2d6d8c">OnNodeDataUpdated()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00089">TreeTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00143">bIsMaxRank</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00092">UDTSkillTreeComponent::CanInvestPoint()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00137">CurrentNodeRank</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00280">GetSkillTreeComponent()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00183">UDTSkillTreeComponent::InvestPoint()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00134">NodeDefinition</a>, <a class="el" href="#a82077619c7b579ff2cec1202d130ee86">OnInvestFailed()</a>, <a class="el" href="#a5d47796399903b6ab986824d06673adc">OnInvestSucceeded()</a>, <a class="el" href="#a9bdaabcddc022147cadb1f164f2d6d8c">OnNodeDataUpdated()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00131">TreeTag</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00239">NativeOnMouseButtonUp()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a2566dc114f6fafcc8b893b0c47feef81" name="a2566dc114f6fafcc8b893b0c47feef81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2566dc114f6fafcc8b893b0c47feef81">&#9670;&#160;</a></span>AbilityTooltipWidgetClass</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSubclassOf&lt;<a class="el" href="class_u_d_t_ability_tooltip_widget.html">UDTAbilityTooltipWidget</a>&gt; UDTSkillTreeNodeWidget::AbilityTooltipWidgetClass</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tooltip class used on hover for ability nodes (rich ability tooltip). </p>
+<p>If unset, falls back to NodeTooltipWidgetClass. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00120">120</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00150">GetSkillNodeTooltipWidget()</a>.</p>
+
+</div>
+</div>
 <a id="aeaf3977a7ef4017d5fe29254239d529d" name="aeaf3977a7ef4017d5fe29254239d529d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeaf3977a7ef4017d5fe29254239d529d">&#9670;&#160;</a></span>bIsMaxRank</h2>
 
@@ -754,9 +1025,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00101">101</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00143">143</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00011">SetNodeData()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00022">TryInvestPoint()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00015">SetNodeData()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00026">TryInvestPoint()</a>.</p>
 
 </div>
 </div>
@@ -780,9 +1051,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00098">98</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00140">140</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00053">IsNodeUnlocked()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00011">SetNodeData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00058">IsNodeUnlocked()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00015">SetNodeData()</a>.</p>
 
 </div>
 </div>
@@ -806,9 +1077,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00095">95</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00137">137</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00085">CanDragAbility()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00047">GetTooltipDisplayInfo()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00011">SetNodeData()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00022">TryInvestPoint()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00178">CanDragAbility()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00051">GetTooltipDisplayInfo()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00118">PopulateAbilityTooltip()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00015">SetNodeData()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00026">TryInvestPoint()</a>.</p>
 
 </div>
 </div>
@@ -832,9 +1103,38 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00092">92</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00134">134</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00085">CanDragAbility()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00096">GetGrantedAbilityHandle()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00049">GetNodeTag()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00047">GetTooltipDisplayInfo()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00011">SetNodeData()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00022">TryInvestPoint()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00178">CanDragAbility()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00189">GetGrantedAbilityHandle()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00094">GetNodeAbilityDefinition()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00113">GetNodeGrantedAbilityClass()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00054">GetNodeTag()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00051">GetTooltipDisplayInfo()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00089">IsAbilityNode()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00118">PopulateAbilityTooltip()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00015">SetNodeData()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00026">TryInvestPoint()</a>.</p>
+
+</div>
+</div>
+<a id="a37a60bb5577200bd7d0cfb4cc8732f18" name="a37a60bb5577200bd7d0cfb4cc8732f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a60bb5577200bd7d0cfb4cc8732f18">&#9670;&#160;</a></span>NodeTooltipWidgetClass</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSubclassOf&lt;UUserWidget&gt; UDTSkillTreeNodeWidget::NodeTooltipWidgetClass</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tooltip class used on hover for non-ability (stat/passive) nodes. </p>
+<p>Should implement <a class="el" href="class_i_d_t_skill_node_tooltip_interface.html">IDTSkillNodeTooltipInterface</a> to receive this node. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00124">124</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00150">GetSkillNodeTooltipWidget()</a>.</p>
 
 </div>
 </div>
@@ -858,9 +1158,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00089">89</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html#l00131">131</a> of file <a class="el" href="_d_t_skill_tree_node_widget_8h_source.html">DTSkillTreeNodeWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00096">GetGrantedAbilityHandle()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00011">SetNodeData()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00022">TryInvestPoint()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00189">GetGrantedAbilityHandle()</a>, <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00015">SetNodeData()</a>, and <a class="el" href="_d_t_skill_tree_node_widget_8cpp_source.html#l00026">TryInvestPoint()</a>.</p>
 
 </div>
 </div>

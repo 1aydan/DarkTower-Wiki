@@ -150,6 +150,11 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a7770945a7f48a5b53a0c0de7ecaf93a0a26a4b44a837bf97b972628509912b4a5">MAX</a>
  }</td></tr>
 <tr class="memdesc:a7770945a7f48a5b53a0c0de7ecaf93a0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a7770945a7f48a5b53a0c0de7ecaf93a0" title="EAbilityActivationGroup.">EAbilityActivationGroup</a>.  <a href="#a7770945a7f48a5b53a0c0de7ecaf93a0">More...</a><br /></td></tr>
+<tr class="memitem:a5f5c7ed49a4da18165fceeb5a8205c08" id="r_a5f5c7ed49a4da18165fceeb5a8205c08"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a5f5c7ed49a4da18165fceeb5a8205c08">EDTAbilityActivationPolicy</a> : uint8 { <a class="el" href="#a5f5c7ed49a4da18165fceeb5a8205c08a82db7a1dadfda8ba50b0665f651d567d">OnInputTriggered</a>
+, <a class="el" href="#a5f5c7ed49a4da18165fceeb5a8205c08af929a79b5231b892250ac99d1ec8aa85">WhileInputActive</a>
+, <a class="el" href="#a5f5c7ed49a4da18165fceeb5a8205c08a21c8add90e8911de732a678c8236ec16">OnSpawn</a>
+ }</td></tr>
+<tr class="memdesc:a5f5c7ed49a4da18165fceeb5a8205c08"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a5f5c7ed49a4da18165fceeb5a8205c08" title="EDTAbilityActivationPolicy.">EDTAbilityActivationPolicy</a>.  <a href="#a5f5c7ed49a4da18165fceeb5a8205c08">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -192,6 +197,37 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5f5c7ed49a4da18165fceeb5a8205c08" name="a5f5c7ed49a4da18165fceeb5a8205c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5c7ed49a4da18165fceeb5a8205c08">&#9670;&#160;</a></span>EDTAbilityActivationPolicy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a5f5c7ed49a4da18165fceeb5a8205c08">EDTAbilityActivationPolicy</a> : uint8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#a5f5c7ed49a4da18165fceeb5a8205c08" title="EDTAbilityActivationPolicy.">EDTAbilityActivationPolicy</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5f5c7ed49a4da18165fceeb5a8205c08a82db7a1dadfda8ba50b0665f651d567d" name="a5f5c7ed49a4da18165fceeb5a8205c08a82db7a1dadfda8ba50b0665f651d567d"></a>OnInputTriggered&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f5c7ed49a4da18165fceeb5a8205c08af929a79b5231b892250ac99d1ec8aa85" name="a5f5c7ed49a4da18165fceeb5a8205c08af929a79b5231b892250ac99d1ec8aa85"></a>WhileInputActive&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f5c7ed49a4da18165fceeb5a8205c08a21c8add90e8911de732a678c8236ec16" name="a5f5c7ed49a4da18165fceeb5a8205c08a21c8add90e8911de732a678c8236ec16"></a>OnSpawn&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00037">37</a> of file <a class="el" href="_d_t_gameplay_ability_8h_source.html">DTGameplayAbility.h</a>.</p>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a3f574493fae2dae0e13c8a2afb50289d" name="a3f574493fae2dae0e13c8a2afb50289d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f574493fae2dae0e13c8a2afb50289d">&#9670;&#160;</a></span>DECLARE_DYNAMIC_MULTICAST_DELEGATE()</h2>
@@ -210,7 +246,7 @@ Functions</h2></td></tr>
 
 <p>Delegate fired when an ability ends. </p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8h.html#a8546217130026dc1289351d776e8f912">DECLARE_DYNAMIC_MULTICAST_DELEGATE()</a>, and <a class="el" href="_d_t_ability_slot_component_8h.html#a7e0e666f3ed2d941c43470d8a3e464c7">DECLARE_DYNAMIC_MULTICAST_DELEGATE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8h.html#a8546217130026dc1289351d776e8f912">DECLARE_DYNAMIC_MULTICAST_DELEGATE()</a>, <a class="el" href="_d_t_ability_core_component_8h.html#ade2153fdfdf9db6d487d794b41c146ba">DECLARE_DYNAMIC_MULTICAST_DELEGATE()</a>, and <a class="el" href="_d_t_ability_slot_component_8h.html#a7e0e666f3ed2d941c43470d8a3e464c7">DECLARE_DYNAMIC_MULTICAST_DELEGATE()</a>.</p>
 
 </div>
 </div>
@@ -250,7 +286,7 @@ Functions</h2></td></tr>
 
 <p>Delegate fired when an ability's stack count changes. </p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8h.html#af2746c65f02773894295cb4b4a42bea0">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams()</a>, <a class="el" href="_d_t_ability_slot_component_8h.html#a0a7152cc9f1b8c7fda455ad70b6fd85e">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams()</a>, and <a class="el" href="_d_t_tab_list_widget_8h.html#ad29ee5c4aa339a6b809c1e859e5e0475">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8h.html#af2746c65f02773894295cb4b4a42bea0">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams()</a>, <a class="el" href="_d_t_ability_core_component_8h.html#ae459cb95031b43a9700b43c47884c34a">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams()</a>, <a class="el" href="_d_t_ability_core_component_8h.html#aed4c36ba366b004a9b5aa4da649973a4">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams()</a>, <a class="el" href="_d_t_ability_core_component_8h.html#ac2c25a772e494de7a4b1c2eb6de2b682">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams()</a>, <a class="el" href="_d_t_ability_core_component_8h.html#a8f3965f59398badd2227a5f2ad1129ce">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams()</a>, <a class="el" href="_d_t_ability_slot_component_8h.html#a0a7152cc9f1b8c7fda455ad70b6fd85e">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams()</a>, and <a class="el" href="_d_t_tab_list_widget_8h.html#ad29ee5c4aa339a6b809c1e859e5e0475">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams()</a>.</p>
 
 </div>
 </div>

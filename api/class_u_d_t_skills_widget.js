@@ -1,6 +1,7 @@
 var class_u_d_t_skills_widget =
 [
     [ "UDTSkillsWidget", "class_u_d_t_skills_widget.html#a8cda16772e4fe5c15be8f2e65ea70551", null ],
+    [ "GetActiveSkillTreePanel", "class_u_d_t_skills_widget.html#ac241f2346844cb2ea86d242ee5c30c21", null ],
     [ "GetSkillTreeComponent", "class_u_d_t_skills_widget.html#a1907b44147e71c9b172f342c93bc225d", null ],
     [ "HandleSkillPointsChanged", "class_u_d_t_skills_widget.html#a8cf652d784fd29c36cf9ad3fe50fdc02", null ],
     [ "HandleSkillTabContentCreated", "class_u_d_t_skills_widget.html#a96a6a832b97e513ea1bd5bb82816191d", null ],

@@ -5,6 +5,13 @@ var _data_types_8h =
     [ "FDTHostRequest", "struct_f_d_t_host_request.html", "struct_f_d_t_host_request" ],
     [ "FAbilitySlotEntry", "struct_f_ability_slot_entry.html", "struct_f_ability_slot_entry" ],
     [ "FDeathSettings", "struct_f_death_settings.html", "struct_f_death_settings" ],
+    [ "FDTDeathVisuals", "struct_f_d_t_death_visuals.html", "struct_f_d_t_death_visuals" ],
+    [ "EDTHitDirection", "_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07", [
+      [ "Front", "_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07a5835bab1ade0060909e31a06af2e2cde", null ],
+      [ "Back", "_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07a0557fa923dcee4d0f86b1409f5c2167f", null ],
+      [ "Left", "_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07a945d5e233cf7d6240f6b783b36a374ff", null ],
+      [ "Right", "_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07a92b09c7c48c520c3c55e497875da437c", null ]
+    ] ],
     [ "EDTHostMapSetupEntryPoint", "_data_types_8h.html#ac0f26f29f51535c69051d9b25fb532cd", [
       [ "LobbyHotkey", "_data_types_8h.html#ac0f26f29f51535c69051d9b25fb532cda6df05f477a5a204f117aef389f8f4e78", null ],
       [ "StoryPortal", "_data_types_8h.html#ac0f26f29f51535c69051d9b25fb532cdae60a168da09718b70e0470f3552d4ad9", null ],

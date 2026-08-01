@@ -7,6 +7,7 @@ var dir_09fe5893f6eba9b335bd1f2ca8ac3874 =
     [ "Character", "dir_dc62f002cbd57f7ebdc79f68cfcb7309.html", "dir_dc62f002cbd57f7ebdc79f68cfcb7309" ],
     [ "Core", "dir_41720e907965c4f90bcd7150c2828ddc.html", "dir_41720e907965c4f90bcd7150c2828ddc" ],
     [ "Dungeon", "dir_ee8e6a16ed6a04225c075ed0147de65f.html", "dir_ee8e6a16ed6a04225c075ed0147de65f" ],
+    [ "Interaction", "dir_e9ad3372724cea6088ad7a7e9f18eb10.html", "dir_e9ad3372724cea6088ad7a7e9f18eb10" ],
     [ "Interfaces", "dir_ecd1b136d71b8c1a3534f4e0829416a6.html", "dir_ecd1b136d71b8c1a3534f4e0829416a6" ],
     [ "Inventory", "dir_66e413ae1294b85a2c823697c5b7c5ef.html", "dir_66e413ae1294b85a2c823697c5b7c5ef" ],
     [ "Messages", "dir_0452105afdfd27886aff2c713f05fec9.html", "dir_0452105afdfd27886aff2c713f05fec9" ],

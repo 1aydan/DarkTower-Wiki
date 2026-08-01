@@ -1,0 +1,26 @@
+var class_u_d_t_gameplay_ability___channel =
+[
+    [ "UDTGameplayAbility_Channel", "class_u_d_t_gameplay_ability___channel.html#a5a7ae77e7440017603d1ecebe52921b1", null ],
+    [ "ActivateAbility", "class_u_d_t_gameplay_ability___channel.html#a987851cf2b7be39e3bc0c72297e3e721", null ],
+    [ "BeginChannel", "class_u_d_t_gameplay_ability___channel.html#ad3191ef28308b2232e795dae6dcfa823", null ],
+    [ "EndAbility", "class_u_d_t_gameplay_ability___channel.html#a9dd7b0654105f801f8c57357b299ba29", null ],
+    [ "EndChannel", "class_u_d_t_gameplay_ability___channel.html#adfe07dae723d6958358f8d92c81ac5e6", null ],
+    [ "GetChannelActivationMode", "class_u_d_t_gameplay_ability___channel.html#ad33737f5ca0baa437d2eb67022f4f3d9", null ],
+    [ "IsChanneling", "class_u_d_t_gameplay_ability___channel.html#a82a586caf90c50f791e6d5f543efbfdc", null ],
+    [ "K2_OnChannelEnded", "class_u_d_t_gameplay_ability___channel.html#a22059f0e1757d67b3c11900b19c5361a", null ],
+    [ "K2_OnChannelStarted", "class_u_d_t_gameplay_ability___channel.html#a85a3beb228e2eda285e428b73483547e", null ],
+    [ "K2_OnChannelTick", "class_u_d_t_gameplay_ability___channel.html#a0d41a8dda76ca277e8815a953c4c0259", null ],
+    [ "NotifyChannelEnded", "class_u_d_t_gameplay_ability___channel.html#a9d6ff67bef4cfe916ba15cd25eb77984", null ],
+    [ "NotifyChannelStarted", "class_u_d_t_gameplay_ability___channel.html#acf9612cac2c2cbd6e35aeb8941ca4fe5", null ],
+    [ "NotifyChannelTick", "class_u_d_t_gameplay_ability___channel.html#a100bdee8730b696902fe33ccca8edd16", null ],
+    [ "ActivationMode", "class_u_d_t_gameplay_ability___channel.html#a8d5e129e5de3ba86564faf0ee1fe2d0c", null ],
+    [ "bTickOnStart", "class_u_d_t_gameplay_ability___channel.html#aded2ff30350c2c9954dde90fd89301cd", null ],
+    [ "ChannelCostEffect", "class_u_d_t_gameplay_ability___channel.html#a813797bf64fd97b306a9cf75d9b004de", null ],
+    [ "ChannelEndResourceThreshold", "class_u_d_t_gameplay_ability___channel.html#a568f405c704e30fc48162cb34ee9b54e", null ],
+    [ "ChannelEndSectionName", "class_u_d_t_gameplay_ability___channel.html#a78feca719d804926dd41261be715e8ae", null ],
+    [ "ChannelLoopCueTag", "class_u_d_t_gameplay_ability___channel.html#aafd6026b8f2449d61ffe751bb9fc5c2a", null ],
+    [ "ChannelLoopSectionName", "class_u_d_t_gameplay_ability___channel.html#ae11bfe28a09ae0e4d4fa2506e32b25f2", null ],
+    [ "ChannelResourceAttribute", "class_u_d_t_gameplay_ability___channel.html#a5858133bbb15b106a36cb813a399f0ef", null ],
+    [ "ChannelTickInterval", "class_u_d_t_gameplay_ability___channel.html#acd7cbf84ec68783722aa51d90ebdd01b", null ],
+    [ "MaxChannelDuration", "class_u_d_t_gameplay_ability___channel.html#a92a8ad275f9e72d271ad5b40f2017c1e", null ]
+];

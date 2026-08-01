@@ -19,5 +19,6 @@ var dir_1a047081c376f50ad228c61f8e33652f =
     [ "DTItemInstance.h", "_d_t_item_instance_8h.html", "_d_t_item_instance_8h" ],
     [ "DTLootSourceComponent.h", "_d_t_loot_source_component_8h.html", "_d_t_loot_source_component_8h" ],
     [ "DTLootSourceInterface.h", "_d_t_loot_source_interface_8h.html", "_d_t_loot_source_interface_8h" ],
+    [ "DTMutableMeshSlotComponent.h", "_d_t_mutable_mesh_slot_component_8h.html", "_d_t_mutable_mesh_slot_component_8h" ],
     [ "DTWeaponActor.h", "_d_t_weapon_actor_8h.html", "_d_t_weapon_actor_8h" ]
 ];

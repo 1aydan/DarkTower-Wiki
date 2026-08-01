@@ -18,6 +18,9 @@ var hierarchy =
     [ "AGameplayAbilityTargetActor_GroundTrace", null, [
       [ "ADTGroundTraceTargetActor", "class_a_d_t_ground_trace_target_actor.html", null ]
     ] ],
+    [ "AGameplayAbilityTargetActor_Trace", null, [
+      [ "AGameplayAbilityTargetActor_Interact", "class_a_gameplay_ability_target_actor___interact.html", null ]
+    ] ],
     [ "AHUD", null, [
       [ "ADTHud", "class_a_d_t_hud.html", null ]
     ] ],
@@ -49,7 +52,7 @@ var hierarchy =
     [ "APawn", null, [
       [ "ADTCompanion", "class_a_d_t_companion.html", null ]
     ] ],
-    [ "APlayerCameraManager", null, [
+    [ "ARPGCameraManager", null, [
       [ "ADTPlayerCameraManager", "class_a_d_t_player_camera_manager.html", null ]
     ] ],
     [ "AWorldSettings", null, [
@@ -86,9 +89,18 @@ var hierarchy =
     [ "FCurrencyScalingConfig", "struct_f_currency_scaling_config.html", null ],
     [ "FCurrencyTypeDefinition", "struct_f_currency_type_definition.html", null ],
     [ "FDeathSettings", "struct_f_death_settings.html", null ],
+    [ "FDTAbilityInputMapping", "struct_f_d_t_ability_input_mapping.html", null ],
+    [ "FDTAbilitySetHandle", "struct_f_d_t_ability_set_handle.html", null ],
+    [ "FDTAbilitySystemUtils", "class_f_d_t_ability_system_utils.html", null ],
     [ "FDTActiveAnnouncement", "struct_f_d_t_active_announcement.html", null ],
+    [ "FDTActiveMeshSlot", "struct_f_d_t_active_mesh_slot.html", null ],
+    [ "FDTAIPerceptionConfig", "struct_f_d_t_a_i_perception_config.html", null ],
     [ "FDTAISpawnRequest", "struct_f_d_t_a_i_spawn_request.html", null ],
+    [ "FDTAITargetBroadcastConfig", "struct_f_d_t_a_i_target_broadcast_config.html", null ],
+    [ "FDTAIThreatConfig", "struct_f_d_t_a_i_threat_config.html", null ],
     [ "FDTAnnouncementMessage", "struct_f_d_t_announcement_message.html", null ],
+    [ "FDTAttributeSetDefinition", "struct_f_d_t_attribute_set_definition.html", null ],
+    [ "FDTAttributeSetExecutionData", "struct_f_d_t_attribute_set_execution_data.html", null ],
     [ "FDTAudioSubmixEffectsChain", "struct_f_d_t_audio_submix_effects_chain.html", null ],
     [ "FDTBiomeEntryInfo", "struct_f_d_t_biome_entry_info.html", null ],
     [ "FDTBiomeFloorDefinition", "struct_f_d_t_biome_floor_definition.html", null ],
@@ -101,13 +113,31 @@ var hierarchy =
     [ "FDTCombatProcRecord", "struct_f_d_t_combat_proc_record.html", null ],
     [ "FDTDamageContext", "struct_f_d_t_damage_context.html", null ],
     [ "FDTDamageResult", "struct_f_d_t_damage_result.html", null ],
+    [ "FDTDeathVisuals", "struct_f_d_t_death_visuals.html", null ],
     [ "FDTDungeonSettings", "struct_f_d_t_dungeon_settings.html", null ],
+    [ "FDTDynamicValueContext", "struct_f_d_t_dynamic_value_context.html", null ],
+    [ "FDTEnemyScalingBand", "struct_f_d_t_enemy_scaling_band.html", null ],
+    [ "FDTEquipmentMeshSlot", "struct_f_d_t_equipment_mesh_slot.html", null ],
     [ "FDTEquipmentStatHelper", "struct_f_d_t_equipment_stat_helper.html", null ],
     [ "FDTFloorEntryInfo", "struct_f_d_t_floor_entry_info.html", null ],
+    [ "FDTFootstepEffect", "struct_f_d_t_footstep_effect.html", null ],
+    [ "FDTGameFeatureAbilityMapping", "struct_f_d_t_game_feature_ability_mapping.html", null ],
+    [ "FDTGameFeatureAttributeSetMapping", "struct_f_d_t_game_feature_attribute_set_mapping.html", null ],
+    [ "FDTGameFeatureGameplayEffectMapping", "struct_f_d_t_game_feature_gameplay_effect_mapping.html", null ],
+    [ "FDTGameplayEffectExecuteData", "struct_f_d_t_gameplay_effect_execute_data.html", null ],
+    [ "FDTGameplayTagConditionInstanceData", "struct_f_d_t_gameplay_tag_condition_instance_data.html", null ],
     [ "FDTHasLineOfSightConditionInstanceData", "struct_f_d_t_has_line_of_sight_condition_instance_data.html", null ],
     [ "FDTHasTargetConditionInstanceData", "struct_f_d_t_has_target_condition_instance_data.html", null ],
+    [ "FDTHitReactConfig", "struct_f_d_t_hit_react_config.html", null ],
+    [ "FDTHitReactDirectionalMontages", "struct_f_d_t_hit_react_directional_montages.html", null ],
+    [ "FDTHitReactMontageSet", "struct_f_d_t_hit_react_montage_set.html", null ],
     [ "FDTHostConfig", "struct_f_d_t_host_config.html", null ],
     [ "FDTHostRequest", "struct_f_d_t_host_request.html", null ],
+    [ "FDTInputAction", "struct_f_d_t_input_action.html", null ],
+    [ "FDTInteractionMessage", "struct_f_d_t_interaction_message.html", null ],
+    [ "FDTLastHitInfo", "struct_f_d_t_last_hit_info.html", null ],
+    [ "FDTMeleeHitboxParams", "struct_f_d_t_melee_hitbox_params.html", null ],
+    [ "FDTMeshParameterOverride", "struct_f_d_t_mesh_parameter_override.html", null ],
     [ "FDTModeProgressionSaveEntry", "struct_f_d_t_mode_progression_save_entry.html", null ],
     [ "FDTNotificationMessage", "struct_f_d_t_notification_message.html", null ],
     [ "FDTQuestEquipmentRequirement", "struct_f_d_t_quest_equipment_requirement.html", null ],
@@ -115,6 +145,7 @@ var hierarchy =
     [ "FDTQuestInventoryRequirement", "struct_f_d_t_quest_inventory_requirement.html", null ],
     [ "FDTQueuedAnnouncement", "struct_f_d_t_queued_announcement.html", null ],
     [ "FDTQueuedNotification", "struct_f_d_t_queued_notification.html", null ],
+    [ "FDTRollableAbilitySlot", "struct_f_d_t_rollable_ability_slot.html", null ],
     [ "FDTRotateTowardTaskInstanceData", "struct_f_d_t_rotate_toward_task_instance_data.html", null ],
     [ "FDTScalabilitySnapshot", "struct_f_d_t_scalability_snapshot.html", null ],
     [ "FDTSelectTargetTaskInstanceData", "struct_f_d_t_select_target_task_instance_data.html", null ],
@@ -134,6 +165,7 @@ var hierarchy =
     ] ],
     [ "FDTWeaponSpellLoadout", "struct_f_d_t_weapon_spell_loadout.html", null ],
     [ "FDTWeightedBiomeEntry", "struct_f_d_t_weighted_biome_entry.html", null ],
+    [ "FDynamicAbilityValue", "struct_f_dynamic_ability_value.html", null ],
     [ "FDynamicValueDefinitionBase", "struct_f_dynamic_value_definition_base.html", [
       [ "FDynamicDescriptionValue", "struct_f_dynamic_description_value.html", null ],
       [ "FStatModifierDef", "struct_f_stat_modifier_def.html", null ]
@@ -149,6 +181,9 @@ var hierarchy =
       [ "FAbilityStackState", "struct_f_ability_stack_state.html", null ],
       [ "FDTVerbMessageReplicationEntry", "struct_f_d_t_verb_message_replication_entry.html", null ]
     ] ],
+    [ "FGameplayAbilityTargetData", null, [
+      [ "FDTGameplayAbilityTargetData_MeleeHitbox", "struct_f_d_t_gameplay_ability_target_data___melee_hitbox.html", null ]
+    ] ],
     [ "FGameplayEffectContext", null, [
       [ "FDTGameplayEffectContext", "struct_f_d_t_gameplay_effect_context.html", null ]
     ] ],
@@ -159,6 +194,8 @@ var hierarchy =
       [ "FDTSkillTreeAssetEditor", "class_f_d_t_skill_tree_asset_editor.html", null ]
     ] ],
     [ "FInputActionBindingHandle", "struct_f_input_action_binding_handle.html", null ],
+    [ "FInteractionOption", "struct_f_interaction_option.html", null ],
+    [ "FInteractionQuery", "struct_f_interaction_query.html", null ],
     [ "FInventoryChangeMessage", "struct_f_inventory_change_message.html", null ],
     [ "FLootContext", "struct_f_loot_context.html", null ],
     [ "FLootRarityData", "struct_f_loot_rarity_data.html", null ],
@@ -184,6 +221,7 @@ var hierarchy =
     ] ],
     [ "FStateTreeConditionCommonBase", null, [
       [ "FDTCanActivateAbilityCondition", "struct_f_d_t_can_activate_ability_condition.html", null ],
+      [ "FDTGameplayTagCondition", "struct_f_d_t_gameplay_tag_condition.html", null ],
       [ "FDTHasLineOfSightCondition", "struct_f_d_t_has_line_of_sight_condition.html", null ],
       [ "FDTHasTargetCondition", "struct_f_d_t_has_target_condition.html", null ],
       [ "FDTTargetDistanceCondition", "struct_f_d_t_target_distance_condition.html", null ]
@@ -201,6 +239,7 @@ var hierarchy =
     [ "FTableRowBase", null, [
       [ "FAffixTableRow", "struct_f_affix_table_row.html", null ],
       [ "FBaseStatTableRow", "struct_f_base_stat_table_row.html", null ],
+      [ "FDTAbilityPoolRow", "struct_f_d_t_ability_pool_row.html", null ],
       [ "FDTAnnouncementTemplateRow", "struct_f_d_t_announcement_template_row.html", null ],
       [ "FDTNotificationTemplateRow", "struct_f_d_t_notification_template_row.html", null ],
       [ "FDTStatDisplayRow", "struct_f_d_t_stat_display_row.html", null ],
@@ -217,10 +256,14 @@ var hierarchy =
       [ "UDTAbilitySet", "class_u_d_t_ability_set.html", null ]
     ] ],
     [ "IDTCompanionTargetInterface", "class_i_d_t_companion_target_interface.html", null ],
+    [ "IDTInteractableTarget", "class_i_d_t_interactable_target.html", [
+      [ "ADTItemActor", "class_a_d_t_item_actor.html", null ]
+    ] ],
     [ "IDTLootSourceInterface", "class_i_d_t_loot_source_interface.html", [
       [ "ADTEnemyCharacter", "class_a_d_t_enemy_character.html", null ],
       [ "ADTLootChest", "class_a_d_t_loot_chest.html", null ]
     ] ],
+    [ "IDTSkillNodeTooltipInterface", "class_i_d_t_skill_node_tooltip_interface.html", null ],
     [ "IDTTargetableInterface", "class_i_d_t_targetable_interface.html", [
       [ "ADTAbilityActor", "class_a_d_t_ability_actor.html", null ],
       [ "ADTCharacter", "class_a_d_t_character.html", null ],
@@ -248,6 +291,7 @@ var hierarchy =
       [ "UDTSkillTreeDefinition", "class_u_d_t_skill_tree_definition.html", null ],
       [ "UDTSkillTreeNodeDefinition", "class_u_d_t_skill_tree_node_definition.html", null ]
     ] ],
+    [ "IInteractionInstigator", "class_i_interaction_instigator.html", null ],
     [ "IInventoryEquipmentActorInterface", null, [
       [ "ADTEquipmentActor", "class_a_d_t_equipment_actor.html", null ]
     ] ],
@@ -279,39 +323,71 @@ var hierarchy =
       [ "SDTSkillTreeGraphEditor", "class_s_d_t_skill_tree_graph_editor.html", null ],
       [ "SDTSkillTreeNodeVisual", "class_s_d_t_skill_tree_node_visual.html", null ]
     ] ],
+    [ "TScriptInterface&lt; InterfaceType &gt;", "class_t_script_interface.html", null ],
     [ "TStructOpsTypeTraitsBase2", null, [
       [ "TStructOpsTypeTraits< FAbilitySlotArray >", "struct_t_struct_ops_type_traits_3_01_f_ability_slot_array_01_4.html", null ],
       [ "TStructOpsTypeTraits< FAbilityStackStateArray >", "struct_t_struct_ops_type_traits_3_01_f_ability_stack_state_array_01_4.html", null ],
+      [ "TStructOpsTypeTraits< FDTGameplayAbilityTargetData_MeleeHitbox >", "struct_t_struct_ops_type_traits_3_01_f_d_t_gameplay_ability_target_data___melee_hitbox_01_4.html", null ],
       [ "TStructOpsTypeTraits< FDTGameplayEffectContext >", "struct_t_struct_ops_type_traits_3_01_f_d_t_gameplay_effect_context_01_4.html", null ],
       [ "TStructOpsTypeTraits< FDTVerbMessageReplication >", "struct_t_struct_ops_type_traits_3_01_f_d_t_verb_message_replication_01_4.html", null ]
+    ] ],
+    [ "UAbilitySystemComponent", null, [
+      [ "UDTAbilitySystemComponent", "class_u_d_t_ability_system_component.html", null ]
     ] ],
     [ "UAbilitySystemGlobals", null, [
       [ "UDTAbilitySystemGlobals", "class_u_d_t_ability_system_globals.html", null ]
     ] ],
     [ "UAbilityTask", null, [
+      [ "UAbilityTask_GrantNearbyInteraction", "class_u_ability_task___grant_nearby_interaction.html", null ],
+      [ "UAbilityTask_WaitForInteractableTargets", "class_u_ability_task___wait_for_interactable_targets.html", [
+        [ "UAbilityTask_WaitForInteractableTargets_Trace", "class_u_ability_task___wait_for_interactable_targets___trace.html", null ]
+      ] ],
+      [ "UDTAbilityTask_NetworkSyncPoint", "class_u_d_t_ability_task___network_sync_point.html", null ],
       [ "UDTAbilityTask_PerformTargeting", "class_u_d_t_ability_task___perform_targeting.html", null ],
-      [ "UDTAbilityTask_UpdateChain", "class_u_d_t_ability_task___update_chain.html", null ]
+      [ "UDTAbilityTask_UpdateChain", "class_u_d_t_ability_task___update_chain.html", null ],
+      [ "UDTTask_PlayMontageWaitForEvent", "class_u_d_t_task___play_montage_wait_for_event.html", null ]
     ] ],
     [ "UActorComponent", null, [
+      [ "UDTAbilityCoreComponent", "class_u_d_t_ability_core_component.html", null ],
       [ "UDTAbilitySlotComponent", "class_u_d_t_ability_slot_component.html", null ],
+      [ "UDTCustomizableMeshComponent", "class_u_d_t_customizable_mesh_component.html", null ],
       [ "UDTLootSourceComponent", "class_u_d_t_loot_source_component.html", [
         [ "UDTEnemyLootSourceComponent", "class_u_d_t_enemy_loot_source_component.html", null ]
       ] ],
       [ "UDTTargetingComponent", "class_u_d_t_targeting_component.html", null ],
       [ "UGameplayMessageProcessor", "class_u_gameplay_message_processor.html", null ]
     ] ],
+    [ "UAnimInstance", null, [
+      [ "UDTAnimInstance", "class_u_d_t_anim_instance.html", null ]
+    ] ],
     [ "UAnimNotify", null, [
-      [ "UDTAnimNotify_BroadcastMessage", "class_u_d_t_anim_notify___broadcast_message.html", null ]
+      [ "UDTAnimNotify_BroadcastMessage", "class_u_d_t_anim_notify___broadcast_message.html", null ],
+      [ "UDTAnimNotify_Footstep", "class_u_d_t_anim_notify___footstep.html", null ],
+      [ "UDTAnimNotify_MeleeEvent", "class_u_d_t_anim_notify___melee_event.html", null ],
+      [ "UDTAnimNotify_SendGameplayEventByTag", "class_u_d_t_anim_notify___send_gameplay_event_by_tag.html", null ]
     ] ],
     [ "UAnimNotifyState", null, [
       [ "UDTAnimNotifyState_AddTag", "class_u_d_t_anim_notify_state___add_tag.html", null ],
       [ "UDTAnimNotifyState_DisableInput", "class_u_d_t_anim_notify_state___disable_input.html", null ]
     ] ],
+    [ "UAnimNotifyState_TimedNiagaraEffect", null, [
+      [ "UDTAnimNotifyState_WeaponVFX", "class_u_d_t_anim_notify_state___weapon_v_f_x.html", null ]
+    ] ],
+    [ "UAttributeSet", null, [
+      [ "UDTAttributeSetBase", "class_u_d_t_attribute_set_base.html", [
+        [ "UDTAttributeSet", "class_u_d_t_attribute_set.html", [
+          [ "UDTActorAttributeSet", "class_u_d_t_actor_attribute_set.html", null ]
+        ] ]
+      ] ]
+    ] ],
     [ "UBlueprintFunctionLibrary", null, [
+      [ "UDTAbilityBlueprintLibrary", "class_u_d_t_ability_blueprint_library.html", null ],
+      [ "UDTAbilityFunctionLibrary", "class_u_d_t_ability_function_library.html", null ],
       [ "UDTBlueprintLibrary", "class_u_d_t_blueprint_library.html", null ],
       [ "UDTMathLibrary", "class_u_d_t_math_library.html", null ],
       [ "UDTUIBlueprintLibrary", "class_u_d_t_u_i_blueprint_library.html", null ],
-      [ "UDTVerbMessageHelpers", "class_u_d_t_verb_message_helpers.html", null ]
+      [ "UDTVerbMessageHelpers", "class_u_d_t_verb_message_helpers.html", null ],
+      [ "UInteractionStatics", "class_u_interaction_statics.html", null ]
     ] ],
     [ "UCharacterMovementComponent", null, [
       [ "UDTCharacterMovementComponent", "class_u_d_t_character_movement_component.html", null ]
@@ -366,7 +442,8 @@ var hierarchy =
           [ "UDTAbilityBarWidget", "class_u_d_t_ability_bar_widget.html", null ],
           [ "UDTAbilityWidget", "class_u_d_t_ability_widget.html", [
             [ "UDTSpellLoadoutSlotWidget", "class_u_d_t_spell_loadout_slot_widget.html", null ]
-          ] ]
+          ] ],
+          [ "UDTPlayerDamagedWidget", "class_u_d_t_player_damaged_widget.html", null ]
         ] ],
         [ "UDTAbilityTooltipWidget", "class_u_d_t_ability_tooltip_widget.html", null ],
         [ "UDTAnnouncementCanvasWidget", "class_u_d_t_announcement_canvas_widget.html", null ],
@@ -391,12 +468,18 @@ var hierarchy =
         [ "UDTStatListWidget", "class_u_d_t_stat_list_widget.html", null ]
       ] ]
     ] ],
+    [ "UControllerComponent", null, [
+      [ "UDTThreatComponent", "class_u_d_t_threat_component.html", null ]
+    ] ],
     [ "UDataAsset", null, [
-      [ "UDTCombatModifier", "class_u_d_t_combat_modifier.html", null ]
+      [ "UDTCombatModifier", "class_u_d_t_combat_modifier.html", null ],
+      [ "UDTFootstepEffectSet", "class_u_d_t_footstep_effect_set.html", null ],
+      [ "UDTInputConfig", "class_u_d_t_input_config.html", null ]
     ] ],
     [ "UDefinitionAsset", null, [
       [ "UDTAbilityDefinition", "class_u_d_t_ability_definition.html", null ],
       [ "UDTAffixDefinition", "class_u_d_t_affix_definition.html", null ],
+      [ "UDTCharacterData", "class_u_d_t_character_data.html", null ],
       [ "UDTGameModeDefinition", "class_u_d_t_game_mode_definition.html", null ],
       [ "UDTSkillTreeDefinition", "class_u_d_t_skill_tree_definition.html", null ],
       [ "UDTSkillTreeNodeDefinition", "class_u_d_t_skill_tree_node_definition.html", null ]
@@ -412,6 +495,9 @@ var hierarchy =
     [ "UDungeonBuildSystemGameModeComponent", null, [
       [ "UDTDungeonBuildSystemGameModeComponent", "class_u_d_t_dungeon_build_system_game_mode_component.html", null ]
     ] ],
+    [ "UEquipmentComponent", null, [
+      [ "UDTMutableMeshSlotTemplate", "class_u_d_t_mutable_mesh_slot_template.html", null ]
+    ] ],
     [ "UGameInstance", null, [
       [ "UDTGameInstance", "class_u_d_t_game_instance.html", null ]
     ] ],
@@ -420,13 +506,16 @@ var hierarchy =
     ] ],
     [ "UGameplayAbility", null, [
       [ "UDTGameplayAbility", "class_u_d_t_gameplay_ability.html", [
+        [ "UDTGameplayAbility_Channel", "class_u_d_t_gameplay_ability___channel.html", null ],
         [ "UDTGameplayAbility_Death", "class_u_d_t_gameplay_ability___death.html", null ],
         [ "UDTGameplayAbility_Dodge", "class_u_d_t_gameplay_ability___dodge.html", null ],
+        [ "UDTGameplayAbility_HitReact", "class_u_d_t_gameplay_ability___hit_react.html", null ],
+        [ "UDTGameplayAbility_Interact", "class_u_d_t_gameplay_ability___interact.html", null ],
         [ "UDTGameplayAbility_Item", "class_u_d_t_gameplay_ability___item.html", null ],
         [ "UDTGameplayAbility_Melee", "class_u_d_t_gameplay_ability___melee.html", null ],
         [ "UDTGameplayAbility_Passive", "class_u_d_t_gameplay_ability___passive.html", null ],
         [ "UDTGameplayAbility_Spell", "class_u_d_t_gameplay_ability___spell.html", [
-          [ "UDTGameplayAbility_ChainAbility", "class_u_d_t_gameplay_ability___chain_ability.html", null ],
+          [ "UDTGameplayAbility_Chain", "class_u_d_t_gameplay_ability___chain.html", null ],
           [ "UDTGameplayAbility_Spell_Targeted", "class_u_d_t_gameplay_ability___spell___targeted.html", [
             [ "UDTGameplayAbility_Spell_Leap", "class_u_d_t_gameplay_ability___spell___leap.html", null ]
           ] ]
@@ -478,25 +567,6 @@ var hierarchy =
     [ "UGameUserSettings", null, [
       [ "UDTSettingsLocal", "class_u_d_t_settings_local.html", null ]
     ] ],
-    [ "UGSCAbilitySet", null, [
-      [ "UDTAbilitySet", "class_u_d_t_ability_set.html", null ]
-    ] ],
-    [ "UGSCAbilitySystemComponent", null, [
-      [ "UDTAbilitySystemComponent", "class_u_d_t_ability_system_component.html", null ]
-    ] ],
-    [ "UGSCAttributeSetBase", null, [
-      [ "UDTAttributeSetBase", "class_u_d_t_attribute_set_base.html", [
-        [ "UDTAttributeSet", "class_u_d_t_attribute_set.html", [
-          [ "UDTActorAttributeSet", "class_u_d_t_actor_attribute_set.html", null ]
-        ] ]
-      ] ]
-    ] ],
-    [ "UGSCCoreComponent", null, [
-      [ "UDTAbilityCoreComponent", "class_u_d_t_ability_core_component.html", null ]
-    ] ],
-    [ "UGSCNativeAnimInstance", null, [
-      [ "UDTAnimInstance", "class_u_d_t_anim_instance.html", null ]
-    ] ],
     [ "UIndicatorWidget", null, [
       [ "UDTIndicatorWidget", "class_u_d_t_indicator_widget.html", [
         [ "UDTNameplateWidget", "class_u_d_t_nameplate_widget.html", null ]
@@ -504,8 +574,11 @@ var hierarchy =
     ] ],
     [ "UInterface", null, [
       [ "UDTCompanionTargetInterface", "class_u_d_t_companion_target_interface.html", null ],
+      [ "UDTInteractableTarget", "class_u_d_t_interactable_target.html", null ],
       [ "UDTLootSourceInterface", "class_u_d_t_loot_source_interface.html", null ],
+      [ "UDTSkillNodeTooltipInterface", "class_u_d_t_skill_node_tooltip_interface.html", null ],
       [ "UDTTargetableInterface", "class_u_d_t_targetable_interface.html", null ],
+      [ "UInteractionInstigator", "class_u_interaction_instigator.html", null ],
       [ "USaveable", "class_u_saveable.html", null ],
       [ "UTabButtonInterface", "class_u_tab_button_interface.html", null ]
     ] ],
@@ -551,6 +624,7 @@ var hierarchy =
       [ "UDTStatListItemData", "class_u_d_t_stat_list_item_data.html", null ]
     ] ],
     [ "UPawnComponent", null, [
+      [ "UDTLinkAnimLayersComponent", "class_u_d_t_link_anim_layers_component.html", null ],
       [ "UDTPawnExtensionComponent", "class_u_d_t_pawn_extension_component.html", null ]
     ] ],
     [ "UPlayerQuestComponent", null, [
@@ -562,6 +636,7 @@ var hierarchy =
       [ "UDTSkillTreeComponent", "class_u_d_t_skill_tree_component.html", null ]
     ] ],
     [ "UPrimaryDataAsset", null, [
+      [ "UDTAbilitySet", "class_u_d_t_ability_set.html", null ],
       [ "UDTBiomeDefinition", "class_u_d_t_biome_definition.html", null ],
       [ "UDTCombatGlobalData", "class_u_d_t_combat_global_data.html", null ],
       [ "UDTCurrencyGlobalData", "class_u_d_t_currency_global_data.html", null ],
@@ -574,6 +649,9 @@ var hierarchy =
     [ "UPrimaryGameLayout", null, [
       [ "UDTPrimaryGameLayout", "class_u_d_t_primary_game_layout.html", null ]
     ] ],
+    [ "UPSOForgeWarmupWidget", null, [
+      [ "UDTShaderCompileWidget", "class_u_d_t_shader_compile_widget.html", null ]
+    ] ],
     [ "UQuestCondition", null, [
       [ "UDTQuestCondition_Equipment", "class_u_d_t_quest_condition___equipment.html", null ],
       [ "UDTQuestCondition_GameplayMessage", "class_u_d_t_quest_condition___gameplay_message.html", null ],
@@ -584,6 +662,9 @@ var hierarchy =
     ] ],
     [ "USaveGame", null, [
       [ "UDTSaveGame", "class_u_d_t_save_game.html", null ]
+    ] ],
+    [ "USceneComponent", null, [
+      [ "UDTMutableMeshSlotComponent", "class_u_d_t_mutable_mesh_slot_component.html", null ]
     ] ],
     [ "USignificanceManager", null, [
       [ "UDTSignificanceManager", "class_u_d_t_significance_manager.html", null ]

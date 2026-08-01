@@ -5,10 +5,13 @@ var struct_f_d_t_gameplay_effect_context =
     [ "AppendContextTags", "struct_f_d_t_gameplay_effect_context.html#a26b921f045822a0f5a866c3d2d7c138d", null ],
     [ "Duplicate", "struct_f_d_t_gameplay_effect_context.html#adf0a497df5d8cefaaf8d39b16b3dc1a7", null ],
     [ "GetContextTags", "struct_f_d_t_gameplay_effect_context.html#ae03c1ff75c424ddd65771717e4de8aee", null ],
+    [ "GetKnockbackMagnitude", "struct_f_d_t_gameplay_effect_context.html#a7dd21efc4b32001a7785bcaac74830b0", null ],
     [ "GetScriptStruct", "struct_f_d_t_gameplay_effect_context.html#afb04b4261c84684446439527f858abd3", null ],
     [ "HasContextTags", "struct_f_d_t_gameplay_effect_context.html#ac73f3fc45653100b374ec1dd9c9ca6de", null ],
     [ "NetSerialize", "struct_f_d_t_gameplay_effect_context.html#aa31a755b8915a85422dc7462cd4ef493", null ],
     [ "SetContextTags", "struct_f_d_t_gameplay_effect_context.html#aa407de63b0ac1d01e9751747bc35ced4", null ],
+    [ "SetKnockbackMagnitude", "struct_f_d_t_gameplay_effect_context.html#aa85ad77fbda9bfb8e94cde98d1244c48", null ],
     [ "ToString", "struct_f_d_t_gameplay_effect_context.html#a0695b97af2efeeebe3bc1d0e11d24ebc", null ],
-    [ "ContextTags", "struct_f_d_t_gameplay_effect_context.html#a861a2d0eeac382b5bb381a34d4155fd1", null ]
+    [ "ContextTags", "struct_f_d_t_gameplay_effect_context.html#a861a2d0eeac382b5bb381a34d4155fd1", null ],
+    [ "KnockbackMagnitude", "struct_f_d_t_gameplay_effect_context.html#a553775eb9dd5278e924b4fe7255eb195", null ]
 ];

@@ -154,6 +154,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa657e05c4113d0adf125b1c463251b28" id="r_aa657e05c4113d0adf125b1c463251b28"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa657e05c4113d0adf125b1c463251b28">InitializeComponent</a> () override</td></tr>
 <tr class="memitem:a96abb7f63ce69cb9581da5a841f4c8e2" id="r_a96abb7f63ce69cb9581da5a841f4c8e2"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#a96abb7f63ce69cb9581da5a841f4c8e2">GetMaxSpeed</a> () const override</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a049c5258a2471b141662acaf43e53f06" id="r_a049c5258a2471b141662acaf43e53f06"><td class="memItemLeft"><a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a049c5258a2471b141662acaf43e53f06">GetOwnerAbilitySystem</a> () const</td></tr>
+<tr class="memdesc:a049c5258a2471b141662acaf43e53f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">The owner's ability system, resolving (and caching) it from the owner on first use if InitializeForAbilitySystem hasn't run — tag-driven movement blocking must not silently depend on init order.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a46ed010c74e29c62033fecc7eecb6304" id="r_a46ed010c74e29c62033fecc7eecb6304"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a46ed010c74e29c62033fecc7eecb6304">GroundTraceDistance</a> = 100000.0f</td></tr>
@@ -181,7 +186,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00012">12</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00013">13</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
 
 </div>
 </div>
@@ -209,9 +214,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00099">99</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00112">112</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_movement_component_8h_source.html#l00067">OwnerAbilitySystem</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00100">GetOwnerAbilitySystem()</a>.</p>
 
 </div>
 </div>
@@ -230,11 +235,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00046">46</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00047">47</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_movement_component_8h_source.html#l00073">CachedGroundInfo</a>, and <a class="el" href="_d_t_character_movement_component_8h_source.html#l00064">GroundTraceDistance</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_movement_component_8h_source.html#l00080">CachedGroundInfo</a>, and <a class="el" href="_d_t_character_movement_component_8h_source.html#l00071">GroundTraceDistance</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00021">UDTAnimInstance::NativeUpdateAnimation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_anim_instance_8cpp_source.html#l00047">UDTAnimInstance::NativeUpdateAnimation()</a>.</p>
 
 </div>
 </div>
@@ -261,9 +266,43 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00112">112</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00123">123</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_movement_component_8h_source.html#l00067">OwnerAbilitySystem</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00100">GetOwnerAbilitySystem()</a>.</p>
+
+</div>
+</div>
+<a id="a049c5258a2471b141662acaf43e53f06" name="a049c5258a2471b141662acaf43e53f06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a049c5258a2471b141662acaf43e53f06">&#9670;&#160;</a></span>GetOwnerAbilitySystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> * UDTCharacterMovementComponent::GetOwnerAbilitySystem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The owner's ability system, resolving (and caching) it from the owner on first use if InitializeForAbilitySystem hasn't run — tag-driven movement blocking must not silently depend on init order. </p>
+<p>Returns nullptr if the owner has no ability system. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00100">100</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_character_movement_component_8h_source.html#l00074">OwnerAbilitySystem</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00112">GetDeltaRotation()</a>, and <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00123">GetMaxSpeed()</a>.</p>
 
 </div>
 </div>
@@ -290,7 +329,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00016">16</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00017">17</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
 
 </div>
 </div>
@@ -317,11 +356,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00035">35</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00036">36</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_movement_component_8h_source.html#l00067">OwnerAbilitySystem</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_movement_component_8h_source.html#l00074">OwnerAbilitySystem</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00054">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00113">UDTAbilitySystemComponent::InitAbilityActorInfo()</a>.</p>
 
 </div>
 </div>
@@ -340,9 +379,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00093">93</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00094">94</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_movement_component_8h_source.html#l00070">bHasReplicatedAcceleration</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_movement_component_8h_source.html#l00077">bHasReplicatedAcceleration</a>.</p>
 
 </div>
 </div>
@@ -369,9 +408,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00021">21</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00022">22</a> of file <a class="el" href="_d_t_character_movement_component_8cpp_source.html">DTCharacterMovementComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_movement_component_8h_source.html#l00070">bHasReplicatedAcceleration</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_movement_component_8h_source.html#l00077">bHasReplicatedAcceleration</a>.</p>
 
 </div>
 </div>
@@ -396,9 +435,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8h_source.html#l00070">70</a> of file <a class="el" href="_d_t_character_movement_component_8h_source.html">DTCharacterMovementComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8h_source.html#l00077">77</a> of file <a class="el" href="_d_t_character_movement_component_8h_source.html">DTCharacterMovementComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00093">SetReplicatedAcceleration()</a>, and <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00021">SimulateMovement()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00094">SetReplicatedAcceleration()</a>, and <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00022">SimulateMovement()</a>.</p>
 
 </div>
 </div>
@@ -422,9 +461,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8h_source.html#l00073">73</a> of file <a class="el" href="_d_t_character_movement_component_8h_source.html">DTCharacterMovementComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_character_movement_component_8h_source.html">DTCharacterMovementComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00046">GetGroundInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00047">GetGroundInfo()</a>.</p>
 
 </div>
 </div>
@@ -448,9 +487,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8h_source.html#l00064">64</a> of file <a class="el" href="_d_t_character_movement_component_8h_source.html">DTCharacterMovementComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_character_movement_component_8h_source.html">DTCharacterMovementComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00046">GetGroundInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00047">GetGroundInfo()</a>.</p>
 
 </div>
 </div>
@@ -469,14 +508,14 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel mutable">mutable</span><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8h_source.html#l00067">67</a> of file <a class="el" href="_d_t_character_movement_component_8h_source.html">DTCharacterMovementComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_character_movement_component_8h_source.html#l00074">74</a> of file <a class="el" href="_d_t_character_movement_component_8h_source.html">DTCharacterMovementComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00099">GetDeltaRotation()</a>, <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00112">GetMaxSpeed()</a>, and <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00035">InitializeForAbilitySystem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00100">GetOwnerAbilitySystem()</a>, and <a class="el" href="_d_t_character_movement_component_8cpp_source.html#l00036">InitializeForAbilitySystem()</a>.</p>
 
 </div>
 </div>

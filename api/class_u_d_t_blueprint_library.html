@@ -177,6 +177,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a91b970b342c4f58404515e9690a55b76" id="r_a91b970b342c4f58404515e9690a55b76"><td class="memItemLeft">static <a class="el" href="struct_f_d_t_gameplay_effect_context.html">FDTGameplayEffectContext</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a91b970b342c4f58404515e9690a55b76">GetDTEffectContextMutable</a> (FGameplayEffectContextHandle &amp;ContextHandle)</td></tr>
 <tr class="memitem:a68a9b689b1b7b909e4639850262e4a5e" id="r_a68a9b689b1b7b909e4639850262e4a5e"><td class="memItemLeft">static FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="#a68a9b689b1b7b909e4639850262e4a5e">EffectContextGetContextTags</a> (FGameplayEffectContextHandle EffectContext)</td></tr>
 <tr class="memdesc:a68a9b689b1b7b909e4639850262e4a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets ContextTags from the DT effect context.  <br /></td></tr>
+<tr class="memitem:ac677d4eb2b502f408619109cbb8f2a41" id="r_ac677d4eb2b502f408619109cbb8f2a41"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#ac677d4eb2b502f408619109cbb8f2a41">EffectContextGetKnockbackMagnitude</a> (FGameplayEffectContextHandle EffectContext)</td></tr>
+<tr class="memdesc:ac677d4eb2b502f408619109cbb8f2a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the per-hit raw knockback force from the DT effect context (0 = none / not a DT context).  <br /></td></tr>
 <tr class="memitem:a3cbd02dbe774be0ff3a771353931c26d" id="r_a3cbd02dbe774be0ff3a771353931c26d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3cbd02dbe774be0ff3a771353931c26d">EffectContextSetContextTags</a> (FGameplayEffectContextHandle EffectContext, FGameplayTagContainer ContextTags)</td></tr>
 <tr class="memdesc:a3cbd02dbe774be0ff3a771353931c26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the project-level ContextTags on the effect context.  <br /></td></tr>
 <tr class="memitem:a89530fc3b9cdb1f6ffcad7ada19f1764" id="r_a89530fc3b9cdb1f6ffcad7ada19f1764"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a89530fc3b9cdb1f6ffcad7ada19f1764">EffectContextAppendContextTags</a> (FGameplayEffectContextHandle EffectContext, FGameplayTagContainer ContextTags)</td></tr>
@@ -187,6 +189,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a52037dcaec04aaa7cbd975f856a8a04d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns one normalized direction from an evenly spaced horizontal spread around world up.  <br /></td></tr>
 <tr class="memitem:a9f6f053025a99e4a0f92aac22a03d593" id="r_a9f6f053025a99e4a0f92aac22a03d593"><td class="memItemLeft">static TArray&lt; FVector &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9f6f053025a99e4a0f92aac22a03d593">GetSpreadDirections</a> (const FVector &amp;Forward, int32 Count, float TotalSpreadDegrees)</td></tr>
 <tr class="memdesc:a9f6f053025a99e4a0f92aac22a03d593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns normalized directions evenly distributed across a horizontal spread around world up.  <br /></td></tr>
+<tr class="memitem:aff23a0c9c782b73ed02b73e80c14ac42" id="r_aff23a0c9c782b73ed02b73e80c14ac42"><td class="memItemLeft">static <a class="el" href="_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07">EDTHitDirection</a>&#160;</td><td class="memItemRight"><a class="el" href="#aff23a0c9c782b73ed02b73e80c14ac42">GetHitDirection</a> (const AActor *SourceActor, const FVector &amp;WorldHitDirection)</td></tr>
+<tr class="memdesc:aff23a0c9c782b73ed02b73e80c14ac42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets which quadrant a hit came from, relative to the target's current facing.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Blueprint library with utility functions for Dark Tower. </p>
@@ -278,11 +282,11 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if any actors were found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00063">63</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00064">64</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00063">ConeOverlapActors()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00064">ConeOverlapActors()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00063">ConeOverlapActors()</a>, and <a class="el" href="_d_t_targeting_selection_task___cone_8cpp_source.html#l00014">UDTTargetingSelectionTask_Cone::Execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00064">ConeOverlapActors()</a>, and <a class="el" href="_d_t_targeting_selection_task___cone_8cpp_source.html#l00014">UDTTargetingSelectionTask_Cone::Execute()</a>.</p>
 
 </div>
 </div>
@@ -353,9 +357,9 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Configured loot context ready for use with loot subsystem </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00262">262</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00263">263</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00496">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00500">FLootContext::ItemDefinitions</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00468">FLootContext::LootRequestor</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00464">FLootContext::MaxItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::MaxLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00460">FLootContext::MinItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::MinLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00476">FLootContext::OwningPlayer</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00480">FLootContext::SpawnTransform</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00472">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00476">FLootContext::ItemDefinitions</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00444">FLootContext::LootRequestor</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00440">FLootContext::MaxItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00432">FLootContext::MaxLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00436">FLootContext::MinItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00428">FLootContext::MinLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::OwningPlayer</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::SpawnTransform</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_loot_source_component_8cpp_source.html#l00039">UDTLootSourceComponent::Internal_DropLoot()</a>.</p>
 
@@ -428,9 +432,9 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Configured loot context ready for use with loot subsystem </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00238">238</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00239">239</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00496">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00468">FLootContext::LootRequestor</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00448">FLootContext::LootTables</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00464">FLootContext::MaxItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::MaxLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00460">FLootContext::MinItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::MinLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00476">FLootContext::OwningPlayer</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00480">FLootContext::SpawnTransform</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00472">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00444">FLootContext::LootRequestor</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00424">FLootContext::LootTables</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00440">FLootContext::MaxItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00432">FLootContext::MaxLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00436">FLootContext::MinItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00428">FLootContext::MinLootRolls</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::OwningPlayer</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::SpawnTransform</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_loot_source_component_8cpp_source.html#l00039">UDTLootSourceComponent::Internal_DropLoot()</a>.</p>
 
@@ -465,9 +469,9 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Appends tags to the project-level ContextTags on the effect context. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00381">381</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00376">376</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00010">FDTGameplayEffectContext::AppendContextTags()</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00351">GetDTEffectContextMutable()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00010">FDTGameplayEffectContext::AppendContextTags()</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00346">GetDTEffectContextMutable()</a>.</p>
 
 </div>
 </div>
@@ -497,11 +501,44 @@ Static Public Member Functions</h2></td></tr>
 <p>Gets ContextTags from the DT effect context. </p>
 <p>Returns empty if not a DT context. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00362">362</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00351">351</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00340">GetDTEffectContext()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00341">GetDTEffectContext()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00419">UDTAttributeSet::HandleDamageAttribute()</a>, and <a class="el" href="_d_t_ability_event_filter_8cpp_source.html#l00080">UDTAbilityEventFilter_Default::Matches_Implementation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_attribute_set_8cpp_source.html#l00483">UDTAttributeSet::HandleDamageAttribute()</a>, and <a class="el" href="_d_t_ability_event_filter_8cpp_source.html#l00080">UDTAbilityEventFilter_Default::Matches_Implementation()</a>.</p>
+
+</div>
+</div>
+<a id="ac677d4eb2b502f408619109cbb8f2a41" name="ac677d4eb2b502f408619109cbb8f2a41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac677d4eb2b502f408619109cbb8f2a41">&#9670;&#160;</a></span>EffectContextGetKnockbackMagnitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTBlueprintLibrary::EffectContextGetKnockbackMagnitude </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayEffectContextHandle</td>          <td class="paramname"><span class="paramname"><em>EffectContext</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the per-hit raw knockback force from the DT effect context (0 = none / not a DT context). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00361">361</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00341">GetDTEffectContext()</a>, and <a class="el" href="_d_t_ability_system_types_8h_source.html#l00032">FDTGameplayEffectContext::GetKnockbackMagnitude()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00284">UDTGameplayAbility_HitReact::ApplyKnockback()</a>, and <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00040">UDTGameplayAbility_HitReact::ShouldAbilityRespondToEvent()</a>.</p>
 
 </div>
 </div>
@@ -534,7 +571,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Sets the source ability on the effect context. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00390">390</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00385">385</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -568,9 +605,9 @@ Static Public Member Functions</h2></td></tr>
 <p>Sets the project-level ContextTags on the effect context. </p>
 <p>No-op if not a DT context. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00372">372</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00367">367</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00351">GetDTEffectContextMutable()</a>, and <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00005">FDTGameplayEffectContext::SetContextTags()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00346">GetDTEffectContextMutable()</a>, and <a class="el" href="_d_t_ability_system_types_8cpp_source.html#l00005">FDTGameplayEffectContext::SetContextTags()</a>.</p>
 
 </div>
 </div>
@@ -618,7 +655,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if at least one matching tag was found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00303">303</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00304">304</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -645,9 +682,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00340">340</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00341">341</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00362">EffectContextGetContextTags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00351">EffectContextGetContextTags()</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00361">EffectContextGetKnockbackMagnitude()</a>.</p>
 
 </div>
 </div>
@@ -674,9 +711,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00351">351</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00346">346</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00678">UDTAbilitySystemComponent::BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00381">EffectContextAppendContextTags()</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00372">EffectContextSetContextTags()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00154">UDTCombatSubsystem::ApplyDamage()</a>, <a class="el" href="_d_t_ability_system_component_8cpp_source.html#l00777">UDTAbilitySystemComponent::BuildAbilityEventPayload()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00376">EffectContextAppendContextTags()</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00367">EffectContextSetContextTags()</a>.</p>
 
 </div>
 </div>
@@ -717,7 +754,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The actor furthest from the location, or nullptr if the list is empty </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00117">117</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00118">118</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -753,9 +790,9 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The global data object </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00016">16</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00017">17</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00311">UDTUIBlueprintLibrary::FormatBaseStatDisplay()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00341">UDTUIBlueprintLibrary::GetItemAffixDisplayInfo()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00435">UDTUIBlueprintLibrary::GetItemBaseStatDisplayInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00307">UDTUIBlueprintLibrary::FormatBaseStatDisplay()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00330">UDTUIBlueprintLibrary::GetItemAffixDisplayInfo()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00424">UDTUIBlueprintLibrary::GetItemBaseStatDisplayInfo()</a>.</p>
 
 </div>
 </div>
@@ -785,9 +822,54 @@ Static Public Member Functions</h2></td></tr>
 <p>Gets the global data reference (fast, no validity check). </p>
 <dl class="section return"><dt>Returns</dt><dd>The global data object </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00042">42</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">43</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00173">ADTCurrencyDrop::AbsorbAmount()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">ADTCurrencyDrop::Activate()</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00029">UDTCurrencyComponent::AddCurrency()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00363">UDTEquipmentInstance::CollectStats()</a>, <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00158">UDTMapSetupWidget::GetActiveGameModeDefinition()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00274">UDTCombatSubsystem::GetArmorMitigationFactor()</a>, <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00128">UDTMapSetupWidget::GetAvailableGameModes()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00052">GetProgressionData()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00667">UDTSkillTreeComponent::GetRespecCost()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00678">UDTSkillTreeComponent::GetRespecCurrencyType()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00702">UDTSkillTreeComponent::GetSkillPointsPerLevel()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00503">UDTEquipmentInstance::GetTotalStatModifier()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00483">UDTSkillTreeComponent::GetTreeDefinition()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00061">UDTSkillsWidget::InitializeSkillTreePanels()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00051">UDTSkillTreeComponent::InitializeSkillTrees()</a>, <a class="el" href="_d_t_enemy_loot_source_component_8cpp_source.html#l00009">UDTEnemyLootSourceComponent::Internal_DropLoot()</a>, <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00012">UDTCurrencySubsystem::OnWorldBeginPlay()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00022">UDTLootSubsystem::OnWorldBeginPlay()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00958">UDTCheatManager::PrintSkillTrees()</a>, <a class="el" href="_d_t_inventory_item_widget_8cpp_source.html#l00100">UDTInventoryItemWidget::SetIcon()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00398">UDTCheatManager::TestLootGen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00173">ADTCurrencyDrop::AbsorbAmount()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">ADTCurrencyDrop::Activate()</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00029">UDTCurrencyComponent::AddCurrency()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00317">UDTEquipmentInstance::CollectStats()</a>, <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00158">UDTMapSetupWidget::GetActiveGameModeDefinition()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00297">UDTCombatSubsystem::GetArmorConstant()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00309">UDTCombatSubsystem::GetArmorExponent()</a>, <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00128">UDTMapSetupWidget::GetAvailableGameModes()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00321">UDTCombatSubsystem::GetBaseBlockEffectiveness()</a>, <a class="el" href="_d_t_combat_subsystem_8cpp_source.html#l00333">UDTCombatSubsystem::GetMaxBlockDamageReduction()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00053">GetProgressionData()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00672">UDTSkillTreeComponent::GetRespecCost()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00683">UDTSkillTreeComponent::GetRespecCurrencyType()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00707">UDTSkillTreeComponent::GetSkillPointsPerLevel()</a>, <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00457">UDTEquipmentInstance::GetTotalStatModifier()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00488">UDTSkillTreeComponent::GetTreeDefinition()</a>, <a class="el" href="_d_t_skills_widget_8cpp_source.html#l00061">UDTSkillsWidget::InitializeSkillTreePanels()</a>, <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00051">UDTSkillTreeComponent::InitializeSkillTrees()</a>, <a class="el" href="_d_t_enemy_loot_source_component_8cpp_source.html#l00009">UDTEnemyLootSourceComponent::Internal_DropLoot()</a>, <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00012">UDTCurrencySubsystem::OnWorldBeginPlay()</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00023">UDTLootSubsystem::OnWorldBeginPlay()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00972">UDTCheatManager::PrintSkillTrees()</a>, <a class="el" href="_d_t_inventory_item_widget_8cpp_source.html#l00100">UDTInventoryItemWidget::SetIcon()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00417">UDTCheatManager::TestLootGen()</a>.</p>
+
+</div>
+</div>
+<a id="aff23a0c9c782b73ed02b73e80c14ac42" name="aff23a0c9c782b73ed02b73e80c14ac42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff23a0c9c782b73ed02b73e80c14ac42">&#9670;&#160;</a></span>GetHitDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_data_types_8h.html#a06f38e065ceb35cdd5f6d5970b888c07">EDTHitDirection</a> UDTBlueprintLibrary::GetHitDirection </td>
+          <td>(</td>
+          <td class="paramtype">const AActor *</td>          <td class="paramname"><span class="paramname"><em>SourceActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FVector &amp;</td>          <td class="paramname"><span class="paramname"><em>WorldHitDirection</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets which quadrant a hit came from, relative to the target's current facing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SourceActor</td><td>The actor being hit; its facing defines the frame of reference. </td></tr>
+    <tr><td class="paramname">WorldHitDirection</td><td>The push direction (attacker toward target). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The direction the hit came FROM (Front if SourceActor is null or the direction is degenerate). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00431">431</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00041">Back</a>, <a class="el" href="_data_types_8h_source.html#l00040">Front</a>, <a class="el" href="_data_types_8h_source.html#l00042">Left</a>, and <a class="el" href="_data_types_8h_source.html#l00043">Right</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00186">UDTGameplayAbility_HitReact::ApplyHitReact()</a>.</p>
 
 </div>
 </div>
@@ -814,7 +896,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00058">58</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00059">59</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>.</p>
 
@@ -843,7 +925,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00286">286</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00287">287</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -873,9 +955,9 @@ Static Public Member Functions</h2></td></tr>
 <p>Gets the progression data reference directly from global data. </p>
 <dl class="section return"><dt>Returns</dt><dd>The progression data object, or nullptr if unavailable </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00052">52</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00053">53</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00042">GetGlobalDataFast()</a>, and <a class="el" href="_d_t_global_data_8h_source.html#l00038">UDTGlobalData::ProgressionData</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">GetGlobalDataFast()</a>, and <a class="el" href="_d_t_global_data_8h_source.html#l00038">UDTGlobalData::ProgressionData</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_gameplay_game_mode_8cpp_source.html#l00413">ADTGameplayGameMode::HandleNormalModeDeath()</a>, <a class="el" href="_d_t_gameplay_game_mode_8cpp_source.html#l00351">ADTGameplayGameMode::InitializeSharedLives()</a>, <a class="el" href="_d_t_gameplay_game_mode_8cpp_source.html#l00497">ADTGameplayGameMode::RespawnPlayer()</a>, <a class="el" href="_d_t_gameplay_game_mode_8cpp_source.html#l00064">ADTGameplayGameMode::UpdateDungeonSettings()</a>, and <a class="el" href="_d_t_game_mode_8cpp_source.html#l00025">ADTGameMode::UpdateHostConfig()</a>.</p>
 
@@ -913,7 +995,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Integer of the rarity (0 = common, higher = rarer), or -1 if tag is invalid </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00199">199</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00200">200</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -949,9 +1031,9 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The corresponding session key name as a string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00185">185</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00186">186</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00064">FloorNumber</a>, <a class="el" href="_data_types_8h_source.html#l00065">GameMode</a>, <a class="el" href="_data_types_8h_source.html#l00063">IsPrivate</a>, <a class="el" href="_data_types_8h_source.html#l00062">MapName</a>, <a class="el" href="_data_types_8h_source.html#l00066">Password</a>, and <a class="el" href="_data_types_8h_source.html#l00061">ServerName</a>.</p>
+<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00076">FloorNumber</a>, <a class="el" href="_data_types_8h_source.html#l00077">GameMode</a>, <a class="el" href="_data_types_8h_source.html#l00075">IsPrivate</a>, <a class="el" href="_data_types_8h_source.html#l00074">MapName</a>, <a class="el" href="_data_types_8h_source.html#l00078">Password</a>, and <a class="el" href="_data_types_8h_source.html#l00073">ServerName</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_session_browser_widget_8cpp_source.html#l00104">UDTSessionBrowserWidget::AddRandomTestSessions()</a>, <a class="el" href="_d_t_session_entry_widget_8cpp_source.html#l00051">UDTSessionEntryWidget::GetSessionBoolValue()</a>, <a class="el" href="_d_t_session_entry_widget_8cpp_source.html#l00036">UDTSessionEntryWidget::GetSessionIntValue()</a>, and <a class="el" href="_d_t_session_entry_widget_8cpp_source.html#l00021">UDTSessionEntryWidget::GetSessionStringValue()</a>.</p>
 
@@ -1007,9 +1089,9 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The normalized spread direction, or a zero vector when Forward is zero or Count is not positive. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00398">398</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00393">393</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00423">GetSpreadDirections()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00418">GetSpreadDirections()</a>.</p>
 
 </div>
 </div>
@@ -1057,9 +1139,9 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The generated spread directions in angular order around world up. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00423">423</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00418">418</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00398">GetSpreadDirection()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00393">GetSpreadDirection()</a>.</p>
 
 </div>
 </div>
@@ -1106,7 +1188,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if SourceActor is facing TargetActor within the angle tolerance </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00137">137</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00138">138</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -1171,7 +1253,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Configured team query parameters struct </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00215">215</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00216">216</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00041">FTeamQueryParams::ActorClass</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00037">FTeamQueryParams::FacingAngleDegrees</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00053">FTeamQueryParams::IgnoredActors</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00019">IgnoreDead</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00033">FTeamQueryParams::MaxDistance</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00018">RequireFacing</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00022">RequireLineOfSight</a>.</p>
 
@@ -1244,7 +1326,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if a floor hit was found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00153">153</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00154">154</a> of file <a class="el" href="_d_t_blueprint_library_8cpp_source.html">DTBlueprintLibrary.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00125">UDTCurrencySubsystem::SpawnCurrencyDrops()</a>.</p>
 

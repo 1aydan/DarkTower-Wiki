@@ -145,6 +145,12 @@ Inheritance diagram for UDTAbilityDefinition:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a1f6f31b0f7177dda365565023eb86d1b" id="r_a1f6f31b0f7177dda365565023eb86d1b"><td class="memItemLeft"><a class="el" href="class_u_d_t_ability_set.html">UDTAbilitySet</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1f6f31b0f7177dda365565023eb86d1b">GetAbilitySet</a> () const</td></tr>
+<tr class="memdesc:a1f6f31b0f7177dda365565023eb86d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The grantable ability set embedded on this definition (may be null for display-only definitions).  <br /></td></tr>
+<tr class="memitem:a8c1cf8765f28be9bb9e21001ef37efc0" id="r_a8c1cf8765f28be9bb9e21001ef37efc0"><td class="memItemLeft">const <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8c1cf8765f28be9bb9e21001ef37efc0">FindDynamicValue</a> (FGameplayTag ValueTag) const</td></tr>
+<tr class="memdesc:a8c1cf8765f28be9bb9e21001ef37efc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an authored dynamic value by its tag, or nullptr if none matches.  <br /></td></tr>
+<tr class="memitem:a3250b14903115833263009f2fb827f79" id="r_a3250b14903115833263009f2fb827f79"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a3250b14903115833263009f2fb827f79">GetDynamicAbilityValueByTag</a> (FGameplayTag ValueTag, int32 EvaluationLevel, const UAbilitySystemComponent *SourceASC, bool &amp;bFound) const</td></tr>
+<tr class="memdesc:a3250b14903115833263009f2fb827f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves a dynamic value by tag at the given level.  <br /></td></tr>
 <tr class="memitem:ab36d618fa8131b0eca5ae87d0cbafdb7" id="r_ab36d618fa8131b0eca5ae87d0cbafdb7"><td class="memItemLeft">virtual FText&#160;</td><td class="memItemRight"><a class="el" href="#ab36d618fa8131b0eca5ae87d0cbafdb7">GetDisplayName_Implementation</a> () override</td></tr>
 <tr class="memitem:acdac915c049711e4cd33348eb539bf30" id="r_acdac915c049711e4cd33348eb539bf30"><td class="memItemLeft">virtual FText&#160;</td><td class="memItemRight"><a class="el" href="#acdac915c049711e4cd33348eb539bf30">GetDescription_Implementation</a> () const override</td></tr>
 <tr class="memitem:a0a6c276c7b3d67d7d462d966f9f76d42" id="r_a0a6c276c7b3d67d7d462d966f9f76d42"><td class="memItemLeft">virtual UTexture2D *&#160;</td><td class="memItemRight"><a class="el" href="#a0a6c276c7b3d67d7d462d966f9f76d42">GetAssetIcon_Implementation</a> () const override</td></tr>
@@ -160,14 +166,68 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad012dcb12b35b04f7ad2633064922b3d" id="r_ad012dcb12b35b04f7ad2633064922b3d"><td class="memItemLeft">FText&#160;</td><td class="memItemRight"><a class="el" href="#ad012dcb12b35b04f7ad2633064922b3d">Description</a></td></tr>
 <tr class="memitem:a38f338a424a2532b9b1ed76730bd2731" id="r_a38f338a424a2532b9b1ed76730bd2731"><td class="memItemLeft">TSoftObjectPtr&lt; UTexture2D &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a38f338a424a2532b9b1ed76730bd2731">Icon</a></td></tr>
 <tr class="memitem:aa126fa587667d64e2f14c1d5b80089e8" id="r_aa126fa587667d64e2f14c1d5b80089e8"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#aa126fa587667d64e2f14c1d5b80089e8">AbilityTag</a></td></tr>
-<tr class="memitem:a40286b9f640e09209fc866ccd3858059" id="r_a40286b9f640e09209fc866ccd3858059"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a40286b9f640e09209fc866ccd3858059">TooltipValues</a></td></tr>
-<tr class="memdesc:a40286b9f640e09209fc866ccd3858059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic tooltip values used to replace {Placeholder} tokens inside Description.  <br /></td></tr>
+<tr class="memitem:a127fe519c7d4387c607de6b52a940c3c" id="r_a127fe519c7d4387c607de6b52a940c3c"><td class="memItemLeft">FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="#a127fe519c7d4387c607de6b52a940c3c">RequiredTags</a></td></tr>
+<tr class="memdesc:a127fe519c7d4387c607de6b52a940c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tags the owner must have to use this ability (e.g.  <br /></td></tr>
+<tr class="memitem:ac94b709dc4040d7a79c4eedf7dfbd424" id="r_ac94b709dc4040d7a79c4eedf7dfbd424"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac94b709dc4040d7a79c4eedf7dfbd424">DynamicValues</a></td></tr>
+<tr class="memdesc:ac94b709dc4040d7a79c4eedf7dfbd424"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ability's values — each is both a gameplay number (looked up by ValueTag) and its own tooltip placeholder (Placeholder fills a {token} in Description).  <br /></td></tr>
+<tr class="memitem:a0ec580b50cda6035b866b650e9392acd" id="r_a0ec580b50cda6035b866b650e9392acd"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_ability_set.html">UDTAbilitySet</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0ec580b50cda6035b866b650e9392acd">AbilitySet</a></td></tr>
+<tr class="memdesc:a0ec580b50cda6035b866b650e9392acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grantable payload for this ability (abilities/attributes/effects/owned tags).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Ability definition for an ability in Dark Tower. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00016">16</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00019">19</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8c1cf8765f28be9bb9e21001ef37efc0" name="a8c1cf8765f28be9bb9e21001ef37efc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c1cf8765f28be9bb9e21001ef37efc0">&#9670;&#160;</a></span>FindDynamicValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a> * UDTAbilityDefinition::FindDynamicValue </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>ValueTag</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds an authored dynamic value by its tag, or nullptr if none matches. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00013">13</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_definition_8h_source.html#l00048">DynamicValues</a>, and <a class="el" href="_d_t_ability_types_8h_source.html#l00271">FDynamicAbilityValue::ValueTag</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_types_8cpp_source.html#l00079">CalculateDynamicValueInternal()</a>, and <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00026">GetDynamicAbilityValueByTag()</a>.</p>
+
+</div>
+</div>
+<a id="a1f6f31b0f7177dda365565023eb86d1b" name="a1f6f31b0f7177dda365565023eb86d1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f6f31b0f7177dda365565023eb86d1b">&#9670;&#160;</a></span>GetAbilitySet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_ability_set.html">UDTAbilitySet</a> * UDTAbilityDefinition::GetAbilitySet </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The grantable ability set embedded on this definition (may be null for display-only definitions). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00008">8</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_definition_8h_source.html#l00057">AbilitySet</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_equipment_instance_8cpp_source.html#l00263">UDTEquipmentInstance::GetEquipmentAbilitySetsToGrant()</a>.</p>
+
+</div>
+</div>
 <a id="a7e02b4b5b000271f6617ca1e2d3c66bb" name="a7e02b4b5b000271f6617ca1e2d3c66bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e02b4b5b000271f6617ca1e2d3c66bb">&#9670;&#160;</a></span>GetAssetGuid_Implementation()</h2>
 
@@ -191,7 +251,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00035">35</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00075">75</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
 
 </div>
 </div>
@@ -218,9 +278,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00055">55</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_definition_8h_source.html#l00028">Icon</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_definition_8h_source.html#l00031">Icon</a>.</p>
 
 </div>
 </div>
@@ -247,7 +307,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00025">25</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00065">65</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
 
 </div>
 </div>
@@ -274,7 +334,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00030">30</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00070">70</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
 
 </div>
 </div>
@@ -301,9 +361,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00010">10</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00050">50</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_definition_8h_source.html#l00025">Description</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_definition_8h_source.html#l00028">Description</a>.</p>
 
 </div>
 </div>
@@ -330,9 +390,49 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00005">5</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00045">45</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_definition_8h_source.html#l00022">DisplayName</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_definition_8h_source.html#l00025">DisplayName</a>.</p>
+
+</div>
+</div>
+<a id="a3250b14903115833263009f2fb827f79" name="a3250b14903115833263009f2fb827f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3250b14903115833263009f2fb827f79">&#9670;&#160;</a></span>GetDynamicAbilityValueByTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityDefinition::GetDynamicAbilityValueByTag </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>ValueTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>EvaluationLevel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const UAbilitySystemComponent *</td>          <td class="paramname"><span class="paramname"><em>SourceASC</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>bFound</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resolves a dynamic value by tag at the given level. </p>
+<p>Attribute-sourced values read from SourceASC (may be null for design-time/base reads, in which case attribute values resolve to 0). bFound reports whether the tag exists. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00026">26</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_types_8cpp_source.html#l00207">CalculateAbilityValue()</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00318">FDTDynamicValueContext::EvaluationLevel</a>, <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00013">FindDynamicValue()</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00315">FDTDynamicValueContext::OwningDefinition</a>, and <a class="el" href="_d_t_ability_types_8h_source.html#l00309">FDTDynamicValueContext::SourceASC</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00097">UDTGameplayAbility::GetDynamicValueByTag()</a>.</p>
 
 </div>
 </div>
@@ -359,7 +459,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00040">40</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00080">80</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
 
 </div>
 </div>
@@ -386,11 +486,32 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00045">45</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00085">85</a> of file <a class="el" href="_d_t_ability_definition_8cpp_source.html">DTAbilityDefinition.cpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a0ec580b50cda6035b866b650e9392acd" name="a0ec580b50cda6035b866b650e9392acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec580b50cda6035b866b650e9392acd">&#9670;&#160;</a></span>AbilitySet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_ability_set.html">UDTAbilitySet</a>&gt; UDTAbilityDefinition::AbilitySet</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Grantable payload for this ability (abilities/attributes/effects/owned tags). </p>
+<p>Embedding it here makes this GUID-addressable definition the single glue between loot rolls, the saved item, the gameplay grant, and the tooltip. For an ability used in a weapon slot, this set should grant exactly ONE UGameplayAbility (one set == one granted handle == one weapon ability slot). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00057">57</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00008">GetAbilitySet()</a>.</p>
+
+</div>
+</div>
 <a id="aa126fa587667d64e2f14c1d5b80089e8" name="aa126fa587667d64e2f14c1d5b80089e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa126fa587667d64e2f14c1d5b80089e8">&#9670;&#160;</a></span>AbilityTag</h2>
 
@@ -403,7 +524,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00031">31</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00034">34</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_tooltip_widget_8cpp_source.html#l00138">UDTAbilityTooltipWidget::FindGrantedSpec()</a>.</p>
 
 </div>
 </div>
@@ -419,9 +542,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00025">25</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00028">28</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00275">UDTUIBlueprintLibrary::FormatAbilityDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00285">UDTUIBlueprintLibrary::FormatAbilityDescriptionComparison()</a>, and <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00010">GetDescription_Implementation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00257">UDTUIBlueprintLibrary::FormatAbilityDescription()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00268">UDTUIBlueprintLibrary::FormatAbilityDescriptionComparison()</a>, and <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00050">GetDescription_Implementation()</a>.</p>
 
 </div>
 </div>
@@ -437,9 +560,30 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00022">22</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00025">25</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00005">GetDisplayName_Implementation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00045">GetDisplayName_Implementation()</a>.</p>
+
+</div>
+</div>
+<a id="ac94b709dc4040d7a79c4eedf7dfbd424" name="ac94b709dc4040d7a79c4eedf7dfbd424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac94b709dc4040d7a79c4eedf7dfbd424">&#9670;&#160;</a></span>DynamicValues</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_dynamic_ability_value.html">FDynamicAbilityValue</a>&gt; UDTAbilityDefinition::DynamicValues</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ability's values — each is both a gameplay number (looked up by ValueTag) and its own tooltip placeholder (Placeholder fills a {token} in Description). </p>
+<p>This single list is the source of truth for gameplay and tooltips. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00048">48</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00013">FindDynamicValue()</a>, <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00257">UDTUIBlueprintLibrary::FormatAbilityDescription()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00268">UDTUIBlueprintLibrary::FormatAbilityDescriptionComparison()</a>.</p>
 
 </div>
 </div>
@@ -455,29 +599,30 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00028">28</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00031">31</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00015">GetAssetIcon_Implementation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_definition_8cpp_source.html#l00055">GetAssetIcon_Implementation()</a>.</p>
 
 </div>
 </div>
-<a id="a40286b9f640e09209fc866ccd3858059" name="a40286b9f640e09209fc866ccd3858059"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40286b9f640e09209fc866ccd3858059">&#9670;&#160;</a></span>TooltipValues</h2>
+<a id="a127fe519c7d4387c607de6b52a940c3c" name="a127fe519c7d4387c607de6b52a940c3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127fe519c7d4387c607de6b52a940c3c">&#9670;&#160;</a></span>RequiredTags</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">TArray&lt;<a class="el" href="struct_f_dynamic_description_value.html">FDynamicDescriptionValue</a>&gt; UDTAbilityDefinition::TooltipValues</td>
+          <td class="memname">FGameplayTagContainer UDTAbilityDefinition::RequiredTags</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Dynamic tooltip values used to replace {Placeholder} tokens inside Description. </p>
+<p>Tags the owner must have to use this ability (e.g. </p>
+<p>an equipped weapon type for weapon-restricted abilities). Shown in the tooltip; can also gate activation by checking the owner's tags against this container. </p>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00037">37</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_definition_8h_source.html#l00041">41</a> of file <a class="el" href="_d_t_ability_definition_8h_source.html">DTAbilityDefinition.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00275">UDTUIBlueprintLibrary::FormatAbilityDescription()</a>, and <a class="el" href="_d_t_u_i_blueprint_library_8cpp_source.html#l00285">UDTUIBlueprintLibrary::FormatAbilityDescriptionComparison()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00526">UDTGameplayAbility::CanActivateAbility()</a>.</p>
 
 </div>
 </div>

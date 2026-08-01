@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_gameplay_
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:UDTGameplayAbility_5FPassive" id="r_UDTGameplayAbility_5FPassive"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability___passive.html">UDTGameplayAbility_Passive</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The one passive ability class for Dark Tower — a lean, reactive, fire-and-forget proc.  <a href="class_u_d_t_gameplay_ability___passive.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for passive abilities that respond to gameplay events.  <a href="class_u_d_t_gameplay_ability___passive.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -172,7 +172,6 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Which side of an event this passive's avatar must be on for the event to be processed. </p>
-<p>Combat events are broadcast to BOTH the source and target ASC with an identical payload (Instigator = source, Target = target), so without this gate a passive cannot tell whether it dealt or received the effect — it fires on both. Use this to disambiguate. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aaf2b31560294404a6b1fc9af2d953422aed36a1ef76a59ee3f15180e0441188ad" name="aaf2b31560294404a6b1fc9af2d953422aed36a1ef76a59ee3f15180e0441188ad"></a>Any&#160;</td><td class="fielddoc"><p>Process the event regardless of which side the avatar is on. </p>
 </td></tr>
@@ -182,7 +181,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00019">19</a> of file <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html">DTGameplayAbility_Passive.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00015">15</a> of file <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html">DTGameplayAbility_Passive.h</a>.</p>
 
 </div>
 </div>
