@@ -1,5 +1,6 @@
 # Generated toolchain & output — never committed to the wiki git repo.
 .venv/
+.claude
 doxygen-awesome-css/
 header.html
 doxygen-warnings.log
