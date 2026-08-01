@@ -5,7 +5,7 @@ what every knob does, and which ones are safe to tune vs. which reshape the whol
 
 > **Where the knobs live**
 > - **`DA_GlobalLootData`** (`Content/DarkTower/Inventory/_Shared/Data/`) — all loot scaling, rarity, affix-tier, and item-level values, plus the per-rarity table.
-> - **Base Stat Tables** (per equipment type, referenced by `DA_GlobalLootData`) — each stat's Min/Max range.
+> - **Base Stat Tables** (per equipment type, referenced by `DA_GlobalLootData`; plus optional per-item tables on the item's DT Equipment Fragment) — each stat's Min/Max range.
 > - **Affix Definitions** (`UDTAffixDefinition` assets) — each affix's Min/Max, weight, slot, level requirement.
 
 ---
@@ -31,9 +31,9 @@ ItemPower = MinItemPower + (1 − MinItemPower) × (1 − EXP(−EffectiveFloor 
 | `GlobalFloorSoftCap` | 200 | Floor where power growth starts slowing. Below it, power scales straight with floor. |
 | `GlobalFloorDR` | 0.6 | How hard power is compressed past the soft cap. Lower = harder squeeze. |
 | `GlobalItemPowerScalingRate` | 150 | How fast ItemPower climbs. Smaller = faster early power; larger = slower, longer climb. |
-| `MinItemPower` | 0.02 | Power floor at Floor 1 (so floor-1 gear isn't literally zero). |
+| `MinItemPower` | 0.01 | Power floor at Floor 1 — the baseline strength/variety of the weakest gear. Keep low for weak, uniform early gear; raise for stronger/more varied early gear (at the cost of a flatter early curve). |
 
-**Feel:** ItemPower ≈ 0.03 at floor 1, ~0.5 at floor 100, ~0.74 at floor 200, and then **plateaus around ~0.82** even at floor 1000+.
+**Feel:** ItemPower ≈ 0.02 at floor 1, ~0.5 at floor 100, ~0.74 at floor 200, and then **plateaus around ~0.82** even at floor 1000+.
 
 > ⚠️ **Important consequence:** because ItemPower tops out near ~0.82, a normal item's base stats and
 > affixes only ever reach ~82% of their table Max. **Author your stat/affix `Max` values as the
@@ -58,12 +58,21 @@ Value    ×= Rarity Stat Multiplier        (see §3)
 | Knob | Where | Default | What it does |
 |---|---|---|---|
 | Stat `Min` / `Max` | Base Stat Tables | per stat | The stat's range. `Max` = the asymptotic ceiling (see §1 warning). |
-| `MinStatScale` | DA_GlobalLootData | 0.70 | **Variance control.** Higher = same-floor items roll closer together. 0.7 ≈ a ~1.4× spread at depth; 0.5 ≈ ~1.9×; 0.03 ≈ ~10× (wild). |
-| `GlobalRollScalar` | DA_GlobalLootData | 1.0 | Distribution shape inside the window. 1.0 = even. >1 biases low, <1 biases high. |
+| `RollBehavior` | Base Stat Tables | Scaled By Item Power | Per-stat scaling mode. **Scaled By Item Power** = the window above (floor + rarity scaled). **Full Range** = rolls the full `Min`–`Max` at any floor, ignoring ItemPower *and* the rarity stat multiplier — use for floor-independent stats like flask recharge speed, where `Max` is the literal best roll, not an asymptote. |
+| `MinStatScale` | DA_GlobalLootData | 0.70 | **Variance control.** Higher = same-floor items roll closer together. 0.7 ≈ ~1.4× spread at depth; 0.5 ≈ ~1.9×; 0.03 ≈ ~10× (wild). |
+| `GlobalRollScalar` | DA_GlobalLootData | 1.0 | Distribution shape inside the window. 1.0 = even. >1 biases low, <1 biases high. Applies to both roll behaviors. |
 
 **Notes**
-- At low floors every item is near `Min` regardless of `MinStatScale` (ItemPower is tiny) — early gear is meant to feel uniform; the excitement early comes from rarity & affixes.
+- Base-stat variance is *bounded by ItemPower*: at shallow floors the ceiling sits close to `Min`, so
+  early rolls are naturally similar no matter what `MinStatScale` is. That's expected — early-game
+  variety is meant to come from **rarity** and **affix tier jackpots**, not base-stat spread. The lever
+  for *how strong/varied* the floor of the curve is, is `MinItemPower` (§1).
 - A stat row with `Min ≥ Max` is treated as a config error: it logs a warning and rolls the Min.
+- **Per-item stat tables:** an item's **DT Equipment Fragment** can list `ItemStatTables` — extra stat
+  tables merged into (or, with `bIgnoreTypeStatTable`, replacing) the item type's global table. Use them
+  for stats that only make sense on one item (health flask heal amount vs mana flask mana restore) instead
+  of minting new equipment type tags. On a duplicate `StatTag`, the item's own row wins. `ForcedBaseStats`
+  can force-roll stats from these tables too.
 
 ---
 
@@ -191,6 +200,31 @@ ItemValue      = FinalItemLevel × BaseValuePerItemLevel × Rarity.ValueMultipli
 >   computed but currently cosmetic until those systems are wired.
 
 
+## 6b. Armor & Damage Mitigation (combat)
+
+Lives in **`DA_CombatGlobalData`** (`UDTCombatGlobalData`), consumed by `UDTCombatSubsystem::ApplyMitigation`.
+
+Incoming non-true damage is mitigated by armor, then by resistance:
+
+```
+Armor          ×= 1 − clamp(PhysicalPenetration + MitigationPenetration, 0, 1)   ← pen eats armor first
+ArmorReduction  = Armor^p / (Armor^p + K^p)        (K = ArmorConstant, p = ArmorExponent) ← independent of hit size
+DamageResistance= clamp(Resistance + MitigationReduction, −10, 0.75)             ← capped % DR; negative amplifies
+Damage         ×= (1 − ArmorReduction) × (1 − DamageResistance)
+True damage bypasses all of the above.
+```
+
+| Knob | Default | What it does |
+|---|---|---|
+| `ArmorConstant` (K) | 2500 | **Armor needed for 50% mitigation** (true for any `p`). Lower = stronger armor. Curve approaches but never reaches 100% — no cap needed. |
+| `ArmorExponent` (p) | 0.6 | **Curve skew.** `p = 1` is linear-in-EHP. `p < 1` front-loads it — early armor gives much more, late game diminishes faster. `p > 1` back-loads it. Shape only; the 50% point stays at K. |
+
+**Feel at K = 2500, p = 0.6** (mitigation by armor): 100 → ~13%, 1k → ~37%, 2.5k → 50%, 10k → ~70%, 40k → ~84%. Mitigation does **not** depend on hit size — a given armor value reduces a 10-damage hit and a 10,000-damage hit by the same percentage. `DamageResistance` is a separate, capped (≤0.75) percentage stat that stacks multiplicatively on top.
+
+> Note: `ArmorConstant` was previously `ArmorMitigationFactor` (a hit-size-scaled factor, default 8). The formula changed from `Armor/(Armor + factor×Damage)` to `Armor^p/(Armor^p + K^p)` to remove hit-size dependence and let the curve be front-loaded for early game. Any old serialized `ArmorMitigationFactor` value on the data asset is dropped and reverts to the new defaults.
+
+---
+
 ## 7. Balance Levers — what to tune, what to leave alone
 
 ### 🟢 Tune freely (per-content / per-item knobs — low blast radius)
@@ -210,7 +244,7 @@ ItemValue      = FinalItemLevel × BaseValuePerItemLevel × Rarity.ValueMultipli
 
 ### 🔴 Avoid unless you mean it
 - **`MaxFloorPressure`** near 1.0 — flattens the affix tier curve so **top tiers become common**. Keep ≤ ~0.85.
-- **`MinItemPower`** much above ~0.05 — makes floor-1 gear strong and squashes the whole early curve.
+- **`MinItemPower`** large jumps (e.g. past ~0.15) — makes floor-1 gear strong and squashes the whole early curve. It's a deliberate early-power/variety dial (default 0.01 = intentionally weak early); nudge it, don't slam it.
 - **`GlobalRollScalar`** far from 1.0 — heavily skews every base-stat roll; subtle and easy to misjudge.
 - **Per-rarity `StatMultiplier`** much above ~1.5 — compounds with floor + tiers and can break scaling.
 
@@ -228,11 +262,14 @@ ItemValue      = FinalItemLevel × BaseValuePerItemLevel × Rarity.ValueMultipli
 | Higher floors to drop more items | Raise `GlobalQuantityFactor`. |
 | Legendaries to feel rarer at depth | Lower the rarer tiers' `GlobalWeightScalar` (or raise Common's `GlobalBaseRate`). |
 | Same-floor weapons to vary less | Raise `MinStatScale` (toward 0.8). |
+| Early gear stronger / a bit more varied | Raise `MinItemPower` (couples power + variance; flattens the early curve). |
 | Bigger affix "jackpots" early | Raise `BaseTierDecay` (rarer high tiers) — they hit less often but feel special. |
 | High-tier affixes more common deep | Lower `AffixTierFloorScale` or raise `MaxFloorPressure` (carefully). |
 | Rarity to matter more | Widen `AffixConfig` affix counts between tiers and/or raise `StatMultiplier` slightly. |
 | Faster overall power growth | Lower `GlobalItemPowerScalingRate` (🟡 global). |
 | Powerful affixes gated to deep floors | Set the affix's `RequiredItemLevel`. |
+| A stat to roll its full range at any floor (e.g. flask recharge speed) | Set the stat row's `RollBehavior` to `Full Range`. |
+| An item-specific stat pool (health vs mana flask) without new type tags | Add a stat table to the item's DT Equipment Fragment `ItemStatTables`. |
 
 ---
 
