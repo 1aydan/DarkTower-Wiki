@@ -658,6 +658,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#6b-armor-damage-mitigation-combat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6b. Armor &amp; Damage Mitigation (combat)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#7-balance-levers-what-to-tune-what-to-leave-alone" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -988,6 +999,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#6b-armor-damage-mitigation-combat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6b. Armor &amp; Damage Mitigation (combat)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#7-balance-levers-what-to-tune-what-to-leave-alone" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1082,7 +1104,7 @@ what every knob does, and which ones are safe to tune vs. which reshape the whol
 <blockquote>
 <p><strong>Where the knobs live</strong>
 - <strong><code>DA_GlobalLootData</code></strong> (<code>Content/DarkTower/Inventory/_Shared/Data/</code>) — all loot scaling, rarity, affix-tier, and item-level values, plus the per-rarity table.
-- <strong>Base Stat Tables</strong> (per equipment type, referenced by <code>DA_GlobalLootData</code>) — each stat's Min/Max range.
+- <strong>Base Stat Tables</strong> (per equipment type, referenced by <code>DA_GlobalLootData</code>; plus optional per-item tables on the item's DT Equipment Fragment) — each stat's Min/Max range.
 - <strong>Affix Definitions</strong> (<code>UDTAffixDefinition</code> assets) — each affix's Min/Max, weight, slot, level requirement.</p>
 </blockquote>
 <hr />
@@ -1121,12 +1143,12 @@ doesn't grow forever, producing <strong>EffectiveFloor</strong>:</p>
 </tr>
 <tr>
 <td><code>MinItemPower</code></td>
-<td>0.02</td>
-<td>Power floor at Floor 1 (so floor-1 gear isn't literally zero).</td>
+<td>0.01</td>
+<td>Power floor at Floor 1 — the baseline strength/variety of the weakest gear. Keep low for weak, uniform early gear; raise for stronger/more varied early gear (at the cost of a flatter early curve).</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Feel:</strong> ItemPower ≈ 0.03 at floor 1, ~0.5 at floor 100, ~0.74 at floor 200, and then <strong>plateaus around ~0.82</strong> even at floor 1000+.</p>
+<p><strong>Feel:</strong> ItemPower ≈ 0.02 at floor 1, ~0.5 at floor 100, ~0.74 at floor 200, and then <strong>plateaus around ~0.82</strong> even at floor 1000+.</p>
 <blockquote>
 <p>⚠️ <strong>Important consequence:</strong> because ItemPower tops out near ~0.82, a normal item's base stats and
 affixes only ever reach ~82% of their table Max. <strong>Author your stat/affix <code>Max</code> values as the
@@ -1160,22 +1182,36 @@ window is — i.e. how much two same-floor items vary.</p>
 <td>The stat's range. <code>Max</code> = the asymptotic ceiling (see §1 warning).</td>
 </tr>
 <tr>
+<td><code>RollBehavior</code></td>
+<td>Base Stat Tables</td>
+<td>Scaled By Item Power</td>
+<td>Per-stat scaling mode. <strong>Scaled By Item Power</strong> = the window above (floor + rarity scaled). <strong>Full Range</strong> = rolls the full <code>Min</code>–<code>Max</code> at any floor, ignoring ItemPower <em>and</em> the rarity stat multiplier — use for floor-independent stats like flask recharge speed, where <code>Max</code> is the literal best roll, not an asymptote.</td>
+</tr>
+<tr>
 <td><code>MinStatScale</code></td>
 <td>DA_GlobalLootData</td>
 <td>0.70</td>
-<td><strong>Variance control.</strong> Higher = same-floor items roll closer together. 0.7 ≈ a ~1.4× spread at depth; 0.5 ≈ ~1.9×; 0.03 ≈ ~10× (wild).</td>
+<td><strong>Variance control.</strong> Higher = same-floor items roll closer together. 0.7 ≈ ~1.4× spread at depth; 0.5 ≈ ~1.9×; 0.03 ≈ ~10× (wild).</td>
 </tr>
 <tr>
 <td><code>GlobalRollScalar</code></td>
 <td>DA_GlobalLootData</td>
 <td>1.0</td>
-<td>Distribution shape inside the window. 1.0 = even. &gt;1 biases low, &lt;1 biases high.</td>
+<td>Distribution shape inside the window. 1.0 = even. &gt;1 biases low, &lt;1 biases high. Applies to both roll behaviors.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Notes</strong>
-- At low floors every item is near <code>Min</code> regardless of <code>MinStatScale</code> (ItemPower is tiny) — early gear is meant to feel uniform; the excitement early comes from rarity &amp; affixes.
-- A stat row with <code>Min ≥ Max</code> is treated as a config error: it logs a warning and rolls the Min.</p>
+- Base-stat variance is <em>bounded by ItemPower</em>: at shallow floors the ceiling sits close to <code>Min</code>, so
+  early rolls are naturally similar no matter what <code>MinStatScale</code> is. That's expected — early-game
+  variety is meant to come from <strong>rarity</strong> and <strong>affix tier jackpots</strong>, not base-stat spread. The lever
+  for <em>how strong/varied</em> the floor of the curve is, is <code>MinItemPower</code> (§1).
+- A stat row with <code>Min ≥ Max</code> is treated as a config error: it logs a warning and rolls the Min.
+- <strong>Per-item stat tables:</strong> an item's <strong>DT Equipment Fragment</strong> can list <code>ItemStatTables</code> — extra stat
+  tables merged into (or, with <code>bIgnoreTypeStatTable</code>, replacing) the item type's global table. Use them
+  for stats that only make sense on one item (health flask heal amount vs mana flask mana restore) instead
+  of minting new equipment type tags. On a duplicate <code>StatTag</code>, the item's own row wins. <code>ForcedBaseStats</code>
+  can force-roll stats from these tables too.</p>
 <hr />
 <h2 id="3-rarity">3. Rarity<a class="headerlink" href="#3-rarity" title="Permanent link">&para;</a></h2>
 <p>Rarity is rolled per item from floor/budget-weighted odds, and affects three things: <strong>base-stat
@@ -1424,6 +1460,41 @@ so it ignores the tier system. Use Min/Max ranges for affixes you want tiered.</
 - <strong><code>RequiredLevel</code> is not yet enforced on equip</strong>, and <strong><code>ItemValue</code> has no shop consumer yet</strong> — they're
   computed but currently cosmetic until those systems are wired.</p>
 </blockquote>
+<h2 id="6b-armor-damage-mitigation-combat">6b. Armor &amp; Damage Mitigation (combat)<a class="headerlink" href="#6b-armor-damage-mitigation-combat" title="Permanent link">&para;</a></h2>
+<p>Lives in <strong><code>DA_CombatGlobalData</code></strong> (<code>UDTCombatGlobalData</code>), consumed by <code>UDTCombatSubsystem::ApplyMitigation</code>.</p>
+<p>Incoming non-true damage is mitigated by armor, then by resistance:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Armor          ×= 1 − clamp(PhysicalPenetration + MitigationPenetration, 0, 1)   ← pen eats armor first
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>ArmorReduction  = Armor^p / (Armor^p + K^p)        (K = ArmorConstant, p = ArmorExponent) ← independent of hit size
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>DamageResistance= clamp(Resistance + MitigationReduction, −10, 0.75)             ← capped % DR; negative amplifies
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Damage         ×= (1 − ArmorReduction) × (1 − DamageResistance)
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>True damage bypasses all of the above.
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ArmorConstant</code> (K)</td>
+<td>2500</td>
+<td><strong>Armor needed for 50% mitigation</strong> (true for any <code>p</code>). Lower = stronger armor. Curve approaches but never reaches 100% — no cap needed.</td>
+</tr>
+<tr>
+<td><code>ArmorExponent</code> (p)</td>
+<td>0.6</td>
+<td><strong>Curve skew.</strong> <code>p = 1</code> is linear-in-EHP. <code>p &lt; 1</code> front-loads it — early armor gives much more, late game diminishes faster. <code>p &gt; 1</code> back-loads it. Shape only; the 50% point stays at K.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Feel at K = 2500, p = 0.6</strong> (mitigation by armor): 100 → ~13%, 1k → ~37%, 2.5k → 50%, 10k → ~70%, 40k → ~84%. Mitigation does <strong>not</strong> depend on hit size — a given armor value reduces a 10-damage hit and a 10,000-damage hit by the same percentage. <code>DamageResistance</code> is a separate, capped (≤0.75) percentage stat that stacks multiplicatively on top.</p>
+<blockquote>
+<p>Note: <code>ArmorConstant</code> was previously <code>ArmorMitigationFactor</code> (a hit-size-scaled factor, default 8). The formula changed from <code>Armor/(Armor + factor×Damage)</code> to <code>Armor^p/(Armor^p + K^p)</code> to remove hit-size dependence and let the curve be front-loaded for early game. Any old serialized <code>ArmorMitigationFactor</code> value on the data asset is dropped and reverts to the new defaults.</p>
+</blockquote>
+<hr />
 <h2 id="7-balance-levers-what-to-tune-what-to-leave-alone">7. Balance Levers — what to tune, what to leave alone<a class="headerlink" href="#7-balance-levers-what-to-tune-what-to-leave-alone" title="Permanent link">&para;</a></h2>
 <h3 id="tune-freely-per-content-per-item-knobs-low-blast-radius">🟢 Tune freely (per-content / per-item knobs — low blast radius)<a class="headerlink" href="#tune-freely-per-content-per-item-knobs-low-blast-radius" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1445,7 +1516,7 @@ so it ignores the tier system. Use Min/Max ranges for affixes you want tiered.</
 <h3 id="avoid-unless-you-mean-it">🔴 Avoid unless you mean it<a class="headerlink" href="#avoid-unless-you-mean-it" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong><code>MaxFloorPressure</code></strong> near 1.0 — flattens the affix tier curve so <strong>top tiers become common</strong>. Keep ≤ ~0.85.</li>
-<li><strong><code>MinItemPower</code></strong> much above ~0.05 — makes floor-1 gear strong and squashes the whole early curve.</li>
+<li><strong><code>MinItemPower</code></strong> large jumps (e.g. past ~0.15) — makes floor-1 gear strong and squashes the whole early curve. It's a deliberate early-power/variety dial (default 0.01 = intentionally weak early); nudge it, don't slam it.</li>
 <li><strong><code>GlobalRollScalar</code></strong> far from 1.0 — heavily skews every base-stat roll; subtle and easy to misjudge.</li>
 <li><strong>Per-rarity <code>StatMultiplier</code></strong> much above ~1.5 — compounds with floor + tiers and can break scaling.</li>
 </ul>
@@ -1478,6 +1549,10 @@ so it ignores the tier system. Use Min/Max ranges for affixes you want tiered.</
 <td>Raise <code>MinStatScale</code> (toward 0.8).</td>
 </tr>
 <tr>
+<td>Early gear stronger / a bit more varied</td>
+<td>Raise <code>MinItemPower</code> (couples power + variance; flattens the early curve).</td>
+</tr>
+<tr>
 <td>Bigger affix "jackpots" early</td>
 <td>Raise <code>BaseTierDecay</code> (rarer high tiers) — they hit less often but feel special.</td>
 </tr>
@@ -1496,6 +1571,14 @@ so it ignores the tier system. Use Min/Max ranges for affixes you want tiered.</
 <tr>
 <td>Powerful affixes gated to deep floors</td>
 <td>Set the affix's <code>RequiredItemLevel</code>.</td>
+</tr>
+<tr>
+<td>A stat to roll its full range at any floor (e.g. flask recharge speed)</td>
+<td>Set the stat row's <code>RollBehavior</code> to <code>Full Range</code>.</td>
+</tr>
+<tr>
+<td>An item-specific stat pool (health vs mana flask) without new type tags</td>
+<td>Add a stat table to the item's DT Equipment Fragment <code>ItemStatTables</code>.</td>
 </tr>
 </tbody>
 </table>
