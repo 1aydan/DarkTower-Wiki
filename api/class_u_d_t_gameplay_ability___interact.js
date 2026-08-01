@@ -6,6 +6,7 @@ var class_u_d_t_gameplay_ability___interact =
     [ "GetFocusedActor", "class_u_d_t_gameplay_ability___interact.html#a6649d182c56a70e580ca96fd9fa41fb1", null ],
     [ "GetInteractionScanRange", "class_u_d_t_gameplay_ability___interact.html#ab86e67b456347856faddd7e3455107b0", null ],
     [ "GetInteractionScanRate", "class_u_d_t_gameplay_ability___interact.html#af9f8765e68598b11c2862140d8677a9d", null ],
+    [ "SetFocusedActor", "class_u_d_t_gameplay_ability___interact.html#aebc65e044fa84751219be11b267a0d2b", null ],
     [ "TriggerInteraction", "class_u_d_t_gameplay_ability___interact.html#accb72bfe6bcfbb921b0708ba89d8eaf7", null ],
     [ "UpdateInteractions", "class_u_d_t_gameplay_ability___interact.html#ab86f03661f29b2ab3ba16175d9ca325f", null ],
     [ "CurrentOptions", "class_u_d_t_gameplay_ability___interact.html#a8ec57e564b70fb2c25d2f3a1e4a31522", null ],

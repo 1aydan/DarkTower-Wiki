@@ -152,6 +152,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a87315811e8856d778c86f0c617131904" id="r_a87315811e8856d778c86f0c617131904"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a87315811e8856d778c86f0c617131904">PostReplicatedAdd</a> (const TArrayView&lt; int32 &gt; AddedIndices, int32 FinalSize)</td></tr>
 <tr class="memitem:ae2d0fcc3b5f1fb77fb3bf165730ee3ab" id="r_ae2d0fcc3b5f1fb77fb3bf165730ee3ab"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae2d0fcc3b5f1fb77fb3bf165730ee3ab">PostReplicatedChange</a> (const TArrayView&lt; int32 &gt; ChangedIndices, int32 FinalSize)</td></tr>
 <tr class="memitem:ab156f073b16a2e420dc2804936648255" id="r_ab156f073b16a2e420dc2804936648255"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab156f073b16a2e420dc2804936648255">NetDeltaSerialize</a> (FNetDeltaSerializeInfo &amp;DeltaParms)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a59e749ac751ef929577b22768ffff613" id="r_a59e749ac751ef929577b22768ffff613"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a59e749ac751ef929577b22768ffff613">RebroadcastMessage</a> (const <a class="el" href="struct_f_d_t_verb_message.html">FDTVerbMessage</a> &amp;Message)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae1c6c2fdd724455509796ced0f6c78b3" id="r_ae1c6c2fdd724455509796ced0f6c78b3"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_d_t_verb_message_replication_entry.html">FDTVerbMessageReplicationEntry</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae1c6c2fdd724455509796ced0f6c78b3">CurrentMessages</a></td></tr>
+<tr class="memitem:ac81d85e61211c78844bbb51fa7470659" id="r_ac81d85e61211c78844bbb51fa7470659"><td class="memItemLeft">TObjectPtr&lt; UObject &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac81d85e61211c78844bbb51fa7470659">Owner</a> = nullptr</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Container of verb messages to replicate. </p>
@@ -207,6 +216,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00021">21</a> of file <a class="el" href="_d_t_verb_message_replication_8cpp_source.html">DTVerbMessageReplication.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00073">CurrentMessages</a>.</p>
+
 </div>
 </div>
 <a id="ab156f073b16a2e420dc2804936648255" name="ab156f073b16a2e420dc2804936648255"></a>
@@ -234,6 +245,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00062">62</a> of file <a class="el" href="_d_t_verb_message_replication_8h_source.html">DTVerbMessageReplication.h</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00073">CurrentMessages</a>.</p>
+
 </div>
 </div>
 <a id="a87315811e8856d778c86f0c617131904" name="a87315811e8856d778c86f0c617131904"></a>
@@ -256,6 +269,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00031">31</a> of file <a class="el" href="_d_t_verb_message_replication_8cpp_source.html">DTVerbMessageReplication.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00073">CurrentMessages</a>, <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00037">FDTVerbMessageReplicationEntry::Message</a>, and <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00049">RebroadcastMessage()</a>.</p>
 
 </div>
 </div>
@@ -280,6 +295,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00040">40</a> of file <a class="el" href="_d_t_verb_message_replication_8cpp_source.html">DTVerbMessageReplication.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00073">CurrentMessages</a>, <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00037">FDTVerbMessageReplicationEntry::Message</a>, and <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00049">RebroadcastMessage()</a>.</p>
+
 </div>
 </div>
 <a id="aeb3c2c2fb5057ddee15ccce258066f9c" name="aeb3c2c2fb5057ddee15ccce258066f9c"></a>
@@ -302,6 +319,37 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00027">27</a> of file <a class="el" href="_d_t_verb_message_replication_8cpp_source.html">DTVerbMessageReplication.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a59e749ac751ef929577b22768ffff613" name="a59e749ac751ef929577b22768ffff613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e749ac751ef929577b22768ffff613">&#9670;&#160;</a></span>RebroadcastMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FDTVerbMessageReplication::RebroadcastMessage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_verb_message.html">FDTVerbMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00049">49</a> of file <a class="el" href="_d_t_verb_message_replication_8cpp_source.html">DTVerbMessageReplication.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00077">Owner</a>, and <a class="el" href="_d_t_message_types_8h_source.html#l00134">FDTVerbMessage::Verb</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00031">PostReplicatedAdd()</a>, and <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00040">PostReplicatedChange()</a>.</p>
 
 </div>
 </div>
@@ -329,6 +377,61 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00051">51</a> of file <a class="el" href="_d_t_verb_message_replication_8h_source.html">DTVerbMessageReplication.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00077">Owner</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ae1c6c2fdd724455509796ced0f6c78b3" name="ae1c6c2fdd724455509796ced0f6c78b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c6c2fdd724455509796ced0f6c78b3">&#9670;&#160;</a></span>CurrentMessages</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_d_t_verb_message_replication_entry.html">FDTVerbMessageReplicationEntry</a>&gt; FDTVerbMessageReplication::CurrentMessages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00073">73</a> of file <a class="el" href="_d_t_verb_message_replication_8h_source.html">DTVerbMessageReplication.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00021">AddMessage()</a>, <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00062">NetDeltaSerialize()</a>, <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00031">PostReplicatedAdd()</a>, and <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00040">PostReplicatedChange()</a>.</p>
+
+</div>
+</div>
+<a id="ac81d85e61211c78844bbb51fa7470659" name="ac81d85e61211c78844bbb51fa7470659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac81d85e61211c78844bbb51fa7470659">&#9670;&#160;</a></span>Owner</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UObject&gt; FDTVerbMessageReplication::Owner = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00077">77</a> of file <a class="el" href="_d_t_verb_message_replication_8h_source.html">DTVerbMessageReplication.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_verb_message_replication_8cpp_source.html#l00049">RebroadcastMessage()</a>, and <a class="el" href="_d_t_verb_message_replication_8h_source.html#l00051">SetOwner()</a>.</p>
 
 </div>
 </div>

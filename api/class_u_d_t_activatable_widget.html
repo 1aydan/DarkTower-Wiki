@@ -173,6 +173,10 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ae6c13fde8552708ace4154d2ec97fa98" id="r_ae6c13fde8552708ace4154d2ec97fa98"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae6c13fde8552708ace4154d2ec97fa98">bOverrideDefaultInputConfig</a> = false</td></tr>
 <tr class="memitem:a2396418f13f4c464c4c9264af27b7342" id="r_a2396418f13f4c464c4c9264af27b7342"><td class="memItemLeft">FUIInputConfig&#160;</td><td class="memItemRight"><a class="el" href="#a2396418f13f4c464c4c9264af27b7342">InputConfig</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a01a8f99723ac4d4482cbf0c10a529a37" id="r_a01a8f99723ac4d4482cbf0c10a529a37"><td class="memItemLeft">TArray&lt; FUIActionBindingHandle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a01a8f99723ac4d4482cbf0c10a529a37">BindingHandles</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for all activatable widgets in Dark Tower. </p>
@@ -282,6 +286,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_activatable_widget_8cpp_source.html#l00016">16</a> of file <a class="el" href="_d_t_activatable_widget_8cpp_source.html">DTActivatableWidget.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_activatable_widget_8h_source.html#l00063">BindingHandles</a>.</p>
+
 </div>
 </div>
 <a id="ae0058c2ee2d4db4bd9579b9196da4832" name="ae0058c2ee2d4db4bd9579b9196da4832"></a>
@@ -318,7 +324,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_activatable_widget_8cpp_source.html#l00060">60</a> of file <a class="el" href="_d_t_activatable_widget_8cpp_source.html">DTActivatableWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_activatable_widget_8h_source.html#l00019">FInputActionBindingHandle::Handle</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_activatable_widget_8h_source.html#l00063">BindingHandles</a>, and <a class="el" href="_d_t_activatable_widget_8h_source.html#l00019">FInputActionBindingHandle::Handle</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00055">UDTMapSetupWidget::NativeConstruct()</a>.</p>
 
@@ -349,6 +355,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_activatable_widget_8cpp_source.html#l00082">82</a> of file <a class="el" href="_d_t_activatable_widget_8cpp_source.html">DTActivatableWidget.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_activatable_widget_8h_source.html#l00063">BindingHandles</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00086">UDTMapSetupWidget::NativeDestruct()</a>.</p>
 
 </div>
@@ -378,11 +386,37 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_activatable_widget_8cpp_source.html#l00073">73</a> of file <a class="el" href="_d_t_activatable_widget_8cpp_source.html">DTActivatableWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_activatable_widget_8h_source.html#l00019">FInputActionBindingHandle::Handle</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_activatable_widget_8h_source.html#l00063">BindingHandles</a>, and <a class="el" href="_d_t_activatable_widget_8h_source.html#l00019">FInputActionBindingHandle::Handle</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a01a8f99723ac4d4482cbf0c10a529a37" name="a01a8f99723ac4d4482cbf0c10a529a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a8f99723ac4d4482cbf0c10a529a37">&#9670;&#160;</a></span>BindingHandles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;FUIActionBindingHandle&gt; UDTActivatableWidget::BindingHandles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_activatable_widget_8h_source.html#l00063">63</a> of file <a class="el" href="_d_t_activatable_widget_8h_source.html">DTActivatableWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_activatable_widget_8cpp_source.html#l00016">NativeDestruct()</a>, <a class="el" href="_d_t_activatable_widget_8cpp_source.html#l00060">RegisterBinding()</a>, <a class="el" href="_d_t_activatable_widget_8cpp_source.html#l00082">UnregisterAllBindings()</a>, and <a class="el" href="_d_t_activatable_widget_8cpp_source.html#l00073">UnregisterBinding()</a>.</p>
+
+</div>
+</div>
 <a id="ae6c13fde8552708ace4154d2ec97fa98" name="ae6c13fde8552708ace4154d2ec97fa98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6c13fde8552708ace4154d2ec97fa98">&#9670;&#160;</a></span>bOverrideDefaultInputConfig</h2>
 

@@ -159,6 +159,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8c4b5737a651e1e0ef4bc29b602a702d" id="r_a8c4b5737a651e1e0ef4bc29b602a702d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8c4b5737a651e1e0ef4bc29b602a702d">OnCompletedAudioDeviceSwap</a> (const FSwapAudioOutputResult &amp;SwapResult)</td></tr>
 <tr class="memitem:a98c78452c3061fa5565f483d26435380" id="r_a98c78452c3061fa5565f483d26435380"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a98c78452c3061fa5565f483d26435380">OnSharedSettingsLoaded</a> (<a class="el" href="class_u_d_t_settings_shared.html">UDTSettingsShared</a> *LoadedOrCreatedSettings)</td></tr>
 <tr class="memitem:a5ee5d06aea441686e7be2f8a7e405a95" id="r_a5ee5d06aea441686e7be2f8a7e405a95"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ee5d06aea441686e7be2f8a7e405a95">OnAudioOutputDeviceChanged</a> (const FString &amp;InAudioOutputDeviceId)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8ac960f5d9c58b75d722e57b03cea91b" id="r_a8ac960f5d9c58b75d722e57b03cea91b"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_settings_shared.html">UDTSettingsShared</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8ac960f5d9c58b75d722e57b03cea91b">SharedSettings</a></td></tr>
+<tr class="memitem:ae19a191890300499c4b6aaf96859fec0" id="r_ae19a191890300499c4b6aaf96859fec0"><td class="memItemLeft">FUniqueNetIdRepl&#160;</td><td class="memItemRight"><a class="el" href="#ae19a191890300499c4b6aaf96859fec0">NetIdForSharedSettings</a></td></tr>
+<tr class="memitem:a8f02214c14faf6d078844d6d32ed0190" id="r_a8f02214c14faf6d078844d6d32ed0190"><td class="memItemLeft">TObjectPtr&lt; const UInputMappingContext &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8f02214c14faf6d078844d6d32ed0190">InputMappingContext</a></td></tr>
+<tr class="memitem:ae86cf1687f85af17cdcd7abbea0cd1db" id="r_ae86cf1687f85af17cdcd7abbea0cd1db"><td class="memItemLeft">TWeakObjectPtr&lt; APlayerController &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae86cf1687f85af17cdcd7abbea0cd1db">LastBoundPC</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base Local Player class for Dark Tower. </p>
@@ -229,7 +236,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_local_player_8cpp_source.html#l00029">29</a> of file <a class="el" href="_d_t_local_player_8cpp_source.html">DTLocalPlayer.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_shared_8cpp_source.html#l00049">UDTSettingsShared::CreateTemporarySettings()</a>, and <a class="el" href="_d_t_settings_shared_8cpp_source.html#l00059">UDTSettingsShared::LoadOrCreateSettings()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_shared_8cpp_source.html#l00049">UDTSettingsShared::CreateTemporarySettings()</a>, <a class="el" href="_d_t_settings_shared_8cpp_source.html#l00059">UDTSettingsShared::LoadOrCreateSettings()</a>, and <a class="el" href="_d_t_local_player_8h_source.html#l00049">SharedSettings</a>.</p>
 
 </div>
 </div>
@@ -252,7 +259,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_local_player_8cpp_source.html#l00050">50</a> of file <a class="el" href="_d_t_local_player_8cpp_source.html">DTLocalPlayer.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_shared_8cpp_source.html#l00069">UDTSettingsShared::AsyncLoadOrCreateSettings()</a>, and <a class="el" href="_d_t_local_player_8cpp_source.html#l00062">OnSharedSettingsLoaded()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_shared_8cpp_source.html#l00069">UDTSettingsShared::AsyncLoadOrCreateSettings()</a>, <a class="el" href="_d_t_local_player_8h_source.html#l00051">NetIdForSharedSettings</a>, <a class="el" href="_d_t_local_player_8cpp_source.html#l00062">OnSharedSettingsLoaded()</a>, and <a class="el" href="_d_t_local_player_8h_source.html#l00049">SharedSettings</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_game_instance_8cpp_source.html#l00208">UDTGameInstance::HandlerUserInitialized()</a>.</p>
 
@@ -339,6 +346,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_local_player_8cpp_source.html#l00062">62</a> of file <a class="el" href="_d_t_local_player_8cpp_source.html">DTLocalPlayer.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_local_player_8h_source.html#l00051">NetIdForSharedSettings</a>, and <a class="el" href="_d_t_local_player_8h_source.html#l00049">SharedSettings</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_local_player_8cpp_source.html#l00050">LoadSharedSettingsFromDisk()</a>.</p>
 
 </div>
@@ -369,6 +378,107 @@ Protected Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_local_player_8cpp_source.html#l00014">14</a> of file <a class="el" href="_d_t_local_player_8cpp_source.html">DTLocalPlayer.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_local_player_8cpp_source.html#l00024">GetLocalSettings()</a>, and <a class="el" href="_d_t_local_player_8cpp_source.html#l00071">OnAudioOutputDeviceChanged()</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a8f02214c14faf6d078844d6d32ed0190" name="a8f02214c14faf6d078844d6d32ed0190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f02214c14faf6d078844d6d32ed0190">&#9670;&#160;</a></span>InputMappingContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;const UInputMappingContext&gt; UDTLocalPlayer::InputMappingContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel mutable">mutable</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_local_player_8h_source.html#l00054">54</a> of file <a class="el" href="_d_t_local_player_8h_source.html">DTLocalPlayer.h</a>.</p>
+
+</div>
+</div>
+<a id="ae86cf1687f85af17cdcd7abbea0cd1db" name="ae86cf1687f85af17cdcd7abbea0cd1db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86cf1687f85af17cdcd7abbea0cd1db">&#9670;&#160;</a></span>LastBoundPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TWeakObjectPtr&lt;APlayerController&gt; UDTLocalPlayer::LastBoundPC</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_local_player_8h_source.html#l00057">57</a> of file <a class="el" href="_d_t_local_player_8h_source.html">DTLocalPlayer.h</a>.</p>
+
+</div>
+</div>
+<a id="ae19a191890300499c4b6aaf96859fec0" name="ae19a191890300499c4b6aaf96859fec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae19a191890300499c4b6aaf96859fec0">&#9670;&#160;</a></span>NetIdForSharedSettings</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FUniqueNetIdRepl UDTLocalPlayer::NetIdForSharedSettings</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_local_player_8h_source.html#l00051">51</a> of file <a class="el" href="_d_t_local_player_8h_source.html">DTLocalPlayer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_local_player_8cpp_source.html#l00050">LoadSharedSettingsFromDisk()</a>, and <a class="el" href="_d_t_local_player_8cpp_source.html#l00062">OnSharedSettingsLoaded()</a>.</p>
+
+</div>
+</div>
+<a id="a8ac960f5d9c58b75d722e57b03cea91b" name="a8ac960f5d9c58b75d722e57b03cea91b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac960f5d9c58b75d722e57b03cea91b">&#9670;&#160;</a></span>SharedSettings</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_settings_shared.html">UDTSettingsShared</a>&gt; UDTLocalPlayer::SharedSettings</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel mutable">mutable</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_local_player_8h_source.html#l00049">49</a> of file <a class="el" href="_d_t_local_player_8h_source.html">DTLocalPlayer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_local_player_8cpp_source.html#l00029">GetSharedSettings()</a>, <a class="el" href="_d_t_local_player_8cpp_source.html#l00050">LoadSharedSettingsFromDisk()</a>, and <a class="el" href="_d_t_local_player_8cpp_source.html#l00062">OnSharedSettingsLoaded()</a>.</p>
 
 </div>
 </div>

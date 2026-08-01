@@ -261,6 +261,22 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ac95435e83f3ccf43976a7979c128cbd9 pro_attribs_class_a_d_t_character" id="r_ac95435e83f3ccf43976a7979c128cbd9"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#ac95435e83f3ccf43976a7979c128cbd9">SpawnLocation</a></td></tr>
 <tr class="memitem:a50646ae2ff885a6d130bf8da62f2f02a pro_attribs_class_a_d_t_character" id="r_a50646ae2ff885a6d130bf8da62f2f02a"><td class="memItemLeft"><a class="el" href="struct_f_death_settings.html">FDeathSettings</a>&#160;</td><td class="memItemRight"><a class="el" href="class_a_d_t_character.html#a50646ae2ff885a6d130bf8da62f2f02a">DeathSettings</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a8959ae435a64724b25311f67eaf66961" id="r_a8959ae435a64724b25311f67eaf66961"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8959ae435a64724b25311f67eaf66961">ApplyScaledStats</a> () const</td></tr>
+<tr class="memdesc:a8959ae435a64724b25311f67eaf66961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply scaled stats based on current dungeon floor.  <br /></td></tr>
+<tr class="memitem:a71bce52a5973c8eeb386d2bc6a6698ef" id="r_a71bce52a5973c8eeb386d2bc6a6698ef"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a71bce52a5973c8eeb386d2bc6a6698ef">HandleAbilitySystemInitialized</a> () override</td></tr>
+<tr class="memdesc:a71bce52a5973c8eeb386d2bc6a6698ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the default character tags (Super) then applies enemy scaling on ASC init.  <br /></td></tr>
+<tr class="memitem:a413002498578f2844e0560ac2a6802d8" id="r_a413002498578f2844e0560ac2a6802d8"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a413002498578f2844e0560ac2a6802d8">GetTierMultiplierFromTags</a> (const <a class="el" href="class_u_d_t_enemy_scaling_data.html">UDTEnemyScalingData</a> *ScalingData) const</td></tr>
+<tr class="memdesc:a413002498578f2844e0560ac2a6802d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tier multiplier from CharacterTags.  <br /></td></tr>
+<tr class="memitem:ad6a16b5803b810ccd3e11807849ac912" id="r_ad6a16b5803b810ccd3e11807849ac912"><td class="memItemLeft"><a class="el" href="class_u_d_t_enemy_scaling_data.html">UDTEnemyScalingData</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad6a16b5803b810ccd3e11807849ac912">GetScalingData</a> () const</td></tr>
+<tr class="memdesc:ad6a16b5803b810ccd3e11807849ac912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve and validate EnemyScalingData from GlobalData; returns nullptr on failure.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa836f8e752ace79a7e38372fda9ba3e8" id="r_aa836f8e752ace79a7e38372fda9ba3e8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa836f8e752ace79a7e38372fda9ba3e8">bHasAppliedScaling</a> = false</td></tr>
+<tr class="memitem:a0071ebff86e0fd2a05a0cd354811c7e5" id="r_a0071ebff86e0fd2a05a0cd354811c7e5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0071ebff86e0fd2a05a0cd354811c7e5">bDeathRewardsDistributed</a> = false</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_a_d_t_a_i_character"><td colspan="2">Public Attributes inherited from <a class="el" href="class_a_d_t_a_i_character.html">ADTAICharacter</a></td></tr>
@@ -296,6 +312,39 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8959ae435a64724b25311f67eaf66961" name="a8959ae435a64724b25311f67eaf66961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8959ae435a64724b25311f67eaf66961">&#9670;&#160;</a></span>ApplyScaledStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTEnemyCharacter::ApplyScaledStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply scaled stats based on current dungeon floor. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00093">93</a> of file <a class="el" href="_d_t_enemy_character_8cpp_source.html">DTEnemyCharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_a_i_character_8h_source.html#l00075">ADTAICharacter::AbilitySystemComponent</a>, <a class="el" href="_d_t_enemy_scaling_data_8cpp_source.html#l00120">UDTEnemyScalingData::CreateEnemyScalingSpec()</a>, <a class="el" href="_d_t_game_state_8h_source.html#l00044">ADTGameState::GetCurrentDungeonFloor()</a>, <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00074">GetScalingData()</a>, and <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00131">GetTierMultiplierFromTags()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00061">HandleAbilitySystemInitialized()</a>.</p>
+
+</div>
+</div>
 <a id="aca2252f22d4202c010aa5378480201d5" name="aca2252f22d4202c010aa5378480201d5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca2252f22d4202c010aa5378480201d5">&#9670;&#160;</a></span>CanDropLoot_Implementation()</h2>
 
@@ -354,6 +403,105 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ad6a16b5803b810ccd3e11807849ac912" name="ad6a16b5803b810ccd3e11807849ac912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a16b5803b810ccd3e11807849ac912">&#9670;&#160;</a></span>GetScalingData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_enemy_scaling_data.html">UDTEnemyScalingData</a> * ADTEnemyCharacter::GetScalingData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolve and validate EnemyScalingData from GlobalData; returns nullptr on failure. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00074">74</a> of file <a class="el" href="_d_t_enemy_character_8cpp_source.html">DTEnemyCharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_global_data_8h_source.html#l00032">UDTGlobalData::EnemyScalingData</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00093">ApplyScaledStats()</a>.</p>
+
+</div>
+</div>
+<a id="a413002498578f2844e0560ac2a6802d8" name="a413002498578f2844e0560ac2a6802d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413002498578f2844e0560ac2a6802d8">&#9670;&#160;</a></span>GetTierMultiplierFromTags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADTEnemyCharacter::GetTierMultiplierFromTags </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_u_d_t_enemy_scaling_data.html">UDTEnemyScalingData</a> *</td>          <td class="paramname"><span class="paramname"><em>ScalingData</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the tier multiplier from CharacterTags. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00131">131</a> of file <a class="el" href="_d_t_enemy_character_8cpp_source.html">DTEnemyCharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_character_8h_source.html#l00102">ADTCharacter::CharacterTags</a>, <a class="el" href="_d_t_enemy_scaling_data_8h_source.html#l00074">UDTEnemyScalingData::EnemyTierMultipliers</a>, and <a class="el" href="_d_t_enemy_scaling_data_8cpp_source.html#l00035">UDTEnemyScalingData::GetTierMultiplier()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00093">ApplyScaledStats()</a>.</p>
+
+</div>
+</div>
+<a id="a71bce52a5973c8eeb386d2bc6a6698ef" name="a71bce52a5973c8eeb386d2bc6a6698ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71bce52a5973c8eeb386d2bc6a6698ef">&#9670;&#160;</a></span>HandleAbilitySystemInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTEnemyCharacter::HandleAbilitySystemInitialized </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel private">private</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds the default character tags (Super) then applies enemy scaling on ASC init. </p>
+
+<p>Reimplemented from <a class="el" href="class_a_d_t_character.html#adabf79a86df1816c929a312f7f5e8738">ADTCharacter</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00061">61</a> of file <a class="el" href="_d_t_enemy_character_8cpp_source.html">DTEnemyCharacter.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00093">ApplyScaledStats()</a>, <a class="el" href="_d_t_enemy_character_8h_source.html#l00054">bHasAppliedScaling</a>, and <a class="el" href="_d_t_enemy_character_8h_source.html#l00035">bUseGlobalEnemyScaling</a>.</p>
+
+</div>
+</div>
 <a id="a137557a612c2a8f95c9fe48d65b26f1c" name="a137557a612c2a8f95c9fe48d65b26f1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a137557a612c2a8f95c9fe48d65b26f1c">&#9670;&#160;</a></span>HandleDeath_Implementation()</h2>
 
@@ -381,7 +529,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00032">32</a> of file <a class="el" href="_d_t_enemy_character_8cpp_source.html">DTEnemyCharacter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_enemy_character_8h_source.html#l00031">LootSourceComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_enemy_character_8h_source.html#l00055">bDeathRewardsDistributed</a>, and <a class="el" href="_d_t_enemy_character_8h_source.html#l00031">LootSourceComponent</a>.</p>
 
 </div>
 </div>
@@ -417,6 +565,58 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a0071ebff86e0fd2a05a0cd354811c7e5" name="a0071ebff86e0fd2a05a0cd354811c7e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0071ebff86e0fd2a05a0cd354811c7e5">&#9670;&#160;</a></span>bDeathRewardsDistributed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ADTEnemyCharacter::bDeathRewardsDistributed = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_enemy_character_8h_source.html#l00055">55</a> of file <a class="el" href="_d_t_enemy_character_8h_source.html">DTEnemyCharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00032">HandleDeath_Implementation()</a>.</p>
+
+</div>
+</div>
+<a id="aa836f8e752ace79a7e38372fda9ba3e8" name="aa836f8e752ace79a7e38372fda9ba3e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa836f8e752ace79a7e38372fda9ba3e8">&#9670;&#160;</a></span>bHasAppliedScaling</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ADTEnemyCharacter::bHasAppliedScaling = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_enemy_character_8h_source.html#l00054">54</a> of file <a class="el" href="_d_t_enemy_character_8h_source.html">DTEnemyCharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00061">HandleAbilitySystemInitialized()</a>.</p>
+
+</div>
+</div>
 <a id="a468f9765467bda7d3d299063f3744d0f" name="a468f9765467bda7d3d299063f3744d0f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a468f9765467bda7d3d299063f3744d0f">&#9670;&#160;</a></span>bUseGlobalEnemyScaling</h2>
 
@@ -440,6 +640,8 @@ Additional Inherited Members</h2></td></tr>
 <p>Whether to apply enemy scaling on spawn. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_enemy_character_8h_source.html#l00035">35</a> of file <a class="el" href="_d_t_enemy_character_8h_source.html">DTEnemyCharacter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_enemy_character_8cpp_source.html#l00061">HandleAbilitySystemInitialized()</a>.</p>
 
 </div>
 </div>

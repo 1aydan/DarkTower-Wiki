@@ -192,6 +192,10 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a1d903db361e36cda7d6d23d6540d31fb pro_attribs_class_u_d_t_a_s_c_widget" id="r_a1d903db361e36cda7d6d23d6540d31fb"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_a_s_c_widget.html#a1d903db361e36cda7d6d23d6540d31fb">AbilitySystemComponent</a></td></tr>
 <tr class="memitem:a1907eed70c9b94c0b181db3a55d518cf pro_attribs_class_u_d_t_a_s_c_widget" id="r_a1907eed70c9b94c0b181db3a55d518cf"><td class="memItemLeft">TObjectPtr&lt; AActor &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_a_s_c_widget.html#a1907eed70c9b94c0b181db3a55d518cf">AbilitySystemOwner</a></td></tr>
 <tr class="memitem:ae44cd95d4707da39b29d53a028992b43 pro_attribs_class_u_d_t_a_s_c_widget" id="r_ae44cd95d4707da39b29d53a028992b43"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_a_s_c_widget.html#ae44cd95d4707da39b29d53a028992b43">bAscInitialized</a> = false</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1b963109df53da12f11c5f0244b40477" id="r_a1b963109df53da12f11c5f0244b40477"><td class="memItemLeft">TMap&lt; FGameplayAttribute, FDelegateHandle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1b963109df53da12f11c5f0244b40477">AttributeDelegateHandles</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for widgets that track and display gameplay attributes. </p>
@@ -223,7 +227,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00047">47</a> of file <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html">DTASCAttributeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">UDTASCWidget::AbilitySystemComponent</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00048">BoundAttributes</a>, and <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00137">HandleAttributeChange()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">UDTASCWidget::AbilitySystemComponent</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00075">AttributeDelegateHandles</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00048">BoundAttributes</a>, and <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00137">HandleAttributeChange()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00067">BindToAttributes()</a>, and <a class="el" href="#a028de42f8d1321b7a80c09fba6752026">UpdateDisplay()</a>.</p>
 
@@ -522,7 +526,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00090">90</a> of file <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html">DTASCAttributeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">UDTASCWidget::AbilitySystemComponent</a>, and <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00048">BoundAttributes</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">UDTASCWidget::AbilitySystemComponent</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00075">AttributeDelegateHandles</a>, and <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00048">BoundAttributes</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00006">NativeDestruct()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00108">OnAbilitySystemInitialized()</a>, and <a class="el" href="#a028de42f8d1321b7a80c09fba6752026">UpdateDisplay()</a>.</p>
 
@@ -553,7 +557,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00075">75</a> of file <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html">DTASCAttributeWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">UDTASCWidget::AbilitySystemComponent</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, and <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00048">BoundAttributes</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">UDTASCWidget::AbilitySystemComponent</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00130">Attribute</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00075">AttributeDelegateHandles</a>, and <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00048">BoundAttributes</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a028de42f8d1321b7a80c09fba6752026">UpdateDisplay()</a>.</p>
 
@@ -620,6 +624,32 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a1b963109df53da12f11c5f0244b40477" name="a1b963109df53da12f11c5f0244b40477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b963109df53da12f11c5f0244b40477">&#9670;&#160;</a></span>AttributeDelegateHandles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMap&lt;FGameplayAttribute, FDelegateHandle&gt; UDTASCAttributeWidget::AttributeDelegateHandles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00075">75</a> of file <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html">DTASCAttributeWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00047">BindToAttribute()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00090">UnbindFromAllAttributes()</a>, and <a class="el" href="_d_t_a_s_c_attribute_widget_8cpp_source.html#l00075">UnbindFromAttribute()</a>.</p>
+
+</div>
+</div>
 <a id="a562ab6a0381ff6a13c9bdd0be29a1904" name="a562ab6a0381ff6a13c9bdd0be29a1904"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a562ab6a0381ff6a13c9bdd0be29a1904">&#9670;&#160;</a></span>BoundAttributes</h2>
 

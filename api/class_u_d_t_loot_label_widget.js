@@ -6,6 +6,8 @@ var class_u_d_t_loot_label_widget =
     [ "K2_ItemActorFocusChanged", "class_u_d_t_loot_label_widget.html#ac35c173c6d34bc2a12aa4a0297349108", null ],
     [ "NativeDestruct", "class_u_d_t_loot_label_widget.html#a51579c4ea637d157ca64474ffc74dfa1", null ],
     [ "NativeOnPressed", "class_u_d_t_loot_label_widget.html#a5da90cc2166207508e673f55986f7165", null ],
+    [ "OnItemActorDestroyed", "class_u_d_t_loot_label_widget.html#a15369368e458dd099bcfce85fa39296a", null ],
+    [ "OnItemActorFocusChanged", "class_u_d_t_loot_label_widget.html#a487b212f4b2decb7e807f46eb6c7e3ff", null ],
     [ "UpdateItemData", "class_u_d_t_loot_label_widget.html#a9c1b17639ef9f88945e83c3b31dde033", null ],
     [ "ItemActor", "class_u_d_t_loot_label_widget.html#abadc9747f9fd7893ddb6b245046955a7", null ]
 ];

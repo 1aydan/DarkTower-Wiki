@@ -139,10 +139,265 @@ Inheritance diagram for UAbilityTask_GrantNearbyInteraction:</div>
  <div class="center">
   <img src="class_u_ability_task___grant_nearby_interaction.png" alt=""/>
  </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab9b4fec2a2b7d8b35fc157fe75069844" id="r_ab9b4fec2a2b7d8b35fc157fe75069844"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab9b4fec2a2b7d8b35fc157fe75069844">Activate</a> () override</td></tr>
+<tr class="memitem:a7c6e983fd27a20903f754351b23ef53b" id="r_a7c6e983fd27a20903f754351b23ef53b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a7c6e983fd27a20903f754351b23ef53b">OnDestroy</a> (bool AbilityEnded) override</td></tr>
+<tr class="memitem:a33cac98aa3113cfffcdd1dbc14362595" id="r_a33cac98aa3113cfffcdd1dbc14362595"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a33cac98aa3113cfffcdd1dbc14362595">QueryInteractables</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:af48595401169599ed05faf7faa37a043" id="r_af48595401169599ed05faf7faa37a043"><td class="memItemLeft">static <a class="el" href="class_u_ability_task___grant_nearby_interaction.html">UAbilityTask_GrantNearbyInteraction</a> *&#160;</td><td class="memItemRight"><a class="el" href="#af48595401169599ed05faf7faa37a043">GrantAbilitiesForNearbyInteractors</a> (UGameplayAbility *OwningAbility, float InteractionScanRange, float InteractionScanRate)</td></tr>
+<tr class="memdesc:af48595401169599ed05faf7faa37a043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait until an overlap occurs.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7c6a579ef26255f636583d9e8c50b619" id="r_a7c6a579ef26255f636583d9e8c50b619"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a7c6a579ef26255f636583d9e8c50b619">InteractionScanRange</a> = 100.0f</td></tr>
+<tr class="memitem:abe4601a9492355a32097b3154a68face" id="r_abe4601a9492355a32097b3154a68face"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#abe4601a9492355a32097b3154a68face">InteractionScanRate</a> = 0.100f</td></tr>
+<tr class="memitem:ae5a9be09b432d770d704aee2ec9e677d" id="r_ae5a9be09b432d770d704aee2ec9e677d"><td class="memItemLeft">FTimerHandle&#160;</td><td class="memItemRight"><a class="el" href="#ae5a9be09b432d770d704aee2ec9e677d">QueryTimerHandle</a></td></tr>
+<tr class="memitem:a88726ac8e11d23bd3f47e1fc1a9486c6" id="r_a88726ac8e11d23bd3f47e1fc1a9486c6"><td class="memItemLeft">TMap&lt; FObjectKey, FGameplayAbilitySpecHandle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a88726ac8e11d23bd3f47e1fc1a9486c6">InteractionAbilityCache</a></td></tr>
+</table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00015">15</a> of file <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html">AbilityTask_GrantNearbyInteraction.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab9b4fec2a2b7d8b35fc157fe75069844" name="ab9b4fec2a2b7d8b35fc157fe75069844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b4fec2a2b7d8b35fc157fe75069844">&#9670;&#160;</a></span>Activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UAbilityTask_GrantNearbyInteraction::Activate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel private">private</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00150">150</a> of file <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html">AbilityTask_GrantNearbyInteraction.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00032">InteractionScanRate</a>, and <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00034">QueryTimerHandle</a>.</p>
+
+</div>
+</div>
+<a id="af48595401169599ed05faf7faa37a043" name="af48595401169599ed05faf7faa37a043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48595401169599ed05faf7faa37a043">&#9670;&#160;</a></span>GrantAbilitiesForNearbyInteractors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_ability_task___grant_nearby_interaction.html">UAbilityTask_GrantNearbyInteraction</a> * UAbilityTask_GrantNearbyInteraction::GrantAbilitiesForNearbyInteractors </td>
+          <td>(</td>
+          <td class="paramtype">UGameplayAbility *</td>          <td class="paramname"><span class="paramname"><em>OwningAbility</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>InteractionScanRange</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>InteractionScanRate</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wait until an overlap occurs. </p>
+<p>This will need to be better fleshed out so we can specify game specific collision requirements </p>
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00142">142</a> of file <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html">AbilityTask_GrantNearbyInteraction.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00031">InteractionScanRange</a>, and <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00032">InteractionScanRate</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___interact_8cpp_source.html#l00028">UDTGameplayAbility_Interact::ActivateAbility()</a>.</p>
+
+</div>
+</div>
+<a id="a7c6e983fd27a20903f754351b23ef53b" name="a7c6e983fd27a20903f754351b23ef53b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6e983fd27a20903f754351b23ef53b">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UAbilityTask_GrantNearbyInteraction::OnDestroy </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>AbilityEnded</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel private">private</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00158">158</a> of file <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html">AbilityTask_GrantNearbyInteraction.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00034">QueryTimerHandle</a>.</p>
+
+</div>
+</div>
+<a id="a33cac98aa3113cfffcdd1dbc14362595" name="a33cac98aa3113cfffcdd1dbc14362595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33cac98aa3113cfffcdd1dbc14362595">&#9670;&#160;</a></span>QueryInteractables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UAbilityTask_GrantNearbyInteraction::QueryInteractables </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00168">168</a> of file <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html">AbilityTask_GrantNearbyInteraction.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_interaction_statics_8cpp_source.html#l00058">UInteractionStatics::AppendInteractableTargetsFromOverlapResults()</a>, <a class="el" href="_ability_task___grant_nearby_interaction_8cpp.html#a2fdb1e45d67b33edbb73b9d2dd70e401">CVarInteractionDebugDraw()</a>, <a class="el" href="_d_t_collision_channels_8h_source.html#l00029">DT_TraceChannel_Interaction</a>, <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00036">InteractionAbilityCache</a>, <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00031">InteractionScanRange</a>, <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00032">InteractionScanRate</a>, <a class="el" href="_interaction_query_8h_source.html#l00019">FInteractionQuery::RequestingAvatar</a>, and <a class="el" href="_interaction_query_8h_source.html#l00023">FInteractionQuery::RequestingController</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a88726ac8e11d23bd3f47e1fc1a9486c6" name="a88726ac8e11d23bd3f47e1fc1a9486c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88726ac8e11d23bd3f47e1fc1a9486c6">&#9670;&#160;</a></span>InteractionAbilityCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMap&lt;FObjectKey, FGameplayAbilitySpecHandle&gt; UAbilityTask_GrantNearbyInteraction::InteractionAbilityCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00036">36</a> of file <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html">AbilityTask_GrantNearbyInteraction.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00168">QueryInteractables()</a>.</p>
+
+</div>
+</div>
+<a id="a7c6a579ef26255f636583d9e8c50b619" name="a7c6a579ef26255f636583d9e8c50b619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6a579ef26255f636583d9e8c50b619">&#9670;&#160;</a></span>InteractionScanRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UAbilityTask_GrantNearbyInteraction::InteractionScanRange = 100.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00031">31</a> of file <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html">AbilityTask_GrantNearbyInteraction.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00142">GrantAbilitiesForNearbyInteractors()</a>, and <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00168">QueryInteractables()</a>.</p>
+
+</div>
+</div>
+<a id="abe4601a9492355a32097b3154a68face" name="abe4601a9492355a32097b3154a68face"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe4601a9492355a32097b3154a68face">&#9670;&#160;</a></span>InteractionScanRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UAbilityTask_GrantNearbyInteraction::InteractionScanRate = 0.100f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00032">32</a> of file <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html">AbilityTask_GrantNearbyInteraction.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00150">Activate()</a>, <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00142">GrantAbilitiesForNearbyInteractors()</a>, and <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00168">QueryInteractables()</a>.</p>
+
+</div>
+</div>
+<a id="ae5a9be09b432d770d704aee2ec9e677d" name="ae5a9be09b432d770d704aee2ec9e677d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a9be09b432d770d704aee2ec9e677d">&#9670;&#160;</a></span>QueryTimerHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTimerHandle UAbilityTask_GrantNearbyInteraction::QueryTimerHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html#l00034">34</a> of file <a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html">AbilityTask_GrantNearbyInteraction.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00150">Activate()</a>, and <a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html#l00158">OnDestroy()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>F:/Work/SecondShift/DarkTower/Source/DarkTower/Public/AbilitySystem/Tasks/<a class="el" href="_ability_task___grant_nearby_interaction_8h_source.html">AbilityTask_GrantNearbyInteraction.h</a></li>
 <li>F:/Work/SecondShift/DarkTower/Source/DarkTower/Private/AbilitySystem/Tasks/<a class="el" href="_ability_task___grant_nearby_interaction_8cpp_source.html">AbilityTask_GrantNearbyInteraction.cpp</a></li>
 </ul>

@@ -191,16 +191,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a630a3287888cf7d5477a844e52c8a1af">bEnableWallClipFallback</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#ae68001e4d1e62e5e4bed16a55e1d7bca">WallClipDisableDistance</a> = 100.0f;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a721030bd8a9e2a88bd6f16def7ad7417">WallClipDisableDuration</a> = 1.0f;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    WallClipDisabledTimeRemaining = 0.0f;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#af1e87e4e89e8a3be6eb39e061666f680">WallClipDisabledTimeRemaining</a> = 0.0f;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#af127f7633a52f527f5e961cbe85a5b0f">bIsGoingToLocation</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a17b758986285286ca600dc3f22dba3c4">bResumeFollowingAfterReachingTarget</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a735813b1733a6983446aed16f1ef06bf">TargetLocation</a> = FVector::ZeroVector;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a87ea205c158daf901e5f1a0807858387">TargetReachedThreshold</a> = 50.0f;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    SpringVelocity.Reset();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    FloatTimeAccumulator = 0.0f;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    CurrentOrbitAngle = 0.0f;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#ab436e5412ca0bbba6e2eaaf4b3beb4f0">SpringVelocity</a>.Reset();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a051ec98972472133daddc51a53e4d76b">FloatTimeAccumulator</a> = 0.0f;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a6e459580333ddbec6f44cc13288a3703">CurrentOrbitAngle</a> = 0.0f;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
 </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
@@ -222,8 +222,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>{</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    Super::BeginPlay();</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    SpringVelocity.Reset();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    FloatTimeAccumulator = 0.0f;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#ab436e5412ca0bbba6e2eaaf4b3beb4f0">SpringVelocity</a>.Reset();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a051ec98972472133daddc51a53e4d76b">FloatTimeAccumulator</a> = 0.0f;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
 </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
@@ -248,23 +248,25 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            UpdateFollowMovement(DeltaTime);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <a class="code hl_function" href="class_a_d_t_companion.html#ab624779a4a5637b3e323c1f24d4d13aa">UpdateFollowMovement</a>(DeltaTime);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        }</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#a461791f8342ba6bb9905b02a91fd4062">bEnableFollow</a> &amp;&amp; <a class="code hl_variable" href="class_a_d_t_companion.html#aebc448190b6d1448704a1e7c83c59e8d">FollowTarget</a>)</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        UpdateFollowMovement(DeltaTime);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <a class="code hl_function" href="class_a_d_t_companion.html#ab624779a4a5637b3e323c1f24d4d13aa">UpdateFollowMovement</a>(DeltaTime);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>}</div>
 </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keywordtype">void</span> ADTCompanion::ResetSpring()</div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_a_d_t_companion.html#afc929290de634ce8c0e683a061dfa066">  120</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_companion.html#afc929290de634ce8c0e683a061dfa066">ADTCompanion::ResetSpring</a>()</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>{</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#a7a31ae3de830b83964bffc5544f32760">bUseSpringInterpolation</a>)</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        SpringVelocity.Reset();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <a class="code hl_variable" href="class_a_d_t_companion.html#ab436e5412ca0bbba6e2eaaf4b3beb4f0">SpringVelocity</a>.Reset();</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
+</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_a_d_t_companion.html#a7303b0a8dfc48e300b7b1a28204cf046">  128</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_companion.html#a7303b0a8dfc48e300b7b1a28204cf046">ADTCompanion::SetFollowTarget</a>(AActor* NewTarget)</div>
@@ -275,7 +277,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#aebc448190b6d1448704a1e7c83c59e8d">FollowTarget</a> = NewTarget;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    ResetSpring();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_function" href="class_a_d_t_companion.html#afc929290de634ce8c0e683a061dfa066">ResetSpring</a>();</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
 </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
@@ -297,7 +299,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a735813b1733a6983446aed16f1ef06bf">TargetLocation</a> = WorldLocation;</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#af127f7633a52f527f5e961cbe85a5b0f">bIsGoingToLocation</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a17b758986285286ca600dc3f22dba3c4">bResumeFollowingAfterReachingTarget</a> = bResumeFollowingAfter;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    ResetSpring();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <a class="code hl_function" href="class_a_d_t_companion.html#afc929290de634ce8c0e683a061dfa066">ResetSpring</a>();</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
 </div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
@@ -311,7 +313,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    </div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a735813b1733a6983446aed16f1ef06bf">TargetLocation</a> = WorldLocation;</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#af127f7633a52f527f5e961cbe85a5b0f">bIsGoingToLocation</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    ResetSpring();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <a class="code hl_function" href="class_a_d_t_companion.html#afc929290de634ce8c0e683a061dfa066">ResetSpring</a>();</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}</div>
 </div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
@@ -326,7 +328,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a735813b1733a6983446aed16f1ef06bf">TargetLocation</a> = FVector::ZeroVector;</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#af127f7633a52f527f5e961cbe85a5b0f">bIsGoingToLocation</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <a class="code hl_variable" href="class_a_d_t_companion.html#a17b758986285286ca600dc3f22dba3c4">bResumeFollowingAfterReachingTarget</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    ResetSpring();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <a class="code hl_function" href="class_a_d_t_companion.html#afc929290de634ce8c0e683a061dfa066">ResetSpring</a>();</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
 </div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
@@ -342,14 +344,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>}</div>
 </div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>FVector ADTCompanion::CalculateDesiredLocation()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00192" data-start="{" data-end="}">
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="class_a_d_t_companion.html#afe3483770224ea06beb9bcbe714d0a4c">  192</a></span>FVector <a class="code hl_function" href="class_a_d_t_companion.html#afe3483770224ea06beb9bcbe714d0a4c">ADTCompanion::CalculateDesiredLocation</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    FVector DesiredLocation;</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#af127f7633a52f527f5e961cbe85a5b0f">bIsGoingToLocation</a>)</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    {</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        DesiredLocation = <a class="code hl_variable" href="class_a_d_t_companion.html#a735813b1733a6983446aed16f1ef06bf">TargetLocation</a>;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        DesiredLocation.Z += CalculateFloatOffset();</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        DesiredLocation.Z += <a class="code hl_function" href="class_a_d_t_companion.html#a2295582ab5b8794cd834907a783c96f7">CalculateFloatOffset</a>();</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">return</span> DesiredLocation;</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    }</div>
@@ -359,7 +362,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keywordflow">return</span> GetActorLocation();</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    }</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#aebc448190b6d1448704a1e7c83c59e8d">FollowTarget</a>-&gt;Implements&lt;UDTCompanionTargetInterface&gt;())</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#aebc448190b6d1448704a1e7c83c59e8d">FollowTarget</a>-&gt;Implements&lt;<a class="code hl_class" href="class_u_d_t_companion_target_interface.html">UDTCompanionTargetInterface</a>&gt;())</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    {</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        DesiredLocation = IDTCompanionTargetInterface::Execute_GetFollowLocation(<a class="code hl_variable" href="class_a_d_t_companion.html#aebc448190b6d1448704a1e7c83c59e8d">FollowTarget</a>);</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
@@ -368,10 +371,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        DesiredLocation = <a class="code hl_variable" href="class_a_d_t_companion.html#aebc448190b6d1448704a1e7c83c59e8d">FollowTarget</a>-&gt;GetActorLocation();</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    }</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keywordflow">if</span> (ShouldOrbit())</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_a_d_t_companion.html#ab09afeb5ca36fcf8b4b9d4e301e27e54">ShouldOrbit</a>())</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> RadianAngle = FMath::DegreesToRadians(CurrentOrbitAngle);</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keyword">const</span> FVector OrbitOffset = FVector(FMath::Cos(RadianAngle) * CurrentOrbitRadius,FMath::Sin(RadianAngle) * CurrentOrbitRadius,0.0f);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> RadianAngle = FMath::DegreesToRadians(<a class="code hl_variable" href="class_a_d_t_companion.html#a6e459580333ddbec6f44cc13288a3703">CurrentOrbitAngle</a>);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keyword">const</span> FVector OrbitOffset = FVector(FMath::Cos(RadianAngle) * <a class="code hl_variable" href="class_a_d_t_companion.html#a1a67d6eebf44508005f2e51b31e4fb6f">CurrentOrbitRadius</a>,FMath::Sin(RadianAngle) * <a class="code hl_variable" href="class_a_d_t_companion.html#a1a67d6eebf44508005f2e51b31e4fb6f">CurrentOrbitRadius</a>,0.0f);</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#aadfbacb3594aa65f8415885df6b86880">bOrbitAroundActorLocation</a>)</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        {</div>
@@ -394,37 +397,41 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        }</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    }</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    DesiredLocation.Z += CalculateFloatOffset();</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    DesiredLocation.Z += <a class="code hl_function" href="class_a_d_t_companion.html#a2295582ab5b8794cd834907a783c96f7">CalculateFloatOffset</a>();</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">return</span> DesiredLocation;</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>}</div>
+</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="keywordtype">float</span> ADTCompanion::CalculateFloatOffset()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00249" data-start="{" data-end="}">
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="class_a_d_t_companion.html#a2295582ab5b8794cd834907a783c96f7">  249</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="class_a_d_t_companion.html#a2295582ab5b8794cd834907a783c96f7">ADTCompanion::CalculateFloatOffset</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_companion.html#a49b482fb256472c6ade480647c4ecd1e">bEnableFloating</a>)</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    {</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keywordflow">return</span> 0.0f;</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    }</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">return</span> FMath::Sin(FloatTimeAccumulator * <a class="code hl_variable" href="class_a_d_t_companion.html#ac27e3b3ca830c98185a2f78a884f80f8">FloatFrequency</a> * TWO_PI) * <a class="code hl_variable" href="class_a_d_t_companion.html#a880ed6d3cd9b20c01aaf2f4f7e3599d8">FloatAmplitude</a>;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">return</span> FMath::Sin(<a class="code hl_variable" href="class_a_d_t_companion.html#a051ec98972472133daddc51a53e4d76b">FloatTimeAccumulator</a> * <a class="code hl_variable" href="class_a_d_t_companion.html#ac27e3b3ca830c98185a2f78a884f80f8">FloatFrequency</a> * TWO_PI) * <a class="code hl_variable" href="class_a_d_t_companion.html#a880ed6d3cd9b20c01aaf2f4f7e3599d8">FloatAmplitude</a>;</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>}</div>
+</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="keywordtype">void</span> ADTCompanion::UpdateFollowMovement(<span class="keywordtype">float</span> DeltaTime)</div>
+<div class="foldopen" id="foldopen00259" data-start="{" data-end="}">
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="class_a_d_t_companion.html#ab624779a4a5637b3e323c1f24d4d13aa">  259</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_companion.html#ab624779a4a5637b3e323c1f24d4d13aa">ADTCompanion::UpdateFollowMovement</a>(<span class="keywordtype">float</span> DeltaTime)</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>{</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#a49b482fb256472c6ade480647c4ecd1e">bEnableFloating</a>)</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    {</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        FloatTimeAccumulator += DeltaTime;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <a class="code hl_variable" href="class_a_d_t_companion.html#a051ec98972472133daddc51a53e4d76b">FloatTimeAccumulator</a> += DeltaTime;</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    }</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keywordflow">if</span> (ShouldOrbit())</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_a_d_t_companion.html#ab09afeb5ca36fcf8b4b9d4e301e27e54">ShouldOrbit</a>())</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    {</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        CurrentOrbitAngle += <a class="code hl_variable" href="class_a_d_t_companion.html#ad45e0eb523a16d77b798c96ceb795885">OrbitSpeed</a> * DeltaTime;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">if</span> (CurrentOrbitAngle &gt;= 360.0f)</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <a class="code hl_variable" href="class_a_d_t_companion.html#a6e459580333ddbec6f44cc13288a3703">CurrentOrbitAngle</a> += <a class="code hl_variable" href="class_a_d_t_companion.html#ad45e0eb523a16d77b798c96ceb795885">OrbitSpeed</a> * DeltaTime;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#a6e459580333ddbec6f44cc13288a3703">CurrentOrbitAngle</a> &gt;= 360.0f)</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        {</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            CurrentOrbitAngle -= 360.0f;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            <a class="code hl_variable" href="class_a_d_t_companion.html#a6e459580333ddbec6f44cc13288a3703">CurrentOrbitAngle</a> -= 360.0f;</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        }</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        CurrentOrbitRadius = FMath::FInterpTo(CurrentOrbitRadius, <a class="code hl_variable" href="class_a_d_t_companion.html#ab0112ece8f8f677f0ed07176b2eeca5f">OrbitRadius</a>, DeltaTime, <a class="code hl_variable" href="class_a_d_t_companion.html#ac2a17adc2f87b4cb9aef5a843e31d191">MovementSpeed</a>);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <a class="code hl_variable" href="class_a_d_t_companion.html#a1a67d6eebf44508005f2e51b31e4fb6f">CurrentOrbitRadius</a> = FMath::FInterpTo(<a class="code hl_variable" href="class_a_d_t_companion.html#a1a67d6eebf44508005f2e51b31e4fb6f">CurrentOrbitRadius</a>, <a class="code hl_variable" href="class_a_d_t_companion.html#ab0112ece8f8f677f0ed07176b2eeca5f">OrbitRadius</a>, DeltaTime, <a class="code hl_variable" href="class_a_d_t_companion.html#ac2a17adc2f87b4cb9aef5a843e31d191">MovementSpeed</a>);</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    }</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#a9ce9dd009d9f9f8714542a286985550b">bOrbitOnlyWhenTargetIdle</a> &amp;&amp; <a class="code hl_variable" href="class_a_d_t_companion.html#aebc448190b6d1448704a1e7c83c59e8d">FollowTarget</a>)</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    {</div>
@@ -432,12 +439,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keyword">const</span> FVector ToCompanionXY = FVector(ToCompanion.X, ToCompanion.Y, 0.0f);</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <span class="keywordflow">if</span> (!ToCompanionXY.IsNearlyZero())</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        {</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            CurrentOrbitAngle = FMath::RadiansToDegrees(FMath::Atan2(ToCompanionXY.Y, ToCompanionXY.X));</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            CurrentOrbitRadius = ToCompanionXY.Size();</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            <a class="code hl_variable" href="class_a_d_t_companion.html#a6e459580333ddbec6f44cc13288a3703">CurrentOrbitAngle</a> = FMath::RadiansToDegrees(FMath::Atan2(ToCompanionXY.Y, ToCompanionXY.X));</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <a class="code hl_variable" href="class_a_d_t_companion.html#a1a67d6eebf44508005f2e51b31e4fb6f">CurrentOrbitRadius</a> = ToCompanionXY.Size();</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        }</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    }</div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keyword">const</span> FVector DesiredLocation = CalculateDesiredLocation();</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keyword">const</span> FVector DesiredLocation = <a class="code hl_function" href="class_a_d_t_companion.html#afe3483770224ea06beb9bcbe714d0a4c">CalculateDesiredLocation</a>();</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keyword">const</span> FVector CurrentLocation = GetActorLocation();</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    FVector NewLocation;</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
@@ -446,7 +453,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        NewLocation = UKismetMathLibrary::VectorSpringInterp(</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            CurrentLocation,</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            DesiredLocation,</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            SpringVelocity,</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            <a class="code hl_variable" href="class_a_d_t_companion.html#ab436e5412ca0bbba6e2eaaf4b3beb4f0">SpringVelocity</a>,</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            <a class="code hl_variable" href="class_a_d_t_companion.html#adbdd6928e1630e72a4be4a86fa154dbf">SpringStiffness</a>,</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            <a class="code hl_variable" href="class_a_d_t_companion.html#aa1fab107d9ba07c0829509c249af0aac">SpringDamping</a>,</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            DeltaTime,</div>
@@ -460,15 +467,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    </div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#a3c0380442160937d9d24dbe2fae4ffa7">bPreventWallClipping</a>)</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    {</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <span class="keywordflow">if</span> (WallClipDisabledTimeRemaining &gt; 0.0f)</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#af1e87e4e89e8a3be6eb39e061666f680">WallClipDisabledTimeRemaining</a> &gt; 0.0f)</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        {</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            WallClipDisabledTimeRemaining = FMath::Max(0.0f, WallClipDisabledTimeRemaining - DeltaTime);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            <a class="code hl_variable" href="class_a_d_t_companion.html#af1e87e4e89e8a3be6eb39e061666f680">WallClipDisabledTimeRemaining</a> = FMath::Max(0.0f, <a class="code hl_variable" href="class_a_d_t_companion.html#af1e87e4e89e8a3be6eb39e061666f680">WallClipDisabledTimeRemaining</a> - DeltaTime);</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        }</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <span class="keywordtype">bool</span> bWasBlocked = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="keywordflow">if</span> (WallClipDisabledTimeRemaining &lt;= 0.0f)</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#af1e87e4e89e8a3be6eb39e061666f680">WallClipDisabledTimeRemaining</a> &lt;= 0.0f)</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        {</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            NewLocation = ApplyWallClipPrevention(CurrentLocation, NewLocation, bWasBlocked);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            NewLocation = <a class="code hl_function" href="class_a_d_t_companion.html#a9dd7fb45020fcc73a75200c2b45ff5d0">ApplyWallClipPrevention</a>(CurrentLocation, NewLocation, bWasBlocked);</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        }</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_d_t_companion.html#a630a3287888cf7d5477a844e52c8a1af">bEnableWallClipFallback</a> &amp;&amp; bWasBlocked)</div>
@@ -476,16 +483,18 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            <span class="keyword">const</span> <span class="keywordtype">float</span> DistanceToDesired = FVector::Dist(CurrentLocation, DesiredLocation);</div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            <span class="keywordflow">if</span> (DistanceToDesired &gt; <a class="code hl_variable" href="class_a_d_t_companion.html#ae68001e4d1e62e5e4bed16a55e1d7bca">WallClipDisableDistance</a>)</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            {</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                WallClipDisabledTimeRemaining = <a class="code hl_variable" href="class_a_d_t_companion.html#a721030bd8a9e2a88bd6f16def7ad7417">WallClipDisableDuration</a>;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                <a class="code hl_variable" href="class_a_d_t_companion.html#af1e87e4e89e8a3be6eb39e061666f680">WallClipDisabledTimeRemaining</a> = <a class="code hl_variable" href="class_a_d_t_companion.html#a721030bd8a9e2a88bd6f16def7ad7417">WallClipDisableDuration</a>;</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            }</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        }   </div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    }</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    SetActorLocation(NewLocation);</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    UpdateRotation(DeltaTime, DesiredLocation);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <a class="code hl_function" href="class_a_d_t_companion.html#ae87e070ef0f78bedaa923d18e103dce7">UpdateRotation</a>(DeltaTime, DesiredLocation);</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>}</div>
+</div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>FVector ADTCompanion::ApplyWallClipPrevention(<span class="keyword">const</span> FVector&amp; CurrentLocation, <span class="keyword">const</span> FVector&amp; DesiredTargetLocation, <span class="keywordtype">bool</span>&amp; bBlocked)<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00335" data-start="{" data-end="}">
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="class_a_d_t_companion.html#a9dd7fb45020fcc73a75200c2b45ff5d0">  335</a></span>FVector <a class="code hl_function" href="class_a_d_t_companion.html#a9dd7fb45020fcc73a75200c2b45ff5d0">ADTCompanion::ApplyWallClipPrevention</a>(<span class="keyword">const</span> FVector&amp; CurrentLocation, <span class="keyword">const</span> FVector&amp; DesiredTargetLocation, <span class="keywordtype">bool</span>&amp; bBlocked)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    bBlocked = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
@@ -530,8 +539,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    <span class="keywordflow">return</span> SlideTarget;</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>}</div>
+</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="keywordtype">void</span> ADTCompanion::UpdateRotation(<span class="keywordtype">float</span> DeltaTime, <span class="keyword">const</span> FVector&amp; DesiredLocation)</div>
+<div class="foldopen" id="foldopen00381" data-start="{" data-end="}">
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno"><a class="line" href="class_a_d_t_companion.html#ae87e070ef0f78bedaa923d18e103dce7">  381</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_d_t_companion.html#ae87e070ef0f78bedaa923d18e103dce7">ADTCompanion::UpdateRotation</a>(<span class="keywordtype">float</span> DeltaTime, <span class="keyword">const</span> FVector&amp; DesiredLocation)</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>{</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    <span class="keyword">const</span> FVector CurrentLocation = GetActorLocation();</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <span class="keyword">const</span> FVector DirectionToTarget = (DesiredLocation - CurrentLocation).GetSafeNormal();</div>
@@ -545,8 +556,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        SetActorRotation(NewRotation);</div>
 <div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    }</div>
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>}</div>
+</div>
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="keywordtype">bool</span> ADTCompanion::ShouldOrbit()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00396" data-start="{" data-end="}">
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno"><a class="line" href="class_a_d_t_companion.html#ab09afeb5ca36fcf8b4b9d4e301e27e54">  396</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_d_t_companion.html#ab09afeb5ca36fcf8b4b9d4e301e27e54">ADTCompanion::ShouldOrbit</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_a_d_t_companion.html#a282e7d42f8db91b37e815b695e7b9cc4">bEnableOrbit</a> || !<a class="code hl_variable" href="class_a_d_t_companion.html#aebc448190b6d1448704a1e7c83c59e8d">FollowTarget</a> || <a class="code hl_variable" href="class_a_d_t_companion.html#af127f7633a52f527f5e961cbe85a5b0f">bIsGoingToLocation</a>)</div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    {</div>
@@ -561,10 +574,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> TargetSpeedSq = <a class="code hl_variable" href="class_a_d_t_companion.html#aebc448190b6d1448704a1e7c83c59e8d">FollowTarget</a>-&gt;GetVelocity().SizeSquared();</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    <span class="keywordflow">return</span> TargetSpeedSq &lt;= FMath::Square(<a class="code hl_variable" href="class_a_d_t_companion.html#a7ee0c83beb0d416b6878cbdaf30f1a4d">OrbitIdleSpeedThreshold</a>);</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>}</div>
+</div>
 <div class="ttc" id="a_d_t_companion_8h_html"><div class="ttname"><a href="_d_t_companion_8h.html">DTCompanion.h</a></div></div>
 <div class="ttc" id="a_d_t_companion_target_interface_8h_html"><div class="ttname"><a href="_d_t_companion_target_interface_8h.html">DTCompanionTargetInterface.h</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_a051ec98972472133daddc51a53e4d76b"><div class="ttname"><a href="class_a_d_t_companion.html#a051ec98972472133daddc51a53e4d76b">ADTCompanion::FloatTimeAccumulator</a></div><div class="ttdeci">float FloatTimeAccumulator</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00184">DTCompanion.h:184</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a17b758986285286ca600dc3f22dba3c4"><div class="ttname"><a href="class_a_d_t_companion.html#a17b758986285286ca600dc3f22dba3c4">ADTCompanion::bResumeFollowingAfterReachingTarget</a></div><div class="ttdeci">bool bResumeFollowingAfterReachingTarget</div><div class="ttdoc">Whether to resume following after reaching the target location.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00079">DTCompanion.h:79</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_a1a67d6eebf44508005f2e51b31e4fb6f"><div class="ttname"><a href="class_a_d_t_companion.html#a1a67d6eebf44508005f2e51b31e4fb6f">ADTCompanion::CurrentOrbitRadius</a></div><div class="ttdeci">float CurrentOrbitRadius</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00186">DTCompanion.h:186</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a20f210cda3014760d994c65dc0df0b00"><div class="ttname"><a href="class_a_d_t_companion.html#a20f210cda3014760d994c65dc0df0b00">ADTCompanion::RotationSpeed</a></div><div class="ttdeci">float RotationSpeed</div><div class="ttdoc">How quickly the companion rotates to face movement direction (higher = faster, used when spring rotat...</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00095">DTCompanion.h:95</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_a2295582ab5b8794cd834907a783c96f7"><div class="ttname"><a href="class_a_d_t_companion.html#a2295582ab5b8794cd834907a783c96f7">ADTCompanion::CalculateFloatOffset</a></div><div class="ttdeci">float CalculateFloatOffset() const</div><div class="ttdef"><b>Definition</b> <a href="#l00249">DTCompanion.cpp:249</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a282e7d42f8db91b37e815b695e7b9cc4"><div class="ttname"><a href="class_a_d_t_companion.html#a282e7d42f8db91b37e815b695e7b9cc4">ADTCompanion::bEnableOrbit</a></div><div class="ttdeci">bool bEnableOrbit</div><div class="ttdoc">Enable orbiting around the target.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00127">DTCompanion.h:127</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a29bc2963952ec7b2cd08880e2da29e41"><div class="ttname"><a href="class_a_d_t_companion.html#a29bc2963952ec7b2cd08880e2da29e41">ADTCompanion::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="#l00083">DTCompanion.cpp:83</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a3c0380442160937d9d24dbe2fae4ffa7"><div class="ttname"><a href="class_a_d_t_companion.html#a3c0380442160937d9d24dbe2fae4ffa7">ADTCompanion::bPreventWallClipping</a></div><div class="ttdeci">bool bPreventWallClipping</div><div class="ttdoc">Enable wall clipping prevention via sweep checks.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00151">DTCompanion.h:151</a></div></div>
@@ -573,6 +590,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="ttc" id="aclass_a_d_t_companion_html_a49b482fb256472c6ade480647c4ecd1e"><div class="ttname"><a href="class_a_d_t_companion.html#a49b482fb256472c6ade480647c4ecd1e">ADTCompanion::bEnableFloating</a></div><div class="ttdeci">bool bEnableFloating</div><div class="ttdoc">Enable floating/bobbing motion.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00115">DTCompanion.h:115</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a54b22483e6f1877c2b664e25060a8b9d"><div class="ttname"><a href="class_a_d_t_companion.html#a54b22483e6f1877c2b664e25060a8b9d">ADTCompanion::CompanionRoot</a></div><div class="ttdeci">TObjectPtr&lt; USceneComponent &gt; CompanionRoot</div><div class="ttdoc">Root component for the companion.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00055">DTCompanion.h:55</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a630a3287888cf7d5477a844e52c8a1af"><div class="ttname"><a href="class_a_d_t_companion.html#a630a3287888cf7d5477a844e52c8a1af">ADTCompanion::bEnableWallClipFallback</a></div><div class="ttdeci">bool bEnableWallClipFallback</div><div class="ttdoc">Temporarily disable wall clipping if stuck too far from target.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00167">DTCompanion.h:167</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_a6e459580333ddbec6f44cc13288a3703"><div class="ttname"><a href="class_a_d_t_companion.html#a6e459580333ddbec6f44cc13288a3703">ADTCompanion::CurrentOrbitAngle</a></div><div class="ttdeci">float CurrentOrbitAngle</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00185">DTCompanion.h:185</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a721030bd8a9e2a88bd6f16def7ad7417"><div class="ttname"><a href="class_a_d_t_companion.html#a721030bd8a9e2a88bd6f16def7ad7417">ADTCompanion::WallClipDisableDuration</a></div><div class="ttdeci">float WallClipDisableDuration</div><div class="ttdoc">Duration to disable wall clipping when fallback triggers.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00175">DTCompanion.h:175</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a7303b0a8dfc48e300b7b1a28204cf046"><div class="ttname"><a href="class_a_d_t_companion.html#a7303b0a8dfc48e300b7b1a28204cf046">ADTCompanion::SetFollowTarget</a></div><div class="ttdeci">void SetFollowTarget(AActor *NewTarget)</div><div class="ttdoc">Set the actor this companion should follow.</div><div class="ttdef"><b>Definition</b> <a href="#l00128">DTCompanion.cpp:128</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a735813b1733a6983446aed16f1ef06bf"><div class="ttname"><a href="class_a_d_t_companion.html#a735813b1733a6983446aed16f1ef06bf">ADTCompanion::TargetLocation</a></div><div class="ttdeci">FVector TargetLocation</div><div class="ttdoc">Target location when using GoToLocation command.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00071">DTCompanion.h:71</a></div></div>
@@ -586,11 +604,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="ttc" id="aclass_a_d_t_companion_html_a9059bec39b362fe336dc7e87113bce40"><div class="ttname"><a href="class_a_d_t_companion.html#a9059bec39b362fe336dc7e87113bce40">ADTCompanion::GetLifetimeReplicatedProps</a></div><div class="ttdeci">virtual void GetLifetimeReplicatedProps(TArray&lt; FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00072">DTCompanion.cpp:72</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a90e33f413da068b1df127697385d490c"><div class="ttname"><a href="class_a_d_t_companion.html#a90e33f413da068b1df127697385d490c">ADTCompanion::FollowOffset</a></div><div class="ttdeci">FVector FollowOffset</div><div class="ttdoc">Offset from the target actor (in target&#39;s local space).</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00087">DTCompanion.h:87</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_a9ce9dd009d9f9f8714542a286985550b"><div class="ttname"><a href="class_a_d_t_companion.html#a9ce9dd009d9f9f8714542a286985550b">ADTCompanion::bOrbitOnlyWhenTargetIdle</a></div><div class="ttdeci">bool bOrbitOnlyWhenTargetIdle</div><div class="ttdoc">Only orbit when the follow target is idle (zero/low velocity).</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00131">DTCompanion.h:131</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_a9dd7fb45020fcc73a75200c2b45ff5d0"><div class="ttname"><a href="class_a_d_t_companion.html#a9dd7fb45020fcc73a75200c2b45ff5d0">ADTCompanion::ApplyWallClipPrevention</a></div><div class="ttdeci">FVector ApplyWallClipPrevention(const FVector &amp;CurrentLocation, const FVector &amp;DesiredTargetLocation, bool &amp;bBlocked) const</div><div class="ttdef"><b>Definition</b> <a href="#l00335">DTCompanion.cpp:335</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_aa1fab107d9ba07c0829509c249af0aac"><div class="ttname"><a href="class_a_d_t_companion.html#aa1fab107d9ba07c0829509c249af0aac">ADTCompanion::SpringDamping</a></div><div class="ttdeci">float SpringDamping</div><div class="ttdoc">Spring damping - how much it resists oscillation (0-1 range typical).</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00107">DTCompanion.h:107</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_aa34ffaeec916fad2380ac934fc1766e3"><div class="ttname"><a href="class_a_d_t_companion.html#aa34ffaeec916fad2380ac934fc1766e3">ADTCompanion::SetFollowEnabled</a></div><div class="ttdeci">void SetFollowEnabled(bool bEnabled)</div><div class="ttdoc">Enable or disable following behavior.</div><div class="ttdef"><b>Definition</b> <a href="#l00139">DTCompanion.cpp:139</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_aadfbacb3594aa65f8415885df6b86880"><div class="ttname"><a href="class_a_d_t_companion.html#aadfbacb3594aa65f8415885df6b86880">ADTCompanion::bOrbitAroundActorLocation</a></div><div class="ttdeci">bool bOrbitAroundActorLocation</div><div class="ttdoc">Flag to use the actor location instead of overriden one.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00135">DTCompanion.h:135</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_aae1272647a19292b8f523e8411545120"><div class="ttname"><a href="class_a_d_t_companion.html#aae1272647a19292b8f523e8411545120">ADTCompanion::ADTCompanion</a></div><div class="ttdeci">ADTCompanion()</div><div class="ttdef"><b>Definition</b> <a href="#l00014">DTCompanion.cpp:14</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_ab0112ece8f8f677f0ed07176b2eeca5f"><div class="ttname"><a href="class_a_d_t_companion.html#ab0112ece8f8f677f0ed07176b2eeca5f">ADTCompanion::OrbitRadius</a></div><div class="ttdeci">float OrbitRadius</div><div class="ttdoc">Orbit radius.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00147">DTCompanion.h:147</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_ab09afeb5ca36fcf8b4b9d4e301e27e54"><div class="ttname"><a href="class_a_d_t_companion.html#ab09afeb5ca36fcf8b4b9d4e301e27e54">ADTCompanion::ShouldOrbit</a></div><div class="ttdeci">bool ShouldOrbit() const</div><div class="ttdef"><b>Definition</b> <a href="#l00396">DTCompanion.cpp:396</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_ab436e5412ca0bbba6e2eaaf4b3beb4f0"><div class="ttname"><a href="class_a_d_t_companion.html#ab436e5412ca0bbba6e2eaaf4b3beb4f0">ADTCompanion::SpringVelocity</a></div><div class="ttdeci">FVectorSpringState SpringVelocity</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00182">DTCompanion.h:182</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_ab624779a4a5637b3e323c1f24d4d13aa"><div class="ttname"><a href="class_a_d_t_companion.html#ab624779a4a5637b3e323c1f24d4d13aa">ADTCompanion::UpdateFollowMovement</a></div><div class="ttdeci">void UpdateFollowMovement(float DeltaTime)</div><div class="ttdef"><b>Definition</b> <a href="#l00259">DTCompanion.cpp:259</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_aba7385428a9333d5b4b923632f0a1958"><div class="ttname"><a href="class_a_d_t_companion.html#aba7385428a9333d5b4b923632f0a1958">ADTCompanion::ResumeFollowing</a></div><div class="ttdeci">void ResumeFollowing()</div><div class="ttdoc">Command the companion to resume following its target (cancels GoToLocation).</div><div class="ttdef"><b>Definition</b> <a href="#l00169">DTCompanion.cpp:169</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_ac27e3b3ca830c98185a2f78a884f80f8"><div class="ttname"><a href="class_a_d_t_companion.html#ac27e3b3ca830c98185a2f78a884f80f8">ADTCompanion::FloatFrequency</a></div><div class="ttdeci">float FloatFrequency</div><div class="ttdoc">Frequency of floating motion (cycles per second).</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00123">DTCompanion.h:123</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_ac2a17adc2f87b4cb9aef5a843e31d191"><div class="ttname"><a href="class_a_d_t_companion.html#ac2a17adc2f87b4cb9aef5a843e31d191">ADTCompanion::MovementSpeed</a></div><div class="ttdeci">float MovementSpeed</div><div class="ttdoc">How quickly the companion moves to the target location (higher = faster).</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00091">DTCompanion.h:91</a></div></div>
@@ -600,10 +622,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_companion
 <div class="ttc" id="aclass_a_d_t_companion_html_adef9f0a85dea2a7a6257169573550e6f"><div class="ttname"><a href="class_a_d_t_companion.html#adef9f0a85dea2a7a6257169573550e6f">ADTCompanion::SpringMass</a></div><div class="ttdeci">float SpringMass</div><div class="ttdoc">Spring mass - affects inertia of movement.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00111">DTCompanion.h:111</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_ae4f6438ebee4e0a7b65d185bbdfd98e2"><div class="ttname"><a href="class_a_d_t_companion.html#ae4f6438ebee4e0a7b65d185bbdfd98e2">ADTCompanion::bSlideAlongWalls</a></div><div class="ttdeci">bool bSlideAlongWalls</div><div class="ttdoc">Slide along walls when a sweep hits.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00155">DTCompanion.h:155</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_ae68001e4d1e62e5e4bed16a55e1d7bca"><div class="ttname"><a href="class_a_d_t_companion.html#ae68001e4d1e62e5e4bed16a55e1d7bca">ADTCompanion::WallClipDisableDistance</a></div><div class="ttdeci">float WallClipDisableDistance</div><div class="ttdoc">Distance from desired location that triggers temporary disable.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00171">DTCompanion.h:171</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_ae87e070ef0f78bedaa923d18e103dce7"><div class="ttname"><a href="class_a_d_t_companion.html#ae87e070ef0f78bedaa923d18e103dce7">ADTCompanion::UpdateRotation</a></div><div class="ttdeci">void UpdateRotation(float DeltaTime, const FVector &amp;DesiredLocation)</div><div class="ttdef"><b>Definition</b> <a href="#l00381">DTCompanion.cpp:381</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_aebc448190b6d1448704a1e7c83c59e8d"><div class="ttname"><a href="class_a_d_t_companion.html#aebc448190b6d1448704a1e7c83c59e8d">ADTCompanion::FollowTarget</a></div><div class="ttdeci">TObjectPtr&lt; AActor &gt; FollowTarget</div><div class="ttdoc">The actor to follow.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00063">DTCompanion.h:63</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_aebfd66ff0430df3680ddd272714112ac"><div class="ttname"><a href="class_a_d_t_companion.html#aebfd66ff0430df3680ddd272714112ac">ADTCompanion::WallClipHitOffset</a></div><div class="ttdeci">float WallClipHitOffset</div><div class="ttdoc">Offset applied away from hit surface to avoid embedding.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00163">DTCompanion.h:163</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_aed50479170f8a8a2e40036c382d9c7a9"><div class="ttname"><a href="class_a_d_t_companion.html#aed50479170f8a8a2e40036c382d9c7a9">ADTCompanion::Tick</a></div><div class="ttdeci">virtual void Tick(float DeltaTime) override</div><div class="ttdef"><b>Definition</b> <a href="#l00091">DTCompanion.cpp:91</a></div></div>
 <div class="ttc" id="aclass_a_d_t_companion_html_af127f7633a52f527f5e961cbe85a5b0f"><div class="ttname"><a href="class_a_d_t_companion.html#af127f7633a52f527f5e961cbe85a5b0f">ADTCompanion::bIsGoingToLocation</a></div><div class="ttdeci">bool bIsGoingToLocation</div><div class="ttdoc">Whether the companion is currently going to a commanded location.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00075">DTCompanion.h:75</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_af1e87e4e89e8a3be6eb39e061666f680"><div class="ttname"><a href="class_a_d_t_companion.html#af1e87e4e89e8a3be6eb39e061666f680">ADTCompanion::WallClipDisabledTimeRemaining</a></div><div class="ttdeci">float WallClipDisabledTimeRemaining</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_8h_source.html#l00188">DTCompanion.h:188</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_afc929290de634ce8c0e683a061dfa066"><div class="ttname"><a href="class_a_d_t_companion.html#afc929290de634ce8c0e683a061dfa066">ADTCompanion::ResetSpring</a></div><div class="ttdeci">void ResetSpring()</div><div class="ttdef"><b>Definition</b> <a href="#l00120">DTCompanion.cpp:120</a></div></div>
+<div class="ttc" id="aclass_a_d_t_companion_html_afe3483770224ea06beb9bcbe714d0a4c"><div class="ttname"><a href="class_a_d_t_companion.html#afe3483770224ea06beb9bcbe714d0a4c">ADTCompanion::CalculateDesiredLocation</a></div><div class="ttdeci">FVector CalculateDesiredLocation() const</div><div class="ttdef"><b>Definition</b> <a href="#l00192">DTCompanion.cpp:192</a></div></div>
+<div class="ttc" id="aclass_u_d_t_companion_target_interface_html"><div class="ttname"><a href="class_u_d_t_companion_target_interface.html">UDTCompanionTargetInterface</a></div><div class="ttdoc">Interface for actors that can serve as a companion follow target.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_companion_target_interface_8h_source.html#l00014">DTCompanionTargetInterface.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

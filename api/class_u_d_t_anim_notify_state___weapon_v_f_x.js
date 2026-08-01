@@ -1,6 +1,7 @@
 var class_u_d_t_anim_notify_state___weapon_v_f_x =
 [
     [ "UDTAnimNotifyState_WeaponVFX", "class_u_d_t_anim_notify_state___weapon_v_f_x.html#abac1e649c703e77b76b943a41069eb26", null ],
+    [ "ApplyVFXParams", "class_u_d_t_anim_notify_state___weapon_v_f_x.html#aac32285317e082e1ac02587469201a5c", null ],
     [ "GetNotifyName_Implementation", "class_u_d_t_anim_notify_state___weapon_v_f_x.html#a01df9a1c950cbd0899d4f2a9f4c419e8", null ],
     [ "NotifyBegin", "class_u_d_t_anim_notify_state___weapon_v_f_x.html#ae678ae8e2b8f1d48ffe6a614f0af28e7", null ],
     [ "ColorParamName", "class_u_d_t_anim_notify_state___weapon_v_f_x.html#ac31c5c5a7e63dfaac55bc9a60296f0bf", null ],

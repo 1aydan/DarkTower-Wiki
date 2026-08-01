@@ -185,12 +185,98 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a6f417129686c1a0567fd05c06611bc8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default multiplier used when target tags do not match any configured entry.  <br /></td></tr>
 <tr class="memitem:a8fec3f91a94f1815a0044d5b4ddcf713" id="r_a8fec3f91a94f1815a0044d5b4ddcf713"><td class="memItemLeft">TMap&lt; FGameplayTag, float &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8fec3f91a94f1815a0044d5b4ddcf713">KillExperienceMultipliersByTargetTag</a></td></tr>
 <tr class="memdesc:a8fec3f91a94f1815a0044d5b4ddcf713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional target-tag multipliers for kill XP (for example: Enemy.Tier.Boss = 5.0).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a9f77007c8443658b61d1e045158ccbfa" id="r_a9f77007c8443658b61d1e045158ccbfa"><td class="memItemLeft">static FName&#160;</td><td class="memItemRight"><a class="el" href="#a9f77007c8443658b61d1e045158ccbfa">GetTravelMapName</a> (const <a class="el" href="struct_f_d_t_biome_floor_definition.html">FDTBiomeFloorDefinition</a> &amp;FloorDefinition)</td></tr>
+<tr class="memitem:ac73df87307df5fa8a9fb7d89c9d84f67" id="r_ac73df87307df5fa8a9fb7d89c9d84f67"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac73df87307df5fa8a9fb7d89c9d84f67">ApplyCampaignSettings</a> (const <a class="el" href="class_u_d_t_campaign_definition.html">UDTCampaignDefinition</a> *CampaignData, const <a class="el" href="struct_f_d_t_host_config.html">FDTHostConfig</a> &amp;SanitizedConfig, <a class="el" href="struct_f_d_t_dungeon_settings.html">FDTDungeonSettings</a> &amp;OutSettings)</td></tr>
+<tr class="memitem:abd0752b39641762a8a2035a9d90751cb" id="r_abd0752b39641762a8a2035a9d90751cb"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#abd0752b39641762a8a2035a9d90751cb">ApplyEndgameSettings</a> (const <a class="el" href="class_u_d_t_endgame_definition.html">UDTEndgameDefinition</a> *EndgameDefinition, const <a class="el" href="struct_f_d_t_host_config.html">FDTHostConfig</a> &amp;SanitizedConfig, <a class="el" href="struct_f_d_t_dungeon_settings.html">FDTDungeonSettings</a> &amp;OutSettings)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Global data for player progression. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_progression_data_8h_source.html#l00021">21</a> of file <a class="el" href="_d_t_progression_data_8h_source.html">DTProgressionData.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac73df87307df5fa8a9fb7d89c9d84f67" name="ac73df87307df5fa8a9fb7d89c9d84f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac73df87307df5fa8a9fb7d89c9d84f67">&#9670;&#160;</a></span>ApplyCampaignSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTProgressionData::ApplyCampaignSettings </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_u_d_t_campaign_definition.html">UDTCampaignDefinition</a> *</td>          <td class="paramname"><span class="paramname"><em>CampaignData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_host_config.html">FDTHostConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>SanitizedConfig</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_f_d_t_dungeon_settings.html">FDTDungeonSettings</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>OutSettings</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_progression_data_8cpp_source.html#l00134">134</a> of file <a class="el" href="_d_t_progression_data_8cpp_source.html">DTProgressionData.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_progression_types_8h_source.html#l00099">FDTDungeonSettings::BiomeFloor</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00102">FDTDungeonSettings::DungeonSeed</a>, <a class="el" href="_data_types_8h_source.html#l00111">FDTHostConfig::DungeonSeed</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00109">FDTDungeonSettings::FloorDisplayName</a>, <a class="el" href="_d_t_game_mode_definition_8h_source.html#l00022">UDTGameModeDefinition::GameModeTag</a>, <a class="el" href="_d_t_campaign_definition_8cpp_source.html#l00026">UDTCampaignDefinition::GetFloorDefinitionForGlobalFloor()</a>, <a class="el" href="_d_t_progression_data_8cpp_source.html#l00124">GetTravelMapName()</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00090">FDTDungeonSettings::ModeDefinitionGuid</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00087">FDTDungeonSettings::ModeDefinitionTag</a>, <a class="el" href="_data_types_8h_source.html#l00117">FDTHostConfig::ModeDefinitionTag</a>, <a class="el" href="_data_types_8h_source.html#l00108">FDTHostConfig::StartingFloor</a>, and <a class="el" href="_d_t_progression_types_8h_source.html#l00105">FDTDungeonSettings::TravelMapName</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_progression_data_8cpp_source.html#l00089">BuildDungeonSettingsFromConfig()</a>.</p>
+
+</div>
+</div>
+<a id="abd0752b39641762a8a2035a9d90751cb" name="abd0752b39641762a8a2035a9d90751cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd0752b39641762a8a2035a9d90751cb">&#9670;&#160;</a></span>ApplyEndgameSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTProgressionData::ApplyEndgameSettings </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_u_d_t_endgame_definition.html">UDTEndgameDefinition</a> *</td>          <td class="paramname"><span class="paramname"><em>EndgameDefinition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_host_config.html">FDTHostConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>SanitizedConfig</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_f_d_t_dungeon_settings.html">FDTDungeonSettings</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>OutSettings</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_progression_data_8cpp_source.html#l00150">150</a> of file <a class="el" href="_d_t_progression_data_8cpp_source.html">DTProgressionData.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_progression_types_8h_source.html#l00099">FDTDungeonSettings::BiomeFloor</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00102">FDTDungeonSettings::DungeonSeed</a>, <a class="el" href="_data_types_8h_source.html#l00111">FDTHostConfig::DungeonSeed</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00109">FDTDungeonSettings::FloorDisplayName</a>, <a class="el" href="_d_t_game_mode_definition_8h_source.html#l00022">UDTGameModeDefinition::GameModeTag</a>, <a class="el" href="_d_t_endgame_definition_8cpp_source.html#l00016">UDTEndgameDefinition::GetBiomeForFloor()</a>, <a class="el" href="_d_t_progression_data_8cpp_source.html#l00124">GetTravelMapName()</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00090">FDTDungeonSettings::ModeDefinitionGuid</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00087">FDTDungeonSettings::ModeDefinitionTag</a>, <a class="el" href="_data_types_8h_source.html#l00117">FDTHostConfig::ModeDefinitionTag</a>, <a class="el" href="_data_types_8h_source.html#l00108">FDTHostConfig::StartingFloor</a>, and <a class="el" href="_d_t_progression_types_8h_source.html#l00105">FDTDungeonSettings::TravelMapName</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_progression_data_8cpp_source.html#l00089">BuildDungeonSettingsFromConfig()</a>.</p>
+
+</div>
+</div>
 <a id="a006fc8f6b802db609d943ab01eda7833" name="a006fc8f6b802db609d943ab01eda7833"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a006fc8f6b802db609d943ab01eda7833">&#9670;&#160;</a></span>BuildDungeonSettingsFromConfig()</h2>
 
@@ -211,7 +297,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_progression_data_8cpp_source.html#l00089">89</a> of file <a class="el" href="_d_t_progression_data_8cpp_source.html">DTProgressionData.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_progression_types_8h_source.html#l00099">FDTDungeonSettings::BiomeFloor</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00093">FDTDungeonSettings::bMortalMode</a>, <a class="el" href="_data_types_8h_source.html#l00114">FDTHostConfig::bMortalMode</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00102">FDTDungeonSettings::DungeonSeed</a>, <a class="el" href="_data_types_8h_source.html#l00111">FDTHostConfig::DungeonSeed</a>, <a class="el" href="_d_t_progression_data_8h_source.html#l00093">FindGameModeDefinitionOfType()</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00096">FDTDungeonSettings::GlobalFloor</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00087">FDTDungeonSettings::ModeDefinitionTag</a>, <a class="el" href="_data_types_8h_source.html#l00117">FDTHostConfig::ModeDefinitionTag</a>, and <a class="el" href="_data_types_8h_source.html#l00108">FDTHostConfig::StartingFloor</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_progression_data_8cpp_source.html#l00134">ApplyCampaignSettings()</a>, <a class="el" href="_d_t_progression_data_8cpp_source.html#l00150">ApplyEndgameSettings()</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00099">FDTDungeonSettings::BiomeFloor</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00093">FDTDungeonSettings::bMortalMode</a>, <a class="el" href="_data_types_8h_source.html#l00114">FDTHostConfig::bMortalMode</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00102">FDTDungeonSettings::DungeonSeed</a>, <a class="el" href="_data_types_8h_source.html#l00111">FDTHostConfig::DungeonSeed</a>, <a class="el" href="_d_t_progression_data_8h_source.html#l00093">FindGameModeDefinitionOfType()</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00096">FDTDungeonSettings::GlobalFloor</a>, <a class="el" href="_d_t_progression_types_8h_source.html#l00087">FDTDungeonSettings::ModeDefinitionTag</a>, <a class="el" href="_data_types_8h_source.html#l00117">FDTHostConfig::ModeDefinitionTag</a>, and <a class="el" href="_data_types_8h_source.html#l00108">FDTHostConfig::StartingFloor</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_progression_data_8cpp_source.html#l00119">ResolveTravelMapNameForConfig()</a>, and <a class="el" href="_d_t_game_mode_8cpp_source.html#l00025">ADTGameMode::UpdateHostConfig()</a>.</p>
 
@@ -239,7 +325,7 @@ Public Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_progression_data_8h_source.html#l00027">GameModeDefinitions</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00158">UDTMapSetupWidget::GetActiveGameModeDefinition()</a>, and <a class="el" href="_d_t_gameplay_game_mode_8cpp_source.html#l00497">ADTGameplayGameMode::RespawnPlayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00158">UDTMapSetupWidget::GetActiveGameModeDefinition()</a>, <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00267">UDTMapSetupWidget::HandleTabContentCreated()</a>, and <a class="el" href="_d_t_gameplay_game_mode_8cpp_source.html#l00497">ADTGameplayGameMode::RespawnPlayer()</a>.</p>
 
 </div>
 </div>
@@ -296,6 +382,37 @@ template&lt;typename T&gt; </div>
 <p class="definition">Definition at line <a class="el" href="_d_t_progression_data_8cpp_source.html#l00050">50</a> of file <a class="el" href="_d_t_progression_data_8cpp_source.html">DTProgressionData.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_progression_data_8h_source.html#l00067">DefaultKillExperienceMultiplier</a>, and <a class="el" href="_d_t_progression_data_8h_source.html#l00071">KillExperienceMultipliersByTargetTag</a>.</p>
+
+</div>
+</div>
+<a id="a9f77007c8443658b61d1e045158ccbfa" name="a9f77007c8443658b61d1e045158ccbfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f77007c8443658b61d1e045158ccbfa">&#9670;&#160;</a></span>GetTravelMapName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FName UDTProgressionData::GetTravelMapName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_biome_floor_definition.html">FDTBiomeFloorDefinition</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>FloorDefinition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_progression_data_8cpp_source.html#l00124">124</a> of file <a class="el" href="_d_t_progression_data_8cpp_source.html">DTProgressionData.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_progression_types_8h_source.html#l00066">FDTBiomeFloorDefinition::DungeonLevel</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_progression_data_8cpp_source.html#l00134">ApplyCampaignSettings()</a>, and <a class="el" href="_d_t_progression_data_8cpp_source.html#l00150">ApplyEndgameSettings()</a>.</p>
 
 </div>
 </div>

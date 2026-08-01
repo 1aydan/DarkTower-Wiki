@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_tab_list_
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    Super::NativeConstruct();</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    SetupTabs();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_u_d_t_tab_list_widget.html#af7ab753113da72bac758228d0c0b6d4f">SetupTabs</a>();</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
 </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_tab_list_
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_struct" href="struct_f_tab_entry_info.html">FTabEntryInfo</a> TabInfo;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_f_tab_entry_info.html">FTabEntryInfo</a>* TabInfoPtr = <a class="code hl_function" href="class_u_d_t_tab_list_widget.html#aaad8d35d77a63e258b3fd5bdd2dd5e32">GetPreregisteredTabInfo</a>(TabNameID, TabInfo)</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        ? &amp;TabInfo</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        : PendingTabLabelInfoMap.Find(TabNameID);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        : <a class="code hl_variable" href="class_u_d_t_tab_list_widget.html#ab481b2dd54ac20d86a3d7eded63298b9">PendingTabLabelInfoMap</a>.Find(TabNameID);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (TabButton-&gt;GetClass()-&gt;ImplementsInterface(UTabButtonInterface::StaticClass()))</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_tab_list_
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    PendingTabLabelInfoMap.Remove(TabNameID);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_variable" href="class_u_d_t_tab_list_widget.html#ab481b2dd54ac20d86a3d7eded63298b9">PendingTabLabelInfoMap</a>.Remove(TabNameID);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_variable" href="class_u_d_t_tab_list_widget.html#af9d2ab8d521aec1e07a78bea4213323e">HB_TabButtonContainer</a>-&gt;AddChildToHorizontalBox(TabButton);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_tab_list_
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>{</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">if</span> (!IsDesignTime() &amp;&amp; GetCachedWidget().IsValid())</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        SetupTabs();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="class_u_d_t_tab_list_widget.html#af7ab753113da72bac758228d0c0b6d4f">SetupTabs</a>();</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    Super::HandlePostLinkedSwitcherChanged();</div>
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_tab_list_
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    PendingTabLabelInfoMap.Add(EntryInfo.<a class="code hl_variable" href="struct_f_tab_entry_info.html#aae859503f38b2e704309a1284ab92aab">TabId</a>, EntryInfo);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <a class="code hl_variable" href="class_u_d_t_tab_list_widget.html#ab481b2dd54ac20d86a3d7eded63298b9">PendingTabLabelInfoMap</a>.Add(EntryInfo.<a class="code hl_variable" href="struct_f_tab_entry_info.html#aae859503f38b2e704309a1284ab92aab">TabId</a>, EntryInfo);</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    </div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">if</span> (!EntryInfo.<a class="code hl_variable" href="struct_f_tab_entry_info.html#a2bc8266798bb6f024851fb430f4e544f">CreatedTabContentWidget</a> &amp;&amp; EntryInfo.<a class="code hl_variable" href="struct_f_tab_entry_info.html#a2b8b1f89bf9987bb084607b68a0f2a90">TabContentType</a>)</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    {</div>
@@ -359,7 +359,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_tab_list_
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>}</div>
 </div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="keywordtype">void</span> UDTTabListWidget::SetupTabs()</div>
+<div class="foldopen" id="foldopen00201" data-start="{" data-end="}">
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="class_u_d_t_tab_list_widget.html#af7ab753113da72bac758228d0c0b6d4f">  201</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_tab_list_widget.html#af7ab753113da72bac758228d0c0b6d4f">UDTTabListWidget::SetupTabs</a>()</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>{</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">for</span> (<a class="code hl_struct" href="struct_f_tab_entry_info.html">FTabEntryInfo</a>&amp; TabInfo : <a class="code hl_variable" href="class_u_d_t_tab_list_widget.html#ae1c81896654491e3b46e786e69d6095f">PreregisteredTabInfoArray</a>)</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    {</div>
@@ -391,6 +392,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_tab_list_
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        }</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    }</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>}</div>
+</div>
 <div class="ttc" id="a_d_t_tab_list_widget_8h_html"><div class="ttname"><a href="_d_t_tab_list_widget_8h.html">DTTabListWidget.h</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_a00a7a70bfe72206f7253e18ab9ef8d1d"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#a00a7a70bfe72206f7253e18ab9ef8d1d">UDTTabListWidget::NativeDestruct</a></div><div class="ttdeci">virtual void NativeDestruct() override</div><div class="ttdef"><b>Definition</b> <a href="#l00026">DTTabListWidget.cpp:26</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_a0f7a9fc16480372ea7657c9309034c63"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#a0f7a9fc16480372ea7657c9309034c63">UDTTabListWidget::IsLastTabActive</a></div><div class="ttdeci">bool IsLastTabActive() const</div><div class="ttdef"><b>Definition</b> <a href="#l00163">DTTabListWidget.cpp:163</a></div></div>
@@ -405,12 +407,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_tab_list_
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_a9f8f6a394efa39cef31f6580ded10fcc"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#a9f8f6a394efa39cef31f6580ded10fcc">UDTTabListWidget::AW_TabRight</a></div><div class="ttdeci">TObjectPtr&lt; UCommonActionWidget &gt; AW_TabRight</div><div class="ttdef"><b>Definition</b> <a href="_d_t_tab_list_widget_8h_source.html#l00117">DTTabListWidget.h:117</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_aaad8d35d77a63e258b3fd5bdd2dd5e32"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#aaad8d35d77a63e258b3fd5bdd2dd5e32">UDTTabListWidget::GetPreregisteredTabInfo</a></div><div class="ttdeci">bool GetPreregisteredTabInfo(const FName TabNameId, FTabEntryInfo &amp;OutTabInfo)</div><div class="ttdef"><b>Definition</b> <a href="#l00091">DTTabListWidget.cpp:91</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_ab406500bfd4f2c130529dc3a82eba847"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#ab406500bfd4f2c130529dc3a82eba847">UDTTabListWidget::RegisterDynamicTab</a></div><div class="ttdeci">bool RegisterDynamicTab(const FTabEntryInfo &amp;TabDescriptor)</div><div class="ttdef"><b>Definition</b> <a href="#l00119">DTTabListWidget.cpp:119</a></div></div>
+<div class="ttc" id="aclass_u_d_t_tab_list_widget_html_ab481b2dd54ac20d86a3d7eded63298b9"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#ab481b2dd54ac20d86a3d7eded63298b9">UDTTabListWidget::PendingTabLabelInfoMap</a></div><div class="ttdeci">TMap&lt; FName, FTabEntryInfo &gt; PendingTabLabelInfoMap</div><div class="ttdef"><b>Definition</b> <a href="_d_t_tab_list_widget_8h_source.html#l00134">DTTabListWidget.h:134</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_ac5c88fbc816e8625bb1729af729a0334"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#ac5c88fbc816e8625bb1729af729a0334">UDTTabListWidget::HandleTabRemoval_Implementation</a></div><div class="ttdeci">virtual void HandleTabRemoval_Implementation(FName TabNameID, UCommonButtonBase *TabButton) override</div><div class="ttdef"><b>Definition</b> <a href="#l00060">DTTabListWidget.cpp:60</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_ac746b3c197d630951551e7708b68716b"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#ac746b3c197d630951551e7708b68716b">UDTTabListWidget::GetVisibleTabCount</a></div><div class="ttdeci">int32 GetVisibleTabCount()</div><div class="ttdef"><b>Definition</b> <a href="#l00186">DTTabListWidget.cpp:186</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_ad1951bffbac8658a2577d3727640b22c"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#ad1951bffbac8658a2577d3727640b22c">UDTTabListWidget::OnTabContentCreated</a></div><div class="ttdeci">FOnTabContentCreated OnTabContentCreated</div><div class="ttdef"><b>Definition</b> <a href="_d_t_tab_list_widget_8h_source.html#l00077">DTTabListWidget.h:77</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_ae1c81896654491e3b46e786e69d6095f"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#ae1c81896654491e3b46e786e69d6095f">UDTTabListWidget::PreregisteredTabInfoArray</a></div><div class="ttdeci">TArray&lt; FTabEntryInfo &gt; PreregisteredTabInfoArray</div><div class="ttdef"><b>Definition</b> <a href="_d_t_tab_list_widget_8h_source.html#l00081">DTTabListWidget.h:81</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_ae311ae3b68e70b2eb37aa9618ccfe675"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#ae311ae3b68e70b2eb37aa9618ccfe675">UDTTabListWidget::HandlePreLinkedSwitcherChanged</a></div><div class="ttdeci">virtual void HandlePreLinkedSwitcherChanged() override</div><div class="ttdef"><b>Definition</b> <a href="#l00067">DTTabListWidget.cpp:67</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_af3f72818a94869b63d1eeb51f62254cd"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#af3f72818a94869b63d1eeb51f62254cd">UDTTabListWidget::OnTabContentCreatedNative</a></div><div class="ttdeci">FOnTabContentCreatedNative OnTabContentCreatedNative</div><div class="ttdef"><b>Definition</b> <a href="_d_t_tab_list_widget_8h_source.html#l00078">DTTabListWidget.h:78</a></div></div>
+<div class="ttc" id="aclass_u_d_t_tab_list_widget_html_af7ab753113da72bac758228d0c0b6d4f"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#af7ab753113da72bac758228d0c0b6d4f">UDTTabListWidget::SetupTabs</a></div><div class="ttdeci">void SetupTabs()</div><div class="ttdef"><b>Definition</b> <a href="#l00201">DTTabListWidget.cpp:201</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_af9d2ab8d521aec1e07a78bea4213323e"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#af9d2ab8d521aec1e07a78bea4213323e">UDTTabListWidget::HB_TabButtonContainer</a></div><div class="ttdeci">TObjectPtr&lt; UHorizontalBox &gt; HB_TabButtonContainer</div><div class="ttdef"><b>Definition</b> <a href="_d_t_tab_list_widget_8h_source.html#l00111">DTTabListWidget.h:111</a></div></div>
 <div class="ttc" id="aclass_u_d_t_tab_list_widget_html_aff76d009d40eab2879319825b9c76b3e"><div class="ttname"><a href="class_u_d_t_tab_list_widget.html#aff76d009d40eab2879319825b9c76b3e">UDTTabListWidget::HandleTabCreation_Implementation</a></div><div class="ttdeci">virtual void HandleTabCreation_Implementation(FName TabNameID, UCommonButtonBase *TabButton) override</div><div class="ttdef"><b>Definition</b> <a href="#l00040">DTTabListWidget.cpp:40</a></div></div>
 <div class="ttc" id="astruct_f_tab_entry_info_html"><div class="ttname"><a href="struct_f_tab_entry_info.html">FTabEntryInfo</a></div><div class="ttdef"><b>Definition</b> <a href="_d_t_tab_list_widget_8h_source.html#l00018">DTTabListWidget.h:19</a></div></div>

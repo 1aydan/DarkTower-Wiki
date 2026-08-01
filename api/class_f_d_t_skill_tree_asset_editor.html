@@ -176,6 +176,41 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa349f5b7bfac11c8ed3da550f84b1a34" id="r_aa349f5b7bfac11c8ed3da550f84b1a34"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa349f5b7bfac11c8ed3da550f84b1a34">UnregisterTabSpawners</a> (const TSharedRef&lt; FTabManager &gt; &amp;InTabManager) override</td></tr>
 <tr class="memitem:a66569944c36df048cfd661f4dbe6f35c" id="r_a66569944c36df048cfd661f4dbe6f35c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a66569944c36df048cfd661f4dbe6f35c">AddReferencedObjects</a> (FReferenceCollector &amp;Collector) override</td></tr>
 <tr class="memitem:ab56c5eddd3753860287548ae49f5edff" id="r_ab56c5eddd3753860287548ae49f5edff"><td class="memItemLeft">virtual FString&#160;</td><td class="memItemRight"><a class="el" href="#ab56c5eddd3753860287548ae49f5edff">GetReferencerName</a> () const override</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5b115fae79e9a566885b7ec24f987f3e" id="r_a5b115fae79e9a566885b7ec24f987f3e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5b115fae79e9a566885b7ec24f987f3e">NormalizeNodeGridPositions</a> ()</td></tr>
+<tr class="memitem:a7f604e87d40f05f671dea5207981871c" id="r_a7f604e87d40f05f671dea5207981871c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7f604e87d40f05f671dea5207981871c">RefreshDetails</a> ()</td></tr>
+<tr class="memitem:a9892af3f6aafde89b4e05b22c1e53c63" id="r_a9892af3f6aafde89b4e05b22c1e53c63"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9892af3f6aafde89b4e05b22c1e53c63">HandleFinishedChangingProperties</a> (const FPropertyChangedEvent &amp;PropertyChangedEvent)</td></tr>
+<tr class="memitem:aa8ecd59351ff866ebe10c5b7a4bf71a3" id="r_aa8ecd59351ff866ebe10c5b7a4bf71a3"><td class="memItemLeft">const struct <a class="el" href="struct_f_skill_tree_node.html">FSkillTreeNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa8ecd59351ff866ebe10c5b7a4bf71a3">FindSelectedNode</a> () const</td></tr>
+<tr class="memitem:a2e81d7162a5aaa8d1b1bfa596658de67" id="r_a2e81d7162a5aaa8d1b1bfa596658de67"><td class="memItemLeft">TSharedRef&lt; SDockTab &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2e81d7162a5aaa8d1b1bfa596658de67">SpawnTab_Graph</a> (const FSpawnTabArgs &amp;Args)</td></tr>
+<tr class="memitem:a6a8ead4c0257f14e659db4b88f7c422f" id="r_a6a8ead4c0257f14e659db4b88f7c422f"><td class="memItemLeft">TSharedRef&lt; SDockTab &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6a8ead4c0257f14e659db4b88f7c422f">SpawnTab_Details</a> (const FSpawnTabArgs &amp;Args)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a24dfff323dea37766b6f63d8de1a5ed4" id="r_a24dfff323dea37766b6f63d8de1a5ed4"><td class="memItemLeft">static FIntPoint&#160;</td><td class="memItemRight"><a class="el" href="#a24dfff323dea37766b6f63d8de1a5ed4">FindFirstOpenGridPosition</a> (const TSet&lt; FIntPoint &gt; &amp;OccupiedPositions)</td></tr>
+<tr class="memitem:adec009ddc6eced9ac69907a6237e16c3" id="r_adec009ddc6eced9ac69907a6237e16c3"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#adec009ddc6eced9ac69907a6237e16c3">BuildResolvedGridPositions</a> (const <a class="el" href="class_u_d_t_skill_tree_definition.html">UDTSkillTreeDefinition</a> *SkillTreeDefinition, TArray&lt; FIntPoint &gt; &amp;OutResolvedPositions)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aef672ae06b7c2b48cb728f355c39ee4c" id="r_aef672ae06b7c2b48cb728f355c39ee4c"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_skill_tree_definition.html">UDTSkillTreeDefinition</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aef672ae06b7c2b48cb728f355c39ee4c">SkillTreeDefinition</a> = nullptr</td></tr>
+<tr class="memitem:a65159eb01ecf153d72b8b24e0314c89f" id="r_a65159eb01ecf153d72b8b24e0314c89f"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_skill_tree_node_definition.html">UDTSkillTreeNodeDefinition</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a65159eb01ecf153d72b8b24e0314c89f">SelectedNodeDefinition</a> = nullptr</td></tr>
+<tr class="memitem:ada19327f33d0ba7914c0ccef45fa2d55" id="r_ada19327f33d0ba7914c0ccef45fa2d55"><td class="memItemLeft">TSharedPtr&lt; IDetailsView &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ada19327f33d0ba7914c0ccef45fa2d55">DetailsView</a></td></tr>
+<tr class="memitem:a8966f57ff1b6327c58c39a37ba6a525e" id="r_a8966f57ff1b6327c58c39a37ba6a525e"><td class="memItemLeft">TSharedPtr&lt; <a class="el" href="class_s_d_t_skill_tree_graph_editor.html">SDTSkillTreeGraphEditor</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8966f57ff1b6327c58c39a37ba6a525e">GraphEditorWidget</a></td></tr>
+<tr class="memitem:a56e9cf4e3aa1d387f26e35b201346c14" id="r_a56e9cf4e3aa1d387f26e35b201346c14"><td class="memItemLeft">TSharedPtr&lt; FWorkspaceItem &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a56e9cf4e3aa1d387f26e35b201346c14">WorkspaceMenuCategory</a></td></tr>
+<tr class="memitem:a32d1a09d6e50c39186d36e036b9e271e" id="r_a32d1a09d6e50c39186d36e036b9e271e"><td class="memItemLeft">FVector2D&#160;</td><td class="memItemRight"><a class="el" href="#a32d1a09d6e50c39186d36e036b9e271e">GridStep</a> = FVector2D(256.0f, 184.0f)</td></tr>
+<tr class="memitem:abfa4edc2396c07fabeaa66c8a5b27811" id="r_abfa4edc2396c07fabeaa66c8a5b27811"><td class="memItemLeft">FVector2D&#160;</td><td class="memItemRight"><a class="el" href="#abfa4edc2396c07fabeaa66c8a5b27811">NodeSize</a> = FVector2D(224.0f, 124.0f)</td></tr>
+<tr class="memitem:a367a02a0fc318ad06e69ed54069725c7" id="r_a367a02a0fc318ad06e69ed54069725c7"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#a367a02a0fc318ad06e69ed54069725c7">SelectedNodeTag</a></td></tr>
+<tr class="memitem:a2b54408677e82e1f7cf89947a733f48a" id="r_a2b54408677e82e1f7cf89947a733f48a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2b54408677e82e1f7cf89947a733f48a">bHasHoveredGridPosition</a> = false</td></tr>
+<tr class="memitem:a3fb6922c04ea47e686fd4c1592f01d50" id="r_a3fb6922c04ea47e686fd4c1592f01d50"><td class="memItemLeft">FIntPoint&#160;</td><td class="memItemRight"><a class="el" href="#a3fb6922c04ea47e686fd4c1592f01d50">HoveredGridPosition</a> = FIntPoint::ZeroValue</td></tr>
+<tr class="memitem:a0838a62f7bac3881ad5acec996011d13" id="r_a0838a62f7bac3881ad5acec996011d13"><td class="memItemLeft">FVector2D&#160;</td><td class="memItemRight"><a class="el" href="#a0838a62f7bac3881ad5acec996011d13">HoveredCanvasPosition</a> = FVector2D::ZeroVector</td></tr>
+<tr class="memitem:ab5d6303e27029bdf3addad3e0cb14868" id="r_ab5d6303e27029bdf3addad3e0cb14868"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab5d6303e27029bdf3addad3e0cb14868">bShowGridCoordinates</a> = false</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a80401c369120c6677e10f0612194ebbf" id="r_a80401c369120c6677e10f0612194ebbf"><td class="memItemLeft">static constexpr int32&#160;</td><td class="memItemRight"><a class="el" href="#a80401c369120c6677e10f0612194ebbf">DefaultGraphColumns</a> = 7</td></tr>
+<tr class="memitem:a40347f909e184595e8251e4f92036016" id="r_a40347f909e184595e8251e4f92036016"><td class="memItemLeft">static const FName&#160;</td><td class="memItemRight"><a class="el" href="#a40347f909e184595e8251e4f92036016">GraphTabId</a></td></tr>
+<tr class="memitem:af1552b75d72440b161ce19987096ac7e" id="r_af1552b75d72440b161ce19987096ac7e"><td class="memItemLeft">static const FName&#160;</td><td class="memItemRight"><a class="el" href="#af1552b75d72440b161ce19987096ac7e">DetailsTabId</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -202,7 +237,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00192">192</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00033">FSkillTreeNode::GridPosition</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00041">FSkillTreeNode::GridSpan</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00029">FSkillTreeNode::NodeDefinition</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00037">FSkillTreeNode::PositionOffset</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00328">SelectNode()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00033">FSkillTreeNode::GridPosition</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00041">FSkillTreeNode::GridSpan</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00029">FSkillTreeNode::NodeDefinition</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00303">NormalizeNodeGridPositions()</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00037">FSkillTreeNode::PositionOffset</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00328">SelectNode()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
 
 </div>
 </div>
@@ -230,6 +265,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00522">522</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00080">SelectedNodeDefinition</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
 
 </div>
 </div>
@@ -260,6 +297,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="adec009ddc6eced9ac69907a6237e16c3" name="adec009ddc6eced9ac69907a6237e16c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec009ddc6eced9ac69907a6237e16c3">&#9670;&#160;</a></span>BuildResolvedGridPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FDTSkillTreeAssetEditor::BuildResolvedGridPositions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_u_d_t_skill_tree_definition.html">UDTSkillTreeDefinition</a> *</td>          <td class="paramname"><span class="paramname"><em>SkillTreeDefinition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TArray&lt; FIntPoint &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>OutResolvedPositions</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00034">34</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00019">FindFirstOpenGridPosition()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00100">GetNodeGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00172">GetNodeTagAtGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00303">NormalizeNodeGridPositions()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00120">SetNodeGridPosition()</a>.</p>
+
+</div>
+</div>
 <a id="a03abfc609bfd3e3a8d75ff5ae8a3b139" name="a03abfc609bfd3e3a8d75ff5ae8a3b139"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a03abfc609bfd3e3a8d75ff5ae8a3b139">&#9670;&#160;</a></span>ClearHoveredGridPosition()</h2>
 
@@ -276,6 +348,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00358">358</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00087">bHasHoveredGridPosition</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00089">HoveredCanvasPosition</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00088">HoveredGridPosition</a>.</p>
 
 </div>
 </div>
@@ -299,6 +373,68 @@ Public Member Functions</h2></td></tr>
 <p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00328">SelectNode()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00226">RemoveNode()</a>.</p>
+
+</div>
+</div>
+<a id="a24dfff323dea37766b6f63d8de1a5ed4" name="a24dfff323dea37766b6f63d8de1a5ed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24dfff323dea37766b6f63d8de1a5ed4">&#9670;&#160;</a></span>FindFirstOpenGridPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIntPoint FDTSkillTreeAssetEditor::FindFirstOpenGridPosition </td>
+          <td>(</td>
+          <td class="paramtype">const TSet&lt; FIntPoint &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>OccupiedPositions</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00019">19</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00064">DefaultGraphColumns</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00034">BuildResolvedGridPositions()</a>.</p>
+
+</div>
+</div>
+<a id="aa8ecd59351ff866ebe10c5b7a4bf71a3" name="aa8ecd59351ff866ebe10c5b7a4bf71a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8ecd59351ff866ebe10c5b7a4bf71a3">&#9670;&#160;</a></span>FindSelectedNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_f_skill_tree_node.html">FSkillTreeNode</a> * FDTSkillTreeAssetEditor::FindSelectedNode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00592">592</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00029">FSkillTreeNode::NodeDefinition</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00080">SelectedNodeDefinition</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00380">GetSelectedNodeText()</a>.</p>
 
 </div>
 </div>
@@ -381,6 +517,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00020">20</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00084">GridStep</a>.</p>
+
 </div>
 </div>
 <a id="a78ebd75b9e6c902bc52dc9232337895c" name="a78ebd75b9e6c902bc52dc9232337895c"></a>
@@ -400,6 +538,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00365">365</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00087">bHasHoveredGridPosition</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00089">HoveredCanvasPosition</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00088">HoveredGridPosition</a>.</p>
+
 </div>
 </div>
 <a id="a843d3518f853f1c4ee7fc7bec3c98348" name="a843d3518f853f1c4ee7fc7bec3c98348"></a>
@@ -418,6 +558,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00100">100</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00034">BuildResolvedGridPositions()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00120">SetNodeGridPosition()</a>.</p>
 
@@ -448,6 +590,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00021">21</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00085">NodeSize</a>.</p>
+
 </div>
 </div>
 <a id="a75280ffec705541cecbd79be0fe64bfc" name="a75280ffec705541cecbd79be0fe64bfc"></a>
@@ -466,6 +610,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00172">172</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00034">BuildResolvedGridPositions()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
 
 </div>
 </div>
@@ -513,6 +659,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00380">380</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00592">FindSelectedNode()</a>.</p>
+
 </div>
 </div>
 <a id="a7b11455705b9d6afb3e9509cdeeeb7f9" name="a7b11455705b9d6afb3e9509cdeeeb7f9"></a>
@@ -539,6 +687,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00019">19</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
 
 </div>
 </div>
@@ -667,7 +817,40 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00402">402</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_s_d_t_skill_tree_graph_editor_8cpp_source.html#l00819">SDTSkillTreeGraphEditor::BuildGraphContent()</a>.</p>
+
+</div>
+</div>
+<a id="a9892af3f6aafde89b4e05b22c1e53c63" name="a9892af3f6aafde89b4e05b22c1e53c63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9892af3f6aafde89b4e05b22c1e53c63">&#9670;&#160;</a></span>HandleFinishedChangingProperties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FDTSkillTreeAssetEditor::HandleFinishedChangingProperties </td>
+          <td>(</td>
+          <td class="paramtype">const FPropertyChangedEvent &amp;</td>          <td class="paramname"><span class="paramname"><em>PropertyChangedEvent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00552">552</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00074">FSkillTreeNodeLink::FromNodeTag</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00303">NormalizeNodeGridPositions()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00080">SelectedNodeDefinition</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00086">SelectedNodeTag</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>, and <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00078">FSkillTreeNodeLink::ToNodeTag</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00060">InitAssetEditor()</a>.</p>
 
 </div>
 </div>
@@ -688,7 +871,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00416">416</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_s_d_t_skill_tree_graph_editor_8cpp_source.html#l00819">SDTSkillTreeGraphEditor::BuildGraphContent()</a>.</p>
 
 </div>
 </div>
@@ -718,6 +903,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00060">60</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00077">DetailsTabId</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00081">DetailsView</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00082">GraphEditorWidget</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00076">GraphTabId</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00552">HandleFinishedChangingProperties()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00303">NormalizeNodeGridPositions()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00533">RefreshDetails()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
+
 </div>
 </div>
 <a id="a7f8527876aac2ab7bda92d7b36dccd17" name="a7f8527876aac2ab7bda92d7b36dccd17"></a>
@@ -736,6 +923,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00346">346</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00086">SelectedNodeTag</a>.</p>
 
 </div>
 </div>
@@ -763,6 +952,39 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00034">34</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00090">bShowGridCoordinates</a>.</p>
+
+</div>
+</div>
+<a id="a5b115fae79e9a566885b7ec24f987f3e" name="a5b115fae79e9a566885b7ec24f987f3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b115fae79e9a566885b7ec24f987f3e">&#9670;&#160;</a></span>NormalizeNodeGridPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FDTSkillTreeAssetEditor::NormalizeNodeGridPositions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00303">303</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00034">BuildResolvedGridPositions()</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00033">FSkillTreeNode::GridPosition</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00037">FSkillTreeNode::PositionOffset</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00192">AddNodeAtGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00552">HandleFinishedChangingProperties()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00060">InitAssetEditor()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00226">RemoveNode()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00120">SetNodeGridPosition()</a>.</p>
 
 </div>
 </div>
@@ -793,6 +1015,37 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7f604e87d40f05f671dea5207981871c" name="a7f604e87d40f05f671dea5207981871c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f604e87d40f05f671dea5207981871c">&#9670;&#160;</a></span>RefreshDetails()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FDTSkillTreeAssetEditor::RefreshDetails </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00533">533</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00081">DetailsView</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00080">SelectedNodeDefinition</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00060">InitAssetEditor()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00328">SelectNode()</a>.</p>
+
+</div>
+</div>
 <a id="ab6691a3bee6e4b1ab63a7ccb7b9c6a1e" name="ab6691a3bee6e4b1ab63a7ccb7b9c6a1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6691a3bee6e4b1ab63a7ccb7b9c6a1e">&#9670;&#160;</a></span>RefreshGraph()</h2>
 
@@ -810,7 +1063,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">392</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00192">AddNodeAtGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00402">HandleAutoLayoutGraphNodes()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00416">HandleRebuildGraphLinks()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00226">RemoveNode()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00328">SelectNode()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00120">SetNodeGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00035">SetShowGridCoordinates()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00264">ToggleNodeLink()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00082">GraphEditorWidget</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00533">RefreshDetails()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00192">AddNodeAtGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00402">HandleAutoLayoutGraphNodes()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00552">HandleFinishedChangingProperties()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00416">HandleRebuildGraphLinks()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00226">RemoveNode()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00328">SelectNode()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00120">SetNodeGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00035">SetShowGridCoordinates()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00264">ToggleNodeLink()</a>.</p>
 
 </div>
 </div>
@@ -839,6 +1094,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00497">497</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00077">DetailsTabId</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00076">GraphTabId</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00628">SpawnTab_Details()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00610">SpawnTab_Graph()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00083">WorkspaceMenuCategory</a>.</p>
+
 </div>
 </div>
 <a id="a0937e8a0b540e1cea1e4e13f1cb4dfec" name="a0937e8a0b540e1cea1e4e13f1cb4dfec"></a>
@@ -858,7 +1115,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00226">226</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00341">ClearSelectedNode()</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00074">FSkillTreeNodeLink::FromNodeTag</a>, <a class="el" href="_d_t_skill_tree_types_8cpp_source.html#l00017">FSkillTreeNode::GetNodeTag()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, and <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00078">FSkillTreeNodeLink::ToNodeTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00341">ClearSelectedNode()</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00074">FSkillTreeNodeLink::FromNodeTag</a>, <a class="el" href="_d_t_skill_tree_types_8cpp_source.html#l00017">FSkillTreeNode::GetNodeTag()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00303">NormalizeNodeGridPositions()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00086">SelectedNodeTag</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>, and <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00078">FSkillTreeNodeLink::ToNodeTag</a>.</p>
 
 </div>
 </div>
@@ -879,7 +1136,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00328">328</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_node_definition_8h_source.html#l00024">UDTSkillTreeNodeDefinition::NodeTag</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00533">RefreshDetails()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00080">SelectedNodeDefinition</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00086">SelectedNodeTag</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00192">AddNodeAtGridPosition()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00341">ClearSelectedNode()</a>.</p>
 
@@ -906,6 +1163,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00351">351</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00087">bHasHoveredGridPosition</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00089">HoveredCanvasPosition</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00088">HoveredGridPosition</a>.</p>
+
 </div>
 </div>
 <a id="a0f96f57a76b5237d75000287e7731418" name="a0f96f57a76b5237d75000287e7731418"></a>
@@ -929,7 +1188,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00120">120</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00100">GetNodeGridPosition()</a>, <a class="el" href="_d_t_skill_tree_types_8cpp_source.html#l00017">FSkillTreeNode::GetNodeTag()</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00033">FSkillTreeNode::GridPosition</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00037">FSkillTreeNode::PositionOffset</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00034">BuildResolvedGridPositions()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00100">GetNodeGridPosition()</a>, <a class="el" href="_d_t_skill_tree_types_8cpp_source.html#l00017">FSkillTreeNode::GetNodeTag()</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00033">FSkillTreeNode::GridPosition</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00303">NormalizeNodeGridPositions()</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00037">FSkillTreeNode::PositionOffset</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>.</p>
 
 </div>
 </div>
@@ -958,7 +1217,69 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00035">35</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00090">bShowGridCoordinates</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>.</p>
+
+</div>
+</div>
+<a id="a6a8ead4c0257f14e659db4b88f7c422f" name="a6a8ead4c0257f14e659db4b88f7c422f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a8ead4c0257f14e659db4b88f7c422f">&#9670;&#160;</a></span>SpawnTab_Details()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSharedRef&lt; SDockTab &gt; FDTSkillTreeAssetEditor::SpawnTab_Details </td>
+          <td>(</td>
+          <td class="paramtype">const FSpawnTabArgs &amp;</td>          <td class="paramname"><span class="paramname"><em>Args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00628">628</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00077">DetailsTabId</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00081">DetailsView</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00497">RegisterTabSpawners()</a>.</p>
+
+</div>
+</div>
+<a id="a2e81d7162a5aaa8d1b1bfa596658de67" name="a2e81d7162a5aaa8d1b1bfa596658de67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e81d7162a5aaa8d1b1bfa596658de67">&#9670;&#160;</a></span>SpawnTab_Graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSharedRef&lt; SDockTab &gt; FDTSkillTreeAssetEditor::SpawnTab_Graph </td>
+          <td>(</td>
+          <td class="paramtype">const FSpawnTabArgs &amp;</td>          <td class="paramname"><span class="paramname"><em>Args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00610">610</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00082">GraphEditorWidget</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00076">GraphTabId</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00497">RegisterTabSpawners()</a>.</p>
 
 </div>
 </div>
@@ -983,7 +1304,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00264">264</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00082">FSkillTreeNodeLink::bIsUnlockLink</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00074">FSkillTreeNodeLink::FromNodeTag</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, and <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00078">FSkillTreeNodeLink::ToNodeTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00082">FSkillTreeNodeLink::bIsUnlockLink</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00074">FSkillTreeNodeLink::FromNodeTag</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">SkillTreeDefinition</a>, and <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00078">FSkillTreeNodeLink::ToNodeTag</a>.</p>
 
 </div>
 </div>
@@ -1011,6 +1332,399 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00515">515</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html">DTSkillTreeAssetEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00077">DetailsTabId</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00076">GraphTabId</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a2b54408677e82e1f7cf89947a733f48a" name="a2b54408677e82e1f7cf89947a733f48a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b54408677e82e1f7cf89947a733f48a">&#9670;&#160;</a></span>bHasHoveredGridPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FDTSkillTreeAssetEditor::bHasHoveredGridPosition = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00087">87</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00358">ClearHoveredGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00365">GetHoveredPositionText()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00351">SetHoveredGridPosition()</a>.</p>
+
+</div>
+</div>
+<a id="ab5d6303e27029bdf3addad3e0cb14868" name="ab5d6303e27029bdf3addad3e0cb14868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5d6303e27029bdf3addad3e0cb14868">&#9670;&#160;</a></span>bShowGridCoordinates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FDTSkillTreeAssetEditor::bShowGridCoordinates = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00090">90</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00034">IsShowingGridCoordinates()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00035">SetShowGridCoordinates()</a>.</p>
+
+</div>
+</div>
+<a id="a80401c369120c6677e10f0612194ebbf" name="a80401c369120c6677e10f0612194ebbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80401c369120c6677e10f0612194ebbf">&#9670;&#160;</a></span>DefaultGraphColumns</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 FDTSkillTreeAssetEditor::DefaultGraphColumns = 7</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00064">64</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00019">FindFirstOpenGridPosition()</a>.</p>
+
+</div>
+</div>
+<a id="af1552b75d72440b161ce19987096ac7e" name="af1552b75d72440b161ce19987096ac7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1552b75d72440b161ce19987096ac7e">&#9670;&#160;</a></span>DetailsTabId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const FName FDTSkillTreeAssetEditor::DetailsTabId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00077">77</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00060">InitAssetEditor()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00497">RegisterTabSpawners()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00628">SpawnTab_Details()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00515">UnregisterTabSpawners()</a>.</p>
+
+</div>
+</div>
+<a id="ada19327f33d0ba7914c0ccef45fa2d55" name="ada19327f33d0ba7914c0ccef45fa2d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada19327f33d0ba7914c0ccef45fa2d55">&#9670;&#160;</a></span>DetailsView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSharedPtr&lt;IDetailsView&gt; FDTSkillTreeAssetEditor::DetailsView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00081">81</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00060">InitAssetEditor()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00533">RefreshDetails()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00628">SpawnTab_Details()</a>.</p>
+
+</div>
+</div>
+<a id="a8966f57ff1b6327c58c39a37ba6a525e" name="a8966f57ff1b6327c58c39a37ba6a525e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8966f57ff1b6327c58c39a37ba6a525e">&#9670;&#160;</a></span>GraphEditorWidget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSharedPtr&lt;<a class="el" href="class_s_d_t_skill_tree_graph_editor.html">SDTSkillTreeGraphEditor</a>&gt; FDTSkillTreeAssetEditor::GraphEditorWidget</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00082">82</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00060">InitAssetEditor()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00392">RefreshGraph()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00610">SpawnTab_Graph()</a>.</p>
+
+</div>
+</div>
+<a id="a40347f909e184595e8251e4f92036016" name="a40347f909e184595e8251e4f92036016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40347f909e184595e8251e4f92036016">&#9670;&#160;</a></span>GraphTabId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const FName FDTSkillTreeAssetEditor::GraphTabId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00076">76</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00060">InitAssetEditor()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00497">RegisterTabSpawners()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00610">SpawnTab_Graph()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00515">UnregisterTabSpawners()</a>.</p>
+
+</div>
+</div>
+<a id="a32d1a09d6e50c39186d36e036b9e271e" name="a32d1a09d6e50c39186d36e036b9e271e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d1a09d6e50c39186d36e036b9e271e">&#9670;&#160;</a></span>GridStep</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FVector2D FDTSkillTreeAssetEditor::GridStep = FVector2D(256.0f, 184.0f)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00084">84</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00020">GetGridStep()</a>.</p>
+
+</div>
+</div>
+<a id="a0838a62f7bac3881ad5acec996011d13" name="a0838a62f7bac3881ad5acec996011d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0838a62f7bac3881ad5acec996011d13">&#9670;&#160;</a></span>HoveredCanvasPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FVector2D FDTSkillTreeAssetEditor::HoveredCanvasPosition = FVector2D::ZeroVector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00089">89</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00358">ClearHoveredGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00365">GetHoveredPositionText()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00351">SetHoveredGridPosition()</a>.</p>
+
+</div>
+</div>
+<a id="a3fb6922c04ea47e686fd4c1592f01d50" name="a3fb6922c04ea47e686fd4c1592f01d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fb6922c04ea47e686fd4c1592f01d50">&#9670;&#160;</a></span>HoveredGridPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIntPoint FDTSkillTreeAssetEditor::HoveredGridPosition = FIntPoint::ZeroValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00088">88</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00358">ClearHoveredGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00365">GetHoveredPositionText()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00351">SetHoveredGridPosition()</a>.</p>
+
+</div>
+</div>
+<a id="abfa4edc2396c07fabeaa66c8a5b27811" name="abfa4edc2396c07fabeaa66c8a5b27811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfa4edc2396c07fabeaa66c8a5b27811">&#9670;&#160;</a></span>NodeSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FVector2D FDTSkillTreeAssetEditor::NodeSize = FVector2D(224.0f, 124.0f)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00085">85</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00021">GetNodeSize()</a>.</p>
+
+</div>
+</div>
+<a id="a65159eb01ecf153d72b8b24e0314c89f" name="a65159eb01ecf153d72b8b24e0314c89f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65159eb01ecf153d72b8b24e0314c89f">&#9670;&#160;</a></span>SelectedNodeDefinition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_skill_tree_node_definition.html">UDTSkillTreeNodeDefinition</a>&gt; FDTSkillTreeAssetEditor::SelectedNodeDefinition = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00522">AddReferencedObjects()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00592">FindSelectedNode()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00552">HandleFinishedChangingProperties()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00533">RefreshDetails()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00328">SelectNode()</a>.</p>
+
+</div>
+</div>
+<a id="a367a02a0fc318ad06e69ed54069725c7" name="a367a02a0fc318ad06e69ed54069725c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a367a02a0fc318ad06e69ed54069725c7">&#9670;&#160;</a></span>SelectedNodeTag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayTag FDTSkillTreeAssetEditor::SelectedNodeTag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00086">86</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00552">HandleFinishedChangingProperties()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00346">IsNodeSelected()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00226">RemoveNode()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00328">SelectNode()</a>.</p>
+
+</div>
+</div>
+<a id="aef672ae06b7c2b48cb728f355c39ee4c" name="aef672ae06b7c2b48cb728f355c39ee4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef672ae06b7c2b48cb728f355c39ee4c">&#9670;&#160;</a></span>SkillTreeDefinition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_skill_tree_definition.html">UDTSkillTreeDefinition</a>&gt; FDTSkillTreeAssetEditor::SkillTreeDefinition = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00079">79</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00192">AddNodeAtGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00522">AddReferencedObjects()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00034">BuildResolvedGridPositions()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00592">FindSelectedNode()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00100">GetNodeGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00172">GetNodeTagAtGridPosition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00019">GetSkillTreeDefinition()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00402">HandleAutoLayoutGraphNodes()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00552">HandleFinishedChangingProperties()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00416">HandleRebuildGraphLinks()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00060">InitAssetEditor()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00303">NormalizeNodeGridPositions()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00533">RefreshDetails()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00226">RemoveNode()</a>, <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00120">SetNodeGridPosition()</a>, and <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00264">ToggleNodeLink()</a>.</p>
+
+</div>
+</div>
+<a id="a56e9cf4e3aa1d387f26e35b201346c14" name="a56e9cf4e3aa1d387f26e35b201346c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e9cf4e3aa1d387f26e35b201346c14">&#9670;&#160;</a></span>WorkspaceMenuCategory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSharedPtr&lt;FWorkspaceItem&gt; FDTSkillTreeAssetEditor::WorkspaceMenuCategory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html#l00083">83</a> of file <a class="el" href="_d_t_skill_tree_asset_editor_8h_source.html">DTSkillTreeAssetEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00497">RegisterTabSpawners()</a>.</p>
 
 </div>
 </div>

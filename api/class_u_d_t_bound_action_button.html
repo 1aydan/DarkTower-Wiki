@@ -143,11 +143,52 @@ Inheritance diagram for UDTBoundActionButton:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6f5a62309933016ee7a8d14db0b90df0" id="r_a6f5a62309933016ee7a8d14db0b90df0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6f5a62309933016ee7a8d14db0b90df0">NativeConstruct</a> () override</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:abddd2f6e27a597ae5f0661b7fdf7946f" id="r_abddd2f6e27a597ae5f0661b7fdf7946f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abddd2f6e27a597ae5f0661b7fdf7946f">HandleInputMethodChanged</a> (ECommonInputType NewInputMethod)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2791b4ef331d6022ca904491e59653ed" id="r_a2791b4ef331d6022ca904491e59653ed"><td class="memItemLeft">TSubclassOf&lt; UCommonButtonStyle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2791b4ef331d6022ca904491e59653ed">KeyboardStyle</a></td></tr>
+<tr class="memitem:ac982474b2d5df2b909de1e3a6e157081" id="r_ac982474b2d5df2b909de1e3a6e157081"><td class="memItemLeft">TSubclassOf&lt; UCommonButtonStyle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac982474b2d5df2b909de1e3a6e157081">GamepadStyle</a></td></tr>
+<tr class="memitem:aaae8cd0173f6a8301d2c45d32c1c6776" id="r_aaae8cd0173f6a8301d2c45d32c1c6776"><td class="memItemLeft">TSubclassOf&lt; UCommonButtonStyle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aaae8cd0173f6a8301d2c45d32c1c6776">TouchStyle</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_d_t_bound_action_button_8h_source.html#l00016">16</a> of file <a class="el" href="_d_t_bound_action_button_8h_source.html">DTBoundActionButton.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="abddd2f6e27a597ae5f0661b7fdf7946f" name="abddd2f6e27a597ae5f0661b7fdf7946f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abddd2f6e27a597ae5f0661b7fdf7946f">&#9670;&#160;</a></span>HandleInputMethodChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTBoundActionButton::HandleInputMethodChanged </td>
+          <td>(</td>
+          <td class="paramtype">ECommonInputType</td>          <td class="paramname"><span class="paramname"><em>NewInputMethod</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_bound_action_button_8cpp_source.html#l00021">21</a> of file <a class="el" href="_d_t_bound_action_button_8cpp_source.html">DTBoundActionButton.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_bound_action_button_8h_source.html#l00030">GamepadStyle</a>, <a class="el" href="_d_t_bound_action_button_8h_source.html#l00027">KeyboardStyle</a>, and <a class="el" href="_d_t_bound_action_button_8h_source.html#l00033">TouchStyle</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_bound_action_button_8cpp_source.html#l00010">NativeConstruct()</a>.</p>
+
+</div>
+</div>
 <a id="a6f5a62309933016ee7a8d14db0b90df0" name="a6f5a62309933016ee7a8d14db0b90df0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f5a62309933016ee7a8d14db0b90df0">&#9670;&#160;</a></span>NativeConstruct()</h2>
 
@@ -172,6 +213,87 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_bound_action_button_8cpp_source.html#l00010">10</a> of file <a class="el" href="_d_t_bound_action_button_8cpp_source.html">DTBoundActionButton.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_bound_action_button_8cpp_source.html#l00021">HandleInputMethodChanged()</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ac982474b2d5df2b909de1e3a6e157081" name="ac982474b2d5df2b909de1e3a6e157081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac982474b2d5df2b909de1e3a6e157081">&#9670;&#160;</a></span>GamepadStyle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSubclassOf&lt;UCommonButtonStyle&gt; UDTBoundActionButton::GamepadStyle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_bound_action_button_8h_source.html#l00030">30</a> of file <a class="el" href="_d_t_bound_action_button_8h_source.html">DTBoundActionButton.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_bound_action_button_8cpp_source.html#l00021">HandleInputMethodChanged()</a>.</p>
+
+</div>
+</div>
+<a id="a2791b4ef331d6022ca904491e59653ed" name="a2791b4ef331d6022ca904491e59653ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2791b4ef331d6022ca904491e59653ed">&#9670;&#160;</a></span>KeyboardStyle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSubclassOf&lt;UCommonButtonStyle&gt; UDTBoundActionButton::KeyboardStyle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_bound_action_button_8h_source.html#l00027">27</a> of file <a class="el" href="_d_t_bound_action_button_8h_source.html">DTBoundActionButton.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_bound_action_button_8cpp_source.html#l00021">HandleInputMethodChanged()</a>.</p>
+
+</div>
+</div>
+<a id="aaae8cd0173f6a8301d2c45d32c1c6776" name="aaae8cd0173f6a8301d2c45d32c1c6776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae8cd0173f6a8301d2c45d32c1c6776">&#9670;&#160;</a></span>TouchStyle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSubclassOf&lt;UCommonButtonStyle&gt; UDTBoundActionButton::TouchStyle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_bound_action_button_8h_source.html#l00033">33</a> of file <a class="el" href="_d_t_bound_action_button_8h_source.html">DTBoundActionButton.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_bound_action_button_8cpp_source.html#l00021">HandleInputMethodChanged()</a>.</p>
 
 </div>
 </div>

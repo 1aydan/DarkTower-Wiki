@@ -6,6 +6,7 @@ var class_u_d_t_inventory_widget =
     [ "NativeOnActivated", "class_u_d_t_inventory_widget.html#a6ed8554e6dff07bc3beea0b052f7ed95", null ],
     [ "NativeOnDeactivated", "class_u_d_t_inventory_widget.html#a7b0d28c4852dc08857d0b54f7e61582e", null ],
     [ "NativeOnInitialized", "class_u_d_t_inventory_widget.html#ae4a80c240e49a2717fce24261112d43b", null ],
+    [ "OnCharacterPreviewReady", "class_u_d_t_inventory_widget.html#a8932111ffbe36a4151b9458fe2d21597", null ],
     [ "RefreshEquipment", "class_u_d_t_inventory_widget.html#aa0425b38dac8e5166753d6f2165cb722", null ],
     [ "RefreshInventory", "class_u_d_t_inventory_widget.html#a74f685d2ee5967e2311971ec793ad978", null ],
     [ "CPW_CharacterPreview", "class_u_d_t_inventory_widget.html#ac321b8da945e5b6b04f289f909e0bda8", null ],

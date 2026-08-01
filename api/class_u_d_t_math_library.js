@@ -7,5 +7,6 @@ var class_u_d_t_math_library =
     [ "NextRandomInt", "class_u_d_t_math_library.html#aa5c95889675ebafe14ef8abdef04378a", null ],
     [ "NextRandomIntRange", "class_u_d_t_math_library.html#ae79cb90a29e99bfee66422ba1e2aa793", null ],
     [ "SeedRandomGenerator", "class_u_d_t_math_library.html#ab69c27cdb19a431cd0fff8261578950d", null ],
-    [ "SplitMix64", "class_u_d_t_math_library.html#a3acd4ec2d90b92836b19b59dcd439608", null ]
+    [ "SplitMix64", "class_u_d_t_math_library.html#a3acd4ec2d90b92836b19b59dcd439608", null ],
+    [ "StaticRandomState", "class_u_d_t_math_library.html#aba9b2fff012aa29c880a72c80412d8a7", null ]
 ];

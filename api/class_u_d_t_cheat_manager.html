@@ -229,6 +229,12 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a07ae3388adc5757b8f12d433cdecd53c" id="r_a07ae3388adc5757b8f12d433cdecd53c"><td class="memItemLeft"><a class="el" href="class_a_d_t_player_character.html">ADTPlayerCharacter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a07ae3388adc5757b8f12d433cdecd53c">GetPlayerCharacter</a> () const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a616848f0b87ae16d2f22f5228a6a77d8" id="r_a616848f0b87ae16d2f22f5228a6a77d8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a616848f0b87ae16d2f22f5228a6a77d8">SpawnLootInternal</a> (APlayerController *PC, <a class="el" href="class_a_d_t_player_character.html">ADTPlayerCharacter</a> *PlayerCharacter, <a class="el" href="class_u_d_t_item_definition.html">UDTItemDefinition</a> *ItemDef, int32 Quantity, int32 Seed, const FString &amp;DebugName) const</td></tr>
+<tr class="memitem:a5c3c121b126ad286654b0124e2d32931" id="r_a5c3c121b126ad286654b0124e2d32931"><td class="memItemLeft"><a class="el" href="class_a_d_t_player_state.html">ADTPlayerState</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5c3c121b126ad286654b0124e2d32931">GetDTPlayerState</a> (APlayerController *PC) const</td></tr>
+<tr class="memitem:ae36578560c49b64e7f37c5049f7e5d78" id="r_ae36578560c49b64e7f37c5049f7e5d78"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae36578560c49b64e7f37c5049f7e5d78">ResolveTagFromString</a> (const FString &amp;TagString, FGameplayTag &amp;OutTag, const TCHAR *Context) const</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base Cheat Manager class for Dark Tower. </p>
@@ -306,7 +312,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01198">1198</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00025">UDTPlayerProgressionComponent::AddExperience()</a>, <a class="el" href="_d_t_game_state_8cpp_source.html#l00150">ADTGameState::AwardExperienceToAllPlayers()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00126">UDTPlayerProgressionComponent::GetExperienceToNextLevel()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00116">UDTPlayerProgressionComponent::GetHeroExperience()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00111">UDTPlayerProgressionComponent::GetHeroLevel()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00080">ADTPlayerState::GetPlayerProgressionComponent()</a>, and <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00121">UDTPlayerProgressionComponent::GetTotalHeroExperience()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00025">UDTPlayerProgressionComponent::AddExperience()</a>, <a class="el" href="_d_t_game_state_8cpp_source.html#l00150">ADTGameState::AwardExperienceToAllPlayers()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00126">UDTPlayerProgressionComponent::GetExperienceToNextLevel()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00116">UDTPlayerProgressionComponent::GetHeroExperience()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00111">UDTPlayerProgressionComponent::GetHeroLevel()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00080">ADTPlayerState::GetPlayerProgressionComponent()</a>, and <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00121">UDTPlayerProgressionComponent::GetTotalHeroExperience()</a>.</p>
 
 </div>
 </div>
@@ -340,6 +346,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01491">1491</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">ResolveTagFromString()</a>.</p>
+
 </div>
 </div>
 <a id="a789934d2baab872a8f9985fc5d5d5096" name="a789934d2baab872a8f9985fc5d5d5096"></a>
@@ -371,6 +379,8 @@ Protected Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01596">1596</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">ResolveTagFromString()</a>.</p>
 
 </div>
 </div>
@@ -445,7 +455,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01252">1252</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00078">UDTPlayerProgressionComponent::ClearProgression()</a>, and <a class="el" href="_d_t_player_state_8h_source.html#l00080">ADTPlayerState::GetPlayerProgressionComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00078">UDTPlayerProgressionComponent::ClearProgression()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, and <a class="el" href="_d_t_player_state_8h_source.html#l00080">ADTPlayerState::GetPlayerProgressionComponent()</a>.</p>
 
 </div>
 </div>
@@ -501,7 +511,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01755">1755</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_state_8h_source.html#l00083">ADTPlayerState::GetPlayerQuestComponent()</a>, and <a class="el" href="_d_t_game_state_8h_source.html#l00072">ADTGameState::GetWorldQuestComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00083">ADTPlayerState::GetPlayerQuestComponent()</a>, and <a class="el" href="_d_t_game_state_8h_source.html#l00072">ADTGameState::GetWorldQuestComponent()</a>.</p>
 
 </div>
 </div>
@@ -530,7 +540,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01722">1722</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_state_8h_source.html#l00077">ADTPlayerState::GetPlayerStatComponent()</a>, and <a class="el" href="_d_t_game_state_8h_source.html#l00069">ADTGameState::GetWorldStatComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00077">ADTPlayerState::GetPlayerStatComponent()</a>, and <a class="el" href="_d_t_game_state_8h_source.html#l00069">ADTGameState::GetWorldStatComponent()</a>.</p>
 
 </div>
 </div>
@@ -613,6 +623,35 @@ Protected Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00119">119</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_player_character_8cpp_source.html#l00295">ADTPlayerCharacter::GetAbilitySystemComponent()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>.</p>
+
+</div>
+</div>
+<a id="a5c3c121b126ad286654b0124e2d32931" name="a5c3c121b126ad286654b0124e2d32931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c3c121b126ad286654b0124e2d32931">&#9670;&#160;</a></span>GetDTPlayerState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_d_t_player_state.html">ADTPlayerState</a> * UDTCheatManager::GetDTPlayerState </td>
+          <td>(</td>
+          <td class="paramtype">APlayerController *</td>          <td class="paramname"><span class="paramname"><em>PC</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">1150</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01198">AddHeroXP()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01491">AddPlayerStat()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01252">ClearHeroProgression()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01755">ClearQuestData()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01722">ClearStats()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01683">PrintAllStats()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01278">PrintHeroProgression()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01558">PrintPlayerStat()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01429">PrintQuest()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01398">QuestAbandon()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01305">QuestAccept()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01336">QuestComplete()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01367">QuestFail()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01526">SetPlayerStat()</a>.</p>
 
 </div>
 </div>
@@ -779,6 +818,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01683">1683</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>.</p>
+
 </div>
 </div>
 <a id="aef4f6fc5b82917bfc7254c009cd845d5" name="aef4f6fc5b82917bfc7254c009cd845d5"></a>
@@ -825,7 +866,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01278">1278</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00126">UDTPlayerProgressionComponent::GetExperienceToNextLevel()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00116">UDTPlayerProgressionComponent::GetHeroExperience()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00111">UDTPlayerProgressionComponent::GetHeroLevel()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00080">ADTPlayerState::GetPlayerProgressionComponent()</a>, and <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00121">UDTPlayerProgressionComponent::GetTotalHeroExperience()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00126">UDTPlayerProgressionComponent::GetExperienceToNextLevel()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00116">UDTPlayerProgressionComponent::GetHeroExperience()</a>, <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00111">UDTPlayerProgressionComponent::GetHeroLevel()</a>, <a class="el" href="_d_t_player_state_8h_source.html#l00080">ADTPlayerState::GetPlayerProgressionComponent()</a>, and <a class="el" href="_d_t_player_progression_component_8cpp_source.html#l00121">UDTPlayerProgressionComponent::GetTotalHeroExperience()</a>.</p>
 
 </div>
 </div>
@@ -854,6 +895,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01558">1558</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">ResolveTagFromString()</a>.</p>
+
 </div>
 </div>
 <a id="a21776b80f16f0c45d09892706a480d5d" name="a21776b80f16f0c45d09892706a480d5d"></a>
@@ -881,7 +924,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01429">1429</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00038">GetQuestStateString()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00038">GetQuestStateString()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">ResolveTagFromString()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01486">PrintAllQuests()</a>.</p>
 
@@ -936,6 +979,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01651">1651</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">ResolveTagFromString()</a>.</p>
+
 </div>
 </div>
 <a id="a453082ea09985224d6e5e0bcc43778eb" name="a453082ea09985224d6e5e0bcc43778eb"></a>
@@ -963,6 +1008,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01398">1398</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">ResolveTagFromString()</a>.</p>
+
 </div>
 </div>
 <a id="a7c92de1123c99490ea3124f992294323" name="a7c92de1123c99490ea3124f992294323"></a>
@@ -989,6 +1036,8 @@ Protected Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01305">1305</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">ResolveTagFromString()</a>.</p>
 
 </div>
 </div>
@@ -1022,6 +1071,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01336">1336</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">ResolveTagFromString()</a>.</p>
+
 </div>
 </div>
 <a id="aebc80d461dab602f2995d1f0e9890e15" name="aebc80d461dab602f2995d1f0e9890e15"></a>
@@ -1048,6 +1099,48 @@ Protected Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01367">1367</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">ResolveTagFromString()</a>.</p>
+
+</div>
+</div>
+<a id="ae36578560c49b64e7f37c5049f7e5d78" name="ae36578560c49b64e7f37c5049f7e5d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae36578560c49b64e7f37c5049f7e5d78">&#9670;&#160;</a></span>ResolveTagFromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTCheatManager::ResolveTagFromString </td>
+          <td>(</td>
+          <td class="paramtype">const FString &amp;</td>          <td class="paramname"><span class="paramname"><em>TagString</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGameplayTag &amp;</td>          <td class="paramname"><span class="paramname"><em>OutTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TCHAR *</td>          <td class="paramname"><span class="paramname"><em>Context</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">1167</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_tags_8cpp_source.html#l00425">DTGameplayTags::FindTagByString()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01491">AddPlayerStat()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01596">AddWorldStat()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01558">PrintPlayerStat()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01429">PrintQuest()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01651">PrintWorldStat()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01398">QuestAbandon()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01305">QuestAccept()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01336">QuestComplete()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01367">QuestFail()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01526">SetPlayerStat()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01625">SetWorldStat()</a>.</p>
 
 </div>
 </div>
@@ -1192,6 +1285,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01526">1526</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01150">GetDTPlayerState()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">ResolveTagFromString()</a>.</p>
+
 </div>
 </div>
 <a id="ad631b8786ee27a62fb39eacc5cd136d3" name="ad631b8786ee27a62fb39eacc5cd136d3"></a>
@@ -1223,6 +1318,8 @@ Protected Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01625">1625</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01167">ResolveTagFromString()</a>.</p>
 
 </div>
 </div>
@@ -1308,7 +1405,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00217">217</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00154">SpawnLootInternal()</a>.</p>
 
 </div>
 </div>
@@ -1348,7 +1445,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00193">193</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00154">SpawnLootInternal()</a>.</p>
 
 </div>
 </div>
@@ -1388,7 +1485,62 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00241">241</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00848">GetPlayerCharacter()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00154">SpawnLootInternal()</a>.</p>
+
+</div>
+</div>
+<a id="a616848f0b87ae16d2f22f5228a6a77d8" name="a616848f0b87ae16d2f22f5228a6a77d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a616848f0b87ae16d2f22f5228a6a77d8">&#9670;&#160;</a></span>SpawnLootInternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCheatManager::SpawnLootInternal </td>
+          <td>(</td>
+          <td class="paramtype">APlayerController *</td>          <td class="paramname"><span class="paramname"><em>PC</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_a_d_t_player_character.html">ADTPlayerCharacter</a> *</td>          <td class="paramname"><span class="paramname"><em>PlayerCharacter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_u_d_t_item_definition.html">UDTItemDefinition</a> *</td>          <td class="paramname"><span class="paramname"><em>ItemDef</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>Quantity</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>Seed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FString &amp;</td>          <td class="paramname"><span class="paramname"><em>DebugName</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00154">154</a> of file <a class="el" href="_d_t_cheat_manager_8cpp_source.html">DTCheatManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_inventory_types_8h_source.html#l00481">FLootContext::bGuaranteeAllItems</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00472">FLootContext::bSpawnForAllPlayers</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00476">FLootContext::ItemDefinitions</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00440">FLootContext::MaxItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00436">FLootContext::MinItemStackCount</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00452">FLootContext::OwningPlayer</a>, <a class="el" href="_d_t_inventory_types_8h_source.html#l00460">FLootContext::SeedOverride</a>, <a class="el" href="_d_t_loot_subsystem_8cpp_source.html#l00598">UDTLootSubsystem::SpawnLootFromContext()</a>, and <a class="el" href="_d_t_inventory_types_8h_source.html#l00456">FLootContext::SpawnTransform</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00217">SpawnLootByID()</a>, <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00193">SpawnLootByName()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l00241">SpawnLootByPhrase()</a>.</p>
 
 </div>
 </div>

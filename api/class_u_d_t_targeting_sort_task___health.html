@@ -158,6 +158,11 @@ Public Attributes</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:abf9798729d1d4d8be2708d74ed518e43" id="r_abf9798729d1d4d8be2708d74ed518e43"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#abf9798729d1d4d8be2708d74ed518e43">GetScoreForTarget</a> (const FTargetingRequestHandle &amp;TargetingHandle, const FTargetingDefaultResultData &amp;TargetData) const override</td></tr>
 <tr class="memdesc:abf9798729d1d4d8be2708d74ed518e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override to score targets based on health percentage.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ad7f48a8b698307d5cb7d4eb14b7493a2" id="r_ad7f48a8b698307d5cb7d4eb14b7493a2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ad7f48a8b698307d5cb7d4eb14b7493a2">GetHealthPercentage</a> (const AActor *Actor) const</td></tr>
+<tr class="memdesc:ad7f48a8b698307d5cb7d4eb14b7493a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to get health percentage from an actor.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sorts targets based on their current health percentage Uses Gameplay Ability System to get health values Lower scores = lower health (use bAscending=true for lowest health first). </p>
@@ -184,6 +189,38 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ad7f48a8b698307d5cb7d4eb14b7493a2" name="ad7f48a8b698307d5cb7d4eb14b7493a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f48a8b698307d5cb7d4eb14b7493a2">&#9670;&#160;</a></span>GetHealthPercentage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTTargetingSortTask_Health::GetHealthPercentage </td>
+          <td>(</td>
+          <td class="paramtype">const AActor *</td>          <td class="paramname"><span class="paramname"><em>Actor</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper to get health percentage from an actor. </p>
+<dl class="section return"><dt>Returns</dt><dd>Health percentage (0.0 to 1.0) or -1.0 if unable to determine </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_targeting_sort_task___health_8cpp_source.html#l00048">48</a> of file <a class="el" href="_d_t_targeting_sort_task___health_8cpp_source.html">DTTargetingSortTask_Health.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_sort_task___health_8cpp_source.html#l00016">GetScoreForTarget()</a>.</p>
+
+</div>
+</div>
 <a id="abf9798729d1d4d8be2708d74ed518e43" name="abf9798729d1d4d8be2708d74ed518e43"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf9798729d1d4d8be2708d74ed518e43">&#9670;&#160;</a></span>GetScoreForTarget()</h2>
 
@@ -215,7 +252,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_sort_task___health_8cpp_source.html#l00016">16</a> of file <a class="el" href="_d_t_targeting_sort_task___health_8cpp_source.html">DTTargetingSortTask_Health.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_targeting_sort_task___health_8h_source.html#l00034">bUseDefaultScoreForTargetsWithoutASC</a>, and <a class="el" href="_d_t_targeting_sort_task___health_8h_source.html#l00041">DefaultScoreForTargetsWithoutASC</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_targeting_sort_task___health_8h_source.html#l00034">bUseDefaultScoreForTargetsWithoutASC</a>, <a class="el" href="_d_t_targeting_sort_task___health_8h_source.html#l00041">DefaultScoreForTargetsWithoutASC</a>, and <a class="el" href="_d_t_targeting_sort_task___health_8cpp_source.html#l00048">GetHealthPercentage()</a>.</p>
 
 </div>
 </div>

@@ -238,6 +238,46 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7d01f25afbbc9d095ad758b4b005ef38" id="r_a7d01f25afbbc9d095ad758b4b005ef38"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7d01f25afbbc9d095ad758b4b005ef38">UpdateEffectiveFrameRateLimit</a> ()</td></tr>
 <tr class="memitem:a3e10bb3f6ce85cab06be3e232e45b42f" id="r_a3e10bb3f6ce85cab06be3e232e45b42f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3e10bb3f6ce85cab06be3e232e45b42f">UpdateDesktopFramePacing</a> ()</td></tr>
 <tr class="memitem:a7c2aff28805457b73ebbe38ee1785e58" id="r_a7c2aff28805457b73ebbe38ee1785e58"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7c2aff28805457b73ebbe38ee1785e58">UpdateDynamicResFrameTime</a> (float TargetFPS)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a39ed3023fc606531418578afe5c6b399" id="r_a39ed3023fc606531418578afe5c6b399"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a39ed3023fc606531418578afe5c6b399">ApplyDisplayGamma</a> ()</td></tr>
+<tr class="memitem:af479cdab130d38fb19eb6da279d6e70f" id="r_af479cdab130d38fb19eb6da279d6e70f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af479cdab130d38fb19eb6da279d6e70f">SetVolumeForSoundClass</a> (USoundClass *InSoundClass, float InVolume)</td></tr>
+<tr class="memitem:a9eade4f2314373ebd4ec4b041952bf2c" id="r_a9eade4f2314373ebd4ec4b041952bf2c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9eade4f2314373ebd4ec4b041952bf2c">LoadSoundClasses</a> ()</td></tr>
+<tr class="memitem:a3300144c1739b2b382d8ff1260421211" id="r_a3300144c1739b2b382d8ff1260421211"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3300144c1739b2b382d8ff1260421211">OnAppActivationStateChanged</a> (bool bIsActive)</td></tr>
+<tr class="memitem:a4b4c5ff13134587e8d02b130b485cd7e" id="r_a4b4c5ff13134587e8d02b130b485cd7e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4b4c5ff13134587e8d02b130b485cd7e">ReapplyThingsDueToPossibleDeviceProfileChange</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a28a1b0c3b384ce25230586d2b8a3b90d" id="r_a28a1b0c3b384ce25230586d2b8a3b90d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a28a1b0c3b384ce25230586d2b8a3b90d">bIsInMenu</a> = false</td></tr>
+<tr class="memitem:a167ecca22a4d45d415f634a42cf20829" id="r_a167ecca22a4d45d415f634a42cf20829"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a167ecca22a4d45d415f634a42cf20829">DisplayGamma</a> = 2.2f</td></tr>
+<tr class="memitem:a16b974bc27d7d29628b172e8405fa235" id="r_a16b974bc27d7d29628b172e8405fa235"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a16b974bc27d7d29628b172e8405fa235">PreferredMonitorIndex</a> = 0</td></tr>
+<tr class="memitem:a8e2fc5bc9645939002b3dd9a55d5acb1" id="r_a8e2fc5bc9645939002b3dd9a55d5acb1"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a8e2fc5bc9645939002b3dd9a55d5acb1">FrameRateLimit_InMenu</a></td></tr>
+<tr class="memitem:ae7bf7adcf54577475f3fdd43d4b223ef" id="r_ae7bf7adcf54577475f3fdd43d4b223ef"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ae7bf7adcf54577475f3fdd43d4b223ef">FrameRateLimit_WhenBackgrounded</a></td></tr>
+<tr class="memitem:a992b96bfc23f87fcf66f73a15a558dc4" id="r_a992b96bfc23f87fcf66f73a15a558dc4"><td class="memItemLeft">FString&#160;</td><td class="memItemRight"><a class="el" href="#a992b96bfc23f87fcf66f73a15a558dc4">UserChosenDeviceProfileSuffix</a></td></tr>
+<tr class="memitem:ae7d1968be54e9ebbef7adb4c45df29f1" id="r_ae7d1968be54e9ebbef7adb4c45df29f1"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ae7d1968be54e9ebbef7adb4c45df29f1">OverallVolume</a> = 1.0f</td></tr>
+<tr class="memitem:adea8e2879160b08949c74d81657b89d3" id="r_adea8e2879160b08949c74d81657b89d3"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#adea8e2879160b08949c74d81657b89d3">MusicVolume</a> = 1.0f</td></tr>
+<tr class="memitem:a4b09cdcbc334d04560e5dbafc87a6acd" id="r_a4b09cdcbc334d04560e5dbafc87a6acd"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a4b09cdcbc334d04560e5dbafc87a6acd">SoundFXVolume</a> = 1.0f</td></tr>
+<tr class="memitem:a9ad6cb0672519462c869e436a3ba6aea" id="r_a9ad6cb0672519462c869e436a3ba6aea"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a9ad6cb0672519462c869e436a3ba6aea">DialogueVolume</a> = 1.0f</td></tr>
+<tr class="memitem:ab43ed95adc9da4418776ed1839c11f5c" id="r_ab43ed95adc9da4418776ed1839c11f5c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab43ed95adc9da4418776ed1839c11f5c">VoiceChatVolume</a> = 1.0f</td></tr>
+<tr class="memitem:a0693f30bebf15b30fc1ee7faf8f77412" id="r_a0693f30bebf15b30fc1ee7faf8f77412"><td class="memItemLeft">TMap&lt; FName, TObjectPtr&lt; USoundClass &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0693f30bebf15b30fc1ee7faf8f77412">SoundClassMap</a></td></tr>
+<tr class="memitem:ac57e5b77e6323ef692edbf0f6c786278" id="r_ac57e5b77e6323ef692edbf0f6c786278"><td class="memItemLeft">TObjectPtr&lt; USoundMix &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac57e5b77e6323ef692edbf0f6c786278">UserSettingsSoundMix</a> = nullptr</td></tr>
+<tr class="memitem:a0bcbb66cc1fc500ec2071c669b59c285" id="r_a0bcbb66cc1fc500ec2071c669b59c285"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0bcbb66cc1fc500ec2071c669b59c285">bSoundClassesLoaded</a></td></tr>
+<tr class="memitem:af8b7fb1c6f48bac34d85ce6aab891744" id="r_af8b7fb1c6f48bac34d85ce6aab891744"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af8b7fb1c6f48bac34d85ce6aab891744">bUseHeadphoneMode</a></td></tr>
+<tr class="memdesc:af8b7fb1c6f48bac34d85ce6aab891744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to use headphone mode (HRTF).  <br /></td></tr>
+<tr class="memitem:a48f8c64dcd4845117a0b916139563a20" id="r_a48f8c64dcd4845117a0b916139563a20"><td class="memItemLeft">FString&#160;</td><td class="memItemRight"><a class="el" href="#a48f8c64dcd4845117a0b916139563a20">AudioOutputDeviceId</a></td></tr>
+<tr class="memitem:a9c078202b98d1c9b8e770a05badaa62b" id="r_a9c078202b98d1c9b8e770a05badaa62b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a9c078202b98d1c9b8e770a05badaa62b">SafeZoneScale</a> = -1</td></tr>
+<tr class="memitem:a58c0bd44e348c336e22a654bcf845ccd" id="r_a58c0bd44e348c336e22a654bcf845ccd"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#a58c0bd44e348c336e22a654bcf845ccd">ControllerPlatform</a></td></tr>
+<tr class="memitem:aecba90c59d64f35531ed7ed9c466ae91" id="r_aecba90c59d64f35531ed7ed9c466ae91"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#aecba90c59d64f35531ed7ed9c466ae91">ControllerPreset</a> = TEXT(&quot;Default&quot;)</td></tr>
+<tr class="memitem:a120d9107a9be74673da76700d1d43bbf" id="r_a120d9107a9be74673da76700d1d43bbf"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#a120d9107a9be74673da76700d1d43bbf">InputConfigName</a> = TEXT(&quot;Default&quot;)</td></tr>
+<tr class="memdesc:a120d9107a9be74673da76700d1d43bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the current input config that the user has selected.  <br /></td></tr>
+<tr class="memitem:a7fc3a64265d55d13d90aaed49674b853" id="r_a7fc3a64265d55d13d90aaed49674b853"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7fc3a64265d55d13d90aaed49674b853">bAlwaysShowNameplates</a> = false</td></tr>
+<tr class="memitem:aa7f19de8e7c95fe820ba9fd60063446b" id="r_aa7f19de8e7c95fe820ba9fd60063446b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa7f19de8e7c95fe820ba9fd60063446b">bDamageNumbersUseAbbreviation</a> = false</td></tr>
+<tr class="memitem:a14eb502ede0cc3bf80f2097450e235dd" id="r_a14eb502ede0cc3bf80f2097450e235dd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a14eb502ede0cc3bf80f2097450e235dd">bDamageNumbersAccumulate</a> = true</td></tr>
+<tr class="memitem:a371e7792de22a2f730086430129c6ac2" id="r_a371e7792de22a2f730086430129c6ac2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a371e7792de22a2f730086430129c6ac2">bDodgeInMovementDirection</a> = true</td></tr>
+<tr class="memitem:a6068541a7b660bd424ff17097b50d947" id="r_a6068541a7b660bd424ff17097b50d947"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6068541a7b660bd424ff17097b50d947">bScreenShakeEnabled</a> = true</td></tr>
+<tr class="memitem:ab871a8b44736561f394208e567a6fe7b" id="r_ab871a8b44736561f394208e567a6fe7b"><td class="memItemLeft"><a class="el" href="struct_f_d_t_scalability_snapshot.html">FDTScalabilitySnapshot</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab871a8b44736561f394208e567a6fe7b">DeviceDefaultScalabilitySettings</a></td></tr>
+<tr class="memitem:a3c0c59d3e8fd1d04c89eefa79798499d" id="r_a3c0c59d3e8fd1d04c89eefa79798499d"><td class="memItemLeft">FDelegateHandle&#160;</td><td class="memItemRight"><a class="el" href="#a3c0c59d3e8fd1d04c89eefa79798499d">OnApplicationActivationStateChangedHandle</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_u_d_t_settings_local.html" title="UDTSettingsLocal.">UDTSettingsLocal</a>. </p>
@@ -261,7 +301,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00088">88</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00098">SetToDefaults()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00316">OnApplicationActivationStateChangedHandle</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00098">SetToDefaults()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">Get()</a>.</p>
 
@@ -285,9 +325,40 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">529</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00488">SetDialogueVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00442">SetMusicVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00419">SetOverallVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00465">SetSoundFXVolume()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00511">SetVoiceChatVolume()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00278">bSoundClassesLoaded</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00266">DialogueVolume</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00711">LoadSoundClasses()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00260">MusicVolume</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00257">OverallVolume</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00488">SetDialogueVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00442">SetMusicVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00419">SetOverallVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00465">SetSoundFXVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00511">SetVoiceChatVolume()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00263">SoundFXVolume</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00269">VoiceChatVolume</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>.</p>
+
+</div>
+</div>
+<a id="a39ed3023fc606531418578afe5c6b399" name="a39ed3023fc606531418578afe5c6b399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39ed3023fc606531418578afe5c6b399">&#9670;&#160;</a></span>ApplyDisplayGamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTSettingsLocal::ApplyDisplayGamma </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00216">216</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00242">DisplayGamma</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00210">SetDisplayGamma()</a>.</p>
 
 </div>
 </div>
@@ -316,7 +387,9 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">587</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00582">ApplySafeZoneScale()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00111">bDesiredHeadphoneMode</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00686">SetDamageNumbersAccumulate()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00666">SetDamageNumbersUseAbbreviation()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00323">SetHeadphoneModeEnabled()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00257">SetScreenShakeEnabled()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00787">UpdateDesktopFramePacing()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00216">ApplyDisplayGamma()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00582">ApplySafeZoneScale()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00307">bDamageNumbersAccumulate</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00304">bDamageNumbersUseAbbreviation</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00111">bDesiredHeadphoneMode</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00313">bScreenShakeEnabled</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00282">bUseHeadphoneMode</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00291">ControllerPlatform</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00686">SetDamageNumbersAccumulate()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00666">SetDamageNumbersUseAbbreviation()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00323">SetHeadphoneModeEnabled()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00257">SetScreenShakeEnabled()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00787">UpdateDesktopFramePacing()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00189">ReapplyThingsDueToPossibleDeviceProfileChange()</a>.</p>
 
 </div>
 </div>
@@ -390,6 +463,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00135">135</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00316">OnApplicationActivationStateChangedHandle</a>.</p>
 
 </div>
 </div>
@@ -493,7 +568,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00088">UDTSettingsLocal()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00027">UDTGameplayAbility_Dodge::ActivateAbility()</a>, <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00078">UDTNameplateWidget::CanAutoHide()</a>, <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00042">UDTSettingValueDiscrete_Monitor::GetDiscreteOptionIndex()</a>, <a class="el" href="_d_t_local_player_8cpp_source.html#l00024">UDTLocalPlayer::GetLocalSettings()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00059">UDTBlueprintLibrary::GetLocalUserSettings()</a>, <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00035">UDTBrightnessEditor::NativeOnActivated()</a>, <a class="el" href="_d_t_safe_zone_editor_8cpp_source.html#l00035">UDTSafeZoneEditor::NativeOnActivated()</a>, <a class="el" href="_d_t_setting_value_discrete___overall_quality_8cpp_source.html#l00014">UDTSettingValueDiscrete_OverallQuality::OnInitialized()</a>, <a class="el" href="_d_t_audio_mix_effects_subsystem_8cpp_source.html#l00208">UDTAudioMixEffectsSubsystem::OnWorldBeginPlay()</a>, <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00035">UDTSettingValueDiscrete_Monitor::SetDiscreteOptionByIndex()</a>, <a class="el" href="_d_t_player_camera_manager_8cpp_source.html#l00006">ADTPlayerCameraManager::StartCameraShake()</a>, <a class="el" href="_d_t_player_camera_manager_8cpp_source.html#l00016">ADTPlayerCameraManager::StartCameraShakeFromSource()</a>, and <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00020">UDTSettingValueDiscrete_Monitor::StoreInitial()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00027">UDTGameplayAbility_Dodge::ActivateAbility()</a>, <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00078">UDTNameplateWidget::CanAutoHide()</a>, <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00042">UDTSettingValueDiscrete_Monitor::GetDiscreteOptionIndex()</a>, <a class="el" href="_d_t_local_player_8cpp_source.html#l00024">UDTLocalPlayer::GetLocalSettings()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00059">UDTBlueprintLibrary::GetLocalUserSettings()</a>, <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00087">UDTBrightnessEditor::HandleBackClicked()</a>, <a class="el" href="_d_t_safe_zone_editor_8cpp_source.html#l00087">UDTSafeZoneEditor::HandleBackClicked()</a>, <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00093">UDTBrightnessEditor::HandleDoneClicked()</a>, <a class="el" href="_d_t_safe_zone_editor_8cpp_source.html#l00093">UDTSafeZoneEditor::HandleDoneClicked()</a>, <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00035">UDTBrightnessEditor::NativeOnActivated()</a>, <a class="el" href="_d_t_safe_zone_editor_8cpp_source.html#l00035">UDTSafeZoneEditor::NativeOnActivated()</a>, <a class="el" href="_d_t_setting_value_discrete___overall_quality_8cpp_source.html#l00014">UDTSettingValueDiscrete_OverallQuality::OnInitialized()</a>, <a class="el" href="_d_t_audio_mix_effects_subsystem_8cpp_source.html#l00208">UDTAudioMixEffectsSubsystem::OnWorldBeginPlay()</a>, <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00035">UDTSettingValueDiscrete_Monitor::SetDiscreteOptionByIndex()</a>, <a class="el" href="_d_t_player_camera_manager_8cpp_source.html#l00006">ADTPlayerCameraManager::StartCameraShake()</a>, <a class="el" href="_d_t_player_camera_manager_8cpp_source.html#l00016">ADTPlayerCameraManager::StartCameraShakeFromSource()</a>, and <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00020">UDTSettingValueDiscrete_Monitor::StoreInitial()</a>.</p>
 
 </div>
 </div>
@@ -513,6 +588,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00648">648</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00301">bAlwaysShowNameplates</a>.</p>
 
 </div>
 </div>
@@ -543,7 +620,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00171">171</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00171">GetAudioOutputDeviceId()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00285">AudioOutputDeviceId</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00171">GetAudioOutputDeviceId()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8h_source.html#l00171">GetAudioOutputDeviceId()</a>.</p>
 
@@ -566,6 +643,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00643">643</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00291">ControllerPlatform</a>.</p>
+
 </div>
 </div>
 <a id="a7b64f983ca8222d78bfc88078dc18cee" name="a7b64f983ca8222d78bfc88078dc18cee"></a>
@@ -584,6 +663,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00681">681</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00307">bDamageNumbersAccumulate</a>.</p>
 
 </div>
 </div>
@@ -604,6 +685,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00661">661</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00304">bDamageNumbersUseAbbreviation</a>.</p>
+
 </div>
 </div>
 <a id="a5ed97e22e63aaa54c69a8c66755bf380" name="a5ed97e22e63aaa54c69a8c66755bf380"></a>
@@ -622,6 +705,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00483">483</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00266">DialogueVolume</a>.</p>
 
 </div>
 </div>
@@ -642,6 +727,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00205">205</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00242">DisplayGamma</a>.</p>
+
 </div>
 </div>
 <a id="ac1434af7ae85f00fd5a67b1a82c20c51" name="ac1434af7ae85f00fd5a67b1a82c20c51"></a>
@@ -660,6 +747,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00701">701</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00310">bDodgeInMovementDirection</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00027">UDTGameplayAbility_Dodge::ActivateAbility()</a>.</p>
 
@@ -690,7 +779,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00172">172</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00156">CombineFrameRateLimits()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00200">IsInMenu()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00156">CombineFrameRateLimits()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00248">FrameRateLimit_InMenu</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00251">FrameRateLimit_WhenBackgrounded</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00200">IsInMenu()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00787">UpdateDesktopFramePacing()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00315">UpdateEffectiveFrameRateLimit()</a>.</p>
 
@@ -732,6 +821,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00282">282</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00248">FrameRateLimit_InMenu</a>.</p>
+
 </div>
 </div>
 <a id="a7a0934d700909a920abbc6b429318cd7" name="a7a0934d700909a920abbc6b429318cd7"></a>
@@ -751,6 +842,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00293">293</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00251">FrameRateLimit_WhenBackgrounded</a>.</p>
+
 </div>
 </div>
 <a id="a93090829832bd05d134596d5923ce72a" name="a93090829832bd05d134596d5923ce72a"></a>
@@ -769,6 +862,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00437">437</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00260">MusicVolume</a>.</p>
 
 </div>
 </div>
@@ -816,6 +911,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00414">414</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00257">OverallVolume</a>.</p>
+
 </div>
 </div>
 <a id="ab3c1cfd1b4697e8f96cc186473a955f1" name="ab3c1cfd1b4697e8f96cc186473a955f1"></a>
@@ -836,6 +933,8 @@ Protected Member Functions</h2></td></tr>
 <p>Returns the index of the preferred monitor to use for fullscreen. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00224">224</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00245">PreferredMonitorIndex</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00042">UDTSettingValueDiscrete_Monitor::GetDiscreteOptionIndex()</a>, and <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00020">UDTSettingValueDiscrete_Monitor::StoreInitial()</a>.</p>
 
@@ -866,7 +965,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00181">181</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00181">GetSafeZone()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00181">GetSafeZone()</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00288">SafeZoneScale</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00582">ApplySafeZoneScale()</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00181">GetSafeZone()</a>.</p>
 
@@ -891,6 +990,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00252">252</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00313">bScreenShakeEnabled</a>.</p>
+
 </div>
 </div>
 <a id="a55738194c53a2053ea9acfef2beca3f2" name="a55738194c53a2053ea9acfef2beca3f2"></a>
@@ -910,6 +1011,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00460">460</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00263">SoundFXVolume</a>.</p>
+
 </div>
 </div>
 <a id="a21647cd8e7866e204a85169d4528ebbc" name="a21647cd8e7866e204a85169d4528ebbc"></a>
@@ -928,6 +1031,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00506">506</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00269">VoiceChatVolume</a>.</p>
 
 </div>
 </div>
@@ -973,6 +1078,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00342">342</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00282">bUseHeadphoneMode</a>.</p>
+
 </div>
 </div>
 <a id="ab2db733d2f69d518b73f4a19ae45eff4" name="ab2db733d2f69d518b73f4a19ae45eff4"></a>
@@ -991,6 +1098,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00200">200</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00239">bIsInMenu</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00172">GetEffectiveFrameRateLimit()</a>.</p>
 
@@ -1021,7 +1130,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00178">178</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00178">IsSafeZoneSet()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00178">IsSafeZoneSet()</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00288">SafeZoneScale</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8h_source.html#l00178">IsSafeZoneSet()</a>.</p>
 
@@ -1052,7 +1161,96 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00117">117</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00111">bDesiredHeadphoneMode</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00064">DTSettingsHelpers::FillScalabilitySettingsFromDeviceProfile()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00229">SetPreferredMonitorIndex()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00111">bDesiredHeadphoneMode</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00282">bUseHeadphoneMode</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00315">DeviceDefaultScalabilitySettings</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00064">DTSettingsHelpers::FillScalabilitySettingsFromDeviceProfile()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00245">PreferredMonitorIndex</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00229">SetPreferredMonitorIndex()</a>.</p>
+
+</div>
+</div>
+<a id="a9eade4f2314373ebd4ec4b041952bf2c" name="a9eade4f2314373ebd4ec4b041952bf2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eade4f2314373ebd4ec4b041952bf2c">&#9670;&#160;</a></span>LoadSoundClasses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTSettingsLocal::LoadSoundClasses </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00711">711</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00278">bSoundClassesLoaded</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00272">SoundClassMap</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00488">SetDialogueVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00442">SetMusicVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00419">SetOverallVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00465">SetSoundFXVolume()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00511">SetVoiceChatVolume()</a>.</p>
+
+</div>
+</div>
+<a id="a3300144c1739b2b382d8ff1260421211" name="a3300144c1739b2b382d8ff1260421211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3300144c1739b2b382d8ff1260421211">&#9670;&#160;</a></span>OnAppActivationStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTSettingsLocal::OnAppActivationStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bIsActive</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00781">781</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00315">UpdateEffectiveFrameRateLimit()</a>.</p>
+
+</div>
+</div>
+<a id="a4b4c5ff13134587e8d02b130b485cd7e" name="a4b4c5ff13134587e8d02b130b485cd7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b4c5ff13134587e8d02b130b485cd7e">&#9670;&#160;</a></span>ReapplyThingsDueToPossibleDeviceProfileChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTSettingsLocal::ReapplyThingsDueToPossibleDeviceProfileChange </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00189">189</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>.</p>
 
 </div>
 </div>
@@ -1081,7 +1279,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00128">128</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00111">bDesiredHeadphoneMode</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00111">bDesiredHeadphoneMode</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00282">bUseHeadphoneMode</a>.</p>
 
 </div>
 </div>
@@ -1127,6 +1325,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00653">653</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00301">bAlwaysShowNameplates</a>.</p>
+
 </div>
 </div>
 <a id="a1c61a9d859dd431e9316bba822b9d167" name="a1c61a9d859dd431e9316bba822b9d167"></a>
@@ -1148,7 +1348,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00576">576</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00117">OnAudioOutputDeviceChanged</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00285">AudioOutputDeviceId</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00117">OnAudioOutputDeviceChanged</a>.</p>
 
 </div>
 </div>
@@ -1169,6 +1369,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00629">629</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00291">ControllerPlatform</a>.</p>
+
 </div>
 </div>
 <a id="a56d3befb9622d9ad8b617d978b0fb7c1" name="a56d3befb9622d9ad8b617d978b0fb7c1"></a>
@@ -1187,6 +1389,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00686">686</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00307">bDamageNumbersAccumulate</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>.</p>
 
@@ -1209,6 +1413,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00666">666</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00304">bDamageNumbersUseAbbreviation</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>.</p>
 
 </div>
@@ -1229,6 +1435,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00488">488</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00278">bSoundClassesLoaded</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00266">DialogueVolume</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00711">LoadSoundClasses()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00543">SetVolumeForSoundClass()</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00272">SoundClassMap</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>.</p>
 
@@ -1251,6 +1459,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00210">210</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00216">ApplyDisplayGamma()</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00242">DisplayGamma</a>.</p>
+
 </div>
 </div>
 <a id="a88e1338d777fc135ca9c74a09d34ba85" name="a88e1338d777fc135ca9c74a09d34ba85"></a>
@@ -1269,6 +1479,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00706">706</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00310">bDodgeInMovementDirection</a>.</p>
 
 </div>
 </div>
@@ -1310,7 +1522,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00287">287</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00315">UpdateEffectiveFrameRateLimit()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00248">FrameRateLimit_InMenu</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00315">UpdateEffectiveFrameRateLimit()</a>.</p>
 
 </div>
 </div>
@@ -1331,7 +1543,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00298">298</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00315">UpdateEffectiveFrameRateLimit()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00251">FrameRateLimit_WhenBackgrounded</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00315">UpdateEffectiveFrameRateLimit()</a>.</p>
 
 </div>
 </div>
@@ -1377,7 +1589,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00323">323</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00347">CanModifyHeadphoneModeEnabled()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00282">bUseHeadphoneMode</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00347">CanModifyHeadphoneModeEnabled()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>.</p>
 
@@ -1400,7 +1612,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00194">194</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00315">UpdateEffectiveFrameRateLimit()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00239">bIsInMenu</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00315">UpdateEffectiveFrameRateLimit()</a>.</p>
 
 </div>
 </div>
@@ -1420,6 +1632,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00442">442</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00278">bSoundClassesLoaded</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00711">LoadSoundClasses()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00260">MusicVolume</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00543">SetVolumeForSoundClass()</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00272">SoundClassMap</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>.</p>
 
@@ -1469,6 +1683,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00419">419</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00278">bSoundClassesLoaded</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00711">LoadSoundClasses()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00257">OverallVolume</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00543">SetVolumeForSoundClass()</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00272">SoundClassMap</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>.</p>
 
 </div>
@@ -1492,7 +1708,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00229">229</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00024">Target</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00245">PreferredMonitorIndex</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00024">Target</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00117">LoadSettings()</a>, and <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00035">UDTSettingValueDiscrete_Monitor::SetDiscreteOptionByIndex()</a>.</p>
 
@@ -1523,9 +1739,9 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00184">184</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00582">ApplySafeZoneScale()</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00184">SetSafeZone()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00582">ApplySafeZoneScale()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00288">SafeZoneScale</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00184">SetSafeZone()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8h_source.html#l00184">SetSafeZone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00093">UDTBrightnessEditor::HandleDoneClicked()</a>, <a class="el" href="_d_t_safe_zone_editor_8cpp_source.html#l00093">UDTSafeZoneEditor::HandleDoneClicked()</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00184">SetSafeZone()</a>.</p>
 
 </div>
 </div>
@@ -1548,6 +1764,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00257">257</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00313">bScreenShakeEnabled</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>.</p>
 
 </div>
@@ -1568,6 +1786,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00465">465</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00278">bSoundClassesLoaded</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00711">LoadSoundClasses()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00543">SetVolumeForSoundClass()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00272">SoundClassMap</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00263">SoundFXVolume</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>.</p>
 
@@ -1598,7 +1818,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00098">98</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00115">bUseHDRAudioMode</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00304">bDamageNumbersUseAbbreviation</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00313">bScreenShakeEnabled</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00278">bSoundClassesLoaded</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00115">bUseHDRAudioMode</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00282">bUseHeadphoneMode</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00248">FrameRateLimit_InMenu</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00251">FrameRateLimit_WhenBackgrounded</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00245">PreferredMonitorIndex</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00088">UDTSettingsLocal()</a>.</p>
 
@@ -1621,7 +1841,44 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00511">511</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00278">bSoundClassesLoaded</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00711">LoadSoundClasses()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00543">SetVolumeForSoundClass()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00272">SoundClassMap</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00269">VoiceChatVolume</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>.</p>
+
+</div>
+</div>
+<a id="af479cdab130d38fb19eb6da279d6e70f" name="af479cdab130d38fb19eb6da279d6e70f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af479cdab130d38fb19eb6da279d6e70f">&#9670;&#160;</a></span>SetVolumeForSoundClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTSettingsLocal::SetVolumeForSoundClass </td>
+          <td>(</td>
+          <td class="paramtype">USoundClass *</td>          <td class="paramname"><span class="paramname"><em>InSoundClass</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>InVolume</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8cpp_source.html#l00543">543</a> of file <a class="el" href="_d_t_settings_local_8cpp_source.html">DTSettingsLocal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8h_source.html#l00275">UserSettingsSoundMix</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00488">SetDialogueVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00442">SetMusicVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00419">SetOverallVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00465">SetSoundFXVolume()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00511">SetVoiceChatVolume()</a>.</p>
 
 </div>
 </div>
@@ -1735,11 +1992,115 @@ Protected Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00172">GetEffectiveFrameRateLimit()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00309">SetFrameRateLimit_Always()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00287">SetFrameRateLimit_InMenu()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00298">SetFrameRateLimit_WhenBackgrounded()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00194">SetIsInMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00781">OnAppActivationStateChanged()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00309">SetFrameRateLimit_Always()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00287">SetFrameRateLimit_InMenu()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00298">SetFrameRateLimit_WhenBackgrounded()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00194">SetIsInMenu()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a48f8c64dcd4845117a0b916139563a20" name="a48f8c64dcd4845117a0b916139563a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48f8c64dcd4845117a0b916139563a20">&#9670;&#160;</a></span>AudioOutputDeviceId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FString UDTSettingsLocal::AudioOutputDeviceId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00285">285</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8h_source.html#l00171">GetAudioOutputDeviceId()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00576">SetAudioOutputDeviceId()</a>.</p>
+
+</div>
+</div>
+<a id="a7fc3a64265d55d13d90aaed49674b853" name="a7fc3a64265d55d13d90aaed49674b853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc3a64265d55d13d90aaed49674b853">&#9670;&#160;</a></span>bAlwaysShowNameplates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTSettingsLocal::bAlwaysShowNameplates = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00301">301</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00648">GetAlwaysShowNameplates()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00653">SetAlwaysShowNameplates()</a>.</p>
+
+</div>
+</div>
+<a id="a14eb502ede0cc3bf80f2097450e235dd" name="a14eb502ede0cc3bf80f2097450e235dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14eb502ede0cc3bf80f2097450e235dd">&#9670;&#160;</a></span>bDamageNumbersAccumulate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTSettingsLocal::bDamageNumbersAccumulate = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00307">307</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00681">GetDamageNumbersAccumulate()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00686">SetDamageNumbersAccumulate()</a>.</p>
+
+</div>
+</div>
+<a id="aa7f19de8e7c95fe820ba9fd60063446b" name="aa7f19de8e7c95fe820ba9fd60063446b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7f19de8e7c95fe820ba9fd60063446b">&#9670;&#160;</a></span>bDamageNumbersUseAbbreviation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTSettingsLocal::bDamageNumbersUseAbbreviation = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00304">304</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00661">GetDamageNumbersUseAbbreviation()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00666">SetDamageNumbersUseAbbreviation()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00098">SetToDefaults()</a>.</p>
+
+</div>
+</div>
 <a id="a47bd7be5798e40a6f645dfb988706798" name="a47bd7be5798e40a6f645dfb988706798"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a47bd7be5798e40a6f645dfb988706798">&#9670;&#160;</a></span>bDesiredHeadphoneMode</h2>
 
@@ -1757,6 +2118,110 @@ Protected Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00111">111</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00117">LoadSettings()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00128">ResetToCurrentSettings()</a>.</p>
+
+</div>
+</div>
+<a id="a371e7792de22a2f730086430129c6ac2" name="a371e7792de22a2f730086430129c6ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a371e7792de22a2f730086430129c6ac2">&#9670;&#160;</a></span>bDodgeInMovementDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTSettingsLocal::bDodgeInMovementDirection = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00310">310</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00701">GetDodgeInMovementDirection()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00706">SetDodgeInMovementDirection()</a>.</p>
+
+</div>
+</div>
+<a id="a28a1b0c3b384ce25230586d2b8a3b90d" name="a28a1b0c3b384ce25230586d2b8a3b90d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a1b0c3b384ce25230586d2b8a3b90d">&#9670;&#160;</a></span>bIsInMenu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTSettingsLocal::bIsInMenu = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00239">239</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00200">IsInMenu()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00194">SetIsInMenu()</a>.</p>
+
+</div>
+</div>
+<a id="a6068541a7b660bd424ff17097b50d947" name="a6068541a7b660bd424ff17097b50d947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6068541a7b660bd424ff17097b50d947">&#9670;&#160;</a></span>bScreenShakeEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTSettingsLocal::bScreenShakeEnabled = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00313">313</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00252">GetScreenShakeEnabled()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00257">SetScreenShakeEnabled()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00098">SetToDefaults()</a>.</p>
+
+</div>
+</div>
+<a id="a0bcbb66cc1fc500ec2071c669b59c285" name="a0bcbb66cc1fc500ec2071c669b59c285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bcbb66cc1fc500ec2071c669b59c285">&#9670;&#160;</a></span>bSoundClassesLoaded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTSettingsLocal::bSoundClassesLoaded</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00278">278</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00711">LoadSoundClasses()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00488">SetDialogueVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00442">SetMusicVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00419">SetOverallVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00465">SetSoundFXVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00098">SetToDefaults()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00511">SetVoiceChatVolume()</a>.</p>
 
 </div>
 </div>
@@ -1780,6 +2245,292 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="af8b7fb1c6f48bac34d85ce6aab891744" name="af8b7fb1c6f48bac34d85ce6aab891744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8b7fb1c6f48bac34d85ce6aab891744">&#9670;&#160;</a></span>bUseHeadphoneMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTSettingsLocal::bUseHeadphoneMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to use headphone mode (HRTF). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00282">282</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00342">IsHeadphoneModeEnabled()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00117">LoadSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00128">ResetToCurrentSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00323">SetHeadphoneModeEnabled()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00098">SetToDefaults()</a>.</p>
+
+</div>
+</div>
+<a id="a58c0bd44e348c336e22a654bcf845ccd" name="a58c0bd44e348c336e22a654bcf845ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c0bd44e348c336e22a654bcf845ccd">&#9670;&#160;</a></span>ControllerPlatform</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FName UDTSettingsLocal::ControllerPlatform</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00291">291</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00587">ApplyNonResolutionSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00643">GetControllerPlatform()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00629">SetControllerPlatform()</a>.</p>
+
+</div>
+</div>
+<a id="aecba90c59d64f35531ed7ed9c466ae91" name="aecba90c59d64f35531ed7ed9c466ae91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecba90c59d64f35531ed7ed9c466ae91">&#9670;&#160;</a></span>ControllerPreset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FName UDTSettingsLocal::ControllerPreset = TEXT(&quot;Default&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00294">294</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+</div>
+</div>
+<a id="ab871a8b44736561f394208e567a6fe7b" name="ab871a8b44736561f394208e567a6fe7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab871a8b44736561f394208e567a6fe7b">&#9670;&#160;</a></span>DeviceDefaultScalabilitySettings</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_d_t_scalability_snapshot.html">FDTScalabilitySnapshot</a> UDTSettingsLocal::DeviceDefaultScalabilitySettings</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00315">315</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00117">LoadSettings()</a>.</p>
+
+</div>
+</div>
+<a id="a9ad6cb0672519462c869e436a3ba6aea" name="a9ad6cb0672519462c869e436a3ba6aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad6cb0672519462c869e436a3ba6aea">&#9670;&#160;</a></span>DialogueVolume</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTSettingsLocal::DialogueVolume = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00266">266</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00483">GetDialogueVolume()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00488">SetDialogueVolume()</a>.</p>
+
+</div>
+</div>
+<a id="a167ecca22a4d45d415f634a42cf20829" name="a167ecca22a4d45d415f634a42cf20829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a167ecca22a4d45d415f634a42cf20829">&#9670;&#160;</a></span>DisplayGamma</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTSettingsLocal::DisplayGamma = 2.2f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00242">242</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00216">ApplyDisplayGamma()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00205">GetDisplayGamma()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00210">SetDisplayGamma()</a>.</p>
+
+</div>
+</div>
+<a id="a8e2fc5bc9645939002b3dd9a55d5acb1" name="a8e2fc5bc9645939002b3dd9a55d5acb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2fc5bc9645939002b3dd9a55d5acb1">&#9670;&#160;</a></span>FrameRateLimit_InMenu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTSettingsLocal::FrameRateLimit_InMenu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00248">248</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00172">GetEffectiveFrameRateLimit()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00282">GetFrameRateLimit_InMenu()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00287">SetFrameRateLimit_InMenu()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00098">SetToDefaults()</a>.</p>
+
+</div>
+</div>
+<a id="ae7bf7adcf54577475f3fdd43d4b223ef" name="ae7bf7adcf54577475f3fdd43d4b223ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7bf7adcf54577475f3fdd43d4b223ef">&#9670;&#160;</a></span>FrameRateLimit_WhenBackgrounded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTSettingsLocal::FrameRateLimit_WhenBackgrounded</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00251">251</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00172">GetEffectiveFrameRateLimit()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00293">GetFrameRateLimit_WhenBackgrounded()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00298">SetFrameRateLimit_WhenBackgrounded()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00098">SetToDefaults()</a>.</p>
+
+</div>
+</div>
+<a id="a120d9107a9be74673da76700d1d43bbf" name="a120d9107a9be74673da76700d1d43bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120d9107a9be74673da76700d1d43bbf">&#9670;&#160;</a></span>InputConfigName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FName UDTSettingsLocal::InputConfigName = TEXT(&quot;Default&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The name of the current input config that the user has selected. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00298">298</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+</div>
+</div>
+<a id="adea8e2879160b08949c74d81657b89d3" name="adea8e2879160b08949c74d81657b89d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adea8e2879160b08949c74d81657b89d3">&#9670;&#160;</a></span>MusicVolume</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTSettingsLocal::MusicVolume = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00260">260</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00437">GetMusicVolume()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00442">SetMusicVolume()</a>.</p>
+
+</div>
+</div>
+<a id="a3c0c59d3e8fd1d04c89eefa79798499d" name="a3c0c59d3e8fd1d04c89eefa79798499d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c0c59d3e8fd1d04c89eefa79798499d">&#9670;&#160;</a></span>OnApplicationActivationStateChangedHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDelegateHandle UDTSettingsLocal::OnApplicationActivationStateChangedHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00316">316</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00135">BeginDestroy()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00088">UDTSettingsLocal()</a>.</p>
+
+</div>
+</div>
 <a id="ad9a0475b75db908abc7067c856230485" name="ad9a0475b75db908abc7067c856230485"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9a0475b75db908abc7067c856230485">&#9670;&#160;</a></span>OnAudioOutputDeviceChanged</h2>
 
@@ -1795,6 +2546,212 @@ Protected Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00117">117</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00576">SetAudioOutputDeviceId()</a>.</p>
+
+</div>
+</div>
+<a id="ae7d1968be54e9ebbef7adb4c45df29f1" name="ae7d1968be54e9ebbef7adb4c45df29f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d1968be54e9ebbef7adb4c45df29f1">&#9670;&#160;</a></span>OverallVolume</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTSettingsLocal::OverallVolume = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00257">257</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00414">GetOverallVolume()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00419">SetOverallVolume()</a>.</p>
+
+</div>
+</div>
+<a id="a16b974bc27d7d29628b172e8405fa235" name="a16b974bc27d7d29628b172e8405fa235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b974bc27d7d29628b172e8405fa235">&#9670;&#160;</a></span>PreferredMonitorIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTSettingsLocal::PreferredMonitorIndex = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00245">245</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00224">GetPreferredMonitorIndex()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00117">LoadSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00229">SetPreferredMonitorIndex()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00098">SetToDefaults()</a>.</p>
+
+</div>
+</div>
+<a id="a9c078202b98d1c9b8e770a05badaa62b" name="a9c078202b98d1c9b8e770a05badaa62b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c078202b98d1c9b8e770a05badaa62b">&#9670;&#160;</a></span>SafeZoneScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTSettingsLocal::SafeZoneScale = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00288">288</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8h_source.html#l00181">GetSafeZone()</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00178">IsSafeZoneSet()</a>, and <a class="el" href="_d_t_settings_local_8h_source.html#l00184">SetSafeZone()</a>.</p>
+
+</div>
+</div>
+<a id="a0693f30bebf15b30fc1ee7faf8f77412" name="a0693f30bebf15b30fc1ee7faf8f77412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0693f30bebf15b30fc1ee7faf8f77412">&#9670;&#160;</a></span>SoundClassMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMap&lt;FName, TObjectPtr&lt;USoundClass&gt; &gt; UDTSettingsLocal::SoundClassMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00272">272</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00711">LoadSoundClasses()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00488">SetDialogueVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00442">SetMusicVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00419">SetOverallVolume()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00465">SetSoundFXVolume()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00511">SetVoiceChatVolume()</a>.</p>
+
+</div>
+</div>
+<a id="a4b09cdcbc334d04560e5dbafc87a6acd" name="a4b09cdcbc334d04560e5dbafc87a6acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b09cdcbc334d04560e5dbafc87a6acd">&#9670;&#160;</a></span>SoundFXVolume</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTSettingsLocal::SoundFXVolume = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00263">263</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00460">GetSoundFXVolume()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00465">SetSoundFXVolume()</a>.</p>
+
+</div>
+</div>
+<a id="a992b96bfc23f87fcf66f73a15a558dc4" name="a992b96bfc23f87fcf66f73a15a558dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a992b96bfc23f87fcf66f73a15a558dc4">&#9670;&#160;</a></span>UserChosenDeviceProfileSuffix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FString UDTSettingsLocal::UserChosenDeviceProfileSuffix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00254">254</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+</div>
+</div>
+<a id="ac57e5b77e6323ef692edbf0f6c786278" name="ac57e5b77e6323ef692edbf0f6c786278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57e5b77e6323ef692edbf0f6c786278">&#9670;&#160;</a></span>UserSettingsSoundMix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;USoundMix&gt; UDTSettingsLocal::UserSettingsSoundMix = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00275">275</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00543">SetVolumeForSoundClass()</a>.</p>
+
+</div>
+</div>
+<a id="ab43ed95adc9da4418776ed1839c11f5c" name="ab43ed95adc9da4418776ed1839c11f5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab43ed95adc9da4418776ed1839c11f5c">&#9670;&#160;</a></span>VoiceChatVolume</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTSettingsLocal::VoiceChatVolume = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_local_8h_source.html#l00269">269</a> of file <a class="el" href="_d_t_settings_local_8h_source.html">DTSettingsLocal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_local_8cpp_source.html#l00529">ApplyAudioSettings()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00506">GetVoiceChatVolume()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00511">SetVoiceChatVolume()</a>.</p>
 
 </div>
 </div>

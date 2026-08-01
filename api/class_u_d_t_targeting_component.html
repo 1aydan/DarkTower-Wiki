@@ -216,6 +216,30 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a9dbdba444329cb95bdb9f5a47ae3cf5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last set of targets found from a targeting request.  <br /></td></tr>
 <tr class="memitem:aa5d0f75f077d34e870a980c68bcb3208" id="r_aa5d0f75f077d34e870a980c68bcb3208"><td class="memItemLeft">FTargetingRequestHandle&#160;</td><td class="memItemRight"><a class="el" href="#aa5d0f75f077d34e870a980c68bcb3208">CurrentAsyncHandle</a></td></tr>
 <tr class="memdesc:aa5d0f75f077d34e870a980c68bcb3208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active async targeting request handles.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a923aee32c956928ce575aeeffa797291" id="r_a923aee32c956928ce575aeeffa797291"><td class="memItemLeft">FTargetingRequestHandle&#160;</td><td class="memItemRight"><a class="el" href="#a923aee32c956928ce575aeeffa797291">CreateTargetingHandle</a> (UTargetingPreset *TargetingPreset, const TArray&lt; AActor * &gt; &amp;InitialTargets) const</td></tr>
+<tr class="memdesc:a923aee32c956928ce575aeeffa797291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a targeting request handle with the given preset and optional initial targets.  <br /></td></tr>
+<tr class="memitem:a15ae7e3aa590299b9861823dca36188a" id="r_a15ae7e3aa590299b9861823dca36188a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a15ae7e3aa590299b9861823dca36188a">ExecuteTargetingHandleImmediate</a> (FTargetingRequestHandle Handle, bool bAutoSetFirstTarget)</td></tr>
+<tr class="memdesc:a15ae7e3aa590299b9861823dca36188a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a targeting handle immediately (synchronous).  <br /></td></tr>
+<tr class="memitem:a7890b404d5cde6c792ca90e23818ebc8" id="r_a7890b404d5cde6c792ca90e23818ebc8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7890b404d5cde6c792ca90e23818ebc8">ExecuteTargetingHandleAsync</a> (FTargetingRequestHandle Handle, bool bAutoSetFirstTarget)</td></tr>
+<tr class="memdesc:a7890b404d5cde6c792ca90e23818ebc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a targeting handle asynchronously.  <br /></td></tr>
+<tr class="memitem:ab8f00b4e6010ae15efdd9d33f628b2b1" id="r_ab8f00b4e6010ae15efdd9d33f628b2b1"><td class="memItemLeft">FTargetingSourceContext&#160;</td><td class="memItemRight"><a class="el" href="#ab8f00b4e6010ae15efdd9d33f628b2b1">CreateSourceContext</a> () const</td></tr>
+<tr class="memdesc:ab8f00b4e6010ae15efdd9d33f628b2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a targeting source context for this component's owner.  <br /></td></tr>
+<tr class="memitem:a28fa8d5fad738972d22a7cd4226e946c" id="r_a28fa8d5fad738972d22a7cd4226e946c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a28fa8d5fad738972d22a7cd4226e946c">ResolveAimPoint</a> (AActor *SourceActor, FVector &amp;OutLocation, FRotator &amp;OutRotation) const</td></tr>
+<tr class="memdesc:a28fa8d5fad738972d22a7cd4226e946c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve the player aim (or AI focal) point for this component's owner.  <br /></td></tr>
+<tr class="memitem:ae1d2704acf47b5d1da36dcd95692b9ba" id="r_ae1d2704acf47b5d1da36dcd95692b9ba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae1d2704acf47b5d1da36dcd95692b9ba">SetupInitialTargetsForRequest</a> (FTargetingRequestHandle RequestHandle, const TArray&lt; AActor * &gt; &amp;InitialTargets) const</td></tr>
+<tr class="memdesc:ae1d2704acf47b5d1da36dcd95692b9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup initial targets for a targeting request handle Used when filtering existing targets rather than generating new ones.  <br /></td></tr>
+<tr class="memitem:a2a4ca97454b8d4237bbbb08cd4989fa3" id="r_a2a4ca97454b8d4237bbbb08cd4989fa3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2a4ca97454b8d4237bbbb08cd4989fa3">HandleTargetingRequestComplete</a> (FTargetingRequestHandle TargetingHandle, bool bAutoSetFirstTarget)</td></tr>
+<tr class="memdesc:a2a4ca97454b8d4237bbbb08cd4989fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal callback for when targeting request completes.  <br /></td></tr>
+<tr class="memitem:aaae0d44134322125463685ad87b11181" id="r_aaae0d44134322125463685ad87b11181"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaae0d44134322125463685ad87b11181">UpdateAutoTargeting</a> ()</td></tr>
+<tr class="memdesc:aaae0d44134322125463685ad87b11181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Periodic function called by the auto-targeting timer.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7b45f052192a93f552ceb43552328e99" id="r_a7b45f052192a93f552ceb43552328e99"><td class="memItemLeft">FTimerHandle&#160;</td><td class="memItemRight"><a class="el" href="#a7b45f052192a93f552ceb43552328e99">AutoTargetingTimerHandle</a></td></tr>
+<tr class="memdesc:a7b45f052192a93f552ceb43552328e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer handle for automatic targeting updates.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Component that manages the current target for an AI or player character. </p>
@@ -321,7 +345,83 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00034">OnTargetChanged</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00050">SetCurrentTarget()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_clear_target_task_8cpp_source.html#l00007">FDTClearTargetTask::EnterState()</a>, and <a class="el" href="_d_t_select_target_task_8cpp_source.html#l00009">FDTSelectTargetTask::EnterState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_clear_target_task_8cpp_source.html#l00007">FDTClearTargetTask::EnterState()</a>, <a class="el" href="_d_t_select_target_task_8cpp_source.html#l00009">FDTSelectTargetTask::EnterState()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00515">HandleTargetingRequestComplete()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">UpdateAutoTargeting()</a>.</p>
+
+</div>
+</div>
+<a id="ab8f00b4e6010ae15efdd9d33f628b2b1" name="ab8f00b4e6010ae15efdd9d33f628b2b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f00b4e6010ae15efdd9d33f628b2b1">&#9670;&#160;</a></span>CreateSourceContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTargetingSourceContext UDTTargetingComponent::CreateSourceContext </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a targeting source context for this component's owner. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00457">457</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00368">CreateTargetingHandle()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00186">ExecutePresetImmediate()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00247">ResolveSourceContext()</a>.</p>
+
+</div>
+</div>
+<a id="a923aee32c956928ce575aeeffa797291" name="a923aee32c956928ce575aeeffa797291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a923aee32c956928ce575aeeffa797291">&#9670;&#160;</a></span>CreateTargetingHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTargetingRequestHandle UDTTargetingComponent::CreateTargetingHandle </td>
+          <td>(</td>
+          <td class="paramtype">UTargetingPreset *</td>          <td class="paramname"><span class="paramname"><em>TargetingPreset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TArray&lt; AActor * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>InitialTargets</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a targeting request handle with the given preset and optional initial targets. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TargetingPreset</td><td>The targeting preset to use (nullptr = use DefaultTargetingPreset) </td></tr>
+    <tr><td class="paramname">InitialTargets</td><td>Optional initial targets for filtering requests </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The created targeting request handle </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00368">368</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00457">CreateSourceContext()</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00191">DefaultTargetingPreset</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00353">GetTargetingSubsystem()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00485">SetupInitialTargetsForRequest()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00137">ExecuteAsyncFilteringRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00117">ExecuteAsyncTargetingRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00091">ExecuteFilteringRequest()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00072">ExecuteTargetingRequest()</a>.</p>
 
 </div>
 </div>
@@ -391,7 +491,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00137">137</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00259">CurrentAsyncHandle</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00368">CreateTargetingHandle()</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00259">CurrentAsyncHandle</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00429">ExecuteTargetingHandleAsync()</a>.</p>
 
 </div>
 </div>
@@ -469,7 +569,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00117">117</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00259">CurrentAsyncHandle</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00368">CreateTargetingHandle()</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00259">CurrentAsyncHandle</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00429">ExecuteTargetingHandleAsync()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">UpdateAutoTargeting()</a>.</p>
 
 </div>
 </div>
@@ -509,7 +611,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00091">91</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00259">CurrentAsyncHandle</a>, and <a class="el" href="_d_t_targeting_component_8h_source.html#l00040">OnTargetingComplete</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00368">CreateTargetingHandle()</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00259">CurrentAsyncHandle</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00407">ExecuteTargetingHandleImmediate()</a>, and <a class="el" href="_d_t_targeting_component_8h_source.html#l00040">OnTargetingComplete</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_select_target_task_8cpp_source.html#l00009">FDTSelectTargetTask::EnterState()</a>.</p>
 
@@ -545,7 +647,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00186">186</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00191">ExecutePresetImmediateWithContext()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00457">CreateSourceContext()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00191">ExecutePresetImmediateWithContext()</a>.</p>
 
 </div>
 </div>
@@ -591,6 +693,94 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a7890b404d5cde6c792ca90e23818ebc8" name="a7890b404d5cde6c792ca90e23818ebc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7890b404d5cde6c792ca90e23818ebc8">&#9670;&#160;</a></span>ExecuteTargetingHandleAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTargetingComponent::ExecuteTargetingHandleAsync </td>
+          <td>(</td>
+          <td class="paramtype">FTargetingRequestHandle</td>          <td class="paramname"><span class="paramname"><em>Handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bAutoSetFirstTarget</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Execute a targeting handle asynchronously. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Handle</td><td>The targeting request handle to execute </td></tr>
+    <tr><td class="paramname">bAutoSetFirstTarget</td><td>If true, automatically set the first found target as current target </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00429">429</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00259">CurrentAsyncHandle</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00353">GetTargetingSubsystem()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00515">HandleTargetingRequestComplete()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00137">ExecuteAsyncFilteringRequest()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00117">ExecuteAsyncTargetingRequest()</a>.</p>
+
+</div>
+</div>
+<a id="a15ae7e3aa590299b9861823dca36188a" name="a15ae7e3aa590299b9861823dca36188a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ae7e3aa590299b9861823dca36188a">&#9670;&#160;</a></span>ExecuteTargetingHandleImmediate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTargetingComponent::ExecuteTargetingHandleImmediate </td>
+          <td>(</td>
+          <td class="paramtype">FTargetingRequestHandle</td>          <td class="paramname"><span class="paramname"><em>Handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bAutoSetFirstTarget</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Execute a targeting handle immediately (synchronous). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Handle</td><td>The targeting request handle to execute </td></tr>
+    <tr><td class="paramname">bAutoSetFirstTarget</td><td>If true, automatically set the first found target as current target </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00407">407</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00353">GetTargetingSubsystem()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00515">HandleTargetingRequestComplete()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00091">ExecuteFilteringRequest()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00072">ExecuteTargetingRequest()</a>.</p>
+
+</div>
+</div>
 <a id="a4b83735eb44a7ac6c9956522eb4ec164" name="a4b83735eb44a7ac6c9956522eb4ec164"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b83735eb44a7ac6c9956522eb4ec164">&#9670;&#160;</a></span>ExecuteTargetingRequest()</h2>
 
@@ -621,7 +811,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00072">72</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00259">CurrentAsyncHandle</a>, and <a class="el" href="_d_t_targeting_component_8h_source.html#l00040">OnTargetingComplete</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00368">CreateTargetingHandle()</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00259">CurrentAsyncHandle</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00407">ExecuteTargetingHandleImmediate()</a>, and <a class="el" href="_d_t_targeting_component_8h_source.html#l00040">OnTargetingComplete</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">UpdateAutoTargeting()</a>.</p>
 
 </div>
 </div>
@@ -655,7 +847,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00241">CurrentTarget</a>, and <a class="el" href="_d_t_targeting_component_8h_source.html#l00054">GetCurrentTarget()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_select_target_task_8cpp_source.html#l00009">FDTSelectTargetTask::EnterState()</a>, <a class="el" href="_d_t_targeting_selection_task___current_target_8cpp_source.html#l00014">UDTTargetingSelectionTask_CurrentTarget::Execute()</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00054">GetCurrentTarget()</a>, <a class="el" href="_d_t_target_distance_condition_8cpp_source.html#l00007">FDTTargetDistanceCondition::TestCondition()</a>, <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00057">FDTTargetingEvaluator::Tick()</a>, and <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00010">FDTTargetingEvaluator::TreeStart()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8cpp_source.html#l00199">UDTThreatComponent::DrawDebugThreat()</a>, <a class="el" href="_d_t_select_target_task_8cpp_source.html#l00009">FDTSelectTargetTask::EnterState()</a>, <a class="el" href="_d_t_targeting_selection_task___current_target_8cpp_source.html#l00014">UDTTargetingSelectionTask_CurrentTarget::Execute()</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00054">GetCurrentTarget()</a>, <a class="el" href="_d_t_target_distance_condition_8cpp_source.html#l00007">FDTTargetDistanceCondition::TestCondition()</a>, <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00057">FDTTargetingEvaluator::Tick()</a>, and <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00010">FDTTargetingEvaluator::TreeStart()</a>.</p>
 
 </div>
 </div>
@@ -715,7 +907,44 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00247">TargetingSubsystem</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00019">BeginPlay()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00164">CancelAsyncTargetingRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00216">ExecuteAsyncPresetWithContext()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00191">ExecutePresetImmediateWithContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00019">BeginPlay()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00164">CancelAsyncTargetingRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00368">CreateTargetingHandle()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00216">ExecuteAsyncPresetWithContext()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00191">ExecutePresetImmediateWithContext()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00429">ExecuteTargetingHandleAsync()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00407">ExecuteTargetingHandleImmediate()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00515">HandleTargetingRequestComplete()</a>.</p>
+
+</div>
+</div>
+<a id="a2a4ca97454b8d4237bbbb08cd4989fa3" name="a2a4ca97454b8d4237bbbb08cd4989fa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4ca97454b8d4237bbbb08cd4989fa3">&#9670;&#160;</a></span>HandleTargetingRequestComplete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTargetingComponent::HandleTargetingRequestComplete </td>
+          <td>(</td>
+          <td class="paramtype">FTargetingRequestHandle</td>          <td class="paramname"><span class="paramname"><em>TargetingHandle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bAutoSetFirstTarget</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal callback for when targeting request completes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00515">515</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00066">ClearTarget()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00353">GetTargetingSubsystem()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00061">HasTarget()</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00253">LastFoundTargets</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00040">OnTargetingComplete</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00050">SetCurrentTarget()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00429">ExecuteTargetingHandleAsync()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00407">ExecuteTargetingHandleImmediate()</a>.</p>
 
 </div>
 </div>
@@ -741,7 +970,58 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00241">CurrentTarget</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_update_target_from_perception_task_8cpp_source.html#l00016">FDTUpdateTargetFromPerceptionTask::EnterState()</a>, <a class="el" href="_d_t_has_target_condition_8cpp_source.html#l00007">FDTHasTargetCondition::TestCondition()</a>, <a class="el" href="_d_t_target_distance_condition_8cpp_source.html#l00007">FDTTargetDistanceCondition::TestCondition()</a>, <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00057">FDTTargetingEvaluator::Tick()</a>, and <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00010">FDTTargetingEvaluator::TreeStart()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_update_target_from_perception_task_8cpp_source.html#l00016">FDTUpdateTargetFromPerceptionTask::EnterState()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00515">HandleTargetingRequestComplete()</a>, <a class="el" href="_d_t_has_target_condition_8cpp_source.html#l00007">FDTHasTargetCondition::TestCondition()</a>, <a class="el" href="_d_t_target_distance_condition_8cpp_source.html#l00007">FDTTargetDistanceCondition::TestCondition()</a>, <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00057">FDTTargetingEvaluator::Tick()</a>, <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00010">FDTTargetingEvaluator::TreeStart()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">UpdateAutoTargeting()</a>.</p>
+
+</div>
+</div>
+<a id="a28fa8d5fad738972d22a7cd4226e946c" name="a28fa8d5fad738972d22a7cd4226e946c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28fa8d5fad738972d22a7cd4226e946c">&#9670;&#160;</a></span>ResolveAimPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTTargetingComponent::ResolveAimPoint </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>SourceActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FVector &amp;</td>          <td class="paramname"><span class="paramname"><em>OutLocation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FRotator &amp;</td>          <td class="paramname"><span class="paramname"><em>OutRotation</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolve the player aim (or AI focal) point for this component's owner. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SourceActor</td><td>The avatar to aim from </td></tr>
+    <tr><td class="paramname">OutLocation</td><td>The resolved aim world location </td></tr>
+    <tr><td class="paramname">OutRotation</td><td>The resolved aim rotation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if an aim point could be resolved </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00291">291</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00228">AimTraceChannel</a>, and <a class="el" href="_d_t_targeting_component_8h_source.html#l00234">MaxAimDistance</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00247">ResolveSourceContext()</a>.</p>
 
 </div>
 </div>
@@ -771,7 +1051,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00247">247</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_targeting_types_8h_source.html#l00026">AimDirection</a>, <a class="el" href="_d_t_targeting_types_8h_source.html#l00023">AimLocation</a>, <a class="el" href="_d_t_targeting_types_8h_source.html#l00029">CurrentTarget</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00241">CurrentTarget</a>, and <a class="el" href="_d_t_targeting_types_8h_source.html#l00020">Self</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_targeting_types_8h_source.html#l00026">AimDirection</a>, <a class="el" href="_d_t_targeting_types_8h_source.html#l00023">AimLocation</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00457">CreateSourceContext()</a>, <a class="el" href="_d_t_targeting_types_8h_source.html#l00029">CurrentTarget</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00241">CurrentTarget</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00291">ResolveAimPoint()</a>, and <a class="el" href="_d_t_targeting_types_8h_source.html#l00020">Self</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_ability_task___perform_targeting_8cpp_source.html#l00066">UDTAbilityTask_PerformTargeting::GatherTargetsLocally()</a>.</p>
 
@@ -804,7 +1084,44 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00241">CurrentTarget</a>, and <a class="el" href="_d_t_targeting_component_8h_source.html#l00034">OnTargetChanged</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00066">ClearTarget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00066">ClearTarget()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00515">HandleTargetingRequestComplete()</a>.</p>
+
+</div>
+</div>
+<a id="ae1d2704acf47b5d1da36dcd95692b9ba" name="ae1d2704acf47b5d1da36dcd95692b9ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1d2704acf47b5d1da36dcd95692b9ba">&#9670;&#160;</a></span>SetupInitialTargetsForRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTargetingComponent::SetupInitialTargetsForRequest </td>
+          <td>(</td>
+          <td class="paramtype">FTargetingRequestHandle</td>          <td class="paramname"><span class="paramname"><em>RequestHandle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TArray&lt; AActor * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>InitialTargets</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setup initial targets for a targeting request handle Used when filtering existing targets rather than generating new ones. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00485">485</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00024">Target</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00368">CreateTargetingHandle()</a>.</p>
 
 </div>
 </div>
@@ -833,7 +1150,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00544">544</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00203">AutoTargetingUpdateInterval</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00191">DefaultTargetingPreset</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00564">StopAutoTargeting()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00312">AutoTargetingTimerHandle</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00203">AutoTargetingUpdateInterval</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00191">DefaultTargetingPreset</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00564">StopAutoTargeting()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">UpdateAutoTargeting()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00019">BeginPlay()</a>.</p>
 
@@ -858,7 +1175,42 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00564">564</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00032">EndPlay()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00544">StartAutoTargeting()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00312">AutoTargetingTimerHandle</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00032">EndPlay()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00544">StartAutoTargeting()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">UpdateAutoTargeting()</a>.</p>
+
+</div>
+</div>
+<a id="aaae0d44134322125463685ad87b11181" name="aaae0d44134322125463685ad87b11181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae0d44134322125463685ad87b11181">&#9670;&#160;</a></span>UpdateAutoTargeting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTargetingComponent::UpdateAutoTargeting </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Periodic function called by the auto-targeting timer. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">577</a> of file <a class="el" href="_d_t_targeting_component_8cpp_source.html">DTTargetingComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_targeting_component_8h_source.html#l00209">AutoTargetingMaxDistance</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00222">bContinuousAutoTargeting</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00215">bUseAsyncForAutoTargeting</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00066">ClearTarget()</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00241">CurrentTarget</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00191">DefaultTargetingPreset</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00117">ExecuteAsyncTargetingRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00072">ExecuteTargetingRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00061">HasTarget()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00564">StopAutoTargeting()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00544">StartAutoTargeting()</a>.</p>
 
 </div>
 </div>
@@ -879,6 +1231,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8h_source.html#l00228">228</a> of file <a class="el" href="_d_t_targeting_component_8h_source.html">DTTargetingComponent.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00291">ResolveAimPoint()</a>.</p>
+
 </div>
 </div>
 <a id="aa3d2c2d03e8967d4f0b98de54067a36f" name="aa3d2c2d03e8967d4f0b98de54067a36f"></a>
@@ -896,6 +1250,36 @@ Protected Attributes</h2></td></tr>
 <p>How far away is the current target allowed to be before auto-targeting will search for a new target. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8h_source.html#l00209">209</a> of file <a class="el" href="_d_t_targeting_component_8h_source.html">DTTargetingComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">UpdateAutoTargeting()</a>.</p>
+
+</div>
+</div>
+<a id="a7b45f052192a93f552ceb43552328e99" name="a7b45f052192a93f552ceb43552328e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b45f052192a93f552ceb43552328e99">&#9670;&#160;</a></span>AutoTargetingTimerHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTimerHandle UDTTargetingComponent::AutoTargetingTimerHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Timer handle for automatic targeting updates. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8h_source.html#l00312">312</a> of file <a class="el" href="_d_t_targeting_component_8h_source.html">DTTargetingComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00544">StartAutoTargeting()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00564">StopAutoTargeting()</a>.</p>
 
 </div>
 </div>
@@ -955,6 +1339,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8h_source.html#l00222">222</a> of file <a class="el" href="_d_t_targeting_component_8h_source.html">DTTargetingComponent.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">UpdateAutoTargeting()</a>.</p>
+
 </div>
 </div>
 <a id="afce36a0620990e53588a40bc133b0fe2" name="afce36a0620990e53588a40bc133b0fe2"></a>
@@ -972,6 +1358,8 @@ Protected Attributes</h2></td></tr>
 <p>If true, auto-targeting will use async requests instead of immediate execution. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8h_source.html#l00215">215</a> of file <a class="el" href="_d_t_targeting_component_8h_source.html">DTTargetingComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">UpdateAutoTargeting()</a>.</p>
 
 </div>
 </div>
@@ -999,7 +1387,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8h_source.html#l00259">259</a> of file <a class="el" href="_d_t_targeting_component_8h_source.html">DTTargetingComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00164">CancelAsyncTargetingRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00032">EndPlay()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00137">ExecuteAsyncFilteringRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00117">ExecuteAsyncTargetingRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00091">ExecuteFilteringRequest()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00072">ExecuteTargetingRequest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00164">CancelAsyncTargetingRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00032">EndPlay()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00137">ExecuteAsyncFilteringRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00117">ExecuteAsyncTargetingRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00091">ExecuteFilteringRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00429">ExecuteTargetingHandleAsync()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00072">ExecuteTargetingRequest()</a>.</p>
 
 </div>
 </div>
@@ -1027,7 +1415,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8h_source.html#l00241">241</a> of file <a class="el" href="_d_t_targeting_component_8h_source.html">DTTargetingComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8h_source.html#l00054">GetCurrentTarget()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00061">HasTarget()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00247">ResolveSourceContext()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00050">SetCurrentTarget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8h_source.html#l00054">GetCurrentTarget()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00061">HasTarget()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00247">ResolveSourceContext()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00050">SetCurrentTarget()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">UpdateAutoTargeting()</a>.</p>
 
 </div>
 </div>
@@ -1047,7 +1435,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8h_source.html#l00191">191</a> of file <a class="el" href="_d_t_targeting_component_8h_source.html">DTTargetingComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00019">BeginPlay()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00216">ExecuteAsyncPresetWithContext()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00191">ExecutePresetImmediateWithContext()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00544">StartAutoTargeting()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00019">BeginPlay()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00368">CreateTargetingHandle()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00216">ExecuteAsyncPresetWithContext()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00191">ExecutePresetImmediateWithContext()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00544">StartAutoTargeting()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00577">UpdateAutoTargeting()</a>.</p>
 
 </div>
 </div>
@@ -1075,7 +1463,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8h_source.html#l00253">253</a> of file <a class="el" href="_d_t_targeting_component_8h_source.html">DTTargetingComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8h_source.html#l00164">GetLastTargets()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8h_source.html#l00164">GetLastTargets()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00515">HandleTargetingRequestComplete()</a>.</p>
 
 </div>
 </div>
@@ -1094,6 +1482,8 @@ Protected Attributes</h2></td></tr>
 <p>Maximum distance of the aim trace used to resolve a cast-at-location point. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8h_source.html#l00234">234</a> of file <a class="el" href="_d_t_targeting_component_8h_source.html">DTTargetingComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00291">ResolveAimPoint()</a>.</p>
 
 </div>
 </div>
@@ -1133,7 +1523,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_component_8h_source.html#l00040">40</a> of file <a class="el" href="_d_t_targeting_component_8h_source.html">DTTargetingComponent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00091">ExecuteFilteringRequest()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00072">ExecuteTargetingRequest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00091">ExecuteFilteringRequest()</a>, <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00072">ExecuteTargetingRequest()</a>, and <a class="el" href="_d_t_targeting_component_8cpp_source.html#l00515">HandleTargetingRequestComplete()</a>.</p>
 
 </div>
 </div>

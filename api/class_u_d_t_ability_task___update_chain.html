@@ -156,6 +156,45 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0042350663a207b3bc7d2a0d27cdcda2" id="r_a0042350663a207b3bc7d2a0d27cdcda2"><td class="memItemLeft">FDTChainTargetAttachedDelegate&#160;</td><td class="memItemRight"><a class="el" href="#a0042350663a207b3bc7d2a0d27cdcda2">OnTargetAttached</a></td></tr>
 <tr class="memitem:a194a096c71b9fee460d94399f8669731" id="r_a194a096c71b9fee460d94399f8669731"><td class="memItemLeft">FDTChainTargetPullDelegate&#160;</td><td class="memItemRight"><a class="el" href="#a194a096c71b9fee460d94399f8669731">OnTargetPull</a></td></tr>
 <tr class="memitem:aedd1560e85d64165469abb111c9ad96b" id="r_aedd1560e85d64165469abb111c9ad96b"><td class="memItemLeft">FDTChainTaskFinishedDelegate&#160;</td><td class="memItemRight"><a class="el" href="#aedd1560e85d64165469abb111c9ad96b">OnFinished</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a8758b1061034beb2cee40af5890d39dc" id="r_a8758b1061034beb2cee40af5890d39dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8758b1061034beb2cee40af5890d39dc">OnRetractNotifyReceived</a> (FGameplayEventData Payload)</td></tr>
+<tr class="memitem:a85a748791fa620155442a121522274e3" id="r_a85a748791fa620155442a121522274e3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a85a748791fa620155442a121522274e3">StartRetractNotifyListener</a> ()</td></tr>
+<tr class="memitem:a779968d86d09f335287963c7fa6349d5" id="r_a779968d86d09f335287963c7fa6349d5"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a779968d86d09f335287963c7fa6349d5">GetChainLength</a> (const <a class="el" href="struct_f_chain_trace.html">FChainTrace</a> &amp;Chain) const</td></tr>
+<tr class="memitem:afd63157a2b629d4ef4fbac258be3f20f" id="r_afd63157a2b629d4ef4fbac258be3f20f"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="#afd63157a2b629d4ef4fbac258be3f20f">GetCurrentChainStart</a> (int32 ChainIndex) const</td></tr>
+<tr class="memitem:a8df024e6b2a69b01941efb4587f34ee8" id="r_a8df024e6b2a69b01941efb4587f34ee8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8df024e6b2a69b01941efb4587f34ee8">SpawnChainVFX</a> (int32 ChainIndex)</td></tr>
+<tr class="memitem:a20181b2ce95f7d0d4d7be0c2f7a847e0" id="r_a20181b2ce95f7d0d4d7be0c2f7a847e0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a20181b2ce95f7d0d4d7be0c2f7a847e0">UpdateChainVFXExtend</a> (int32 ChainIndex)</td></tr>
+<tr class="memitem:a36db89079b5d73a15044eabcafcac1be" id="r_a36db89079b5d73a15044eabcafcac1be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a36db89079b5d73a15044eabcafcac1be">UpdateChainVFXFollow</a> (int32 ChainIndex)</td></tr>
+<tr class="memitem:af2ce072b7aee335f52cffbb65723ff93" id="r_af2ce072b7aee335f52cffbb65723ff93"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af2ce072b7aee335f52cffbb65723ff93">UpdateChainVFXRetract</a> (int32 ChainIndex)</td></tr>
+<tr class="memitem:ae6014e7564283a7846ccf7fb294da573" id="r_ae6014e7564283a7846ccf7fb294da573"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae6014e7564283a7846ccf7fb294da573">EnterHoldPhase</a> (int32 ChainIndex)</td></tr>
+<tr class="memitem:a16c9aaaa8a8bd30a55506672fed58359" id="r_a16c9aaaa8a8bd30a55506672fed58359"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a16c9aaaa8a8bd30a55506672fed58359">EnterRetractPhase</a> (int32 ChainIndex)</td></tr>
+<tr class="memitem:a032647895f5982b64a98acece427a188" id="r_a032647895f5982b64a98acece427a188"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a032647895f5982b64a98acece427a188">EnterDonePhase</a> (int32 ChainIndex)</td></tr>
+<tr class="memitem:a329693ca614be5baba18f0d6a9305664" id="r_a329693ca614be5baba18f0d6a9305664"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a329693ca614be5baba18f0d6a9305664">CleanupChainVFX</a> (<a class="el" href="struct_f_chain_state.html">FChainState</a> &amp;Runtime)</td></tr>
+<tr class="memitem:a4ff9386c0be21ba83ac7dc6c0d2025e5" id="r_a4ff9386c0be21ba83ac7dc6c0d2025e5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4ff9386c0be21ba83ac7dc6c0d2025e5">FireHits</a> (int32 ChainIndex)</td></tr>
+<tr class="memitem:a987fc4f6d0197c3e072690c7cf63b361" id="r_a987fc4f6d0197c3e072690c7cf63b361"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a987fc4f6d0197c3e072690c7cf63b361">FirePulls</a> (int32 ChainIndex)</td></tr>
+<tr class="memitem:ad6e1eb262d9933939f3e6b152e03cdd2" id="r_ad6e1eb262d9933939f3e6b152e03cdd2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad6e1eb262d9933939f3e6b152e03cdd2">BroadcastTargetAttached</a> (int32 ChainIndex, int32 TargetIndex)</td></tr>
+<tr class="memitem:a8c71e0f4cc4f549bc11fb5379e3ae90b" id="r_a8c71e0f4cc4f549bc11fb5379e3ae90b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8c71e0f4cc4f549bc11fb5379e3ae90b">BroadcastTargetPull</a> (int32 ChainIndex, int32 TargetIndex)</td></tr>
+<tr class="memitem:aeaa897f9f3f82591cd3fa5f978815fe0" id="r_aeaa897f9f3f82591cd3fa5f978815fe0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeaa897f9f3f82591cd3fa5f978815fe0">TryFinishTask</a> ()</td></tr>
+<tr class="memitem:a14da3646f3aa3eb76b3184191d9dc661" id="r_a14da3646f3aa3eb76b3184191d9dc661"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a14da3646f3aa3eb76b3184191d9dc661">BroadcastFinishedAndEndTask</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adb8884870c224d8ddd1a57dfc82aa584" id="r_adb8884870c224d8ddd1a57dfc82aa584"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_chain_trace.html">FChainTrace</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#adb8884870c224d8ddd1a57dfc82aa584">ChainTraces</a></td></tr>
+<tr class="memitem:a35e4d5995745ccfb2acc013c63a0b96c" id="r_a35e4d5995745ccfb2acc013c63a0b96c"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_chain_state.html">FChainState</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a35e4d5995745ccfb2acc013c63a0b96c">ChainStates</a></td></tr>
+<tr class="memitem:a34ae782b1f61d66f81057c1fc749fc86" id="r_a34ae782b1f61d66f81057c1fc749fc86"><td class="memItemLeft">TObjectPtr&lt; UNiagaraSystem &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a34ae782b1f61d66f81057c1fc749fc86">ChainVFX</a> = nullptr</td></tr>
+<tr class="memitem:a00111f2683f9e94980cd3dc01b120545" id="r_a00111f2683f9e94980cd3dc01b120545"><td class="memItemLeft">TObjectPtr&lt; USceneComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a00111f2683f9e94980cd3dc01b120545">AttachComponent</a> = nullptr</td></tr>
+<tr class="memitem:a6579091a647090b5dcc47d0baa40f723" id="r_a6579091a647090b5dcc47d0baa40f723"><td class="memItemLeft">TObjectPtr&lt; UAbilityTask_WaitGameplayEvent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6579091a647090b5dcc47d0baa40f723">RetractNotifyTask</a> = nullptr</td></tr>
+<tr class="memitem:a62150c15e0c4532d4105996d020fc3ba" id="r_a62150c15e0c4532d4105996d020fc3ba"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#a62150c15e0c4532d4105996d020fc3ba">RetractNotifyTag</a></td></tr>
+<tr class="memitem:af9869b750ed46f93bd47e051f15a5b57" id="r_af9869b750ed46f93bd47e051f15a5b57"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#af9869b750ed46f93bd47e051f15a5b57">AttachSocketName</a> = NAME_None</td></tr>
+<tr class="memitem:a700fca7860c081bd1504d2e376485aac" id="r_a700fca7860c081bd1504d2e376485aac"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#a700fca7860c081bd1504d2e376485aac">ChainStartParameterName</a> = TEXT(&quot;User.Start&quot;)</td></tr>
+<tr class="memitem:ae7a687ed76aa3607a9cabdf9bc569256" id="r_ae7a687ed76aa3607a9cabdf9bc569256"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#ae7a687ed76aa3607a9cabdf9bc569256">ChainEndParameterName</a> = TEXT(&quot;User.End&quot;)</td></tr>
+<tr class="memitem:adbed1970f0970b0609f9e3a1ddfe2659" id="r_adbed1970f0970b0609f9e3a1ddfe2659"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#adbed1970f0970b0609f9e3a1ddfe2659">ChainTravelSpeed</a> = 2000.0f</td></tr>
+<tr class="memitem:a341a0ab8ed3fb396f1688d0f73cc373a" id="r_a341a0ab8ed3fb396f1688d0f73cc373a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a341a0ab8ed3fb396f1688d0f73cc373a">ChainVFXHoldDuration</a> = 0.25f</td></tr>
+<tr class="memitem:a0537a2eb3904e30248d127fcfeef4f4d" id="r_a0537a2eb3904e30248d127fcfeef4f4d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0537a2eb3904e30248d127fcfeef4f4d">ChainRetractDuration</a> = 0.2f</td></tr>
+<tr class="memitem:a3c904f3787ca9465229d95f79b6be440" id="r_a3c904f3787ca9465229d95f79b6be440"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3c904f3787ca9465229d95f79b6be440">bWaitForRetractNotify</a> = false</td></tr>
+<tr class="memitem:a96b090e4f2cba7abac7ac2045221b46c" id="r_a96b090e4f2cba7abac7ac2045221b46c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a96b090e4f2cba7abac7ac2045221b46c">bRetractNotifyReceived</a> = false</td></tr>
+<tr class="memitem:a35e146f7cbb6e0477da022bd138247cb" id="r_a35e146f7cbb6e0477da022bd138247cb"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a35e146f7cbb6e0477da022bd138247cb">bFinished</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -208,7 +247,356 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00051">51</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00080">FChainState::ExtendDuration</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00060">Extending</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00078">FChainState::Phase</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00079">FChainState::PhaseElapsed</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00081">FChainState::TargetHitStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00082">FChainState::TargetPullStates</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00050">FChainTrace::Targets</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00484">BroadcastFinishedAndEndTask()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00156">ChainTravelSpeed</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00080">FChainState::ExtendDuration</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00060">Extending</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00199">GetChainLength()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00078">FChainState::Phase</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00079">FChainState::PhaseElapsed</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00225">SpawnChainVFX()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00080">StartRetractNotifyListener()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00081">FChainState::TargetHitStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00082">FChainState::TargetPullStates</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00050">FChainTrace::Targets</a>.</p>
+
+</div>
+</div>
+<a id="a14da3646f3aa3eb76b3184191d9dc661" name="a14da3646f3aa3eb76b3184191d9dc661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14da3646f3aa3eb76b3184191d9dc661">&#9670;&#160;</a></span>BroadcastFinishedAndEndTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::BroadcastFinishedAndEndTask </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00484">484</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00161">bFinished</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00095">OnFinished</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00051">Activate()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00460">TryFinishTask()</a>.</p>
+
+</div>
+</div>
+<a id="ad6e1eb262d9933939f3e6b152e03cdd2" name="ad6e1eb262d9933939f3e6b152e03cdd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e1eb262d9933939f3e6b152e03cdd2">&#9670;&#160;</a></span>BroadcastTargetAttached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::BroadcastTargetAttached </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>TargetIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00433">433</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00093">OnTargetAttached</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00024">Target</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00374">FireHits()</a>.</p>
+
+</div>
+</div>
+<a id="a8c71e0f4cc4f549bc11fb5379e3ae90b" name="a8c71e0f4cc4f549bc11fb5379e3ae90b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c71e0f4cc4f549bc11fb5379e3ae90b">&#9670;&#160;</a></span>BroadcastTargetPull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::BroadcastTargetPull </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>TargetIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00447">447</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00094">OnTargetPull</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00402">FirePulls()</a>.</p>
+
+</div>
+</div>
+<a id="a329693ca614be5baba18f0d6a9305664" name="a329693ca614be5baba18f0d6a9305664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a329693ca614be5baba18f0d6a9305664">&#9670;&#160;</a></span>CleanupChainVFX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::CleanupChainVFX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_f_chain_state.html">FChainState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Runtime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00361">361</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00075">FChainState::ChainAttachComponent</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00077">FChainState::ChainAttachSocketName</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00072">FChainState::ChainVFXComponent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00349">EnterDonePhase()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00178">OnDestroy()</a>.</p>
+
+</div>
+</div>
+<a id="a032647895f5982b64a98acece427a188" name="a032647895f5982b64a98acece427a188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032647895f5982b64a98acece427a188">&#9670;&#160;</a></span>EnterDonePhase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::EnterDonePhase </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00349">349</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00361">CleanupChainVFX()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00063">Done</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00078">FChainState::Phase</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>.</p>
+
+</div>
+</div>
+<a id="ae6014e7564283a7846ccf7fb294da573" name="ae6014e7564283a7846ccf7fb294da573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6014e7564283a7846ccf7fb294da573">&#9670;&#160;</a></span>EnterHoldPhase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::EnterHoldPhase </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00319">319</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00155">ChainEndParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00154">ChainStartParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00072">FChainState::ChainVFXComponent</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00204">GetCurrentChainStart()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00061">Holding</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00078">FChainState::Phase</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00079">FChainState::PhaseElapsed</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>.</p>
+
+</div>
+</div>
+<a id="a16c9aaaa8a8bd30a55506672fed58359" name="a16c9aaaa8a8bd30a55506672fed58359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16c9aaaa8a8bd30a55506672fed58359">&#9670;&#160;</a></span>EnterRetractPhase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::EnterRetractPhase </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00337">337</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00078">FChainState::Phase</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00079">FChainState::PhaseElapsed</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00062">Retracting</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>.</p>
+
+</div>
+</div>
+<a id="a4ff9386c0be21ba83ac7dc6c0d2025e5" name="a4ff9386c0be21ba83ac7dc6c0d2025e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff9386c0be21ba83ac7dc6c0d2025e5">&#9670;&#160;</a></span>FireHits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::FireHits </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00374">374</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00433">BroadcastTargetAttached()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00156">ChainTravelSpeed</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00079">FChainState::PhaseElapsed</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00081">FChainState::TargetHitStates</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00050">FChainTrace::Targets</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>.</p>
+
+</div>
+</div>
+<a id="a987fc4f6d0197c3e072690c7cf63b361" name="a987fc4f6d0197c3e072690c7cf63b361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a987fc4f6d0197c3e072690c7cf63b361">&#9670;&#160;</a></span>FirePulls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::FirePulls </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00402">402</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00447">BroadcastTargetPull()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00158">ChainRetractDuration</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00199">GetChainLength()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00079">FChainState::PhaseElapsed</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00082">FChainState::TargetPullStates</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00050">FChainTrace::Targets</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>.</p>
+
+</div>
+</div>
+<a id="a779968d86d09f335287963c7fa6349d5" name="a779968d86d09f335287963c7fa6349d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779968d86d09f335287963c7fa6349d5">&#9670;&#160;</a></span>GetChainLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityTask_UpdateChain::GetChainLength </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_chain_trace.html">FChainTrace</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Chain</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00199">199</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00047">FChainTrace::Direction</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00044">FChainTrace::End</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00041">FChainTrace::Start</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00051">Activate()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00402">FirePulls()</a>.</p>
+
+</div>
+</div>
+<a id="afd63157a2b629d4ef4fbac258be3f20f" name="afd63157a2b629d4ef4fbac258be3f20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd63157a2b629d4ef4fbac258be3f20f">&#9670;&#160;</a></span>GetCurrentChainStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FVector UDTAbilityTask_UpdateChain::GetCurrentChainStart </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00204">204</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00075">FChainState::ChainAttachComponent</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00077">FChainState::ChainAttachSocketName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00319">EnterHoldPhase()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00225">SpawnChainVFX()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00261">UpdateChainVFXExtend()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00281">UpdateChainVFXFollow()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00299">UpdateChainVFXRetract()</a>.</p>
 
 </div>
 </div>
@@ -237,6 +625,99 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00178">178</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00147">AttachComponent</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00144">ChainVFX</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00361">CleanupChainVFX()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00150">RetractNotifyTask</a>.</p>
+
+</div>
+</div>
+<a id="a8758b1061034beb2cee40af5890d39dc" name="a8758b1061034beb2cee40af5890d39dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8758b1061034beb2cee40af5890d39dc">&#9670;&#160;</a></span>OnRetractNotifyReceived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::OnRetractNotifyReceived </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayEventData</td>          <td class="paramname"><span class="paramname"><em>Payload</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00099">99</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00160">bRetractNotifyReceived</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00150">RetractNotifyTask</a>.</p>
+
+</div>
+</div>
+<a id="a8df024e6b2a69b01941efb4587f34ee8" name="a8df024e6b2a69b01941efb4587f34ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8df024e6b2a69b01941efb4587f34ee8">&#9670;&#160;</a></span>SpawnChainVFX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::SpawnChainVFX </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00225">225</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00147">AttachComponent</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00153">AttachSocketName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00075">FChainState::ChainAttachComponent</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00077">FChainState::ChainAttachSocketName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00155">ChainEndParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00154">ChainStartParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00144">ChainVFX</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00072">FChainState::ChainVFXComponent</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00047">FChainTrace::Direction</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00044">FChainTrace::End</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00080">FChainState::ExtendDuration</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00204">GetCurrentChainStart()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00051">Activate()</a>.</p>
+
+</div>
+</div>
+<a id="a85a748791fa620155442a121522274e3" name="a85a748791fa620155442a121522274e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a748791fa620155442a121522274e3">&#9670;&#160;</a></span>StartRetractNotifyListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::StartRetractNotifyListener </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00080">80</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00159">bWaitForRetractNotify</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00152">RetractNotifyTag</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00150">RetractNotifyTask</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00051">Activate()</a>.</p>
+
 </div>
 </div>
 <a id="a55b40d9bf9c8526ccf471e219dbbd911" name="a55b40d9bf9c8526ccf471e219dbbd911"></a>
@@ -264,7 +745,38 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">105</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00063">Done</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00080">FChainState::ExtendDuration</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00060">Extending</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00061">Holding</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00078">FChainState::Phase</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00079">FChainState::PhaseElapsed</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00062">Retracting</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00161">bFinished</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00160">bRetractNotifyReceived</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00159">bWaitForRetractNotify</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00158">ChainRetractDuration</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00157">ChainVFXHoldDuration</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00063">Done</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00349">EnterDonePhase()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00319">EnterHoldPhase()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00337">EnterRetractPhase()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00080">FChainState::ExtendDuration</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00060">Extending</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00374">FireHits()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00402">FirePulls()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00061">Holding</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00078">FChainState::Phase</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00079">FChainState::PhaseElapsed</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00062">Retracting</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00460">TryFinishTask()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00261">UpdateChainVFXExtend()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00281">UpdateChainVFXFollow()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00299">UpdateChainVFXRetract()</a>.</p>
+
+</div>
+</div>
+<a id="aeaa897f9f3f82591cd3fa5f978815fe0" name="aeaa897f9f3f82591cd3fa5f978815fe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa897f9f3f82591cd3fa5f978815fe0">&#9670;&#160;</a></span>TryFinishTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::TryFinishTask </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00460">460</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00161">bFinished</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00484">BroadcastFinishedAndEndTask()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00063">Done</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>.</p>
 
 </div>
 </div>
@@ -342,11 +854,444 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">17</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00011">UDTAbilityTask_UpdateChain()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00147">AttachComponent</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00153">AttachSocketName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00159">bWaitForRetractNotify</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00155">ChainEndParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00158">ChainRetractDuration</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00154">ChainStartParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00156">ChainTravelSpeed</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00144">ChainVFX</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00157">ChainVFXHoldDuration</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00152">RetractNotifyTag</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00011">UDTAbilityTask_UpdateChain()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">UDTGameplayAbility_Chain::StartChainTask()</a>.</p>
+
+</div>
+</div>
+<a id="a20181b2ce95f7d0d4d7be0c2f7a847e0" name="a20181b2ce95f7d0d4d7be0c2f7a847e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20181b2ce95f7d0d4d7be0c2f7a847e0">&#9670;&#160;</a></span>UpdateChainVFXExtend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::UpdateChainVFXExtend </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00261">261</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00155">ChainEndParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00154">ChainStartParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00072">FChainState::ChainVFXComponent</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00044">FChainTrace::End</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00080">FChainState::ExtendDuration</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00204">GetCurrentChainStart()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00079">FChainState::PhaseElapsed</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>.</p>
+
+</div>
+</div>
+<a id="a36db89079b5d73a15044eabcafcac1be" name="a36db89079b5d73a15044eabcafcac1be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36db89079b5d73a15044eabcafcac1be">&#9670;&#160;</a></span>UpdateChainVFXFollow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::UpdateChainVFXFollow </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00281">281</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00155">ChainEndParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00154">ChainStartParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00072">FChainState::ChainVFXComponent</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00044">FChainTrace::End</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00204">GetCurrentChainStart()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>.</p>
+
+</div>
+</div>
+<a id="af2ce072b7aee335f52cffbb65723ff93" name="af2ce072b7aee335f52cffbb65723ff93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2ce072b7aee335f52cffbb65723ff93">&#9670;&#160;</a></span>UpdateChainVFXRetract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_UpdateChain::UpdateChainVFXRetract </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00299">299</a> of file <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html">DTAbilityTask_UpdateChain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00155">ChainEndParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00158">ChainRetractDuration</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00154">ChainStartParameterName</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">ChainStates</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">ChainTraces</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00072">FChainState::ChainVFXComponent</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00044">FChainTrace::End</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00204">GetCurrentChainStart()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00079">FChainState::PhaseElapsed</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a00111f2683f9e94980cd3dc01b120545" name="a00111f2683f9e94980cd3dc01b120545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00111f2683f9e94980cd3dc01b120545">&#9670;&#160;</a></span>AttachComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;USceneComponent&gt; UDTAbilityTask_UpdateChain::AttachComponent = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00147">147</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00178">OnDestroy()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00225">SpawnChainVFX()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UpdateChain()</a>.</p>
+
+</div>
+</div>
+<a id="af9869b750ed46f93bd47e051f15a5b57" name="af9869b750ed46f93bd47e051f15a5b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9869b750ed46f93bd47e051f15a5b57">&#9670;&#160;</a></span>AttachSocketName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FName UDTAbilityTask_UpdateChain::AttachSocketName = NAME_None</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00153">153</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00225">SpawnChainVFX()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UpdateChain()</a>.</p>
+
+</div>
+</div>
+<a id="a35e146f7cbb6e0477da022bd138247cb" name="a35e146f7cbb6e0477da022bd138247cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e146f7cbb6e0477da022bd138247cb">&#9670;&#160;</a></span>bFinished</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityTask_UpdateChain::bFinished = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00161">161</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00484">BroadcastFinishedAndEndTask()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00460">TryFinishTask()</a>.</p>
+
+</div>
+</div>
+<a id="a96b090e4f2cba7abac7ac2045221b46c" name="a96b090e4f2cba7abac7ac2045221b46c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96b090e4f2cba7abac7ac2045221b46c">&#9670;&#160;</a></span>bRetractNotifyReceived</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityTask_UpdateChain::bRetractNotifyReceived = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00160">160</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00099">OnRetractNotifyReceived()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>.</p>
+
+</div>
+</div>
+<a id="a3c904f3787ca9465229d95f79b6be440" name="a3c904f3787ca9465229d95f79b6be440"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c904f3787ca9465229d95f79b6be440">&#9670;&#160;</a></span>bWaitForRetractNotify</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityTask_UpdateChain::bWaitForRetractNotify = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00159">159</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00080">StartRetractNotifyListener()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UpdateChain()</a>.</p>
+
+</div>
+</div>
+<a id="ae7a687ed76aa3607a9cabdf9bc569256" name="ae7a687ed76aa3607a9cabdf9bc569256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a687ed76aa3607a9cabdf9bc569256">&#9670;&#160;</a></span>ChainEndParameterName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FName UDTAbilityTask_UpdateChain::ChainEndParameterName = TEXT(&quot;User.End&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00155">155</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00319">EnterHoldPhase()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00225">SpawnChainVFX()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UpdateChain()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00261">UpdateChainVFXExtend()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00281">UpdateChainVFXFollow()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00299">UpdateChainVFXRetract()</a>.</p>
+
+</div>
+</div>
+<a id="a0537a2eb3904e30248d127fcfeef4f4d" name="a0537a2eb3904e30248d127fcfeef4f4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0537a2eb3904e30248d127fcfeef4f4d">&#9670;&#160;</a></span>ChainRetractDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityTask_UpdateChain::ChainRetractDuration = 0.2f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00158">158</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00402">FirePulls()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UpdateChain()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00299">UpdateChainVFXRetract()</a>.</p>
+
+</div>
+</div>
+<a id="a700fca7860c081bd1504d2e376485aac" name="a700fca7860c081bd1504d2e376485aac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700fca7860c081bd1504d2e376485aac">&#9670;&#160;</a></span>ChainStartParameterName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FName UDTAbilityTask_UpdateChain::ChainStartParameterName = TEXT(&quot;User.Start&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00154">154</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00319">EnterHoldPhase()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00225">SpawnChainVFX()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UpdateChain()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00261">UpdateChainVFXExtend()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00281">UpdateChainVFXFollow()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00299">UpdateChainVFXRetract()</a>.</p>
+
+</div>
+</div>
+<a id="a35e4d5995745ccfb2acc013c63a0b96c" name="a35e4d5995745ccfb2acc013c63a0b96c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e4d5995745ccfb2acc013c63a0b96c">&#9670;&#160;</a></span>ChainStates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_chain_state.html">FChainState</a>&gt; UDTAbilityTask_UpdateChain::ChainStates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00141">141</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00051">Activate()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00349">EnterDonePhase()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00319">EnterHoldPhase()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00337">EnterRetractPhase()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00374">FireHits()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00402">FirePulls()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00204">GetCurrentChainStart()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00178">OnDestroy()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00225">SpawnChainVFX()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00460">TryFinishTask()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00261">UpdateChainVFXExtend()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00281">UpdateChainVFXFollow()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00299">UpdateChainVFXRetract()</a>.</p>
+
+</div>
+</div>
+<a id="adb8884870c224d8ddd1a57dfc82aa584" name="adb8884870c224d8ddd1a57dfc82aa584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8884870c224d8ddd1a57dfc82aa584">&#9670;&#160;</a></span>ChainTraces</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_chain_trace.html">FChainTrace</a>&gt; UDTAbilityTask_UpdateChain::ChainTraces</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00138">138</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00051">Activate()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00433">BroadcastTargetAttached()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00447">BroadcastTargetPull()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00319">EnterHoldPhase()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00374">FireHits()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00402">FirePulls()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00204">GetCurrentChainStart()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00178">OnDestroy()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00225">SpawnChainVFX()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00460">TryFinishTask()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UpdateChain()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00261">UpdateChainVFXExtend()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00281">UpdateChainVFXFollow()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00299">UpdateChainVFXRetract()</a>.</p>
+
+</div>
+</div>
+<a id="adbed1970f0970b0609f9e3a1ddfe2659" name="adbed1970f0970b0609f9e3a1ddfe2659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbed1970f0970b0609f9e3a1ddfe2659">&#9670;&#160;</a></span>ChainTravelSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityTask_UpdateChain::ChainTravelSpeed = 2000.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00156">156</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00051">Activate()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00374">FireHits()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UpdateChain()</a>.</p>
+
+</div>
+</div>
+<a id="a34ae782b1f61d66f81057c1fc749fc86" name="a34ae782b1f61d66f81057c1fc749fc86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34ae782b1f61d66f81057c1fc749fc86">&#9670;&#160;</a></span>ChainVFX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UNiagaraSystem&gt; UDTAbilityTask_UpdateChain::ChainVFX = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00144">144</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00178">OnDestroy()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00225">SpawnChainVFX()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UpdateChain()</a>.</p>
+
+</div>
+</div>
+<a id="a341a0ab8ed3fb396f1688d0f73cc373a" name="a341a0ab8ed3fb396f1688d0f73cc373a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a341a0ab8ed3fb396f1688d0f73cc373a">&#9670;&#160;</a></span>ChainVFXHoldDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTAbilityTask_UpdateChain::ChainVFXHoldDuration = 0.25f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00157">157</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00105">TickTask()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UpdateChain()</a>.</p>
+
+</div>
+</div>
 <a id="aedd1560e85d64165469abb111c9ad96b" name="aedd1560e85d64165469abb111c9ad96b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aedd1560e85d64165469abb111c9ad96b">&#9670;&#160;</a></span>OnFinished</h2>
 
@@ -360,6 +1305,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00095">95</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00484">BroadcastFinishedAndEndTask()</a>.</p>
 
 </div>
 </div>
@@ -377,6 +1324,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00093">93</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00433">BroadcastTargetAttached()</a>.</p>
+
 </div>
 </div>
 <a id="a194a096c71b9fee460d94399f8669731" name="a194a096c71b9fee460d94399f8669731"></a>
@@ -392,6 +1341,60 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00094">94</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00447">BroadcastTargetPull()</a>.</p>
+
+</div>
+</div>
+<a id="a62150c15e0c4532d4105996d020fc3ba" name="a62150c15e0c4532d4105996d020fc3ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62150c15e0c4532d4105996d020fc3ba">&#9670;&#160;</a></span>RetractNotifyTag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayTag UDTAbilityTask_UpdateChain::RetractNotifyTag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00152">152</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00080">StartRetractNotifyListener()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UpdateChain()</a>.</p>
+
+</div>
+</div>
+<a id="a6579091a647090b5dcc47d0baa40f723" name="a6579091a647090b5dcc47d0baa40f723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6579091a647090b5dcc47d0baa40f723">&#9670;&#160;</a></span>RetractNotifyTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UAbilityTask_WaitGameplayEvent&gt; UDTAbilityTask_UpdateChain::RetractNotifyTask = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00150">150</a> of file <a class="el" href="_d_t_ability_task___update_chain_8h_source.html">DTAbilityTask_UpdateChain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00178">OnDestroy()</a>, <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00099">OnRetractNotifyReceived()</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00080">StartRetractNotifyListener()</a>.</p>
 
 </div>
 </div>

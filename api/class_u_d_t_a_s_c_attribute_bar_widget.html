@@ -200,6 +200,14 @@ Protected Member Functions</h2></td></tr>
 <tr class="inherit_header pro_methods_class_u_d_t_a_s_c_widget"><td colspan="2">Protected Member Functions inherited from <a class="el" href="class_u_d_t_a_s_c_widget.html">UDTASCWidget</a></td></tr>
 <tr class="memitem:a2b16bf629935389b4c66a62847eee9bd pro_methods_class_u_d_t_a_s_c_widget" id="r_a2b16bf629935389b4c66a62847eee9bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_a_s_c_widget.html#a2b16bf629935389b4c66a62847eee9bd">K2_OnAbilitySystemInitialized</a> ()</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a298f5a11d6af56dc7dbdace315606f91" id="r_a298f5a11d6af56dc7dbdace315606f91"><td class="memItemLeft">FString&#160;</td><td class="memItemRight"><a class="el" href="#a298f5a11d6af56dc7dbdace315606f91">FormatValue</a> (float Value) const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7d5534c9be4198adc69043305f7004e0" id="r_a7d5534c9be4198adc69043305f7004e0"><td class="memItemLeft">TObjectPtr&lt; UMaterialInstanceDynamic &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7d5534c9be4198adc69043305f7004e0">BarFillMID</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_u_d_t_a_s_c_attribute_widget"><td colspan="2">Protected Attributes inherited from <a class="el" href="class_u_d_t_a_s_c_attribute_widget.html">UDTASCAttributeWidget</a></td></tr>
@@ -218,6 +226,37 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00017">17</a> of file <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html">DTASCAttributeBarWidget.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a298f5a11d6af56dc7dbdace315606f91" name="a298f5a11d6af56dc7dbdace315606f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298f5a11d6af56dc7dbdace315606f91">&#9670;&#160;</a></span>FormatValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FString UDTASCAttributeBarWidget::FormatValue </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Value</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html#l00124">124</a> of file <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html">DTASCAttributeBarWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00045">DecimalPlaces</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html#l00081">UpdateDisplay_Implementation()</a>.</p>
+
+</div>
+</div>
 <a id="a8b3f35794616294a4c975e5f71951375" name="a8b3f35794616294a4c975e5f71951375"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b3f35794616294a4c975e5f71951375">&#9670;&#160;</a></span>GetBarFillMID()</h2>
 
@@ -243,7 +282,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00063">63</a> of file <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html">DTASCAttributeBarWidget.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00063">GetBarFillMID()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00080">BarFillMID</a>, and <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00063">GetBarFillMID()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00063">GetBarFillMID()</a>.</p>
 
@@ -276,7 +315,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html#l00040">40</a> of file <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html">DTASCAttributeBarWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00051">BarFillMaterial</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00054">BarStyle</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00032">bShowText</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00036">bUseBarStyle</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00026">IMG_AttributeBar</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00023">PB_AttributeBar</a>, and <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00029">TB_AttributeText</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00051">BarFillMaterial</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00080">BarFillMID</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00054">BarStyle</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00032">bShowText</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00036">bUseBarStyle</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00026">IMG_AttributeBar</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00023">PB_AttributeBar</a>, and <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00029">TB_AttributeText</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#aab05c81b87539da6efcaed70ce896ecd">OnBarUpdated()</a>.</p>
 
@@ -378,7 +417,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html#l00081">81</a> of file <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html">DTASCAttributeBarWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">UDTASCWidget::AbilitySystemComponent</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00057">BarFillParameterName</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00036">bUseBarStyle</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00041">UDTASCAttributeWidget::CurrentAttribute</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00045">UDTASCAttributeWidget::MaxAttribute</a>, <a class="el" href="#aab05c81b87539da6efcaed70ce896ecd">OnBarUpdated()</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00023">PB_AttributeBar</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00042">SingleStatTextFormat</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00039">StatTextFormat</a>, and <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00029">TB_AttributeText</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">UDTASCWidget::AbilitySystemComponent</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00080">BarFillMID</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00057">BarFillParameterName</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00036">bUseBarStyle</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00041">UDTASCAttributeWidget::CurrentAttribute</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html#l00124">FormatValue()</a>, <a class="el" href="_d_t_a_s_c_attribute_widget_8h_source.html#l00045">UDTASCAttributeWidget::MaxAttribute</a>, <a class="el" href="#aab05c81b87539da6efcaed70ce896ecd">OnBarUpdated()</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00023">PB_AttributeBar</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00042">SingleStatTextFormat</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00039">StatTextFormat</a>, and <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00029">TB_AttributeText</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#aab05c81b87539da6efcaed70ce896ecd">OnBarUpdated()</a>.</p>
 
@@ -416,6 +455,32 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00051">51</a> of file <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html">DTASCAttributeBarWidget.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html#l00040">NativeConstruct()</a>.</p>
+
+</div>
+</div>
+<a id="a7d5534c9be4198adc69043305f7004e0" name="a7d5534c9be4198adc69043305f7004e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d5534c9be4198adc69043305f7004e0">&#9670;&#160;</a></span>BarFillMID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UMaterialInstanceDynamic&gt; UDTASCAttributeBarWidget::BarFillMID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html">DTASCAttributeBarWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00063">GetBarFillMID()</a>, <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html#l00040">NativeConstruct()</a>, and <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html#l00081">UpdateDisplay_Implementation()</a>.</p>
 
 </div>
 </div>
@@ -520,6 +585,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html#l00045">45</a> of file <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8h_source.html">DTASCAttributeBarWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_s_c_attribute_bar_widget_8cpp_source.html#l00124">FormatValue()</a>.</p>
 
 </div>
 </div>

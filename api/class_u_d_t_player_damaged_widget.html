@@ -157,6 +157,17 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2b16bf629935389b4c66a62847eee9bd pro_methods_class_u_d_t_a_s_c_widget" id="r_a2b16bf629935389b4c66a62847eee9bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_a_s_c_widget.html#a2b16bf629935389b4c66a62847eee9bd">K2_OnAbilitySystemInitialized</a> ()</td></tr>
 <tr class="memitem:a05ba685dcbd1b7f55d5c1a52e4acca35 pro_methods_class_u_d_t_a_s_c_widget" id="r_a05ba685dcbd1b7f55d5c1a52e4acca35"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_a_s_c_widget.html#a05ba685dcbd1b7f55d5c1a52e4acca35">NativeConstruct</a> () override</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a8008eaa6658d6736d2a118e1ebe31f77" id="r_a8008eaa6658d6736d2a118e1ebe31f77"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8008eaa6658d6736d2a118e1ebe31f77">HandleDamage</a> (float DamageAmount, AActor *SourceCharacter, const FGameplayTagContainer &amp;DamageTags)</td></tr>
+<tr class="memitem:a1e803a5abab7021397f94b456f3479c7" id="r_a1e803a5abab7021397f94b456f3479c7"><td class="memItemLeft"><a class="el" href="class_u_d_t_ability_core_component.html">UDTAbilityCoreComponent</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1e803a5abab7021397f94b456f3479c7">ResolveCoreComponent</a> () const</td></tr>
+<tr class="memitem:a27548612a4d573ecdfca6fac39cd0232" id="r_a27548612a4d573ecdfca6fac39cd0232"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a27548612a4d573ecdfca6fac39cd0232">TryBindCoreComponent</a> ()</td></tr>
+<tr class="memdesc:a27548612a4d573ecdfca6fac39cd0232"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ASC's avatar actor may still be the PlayerState placeholder when OnAbilitySystemInitialized first fires (before <a class="el" href="class_u_d_t_pawn_extension_component.html#a40723660814d13e233c36e71a102ad93" title="Should be called by the owning pawn to become the avatar of the ability system.">UDTPawnExtensionComponent::InitializeAbilitySystem</a> re-points it to the real pawn).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8e88b1c1c0b03f20d6f6ace30b817dd2" id="r_a8e88b1c1c0b03f20d6f6ace30b817dd2"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_ability_core_component.html">UDTAbilityCoreComponent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8e88b1c1c0b03f20d6f6ace30b817dd2">BoundCoreComponent</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_methods_class_u_d_t_a_s_c_widget"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_u_d_t_a_s_c_widget.html">UDTASCWidget</a></td></tr>
@@ -173,6 +184,46 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_player_damaged_widget_8h_source.html#l00018">18</a> of file <a class="el" href="_d_t_player_damaged_widget_8h_source.html">DTPlayerDamagedWidget.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8008eaa6658d6736d2a118e1ebe31f77" name="a8008eaa6658d6736d2a118e1ebe31f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8008eaa6658d6736d2a118e1ebe31f77">&#9670;&#160;</a></span>HandleDamage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTPlayerDamagedWidget::HandleDamage </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>DamageAmount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>SourceCharacter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayTagContainer &amp;</td>          <td class="paramname"><span class="paramname"><em>DamageTags</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00051">51</a> of file <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html">DTPlayerDamagedWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="#a14e388cf6b42d42fa71c94330365ce39">OnPlayerDamaged()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00040">NativeDestruct()</a>, <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00008">OnAbilitySystemInitialized()</a>, <a class="el" href="#a14e388cf6b42d42fa71c94330365ce39">OnPlayerDamaged()</a>, and <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00021">TryBindCoreComponent()</a>.</p>
+
+</div>
+</div>
 <a id="aa9fc89ddfe943ea50f86b1c0d058bb27" name="aa9fc89ddfe943ea50f86b1c0d058bb27"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9fc89ddfe943ea50f86b1c0d058bb27">&#9670;&#160;</a></span>NativeDestruct()</h2>
 
@@ -197,6 +248,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00040">40</a> of file <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html">DTPlayerDamagedWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_damaged_widget_8h_source.html#l00044">BoundCoreComponent</a>, and <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00051">HandleDamage()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a14e388cf6b42d42fa71c94330365ce39">OnPlayerDamaged()</a>.</p>
 
@@ -228,6 +281,8 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="class_u_d_t_a_s_c_widget.html#aa24982e0da1a8ee02e73037ccf9a8415">UDTASCWidget</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00008">8</a> of file <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html">DTPlayerDamagedWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_damaged_widget_8h_source.html#l00044">BoundCoreComponent</a>, <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00051">HandleDamage()</a>, and <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00021">TryBindCoreComponent()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a14e388cf6b42d42fa71c94330365ce39">OnPlayerDamaged()</a>.</p>
 
@@ -262,9 +317,101 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implement in the widget blueprint to play the flash animation. </p>
 
-<p class="reference">References <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00040">NativeDestruct()</a>, <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00008">OnAbilitySystemInitialized()</a>, and <a class="el" href="#a14e388cf6b42d42fa71c94330365ce39">OnPlayerDamaged()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00051">HandleDamage()</a>, <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00040">NativeDestruct()</a>, <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00008">OnAbilitySystemInitialized()</a>, <a class="el" href="#a14e388cf6b42d42fa71c94330365ce39">OnPlayerDamaged()</a>, <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00056">ResolveCoreComponent()</a>, and <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00021">TryBindCoreComponent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a14e388cf6b42d42fa71c94330365ce39">OnPlayerDamaged()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00051">HandleDamage()</a>, and <a class="el" href="#a14e388cf6b42d42fa71c94330365ce39">OnPlayerDamaged()</a>.</p>
+
+</div>
+</div>
+<a id="a1e803a5abab7021397f94b456f3479c7" name="a1e803a5abab7021397f94b456f3479c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e803a5abab7021397f94b456f3479c7">&#9670;&#160;</a></span>ResolveCoreComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_ability_core_component.html">UDTAbilityCoreComponent</a> * UDTPlayerDamagedWidget::ResolveCoreComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00056">56</a> of file <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html">DTPlayerDamagedWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">UDTASCWidget::AbilitySystemComponent</a>, and <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00030">UDTASCWidget::AbilitySystemOwner</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a14e388cf6b42d42fa71c94330365ce39">OnPlayerDamaged()</a>, and <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00021">TryBindCoreComponent()</a>.</p>
+
+</div>
+</div>
+<a id="a27548612a4d573ecdfca6fac39cd0232" name="a27548612a4d573ecdfca6fac39cd0232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27548612a4d573ecdfca6fac39cd0232">&#9670;&#160;</a></span>TryBindCoreComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTPlayerDamagedWidget::TryBindCoreComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The ASC's avatar actor may still be the PlayerState placeholder when OnAbilitySystemInitialized first fires (before <a class="el" href="class_u_d_t_pawn_extension_component.html#a40723660814d13e233c36e71a102ad93" title="Should be called by the owning pawn to become the avatar of the ability system.">UDTPawnExtensionComponent::InitializeAbilitySystem</a> re-points it to the real pawn). </p>
+<p>Retries next tick until the real avatar (and its core component) is available. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00021">21</a> of file <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html">DTPlayerDamagedWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_damaged_widget_8h_source.html#l00044">BoundCoreComponent</a>, <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00051">HandleDamage()</a>, <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00056">ResolveCoreComponent()</a>, and <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00021">TryBindCoreComponent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00008">OnAbilitySystemInitialized()</a>, <a class="el" href="#a14e388cf6b42d42fa71c94330365ce39">OnPlayerDamaged()</a>, and <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00021">TryBindCoreComponent()</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a8e88b1c1c0b03f20d6f6ace30b817dd2" name="a8e88b1c1c0b03f20d6f6ace30b817dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e88b1c1c0b03f20d6f6ace30b817dd2">&#9670;&#160;</a></span>BoundCoreComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_ability_core_component.html">UDTAbilityCoreComponent</a>&gt; UDTPlayerDamagedWidget::BoundCoreComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_damaged_widget_8h_source.html#l00044">44</a> of file <a class="el" href="_d_t_player_damaged_widget_8h_source.html">DTPlayerDamagedWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00040">NativeDestruct()</a>, <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00008">OnAbilitySystemInitialized()</a>, and <a class="el" href="_d_t_player_damaged_widget_8cpp_source.html#l00021">TryBindCoreComponent()</a>.</p>
 
 </div>
 </div>

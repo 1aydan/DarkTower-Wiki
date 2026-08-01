@@ -165,6 +165,22 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a6df494514215016be6b8999b5c643642" id="r_a6df494514215016be6b8999b5c643642"><td class="memItemLeft">FOnCurrencyChanged&#160;</td><td class="memItemRight"><a class="el" href="#a6df494514215016be6b8999b5c643642">OnCurrencyChanged</a></td></tr>
 <tr class="memdesc:a6df494514215016be6b8999b5c643642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast whenever any currency balance changes (fires on both server and owning client after replication).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a16fdf70d94af7cf2f031ac6b1f75e65e" id="r_a16fdf70d94af7cf2f031ac6b1f75e65e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a16fdf70d94af7cf2f031ac6b1f75e65e">OnRep_Balances</a> ()</td></tr>
+<tr class="memitem:a17e273ab13ced56b1d8b47dc2c593ab1" id="r_a17e273ab13ced56b1d8b47dc2c593ab1"><td class="memItemLeft"><a class="el" href="struct_f_currency_balance.html">FCurrencyBalance</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a17e273ab13ced56b1d8b47dc2c593ab1">FindBalance</a> (FGameplayTag CurrencyType)</td></tr>
+<tr class="memdesc:a17e273ab13ced56b1d8b47dc2c593ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the entry for a currency type, or nullptr if not present.  <br /></td></tr>
+<tr class="memitem:a23872e0f21e93518dc27f82562b44312" id="r_a23872e0f21e93518dc27f82562b44312"><td class="memItemLeft">const <a class="el" href="struct_f_currency_balance.html">FCurrencyBalance</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a23872e0f21e93518dc27f82562b44312">FindBalance</a> (FGameplayTag CurrencyType) const</td></tr>
+<tr class="memitem:a23024abe2e7ec5b694a0c9625470b3e0" id="r_a23024abe2e7ec5b694a0c9625470b3e0"><td class="memItemLeft"><a class="el" href="struct_f_currency_balance.html">FCurrencyBalance</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a23024abe2e7ec5b694a0c9625470b3e0">FindOrAddBalance</a> (FGameplayTag CurrencyType)</td></tr>
+<tr class="memdesc:a23024abe2e7ec5b694a0c9625470b3e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the entry for a currency type, adding a zero entry if missing.  <br /></td></tr>
+<tr class="memitem:a488f23e6c349c1f0328ce649eb4cfd96" id="r_a488f23e6c349c1f0328ce649eb4cfd96"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a488f23e6c349c1f0328ce649eb4cfd96">BroadcastCurrencyChange</a> (FGameplayTag CurrencyType, int64 NewAmount, int64 Delta) const</td></tr>
+<tr class="memdesc:a488f23e6c349c1f0328ce649eb4cfd96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fire the GAS event and delegate for a single currency change.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a0386b93965f1c526682ada4d270b8341" id="r_a0386b93965f1c526682ada4d270b8341"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_currency_balance.html">FCurrencyBalance</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0386b93965f1c526682ada4d270b8341">Balances</a></td></tr>
+<tr class="memdesc:a0386b93965f1c526682ada4d270b8341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replicated array of currency balances.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Stores and manages all currency balances for a player. </p>
@@ -217,7 +233,49 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00029">29</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00115">FCurrencyBalance::Amount</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00041">UDTGlobalData::CurrencyGlobalData</a>, <a class="el" href="_d_t_currency_global_data_8h_source.html#l00023">UDTCurrencyGlobalData::CurrencyTypes</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00115">FCurrencyBalance::Amount</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00170">BroadcastCurrencyChange()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00041">UDTGlobalData::CurrencyGlobalData</a>, <a class="el" href="_d_t_currency_global_data_8h_source.html#l00023">UDTCurrencyGlobalData::CurrencyTypes</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00156">FindOrAddBalance()</a>, and <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>.</p>
+
+</div>
+</div>
+<a id="a488f23e6c349c1f0328ce649eb4cfd96" name="a488f23e6c349c1f0328ce649eb4cfd96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a488f23e6c349c1f0328ce649eb4cfd96">&#9670;&#160;</a></span>BroadcastCurrencyChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCurrencyComponent::BroadcastCurrencyChange </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>CurrencyType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64</td>          <td class="paramname"><span class="paramname"><em>NewAmount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64</td>          <td class="paramname"><span class="paramname"><em>Delta</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fire the GAS event and delegate for a single currency change. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00170">170</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_state_8cpp_source.html#l00440">ADTPlayerState::GetAbilitySystemComponent()</a>, and <a class="el" href="_d_t_currency_component_8h_source.html#l00026">OnCurrencyChanged</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_component_8cpp_source.html#l00029">AddCurrency()</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00063">ClearCurrency()</a>, and <a class="el" href="_d_t_currency_component_8cpp_source.html#l00083">SpendCurrency()</a>.</p>
 
 </div>
 </div>
@@ -238,7 +296,102 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00063">63</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00115">FCurrencyBalance::Amount</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00115">FCurrencyBalance::Amount</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00170">BroadcastCurrencyChange()</a>, and <a class="el" href="_d_t_currency_component_8cpp_source.html#l00146">FindBalance()</a>.</p>
+
+</div>
+</div>
+<a id="a17e273ab13ced56b1d8b47dc2c593ab1" name="a17e273ab13ced56b1d8b47dc2c593ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e273ab13ced56b1d8b47dc2c593ab1">&#9670;&#160;</a></span>FindBalance() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_currency_balance.html">FCurrencyBalance</a> * UDTCurrencyComponent::FindBalance </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>CurrencyType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Find the entry for a currency type, or nullptr if not present. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00146">146</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_currency_component_8h_source.html#l00067">Balances</a>, and <a class="el" href="_d_t_currency_types_8h_source.html#l00112">FCurrencyBalance::CurrencyType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_component_8cpp_source.html#l00063">ClearCurrency()</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00156">FindOrAddBalance()</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00095">GetCurrency()</a>, and <a class="el" href="_d_t_currency_component_8cpp_source.html#l00083">SpendCurrency()</a>.</p>
+
+</div>
+</div>
+<a id="a23872e0f21e93518dc27f82562b44312" name="a23872e0f21e93518dc27f82562b44312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23872e0f21e93518dc27f82562b44312">&#9670;&#160;</a></span>FindBalance() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_f_currency_balance.html">FCurrencyBalance</a> * UDTCurrencyComponent::FindBalance </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>CurrencyType</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00151">151</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_currency_component_8h_source.html#l00067">Balances</a>, and <a class="el" href="_d_t_currency_types_8h_source.html#l00112">FCurrencyBalance::CurrencyType</a>.</p>
+
+</div>
+</div>
+<a id="a23024abe2e7ec5b694a0c9625470b3e0" name="a23024abe2e7ec5b694a0c9625470b3e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23024abe2e7ec5b694a0c9625470b3e0">&#9670;&#160;</a></span>FindOrAddBalance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_currency_balance.html">FCurrencyBalance</a> &amp; UDTCurrencyComponent::FindOrAddBalance </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>CurrencyType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Find the entry for a currency type, adding a zero entry if missing. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00156">156</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00115">FCurrencyBalance::Amount</a>, <a class="el" href="_d_t_currency_component_8h_source.html#l00067">Balances</a>, <a class="el" href="_d_t_currency_types_8h_source.html#l00112">FCurrencyBalance::CurrencyType</a>, and <a class="el" href="_d_t_currency_component_8cpp_source.html#l00146">FindBalance()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_component_8cpp_source.html#l00029">AddCurrency()</a>.</p>
 
 </div>
 </div>
@@ -269,7 +422,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8h_source.html#l00052">52</a> of file <a class="el" href="_d_t_currency_component_8h_source.html">DTCurrencyComponent.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_component_8h_source.html#l00052">GetAllBalances()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_component_8h_source.html#l00067">Balances</a>, and <a class="el" href="_d_t_currency_component_8h_source.html#l00052">GetAllBalances()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_currency_component_8h_source.html#l00052">GetAllBalances()</a>, and <a class="el" href="_d_t_cheat_manager_8cpp_source.html#l01120">UDTCheatManager::PrintCurrencies()</a>.</p>
 
@@ -295,7 +448,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00095">95</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00115">FCurrencyBalance::Amount</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00115">FCurrencyBalance::Amount</a>, and <a class="el" href="_d_t_currency_component_8cpp_source.html#l00146">FindBalance()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_currency_component_8cpp_source.html#l00101">HasCurrency()</a>.</p>
 
@@ -326,7 +479,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00022">22</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_component_8cpp_source.html#l00015">UDTCurrencyComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_component_8h_source.html#l00067">Balances</a>, and <a class="el" href="_d_t_currency_component_8cpp_source.html#l00015">UDTCurrencyComponent()</a>.</p>
 
 </div>
 </div>
@@ -347,7 +500,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00106">106</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00100">FCurrencySaveData::Balances</a>, and <a class="el" href="_d_t_currency_global_data_8cpp_source.html#l00015">UDTCurrencyGlobalData::IsCurrencyTransient()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00100">FCurrencySaveData::Balances</a>, <a class="el" href="_d_t_currency_component_8h_source.html#l00067">Balances</a>, and <a class="el" href="_d_t_currency_global_data_8cpp_source.html#l00015">UDTCurrencyGlobalData::IsCurrencyTransient()</a>.</p>
 
 </div>
 </div>
@@ -397,7 +550,36 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00127">127</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00115">FCurrencyBalance::Amount</a>, <a class="el" href="_d_t_currency_types_8h_source.html#l00100">FCurrencySaveData::Balances</a>, and <a class="el" href="_d_t_currency_types_8h_source.html#l00112">FCurrencyBalance::CurrencyType</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00115">FCurrencyBalance::Amount</a>, <a class="el" href="_d_t_currency_types_8h_source.html#l00100">FCurrencySaveData::Balances</a>, <a class="el" href="_d_t_currency_component_8h_source.html#l00067">Balances</a>, and <a class="el" href="_d_t_currency_types_8h_source.html#l00112">FCurrencyBalance::CurrencyType</a>.</p>
+
+</div>
+</div>
+<a id="a16fdf70d94af7cf2f031ac6b1f75e65e" name="a16fdf70d94af7cf2f031ac6b1f75e65e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16fdf70d94af7cf2f031ac6b1f75e65e">&#9670;&#160;</a></span>OnRep_Balances()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCurrencyComponent::OnRep_Balances </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00138">138</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_currency_component_8h_source.html#l00067">Balances</a>, and <a class="el" href="_d_t_currency_component_8h_source.html#l00026">OnCurrencyChanged</a>.</p>
 
 </div>
 </div>
@@ -425,13 +607,41 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8cpp_source.html#l00083">83</a> of file <a class="el" href="_d_t_currency_component_8cpp_source.html">DTCurrencyComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00115">FCurrencyBalance::Amount</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00115">FCurrencyBalance::Amount</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00170">BroadcastCurrencyChange()</a>, and <a class="el" href="_d_t_currency_component_8cpp_source.html#l00146">FindBalance()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_component_8cpp_source.html#l00259">UDTSkillTreeComponent::RespecTree()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a0386b93965f1c526682ada4d270b8341" name="a0386b93965f1c526682ada4d270b8341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0386b93965f1c526682ada4d270b8341">&#9670;&#160;</a></span>Balances</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_currency_balance.html">FCurrencyBalance</a>&gt; UDTCurrencyComponent::Balances</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Replicated array of currency balances. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8h_source.html#l00067">67</a> of file <a class="el" href="_d_t_currency_component_8h_source.html">DTCurrencyComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_component_8cpp_source.html#l00146">FindBalance()</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00151">FindBalance()</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00156">FindOrAddBalance()</a>, <a class="el" href="_d_t_currency_component_8h_source.html#l00052">GetAllBalances()</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00022">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00106">GetSaveData()</a>, <a class="el" href="_d_t_currency_component_8cpp_source.html#l00127">LoadSaveData()</a>, and <a class="el" href="_d_t_currency_component_8cpp_source.html#l00138">OnRep_Balances()</a>.</p>
+
+</div>
+</div>
 <a id="a6df494514215016be6b8999b5c643642" name="a6df494514215016be6b8999b5c643642"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6df494514215016be6b8999b5c643642">&#9670;&#160;</a></span>OnCurrencyChanged</h2>
 
@@ -447,6 +657,8 @@ Public Attributes</h2></td></tr>
 <p>Broadcast whenever any currency balance changes (fires on both server and owning client after replication). </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_component_8h_source.html#l00026">26</a> of file <a class="el" href="_d_t_currency_component_8h_source.html">DTCurrencyComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_component_8cpp_source.html#l00170">BroadcastCurrencyChange()</a>, and <a class="el" href="_d_t_currency_component_8cpp_source.html#l00138">OnRep_Balances()</a>.</p>
 
 </div>
 </div>

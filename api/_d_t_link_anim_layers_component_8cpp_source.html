@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_link_anim
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        Mesh-&gt;OnAnimInitialized.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_d_t_link_anim_layers_component.html#aba6c28b9b98cbb9d2749ac77017f06af">UDTLinkAnimLayersComponent::HandleMeshAnimInitialized</a>);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    LinkAnimLayers();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_function" href="class_u_d_t_link_anim_layers_component.html#a7c733637771ce683bc20c3e5a779d120">LinkAnimLayers</a>();</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
 </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_link_anim
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        Mesh-&gt;OnAnimInitialized.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_d_t_link_anim_layers_component.html#aba6c28b9b98cbb9d2749ac77017f06af">UDTLinkAnimLayersComponent::HandleMeshAnimInitialized</a>);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    UnlinkAnimLayers();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="class_u_d_t_link_anim_layers_component.html#a3501a98290d35b537994a261b06d458c">UnlinkAnimLayers</a>();</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    Super::EndPlay(EndPlayReason);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_link_anim
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> (Mesh)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        Mesh-&gt;LinkAnimClassLayers(AnimInstance);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        LinkedLayers.AddUnique(AnimInstance);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_variable" href="class_u_d_t_link_anim_layers_component.html#a09fbef48d63a630cb4fbf23ba1f0993d">LinkedLayers</a>.AddUnique(AnimInstance);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
 </div>
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_link_anim
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (Mesh)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        Mesh-&gt;UnlinkAnimClassLayers(AnimInstance);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        LinkedLayers.Remove(AnimInstance);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_variable" href="class_u_d_t_link_anim_layers_component.html#a09fbef48d63a630cb4fbf23ba1f0993d">LinkedLayers</a>.Remove(AnimInstance);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
 </div>
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_link_anim
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> TSubclassOf&lt;UAnimInstance&gt;&amp; Layer : LinkedLayers)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> TSubclassOf&lt;UAnimInstance&gt;&amp; Layer : <a class="code hl_variable" href="class_u_d_t_link_anim_layers_component.html#a09fbef48d63a630cb4fbf23ba1f0993d">LinkedLayers</a>)</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (Layer)</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {</div>
@@ -239,7 +239,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_link_anim
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
 </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keywordtype">void</span> UDTLinkAnimLayersComponent::LinkAnimLayers()</div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_u_d_t_link_anim_layers_component.html#a7c733637771ce683bc20c3e5a779d120">   95</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_link_anim_layers_component.html#a7c733637771ce683bc20c3e5a779d120">UDTLinkAnimLayersComponent::LinkAnimLayers</a>()</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>{</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_u_d_t_link_anim_layers_component.html#a02c69319aef9415511437fa6f4e21dbd">GetOwnerSkeletalMeshComponent</a>())</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
@@ -251,8 +252,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_link_anim
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_function" href="class_u_d_t_link_anim_layers_component.html#a2280143a52c8a3a905aca042d0fb9281">LinkAnimLayer</a>(LayerType);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keywordtype">void</span> UDTLinkAnimLayersComponent::UnlinkAnimLayers()</div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_u_d_t_link_anim_layers_component.html#a3501a98290d35b537994a261b06d458c">  108</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_link_anim_layers_component.html#a3501a98290d35b537994a261b06d458c">UDTLinkAnimLayersComponent::UnlinkAnimLayers</a>()</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>{</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_u_d_t_link_anim_layers_component.html#a02c69319aef9415511437fa6f4e21dbd">GetOwnerSkeletalMeshComponent</a>())</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
@@ -264,13 +267,17 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_link_anim
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_function" href="class_u_d_t_link_anim_layers_component.html#a2e9dc1362cf72bd50e4051b2a8de6e3e">UnlinkAnimLayer</a>(LayerType);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    LinkedLayers.Empty();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_variable" href="class_u_d_t_link_anim_layers_component.html#a09fbef48d63a630cb4fbf23ba1f0993d">LinkedLayers</a>.Empty();</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+</div>
 <div class="ttc" id="a_d_t_link_anim_layers_component_8h_html"><div class="ttname"><a href="_d_t_link_anim_layers_component_8h.html">DTLinkAnimLayersComponent.h</a></div></div>
 <div class="ttc" id="aclass_u_d_t_link_anim_layers_component_html_a02c69319aef9415511437fa6f4e21dbd"><div class="ttname"><a href="class_u_d_t_link_anim_layers_component.html#a02c69319aef9415511437fa6f4e21dbd">UDTLinkAnimLayersComponent::GetOwnerSkeletalMeshComponent</a></div><div class="ttdeci">virtual USkeletalMeshComponent * GetOwnerSkeletalMeshComponent() const</div><div class="ttdoc">Returns mesh component from owner if it is a Character.</div><div class="ttdef"><b>Definition</b> <a href="#l00085">DTLinkAnimLayersComponent.cpp:85</a></div></div>
+<div class="ttc" id="aclass_u_d_t_link_anim_layers_component_html_a09fbef48d63a630cb4fbf23ba1f0993d"><div class="ttname"><a href="class_u_d_t_link_anim_layers_component.html#a09fbef48d63a630cb4fbf23ba1f0993d">UDTLinkAnimLayersComponent::LinkedLayers</a></div><div class="ttdeci">TArray&lt; TSubclassOf&lt; UAnimInstance &gt; &gt; LinkedLayers</div><div class="ttdoc">Every layer currently linked (BeginPlay LayerTypes + equipment layers), for re-linking after anim rei...</div><div class="ttdef"><b>Definition</b> <a href="_d_t_link_anim_layers_component_8h_source.html#l00055">DTLinkAnimLayersComponent.h:55</a></div></div>
 <div class="ttc" id="aclass_u_d_t_link_anim_layers_component_html_a167c17d4e352eab6f1644f9312c4c568"><div class="ttname"><a href="class_u_d_t_link_anim_layers_component.html#a167c17d4e352eab6f1644f9312c4c568">UDTLinkAnimLayersComponent::LayerTypes</a></div><div class="ttdeci">TArray&lt; TSubclassOf&lt; UAnimInstance &gt; &gt; LayerTypes</div><div class="ttdoc">List of Anim Instance classes to link to the owner skeletal mesh component on BeginPlay.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_link_anim_layers_component_8h_source.html#l00020">DTLinkAnimLayersComponent.h:20</a></div></div>
 <div class="ttc" id="aclass_u_d_t_link_anim_layers_component_html_a2280143a52c8a3a905aca042d0fb9281"><div class="ttname"><a href="class_u_d_t_link_anim_layers_component.html#a2280143a52c8a3a905aca042d0fb9281">UDTLinkAnimLayersComponent::LinkAnimLayer</a></div><div class="ttdeci">virtual void LinkAnimLayer(TSubclassOf&lt; UAnimInstance &gt; AnimInstance)</div><div class="ttdef"><b>Definition</b> <a href="#l00038">DTLinkAnimLayersComponent.cpp:38</a></div></div>
 <div class="ttc" id="aclass_u_d_t_link_anim_layers_component_html_a2e9dc1362cf72bd50e4051b2a8de6e3e"><div class="ttname"><a href="class_u_d_t_link_anim_layers_component.html#a2e9dc1362cf72bd50e4051b2a8de6e3e">UDTLinkAnimLayersComponent::UnlinkAnimLayer</a></div><div class="ttdeci">virtual void UnlinkAnimLayer(TSubclassOf&lt; UAnimInstance &gt; AnimInstance)</div><div class="ttdef"><b>Definition</b> <a href="#l00053">DTLinkAnimLayersComponent.cpp:53</a></div></div>
+<div class="ttc" id="aclass_u_d_t_link_anim_layers_component_html_a3501a98290d35b537994a261b06d458c"><div class="ttname"><a href="class_u_d_t_link_anim_layers_component.html#a3501a98290d35b537994a261b06d458c">UDTLinkAnimLayersComponent::UnlinkAnimLayers</a></div><div class="ttdeci">void UnlinkAnimLayers()</div><div class="ttdoc">Unlinks every LayerTypes anim instance from the owner mesh.</div><div class="ttdef"><b>Definition</b> <a href="#l00108">DTLinkAnimLayersComponent.cpp:108</a></div></div>
+<div class="ttc" id="aclass_u_d_t_link_anim_layers_component_html_a7c733637771ce683bc20c3e5a779d120"><div class="ttname"><a href="class_u_d_t_link_anim_layers_component.html#a7c733637771ce683bc20c3e5a779d120">UDTLinkAnimLayersComponent::LinkAnimLayers</a></div><div class="ttdeci">void LinkAnimLayers()</div><div class="ttdoc">Links every LayerTypes anim instance on the owner mesh.</div><div class="ttdef"><b>Definition</b> <a href="#l00095">DTLinkAnimLayersComponent.cpp:95</a></div></div>
 <div class="ttc" id="aclass_u_d_t_link_anim_layers_component_html_a9bb787f8ae32918eed3c72f043dc1ee5"><div class="ttname"><a href="class_u_d_t_link_anim_layers_component.html#a9bb787f8ae32918eed3c72f043dc1ee5">UDTLinkAnimLayersComponent::EndPlay</a></div><div class="ttdeci">virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override</div><div class="ttdef"><b>Definition</b> <a href="#l00025">DTLinkAnimLayersComponent.cpp:25</a></div></div>
 <div class="ttc" id="aclass_u_d_t_link_anim_layers_component_html_aba6c28b9b98cbb9d2749ac77017f06af"><div class="ttname"><a href="class_u_d_t_link_anim_layers_component.html#aba6c28b9b98cbb9d2749ac77017f06af">UDTLinkAnimLayersComponent::HandleMeshAnimInitialized</a></div><div class="ttdeci">void HandleMeshAnimInitialized()</div><div class="ttdoc">Bound to the owner mesh&#39;s OnAnimInitialized — restores tracked layers after anim reinit.</div><div class="ttdef"><b>Definition</b> <a href="#l00080">DTLinkAnimLayersComponent.cpp:80</a></div></div>
 <div class="ttc" id="aclass_u_d_t_link_anim_layers_component_html_ac5aa6d836886e7d48e52f021fad8a6b4"><div class="ttname"><a href="class_u_d_t_link_anim_layers_component.html#ac5aa6d836886e7d48e52f021fad8a6b4">UDTLinkAnimLayersComponent::RelinkAnimLayers</a></div><div class="ttdeci">void RelinkAnimLayers()</div><div class="ttdoc">Re-link every currently tracked layer onto the owner mesh.</div><div class="ttdef"><b>Definition</b> <a href="#l00063">DTLinkAnimLayersComponent.cpp:63</a></div></div>

@@ -175,6 +175,20 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a134130dfc2316fd661674064113279a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Material applied to IMG_CharacterPreview (should expose Diffuse and AlphaMask params).  <br /></td></tr>
 <tr class="memitem:a4202332a4140ac563074fbe41f1a6761" id="r_a4202332a4140ac563074fbe41f1a6761"><td class="memItemLeft">TObjectPtr&lt; UPocketLevel &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4202332a4140ac563074fbe41f1a6761">CharacterPreviewLevel</a></td></tr>
 <tr class="memdesc:a4202332a4140ac563074fbe41f1a6761"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pocket level to stream in for the preview stage.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a105882063fadbaf79fae7a0178c54d55" id="r_a105882063fadbaf79fae7a0178c54d55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a105882063fadbaf79fae7a0178c54d55">CaptureFrame</a> () const</td></tr>
+<tr class="memitem:a9029bf5eecadb2f08763bdaa9eb85928" id="r_a9029bf5eecadb2f08763bdaa9eb85928"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9029bf5eecadb2f08763bdaa9eb85928">OnInventoryLevelReady</a> (UPocketLevelInstance *Instance)</td></tr>
+<tr class="memitem:afb43ce1219a85781ed16586eb891f8e0" id="r_afb43ce1219a85781ed16586eb891f8e0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afb43ce1219a85781ed16586eb891f8e0">OnEquipmentChanged</a> (EEquipmentOp Operation, FGameplayTag SlotTag, UInventoryEquipmentInstance *AffectedItem)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac85606cae1df3c271af009a7b778caa4" id="r_ac85606cae1df3c271af009a7b778caa4"><td class="memItemLeft">TObjectPtr&lt; UPocketCapture &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac85606cae1df3c271af009a7b778caa4">PocketCaptureInstance</a></td></tr>
+<tr class="memitem:a34da1bfc2390497d64c9c7d99dd6e294" id="r_a34da1bfc2390497d64c9c7d99dd6e294"><td class="memItemLeft">TObjectPtr&lt; UPocketLevelInstance &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a34da1bfc2390497d64c9c7d99dd6e294">CharacterPreviewLevelInstance</a></td></tr>
+<tr class="memitem:a53d727c756a3437cb2a09de757fdfd93" id="r_a53d727c756a3437cb2a09de757fdfd93"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_a_d_t_pocket_level_stage_manager.html">ADTPocketLevelStageManager</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a53d727c756a3437cb2a09de757fdfd93">CharacterPreviewStageManager</a></td></tr>
+<tr class="memitem:a8453aabc10caa433a1705a9e9e4a6700" id="r_a8453aabc10caa433a1705a9e9e4a6700"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_equipment_component.html">UDTEquipmentComponent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8453aabc10caa433a1705a9e9e4a6700">BoundEquipmentComponent</a></td></tr>
+<tr class="memitem:a632f145077a98aef150b758dbdfdbbdd" id="r_a632f145077a98aef150b758dbdfdbbdd"><td class="memItemLeft">FDelegateHandle&#160;</td><td class="memItemRight"><a class="el" href="#a632f145077a98aef150b758dbdfdbbdd">PocketLevelReadyDelegateHandle</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Widget for displaying a character preview via a Pocket Level render. </p>
@@ -202,6 +216,37 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a105882063fadbaf79fae7a0178c54d55" name="a105882063fadbaf79fae7a0178c54d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105882063fadbaf79fae7a0178c54d55">&#9670;&#160;</a></span>CaptureFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCharacterPreviewWidget::CaptureFrame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00104">104</a> of file <a class="el" href="_d_t_character_preview_widget_8cpp_source.html">DTCharacterPreviewWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00078">PocketCaptureInstance</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00062">NativeTick()</a>.</p>
+
+</div>
+</div>
 <a id="ab5a0bb11409a3f9614c4b45df6901aea" name="ab5a0bb11409a3f9614c4b45df6901aea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5a0bb11409a3f9614c4b45df6901aea">&#9670;&#160;</a></span>InitializeCharacterPreview()</h2>
 
@@ -221,6 +266,8 @@ Protected Attributes</h2></td></tr>
 <p>Binds to the equipment component so the preview stays in sync. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00080">80</a> of file <a class="el" href="_d_t_character_preview_widget_8cpp_source.html">DTCharacterPreviewWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00087">BoundEquipmentComponent</a>, <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00084">CharacterPreviewStageManager</a>, and <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00138">OnEquipmentChanged()</a>.</p>
 
 </div>
 </div>
@@ -249,7 +296,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00037">37</a> of file <a class="el" href="_d_t_character_preview_widget_8cpp_source.html">DTCharacterPreviewWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00066">CharacterPreviewLevel</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00066">CharacterPreviewLevel</a>, <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00081">CharacterPreviewLevelInstance</a>, <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00113">OnInventoryLevelReady()</a>, and <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00089">PocketLevelReadyDelegateHandle</a>.</p>
 
 </div>
 </div>
@@ -277,6 +324,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00069">69</a> of file <a class="el" href="_d_t_character_preview_widget_8cpp_source.html">DTCharacterPreviewWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00081">CharacterPreviewLevelInstance</a>, and <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00089">PocketLevelReadyDelegateHandle</a>.</p>
 
 </div>
 </div>
@@ -367,6 +416,79 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00062">62</a> of file <a class="el" href="_d_t_character_preview_widget_8cpp_source.html">DTCharacterPreviewWidget.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00104">CaptureFrame()</a>.</p>
+
+</div>
+</div>
+<a id="afb43ce1219a85781ed16586eb891f8e0" name="afb43ce1219a85781ed16586eb891f8e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb43ce1219a85781ed16586eb891f8e0">&#9670;&#160;</a></span>OnEquipmentChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCharacterPreviewWidget::OnEquipmentChanged </td>
+          <td>(</td>
+          <td class="paramtype">EEquipmentOp</td>          <td class="paramname"><span class="paramname"><em>Operation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>SlotTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInventoryEquipmentInstance *</td>          <td class="paramname"><span class="paramname"><em>AffectedItem</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00138">138</a> of file <a class="el" href="_d_t_character_preview_widget_8cpp_source.html">DTCharacterPreviewWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00087">BoundEquipmentComponent</a>, and <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00084">CharacterPreviewStageManager</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00080">InitializeCharacterPreview()</a>, and <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00095">UninitializeCharacterPreview()</a>.</p>
+
+</div>
+</div>
+<a id="a9029bf5eecadb2f08763bdaa9eb85928" name="a9029bf5eecadb2f08763bdaa9eb85928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9029bf5eecadb2f08763bdaa9eb85928">&#9670;&#160;</a></span>OnInventoryLevelReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCharacterPreviewWidget::OnInventoryLevelReady </td>
+          <td>(</td>
+          <td class="paramtype">UPocketLevelInstance *</td>          <td class="paramname"><span class="paramname"><em>Instance</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00113">113</a> of file <a class="el" href="_d_t_character_preview_widget_8cpp_source.html">DTCharacterPreviewWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00134">ADTPocketLevelStageManager::ApplyEquipmentToStagedCharacter()</a>, <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00087">BoundEquipmentComponent</a>, <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00084">CharacterPreviewStageManager</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00046">ADTPocketLevelStageManager::GetPocketCapture()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00287">UDTBlueprintLibrary::GetPocketLevelStageManager()</a>, <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00058">IMG_CharacterPreview</a>, <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00053">OnCharacterPreviewReady</a>, <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00078">PocketCaptureInstance</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00075">ADTPocketLevelStageManager::SpawnCharacterInPocketLevel()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00037">NativeConstruct()</a>.</p>
+
 </div>
 </div>
 <a id="a715c8c714cec86becbc0acc7e8d2c857" name="a715c8c714cec86becbc0acc7e8d2c857"></a>
@@ -389,9 +511,37 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00095">95</a> of file <a class="el" href="_d_t_character_preview_widget_8cpp_source.html">DTCharacterPreviewWidget.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00087">BoundEquipmentComponent</a>, and <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00138">OnEquipmentChanged()</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a8453aabc10caa433a1705a9e9e4a6700" name="a8453aabc10caa433a1705a9e9e4a6700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8453aabc10caa433a1705a9e9e4a6700">&#9670;&#160;</a></span>BoundEquipmentComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_equipment_component.html">UDTEquipmentComponent</a>&gt; UDTCharacterPreviewWidget::BoundEquipmentComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00087">87</a> of file <a class="el" href="_d_t_character_preview_widget_8h_source.html">DTCharacterPreviewWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00080">InitializeCharacterPreview()</a>, <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00138">OnEquipmentChanged()</a>, <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00113">OnInventoryLevelReady()</a>, and <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00095">UninitializeCharacterPreview()</a>.</p>
+
+</div>
+</div>
 <a id="a4202332a4140ac563074fbe41f1a6761" name="a4202332a4140ac563074fbe41f1a6761"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4202332a4140ac563074fbe41f1a6761">&#9670;&#160;</a></span>CharacterPreviewLevel</h2>
 
@@ -417,6 +567,32 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00066">66</a> of file <a class="el" href="_d_t_character_preview_widget_8h_source.html">DTCharacterPreviewWidget.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00037">NativeConstruct()</a>.</p>
+
+</div>
+</div>
+<a id="a34da1bfc2390497d64c9c7d99dd6e294" name="a34da1bfc2390497d64c9c7d99dd6e294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34da1bfc2390497d64c9c7d99dd6e294">&#9670;&#160;</a></span>CharacterPreviewLevelInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UPocketLevelInstance&gt; UDTCharacterPreviewWidget::CharacterPreviewLevelInstance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00081">81</a> of file <a class="el" href="_d_t_character_preview_widget_8h_source.html">DTCharacterPreviewWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00037">NativeConstruct()</a>, and <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00069">NativeDestruct()</a>.</p>
 
 </div>
 </div>
@@ -448,6 +624,32 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a53d727c756a3437cb2a09de757fdfd93" name="a53d727c756a3437cb2a09de757fdfd93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d727c756a3437cb2a09de757fdfd93">&#9670;&#160;</a></span>CharacterPreviewStageManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_a_d_t_pocket_level_stage_manager.html">ADTPocketLevelStageManager</a>&gt; UDTCharacterPreviewWidget::CharacterPreviewStageManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00084">84</a> of file <a class="el" href="_d_t_character_preview_widget_8h_source.html">DTCharacterPreviewWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00080">InitializeCharacterPreview()</a>, <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00138">OnEquipmentChanged()</a>, and <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00113">OnInventoryLevelReady()</a>.</p>
+
+</div>
+</div>
 <a id="a830f85c2644c7b483784f75d7518f2a1" name="a830f85c2644c7b483784f75d7518f2a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a830f85c2644c7b483784f75d7518f2a1">&#9670;&#160;</a></span>IMG_CharacterPreview</h2>
 
@@ -472,7 +674,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00058">58</a> of file <a class="el" href="_d_t_character_preview_widget_8h_source.html">DTCharacterPreviewWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00020">NativeOnInitialized()</a>, and <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00027">NativePreConstruct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00020">NativeOnInitialized()</a>, <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00027">NativePreConstruct()</a>, and <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00113">OnInventoryLevelReady()</a>.</p>
 
 </div>
 </div>
@@ -492,6 +694,60 @@ Protected Attributes</h2></td></tr>
 <p>Safe to read CharacterPreviewStageManager from this point. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00053">53</a> of file <a class="el" href="_d_t_character_preview_widget_8h_source.html">DTCharacterPreviewWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00113">OnInventoryLevelReady()</a>.</p>
+
+</div>
+</div>
+<a id="ac85606cae1df3c271af009a7b778caa4" name="ac85606cae1df3c271af009a7b778caa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac85606cae1df3c271af009a7b778caa4">&#9670;&#160;</a></span>PocketCaptureInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UPocketCapture&gt; UDTCharacterPreviewWidget::PocketCaptureInstance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00078">78</a> of file <a class="el" href="_d_t_character_preview_widget_8h_source.html">DTCharacterPreviewWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00104">CaptureFrame()</a>, and <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00113">OnInventoryLevelReady()</a>.</p>
+
+</div>
+</div>
+<a id="a632f145077a98aef150b758dbdfdbbdd" name="a632f145077a98aef150b758dbdfdbbdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a632f145077a98aef150b758dbdfdbbdd">&#9670;&#160;</a></span>PocketLevelReadyDelegateHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDelegateHandle UDTCharacterPreviewWidget::PocketLevelReadyDelegateHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_character_preview_widget_8h_source.html#l00089">89</a> of file <a class="el" href="_d_t_character_preview_widget_8h_source.html">DTCharacterPreviewWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00037">NativeConstruct()</a>, and <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00069">NativeDestruct()</a>.</p>
 
 </div>
 </div>

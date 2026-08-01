@@ -297,6 +297,15 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:aec6449460dc1082656be0f0d8d56bfda pro_attribs_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delegate handles for the cooldown tag events we're listening to.  <br /></td></tr>
 <tr class="memitem:ab60f474aeb5c75709872a23c80691656 pro_attribs_class_u_d_t_gameplay_ability" id="r_ab60f474aeb5c75709872a23c80691656"><td class="memItemLeft">FDelegateHandle&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#ab60f474aeb5c75709872a23c80691656">AbilityStackChangedDelegateHandle</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:abad9488bd26ce9ee8527dbfcbe350533" id="r_abad9488bd26ce9ee8527dbfcbe350533"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abad9488bd26ce9ee8527dbfcbe350533">StartLeap</a> ()</td></tr>
+<tr class="memdesc:abad9488bd26ce9ee8527dbfcbe350533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the root-motion move toward the confirmed location.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5f913cad2e347ad4654e437a29204927" id="r_a5f913cad2e347ad4654e437a29204927"><td class="memItemLeft">TObjectPtr&lt; UAbilityTask_ApplyRootMotionMoveToForce &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5f913cad2e347ad4654e437a29204927">LeapTask</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_u_d_t_gameplay_ability___spell"><td colspan="2">Public Attributes inherited from <a class="el" href="class_u_d_t_gameplay_ability___spell.html">UDTGameplayAbility_Spell</a></td></tr>
@@ -365,6 +374,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html">DTGameplayAbility_Spell_Leap.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00022">StartLeap()</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="#a57a8343740519f394aad21aecc02cac9">OnLeapFinished()</a>.</p>
 
 </div>
@@ -415,6 +426,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00067">67</a> of file <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html">DTGameplayAbility_Spell_Leap.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html#l00048">LeapTask</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="#a57a8343740519f394aad21aecc02cac9">OnLeapFinished()</a>.</p>
 
 </div>
@@ -444,9 +457,42 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Root-motion task completion (timed out / destination reached). </p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00015">CommitSpellCast_Implementation()</a>, <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00067">EndAbility()</a>, and <a class="el" href="#a57a8343740519f394aad21aecc02cac9">OnLeapFinished()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00015">CommitSpellCast_Implementation()</a>, <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00067">EndAbility()</a>, <a class="el" href="#a57a8343740519f394aad21aecc02cac9">OnLeapFinished()</a>, and <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00022">StartLeap()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a57a8343740519f394aad21aecc02cac9">OnLeapFinished()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a57a8343740519f394aad21aecc02cac9">OnLeapFinished()</a>, and <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00022">StartLeap()</a>.</p>
+
+</div>
+</div>
+<a id="abad9488bd26ce9ee8527dbfcbe350533" name="abad9488bd26ce9ee8527dbfcbe350533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abad9488bd26ce9ee8527dbfcbe350533">&#9670;&#160;</a></span>StartLeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Spell_Leap::StartLeap </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Starts the root-motion move toward the confirmed location. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00022">22</a> of file <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html">DTGameplayAbility_Spell_Leap.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html#l00034">bRestrictSpeedToExpected</a>, <a class="el" href="_d_t_gameplay_ability___spell___targeted_8cpp_source.html#l00019">UDTGameplayAbility_Spell_Targeted::GetConfirmedLocation()</a>, <a class="el" href="class_u_d_t_gameplay_ability___spell.html#a8cdcb6f7f68fa3cb9e7c37f7f3bfb828">UDTGameplayAbility_Spell::GetEffectiveCastTime()</a>, <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html#l00026">LeapDuration</a>, <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html#l00030">LeapPathOffsetCurve</a>, <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html#l00048">LeapTask</a>, and <a class="el" href="#a57a8343740519f394aad21aecc02cac9">OnLeapFinished()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00015">CommitSpellCast_Implementation()</a>, and <a class="el" href="#a57a8343740519f394aad21aecc02cac9">OnLeapFinished()</a>.</p>
 
 </div>
 </div>
@@ -475,6 +521,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html#l00034">34</a> of file <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html">DTGameplayAbility_Spell_Leap.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00022">StartLeap()</a>.</p>
+
 </div>
 </div>
 <a id="a2743d997b2d9a6e5a455d64c97688ca5" name="a2743d997b2d9a6e5a455d64c97688ca5"></a>
@@ -502,6 +550,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html#l00026">26</a> of file <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html">DTGameplayAbility_Spell_Leap.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00022">StartLeap()</a>.</p>
+
 </div>
 </div>
 <a id="a97bfadcdb4bb5d9f8e4107ce17995fb8" name="a97bfadcdb4bb5d9f8e4107ce17995fb8"></a>
@@ -527,6 +577,34 @@ Additional Inherited Members</h2></td></tr>
 <p>Optional vector curve shaping the leap arc (its Z drives jump height over normalized travel time). </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html#l00030">30</a> of file <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html">DTGameplayAbility_Spell_Leap.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00022">StartLeap()</a>.</p>
+
+</div>
+</div>
+<a id="a5f913cad2e347ad4654e437a29204927" name="a5f913cad2e347ad4654e437a29204927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f913cad2e347ad4654e437a29204927">&#9670;&#160;</a></span>LeapTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UAbilityTask_ApplyRootMotionMoveToForce&gt; UDTGameplayAbility_Spell_Leap::LeapTask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html#l00048">48</a> of file <a class="el" href="_d_t_gameplay_ability___spell___leap_8h_source.html">DTGameplayAbility_Spell_Leap.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00067">EndAbility()</a>, and <a class="el" href="_d_t_gameplay_ability___spell___leap_8cpp_source.html#l00022">StartLeap()</a>.</p>
 
 </div>
 </div>

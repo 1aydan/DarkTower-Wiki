@@ -153,6 +153,11 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ab33224a329758a2f51ed1767a2cc3b12" id="r_ab33224a329758a2f51ed1767a2cc3b12"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_d_t_equipment_mesh_slot.html">FDTEquipmentMeshSlot</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab33224a329758a2f51ed1767a2cc3b12">MeshSlots</a></td></tr>
 <tr class="memdesc:ab33224a329758a2f51ed1767a2cc3b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot assignments to apply while this component exists.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa84e4c47b7e0d3106677182ecf3a50f9" id="r_aa84e4c47b7e0d3106677182ecf3a50f9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa84e4c47b7e0d3106677182ecf3a50f9">bSlotsApplied</a> = false</td></tr>
+<tr class="memdesc:aa84e4c47b7e0d3106677182ecf3a50f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">True while our slots are applied to the owner's customizable mesh.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>granted component that applies Mutable mesh slots to the owner's <a class="el" href="class_u_d_t_customizable_mesh_component.html" title="Drives a Mutable Customizable Object Instance from equipment state.">UDTCustomizableMeshComponent</a> for as long as it exists. </p>
@@ -204,7 +209,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_mutable_mesh_slot_component_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_mutable_mesh_slot_component_8cpp_source.html">DTMutableMeshSlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_mutable_mesh_slot_component_8h_source.html#l00053">MeshSlots</a>, and <a class="el" href="_d_t_customizable_mesh_component_8cpp_source.html#l00174">UDTCustomizableMeshComponent::SetSlotOption()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_mutable_mesh_slot_component_8h_source.html#l00060">bSlotsApplied</a>, <a class="el" href="_d_t_mutable_mesh_slot_component_8h_source.html#l00053">MeshSlots</a>, and <a class="el" href="_d_t_customizable_mesh_component_8cpp_source.html#l00174">UDTCustomizableMeshComponent::SetSlotOption()</a>.</p>
 
 </div>
 </div>
@@ -233,11 +238,39 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_mutable_mesh_slot_component_8cpp_source.html#l00043">43</a> of file <a class="el" href="_d_t_mutable_mesh_slot_component_8cpp_source.html">DTMutableMeshSlotComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_customizable_mesh_component_8cpp_source.html#l00201">UDTCustomizableMeshComponent::ClearSlot()</a>, and <a class="el" href="_d_t_mutable_mesh_slot_component_8h_source.html#l00053">MeshSlots</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_mutable_mesh_slot_component_8h_source.html#l00060">bSlotsApplied</a>, <a class="el" href="_d_t_customizable_mesh_component_8cpp_source.html#l00201">UDTCustomizableMeshComponent::ClearSlot()</a>, and <a class="el" href="_d_t_mutable_mesh_slot_component_8h_source.html#l00053">MeshSlots</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="aa84e4c47b7e0d3106677182ecf3a50f9" name="aa84e4c47b7e0d3106677182ecf3a50f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84e4c47b7e0d3106677182ecf3a50f9">&#9670;&#160;</a></span>bSlotsApplied</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTMutableMeshSlotComponent::bSlotsApplied = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True while our slots are applied to the owner's customizable mesh. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_mutable_mesh_slot_component_8h_source.html#l00060">60</a> of file <a class="el" href="_d_t_mutable_mesh_slot_component_8h_source.html">DTMutableMeshSlotComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_mutable_mesh_slot_component_8cpp_source.html#l00015">OnRegister()</a>, and <a class="el" href="_d_t_mutable_mesh_slot_component_8cpp_source.html#l00043">OnUnregister()</a>.</p>
+
+</div>
+</div>
 <a id="ab33224a329758a2f51ed1767a2cc3b12" name="ab33224a329758a2f51ed1767a2cc3b12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab33224a329758a2f51ed1767a2cc3b12">&#9670;&#160;</a></span>MeshSlots</h2>
 

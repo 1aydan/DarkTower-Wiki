@@ -161,6 +161,11 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:af59e581c82cf15ab0a1c9b1860df59f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color used when the owner's element tag is not found in ElementColorMap.  <br /></td></tr>
 <tr class="memitem:a6fa464312a5e698bcc7e722fa910138e" id="r_a6fa464312a5e698bcc7e722fa910138e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a6fa464312a5e698bcc7e722fa910138e">DefaultRange</a> = 200.0f</td></tr>
 <tr class="memdesc:a6fa464312a5e698bcc7e722fa910138e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weapon range pushed to the Niagara system.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aac32285317e082e1ac02587469201a5c" id="r_aac32285317e082e1ac02587469201a5c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aac32285317e082e1ac02587469201a5c">ApplyVFXParams</a> (USkeletalMeshComponent *MeshComp)</td></tr>
+<tr class="memdesc:aac32285317e082e1ac02587469201a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the Niagara component that was just spawned by the base class and applies VFX params to it.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Timed Niagara notify that pushes weapon swing parameters to the spawned Niagara system as user variables. </p>
@@ -187,6 +192,39 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aac32285317e082e1ac02587469201a5c" name="aac32285317e082e1ac02587469201a5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac32285317e082e1ac02587469201a5c">&#9670;&#160;</a></span>ApplyVFXParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAnimNotifyState_WeaponVFX::ApplyVFXParams </td>
+          <td>(</td>
+          <td class="paramtype">USkeletalMeshComponent *</td>          <td class="paramname"><span class="paramname"><em>MeshComp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the Niagara component that was just spawned by the base class and applies VFX params to it. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8cpp_source.html#l00020">20</a> of file <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8cpp_source.html">DTAnimNotifyState_WeaponVFX.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html#l00029">ColorParamName</a>, <a class="el" href="_d_t_gameplay_ability___melee_8h_source.html#l00035">FMeleeAttackParams::DamageTypeTag</a>, <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html#l00043">DefaultColor</a>, <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html#l00047">DefaultRange</a>, <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html#l00039">ElementColorMap</a>, <a class="el" href="_d_t_ability_types_8h_source.html#l00126">Range</a>, and <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html#l00033">RangeParamName</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8cpp_source.html#l00013">NotifyBegin()</a>.</p>
+
+</div>
+</div>
 <a id="a01df9a1c950cbd0899d4f2a9f4c419e8" name="a01df9a1c950cbd0899d4f2a9f4c419e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01df9a1c950cbd0899d4f2a9f4c419e8">&#9670;&#160;</a></span>GetNotifyName_Implementation()</h2>
 
@@ -253,6 +291,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8cpp_source.html#l00013">13</a> of file <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8cpp_source.html">DTAnimNotifyState_WeaponVFX.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8cpp_source.html#l00020">ApplyVFXParams()</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -280,6 +320,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html#l00029">29</a> of file <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html">DTAnimNotifyState_WeaponVFX.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8cpp_source.html#l00020">ApplyVFXParams()</a>.</p>
+
 </div>
 </div>
 <a id="af59e581c82cf15ab0a1c9b1860df59f9" name="af59e581c82cf15ab0a1c9b1860df59f9"></a>
@@ -305,6 +347,8 @@ Protected Attributes</h2></td></tr>
 <p>Color used when the owner's element tag is not found in ElementColorMap. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html#l00043">43</a> of file <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html">DTAnimNotifyState_WeaponVFX.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8cpp_source.html#l00020">ApplyVFXParams()</a>.</p>
 
 </div>
 </div>
@@ -333,6 +377,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html">DTAnimNotifyState_WeaponVFX.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8cpp_source.html#l00020">ApplyVFXParams()</a>.</p>
+
 </div>
 </div>
 <a id="ad1aa9d3cabe737625738488f9d1ade89" name="ad1aa9d3cabe737625738488f9d1ade89"></a>
@@ -359,6 +405,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html#l00039">39</a> of file <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html">DTAnimNotifyState_WeaponVFX.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8cpp_source.html#l00020">ApplyVFXParams()</a>.</p>
+
 </div>
 </div>
 <a id="aecced906dd84efb85feef69530a3dd00" name="aecced906dd84efb85feef69530a3dd00"></a>
@@ -384,6 +432,8 @@ Protected Attributes</h2></td></tr>
 <p>Name of the Niagara user variable that receives the weapon range (float). </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html#l00033">33</a> of file <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8h_source.html">DTAnimNotifyState_WeaponVFX.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_anim_notify_state___weapon_v_f_x_8cpp_source.html#l00020">ApplyVFXParams()</a>.</p>
 
 </div>
 </div>

@@ -173,6 +173,24 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6d0c76143a5825ef251179b1d90bab67" id="r_a6d0c76143a5825ef251179b1d90bab67"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6d0c76143a5825ef251179b1d90bab67">NativeTick</a> (const FGeometry &amp;MyGeometry, float InDeltaTime) override</td></tr>
 <tr class="memitem:a880d9880ae149850db0208e159cd8dab" id="r_a880d9880ae149850db0208e159cd8dab"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a880d9880ae149850db0208e159cd8dab">NativeDestruct</a> () override</td></tr>
 <tr class="memitem:a02eb1bb7116045da902fd072f48e050e" id="r_a02eb1bb7116045da902fd072f48e050e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a02eb1bb7116045da902fd072f48e050e">ReleaseSlateResources</a> (bool bReleaseChildren) override</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aeceaa7daa6b964c693e312fd4c97e5eb" id="r_aeceaa7daa6b964c693e312fd4c97e5eb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeceaa7daa6b964c693e312fd4c97e5eb">SyncLabelsWithSubsystem</a> ()</td></tr>
+<tr class="memdesc:aeceaa7daa6b964c693e312fd4c97e5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconcile ActiveLabels with the subsystem's current loot list.  <br /></td></tr>
+<tr class="memitem:a6100f19bd4597135158a10ea76941436" id="r_a6100f19bd4597135158a10ea76941436"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6100f19bd4597135158a10ea76941436">UpdateLabelPositions</a> ()</td></tr>
+<tr class="memdesc:a6100f19bd4597135158a10ea76941436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project active labels to screen space and run the stacking layout.  <br /></td></tr>
+<tr class="memitem:a1a4dd93c86bfc54f1caa9a696221ee8d" id="r_a1a4dd93c86bfc54f1caa9a696221ee8d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1a4dd93c86bfc54f1caa9a696221ee8d">ResolveOverlaps</a> (TArray&lt; TPair&lt; <a class="el" href="class_u_d_t_loot_label_widget.html">UDTLootLabelWidget</a> *, FVector2D &gt; &gt; &amp;LabelPositions) const</td></tr>
+<tr class="memdesc:a1a4dd93c86bfc54f1caa9a696221ee8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Best-fit single-pass overlap resolver.  <br /></td></tr>
+<tr class="memitem:a2e88f207b08006efedaeab26fc6884f8" id="r_a2e88f207b08006efedaeab26fc6884f8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2e88f207b08006efedaeab26fc6884f8">ShouldShowLabel</a> (<a class="el" href="class_a_d_t_item_actor.html">ADTItemActor</a> *ItemActor, const APawn *InPawn, const FVector &amp;InPawnLocation, float InMaxDistSq) const</td></tr>
+<tr class="memdesc:a2e88f207b08006efedaeab26fc6884f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if a label should be shown.  <br /></td></tr>
+<tr class="memitem:a7a206929f66fa7bac80daf2e82ee47c5" id="r_a7a206929f66fa7bac80daf2e82ee47c5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7a206929f66fa7bac80daf2e82ee47c5">ReleaseLabel</a> (<a class="el" href="class_a_d_t_item_actor.html">ADTItemActor</a> *Actor)</td></tr>
+<tr class="memdesc:a7a206929f66fa7bac80daf2e82ee47c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release a single label back to the widget pool.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a58a3c885f01e5fde533611fd4c9f2125" id="r_a58a3c885f01e5fde533611fd4c9f2125"><td class="memItemLeft">FUserWidgetPool&#160;</td><td class="memItemRight"><a class="el" href="#a58a3c885f01e5fde533611fd4c9f2125">LabelWidgetPool</a></td></tr>
+<tr class="memitem:a0be22da7b7ad2092efb054bf07b3f9b5" id="r_a0be22da7b7ad2092efb054bf07b3f9b5"><td class="memItemLeft">TMap&lt; TWeakObjectPtr&lt; <a class="el" href="class_a_d_t_item_actor.html">ADTItemActor</a> &gt;, <a class="el" href="class_u_d_t_loot_label_widget.html">UDTLootLabelWidget</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0be22da7b7ad2092efb054bf07b3f9b5">ActiveLabels</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Specialized canvas widget for displaying loot labels in the world. </p>
@@ -196,6 +214,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00017">17</a> of file <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html">DTLootCanvasWidget.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00079">LabelWidgetPool</a>.</p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -218,6 +238,8 @@ Protected Member Functions</h2></td></tr>
 <p>Call this on map travel. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00038">38</a> of file <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html">DTLootCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00082">ActiveLabels</a>, and <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00079">LabelWidgetPool</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00030">NativeDestruct()</a>.</p>
 
@@ -250,7 +272,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_loot_canvas_widget_8h_source.html">DTLootCanvasWidget.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00047">GetActiveLabelCount()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00082">ActiveLabels</a>, and <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00047">GetActiveLabelCount()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00047">GetActiveLabelCount()</a>.</p>
 
@@ -310,7 +332,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00030">30</a> of file <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html">DTLootCanvasWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00038">ClearAllLabels()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00038">ClearAllLabels()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00079">LabelWidgetPool</a>.</p>
 
 </div>
 </div>
@@ -343,7 +365,38 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00060">60</a> of file <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html">DTLootCanvasWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00039">bShowLabels</a>, and <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00031">LootCanvas</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00039">bShowLabels</a>, <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00031">LootCanvas</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00079">SyncLabelsWithSubsystem()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00173">UpdateLabelPositions()</a>.</p>
+
+</div>
+</div>
+<a id="a7a206929f66fa7bac80daf2e82ee47c5" name="a7a206929f66fa7bac80daf2e82ee47c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a206929f66fa7bac80daf2e82ee47c5">&#9670;&#160;</a></span>ReleaseLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTLootCanvasWidget::ReleaseLabel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_d_t_item_actor.html">ADTItemActor</a> *</td>          <td class="paramname"><span class="paramname"><em>Actor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Release a single label back to the widget pool. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00155">155</a> of file <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html">DTLootCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00082">ActiveLabels</a>, and <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00079">LabelWidgetPool</a>.</p>
 
 </div>
 </div>
@@ -372,6 +425,121 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00053">53</a> of file <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html">DTLootCanvasWidget.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00079">LabelWidgetPool</a>.</p>
+
+</div>
+</div>
+<a id="a1a4dd93c86bfc54f1caa9a696221ee8d" name="a1a4dd93c86bfc54f1caa9a696221ee8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a4dd93c86bfc54f1caa9a696221ee8d">&#9670;&#160;</a></span>ResolveOverlaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTLootCanvasWidget::ResolveOverlaps </td>
+          <td>(</td>
+          <td class="paramtype">TArray&lt; TPair&lt; <a class="el" href="class_u_d_t_loot_label_widget.html">UDTLootLabelWidget</a> *, FVector2D &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>LabelPositions</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Best-fit single-pass overlap resolver. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00222">222</a> of file <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html">DTLootCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00043">LabelPadding</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00055">Max</a>, <a class="el" href="_d_t_settings_shared_8h_source.html#l00031">Num</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00222">ResolveOverlaps()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00222">ResolveOverlaps()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00173">UpdateLabelPositions()</a>.</p>
+
+</div>
+</div>
+<a id="a2e88f207b08006efedaeab26fc6884f8" name="a2e88f207b08006efedaeab26fc6884f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e88f207b08006efedaeab26fc6884f8">&#9670;&#160;</a></span>ShouldShowLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTLootCanvasWidget::ShouldShowLabel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_d_t_item_actor.html">ADTItemActor</a> *</td>          <td class="paramname"><span class="paramname"><em>ItemActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const APawn *</td>          <td class="paramname"><span class="paramname"><em>InPawn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FVector &amp;</td>          <td class="paramname"><span class="paramname"><em>InPawnLocation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>InMaxDistSq</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests if a label should be shown. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00316">316</a> of file <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html">DTLootCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00039">bShowLabels</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00079">SyncLabelsWithSubsystem()</a>.</p>
+
+</div>
+</div>
+<a id="aeceaa7daa6b964c693e312fd4c97e5eb" name="aeceaa7daa6b964c693e312fd4c97e5eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeceaa7daa6b964c693e312fd4c97e5eb">&#9670;&#160;</a></span>SyncLabelsWithSubsystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTLootCanvasWidget::SyncLabelsWithSubsystem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reconcile ActiveLabels with the subsystem's current loot list. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00079">79</a> of file <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html">DTLootCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00082">ActiveLabels</a>, <a class="el" href="_d_t_loot_subsystem_8h_source.html#l00080">UDTLootSubsystem::GetLootItems()</a>, <a class="el" href="_d_t_loot_label_widget_8cpp_source.html#l00006">UDTLootLabelWidget::InitializeLabel()</a>, <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00028">LabelWidgetClass</a>, <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00079">LabelWidgetPool</a>, <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00031">LootCanvas</a>, <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00035">MaxLabelDistance</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00316">ShouldShowLabel()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00079">SyncLabelsWithSubsystem()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00060">NativeTick()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00079">SyncLabelsWithSubsystem()</a>.</p>
+
 </div>
 </div>
 <a id="a84c4f8db5d127a481675cb7fa5d6a0d1" name="a84c4f8db5d127a481675cb7fa5d6a0d1"></a>
@@ -393,11 +561,70 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00297">297</a> of file <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html">DTLootCanvasWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00039">bShowLabels</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00082">ActiveLabels</a>, <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00039">bShowLabels</a>, and <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00079">LabelWidgetPool</a>.</p>
+
+</div>
+</div>
+<a id="a6100f19bd4597135158a10ea76941436" name="a6100f19bd4597135158a10ea76941436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6100f19bd4597135158a10ea76941436">&#9670;&#160;</a></span>UpdateLabelPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTLootCanvasWidget::UpdateLabelPositions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Project active labels to screen space and run the stacking layout. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00173">173</a> of file <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html">DTLootCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00082">ActiveLabels</a>, <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00031">LootCanvas</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00222">ResolveOverlaps()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00173">UpdateLabelPositions()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00060">NativeTick()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00173">UpdateLabelPositions()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a0be22da7b7ad2092efb054bf07b3f9b5" name="a0be22da7b7ad2092efb054bf07b3f9b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0be22da7b7ad2092efb054bf07b3f9b5">&#9670;&#160;</a></span>ActiveLabels</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMap&lt;TWeakObjectPtr&lt;<a class="el" href="class_a_d_t_item_actor.html">ADTItemActor</a>&gt;, <a class="el" href="class_u_d_t_loot_label_widget.html">UDTLootLabelWidget</a>*&gt; UDTLootCanvasWidget::ActiveLabels</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00082">82</a> of file <a class="el" href="_d_t_loot_canvas_widget_8h_source.html">DTLootCanvasWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00038">ClearAllLabels()</a>, <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00047">GetActiveLabelCount()</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00155">ReleaseLabel()</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00079">SyncLabelsWithSubsystem()</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00297">ToggleLabelVisibility()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00173">UpdateLabelPositions()</a>.</p>
+
+</div>
+</div>
 <a id="afd4e2e0f9b8676ea1472de49b3f88e4d" name="afd4e2e0f9b8676ea1472de49b3f88e4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd4e2e0f9b8676ea1472de49b3f88e4d">&#9670;&#160;</a></span>bShowLabels</h2>
 
@@ -414,7 +641,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00039">39</a> of file <a class="el" href="_d_t_loot_canvas_widget_8h_source.html">DTLootCanvasWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00060">NativeTick()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00297">ToggleLabelVisibility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00060">NativeTick()</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00316">ShouldShowLabel()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00297">ToggleLabelVisibility()</a>.</p>
 
 </div>
 </div>
@@ -434,6 +661,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00043">43</a> of file <a class="el" href="_d_t_loot_canvas_widget_8h_source.html">DTLootCanvasWidget.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00222">ResolveOverlaps()</a>.</p>
+
 </div>
 </div>
 <a id="a7c1970dbc92c2ddcfcc54a1827d78f8f" name="a7c1970dbc92c2ddcfcc54a1827d78f8f"></a>
@@ -450,7 +679,33 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00028">28</a> of file <a class="el" href="_d_t_loot_canvas_widget_8h_source.html">DTLootCanvasWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00023">NativeConstruct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00023">NativeConstruct()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00079">SyncLabelsWithSubsystem()</a>.</p>
+
+</div>
+</div>
+<a id="a58a3c885f01e5fde533611fd4c9f2125" name="a58a3c885f01e5fde533611fd4c9f2125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58a3c885f01e5fde533611fd4c9f2125">&#9670;&#160;</a></span>LabelWidgetPool</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FUserWidgetPool UDTLootCanvasWidget::LabelWidgetPool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00079">79</a> of file <a class="el" href="_d_t_loot_canvas_widget_8h_source.html">DTLootCanvasWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00038">ClearAllLabels()</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00030">NativeDestruct()</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00155">ReleaseLabel()</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00053">ReleaseSlateResources()</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00079">SyncLabelsWithSubsystem()</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00297">ToggleLabelVisibility()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00017">UDTLootCanvasWidget()</a>.</p>
 
 </div>
 </div>
@@ -468,7 +723,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00031">31</a> of file <a class="el" href="_d_t_loot_canvas_widget_8h_source.html">DTLootCanvasWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00060">NativeTick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00060">NativeTick()</a>, <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00079">SyncLabelsWithSubsystem()</a>, and <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00173">UpdateLabelPositions()</a>.</p>
 
 </div>
 </div>
@@ -487,6 +742,8 @@ Protected Member Functions</h2></td></tr>
 <p>Maximum distance to show labels (0 = unlimited). </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_loot_canvas_widget_8h_source.html#l00035">35</a> of file <a class="el" href="_d_t_loot_canvas_widget_8h_source.html">DTLootCanvasWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_loot_canvas_widget_8cpp_source.html#l00079">SyncLabelsWithSubsystem()</a>.</p>
 
 </div>
 </div>

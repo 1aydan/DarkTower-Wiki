@@ -165,6 +165,10 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:af39dc76d3dfeb546e9acdb033bd63309" id="r_af39dc76d3dfeb546e9acdb033bd63309"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_button.html">UDTButton</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af39dc76d3dfeb546e9acdb033bd63309">Btn_Select</a></td></tr>
 <tr class="memitem:ab7a32841e49c1f2275a30732df3e403d" id="r_ab7a32841e49c1f2275a30732df3e403d"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_progress_bar_widget.html">UDTProgressBarWidget</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab7a32841e49c1f2275a30732df3e403d">PB_Progress</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af11fc6d5ed632b0a6a1f887b977b3a01" id="r_af11fc6d5ed632b0a6a1f887b977b3a01"><td class="memItemLeft"><a class="el" href="struct_f_d_t_biome_entry_info.html">FDTBiomeEntryInfo</a>&#160;</td><td class="memItemRight"><a class="el" href="#af11fc6d5ed632b0a6a1f887b977b3a01">BiomeInfo</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic biome entry. </p>
@@ -196,7 +200,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_biome_entry_widget_8h_source.html#l00032">32</a> of file <a class="el" href="_d_t_biome_entry_widget_8h_source.html">DTBiomeEntryWidget.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_biome_entry_widget_8h_source.html#l00032">GetBiomeInfo()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_biome_entry_widget_8h_source.html#l00051">BiomeInfo</a>, and <a class="el" href="_d_t_biome_entry_widget_8h_source.html#l00032">GetBiomeInfo()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_biome_entry_widget_8h_source.html#l00032">GetBiomeInfo()</a>.</p>
 
@@ -219,7 +223,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_biome_entry_widget_8cpp_source.html#l00017">17</a> of file <a class="el" href="_d_t_biome_entry_widget_8cpp_source.html">DTBiomeEntryWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="#aa45542a0fa84db7c9914154c677705e1">OnBiomeEntryInitialized()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_biome_entry_widget_8h_source.html#l00051">BiomeInfo</a>, and <a class="el" href="#aa45542a0fa84db7c9914154c677705e1">OnBiomeEntryInitialized()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00249">UDTCampaignTabWidget::RebuildBiomeEntries()</a>.</p>
 
 </div>
 </div>
@@ -305,6 +311,32 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="af11fc6d5ed632b0a6a1f887b977b3a01" name="af11fc6d5ed632b0a6a1f887b977b3a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11fc6d5ed632b0a6a1f887b977b3a01">&#9670;&#160;</a></span>BiomeInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_d_t_biome_entry_info.html">FDTBiomeEntryInfo</a> UDTBiomeEntryWidget::BiomeInfo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_biome_entry_widget_8h_source.html#l00051">51</a> of file <a class="el" href="_d_t_biome_entry_widget_8h_source.html">DTBiomeEntryWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_biome_entry_widget_8h_source.html#l00032">GetBiomeInfo()</a>, and <a class="el" href="_d_t_biome_entry_widget_8cpp_source.html#l00017">InitializeEntry()</a>.</p>
+
+</div>
+</div>
 <a id="af39dc76d3dfeb546e9acdb033bd63309" name="af39dc76d3dfeb546e9acdb033bd63309"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af39dc76d3dfeb546e9acdb033bd63309">&#9670;&#160;</a></span>Btn_Select</h2>
 
@@ -344,6 +376,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_biome_entry_widget_8h_source.html#l00026">26</a> of file <a class="el" href="_d_t_biome_entry_widget_8h_source.html">DTBiomeEntryWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00249">UDTCampaignTabWidget::RebuildBiomeEntries()</a>.</p>
 
 </div>
 </div>

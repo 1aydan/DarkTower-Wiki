@@ -10,6 +10,7 @@ var class_u_d_t_nameplate_widget =
     [ "SetOwningCharacter", "class_u_d_t_nameplate_widget.html#af2d51b4c1ac84242383b5c35f30cd925", null ],
     [ "AB_HealthBar", "class_u_d_t_nameplate_widget.html#a6a96a90a6efa482e341c02ce9d167927", null ],
     [ "AutoHideDelay", "class_u_d_t_nameplate_widget.html#ab725a0b339eca9c0e94cac2ae1dd18d8", null ],
+    [ "AutoHideTimerHandle", "class_u_d_t_nameplate_widget.html#af0d2c4c2802205fd6a8517ac016e4a31", null ],
     [ "bAutoHideEnabled", "class_u_d_t_nameplate_widget.html#a0c6b5952941ec1e44f19fe98ae6a68e1", null ],
     [ "OwningCharacter", "class_u_d_t_nameplate_widget.html#a3c4938bff37681b23d55b7e084468200", null ]
 ];

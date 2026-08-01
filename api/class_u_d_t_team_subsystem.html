@@ -181,6 +181,35 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9b298c1b63de7887486a6a675923fb23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if one actor can damage another based on team relationships.  <br /></td></tr>
 <tr class="memitem:a62cd0b4e7cc3171896134aff1f21de5d" id="r_a62cd0b4e7cc3171896134aff1f21de5d"><td class="memItemLeft">AActor *&#160;</td><td class="memItemRight"><a class="el" href="#a62cd0b4e7cc3171896134aff1f21de5d">FindClosestAlly</a> (AActor *SourceActor, <a class="el" href="struct_f_team_query_params.html">FTeamQueryParams</a> Params=<a class="el" href="struct_f_team_query_params.html">FTeamQueryParams</a>())</td></tr>
 <tr class="memdesc:a62cd0b4e7cc3171896134aff1f21de5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the closest ally to a source actor (excluding the source actor itself).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0633129153624c1bb15474eb0fea4b4e" id="r_a0633129153624c1bb15474eb0fea4b4e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0633129153624c1bb15474eb0fea4b4e">IsWithinDistance</a> (const FVector &amp;SourceLocation, AActor *TargetActor, float MaxDistance) const</td></tr>
+<tr class="memdesc:a0633129153624c1bb15474eb0fea4b4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to check if an actor is within the specified distance.  <br /></td></tr>
+<tr class="memitem:a3574274f1a03232aa464e3a88d709991" id="r_a3574274f1a03232aa464e3a88d709991"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3574274f1a03232aa464e3a88d709991">PassesQueryFlags</a> (AActor *SourceActor, AActor *TargetActor, const <a class="el" href="struct_f_team_query_params.html">FTeamQueryParams</a> &amp;Params, const FVector &amp;SourceLocation) const</td></tr>
+<tr class="memdesc:a3574274f1a03232aa464e3a88d709991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to check if an actor passes all query flag requirements.  <br /></td></tr>
+<tr class="memitem:ac96d606c7ee1e27e52b4a0a09c8b409f" id="r_ac96d606c7ee1e27e52b4a0a09c8b409f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac96d606c7ee1e27e52b4a0a09c8b409f">IsActorFacingActorInternal</a> (AActor *SourceActor, AActor *TargetActor, const FVector &amp;SourceLocation, float MaxAngleDegrees) const</td></tr>
+<tr class="memdesc:ac96d606c7ee1e27e52b4a0a09c8b409f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to check if source actor is facing target actor.  <br /></td></tr>
+<tr class="memitem:a76f50302455c2688397a2afb6850ba25" id="r_a76f50302455c2688397a2afb6850ba25"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a76f50302455c2688397a2afb6850ba25">HasLineOfSight</a> (AActor *SourceActor, AActor *TargetActor, const FVector &amp;SourceLocation) const</td></tr>
+<tr class="memdesc:a76f50302455c2688397a2afb6850ba25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to check if there is line of sight between two actors.  <br /></td></tr>
+<tr class="memitem:a7b05404046a28573248d60334e385dc0" id="r_a7b05404046a28573248d60334e385dc0"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a7b05404046a28573248d60334e385dc0">QueryTeamActorsInternal</a> (AActor *SourceActor, TArray&lt; AActor * &gt; &amp;OutActors, const <a class="el" href="struct_f_team_query_params.html">FTeamQueryParams</a> &amp;Params, bool bQueryEnemies) const</td></tr>
+<tr class="memdesc:a7b05404046a28573248d60334e385dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unified internal implementation for team queries.  <br /></td></tr>
+<tr class="memitem:acecae6346daf221824cc624bfc135eb9" id="r_acecae6346daf221824cc624bfc135eb9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acecae6346daf221824cc624bfc135eb9">GetAllTeamAgents</a> (TArray&lt; IGenericTeamAgentInterface * &gt; &amp;OutAgents)</td></tr>
+<tr class="memdesc:acecae6346daf221824cc624bfc135eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to get all team agents in the world.  <br /></td></tr>
+<tr class="memitem:a28cf70a50d4e11a41bc5ffcc74ab4695" id="r_a28cf70a50d4e11a41bc5ffcc74ab4695"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a28cf70a50d4e11a41bc5ffcc74ab4695">UpdateTeamCache</a> (AActor *Actor, FGenericTeamId OldTeamId, FGenericTeamId NewTeamId)</td></tr>
+<tr class="memdesc:a28cf70a50d4e11a41bc5ffcc74ab4695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the cached team registry when an actor changes teams.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a820fa04deb71750062738fbd55f786cb" id="r_a820fa04deb71750062738fbd55f786cb"><td class="memItemLeft">static IGenericTeamAgentInterface *&#160;</td><td class="memItemRight"><a class="el" href="#a820fa04deb71750062738fbd55f786cb">GetTeamAgentInterface</a> (AActor *Actor)</td></tr>
+<tr class="memdesc:a820fa04deb71750062738fbd55f786cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to check if an actor implements IGenericTeamAgentInterface.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a66387dfcae1afb4d3021556664d79ca4" id="r_a66387dfcae1afb4d3021556664d79ca4"><td class="memItemLeft">TMap&lt; uint8, <a class="el" href="struct_f_team_member_list.html">FTeamMemberList</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a66387dfcae1afb4d3021556664d79ca4">TeamMemberCache</a></td></tr>
+<tr class="memdesc:a66387dfcae1afb4d3021556664d79ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of team IDs to arrays of team members.  <br /></td></tr>
+<tr class="memitem:a10edaf8a6c673f089e81b95b7ffdaf3c" id="r_a10edaf8a6c673f089e81b95b7ffdaf3c"><td class="memItemLeft">TSet&lt; TObjectPtr&lt; AActor &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a10edaf8a6c673f089e81b95b7ffdaf3c">RegisteredMembers</a></td></tr>
+<tr class="memdesc:a10edaf8a6c673f089e81b95b7ffdaf3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of all registered team members for quick lookup.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>World subsystem to manage team-related functionality Maintains a cached registry of team members for efficient team-based queries. </p>
@@ -292,7 +321,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00112">GetActorTeam()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00178">AreActorsAllies()</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00230">DoesActorPassTeamQuery()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00178">AreActorsAllies()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00230">DoesActorPassTeamQuery()</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00252">QueryTeamActorsInternal()</a>.</p>
 
 </div>
 </div>
@@ -327,7 +356,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00526">526</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00178">AreActorsAllies()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00178">AreActorsAllies()</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00550">GetTeamAgentInterface()</a>.</p>
 
 </div>
 </div>
@@ -355,6 +384,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00037">37</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00315">RegisteredMembers</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00311">TeamMemberCache</a>.</p>
 
 </div>
 </div>
@@ -401,7 +432,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00230">230</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00154">AreActorsOnSameTeam()</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00049">FTeamQueryParams::OverrideLocation</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00154">AreActorsOnSameTeam()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00550">GetTeamAgentInterface()</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00049">FTeamQueryParams::OverrideLocation</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00446">PassesQueryFlags()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00139">UDTGameplayAbility_Chain::IsValidChainTarget()</a>.</p>
 
 </div>
 </div>
@@ -436,7 +469,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00381">381</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00021">SortByDistance</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00252">QueryTeamActorsInternal()</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00021">SortByDistance</a>.</p>
 
 </div>
 </div>
@@ -471,7 +504,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00365">365</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00021">SortByDistance</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00252">QueryTeamActorsInternal()</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00021">SortByDistance</a>.</p>
 
 </div>
 </div>
@@ -518,7 +551,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00325">325</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00041">FTeamQueryParams::ActorClass</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00019">IgnoreDead</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00020">IncludeSelf</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00033">FTeamQueryParams::MaxDistance</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00072">FTeamMemberList::Members</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00049">FTeamQueryParams::OverrideLocation</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00021">SortByDistance</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00041">FTeamQueryParams::ActorClass</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00019">IgnoreDead</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00020">IncludeSelf</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00033">FTeamQueryParams::MaxDistance</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00072">FTeamMemberList::Members</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00049">FTeamQueryParams::OverrideLocation</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00252">QueryTeamActorsInternal()</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00021">SortByDistance</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00311">TeamMemberCache</a>.</p>
 
 </div>
 </div>
@@ -547,6 +580,8 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The team ID, or an invalid team ID if the actor doesn't support teams </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00112">112</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00550">GetTeamAgentInterface()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00154">AreActorsOnSameTeam()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00128">IsActorOnTeam()</a>, and <a class="el" href="_d_t_targeting_filter_task___team_8cpp_source.html#l00014">UDTTargetingFilterTask_Team::ShouldFilterTarget()</a>.</p>
 
@@ -589,7 +624,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00183">183</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00041">FTeamQueryParams::ActorClass</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00019">IgnoreDead</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00020">IncludeSelf</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00072">FTeamMemberList::Members</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00041">FTeamQueryParams::ActorClass</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00019">IgnoreDead</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00020">IncludeSelf</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00072">FTeamMemberList::Members</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00252">QueryTeamActorsInternal()</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00311">TeamMemberCache</a>.</p>
 
 </div>
 </div>
@@ -630,6 +665,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00225">225</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00252">QueryTeamActorsInternal()</a>.</p>
+
 </div>
 </div>
 <a id="aef48e35f839d05d2e1efc5bdb9b8b7af" name="aef48e35f839d05d2e1efc5bdb9b8b7af"></a>
@@ -669,7 +706,71 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00220">220</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00252">QueryTeamActorsInternal()</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_projectile_8cpp_source.html#l00201">ADTProjectile::HandleProjectileOverlap()</a>.</p>
+
+</div>
+</div>
+<a id="acecae6346daf221824cc624bfc135eb9" name="acecae6346daf221824cc624bfc135eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acecae6346daf221824cc624bfc135eb9">&#9670;&#160;</a></span>GetAllTeamAgents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTeamSubsystem::GetAllTeamAgents </td>
+          <td>(</td>
+          <td class="paramtype">TArray&lt; IGenericTeamAgentInterface * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>OutAgents</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper to get all team agents in the world. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00560">560</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00315">RegisteredMembers</a>.</p>
+
+</div>
+</div>
+<a id="a820fa04deb71750062738fbd55f786cb" name="a820fa04deb71750062738fbd55f786cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a820fa04deb71750062738fbd55f786cb">&#9670;&#160;</a></span>GetTeamAgentInterface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IGenericTeamAgentInterface * UDTTeamSubsystem::GetTeamAgentInterface </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>Actor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper to check if an actor implements IGenericTeamAgentInterface. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00550">550</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00526">CanDamageActor()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00230">DoesActorPassTeamQuery()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00112">GetActorTeam()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00138">GetTeamAttitude()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00045">RegisterTeamMember()</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00089">UpdateActorTeam()</a>.</p>
 
 </div>
 </div>
@@ -704,7 +805,58 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00138">138</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00550">GetTeamAgentInterface()</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00167">AreActorsEnemies()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00291">ADTAIController::HandleSightUpdate()</a>, and <a class="el" href="_d_t_targeting_filter_task___team_8cpp_source.html#l00014">UDTTargetingFilterTask_Team::ShouldFilterTarget()</a>.</p>
+
+</div>
+</div>
+<a id="a76f50302455c2688397a2afb6850ba25" name="a76f50302455c2688397a2afb6850ba25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f50302455c2688397a2afb6850ba25">&#9670;&#160;</a></span>HasLineOfSight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTTeamSubsystem::HasLineOfSight </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>SourceActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>TargetActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FVector &amp;</td>          <td class="paramname"><span class="paramname"><em>SourceLocation</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper function to check if there is line of sight between two actors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SourceActor</td><td>The actor checking line of sight from </td></tr>
+    <tr><td class="paramname">TargetActor</td><td>The actor being checked </td></tr>
+    <tr><td class="paramname">SourceLocation</td><td>Location to trace from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if there is clear line of sight (no blocking hits) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00424">424</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00446">PassesQueryFlags()</a>.</p>
 
 </div>
 </div>
@@ -732,6 +884,63 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00029">29</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00315">RegisteredMembers</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00311">TeamMemberCache</a>.</p>
+
+</div>
+</div>
+<a id="ac96d606c7ee1e27e52b4a0a09c8b409f" name="ac96d606c7ee1e27e52b4a0a09c8b409f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac96d606c7ee1e27e52b4a0a09c8b409f">&#9670;&#160;</a></span>IsActorFacingActorInternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTTeamSubsystem::IsActorFacingActorInternal </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>SourceActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>TargetActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FVector &amp;</td>          <td class="paramname"><span class="paramname"><em>SourceLocation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>MaxAngleDegrees</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper function to check if source actor is facing target actor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SourceActor</td><td>The actor to check facing from </td></tr>
+    <tr><td class="paramname">TargetActor</td><td>The actor being faced </td></tr>
+    <tr><td class="paramname">SourceLocation</td><td>Optional override location for source </td></tr>
+    <tr><td class="paramname">MaxAngleDegrees</td><td>Maximum angle in degrees to consider "facing" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if source is facing target within the angle tolerance </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00408">408</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00446">PassesQueryFlags()</a>.</p>
 
 </div>
 </div>
@@ -770,6 +979,169 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0633129153624c1bb15474eb0fea4b4e" name="a0633129153624c1bb15474eb0fea4b4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0633129153624c1bb15474eb0fea4b4e">&#9670;&#160;</a></span>IsWithinDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTTeamSubsystem::IsWithinDistance </td>
+          <td>(</td>
+          <td class="paramtype">const FVector &amp;</td>          <td class="paramname"><span class="paramname"><em>SourceLocation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>TargetActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>MaxDistance</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper function to check if an actor is within the specified distance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SourceLocation</td><td>The reference location </td></tr>
+    <tr><td class="paramname">TargetActor</td><td>The actor to check </td></tr>
+    <tr><td class="paramname">MaxDistance</td><td>Maximum distance (0 = no limit) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if within distance or no distance limit specified </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00397">397</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00446">PassesQueryFlags()</a>.</p>
+
+</div>
+</div>
+<a id="a3574274f1a03232aa464e3a88d709991" name="a3574274f1a03232aa464e3a88d709991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3574274f1a03232aa464e3a88d709991">&#9670;&#160;</a></span>PassesQueryFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTTeamSubsystem::PassesQueryFlags </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>SourceActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>TargetActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_f_team_query_params.html">FTeamQueryParams</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Params</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FVector &amp;</td>          <td class="paramname"><span class="paramname"><em>SourceLocation</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper function to check if an actor passes all query flag requirements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SourceActor</td><td>The reference actor </td></tr>
+    <tr><td class="paramname">TargetActor</td><td>The actor to check </td></tr>
+    <tr><td class="paramname">Params</td><td>Query parameters with flags </td></tr>
+    <tr><td class="paramname">SourceLocation</td><td>The location to use for distance/facing checks </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the actor passes all flag requirements </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00446">446</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00041">FTeamQueryParams::ActorClass</a>, <a class="el" href="_d_t_team_subsystem_8cpp.html#a65e06666999126afdb48a570097b9b50">CVarDTTeamDebugQueries()</a>, <a class="el" href="_d_t_team_subsystem_8cpp.html#a8f2aae957c73c855b56e6cfccf3e5da3">DT_TEAM_LOG_REJECT</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00037">FTeamQueryParams::FacingAngleDegrees</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00424">HasLineOfSight()</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00053">FTeamQueryParams::IgnoredActors</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00019">IgnoreDead</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00020">IncludeSelf</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00408">IsActorFacingActorInternal()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00397">IsWithinDistance()</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00033">FTeamQueryParams::MaxDistance</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00018">RequireFacing</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00022">RequireLineOfSight</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00230">DoesActorPassTeamQuery()</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00252">QueryTeamActorsInternal()</a>.</p>
+
+</div>
+</div>
+<a id="a7b05404046a28573248d60334e385dc0" name="a7b05404046a28573248d60334e385dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b05404046a28573248d60334e385dc0">&#9670;&#160;</a></span>QueryTeamActorsInternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTTeamSubsystem::QueryTeamActorsInternal </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>SourceActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TArray&lt; AActor * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>OutActors</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_f_team_query_params.html">FTeamQueryParams</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Params</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bQueryEnemies</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unified internal implementation for team queries. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SourceActor</td><td>The reference actor </td></tr>
+    <tr><td class="paramname">OutActors</td><td>Array to fill with matching actors </td></tr>
+    <tr><td class="paramname">Params</td><td>Query parameters </td></tr>
+    <tr><td class="paramname">bQueryEnemies</td><td>True to find enemies, false to find allies </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of actors found </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00252">252</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00154">AreActorsOnSameTeam()</a>, <a class="el" href="_d_t_team_subsystem_8cpp.html#a65e06666999126afdb48a570097b9b50">CVarDTTeamDebugQueries()</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00045">FTeamQueryParams::Flags</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00026">GDTTeamDebugDrawLifetime</a>, <a class="el" href="_d_t_log_channels_8cpp_source.html#l00018">GetClientServerContextString()</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00033">FTeamQueryParams::MaxDistance</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00049">FTeamQueryParams::OverrideLocation</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00446">PassesQueryFlags()</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00315">RegisteredMembers</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00021">SortByDistance</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00381">FindClosestAlly()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00365">FindClosestEnemy()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00325">FindClosestTeamMember()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00183">GetAllActorsOnTeam()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00225">GetAllAllies()</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00220">GetAllEnemies()</a>.</p>
+
+</div>
+</div>
 <a id="a447684742abbe1c9f7fa722b51327cbe" name="a447684742abbe1c9f7fa722b51327cbe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a447684742abbe1c9f7fa722b51327cbe">&#9670;&#160;</a></span>RegisterTeamMember()</h2>
 
@@ -794,6 +1166,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00045">45</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00550">GetTeamAgentInterface()</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00315">RegisteredMembers</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00311">TeamMemberCache</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_ability_actor_8cpp_source.html#l00021">ADTAbilityActor::BeginPlay()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00104">ADTCharacter::BeginPlay()</a>.</p>
 
@@ -823,6 +1197,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00073">73</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00315">RegisteredMembers</a>, and <a class="el" href="_d_t_team_subsystem_8h_source.html#l00311">TeamMemberCache</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_ability_actor_8cpp_source.html#l00032">ADTAbilityActor::EndPlay()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00117">ADTCharacter::EndPlay()</a>.</p>
 
@@ -858,7 +1234,108 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00089">89</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00550">GetTeamAgentInterface()</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00315">RegisteredMembers</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00578">UpdateTeamCache()</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_character_8cpp_source.html#l00237">ADTCharacter::OnRep_Team()</a>, and <a class="el" href="_d_t_character_8cpp_source.html#l00055">ADTCharacter::SetGenericTeamId()</a>.</p>
+
+</div>
+</div>
+<a id="a28cf70a50d4e11a41bc5ffcc74ab4695" name="a28cf70a50d4e11a41bc5ffcc74ab4695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28cf70a50d4e11a41bc5ffcc74ab4695">&#9670;&#160;</a></span>UpdateTeamCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTeamSubsystem::UpdateTeamCache </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>Actor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGenericTeamId</td>          <td class="paramname"><span class="paramname"><em>OldTeamId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGenericTeamId</td>          <td class="paramname"><span class="paramname"><em>NewTeamId</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the cached team registry when an actor changes teams. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00578">578</a> of file <a class="el" href="_d_t_team_subsystem_8cpp_source.html">DTTeamSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_team_subsystem_8h_source.html#l00311">TeamMemberCache</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00089">UpdateActorTeam()</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a10edaf8a6c673f089e81b95b7ffdaf3c" name="a10edaf8a6c673f089e81b95b7ffdaf3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10edaf8a6c673f089e81b95b7ffdaf3c">&#9670;&#160;</a></span>RegisteredMembers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSet&lt;TObjectPtr&lt;AActor&gt; &gt; UDTTeamSubsystem::RegisteredMembers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set of all registered team members for quick lookup. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8h_source.html#l00315">315</a> of file <a class="el" href="_d_t_team_subsystem_8h_source.html">DTTeamSubsystem.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00037">Deinitialize()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00560">GetAllTeamAgents()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00029">Initialize()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00252">QueryTeamActorsInternal()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00045">RegisterTeamMember()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00073">UnregisterTeamMember()</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00089">UpdateActorTeam()</a>.</p>
+
+</div>
+</div>
+<a id="a66387dfcae1afb4d3021556664d79ca4" name="a66387dfcae1afb4d3021556664d79ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66387dfcae1afb4d3021556664d79ca4">&#9670;&#160;</a></span>TeamMemberCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMap&lt;uint8, <a class="el" href="struct_f_team_member_list.html">FTeamMemberList</a>&gt; UDTTeamSubsystem::TeamMemberCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Map of team IDs to arrays of team members. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_team_subsystem_8h_source.html#l00311">311</a> of file <a class="el" href="_d_t_team_subsystem_8h_source.html">DTTeamSubsystem.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00037">Deinitialize()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00325">FindClosestTeamMember()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00183">GetAllActorsOnTeam()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00029">Initialize()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00045">RegisterTeamMember()</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00073">UnregisterTeamMember()</a>, and <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00578">UpdateTeamCache()</a>.</p>
 
 </div>
 </div>

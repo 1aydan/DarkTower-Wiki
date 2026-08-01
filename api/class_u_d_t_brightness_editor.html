@@ -160,6 +160,19 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ac051dfcf06dc5173a570805eb9f2c985" id="r_ac051dfcf06dc5173a570805eb9f2c985"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac051dfcf06dc5173a570805eb9f2c985">bCanCancel</a> = true</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a66c95a7425633a65a292d262e5bf8557" id="r_a66c95a7425633a65a292d262e5bf8557"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a66c95a7425633a65a292d262e5bf8557">HandleBackClicked</a> ()</td></tr>
+<tr class="memitem:ab97ea498df879fab399f5b529e197f7e" id="r_ab97ea498df879fab399f5b529e197f7e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab97ea498df879fab399f5b529e197f7e">HandleDoneClicked</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab66f3521516a86f8f385a50a666e5b02" id="r_ab66f3521516a86f8f385a50a666e5b02"><td class="memItemLeft">TWeakObjectPtr&lt; UGameSettingValueScalar &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab66f3521516a86f8f385a50a666e5b02">ValueSetting</a></td></tr>
+<tr class="memitem:a9c67c0430201a1f2c1a216f5955788c9" id="r_a9c67c0430201a1f2c1a216f5955788c9"><td class="memItemLeft">TObjectPtr&lt; UWidgetSwitcher &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9c67c0430201a1f2c1a216f5955788c9">Switcher_SafeZoneMessage</a></td></tr>
+<tr class="memitem:ac9b1632a38a425aa3b29eebe663348b9" id="r_ac9b1632a38a425aa3b29eebe663348b9"><td class="memItemLeft">TObjectPtr&lt; UCommonRichTextBlock &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac9b1632a38a425aa3b29eebe663348b9">RichText_Default</a></td></tr>
+<tr class="memitem:ad7ffc043538634cfee91a3ab976c8db9" id="r_ad7ffc043538634cfee91a3ab976c8db9"><td class="memItemLeft">TObjectPtr&lt; UCommonButtonBase &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad7ffc043538634cfee91a3ab976c8db9">Button_Back</a></td></tr>
+<tr class="memitem:a5d17e727fdbeec32887571ff38c928c0" id="r_a5d17e727fdbeec32887571ff38c928c0"><td class="memItemLeft">TObjectPtr&lt; UCommonButtonBase &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5d17e727fdbeec32887571ff38c928c0">Button_Done</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -214,6 +227,66 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00050">50</a> of file <a class="el" href="_d_t_brightness_editor_8cpp_source.html">DTBrightnessEditor.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_brightness_editor_8h_source.html#l00058">ValueSetting</a>.</p>
+
+</div>
+</div>
+<a id="a66c95a7425633a65a292d262e5bf8557" name="a66c95a7425633a65a292d262e5bf8557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c95a7425633a65a292d262e5bf8557">&#9670;&#160;</a></span>HandleBackClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTBrightnessEditor::HandleBackClicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00087">87</a> of file <a class="el" href="_d_t_brightness_editor_8cpp_source.html">DTBrightnessEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>.</p>
+
+</div>
+</div>
+<a id="ab97ea498df879fab399f5b529e197f7e" name="ab97ea498df879fab399f5b529e197f7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab97ea498df879fab399f5b529e197f7e">&#9670;&#160;</a></span>HandleDoneClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTBrightnessEditor::HandleDoneClicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00093">93</a> of file <a class="el" href="_d_t_brightness_editor_8cpp_source.html">DTBrightnessEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>, <a class="el" href="_d_t_brightness_editor_8h_source.html#l00030">OnSafeZoneSet</a>, <a class="el" href="_d_t_settings_local_8h_source.html#l00184">UDTSettingsLocal::SetSafeZone()</a>, and <a class="el" href="_d_t_brightness_editor_8h_source.html#l00058">ValueSetting</a>.</p>
+
 </div>
 </div>
 <a id="a5d571be41d4e28b53a5c4f36f8f0544a" name="a5d571be41d4e28b53a5c4f36f8f0544a"></a>
@@ -240,6 +313,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00081">81</a> of file <a class="el" href="_d_t_brightness_editor_8cpp_source.html">DTBrightnessEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_brightness_editor_8h_source.html#l00064">RichText_Default</a>.</p>
 
 </div>
 </div>
@@ -268,7 +343,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00035">35</a> of file <a class="el" href="_d_t_brightness_editor_8cpp_source.html">DTBrightnessEditor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_brightness_editor_8h_source.html#l00042">bCanCancel</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_brightness_editor_8h_source.html#l00042">bCanCancel</a>, <a class="el" href="_d_t_brightness_editor_8h_source.html#l00067">Button_Back</a>, <a class="el" href="_d_t_brightness_editor_8h_source.html#l00070">Button_Done</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>.</p>
 
 </div>
 </div>
@@ -329,6 +404,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00029">29</a> of file <a class="el" href="_d_t_brightness_editor_8cpp_source.html">DTBrightnessEditor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_brightness_editor_8h_source.html#l00064">RichText_Default</a>, and <a class="el" href="_d_t_brightness_editor_8h_source.html#l00061">Switcher_SafeZoneMessage</a>.</p>
 
 </div>
 </div>
@@ -392,6 +469,58 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ad7ffc043538634cfee91a3ab976c8db9" name="ad7ffc043538634cfee91a3ab976c8db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7ffc043538634cfee91a3ab976c8db9">&#9670;&#160;</a></span>Button_Back</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UCommonButtonBase&gt; UDTBrightnessEditor::Button_Back</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8h_source.html#l00067">67</a> of file <a class="el" href="_d_t_brightness_editor_8h_source.html">DTBrightnessEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00035">NativeOnActivated()</a>.</p>
+
+</div>
+</div>
+<a id="a5d17e727fdbeec32887571ff38c928c0" name="a5d17e727fdbeec32887571ff38c928c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d17e727fdbeec32887571ff38c928c0">&#9670;&#160;</a></span>Button_Done</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UCommonButtonBase&gt; UDTBrightnessEditor::Button_Done</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8h_source.html#l00070">70</a> of file <a class="el" href="_d_t_brightness_editor_8h_source.html">DTBrightnessEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00035">NativeOnActivated()</a>.</p>
+
+</div>
+</div>
 <a id="a1eeaa45844d553bc253eaa8938599366" name="a1eeaa45844d553bc253eaa8938599366"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1eeaa45844d553bc253eaa8938599366">&#9670;&#160;</a></span>OnSafeZoneSet</h2>
 
@@ -405,6 +534,86 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8h_source.html#l00030">30</a> of file <a class="el" href="_d_t_brightness_editor_8h_source.html">DTBrightnessEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00093">HandleDoneClicked()</a>.</p>
+
+</div>
+</div>
+<a id="ac9b1632a38a425aa3b29eebe663348b9" name="ac9b1632a38a425aa3b29eebe663348b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b1632a38a425aa3b29eebe663348b9">&#9670;&#160;</a></span>RichText_Default</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UCommonRichTextBlock&gt; UDTBrightnessEditor::RichText_Default</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8h_source.html#l00064">64</a> of file <a class="el" href="_d_t_brightness_editor_8h_source.html">DTBrightnessEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00081">HandleInputModeChanged()</a>, and <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00029">NativeOnInitialized()</a>.</p>
+
+</div>
+</div>
+<a id="a9c67c0430201a1f2c1a216f5955788c9" name="a9c67c0430201a1f2c1a216f5955788c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c67c0430201a1f2c1a216f5955788c9">&#9670;&#160;</a></span>Switcher_SafeZoneMessage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UWidgetSwitcher&gt; UDTBrightnessEditor::Switcher_SafeZoneMessage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8h_source.html#l00061">61</a> of file <a class="el" href="_d_t_brightness_editor_8h_source.html">DTBrightnessEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00029">NativeOnInitialized()</a>.</p>
+
+</div>
+</div>
+<a id="ab66f3521516a86f8f385a50a666e5b02" name="ab66f3521516a86f8f385a50a666e5b02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab66f3521516a86f8f385a50a666e5b02">&#9670;&#160;</a></span>ValueSetting</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TWeakObjectPtr&lt;UGameSettingValueScalar&gt; UDTBrightnessEditor::ValueSetting</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_brightness_editor_8h_source.html#l00058">58</a> of file <a class="el" href="_d_t_brightness_editor_8h_source.html">DTBrightnessEditor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00050">ExecuteActionForSetting_Implementation()</a>, and <a class="el" href="_d_t_brightness_editor_8cpp_source.html#l00093">HandleDoneClicked()</a>.</p>
 
 </div>
 </div>

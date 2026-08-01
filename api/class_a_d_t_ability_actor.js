@@ -1,5 +1,6 @@
 var class_a_d_t_ability_actor =
 [
+    [ "FPendingAttributeReplication", "struct_a_d_t_ability_actor_1_1_f_pending_attribute_replication.html", "struct_a_d_t_ability_actor_1_1_f_pending_attribute_replication" ],
     [ "ADTAbilityActor", "class_a_d_t_ability_actor.html#a397611a5b8534e405953254e1490ae1f", null ],
     [ "ApplyPendingAttributesFromReplication", "class_a_d_t_ability_actor.html#aded4bbcd48cb8246941057cb45a9f09c", null ],
     [ "BeginPlay", "class_a_d_t_ability_actor.html#a59cbf3c7df9d2163b43ede225ffa72f1", null ],
@@ -29,5 +30,7 @@ var class_a_d_t_ability_actor =
     [ "DefaultAttributeSets", "class_a_d_t_ability_actor.html#abed905fc1e50258a2b580ca4b77c4619", null ],
     [ "DefaultEffects", "class_a_d_t_ability_actor.html#a1e82183cc8384e047b9b07ec54e22981", null ],
     [ "DefaultGameplayTags", "class_a_d_t_ability_actor.html#a425a7a1e6f111ed03c23244010ba7fcc", null ],
+    [ "PendingAttributeReplications", "class_a_d_t_ability_actor.html#a5741a1c6a4b4bb342df53e6ba0187601", null ],
+    [ "ReplicatedAbilitySystemComponent", "class_a_d_t_ability_actor.html#ac9731e1457bba8236ee9a204de070024", null ],
     [ "TeamId", "class_a_d_t_ability_actor.html#a2f202c5862b6d523e001ad3bbe0e333b", null ]
 ];

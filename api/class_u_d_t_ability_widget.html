@@ -221,6 +221,10 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a1d903db361e36cda7d6d23d6540d31fb pro_attribs_class_u_d_t_a_s_c_widget" id="r_a1d903db361e36cda7d6d23d6540d31fb"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_ability_system_component.html">UDTAbilitySystemComponent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_a_s_c_widget.html#a1d903db361e36cda7d6d23d6540d31fb">AbilitySystemComponent</a></td></tr>
 <tr class="memitem:a1907eed70c9b94c0b181db3a55d518cf pro_attribs_class_u_d_t_a_s_c_widget" id="r_a1907eed70c9b94c0b181db3a55d518cf"><td class="memItemLeft">TObjectPtr&lt; AActor &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_a_s_c_widget.html#a1907eed70c9b94c0b181db3a55d518cf">AbilitySystemOwner</a></td></tr>
 <tr class="memitem:ae44cd95d4707da39b29d53a028992b43 pro_attribs_class_u_d_t_a_s_c_widget" id="r_ae44cd95d4707da39b29d53a028992b43"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_a_s_c_widget.html#ae44cd95d4707da39b29d53a028992b43">bAscInitialized</a> = false</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad24ac4278837035b160ae47f7f0d0fcf" id="r_ad24ac4278837035b160ae47f7f0d0fcf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad24ac4278837035b160ae47f7f0d0fcf">bIsInitialized</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for ability widgets in Dark Tower. </p>
@@ -570,7 +574,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00067">67</a> of file <a class="el" href="_d_t_ability_widget_8cpp_source.html">DTAbilityWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00151">UpdateAbilityInfo()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_widget_8h_source.html#l00146">bIsInitialized</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00151">UpdateAbilityInfo()</a>.</p>
 
 </div>
 </div>
@@ -601,7 +605,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00432">432</a> of file <a class="el" href="_d_t_ability_widget_8cpp_source.html">DTAbilityWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_widget_8h_source.html#l00102">AbilitySpec</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00114">CurrentIsActive</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00087">IsActiveParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00109">MID_AbilityIcon</a>, and <a class="el" href="_d_t_ability_widget_8h_source.html#l00117">TargetIsActive</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_widget_8h_source.html#l00102">AbilitySpec</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00146">bIsInitialized</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00114">CurrentIsActive</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00087">IsActiveParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00109">MID_AbilityIcon</a>, and <a class="el" href="_d_t_ability_widget_8h_source.html#l00117">TargetIsActive</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00360">BindAbilitySystemDelegates()</a>, and <a class="el" href="#aba9ddea2652d7684bb999fd42f8d1db0">OnAbilityWidgetInit()</a>.</p>
 
@@ -634,7 +638,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00452">452</a> of file <a class="el" href="_d_t_ability_widget_8cpp_source.html">DTAbilityWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_widget_8h_source.html#l00102">AbilitySpec</a>, and <a class="el" href="_d_t_ability_widget_8h_source.html#l00117">TargetIsActive</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_widget_8h_source.html#l00102">AbilitySpec</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00146">bIsInitialized</a>, and <a class="el" href="_d_t_ability_widget_8h_source.html#l00117">TargetIsActive</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00360">BindAbilitySystemDelegates()</a>, and <a class="el" href="#aba9ddea2652d7684bb999fd42f8d1db0">OnAbilityWidgetInit()</a>.</p>
 
@@ -719,7 +723,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00283">283</a> of file <a class="el" href="_d_t_ability_widget_8cpp_source.html">DTAbilityWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_widget_8h_source.html#l00094">AbilityDefinition</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00106">AbilitySlot</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00102">AbilitySpec</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00084">CooldownParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00114">CurrentIsActive</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00078">DefaultAbilityIcon</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00081">IconParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00087">IsActiveParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00109">MID_AbilityIcon</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00117">TargetIsActive</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00072">TB_ChargesText</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00069">TB_CooldownText</a>, and <a class="el" href="_d_t_ability_widget_8h_source.html#l00111">UpdateVisualsTimerHandle</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_widget_8h_source.html#l00094">AbilityDefinition</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00106">AbilitySlot</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00102">AbilitySpec</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00146">bIsInitialized</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00084">CooldownParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00114">CurrentIsActive</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00078">DefaultAbilityIcon</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00081">IconParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00087">IsActiveParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00109">MID_AbilityIcon</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00117">TargetIsActive</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00072">TB_ChargesText</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00069">TB_CooldownText</a>, and <a class="el" href="_d_t_ability_widget_8h_source.html#l00111">UpdateVisualsTimerHandle</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_ability_bar_widget_8cpp_source.html#l00186">UDTAbilityBarWidget::InitializeAbilityWidget()</a>, and <a class="el" href="_d_t_spell_loadout_slot_widget_8cpp_source.html#l00037">UDTSpellLoadoutSlotWidget::RefreshSpellDisplay()</a>.</p>
 
@@ -769,7 +773,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00264">264</a> of file <a class="el" href="_d_t_ability_widget_8cpp_source.html">DTAbilityWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_widget_8h_source.html#l00094">AbilityDefinition</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00102">AbilitySpec</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00233">InitAbilityWidget()</a>, and <a class="el" href="_d_t_ability_widget_8h_source.html#l00032">OnAbilityChanged</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_widget_8h_source.html#l00094">AbilityDefinition</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00102">AbilitySpec</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00146">bIsInitialized</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00233">InitAbilityWidget()</a>, and <a class="el" href="_d_t_ability_widget_8h_source.html#l00032">OnAbilityChanged</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00319">SetAbilitySlot()</a>.</p>
 
@@ -833,7 +837,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00151">151</a> of file <a class="el" href="_d_t_ability_widget_8cpp_source.html">DTAbilityWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_ability_widget_8h_source.html#l00102">AbilitySpec</a>, <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">UDTASCWidget::AbilitySystemComponent</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00084">CooldownParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00114">CurrentIsActive</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">UDTGameplayAbility::GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">UDTGameplayAbility::GetMaxStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">UDTGameplayAbility::HasStacks()</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00091">IsActiveFadeOutSpeed</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00087">IsActiveParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00109">MID_AbilityIcon</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00117">TargetIsActive</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00072">TB_ChargesText</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00069">TB_CooldownText</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00190">UDTGameplayAbility::UsesRegenStacks()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_ability_widget_8h_source.html#l00102">AbilitySpec</a>, <a class="el" href="_d_t_a_s_c_widget_8h_source.html#l00027">UDTASCWidget::AbilitySystemComponent</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00146">bIsInitialized</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00084">CooldownParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00114">CurrentIsActive</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00209">UDTGameplayAbility::GetCurrentStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00228">UDTGameplayAbility::GetMaxStacks()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00204">UDTGameplayAbility::HasStacks()</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00091">IsActiveFadeOutSpeed</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00087">IsActiveParameterName</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00109">MID_AbilityIcon</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00117">TargetIsActive</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00072">TB_ChargesText</a>, <a class="el" href="_d_t_ability_widget_8h_source.html#l00069">TB_CooldownText</a>, and <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00190">UDTGameplayAbility::UsesRegenStacks()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00067">NativeTick()</a>, and <a class="el" href="#aba9ddea2652d7684bb999fd42f8d1db0">OnAbilityWidgetInit()</a>.</p>
 
@@ -917,6 +921,32 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_widget_8h_source.html#l00102">102</a> of file <a class="el" href="_d_t_ability_widget_8h_source.html">DTAbilityWidget.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00028">GetAbilityTooltipWidget()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00432">OnAbilityActivated()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00452">OnAbilityEnded()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00283">ResetWidget()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00264">SetAbilitySpecHandle()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00151">UpdateAbilityInfo()</a>.</p>
+
+</div>
+</div>
+<a id="ad24ac4278837035b160ae47f7f0d0fcf" name="ad24ac4278837035b160ae47f7f0d0fcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad24ac4278837035b160ae47f7f0d0fcf">&#9670;&#160;</a></span>bIsInitialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAbilityWidget::bIsInitialized = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_widget_8h_source.html#l00146">146</a> of file <a class="el" href="_d_t_ability_widget_8h_source.html">DTAbilityWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00067">NativeTick()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00432">OnAbilityActivated()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00452">OnAbilityEnded()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00283">ResetWidget()</a>, <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00264">SetAbilitySpecHandle()</a>, and <a class="el" href="_d_t_ability_widget_8cpp_source.html#l00151">UpdateAbilityInfo()</a>.</p>
 
 </div>
 </div>

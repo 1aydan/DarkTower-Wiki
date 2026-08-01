@@ -144,11 +144,54 @@ Inheritance diagram for FDarkTowerEditorModule:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aab92c72b3caa44574101e342cc709e8f" id="r_aab92c72b3caa44574101e342cc709e8f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aab92c72b3caa44574101e342cc709e8f">StartupModule</a> () override</td></tr>
 <tr class="memitem:aed7a5ab951a82b8ede1eb1ba04a03903" id="r_aed7a5ab951a82b8ede1eb1ba04a03903"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aed7a5ab951a82b8ede1eb1ba04a03903">ShutdownModule</a> () override</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a565d47cdd294df804a545a54caa8260e" id="r_a565d47cdd294df804a545a54caa8260e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a565d47cdd294df804a545a54caa8260e">RegisterAssetTypeAction</a> (IAssetTools &amp;AssetTools, TSharedRef&lt; IAssetTypeActions &gt; Action)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae4973476ec3b7610af793e552a59e115" id="r_ae4973476ec3b7610af793e552a59e115"><td class="memItemLeft">TArray&lt; TSharedPtr&lt; IAssetTypeActions &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae4973476ec3b7610af793e552a59e115">RegisteredAssetTypeActions</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_dark_tower_editor_module_8h_source.html#l00008">8</a> of file <a class="el" href="_dark_tower_editor_module_8h_source.html">DarkTowerEditorModule.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a565d47cdd294df804a545a54caa8260e" name="a565d47cdd294df804a545a54caa8260e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a565d47cdd294df804a545a54caa8260e">&#9670;&#160;</a></span>RegisterAssetTypeAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FDarkTowerEditorModule::RegisterAssetTypeAction </td>
+          <td>(</td>
+          <td class="paramtype">IAssetTools &amp;</td>          <td class="paramname"><span class="paramname"><em>AssetTools</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TSharedRef&lt; IAssetTypeActions &gt;</td>          <td class="paramname"><span class="paramname"><em>Action</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_dark_tower_editor_module_8cpp_source.html#l00035">35</a> of file <a class="el" href="_dark_tower_editor_module_8cpp_source.html">DarkTowerEditorModule.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_dark_tower_editor_module_8h_source.html#l00017">RegisteredAssetTypeActions</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_dark_tower_editor_module_8cpp_source.html#l00010">StartupModule()</a>.</p>
+
+</div>
+</div>
 <a id="aed7a5ab951a82b8ede1eb1ba04a03903" name="aed7a5ab951a82b8ede1eb1ba04a03903"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed7a5ab951a82b8ede1eb1ba04a03903">&#9670;&#160;</a></span>ShutdownModule()</h2>
 
@@ -173,6 +216,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_dark_tower_editor_module_8cpp_source.html#l00019">19</a> of file <a class="el" href="_dark_tower_editor_module_8cpp_source.html">DarkTowerEditorModule.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_dark_tower_editor_module_8h_source.html#l00017">RegisteredAssetTypeActions</a>.</p>
 
 </div>
 </div>
@@ -200,6 +245,35 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_dark_tower_editor_module_8cpp_source.html#l00010">10</a> of file <a class="el" href="_dark_tower_editor_module_8cpp_source.html">DarkTowerEditorModule.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_dark_tower_editor_module_8cpp_source.html#l00035">RegisterAssetTypeAction()</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ae4973476ec3b7610af793e552a59e115" name="ae4973476ec3b7610af793e552a59e115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4973476ec3b7610af793e552a59e115">&#9670;&#160;</a></span>RegisteredAssetTypeActions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;TSharedPtr&lt;IAssetTypeActions&gt; &gt; FDarkTowerEditorModule::RegisteredAssetTypeActions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_dark_tower_editor_module_8h_source.html#l00017">17</a> of file <a class="el" href="_dark_tower_editor_module_8h_source.html">DarkTowerEditorModule.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_dark_tower_editor_module_8cpp_source.html#l00035">RegisterAssetTypeAction()</a>, and <a class="el" href="_dark_tower_editor_module_8cpp_source.html#l00019">ShutdownModule()</a>.</p>
 
 </div>
 </div>

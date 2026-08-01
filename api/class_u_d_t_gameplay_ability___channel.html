@@ -284,6 +284,47 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:aec6449460dc1082656be0f0d8d56bfda pro_attribs_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delegate handles for the cooldown tag events we're listening to.  <br /></td></tr>
 <tr class="memitem:ab60f474aeb5c75709872a23c80691656 pro_attribs_class_u_d_t_gameplay_ability" id="r_ab60f474aeb5c75709872a23c80691656"><td class="memItemLeft">FDelegateHandle&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#ab60f474aeb5c75709872a23c80691656">AbilityStackChangedDelegateHandle</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:adf0a6d389849b6dac626589754bbb3a0" id="r_adf0a6d389849b6dac626589754bbb3a0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf0a6d389849b6dac626589754bbb3a0">StartChannelMontage</a> ()</td></tr>
+<tr class="memdesc:adf0a6d389849b6dac626589754bbb3a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the montage (looping the channel section) and binds its end callbacks.  <br /></td></tr>
+<tr class="memitem:a96770d0e90a85d84e62cbe1293da04a1" id="r_a96770d0e90a85d84e62cbe1293da04a1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a96770d0e90a85d84e62cbe1293da04a1">StartInputListener</a> ()</td></tr>
+<tr class="memdesc:a96770d0e90a85d84e62cbe1293da04a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the Hold/Toggle input task appropriate for ActivationMode.  <br /></td></tr>
+<tr class="memitem:aecfd1c811e74de99e05e28f3789a0e44" id="r_aecfd1c811e74de99e05e28f3789a0e44"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aecfd1c811e74de99e05e28f3789a0e44">StartChannelTick</a> ()</td></tr>
+<tr class="memdesc:aecfd1c811e74de99e05e28f3789a0e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kicks off the periodic tick timer (and the first immediate tick when bTickOnStart).  <br /></td></tr>
+<tr class="memitem:ac2d8f8b6faa5fe277babd5b442f79c2a" id="r_ac2d8f8b6faa5fe277babd5b442f79c2a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac2d8f8b6faa5fe277babd5b442f79c2a">StopChannelUpkeep</a> ()</td></tr>
+<tr class="memdesc:ac2d8f8b6faa5fe277babd5b442f79c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the drain GE / cue and clears the tick + duration timers.  <br /></td></tr>
+<tr class="memitem:a7fe9b83f9be3616a157f733f6dd85aeb" id="r_a7fe9b83f9be3616a157f733f6dd85aeb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7fe9b83f9be3616a157f733f6dd85aeb">FinishChannel</a> (bool bWasCancelled)</td></tr>
+<tr class="memdesc:a7fe9b83f9be3616a157f733f6dd85aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finishes the ability (End or Cancel) if it is still active.  <br /></td></tr>
+<tr class="memitem:ab3df55ebbab90a83aad00a562679af9f" id="r_ab3df55ebbab90a83aad00a562679af9f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab3df55ebbab90a83aad00a562679af9f">ShouldEvaluateEndConditions</a> () const</td></tr>
+<tr class="memdesc:ab3df55ebbab90a83aad00a562679af9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">True on the instance responsible for evaluating resource/duration end conditions (the authority).  <br /></td></tr>
+<tr class="memitem:a97726e0bd22c6de0db97c39f1a86d02a" id="r_a97726e0bd22c6de0db97c39f1a86d02a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a97726e0bd22c6de0db97c39f1a86d02a">CanSustainChannel</a> () const</td></tr>
+<tr class="memdesc:a97726e0bd22c6de0db97c39f1a86d02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">True while the drain GE is set and the watched resource is above the end threshold.  <br /></td></tr>
+<tr class="memitem:a3d3da047168c46f07c99a704930159d1" id="r_a3d3da047168c46f07c99a704930159d1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3d3da047168c46f07c99a704930159d1">IsChannelMontageActive</a> () const</td></tr>
+<tr class="memitem:a9dc7d865884aaaa9fec15352a72f8b81" id="r_a9dc7d865884aaaa9fec15352a72f8b81"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9dc7d865884aaaa9fec15352a72f8b81">HandleChannelTick</a> ()</td></tr>
+<tr class="memitem:adae9e3f1b7e3a8f27457dadf5ccacc37" id="r_adae9e3f1b7e3a8f27457dadf5ccacc37"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adae9e3f1b7e3a8f27457dadf5ccacc37">OnMaxChannelDurationReached</a> ()</td></tr>
+<tr class="memitem:a14469b95f63d34665c115c4b643f8a6b" id="r_a14469b95f63d34665c115c4b643f8a6b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a14469b95f63d34665c115c4b643f8a6b">OnChannelInputReleased</a> (float TimeHeld)</td></tr>
+<tr class="memitem:ace961c5540025cc9b3430226d20cb0a5" id="r_ace961c5540025cc9b3430226d20cb0a5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ace961c5540025cc9b3430226d20cb0a5">OnChannelInputPressed</a> (float TimeWaited)</td></tr>
+<tr class="memitem:a5323da827fa1363a3a4b590dc1748c8d" id="r_a5323da827fa1363a3a4b590dc1748c8d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5323da827fa1363a3a4b590dc1748c8d">OnChannelMontageCompleted</a> ()</td></tr>
+<tr class="memitem:aefac01dfa0e3b67213e7eea2c06f4057" id="r_aefac01dfa0e3b67213e7eea2c06f4057"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aefac01dfa0e3b67213e7eea2c06f4057">OnChannelMontageBlendOut</a> ()</td></tr>
+<tr class="memitem:a8d448bc5ef9ed32f01c6653dbdaaed2b" id="r_a8d448bc5ef9ed32f01c6653dbdaaed2b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8d448bc5ef9ed32f01c6653dbdaaed2b">OnChannelMontageInterrupted</a> ()</td></tr>
+<tr class="memitem:a1bc5bbb43ff58cc030e8fc9fa52218cc" id="r_a1bc5bbb43ff58cc030e8fc9fa52218cc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1bc5bbb43ff58cc030e8fc9fa52218cc">OnChannelMontageCancelled</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a70944ef2790598c5ce47bc494c469f61" id="r_a70944ef2790598c5ce47bc494c469f61"><td class="memItemLeft">TObjectPtr&lt; UAbilityTask_PlayMontageAndWait &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a70944ef2790598c5ce47bc494c469f61">ActiveMontageTask</a></td></tr>
+<tr class="memitem:ab9f4e1fc10d3c7504faf18449635597c" id="r_ab9f4e1fc10d3c7504faf18449635597c"><td class="memItemLeft">TObjectPtr&lt; UAbilityTask_WaitInputRelease &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab9f4e1fc10d3c7504faf18449635597c">ActiveInputReleaseTask</a></td></tr>
+<tr class="memitem:a74cde57c0e3f20f6145bd28254df97e0" id="r_a74cde57c0e3f20f6145bd28254df97e0"><td class="memItemLeft">TObjectPtr&lt; UAbilityTask_WaitInputPress &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a74cde57c0e3f20f6145bd28254df97e0">ActiveInputPressTask</a></td></tr>
+<tr class="memitem:a5fa15a0d667cb541d37409bdd9721af2" id="r_a5fa15a0d667cb541d37409bdd9721af2"><td class="memItemLeft">TObjectPtr&lt; UAnimMontage &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5fa15a0d667cb541d37409bdd9721af2">ActiveChannelMontage</a></td></tr>
+<tr class="memitem:ac4d77b8d1d8eeed204e97e25418a0bab" id="r_ac4d77b8d1d8eeed204e97e25418a0bab"><td class="memItemLeft">FActiveGameplayEffectHandle&#160;</td><td class="memItemRight"><a class="el" href="#ac4d77b8d1d8eeed204e97e25418a0bab">ChannelCostHandle</a></td></tr>
+<tr class="memitem:a07dec0f832611afa91c535b1e9861289" id="r_a07dec0f832611afa91c535b1e9861289"><td class="memItemLeft">FTimerHandle&#160;</td><td class="memItemRight"><a class="el" href="#a07dec0f832611afa91c535b1e9861289">ChannelTickTimerHandle</a></td></tr>
+<tr class="memitem:a985a4d589edd639bcc97bf4335b5e454" id="r_a985a4d589edd639bcc97bf4335b5e454"><td class="memItemLeft">FTimerHandle&#160;</td><td class="memItemRight"><a class="el" href="#a985a4d589edd639bcc97bf4335b5e454">ChannelDurationTimerHandle</a></td></tr>
+<tr class="memitem:a069b14817f4e9f18c2531205ade6c05f" id="r_a069b14817f4e9f18c2531205ade6c05f"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a069b14817f4e9f18c2531205ade6c05f">ChannelTickCount</a> = 0</td></tr>
+<tr class="memitem:ad65939a5f4ab16be1f1d9a441ed76c83" id="r_ad65939a5f4ab16be1f1d9a441ed76c83"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad65939a5f4ab16be1f1d9a441ed76c83">bIsChanneling</a> = false</td></tr>
+<tr class="memitem:a80a97ef32fc0acdd0762cb80568bcab1" id="r_a80a97ef32fc0acdd0762cb80568bcab1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a80a97ef32fc0acdd0762cb80568bcab1">bChannelEnding</a> = false</td></tr>
+<tr class="memitem:a16fe2b7152b67346ba89a95a38352a8c" id="r_a16fe2b7152b67346ba89a95a38352a8c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a16fe2b7152b67346ba89a95a38352a8c">bChannelEndBroadcast</a> = false</td></tr>
+<tr class="memitem:a0adf1bc872d819881c020e0980cd37da" id="r_a0adf1bc872d819881c020e0980cd37da"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0adf1bc872d819881c020e0980cd37da">bChannelCueAdded</a> = false</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_u_d_t_gameplay_ability"><td colspan="2">Public Attributes inherited from <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a></td></tr>
@@ -401,9 +442,42 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">30</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00071">ChannelCostEffect</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00106">ChannelLoopCueTag</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00505">UDTGameplayAbility::CommitAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00094">MaxChannelDuration</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00075">NotifyChannelStarted()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00214">bChannelCueAdded</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00213">bChannelEndBroadcast</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00212">bChannelEnding</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00211">bIsChanneling</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00071">ChannelCostEffect</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00206">ChannelCostHandle</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00208">ChannelDurationTimerHandle</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00106">ChannelLoopCueTag</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00210">ChannelTickCount</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00505">UDTGameplayAbility::CommitAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00094">MaxChannelDuration</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00075">NotifyChannelStarted()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00090">StartChannelMontage()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00134">StartChannelTick()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00111">StartInputListener()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00023">ActivateAbility()</a>, and <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="a97726e0bd22c6de0db97c39f1a86d02a" name="a97726e0bd22c6de0db97c39f1a86d02a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97726e0bd22c6de0db97c39f1a86d02a">&#9670;&#160;</a></span>CanSustainChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTGameplayAbility_Channel::CanSustainChannel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True while the drain GE is set and the watched resource is above the end threshold. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00264">264</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00071">ChannelCostEffect</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00082">ChannelEndResourceThreshold</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00078">ChannelResourceAttribute</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00155">HandleChannelTick()</a>, and <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
 
 </div>
 </div>
@@ -453,9 +527,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">346</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00085">NotifyChannelEnded()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00204">ActiveChannelMontage</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00195">ActiveMontageTask</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00213">bChannelEndBroadcast</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00212">bChannelEnding</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00211">bIsChanneling</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00210">ChannelTickCount</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00085">NotifyChannelEnded()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00206">StopChannelUpkeep()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, and <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00243">FinishChannel()</a>, and <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
 
 </div>
 </div>
@@ -491,9 +565,42 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">172</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00102">ChannelEndSectionName</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00085">NotifyChannelEnded()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00213">bChannelEndBroadcast</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00212">bChannelEnding</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00211">bIsChanneling</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00102">ChannelEndSectionName</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00243">FinishChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00281">IsChannelMontageActive()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00085">NotifyChannelEnded()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00206">StopChannelUpkeep()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00155">HandleChannelTick()</a>, <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00301">OnChannelInputPressed()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00296">OnChannelInputReleased()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00321">OnChannelMontageBlendOut()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00340">OnChannelMontageCancelled()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00306">OnChannelMontageCompleted()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00334">OnChannelMontageInterrupted()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00291">OnMaxChannelDurationReached()</a>.</p>
+
+</div>
+</div>
+<a id="a7fe9b83f9be3616a157f733f6dd85aeb" name="a7fe9b83f9be3616a157f733f6dd85aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe9b83f9be3616a157f733f6dd85aeb">&#9670;&#160;</a></span>FinishChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::FinishChannel </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bWasCancelled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finishes the ability (End or Cancel) if it is still active. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00243">243</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>, <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00321">OnChannelMontageBlendOut()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00306">OnChannelMontageCompleted()</a>.</p>
 
 </div>
 </div>
@@ -530,6 +637,37 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a9dc7d865884aaaa9fec15352a72f8b81" name="a9dc7d865884aaaa9fec15352a72f8b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc7d865884aaaa9fec15352a72f8b81">&#9670;&#160;</a></span>HandleChannelTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::HandleChannelTick </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00155">155</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00212">bChannelEnding</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00211">bIsChanneling</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00264">CanSustainChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00210">ChannelTickCount</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00080">NotifyChannelTick()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00259">ShouldEvaluateEndConditions()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00134">StartChannelTick()</a>.</p>
+
+</div>
+</div>
 <a id="a82a586caf90c50f791e6d5f543efbfdc" name="a82a586caf90c50f791e6d5f543efbfdc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82a586caf90c50f791e6d5f543efbfdc">&#9670;&#160;</a></span>IsChanneling()</h2>
 
@@ -557,9 +695,40 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00054">54</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00054">IsChanneling()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00211">bIsChanneling</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00054">IsChanneling()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00054">IsChanneling()</a>.</p>
+
+</div>
+</div>
+<a id="a3d3da047168c46f07c99a704930159d1" name="a3d3da047168c46f07c99a704930159d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d3da047168c46f07c99a704930159d1">&#9670;&#160;</a></span>IsChannelMontageActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTGameplayAbility_Channel::IsChannelMontageActive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00281">281</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00204">ActiveChannelMontage</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>, and <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
 
 </div>
 </div>
@@ -592,7 +761,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Fired once when the channel ends, before the ability finishes. </p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00023">ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>, <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00085">NotifyChannelEnded()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00075">NotifyChannelStarted()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00080">NotifyChannelTick()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00023">ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00264">CanSustainChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00243">FinishChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00155">HandleChannelTick()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00281">IsChannelMontageActive()</a>, <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00085">NotifyChannelEnded()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00075">NotifyChannelStarted()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00080">NotifyChannelTick()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00301">OnChannelInputPressed()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00296">OnChannelInputReleased()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00321">OnChannelMontageBlendOut()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00340">OnChannelMontageCancelled()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00306">OnChannelMontageCompleted()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00334">OnChannelMontageInterrupted()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00291">OnMaxChannelDurationReached()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00259">ShouldEvaluateEndConditions()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00090">StartChannelMontage()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00134">StartChannelTick()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00111">StartInputListener()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00206">StopChannelUpkeep()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00085">NotifyChannelEnded()</a>.</p>
 
@@ -757,7 +926,388 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a0d41a8dda76ca277e8815a953c4c0259">K2_OnChannelTick()</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00155">HandleChannelTick()</a>, and <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="ace961c5540025cc9b3430226d20cb0a5" name="ace961c5540025cc9b3430226d20cb0a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace961c5540025cc9b3430226d20cb0a5">&#9670;&#160;</a></span>OnChannelInputPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::OnChannelInputPressed </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>TimeWaited</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00301">301</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="a14469b95f63d34665c115c4b643f8a6b" name="a14469b95f63d34665c115c4b643f8a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14469b95f63d34665c115c4b643f8a6b">&#9670;&#160;</a></span>OnChannelInputReleased()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::OnChannelInputReleased </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>TimeHeld</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00296">296</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="aefac01dfa0e3b67213e7eea2c06f4057" name="aefac01dfa0e3b67213e7eea2c06f4057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefac01dfa0e3b67213e7eea2c06f4057">&#9670;&#160;</a></span>OnChannelMontageBlendOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::OnChannelMontageBlendOut </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00321">321</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00195">ActiveMontageTask</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00212">bChannelEnding</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00243">FinishChannel()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="a1bc5bbb43ff58cc030e8fc9fa52218cc" name="a1bc5bbb43ff58cc030e8fc9fa52218cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc5bbb43ff58cc030e8fc9fa52218cc">&#9670;&#160;</a></span>OnChannelMontageCancelled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::OnChannelMontageCancelled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00340">340</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00195">ActiveMontageTask</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="a5323da827fa1363a3a4b590dc1748c8d" name="a5323da827fa1363a3a4b590dc1748c8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5323da827fa1363a3a4b590dc1748c8d">&#9670;&#160;</a></span>OnChannelMontageCompleted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::OnChannelMontageCompleted </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00306">306</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00195">ActiveMontageTask</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00212">bChannelEnding</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00243">FinishChannel()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="a8d448bc5ef9ed32f01c6653dbdaaed2b" name="a8d448bc5ef9ed32f01c6653dbdaaed2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d448bc5ef9ed32f01c6653dbdaaed2b">&#9670;&#160;</a></span>OnChannelMontageInterrupted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::OnChannelMontageInterrupted </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00334">334</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00195">ActiveMontageTask</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="adae9e3f1b7e3a8f27457dadf5ccacc37" name="adae9e3f1b7e3a8f27457dadf5ccacc37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae9e3f1b7e3a8f27457dadf5ccacc37">&#9670;&#160;</a></span>OnMaxChannelDurationReached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::OnMaxChannelDurationReached </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00291">291</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="ab3df55ebbab90a83aad00a562679af9f" name="ab3df55ebbab90a83aad00a562679af9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3df55ebbab90a83aad00a562679af9f">&#9670;&#160;</a></span>ShouldEvaluateEndConditions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTGameplayAbility_Channel::ShouldEvaluateEndConditions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True on the instance responsible for evaluating resource/duration end conditions (the authority). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00259">259</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00155">HandleChannelTick()</a>, and <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="adf0a6d389849b6dac626589754bbb3a0" name="adf0a6d389849b6dac626589754bbb3a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf0a6d389849b6dac626589754bbb3a0">&#9670;&#160;</a></span>StartChannelMontage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::StartChannelMontage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Starts the montage (looping the channel section) and binds its end callbacks. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00090">90</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00204">ActiveChannelMontage</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00195">ActiveMontageTask</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00098">ChannelLoopSectionName</a>, and <a class="el" href="class_u_d_t_gameplay_ability.html#ac6b682668d8dc0b1da5ce9d419713017">UDTGameplayAbility::GetAbilityMontageToPlay()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, and <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="aecfd1c811e74de99e05e28f3789a0e44" name="aecfd1c811e74de99e05e28f3789a0e44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecfd1c811e74de99e05e28f3789a0e44">&#9670;&#160;</a></span>StartChannelTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::StartChannelTick </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Kicks off the periodic tick timer (and the first immediate tick when bTickOnStart). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00134">134</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00212">bChannelEnding</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00090">bTickOnStart</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00086">ChannelTickInterval</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00207">ChannelTickTimerHandle</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00155">HandleChannelTick()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, and <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="a96770d0e90a85d84e62cbe1293da04a1" name="a96770d0e90a85d84e62cbe1293da04a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96770d0e90a85d84e62cbe1293da04a1">&#9670;&#160;</a></span>StartInputListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::StartInputListener </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Starts the Hold/Toggle input task appropriate for ActivationMode. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00111">111</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00063">ActivationMode</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00201">ActiveInputPressTask</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00198">ActiveInputReleaseTask</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00023">Hold</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, and <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
+
+</div>
+</div>
+<a id="ac2d8f8b6faa5fe277babd5b442f79c2a" name="ac2d8f8b6faa5fe277babd5b442f79c2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d8f8b6faa5fe277babd5b442f79c2a">&#9670;&#160;</a></span>StopChannelUpkeep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Channel::StopChannelUpkeep </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes the drain GE / cue and clears the tick + duration timers. </p>
+<p>Leaves the montage alone. Idempotent. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00206">206</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html">DTGameplayAbility_Channel.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00201">ActiveInputPressTask</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00198">ActiveInputReleaseTask</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00214">bChannelCueAdded</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00206">ChannelCostHandle</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00208">ChannelDurationTimerHandle</a>, <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00106">ChannelLoopCueTag</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00207">ChannelTickTimerHandle</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>, and <a class="el" href="#a22059f0e1757d67b3c11900b19c5361a">K2_OnChannelEnded()</a>.</p>
 
 </div>
 </div>
@@ -786,7 +1336,215 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00063">63</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00058">GetChannelActivationMode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00058">GetChannelActivationMode()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00111">StartInputListener()</a>.</p>
+
+</div>
+</div>
+<a id="a5fa15a0d667cb541d37409bdd9721af2" name="a5fa15a0d667cb541d37409bdd9721af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa15a0d667cb541d37409bdd9721af2">&#9670;&#160;</a></span>ActiveChannelMontage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UAnimMontage&gt; UDTGameplayAbility_Channel::ActiveChannelMontage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00204">204</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00281">IsChannelMontageActive()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00090">StartChannelMontage()</a>.</p>
+
+</div>
+</div>
+<a id="a74cde57c0e3f20f6145bd28254df97e0" name="a74cde57c0e3f20f6145bd28254df97e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74cde57c0e3f20f6145bd28254df97e0">&#9670;&#160;</a></span>ActiveInputPressTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UAbilityTask_WaitInputPress&gt; UDTGameplayAbility_Channel::ActiveInputPressTask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00201">201</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00111">StartInputListener()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00206">StopChannelUpkeep()</a>.</p>
+
+</div>
+</div>
+<a id="ab9f4e1fc10d3c7504faf18449635597c" name="ab9f4e1fc10d3c7504faf18449635597c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f4e1fc10d3c7504faf18449635597c">&#9670;&#160;</a></span>ActiveInputReleaseTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UAbilityTask_WaitInputRelease&gt; UDTGameplayAbility_Channel::ActiveInputReleaseTask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00198">198</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00111">StartInputListener()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00206">StopChannelUpkeep()</a>.</p>
+
+</div>
+</div>
+<a id="a70944ef2790598c5ce47bc494c469f61" name="a70944ef2790598c5ce47bc494c469f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70944ef2790598c5ce47bc494c469f61">&#9670;&#160;</a></span>ActiveMontageTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UAbilityTask_PlayMontageAndWait&gt; UDTGameplayAbility_Channel::ActiveMontageTask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00195">195</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00321">OnChannelMontageBlendOut()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00340">OnChannelMontageCancelled()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00306">OnChannelMontageCompleted()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00334">OnChannelMontageInterrupted()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00090">StartChannelMontage()</a>.</p>
+
+</div>
+</div>
+<a id="a0adf1bc872d819881c020e0980cd37da" name="a0adf1bc872d819881c020e0980cd37da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0adf1bc872d819881c020e0980cd37da">&#9670;&#160;</a></span>bChannelCueAdded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTGameplayAbility_Channel::bChannelCueAdded = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00214">214</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00206">StopChannelUpkeep()</a>.</p>
+
+</div>
+</div>
+<a id="a16fe2b7152b67346ba89a95a38352a8c" name="a16fe2b7152b67346ba89a95a38352a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16fe2b7152b67346ba89a95a38352a8c">&#9670;&#160;</a></span>bChannelEndBroadcast</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTGameplayAbility_Channel::bChannelEndBroadcast = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00213">213</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>.</p>
+
+</div>
+</div>
+<a id="a80a97ef32fc0acdd0762cb80568bcab1" name="a80a97ef32fc0acdd0762cb80568bcab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80a97ef32fc0acdd0762cb80568bcab1">&#9670;&#160;</a></span>bChannelEnding</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTGameplayAbility_Channel::bChannelEnding = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00212">212</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00155">HandleChannelTick()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00321">OnChannelMontageBlendOut()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00306">OnChannelMontageCompleted()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00134">StartChannelTick()</a>.</p>
+
+</div>
+</div>
+<a id="ad65939a5f4ab16be1f1d9a441ed76c83" name="ad65939a5f4ab16be1f1d9a441ed76c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad65939a5f4ab16be1f1d9a441ed76c83">&#9670;&#160;</a></span>bIsChanneling</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTGameplayAbility_Channel::bIsChanneling = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00211">211</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00172">EndChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00155">HandleChannelTick()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00054">IsChanneling()</a>.</p>
 
 </div>
 </div>
@@ -813,6 +1571,8 @@ Additional Inherited Members</h2></td></tr>
 <p>If true, fire the first K2_OnChannelTick immediately on channel start rather than after one interval. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00090">90</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00134">StartChannelTick()</a>.</p>
 
 </div>
 </div>
@@ -841,7 +1601,59 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00264">CanSustainChannel()</a>.</p>
+
+</div>
+</div>
+<a id="ac4d77b8d1d8eeed204e97e25418a0bab" name="ac4d77b8d1d8eeed204e97e25418a0bab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d77b8d1d8eeed204e97e25418a0bab">&#9670;&#160;</a></span>ChannelCostHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FActiveGameplayEffectHandle UDTGameplayAbility_Channel::ChannelCostHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00206">206</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00206">StopChannelUpkeep()</a>.</p>
+
+</div>
+</div>
+<a id="a985a4d589edd639bcc97bf4335b5e454" name="a985a4d589edd639bcc97bf4335b5e454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a985a4d589edd639bcc97bf4335b5e454">&#9670;&#160;</a></span>ChannelDurationTimerHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTimerHandle UDTGameplayAbility_Channel::ChannelDurationTimerHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00208">208</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00206">StopChannelUpkeep()</a>.</p>
 
 </div>
 </div>
@@ -868,6 +1680,8 @@ Additional Inherited Members</h2></td></tr>
 <p>The channel ends once the watched resource is at or below this value. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00082">82</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00264">CanSustainChannel()</a>.</p>
 
 </div>
 </div>
@@ -924,7 +1738,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00106">106</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00206">StopChannelUpkeep()</a>.</p>
 
 </div>
 </div>
@@ -953,6 +1767,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00098">98</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00090">StartChannelMontage()</a>.</p>
+
 </div>
 </div>
 <a id="a5858133bbb15b106a36cb813a399f0ef" name="a5858133bbb15b106a36cb813a399f0ef"></a>
@@ -980,7 +1796,33 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00078">78</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00015">UDTGameplayAbility_Channel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00264">CanSustainChannel()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00015">UDTGameplayAbility_Channel()</a>.</p>
+
+</div>
+</div>
+<a id="a069b14817f4e9f18c2531205ade6c05f" name="a069b14817f4e9f18c2531205ade6c05f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a069b14817f4e9f18c2531205ade6c05f">&#9670;&#160;</a></span>ChannelTickCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTGameplayAbility_Channel::ChannelTickCount = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00210">210</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00030">BeginChannel()</a>, <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00346">EndAbility()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00155">HandleChannelTick()</a>.</p>
 
 </div>
 </div>
@@ -1007,6 +1849,34 @@ Additional Inherited Members</h2></td></tr>
 <p>Seconds between K2_OnChannelTick calls while channeling. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00086">86</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00134">StartChannelTick()</a>.</p>
+
+</div>
+</div>
+<a id="a07dec0f832611afa91c535b1e9861289" name="a07dec0f832611afa91c535b1e9861289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07dec0f832611afa91c535b1e9861289">&#9670;&#160;</a></span>ChannelTickTimerHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTimerHandle UDTGameplayAbility_Channel::ChannelTickTimerHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html#l00207">207</a> of file <a class="el" href="_d_t_gameplay_ability___channel_8h_source.html">DTGameplayAbility_Channel.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00134">StartChannelTick()</a>, and <a class="el" href="_d_t_gameplay_ability___channel_8cpp_source.html#l00206">StopChannelUpkeep()</a>.</p>
 
 </div>
 </div>

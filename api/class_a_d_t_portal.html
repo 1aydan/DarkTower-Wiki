@@ -180,6 +180,27 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a40ba84dfa962c9c3568cba78b8b8a3b5" id="r_a40ba84dfa962c9c3568cba78b8b8a3b5"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#a40ba84dfa962c9c3568cba78b8b8a3b5">HostMapSetupMapName</a> = NAME_None</td></tr>
 <tr class="memitem:a8b24d74f50ba1f11063572a5cbe6d5d1" id="r_a8b24d74f50ba1f11063572a5cbe6d5d1"><td class="memItemLeft">TObjectPtr&lt; USceneComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8b24d74f50ba1f11063572a5cbe6d5d1">SceneRoot</a></td></tr>
 <tr class="memitem:adbf5fb8e09a73efd0ff7d16cc930334e" id="r_adbf5fb8e09a73efd0ff7d16cc930334e"><td class="memItemLeft">TObjectPtr&lt; UBoxComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#adbf5fb8e09a73efd0ff7d16cc930334e">OverlapVolume</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:afc592bcde5261ef417f8f211bb5230ee" id="r_afc592bcde5261ef417f8f211bb5230ee"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afc592bcde5261ef417f8f211bb5230ee">ListenForActivationEvent</a> ()</td></tr>
+<tr class="memdesc:afc592bcde5261ef417f8f211bb5230ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to the activation gameplay message.  <br /></td></tr>
+<tr class="memitem:adf1536898aa24488cf5911fce7f16dce" id="r_adf1536898aa24488cf5911fce7f16dce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf1536898aa24488cf5911fce7f16dce">HandleActivationMessage</a> (FGameplayTag Channel, const <a class="el" href="struct_f_d_t_dungeon_summary_message.html">FDTDungeonSummaryMessage</a> &amp;Message)</td></tr>
+<tr class="memdesc:adf1536898aa24488cf5911fce7f16dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the activation gameplay message is received.  <br /></td></tr>
+<tr class="memitem:a16973b52cb4a2726d57a19b0309edc52" id="r_a16973b52cb4a2726d57a19b0309edc52"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a16973b52cb4a2726d57a19b0309edc52">OnOverlapBegin</a> (UPrimitiveComponent *OverlappedComp, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &amp;SweepResult)</td></tr>
+<tr class="memitem:a231e0ef2d0a9360842a9a9dc04b2caf3" id="r_a231e0ef2d0a9360842a9a9dc04b2caf3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a231e0ef2d0a9360842a9a9dc04b2caf3">OnOverlapEnd</a> (UPrimitiveComponent *OverlappedComp, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex)</td></tr>
+<tr class="memitem:a7e14cf2462d005c7f7cf3a82bb872b12" id="r_a7e14cf2462d005c7f7cf3a82bb872b12"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7e14cf2462d005c7f7cf3a82bb872b12">OnOverlapTimerComplete</a> (APawn *Pawn)</td></tr>
+<tr class="memdesc:a7e14cf2462d005c7f7cf3a82bb872b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a player's overlap timer expires.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af89a0e487f4190592a3a93267fa0b3e0" id="r_af89a0e487f4190592a3a93267fa0b3e0"><td class="memItemLeft">TMap&lt; TWeakObjectPtr&lt; APawn &gt;, FTimerHandle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af89a0e487f4190592a3a93267fa0b3e0">OverlapTimers</a></td></tr>
+<tr class="memdesc:af89a0e487f4190592a3a93267fa0b3e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active overlap timers keyed by overlapping Pawn.  <br /></td></tr>
+<tr class="memitem:a30dac77b3217d13d5740a7332e2cbbd4" id="r_a30dac77b3217d13d5740a7332e2cbbd4"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a30dac77b3217d13d5740a7332e2cbbd4">CachedCompletedFloor</a> = 0</td></tr>
+<tr class="memdesc:a30dac77b3217d13d5740a7332e2cbbd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached data from the activation message to pass to the summary widget.  <br /></td></tr>
+<tr class="memitem:a36e11af6dbf4e996f8316353c9e6851c" id="r_a36e11af6dbf4e996f8316353c9e6851c"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a36e11af6dbf4e996f8316353c9e6851c">CachedDungeonSeed</a> = 0</td></tr>
+<tr class="memitem:a2dfae2b6e2bcffb9733a8b8ff5008612" id="r_a2dfae2b6e2bcffb9733a8b8ff5008612"><td class="memItemLeft">FGameplayMessageListenerHandle&#160;</td><td class="memItemRight"><a class="el" href="#a2dfae2b6e2bcffb9733a8b8ff5008612">ListenerHandle</a></td></tr>
+<tr class="memdesc:a2dfae2b6e2bcffb9733a8b8ff5008612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle for the message listener registration.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Modular portal actor that listens for a gameplay message to become active. </p>
@@ -229,9 +250,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8cpp_source.html#l00096">96</a> of file <a class="el" href="_d_t_portal_8cpp_source.html">DTPortal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_portal_8h_source.html#l00058">bIsActive</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00238">FDTDungeonSummaryMessage::CompletedFloor</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00242">FDTDungeonSummaryMessage::DungeonSeed</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00149">OnRep_IsActive()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_portal_8h_source.html#l00058">bIsActive</a>, <a class="el" href="_d_t_portal_8h_source.html#l00110">CachedCompletedFloor</a>, <a class="el" href="_d_t_portal_8h_source.html#l00111">CachedDungeonSeed</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00238">FDTDungeonSummaryMessage::CompletedFloor</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00242">FDTDungeonSummaryMessage::DungeonSeed</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00149">OnRep_IsActive()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00039">BeginPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00039">BeginPlay()</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00088">HandleActivationMessage()</a>.</p>
 
 </div>
 </div>
@@ -260,7 +281,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8cpp_source.html#l00039">39</a> of file <a class="el" href="_d_t_portal_8cpp_source.html">DTPortal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_portal_8cpp_source.html#l00096">ActivatePortal()</a>, <a class="el" href="_d_t_portal_8h_source.html#l00050">bStartActive</a>, and <a class="el" href="_d_t_portal_8h_source.html#l00088">OverlapVolume</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_portal_8cpp_source.html#l00096">ActivatePortal()</a>, <a class="el" href="_d_t_portal_8h_source.html#l00050">bStartActive</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00073">ListenForActivationEvent()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00154">OnOverlapBegin()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00183">OnOverlapEnd()</a>, and <a class="el" href="_d_t_portal_8h_source.html#l00088">OverlapVolume</a>.</p>
 
 </div>
 </div>
@@ -283,7 +304,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8cpp_source.html#l00121">121</a> of file <a class="el" href="_d_t_portal_8cpp_source.html">DTPortal.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_portal_8h_source.html#l00058">bIsActive</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00149">OnRep_IsActive()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_portal_8h_source.html#l00058">bIsActive</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00149">OnRep_IsActive()</a>, and <a class="el" href="_d_t_portal_8h_source.html#l00107">OverlapTimers</a>.</p>
 
 </div>
 </div>
@@ -311,6 +332,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8cpp_source.html#l00057">57</a> of file <a class="el" href="_d_t_portal_8cpp_source.html">DTPortal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_portal_8h_source.html#l00107">OverlapTimers</a>.</p>
 
 </div>
 </div>
@@ -340,6 +363,43 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8cpp_source.html#l00033">33</a> of file <a class="el" href="_d_t_portal_8cpp_source.html">DTPortal.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_portal_8cpp_source.html#l00014">ADTPortal()</a>, and <a class="el" href="_d_t_portal_8h_source.html#l00058">bIsActive</a>.</p>
+
+</div>
+</div>
+<a id="adf1536898aa24488cf5911fce7f16dce" name="adf1536898aa24488cf5911fce7f16dce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf1536898aa24488cf5911fce7f16dce">&#9670;&#160;</a></span>HandleActivationMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPortal::HandleActivationMessage </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>Channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_dungeon_summary_message.html">FDTDungeonSummaryMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when the activation gameplay message is received. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_portal_8cpp_source.html#l00088">88</a> of file <a class="el" href="_d_t_portal_8cpp_source.html">DTPortal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_portal_8cpp_source.html#l00096">ActivatePortal()</a>, <a class="el" href="_d_t_portal_8h_source.html#l00110">CachedCompletedFloor</a>, <a class="el" href="_d_t_portal_8h_source.html#l00111">CachedDungeonSeed</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00238">FDTDungeonSummaryMessage::CompletedFloor</a>, and <a class="el" href="_d_t_message_types_8h_source.html#l00242">FDTDungeonSummaryMessage::DungeonSeed</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00073">ListenForActivationEvent()</a>.</p>
 
 </div>
 </div>
@@ -374,6 +434,172 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="afc592bcde5261ef417f8f211bb5230ee" name="afc592bcde5261ef417f8f211bb5230ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc592bcde5261ef417f8f211bb5230ee">&#9670;&#160;</a></span>ListenForActivationEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPortal::ListenForActivationEvent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subscribe to the activation gameplay message. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_portal_8cpp_source.html#l00073">73</a> of file <a class="el" href="_d_t_portal_8cpp_source.html">DTPortal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_portal_8h_source.html#l00046">ActivationEventTag</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00088">HandleActivationMessage()</a>, and <a class="el" href="_d_t_portal_8h_source.html#l00114">ListenerHandle</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00039">BeginPlay()</a>.</p>
+
+</div>
+</div>
+<a id="a16973b52cb4a2726d57a19b0309edc52" name="a16973b52cb4a2726d57a19b0309edc52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16973b52cb4a2726d57a19b0309edc52">&#9670;&#160;</a></span>OnOverlapBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPortal::OnOverlapBegin </td>
+          <td>(</td>
+          <td class="paramtype">UPrimitiveComponent *</td>          <td class="paramname"><span class="paramname"><em>OverlappedComp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>OtherActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UPrimitiveComponent *</td>          <td class="paramname"><span class="paramname"><em>OtherComp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>OtherBodyIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bFromSweep</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FHitResult &amp;</td>          <td class="paramname"><span class="paramname"><em>SweepResult</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_portal_8cpp_source.html#l00154">154</a> of file <a class="el" href="_d_t_portal_8cpp_source.html">DTPortal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_portal_8h_source.html#l00058">bIsActive</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00207">OnOverlapTimerComplete()</a>, <a class="el" href="_d_t_portal_8h_source.html#l00054">OverlapDuration</a>, and <a class="el" href="_d_t_portal_8h_source.html#l00107">OverlapTimers</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00039">BeginPlay()</a>.</p>
+
+</div>
+</div>
+<a id="a231e0ef2d0a9360842a9a9dc04b2caf3" name="a231e0ef2d0a9360842a9a9dc04b2caf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a231e0ef2d0a9360842a9a9dc04b2caf3">&#9670;&#160;</a></span>OnOverlapEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPortal::OnOverlapEnd </td>
+          <td>(</td>
+          <td class="paramtype">UPrimitiveComponent *</td>          <td class="paramname"><span class="paramname"><em>OverlappedComp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>OtherActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UPrimitiveComponent *</td>          <td class="paramname"><span class="paramname"><em>OtherComp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>OtherBodyIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_portal_8cpp_source.html#l00183">183</a> of file <a class="el" href="_d_t_portal_8cpp_source.html">DTPortal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_portal_8h_source.html#l00107">OverlapTimers</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00039">BeginPlay()</a>.</p>
+
+</div>
+</div>
+<a id="a7e14cf2462d005c7f7cf3a82bb872b12" name="a7e14cf2462d005c7f7cf3a82bb872b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e14cf2462d005c7f7cf3a82bb872b12">&#9670;&#160;</a></span>OnOverlapTimerComplete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPortal::OnOverlapTimerComplete </td>
+          <td>(</td>
+          <td class="paramtype">APawn *</td>          <td class="paramname"><span class="paramname"><em>Pawn</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when a player's overlap timer expires. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_portal_8cpp_source.html#l00207">207</a> of file <a class="el" href="_d_t_portal_8cpp_source.html">DTPortal.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_portal_8h_source.html#l00058">bIsActive</a>, <a class="el" href="_d_t_portal_8h_source.html#l00062">bOpenHostMapSetupOnEnter</a>, <a class="el" href="_d_t_portal_8h_source.html#l00110">CachedCompletedFloor</a>, <a class="el" href="_d_t_portal_8h_source.html#l00111">CachedDungeonSeed</a>, <a class="el" href="class_a_d_t_player_controller.html#a64a1c30a081c9fd54dbc1613d3358222">ADTPlayerController::Client_ShowDungeonSummary()</a>, <a class="el" href="class_a_d_t_player_controller.html#ad7c31c14b2d43bbc56a751a2bb942a65">ADTPlayerController::Client_ShowHostMapSetup()</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00238">FDTDungeonSummaryMessage::CompletedFloor</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00242">FDTDungeonSummaryMessage::DungeonSeed</a>, <a class="el" href="_data_types_8h_source.html#l00139">FDTHostRequest::EntryPoint</a>, <a class="el" href="_d_t_portal_8h_source.html#l00065">HostMapSetupEntryPoint</a>, <a class="el" href="_d_t_portal_8h_source.html#l00068">HostMapSetupInitialTab</a>, <a class="el" href="_d_t_portal_8h_source.html#l00071">HostMapSetupMapName</a>, <a class="el" href="_data_types_8h_source.html#l00142">FDTHostRequest::InitialTab</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00045">ADTPlayerController::IsHost()</a>, <a class="el" href="#aa8c110ad6e55758ec3d1f647cd9cd3a0">OnPlayerEnteredPortal()</a>, <a class="el" href="_d_t_portal_8h_source.html#l00107">OverlapTimers</a>, and <a class="el" href="_data_types_8h_source.html#l00145">FDTHostRequest::TravelMapName</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00154">OnOverlapBegin()</a>.</p>
+
+</div>
+</div>
 <a id="aa8c110ad6e55758ec3d1f647cd9cd3a0" name="aa8c110ad6e55758ec3d1f647cd9cd3a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8c110ad6e55758ec3d1f647cd9cd3a0">&#9670;&#160;</a></span>OnPlayerEnteredPortal()</h2>
 
@@ -401,7 +627,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#aa8c110ad6e55758ec3d1f647cd9cd3a0">OnPlayerEnteredPortal()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#aa8c110ad6e55758ec3d1f647cd9cd3a0">OnPlayerEnteredPortal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00207">OnOverlapTimerComplete()</a>, and <a class="el" href="#aa8c110ad6e55758ec3d1f647cd9cd3a0">OnPlayerEnteredPortal()</a>.</p>
 
 </div>
 </div>
@@ -494,7 +720,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8h_source.html#l00046">46</a> of file <a class="el" href="_d_t_portal_8h_source.html">DTPortal.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00014">ADTPortal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00014">ADTPortal()</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00073">ListenForActivationEvent()</a>.</p>
 
 </div>
 </div>
@@ -522,7 +748,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8h_source.html#l00058">58</a> of file <a class="el" href="_d_t_portal_8h_source.html">DTPortal.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00096">ActivatePortal()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00121">DeactivatePortal()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00033">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_portal_8h_source.html#l00038">IsPortalActive()</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00149">OnRep_IsActive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00096">ActivatePortal()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00121">DeactivatePortal()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00033">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_portal_8h_source.html#l00038">IsPortalActive()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00154">OnOverlapBegin()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00207">OnOverlapTimerComplete()</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00149">OnRep_IsActive()</a>.</p>
 
 </div>
 </div>
@@ -549,6 +775,8 @@ Protected Attributes</h2></td></tr>
 <p>If true, entering this portal opens the host run setup flow instead of the dungeon summary flow. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8h_source.html#l00062">62</a> of file <a class="el" href="_d_t_portal_8h_source.html">DTPortal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00207">OnOverlapTimerComplete()</a>.</p>
 
 </div>
 </div>
@@ -580,6 +808,60 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a30dac77b3217d13d5740a7332e2cbbd4" name="a30dac77b3217d13d5740a7332e2cbbd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30dac77b3217d13d5740a7332e2cbbd4">&#9670;&#160;</a></span>CachedCompletedFloor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 ADTPortal::CachedCompletedFloor = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cached data from the activation message to pass to the summary widget. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_portal_8h_source.html#l00110">110</a> of file <a class="el" href="_d_t_portal_8h_source.html">DTPortal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00096">ActivatePortal()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00088">HandleActivationMessage()</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00207">OnOverlapTimerComplete()</a>.</p>
+
+</div>
+</div>
+<a id="a36e11af6dbf4e996f8316353c9e6851c" name="a36e11af6dbf4e996f8316353c9e6851c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36e11af6dbf4e996f8316353c9e6851c">&#9670;&#160;</a></span>CachedDungeonSeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 ADTPortal::CachedDungeonSeed = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_portal_8h_source.html#l00111">111</a> of file <a class="el" href="_d_t_portal_8h_source.html">DTPortal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00096">ActivatePortal()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00088">HandleActivationMessage()</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00207">OnOverlapTimerComplete()</a>.</p>
+
+</div>
+</div>
 <a id="a7ec025d0b6fb7511f9894fbd295828c5" name="a7ec025d0b6fb7511f9894fbd295828c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ec025d0b6fb7511f9894fbd295828c5">&#9670;&#160;</a></span>HostMapSetupEntryPoint</h2>
 
@@ -601,6 +883,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8h_source.html#l00065">65</a> of file <a class="el" href="_d_t_portal_8h_source.html">DTPortal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00207">OnOverlapTimerComplete()</a>.</p>
 
 </div>
 </div>
@@ -626,6 +910,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8h_source.html#l00068">68</a> of file <a class="el" href="_d_t_portal_8h_source.html">DTPortal.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00207">OnOverlapTimerComplete()</a>.</p>
+
 </div>
 </div>
 <a id="a40ba84dfa962c9c3568cba78b8b8a3b5" name="a40ba84dfa962c9c3568cba78b8b8a3b5"></a>
@@ -649,6 +935,36 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_portal_8h_source.html">DTPortal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00207">OnOverlapTimerComplete()</a>.</p>
+
+</div>
+</div>
+<a id="a2dfae2b6e2bcffb9733a8b8ff5008612" name="a2dfae2b6e2bcffb9733a8b8ff5008612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dfae2b6e2bcffb9733a8b8ff5008612">&#9670;&#160;</a></span>ListenerHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayMessageListenerHandle ADTPortal::ListenerHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle for the message listener registration. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_portal_8h_source.html#l00114">114</a> of file <a class="el" href="_d_t_portal_8h_source.html">DTPortal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00073">ListenForActivationEvent()</a>.</p>
 
 </div>
 </div>
@@ -675,6 +991,36 @@ Protected Attributes</h2></td></tr>
 <p>Time in seconds a player must overlap before the summary is triggered. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_portal_8h_source.html#l00054">54</a> of file <a class="el" href="_d_t_portal_8h_source.html">DTPortal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00154">OnOverlapBegin()</a>.</p>
+
+</div>
+</div>
+<a id="af89a0e487f4190592a3a93267fa0b3e0" name="af89a0e487f4190592a3a93267fa0b3e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89a0e487f4190592a3a93267fa0b3e0">&#9670;&#160;</a></span>OverlapTimers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMap&lt;TWeakObjectPtr&lt;APawn&gt;, FTimerHandle&gt; ADTPortal::OverlapTimers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Active overlap timers keyed by overlapping Pawn. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_portal_8h_source.html#l00107">107</a> of file <a class="el" href="_d_t_portal_8h_source.html">DTPortal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00121">DeactivatePortal()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00057">EndPlay()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00154">OnOverlapBegin()</a>, <a class="el" href="_d_t_portal_8cpp_source.html#l00183">OnOverlapEnd()</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00207">OnOverlapTimerComplete()</a>.</p>
 
 </div>
 </div>

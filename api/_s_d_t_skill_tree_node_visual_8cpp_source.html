@@ -179,8 +179,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_s_d_t_skill_t
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> FLinearColor OutlineColor = bIsSelected ? FLinearColor(0.98f, 0.80f, 0.35f, 1.0f) : FLinearColor(0.22f, 0.25f, 0.32f, 1.0f);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> OutlineWidth = bIsSelected ? 2.0f : 1.0f;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    CardBrush = FSlateRoundedBoxBrush(PanelColor, 8.0f, OutlineColor, OutlineWidth);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    IconFrameBrush = FSlateRoundedBoxBrush(FLinearColor(0.05f, 0.06f, 0.08f, 1.0f), 6.0f, CategoryColor.CopyWithNewOpacity(0.85f), 1.5f);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_variable" href="class_s_d_t_skill_tree_node_visual.html#a88965eecc535dd11e5b3a57e57541a4a">CardBrush</a> = FSlateRoundedBoxBrush(PanelColor, 8.0f, OutlineColor, OutlineWidth);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_variable" href="class_s_d_t_skill_tree_node_visual.html#a49213a3eb35e0d5f61de0d04a9dbea39">IconFrameBrush</a> = FSlateRoundedBoxBrush(FLinearColor(0.05f, 0.06f, 0.08f, 1.0f), 6.0f, CategoryColor.CopyWithNewOpacity(0.85f), 1.5f);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    FSlateFontInfo TitleFont = FAppStyle::GetFontStyle(<span class="stringliteral">&quot;PropertyWindow.BoldFont&quot;</span>);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    TitleFont.Size = FMath::Max(TitleFont.Size + 1, 12);</div>
@@ -199,15 +199,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_s_d_t_skill_t
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        NodeIcon = Node.<a class="code hl_function" href="struct_f_skill_tree_node.html#a551dce81e896a720229b3df39739ccfe">GetIcon</a>().LoadSynchronous();</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    IconBrush = FSlateBrush();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    IconBrush.SetResourceObject(NodeIcon);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    IconBrush.ImageSize = FVector2D(50.0f, 50.0f);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    IconBrush.DrawAs = ESlateBrushDrawType::Image;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_variable" href="class_s_d_t_skill_tree_node_visual.html#a8b243ea9da94523a16290e4144f1b4d4">IconBrush</a> = FSlateBrush();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_variable" href="class_s_d_t_skill_tree_node_visual.html#a8b243ea9da94523a16290e4144f1b4d4">IconBrush</a>.SetResourceObject(NodeIcon);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_variable" href="class_s_d_t_skill_tree_node_visual.html#a8b243ea9da94523a16290e4144f1b4d4">IconBrush</a>.ImageSize = FVector2D(50.0f, 50.0f);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_variable" href="class_s_d_t_skill_tree_node_visual.html#a8b243ea9da94523a16290e4144f1b4d4">IconBrush</a>.DrawAs = ESlateBrushDrawType::Image;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    ChildSlot</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    [</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        SNew(SBorder)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        .BorderImage(&amp;CardBrush)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        .BorderImage(&amp;<a class="code hl_variable" href="class_s_d_t_skill_tree_node_visual.html#a88965eecc535dd11e5b3a57e57541a4a">CardBrush</a>)</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        .Padding(FMargin(12.0f, 11.0f))</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        [</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            SNew(SHorizontalBox)</div>
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_s_d_t_skill_t
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                .HeightOverride(56.0f)</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                [</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    SNew(SBorder)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                    .BorderImage(&amp;IconFrameBrush)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                    .BorderImage(&amp;<a class="code hl_variable" href="class_s_d_t_skill_tree_node_visual.html#a49213a3eb35e0d5f61de0d04a9dbea39">IconFrameBrush</a>)</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    .Padding(3.0f)</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    .HAlign(HAlign_Center)</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    .VAlign(VAlign_Center)</div>
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_s_d_t_skill_t
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                        NodeIcon</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                        ? StaticCastSharedRef&lt;SWidget&gt;(</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                            SNew(SImage)</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                            .Image(&amp;IconBrush))</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                            .Image(&amp;<a class="code hl_variable" href="class_s_d_t_skill_tree_node_visual.html#a8b243ea9da94523a16290e4144f1b4d4">IconBrush</a>))</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                        : SNullWidget::NullWidget</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    ]</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                ]</div>
@@ -284,6 +284,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_s_d_t_skill_t
 <div class="ttc" id="a_d_t_skill_tree_types_8h_html"><div class="ttname"><a href="_d_t_skill_tree_types_8h.html">DTSkillTreeTypes.h</a></div></div>
 <div class="ttc" id="a_s_d_t_skill_tree_node_visual_8h_html"><div class="ttname"><a href="_s_d_t_skill_tree_node_visual_8h.html">SDTSkillTreeNodeVisual.h</a></div></div>
 <div class="ttc" id="aclass_s_d_t_skill_tree_node_visual_html_a43009f15c215630b43b4d1aceaa2a7b8"><div class="ttname"><a href="class_s_d_t_skill_tree_node_visual.html#a43009f15c215630b43b4d1aceaa2a7b8">SDTSkillTreeNodeVisual::Construct</a></div><div class="ttdeci">void Construct(const FArguments &amp;InArgs)</div><div class="ttdef"><b>Definition</b> <a href="#l00038">SDTSkillTreeNodeVisual.cpp:38</a></div></div>
+<div class="ttc" id="aclass_s_d_t_skill_tree_node_visual_html_a49213a3eb35e0d5f61de0d04a9dbea39"><div class="ttname"><a href="class_s_d_t_skill_tree_node_visual.html#a49213a3eb35e0d5f61de0d04a9dbea39">SDTSkillTreeNodeVisual::IconFrameBrush</a></div><div class="ttdeci">FSlateBrush IconFrameBrush</div><div class="ttdef"><b>Definition</b> <a href="_s_d_t_skill_tree_node_visual_8h_source.html#l00021">SDTSkillTreeNodeVisual.h:21</a></div></div>
+<div class="ttc" id="aclass_s_d_t_skill_tree_node_visual_html_a88965eecc535dd11e5b3a57e57541a4a"><div class="ttname"><a href="class_s_d_t_skill_tree_node_visual.html#a88965eecc535dd11e5b3a57e57541a4a">SDTSkillTreeNodeVisual::CardBrush</a></div><div class="ttdeci">FSlateBrush CardBrush</div><div class="ttdef"><b>Definition</b> <a href="_s_d_t_skill_tree_node_visual_8h_source.html#l00020">SDTSkillTreeNodeVisual.h:20</a></div></div>
+<div class="ttc" id="aclass_s_d_t_skill_tree_node_visual_html_a8b243ea9da94523a16290e4144f1b4d4"><div class="ttname"><a href="class_s_d_t_skill_tree_node_visual.html#a8b243ea9da94523a16290e4144f1b4d4">SDTSkillTreeNodeVisual::IconBrush</a></div><div class="ttdeci">FSlateBrush IconBrush</div><div class="ttdef"><b>Definition</b> <a href="_s_d_t_skill_tree_node_visual_8h_source.html#l00019">SDTSkillTreeNodeVisual.h:19</a></div></div>
 <div class="ttc" id="astruct_f_skill_tree_node_html"><div class="ttname"><a href="struct_f_skill_tree_node.html">FSkillTreeNode</a></div><div class="ttdoc">A skill tree entry that points at a separate node definition asset.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_skill_tree_types_8h_source.html#l00023">DTSkillTreeTypes.h:24</a></div></div>
 <div class="ttc" id="astruct_f_skill_tree_node_html_a022fb8623c1cd77ed576d5df933ac76a"><div class="ttname"><a href="struct_f_skill_tree_node.html#a022fb8623c1cd77ed576d5df933ac76a">FSkillTreeNode::GetNodeName</a></div><div class="ttdeci">FText GetNodeName() const</div><div class="ttdef"><b>Definition</b> <a href="_d_t_skill_tree_types_8cpp_source.html#l00022">DTSkillTreeTypes.cpp:22</a></div></div>
 <div class="ttc" id="astruct_f_skill_tree_node_html_a0a3ed237c394af8055a297a71ae69633"><div class="ttname"><a href="struct_f_skill_tree_node.html#a0a3ed237c394af8055a297a71ae69633">FSkillTreeNode::GetPointsPerRank</a></div><div class="ttdeci">int32 GetPointsPerRank() const</div><div class="ttdef"><b>Definition</b> <a href="_d_t_skill_tree_types_8cpp_source.html#l00048">DTSkillTreeTypes.cpp:48</a></div></div>

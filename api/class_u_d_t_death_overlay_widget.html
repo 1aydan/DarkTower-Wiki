@@ -203,6 +203,20 @@ Protected Attributes</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_u_d_t_activatable_widget"><td colspan="2">Protected Attributes inherited from <a class="el" href="class_u_d_t_activatable_widget.html">UDTActivatableWidget</a></td></tr>
 <tr class="memitem:ae6c13fde8552708ace4154d2ec97fa98 pro_attribs_class_u_d_t_activatable_widget" id="r_ae6c13fde8552708ace4154d2ec97fa98"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_activatable_widget.html#ae6c13fde8552708ace4154d2ec97fa98">bOverrideDefaultInputConfig</a> = false</td></tr>
 <tr class="memitem:a2396418f13f4c464c4c9264af27b7342 pro_attribs_class_u_d_t_activatable_widget" id="r_a2396418f13f4c464c4c9264af27b7342"><td class="memItemLeft">FUIInputConfig&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_activatable_widget.html#a2396418f13f4c464c4c9264af27b7342">InputConfig</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0569e8d9663c265cedb55ef4bb5ee292" id="r_a0569e8d9663c265cedb55ef4bb5ee292"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0569e8d9663c265cedb55ef4bb5ee292">RefreshTimerWidgets</a> (float InSecondsRemaining, float InTotalDuration)</td></tr>
+<tr class="memitem:aeb293ba4066f1ddf8cfe95150f8aeaed" id="r_aeb293ba4066f1ddf8cfe95150f8aeaed"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeb293ba4066f1ddf8cfe95150f8aeaed">RefreshSpectatorText</a> (APlayerState *Target)</td></tr>
+<tr class="memitem:ac39f2e60b98e57c2eedd36192a7ecb54" id="r_ac39f2e60b98e57c2eedd36192a7ecb54"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac39f2e60b98e57c2eedd36192a7ecb54">RefreshLivesText</a> ()</td></tr>
+<tr class="memitem:a8d6e806d90ea258408c9fd5c638f6280" id="r_a8d6e806d90ea258408c9fd5c638f6280"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8d6e806d90ea258408c9fd5c638f6280">RefreshSpectatorButtonsVisibility</a> ()</td></tr>
+<tr class="memdesc:a8d6e806d90ea258408c9fd5c638f6280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows/hides spectator cycle buttons based on whether there is a current spectator target.  <br /></td></tr>
+<tr class="memitem:a4065a19fdda02a2061b4042d9f907ea2" id="r_a4065a19fdda02a2061b4042d9f907ea2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4065a19fdda02a2061b4042d9f907ea2">HandleSpectatorNextClicked</a> ()</td></tr>
+<tr class="memitem:a1862c809fb72c9cfa0cdae38922f1f40" id="r_a1862c809fb72c9cfa0cdae38922f1f40"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1862c809fb72c9cfa0cdae38922f1f40">HandleSpectatorPrevClicked</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac0a1faf2de57295795e77d9651d96c79" id="r_ac0a1faf2de57295795e77d9651d96c79"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac0a1faf2de57295795e77d9651d96c79">bCountingDown</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HUD overlay shown to a dead player. </p>
@@ -333,6 +347,64 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a4065a19fdda02a2061b4042d9f907ea2" name="a4065a19fdda02a2061b4042d9f907ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4065a19fdda02a2061b4042d9f907ea2">&#9670;&#160;</a></span>HandleSpectatorNextClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTDeathOverlayWidget::HandleSpectatorNextClicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00163">163</a> of file <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html">DTDeathOverlayWidget.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00121">NativeOnActivated()</a>.</p>
+
+</div>
+</div>
+<a id="a1862c809fb72c9cfa0cdae38922f1f40" name="a1862c809fb72c9cfa0cdae38922f1f40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1862c809fb72c9cfa0cdae38922f1f40">&#9670;&#160;</a></span>HandleSpectatorPrevClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTDeathOverlayWidget::HandleSpectatorPrevClicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00174">174</a> of file <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html">DTDeathOverlayWidget.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00121">NativeOnActivated()</a>.</p>
+
+</div>
+</div>
 <a id="a0061775e618f24df417523eba0903142" name="a0061775e618f24df417523eba0903142"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0061775e618f24df417523eba0903142">&#9670;&#160;</a></span>InitializeDeathOverlay()</h2>
 
@@ -359,7 +431,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00085">85</a> of file <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html">DTDeathOverlayWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00055">CurrentSpectatorTarget</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00052">LivesRemaining</a>, <a class="el" href="#a50bdc45c073ec56ae48cea926d7032cf">OnCountdownFinished()</a>, <a class="el" href="#a4f508d0af5e1cbc88b340fb5ae6c86ec">OnCountdownStarted()</a>, <a class="el" href="#a3c85ce07fdbeadf3b4b71efc0cc64d06">OnDeathOverlayInitialized()</a>, <a class="el" href="#a85744c4a5c8c7463ea210802ae4c5c7c">OnSpectatorTargetChanged()</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00049">SecondsRemaining</a>, and <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00046">TotalDuration</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00109">bCountingDown</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00055">CurrentSpectatorTarget</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00052">LivesRemaining</a>, <a class="el" href="#a50bdc45c073ec56ae48cea926d7032cf">OnCountdownFinished()</a>, <a class="el" href="#a4f508d0af5e1cbc88b340fb5ae6c86ec">OnCountdownStarted()</a>, <a class="el" href="#a3c85ce07fdbeadf3b4b71efc0cc64d06">OnDeathOverlayInitialized()</a>, <a class="el" href="#a85744c4a5c8c7463ea210802ae4c5c7c">OnSpectatorTargetChanged()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00031">RefreshLivesText()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00048">RefreshSpectatorText()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00017">RefreshTimerWidgets()</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00049">SecondsRemaining</a>, and <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00046">TotalDuration</a>.</p>
 
 </div>
 </div>
@@ -388,7 +460,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00042">42</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00042">IsCountingDown()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00109">bCountingDown</a>, and <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00042">IsCountingDown()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00042">IsCountingDown()</a>.</p>
 
@@ -419,7 +491,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00121">121</a> of file <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html">DTDeathOverlayWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00071">BTN_SpectatorNext</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00075">BTN_SpectatorPrev</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00114">UpdateSpectatorTarget()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00071">BTN_SpectatorNext</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00075">BTN_SpectatorPrev</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00163">HandleSpectatorNextClicked()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00174">HandleSpectatorPrevClicked()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00069">RefreshSpectatorButtonsVisibility()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00114">UpdateSpectatorTarget()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a85744c4a5c8c7463ea210802ae4c5c7c">OnSpectatorTargetChanged()</a>.</p>
 
@@ -485,7 +557,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00185">185</a> of file <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html">DTDeathOverlayWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="#a50bdc45c073ec56ae48cea926d7032cf">OnCountdownFinished()</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00049">SecondsRemaining</a>, and <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00046">TotalDuration</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00109">bCountingDown</a>, <a class="el" href="#a50bdc45c073ec56ae48cea926d7032cf">OnCountdownFinished()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00017">RefreshTimerWidgets()</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00049">SecondsRemaining</a>, and <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00046">TotalDuration</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a85744c4a5c8c7463ea210802ae4c5c7c">OnSpectatorTargetChanged()</a>.</p>
 
@@ -623,6 +695,136 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ac39f2e60b98e57c2eedd36192a7ecb54" name="ac39f2e60b98e57c2eedd36192a7ecb54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac39f2e60b98e57c2eedd36192a7ecb54">&#9670;&#160;</a></span>RefreshLivesText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTDeathOverlayWidget::RefreshLivesText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00031">31</a> of file <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html">DTDeathOverlayWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00052">LivesRemaining</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00079">LivesRemainingFormat</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00083">NoLivesText</a>, and <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00067">TXT_Lives</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00085">InitializeDeathOverlay()</a>.</p>
+
+</div>
+</div>
+<a id="a8d6e806d90ea258408c9fd5c638f6280" name="a8d6e806d90ea258408c9fd5c638f6280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6e806d90ea258408c9fd5c638f6280">&#9670;&#160;</a></span>RefreshSpectatorButtonsVisibility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTDeathOverlayWidget::RefreshSpectatorButtonsVisibility </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shows/hides spectator cycle buttons based on whether there is a current spectator target. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00069">69</a> of file <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html">DTDeathOverlayWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00071">BTN_SpectatorNext</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00075">BTN_SpectatorPrev</a>, and <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00055">CurrentSpectatorTarget</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00121">NativeOnActivated()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00048">RefreshSpectatorText()</a>.</p>
+
+</div>
+</div>
+<a id="aeb293ba4066f1ddf8cfe95150f8aeaed" name="aeb293ba4066f1ddf8cfe95150f8aeaed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb293ba4066f1ddf8cfe95150f8aeaed">&#9670;&#160;</a></span>RefreshSpectatorText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTDeathOverlayWidget::RefreshSpectatorText </td>
+          <td>(</td>
+          <td class="paramtype">APlayerState *</td>          <td class="paramname"><span class="paramname"><em>Target</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00048">48</a> of file <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html">DTDeathOverlayWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00069">RefreshSpectatorButtonsVisibility()</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00087">SpectatorInfoFormat</a>, <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00024">Target</a>, and <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00063">TXT_SpectatorInfo</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00085">InitializeDeathOverlay()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00114">UpdateSpectatorTarget()</a>.</p>
+
+</div>
+</div>
+<a id="a0569e8d9663c265cedb55ef4bb5ee292" name="a0569e8d9663c265cedb55ef4bb5ee292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0569e8d9663c265cedb55ef4bb5ee292">&#9670;&#160;</a></span>RefreshTimerWidgets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTDeathOverlayWidget::RefreshTimerWidgets </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>InSecondsRemaining</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>InTotalDuration</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00017">17</a> of file <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html">DTDeathOverlayWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00009">FormatCountdownText()</a>, and <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00059">TXT_Timer</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00085">InitializeDeathOverlay()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00185">NativeTick()</a>.</p>
+
+</div>
+</div>
 <a id="a42b5ff94b2041ec8489febda06eee4d9" name="a42b5ff94b2041ec8489febda06eee4d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a42b5ff94b2041ec8489febda06eee4d9">&#9670;&#160;</a></span>UpdateSpectatorTarget()</h2>
 
@@ -640,13 +842,39 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00114">114</a> of file <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html">DTDeathOverlayWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00055">CurrentSpectatorTarget</a>, and <a class="el" href="#a85744c4a5c8c7463ea210802ae4c5c7c">OnSpectatorTargetChanged()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00055">CurrentSpectatorTarget</a>, <a class="el" href="#a85744c4a5c8c7463ea210802ae4c5c7c">OnSpectatorTargetChanged()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00048">RefreshSpectatorText()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00121">NativeOnActivated()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ac0a1faf2de57295795e77d9651d96c79" name="ac0a1faf2de57295795e77d9651d96c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a1faf2de57295795e77d9651d96c79">&#9670;&#160;</a></span>bCountingDown</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTDeathOverlayWidget::bCountingDown = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00109">109</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00085">InitializeDeathOverlay()</a>, <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00042">IsCountingDown()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00185">NativeTick()</a>.</p>
+
+</div>
+</div>
 <a id="ae198032a9f2a3798bf68d485e5c1a845" name="ae198032a9f2a3798bf68d485e5c1a845"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae198032a9f2a3798bf68d485e5c1a845">&#9670;&#160;</a></span>BTN_SpectatorNext</h2>
 
@@ -671,7 +899,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00121">NativeOnActivated()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00143">NativeOnDeactivated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00121">NativeOnActivated()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00143">NativeOnDeactivated()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00069">RefreshSpectatorButtonsVisibility()</a>.</p>
 
 </div>
 </div>
@@ -699,7 +927,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00075">75</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00121">NativeOnActivated()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00143">NativeOnDeactivated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00121">NativeOnActivated()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00143">NativeOnDeactivated()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00069">RefreshSpectatorButtonsVisibility()</a>.</p>
 
 </div>
 </div>
@@ -725,7 +953,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00055">55</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00039">GetCurrentSpectatorTarget()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00085">InitializeDeathOverlay()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00114">UpdateSpectatorTarget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00039">GetCurrentSpectatorTarget()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00085">InitializeDeathOverlay()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00069">RefreshSpectatorButtonsVisibility()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00114">UpdateSpectatorTarget()</a>.</p>
 
 </div>
 </div>
@@ -751,7 +979,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00052">52</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00036">GetLivesRemaining()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00085">InitializeDeathOverlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00036">GetLivesRemaining()</a>, <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00085">InitializeDeathOverlay()</a>, and <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00031">RefreshLivesText()</a>.</p>
 
 </div>
 </div>
@@ -780,6 +1008,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00079">79</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00031">RefreshLivesText()</a>.</p>
+
 </div>
 </div>
 <a id="a06645266582fbea3d80c34971f1fe292" name="a06645266582fbea3d80c34971f1fe292"></a>
@@ -805,6 +1035,8 @@ Protected Attributes</h2></td></tr>
 <p>Text shown when LivesRemaining == 0. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00083">83</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00031">RefreshLivesText()</a>.</p>
 
 </div>
 </div>
@@ -859,6 +1091,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00087">87</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00048">RefreshSpectatorText()</a>.</p>
+
 </div>
 </div>
 <a id="ae657b28c82e3b2a2393e9f482eaf1e95" name="ae657b28c82e3b2a2393e9f482eaf1e95"></a>
@@ -912,6 +1146,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00067">67</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00031">RefreshLivesText()</a>.</p>
+
 </div>
 </div>
 <a id="aa763dc9f1de1e9d3d667334fd52f1cb2" name="aa763dc9f1de1e9d3d667334fd52f1cb2"></a>
@@ -939,6 +1175,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00063">63</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00048">RefreshSpectatorText()</a>.</p>
+
 </div>
 </div>
 <a id="aefdccac4228c6e2b19b06493789310b6" name="aefdccac4228c6e2b19b06493789310b6"></a>
@@ -965,6 +1203,8 @@ Protected Attributes</h2></td></tr>
 <p>Hidden when not counting down. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_death_overlay_widget_8h_source.html#l00059">59</a> of file <a class="el" href="_d_t_death_overlay_widget_8h_source.html">DTDeathOverlayWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_death_overlay_widget_8cpp_source.html#l00017">RefreshTimerWidgets()</a>.</p>
 
 </div>
 </div>

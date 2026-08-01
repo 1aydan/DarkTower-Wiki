@@ -190,6 +190,10 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a9be8b1a52a8c74c697a8dce05dbd2c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw graph links using orthogonal branch-style routing instead of direct straight segments.  <br /></td></tr>
 <tr class="memitem:a85024a9d86781cb610d327efe396febd" id="r_a85024a9d86781cb610d327efe396febd"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_skill_tree_node_link.html">FSkillTreeNodeLink</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a85024a9d86781cb610d327efe396febd">NodeLinks</a></td></tr>
 <tr class="memdesc:a85024a9d86781cb610d327efe396febd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit graph links used for connectors and optional dependency visualization.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a990e0c6a3287c71f2a11c5db810c5b88" id="r_a990e0c6a3287c71f2a11c5db810c5b88"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a990e0c6a3287c71f2a11c5db810c5b88">HasNodeLink</a> (FGameplayTag FromNodeTag, FGameplayTag ToNodeTag, bool bUnlockOnly) const</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Data asset defining a single graph-authored skill tree (e.g., "Berserker", "Arcane"). </p>
@@ -641,6 +645,46 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a990e0c6a3287c71f2a11c5db810c5b88" name="a990e0c6a3287c71f2a11c5db810c5b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a990e0c6a3287c71f2a11c5db810c5b88">&#9670;&#160;</a></span>HasNodeLink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTSkillTreeDefinition::HasNodeLink </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>FromNodeTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>ToNodeTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bUnlockOnly</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00281">281</a> of file <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html">DTSkillTreeDefinition.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00048">NodeLinks</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00133">RebuildGraphLinksFromPrerequisites()</a>.</p>
+
+</div>
+</div>
 <a id="abeba0534f93fa8219a3c719ddecec664" name="abeba0534f93fa8219a3c719ddecec664"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abeba0534f93fa8219a3c719ddecec664">&#9670;&#160;</a></span>HasUnlockLinkSources()</h2>
 
@@ -683,7 +727,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00133">133</a> of file <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html">DTSkillTreeDefinition.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00082">FSkillTreeNodeLink::bIsUnlockLink</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00074">FSkillTreeNodeLink::FromNodeTag</a>, <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00040">GraphNodes</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00033">FSkillTreeNode::GridPosition</a>, <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00018">Left</a>, <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00048">NodeLinks</a>, <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00019">Right</a>, and <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00078">FSkillTreeNodeLink::ToNodeTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00082">FSkillTreeNodeLink::bIsUnlockLink</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00074">FSkillTreeNodeLink::FromNodeTag</a>, <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00040">GraphNodes</a>, <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00033">FSkillTreeNode::GridPosition</a>, <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00281">HasNodeLink()</a>, <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00018">Left</a>, <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00048">NodeLinks</a>, <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00019">Right</a>, and <a class="el" href="_d_t_skill_tree_types_8h_source.html#l00078">FSkillTreeNodeLink::ToNodeTag</a>.</p>
 
 </div>
 </div>
@@ -743,7 +787,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_skill_tree_definition_8h_source.html#l00048">48</a> of file <a class="el" href="_d_t_skill_tree_definition_8h_source.html">DTSkillTreeDefinition.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00055">GetUnlockLinkSourceNodeTags()</a>, <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00077">HasUnlockLinkSources()</a>, and <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00133">RebuildGraphLinksFromPrerequisites()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00055">GetUnlockLinkSourceNodeTags()</a>, <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00281">HasNodeLink()</a>, <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00077">HasUnlockLinkSources()</a>, and <a class="el" href="_d_t_skill_tree_definition_8cpp_source.html#l00133">RebuildGraphLinksFromPrerequisites()</a>.</p>
 
 </div>
 </div>

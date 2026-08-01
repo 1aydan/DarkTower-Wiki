@@ -40,6 +40,8 @@ var searchData=
   ['hostmapsetupinitialtab_37',['HostMapSetupInitialTab',['../class_a_d_t_portal.html#a2dd32c4ac046525582f61d19d702f681',1,'ADTPortal']]],
   ['hostmapsetupmapname_38',['HostMapSetupMapName',['../class_a_d_t_portal.html#a40ba84dfa962c9c3568cba78b8b8a3b5',1,'ADTPortal']]],
   ['hostmapsetupwidgetclass_39',['HostMapSetupWidgetClass',['../class_u_d_t_game_settings.html#ab174a54a90f5473ef2148cf37d5aa1e8',1,'UDTGameSettings']]],
-  ['hoverscale_40',['HoverScale',['../class_u_d_t_inventory_item_widget.html#ab0497835a7cf0aeb1430b115a32afb56',1,'UDTInventoryItemWidget']]],
-  ['hudwidget_41',['HudWidget',['../class_a_d_t_hud.html#a2715d1a8e06ec84a01da0718c1340764',1,'ADTHud']]]
+  ['hoveredcanvasposition_40',['HoveredCanvasPosition',['../class_f_d_t_skill_tree_asset_editor.html#a0838a62f7bac3881ad5acec996011d13',1,'FDTSkillTreeAssetEditor']]],
+  ['hoveredgridposition_41',['HoveredGridPosition',['../class_f_d_t_skill_tree_asset_editor.html#a3fb6922c04ea47e686fd4c1592f01d50',1,'FDTSkillTreeAssetEditor']]],
+  ['hoverscale_42',['HoverScale',['../class_u_d_t_inventory_item_widget.html#ab0497835a7cf0aeb1430b115a32afb56',1,'UDTInventoryItemWidget']]],
+  ['hudwidget_43',['HudWidget',['../class_a_d_t_hud.html#a2715d1a8e06ec84a01da0718c1340764',1,'ADTHud']]]
 ];

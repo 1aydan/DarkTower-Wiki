@@ -162,6 +162,11 @@ Public Attributes</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:af172d58ac46efb7939b5b0725abad9d5" id="r_af172d58ac46efb7939b5b0725abad9d5"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#af172d58ac46efb7939b5b0725abad9d5">ShouldFilterTarget</a> (const FTargetingRequestHandle &amp;TargetingHandle, const FTargetingDefaultResultData &amp;TargetData) const override</td></tr>
 <tr class="memdesc:af172d58ac46efb7939b5b0725abad9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override to filter targets based on health percentage.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0b0d95708c5371ee121d3f08bc2782ca" id="r_a0b0d95708c5371ee121d3f08bc2782ca"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0b0d95708c5371ee121d3f08bc2782ca">CompareHealthPercentage</a> (float ActualPercentage, float Threshold) const</td></tr>
+<tr class="memdesc:a0b0d95708c5371ee121d3f08bc2782ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to compare health percentage against threshold.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Filters targets based on health percentage Uses Gameplay Ability System to get health values. </p>
@@ -188,6 +193,43 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a0b0d95708c5371ee121d3f08bc2782ca" name="a0b0d95708c5371ee121d3f08bc2782ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b0d95708c5371ee121d3f08bc2782ca">&#9670;&#160;</a></span>CompareHealthPercentage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTTargetingFilterTask_Health::CompareHealthPercentage </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>ActualPercentage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Threshold</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper to compare health percentage against threshold. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_targeting_filter_task___health_8cpp_source.html#l00054">54</a> of file <a class="el" href="_d_t_targeting_filter_task___health_8cpp_source.html">DTTargetingFilterTask_Health.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00057">ComparisonMode</a>, <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00030">Equal</a>, <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00070">EqualityTolerance</a>, <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00018">GreaterThan</a>, <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00021">GreaterThanOrEqual</a>, <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00024">LessThan</a>, <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00027">LessThanOrEqual</a>, and <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00033">NotEqual</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_filter_task___health_8cpp_source.html#l00013">ShouldFilterTarget()</a>.</p>
+
+</div>
+</div>
 <a id="af172d58ac46efb7939b5b0725abad9d5" name="af172d58ac46efb7939b5b0725abad9d5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af172d58ac46efb7939b5b0725abad9d5">&#9670;&#160;</a></span>ShouldFilterTarget()</h2>
 
@@ -219,7 +261,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_filter_task___health_8cpp_source.html#l00013">13</a> of file <a class="el" href="_d_t_targeting_filter_task___health_8cpp_source.html">DTTargetingFilterTask_Health.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00077">bEnableHealthComparison</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00422">UDTAbilityCoreComponent::GetHealth()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00432">UDTAbilityCoreComponent::GetMaxHealth()</a>, and <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00064">HealthPercentageThreshold</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00077">bEnableHealthComparison</a>, <a class="el" href="_d_t_targeting_filter_task___health_8cpp_source.html#l00054">CompareHealthPercentage()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00422">UDTAbilityCoreComponent::GetHealth()</a>, <a class="el" href="_d_t_ability_core_component_8cpp_source.html#l00432">UDTAbilityCoreComponent::GetMaxHealth()</a>, and <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00064">HealthPercentageThreshold</a>.</p>
 
 </div>
 </div>
@@ -260,6 +302,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00057">57</a> of file <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html">DTTargetingFilterTask_Health.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_filter_task___health_8cpp_source.html#l00054">CompareHealthPercentage()</a>.</p>
+
 </div>
 </div>
 <a id="a3832a1ff16538956964f1d5778beac40" name="a3832a1ff16538956964f1d5778beac40"></a>
@@ -277,6 +321,8 @@ Protected Member Functions</h2></td></tr>
 <p>Tolerance for Equal/NotEqual comparisons. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html#l00070">70</a> of file <a class="el" href="_d_t_targeting_filter_task___health_8h_source.html">DTTargetingFilterTask_Health.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_targeting_filter_task___health_8cpp_source.html#l00054">CompareHealthPercentage()</a>.</p>
 
 </div>
 </div>

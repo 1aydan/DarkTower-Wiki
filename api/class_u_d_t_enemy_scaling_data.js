@@ -6,6 +6,7 @@ var class_u_d_t_enemy_scaling_data =
     [ "CalculateScaledLevel", "class_u_d_t_enemy_scaling_data.html#acb7ae6890d7b58dbfc2320449f03d473", null ],
     [ "CalculateScaledLife", "class_u_d_t_enemy_scaling_data.html#a63fc07831c0e958b3decf007c2e92ecd", null ],
     [ "CalculateScaledResistance", "class_u_d_t_enemy_scaling_data.html#afea066d1442e070843cda7b1168c0c0c", null ],
+    [ "ComputeBandedMultiplier", "class_u_d_t_enemy_scaling_data.html#a9bf95640749a38f6f13f152890c2c35d", null ],
     [ "CreateEnemyScalingSpec", "class_u_d_t_enemy_scaling_data.html#ac0bee96b0b808c9b98cfa6d58a51c736", null ],
     [ "GetTierMultiplier", "class_u_d_t_enemy_scaling_data.html#a4aabf62ca726004af0c656011aa946fb", null ],
     [ "EnemyStatInitializationEffect", "class_u_d_t_enemy_scaling_data.html#acec5c54a29d9f608a2f32784bc882dba", null ],

@@ -176,6 +176,14 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:af9d2ab8d521aec1e07a78bea4213323e" id="r_af9d2ab8d521aec1e07a78bea4213323e"><td class="memItemLeft">TObjectPtr&lt; UHorizontalBox &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af9d2ab8d521aec1e07a78bea4213323e">HB_TabButtonContainer</a></td></tr>
 <tr class="memitem:a6d773a62ef94dc84184b0a07049a877b" id="r_a6d773a62ef94dc84184b0a07049a877b"><td class="memItemLeft">TObjectPtr&lt; UCommonActionWidget &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6d773a62ef94dc84184b0a07049a877b">AW_TabLeft</a></td></tr>
 <tr class="memitem:a9f8f6a394efa39cef31f6580ded10fcc" id="r_a9f8f6a394efa39cef31f6580ded10fcc"><td class="memItemLeft">TObjectPtr&lt; UCommonActionWidget &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9f8f6a394efa39cef31f6580ded10fcc">AW_TabRight</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af7ab753113da72bac758228d0c0b6d4f" id="r_af7ab753113da72bac758228d0c0b6d4f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af7ab753113da72bac758228d0c0b6d4f">SetupTabs</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab481b2dd54ac20d86a3d7eded63298b9" id="r_ab481b2dd54ac20d86a3d7eded63298b9"><td class="memItemLeft">TMap&lt; FName, <a class="el" href="struct_f_tab_entry_info.html">FTabEntryInfo</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab481b2dd54ac20d86a3d7eded63298b9">PendingTabLabelInfoMap</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for tab list widgets in Dark Tower. </p>
@@ -286,6 +294,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00081">81</a> of file <a class="el" href="_d_t_tab_list_widget_8cpp_source.html">DTTabListWidget.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00201">SetupTabs()</a>.</p>
+
 </div>
 </div>
 <a id="ae311ae3b68e70b2eb37aa9618ccfe675" name="ae311ae3b68e70b2eb37aa9618ccfe675"></a>
@@ -346,7 +356,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00040">40</a> of file <a class="el" href="_d_t_tab_list_widget_8cpp_source.html">DTTabListWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00091">GetPreregisteredTabInfo()</a>, and <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00111">HB_TabButtonContainer</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00091">GetPreregisteredTabInfo()</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00111">HB_TabButtonContainer</a>, and <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00134">PendingTabLabelInfoMap</a>.</p>
 
 </div>
 </div>
@@ -471,6 +481,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00019">19</a> of file <a class="el" href="_d_t_tab_list_widget_8cpp_source.html">DTTabListWidget.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00201">SetupTabs()</a>.</p>
+
 </div>
 </div>
 <a id="a00a7a70bfe72206f7253e18ab9ef8d1d" name="a00a7a70bfe72206f7253e18ab9ef8d1d"></a>
@@ -548,7 +560,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00119">119</a> of file <a class="el" href="_d_t_tab_list_widget_8cpp_source.html">DTTabListWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00037">FTabEntryInfo::bHidden</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00046">FTabEntryInfo::CreatedTabContentWidget</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00077">OnTabContentCreated</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00078">OnTabContentCreatedNative</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00040">FTabEntryInfo::TabButtonType</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00043">FTabEntryInfo::TabContentType</a>, and <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00028">FTabEntryInfo::TabId</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00037">FTabEntryInfo::bHidden</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00046">FTabEntryInfo::CreatedTabContentWidget</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00077">OnTabContentCreated</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00078">OnTabContentCreatedNative</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00134">PendingTabLabelInfoMap</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00040">FTabEntryInfo::TabButtonType</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00043">FTabEntryInfo::TabContentType</a>, and <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00028">FTabEntryInfo::TabId</a>.</p>
 
 </div>
 </div>
@@ -574,6 +586,37 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00107">107</a> of file <a class="el" href="_d_t_tab_list_widget_8cpp_source.html">DTTabListWidget.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00081">PreregisteredTabInfoArray</a>.</p>
+
+</div>
+</div>
+<a id="af7ab753113da72bac758228d0c0b6d4f" name="af7ab753113da72bac758228d0c0b6d4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7ab753113da72bac758228d0c0b6d4f">&#9670;&#160;</a></span>SetupTabs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTabListWidget::SetupTabs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00201">201</a> of file <a class="el" href="_d_t_tab_list_widget_8cpp_source.html">DTTabListWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00077">OnTabContentCreated</a>, <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00078">OnTabContentCreatedNative</a>, and <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00081">PreregisteredTabInfoArray</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00081">HandlePostLinkedSwitcherChanged()</a>, and <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00019">NativeConstruct()</a>.</p>
 
 </div>
 </div>
@@ -696,7 +739,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00077">77</a> of file <a class="el" href="_d_t_tab_list_widget_8h_source.html">DTTabListWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00119">RegisterDynamicTab()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00119">RegisterDynamicTab()</a>, and <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00201">SetupTabs()</a>.</p>
 
 </div>
 </div>
@@ -714,7 +757,33 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00078">78</a> of file <a class="el" href="_d_t_tab_list_widget_8h_source.html">DTTabListWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00119">RegisterDynamicTab()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00119">RegisterDynamicTab()</a>, and <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00201">SetupTabs()</a>.</p>
+
+</div>
+</div>
+<a id="ab481b2dd54ac20d86a3d7eded63298b9" name="ab481b2dd54ac20d86a3d7eded63298b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab481b2dd54ac20d86a3d7eded63298b9">&#9670;&#160;</a></span>PendingTabLabelInfoMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMap&lt;FName, <a class="el" href="struct_f_tab_entry_info.html">FTabEntryInfo</a>&gt; UDTTabListWidget::PendingTabLabelInfoMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00134">134</a> of file <a class="el" href="_d_t_tab_list_widget_8h_source.html">DTTabListWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00040">HandleTabCreation_Implementation()</a>, and <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00119">RegisterDynamicTab()</a>.</p>
 
 </div>
 </div>
@@ -732,7 +801,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00081">81</a> of file <a class="el" href="_d_t_tab_list_widget_8h_source.html">DTTabListWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00086">GetAllPreregisteredTabInfos()</a>, <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00091">GetPreregisteredTabInfo()</a>, <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00067">HandlePreLinkedSwitcherChanged()</a>, <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00153">IsFirstTabActive()</a>, <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00163">IsLastTabActive()</a>, <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00026">NativeDestruct()</a>, and <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00107">SetTabHiddenState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_tab_list_widget_8h_source.html#l00086">GetAllPreregisteredTabInfos()</a>, <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00091">GetPreregisteredTabInfo()</a>, <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00067">HandlePreLinkedSwitcherChanged()</a>, <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00153">IsFirstTabActive()</a>, <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00163">IsLastTabActive()</a>, <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00026">NativeDestruct()</a>, <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00107">SetTabHiddenState()</a>, and <a class="el" href="_d_t_tab_list_widget_8cpp_source.html#l00201">SetupTabs()</a>.</p>
 
 </div>
 </div>

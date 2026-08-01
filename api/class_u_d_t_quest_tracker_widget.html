@@ -163,6 +163,20 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ac1e89dc59afc519271c2158178fdec8c" id="r_ac1e89dc59afc519271c2158178fdec8c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac1e89dc59afc519271c2158178fdec8c">bIncludeSharedQuests</a> = true</td></tr>
 <tr class="memitem:a2207965b81777e1c372a5698c6676a15" id="r_a2207965b81777e1c372a5698c6676a15"><td class="memItemLeft">TArray&lt; FQuestDisplayData &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2207965b81777e1c372a5698c6676a15">CachedDisplayEntries</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ad520e33a87ba675dd992793a26e6ee3a" id="r_ad520e33a87ba675dd992793a26e6ee3a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad520e33a87ba675dd992793a26e6ee3a">HandleQuestStateChanged</a> (FGameplayTag QuestTag, EQuestState OldState, EQuestState NewState)</td></tr>
+<tr class="memitem:a2b9017b15b6e5db3453f8e3d0a2f54f5" id="r_a2b9017b15b6e5db3453f8e3d0a2f54f5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2b9017b15b6e5db3453f8e3d0a2f54f5">HandleQuestObjectiveProgress</a> (FGameplayTag QuestTag, FGuid ObjectiveId, float CurrentValue, float TargetValue, EQuestObjectiveState State)</td></tr>
+<tr class="memitem:af9a937ee993c0c9e53c70ed61566f69b" id="r_af9a937ee993c0c9e53c70ed61566f69b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af9a937ee993c0c9e53c70ed61566f69b">BindQuestDelegates</a> ()</td></tr>
+<tr class="memitem:a83a7802586e8edce23a8c21c96c40de5" id="r_a83a7802586e8edce23a8c21c96c40de5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a83a7802586e8edce23a8c21c96c40de5">UnbindQuestDelegates</a> ()</td></tr>
+<tr class="memitem:a327469acd2c4ebbcc2563f5a58c92b96" id="r_a327469acd2c4ebbcc2563f5a58c92b96"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a327469acd2c4ebbcc2563f5a58c92b96">ShouldIncludeEntry</a> (const FQuestData &amp;Entry) const</td></tr>
+<tr class="memitem:afaf6fa959dff68cd76d2f28d1134b748" id="r_afaf6fa959dff68cd76d2f28d1134b748"><td class="memItemLeft"><a class="el" href="class_a_d_t_player_state.html">ADTPlayerState</a> *&#160;</td><td class="memItemRight"><a class="el" href="#afaf6fa959dff68cd76d2f28d1134b748">ResolvePlayerState</a> () const</td></tr>
+<tr class="memitem:aa59f267e8e77248a03e1731e3136eb46" id="r_aa59f267e8e77248a03e1731e3136eb46"><td class="memItemLeft">UQuestSubsystem *&#160;</td><td class="memItemRight"><a class="el" href="#aa59f267e8e77248a03e1731e3136eb46">ResolveQuestSubsystem</a> () const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adca9ecfa4ee86f445169ad7e198c5764" id="r_adca9ecfa4ee86f445169ad7e198c5764"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#adca9ecfa4ee86f445169ad7e198c5764">bQuestDelegatesBound</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Lightweight HUD-oriented quest tracker. </p>
@@ -190,6 +204,37 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="af9a937ee993c0c9e53c70ed61566f69b" name="af9a937ee993c0c9e53c70ed61566f69b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9a937ee993c0c9e53c70ed61566f69b">&#9670;&#160;</a></span>BindQuestDelegates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTQuestTrackerWidget::BindQuestDelegates </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00081">81</a> of file <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html">DTQuestTrackerWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_quest_tracker_widget_8h_source.html#l00047">bQuestDelegatesBound</a>, <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00076">HandleQuestObjectiveProgress()</a>, <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00071">HandleQuestStateChanged()</a>, and <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00142">ResolveQuestSubsystem()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00015">NativeConstruct()</a>.</p>
+
+</div>
+</div>
 <a id="a79e19fe14a2662eb24dcaada72dcd208" name="a79e19fe14a2662eb24dcaada72dcd208"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a79e19fe14a2662eb24dcaada72dcd208">&#9670;&#160;</a></span>GetCachedDisplayEntries()</h2>
 
@@ -223,6 +268,96 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a2b9017b15b6e5db3453f8e3d0a2f54f5" name="a2b9017b15b6e5db3453f8e3d0a2f54f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9017b15b6e5db3453f8e3d0a2f54f5">&#9670;&#160;</a></span>HandleQuestObjectiveProgress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTQuestTrackerWidget::HandleQuestObjectiveProgress </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>QuestTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGuid</td>          <td class="paramname"><span class="paramname"><em>ObjectiveId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>CurrentValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>TargetValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EQuestObjectiveState</td>          <td class="paramname"><span class="paramname"><em>State</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00076">76</a> of file <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html">DTQuestTrackerWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00030">RefreshQuestTracker()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00081">BindQuestDelegates()</a>, and <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00096">UnbindQuestDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="ad520e33a87ba675dd992793a26e6ee3a" name="ad520e33a87ba675dd992793a26e6ee3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad520e33a87ba675dd992793a26e6ee3a">&#9670;&#160;</a></span>HandleQuestStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTQuestTrackerWidget::HandleQuestStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>QuestTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EQuestState</td>          <td class="paramname"><span class="paramname"><em>OldState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EQuestState</td>          <td class="paramname"><span class="paramname"><em>NewState</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00071">71</a> of file <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html">DTQuestTrackerWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00030">RefreshQuestTracker()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00081">BindQuestDelegates()</a>, and <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00096">UnbindQuestDelegates()</a>.</p>
+
+</div>
+</div>
 <a id="a583c5a2cbad3c38053cfaa7aa34139ef" name="a583c5a2cbad3c38053cfaa7aa34139ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a583c5a2cbad3c38053cfaa7aa34139ef">&#9670;&#160;</a></span>NativeConstruct()</h2>
 
@@ -248,7 +383,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html">DTQuestTrackerWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00030">RefreshQuestTracker()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00081">BindQuestDelegates()</a>, and <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00030">RefreshQuestTracker()</a>.</p>
 
 </div>
 </div>
@@ -276,6 +411,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00023">23</a> of file <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html">DTQuestTrackerWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00096">UnbindQuestDelegates()</a>.</p>
 
 </div>
 </div>
@@ -325,9 +462,129 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00030">30</a> of file <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html">DTQuestTrackerWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_quest_tracker_widget_8h_source.html#l00044">CachedDisplayEntries</a>, <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00018">Left</a>, <a class="el" href="#af940f7de4c7276eb816ebd7172d32407">OnQuestTrackerRefreshed()</a>, and <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00019">Right</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_quest_tracker_widget_8h_source.html#l00044">CachedDisplayEntries</a>, <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00018">Left</a>, <a class="el" href="#af940f7de4c7276eb816ebd7172d32407">OnQuestTrackerRefreshed()</a>, <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00132">ResolvePlayerState()</a>, <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00142">ResolveQuestSubsystem()</a>, <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00019">Right</a>, and <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00112">ShouldIncludeEntry()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00015">NativeConstruct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00076">HandleQuestObjectiveProgress()</a>, <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00071">HandleQuestStateChanged()</a>, and <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00015">NativeConstruct()</a>.</p>
+
+</div>
+</div>
+<a id="afaf6fa959dff68cd76d2f28d1134b748" name="afaf6fa959dff68cd76d2f28d1134b748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf6fa959dff68cd76d2f28d1134b748">&#9670;&#160;</a></span>ResolvePlayerState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_d_t_player_state.html">ADTPlayerState</a> * UDTQuestTrackerWidget::ResolvePlayerState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00132">132</a> of file <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html">DTQuestTrackerWidget.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00030">RefreshQuestTracker()</a>.</p>
+
+</div>
+</div>
+<a id="aa59f267e8e77248a03e1731e3136eb46" name="aa59f267e8e77248a03e1731e3136eb46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa59f267e8e77248a03e1731e3136eb46">&#9670;&#160;</a></span>ResolveQuestSubsystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UQuestSubsystem * UDTQuestTrackerWidget::ResolveQuestSubsystem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00142">142</a> of file <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html">DTQuestTrackerWidget.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00081">BindQuestDelegates()</a>, <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00030">RefreshQuestTracker()</a>, and <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00096">UnbindQuestDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="a327469acd2c4ebbcc2563f5a58c92b96" name="a327469acd2c4ebbcc2563f5a58c92b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a327469acd2c4ebbcc2563f5a58c92b96">&#9670;&#160;</a></span>ShouldIncludeEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTQuestTrackerWidget::ShouldIncludeEntry </td>
+          <td>(</td>
+          <td class="paramtype">const FQuestData &amp;</td>          <td class="paramname"><span class="paramname"><em>Entry</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00112">112</a> of file <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html">DTQuestTrackerWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_quest_tracker_widget_8h_source.html#l00041">bIncludeSharedQuests</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00030">RefreshQuestTracker()</a>.</p>
+
+</div>
+</div>
+<a id="a83a7802586e8edce23a8c21c96c40de5" name="a83a7802586e8edce23a8c21c96c40de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a7802586e8edce23a8c21c96c40de5">&#9670;&#160;</a></span>UnbindQuestDelegates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTQuestTrackerWidget::UnbindQuestDelegates </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00096">96</a> of file <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html">DTQuestTrackerWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_quest_tracker_widget_8h_source.html#l00047">bQuestDelegatesBound</a>, <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00076">HandleQuestObjectiveProgress()</a>, <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00071">HandleQuestStateChanged()</a>, and <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00142">ResolveQuestSubsystem()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00023">NativeDestruct()</a>.</p>
 
 </div>
 </div>
@@ -353,6 +610,34 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8h_source.html#l00041">41</a> of file <a class="el" href="_d_t_quest_tracker_widget_8h_source.html">DTQuestTrackerWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00112">ShouldIncludeEntry()</a>.</p>
+
+</div>
+</div>
+<a id="adca9ecfa4ee86f445169ad7e198c5764" name="adca9ecfa4ee86f445169ad7e198c5764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca9ecfa4ee86f445169ad7e198c5764">&#9670;&#160;</a></span>bQuestDelegatesBound</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTQuestTrackerWidget::bQuestDelegatesBound = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_quest_tracker_widget_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_quest_tracker_widget_8h_source.html">DTQuestTrackerWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00081">BindQuestDelegates()</a>, and <a class="el" href="_d_t_quest_tracker_widget_8cpp_source.html#l00096">UnbindQuestDelegates()</a>.</p>
 
 </div>
 </div>

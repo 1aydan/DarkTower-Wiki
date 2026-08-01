@@ -16,6 +16,7 @@ var class_u_d_t_skill_tree_definition =
     [ "GetTotalInvestablePoints", "class_u_d_t_skill_tree_definition.html#a3e506a01939cf1bad9a16d1bbcf9a016", null ],
     [ "GetUnlockLinkSourceNodeTags", "class_u_d_t_skill_tree_definition.html#a525f9d5ecf1983dd3223be4180999622", null ],
     [ "HasGraphLayout", "class_u_d_t_skill_tree_definition.html#a2d8bc00eca5dec25841f57ce4a1ab7fc", null ],
+    [ "HasNodeLink", "class_u_d_t_skill_tree_definition.html#a990e0c6a3287c71f2a11c5db810c5b88", null ],
     [ "HasUnlockLinkSources", "class_u_d_t_skill_tree_definition.html#abeba0534f93fa8219a3c719ddecec664", null ],
     [ "RebuildGraphLinksFromPrerequisites", "class_u_d_t_skill_tree_definition.html#ad382ba743b04e8f32fd52ae5344036eb", null ],
     [ "bUseTreeStyleLinkRouting", "class_u_d_t_skill_tree_definition.html#a9be8b1a52a8c74c697a8dce05dbd2c26", null ],

@@ -264,6 +264,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:aec6449460dc1082656be0f0d8d56bfda pro_attribs_class_u_d_t_gameplay_ability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delegate handles for the cooldown tag events we're listening to.  <br /></td></tr>
 <tr class="memitem:ab60f474aeb5c75709872a23c80691656 pro_attribs_class_u_d_t_gameplay_ability" id="r_ab60f474aeb5c75709872a23c80691656"><td class="memItemLeft">FDelegateHandle&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#ab60f474aeb5c75709872a23c80691656">AbilityStackChangedDelegateHandle</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a936f9fbcc5ff4f15be2faa98b91353f7" id="r_a936f9fbcc5ff4f15be2faa98b91353f7"><td class="memItemLeft">FActiveGameplayEffectHandle&#160;</td><td class="memItemRight"><a class="el" href="#a936f9fbcc5ff4f15be2faa98b91353f7">InterruptStateEffectHandle</a></td></tr>
+<tr class="memitem:ac8c28b348b34699713b1375b5c44010b" id="r_ac8c28b348b34699713b1375b5c44010b"><td class="memItemLeft"><a class="el" href="_d_t_character_data_8h.html#aa04e94846bfcc66be0dba629403fcfec">EDTHitReactTier</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac8c28b348b34699713b1375b5c44010b">ActiveInterruptTier</a> = <a class="el" href="_d_t_character_data_8h.html#aa04e94846bfcc66be0dba629403fcfeca6adf97f83acf6453d4a6a4b1070f3754">EDTHitReactTier::None</a></td></tr>
+<tr class="memdesc:ac8c28b348b34699713b1375b5c44010b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which interrupting tier (Medium/Heavy) is currently running, or None.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_u_d_t_gameplay_ability"><td colspan="2">Public Attributes inherited from <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a></td></tr>
@@ -385,7 +391,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00186">186</a> of file <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html">DTGameplayAbility_HitReact.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">UDTGameplayAbility::ChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00028">Exclusive_Blocking</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00431">UDTBlueprintLibrary::GetHitDirection()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00039">ADTCharacter::GetHitReactMontage()</a>, <a class="el" href="_d_t_character_data_8cpp_source.html#l00072">UDTCharacterData::GetHitReactMontage()</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00022">Heavy</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00115">FDTHitReactConfig::HeavyGameplayCueTag</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00106">FDTHitReactConfig::HeavyPlayRate</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00146">FDTHitReactConfig::HeavyStateDuration</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00035">HeavyStateEffect</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00162">UDTCharacterData::HitReactConfig</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00020">Light</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00109">FDTHitReactConfig::LightGameplayCueTag</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00167">MakeHitReactCueParameters()</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00021">Medium</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00112">FDTHitReactConfig::MediumGameplayCueTag</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00142">FDTHitReactConfig::MediumStateDuration</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00031">MediumStateEffect</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00019">None</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00322">OnDeathDuringReact()</a>, and <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00317">OnReactFinished()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00068">ActiveInterruptTier</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">UDTGameplayAbility::ChangeActivationGroup()</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00028">Exclusive_Blocking</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00431">UDTBlueprintLibrary::GetHitDirection()</a>, <a class="el" href="_d_t_character_8cpp_source.html#l00039">ADTCharacter::GetHitReactMontage()</a>, <a class="el" href="_d_t_character_data_8cpp_source.html#l00072">UDTCharacterData::GetHitReactMontage()</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00022">Heavy</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00115">FDTHitReactConfig::HeavyGameplayCueTag</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00106">FDTHitReactConfig::HeavyPlayRate</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00146">FDTHitReactConfig::HeavyStateDuration</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00035">HeavyStateEffect</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00162">UDTCharacterData::HitReactConfig</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00065">InterruptStateEffectHandle</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00020">Light</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00109">FDTHitReactConfig::LightGameplayCueTag</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00167">MakeHitReactCueParameters()</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00021">Medium</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00112">FDTHitReactConfig::MediumGameplayCueTag</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00142">FDTHitReactConfig::MediumStateDuration</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00031">MediumStateEffect</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00019">None</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00322">OnDeathDuringReact()</a>, and <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00317">OnReactFinished()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00062">ActivateAbility()</a>.</p>
 
@@ -516,7 +522,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00098">98</a> of file <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html">DTGameplayAbility_HitReact.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">UDTGameplayAbility::ChangeActivationGroup()</a>, <a class="el" href="_d_t_character_8h_source.html#l00044">ADTCharacter::GetCharacterData()</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00022">Heavy</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00162">UDTCharacterData::HitReactConfig</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00039">ImmunityEffect</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00134">FDTHitReactConfig::ImmunityWindow</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00022">Independent</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00138">FDTHitReactConfig::MediumImmunityWindow</a>, and <a class="el" href="_d_t_character_data_8h_source.html#l00019">None</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00068">ActiveInterruptTier</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00181">UDTGameplayAbility::ChangeActivationGroup()</a>, <a class="el" href="_d_t_character_8h_source.html#l00044">ADTCharacter::GetCharacterData()</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00022">Heavy</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00162">UDTCharacterData::HitReactConfig</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00039">ImmunityEffect</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00134">FDTHitReactConfig::ImmunityWindow</a>, <a class="el" href="_d_t_gameplay_ability_8h_source.html#l00022">Independent</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00065">InterruptStateEffectHandle</a>, <a class="el" href="_d_t_character_data_8h_source.html#l00138">FDTHitReactConfig::MediumImmunityWindow</a>, and <a class="el" href="_d_t_character_data_8h_source.html#l00019">None</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00062">ActivateAbility()</a>, <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00322">OnDeathDuringReact()</a>, and <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00317">OnReactFinished()</a>.</p>
 
@@ -618,6 +624,35 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ac8c28b348b34699713b1375b5c44010b" name="ac8c28b348b34699713b1375b5c44010b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c28b348b34699713b1375b5c44010b">&#9670;&#160;</a></span>ActiveInterruptTier</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_d_t_character_data_8h.html#aa04e94846bfcc66be0dba629403fcfec">EDTHitReactTier</a> UDTGameplayAbility_HitReact::ActiveInterruptTier = <a class="el" href="_d_t_character_data_8h.html#aa04e94846bfcc66be0dba629403fcfeca6adf97f83acf6453d4a6a4b1070f3754">EDTHitReactTier::None</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Which interrupting tier (Medium/Heavy) is currently running, or None. </p>
+<p>Drives EndAbility cleanup + immunity window. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00068">68</a> of file <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html">DTGameplayAbility_HitReact.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00186">ApplyHitReact()</a>, and <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00098">EndAbility()</a>.</p>
+
+</div>
+</div>
 <a id="af5f3ec791b81a6ac6334f9b104c78f8d" name="af5f3ec791b81a6ac6334f9b104c78f8d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5f3ec791b81a6ac6334f9b104c78f8d">&#9670;&#160;</a></span>HeavyStateEffect</h2>
 
@@ -673,6 +708,32 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00039">39</a> of file <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html">DTGameplayAbility_HitReact.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00098">EndAbility()</a>.</p>
+
+</div>
+</div>
+<a id="a936f9fbcc5ff4f15be2faa98b91353f7" name="a936f9fbcc5ff4f15be2faa98b91353f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a936f9fbcc5ff4f15be2faa98b91353f7">&#9670;&#160;</a></span>InterruptStateEffectHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FActiveGameplayEffectHandle UDTGameplayAbility_HitReact::InterruptStateEffectHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html#l00065">65</a> of file <a class="el" href="_d_t_gameplay_ability___hit_react_8h_source.html">DTGameplayAbility_HitReact.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00186">ApplyHitReact()</a>, and <a class="el" href="_d_t_gameplay_ability___hit_react_8cpp_source.html#l00098">EndAbility()</a>.</p>
 
 </div>
 </div>

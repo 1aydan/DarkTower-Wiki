@@ -233,6 +233,52 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a5fd39474aa4b25874afc987eaee38a0a" id="r_a5fd39474aa4b25874afc987eaee38a0a"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_input_config.html">UDTInputConfig</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5fd39474aa4b25874afc987eaee38a0a">InputConfig</a></td></tr>
 <tr class="memdesc:a5fd39474aa4b25874afc987eaee38a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ability input config: maps ability input actions to the tags input routes by, plus targeting confirm/cancel.  <br /></td></tr>
 <tr class="memitem:a9aae3935610582f6033c9f430bf1763b" id="r_a9aae3935610582f6033c9f430bf1763b"><td class="memItemLeft">TObjectPtr&lt; UDungeonBuildSystemPlayerControllerComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9aae3935610582f6033c9f430bf1763b">PlayerBuildSystemComponent</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aca0df1604bf79e408d56d4a54c18a05d" id="r_aca0df1604bf79e408d56d4a54c18a05d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aca0df1604bf79e408d56d4a54c18a05d">HandleHostMapSetupAction</a> ()</td></tr>
+<tr class="memitem:ae41acb7b872ad086371939f2ca8ae3f2" id="r_ae41acb7b872ad086371939f2ca8ae3f2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae41acb7b872ad086371939f2ca8ae3f2">HandleEscapeAction</a> ()</td></tr>
+<tr class="memitem:ae5806325d183e53e266d3fb45f235c9e" id="r_ae5806325d183e53e266d3fb45f235c9e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae5806325d183e53e266d3fb45f235c9e">HandleCharacterOverviewAction</a> ()</td></tr>
+<tr class="memitem:a144255b0e7e1761a2df19c8f0cfec997" id="r_a144255b0e7e1761a2df19c8f0cfec997"><td class="memItemLeft">FString&#160;</td><td class="memItemRight"><a class="el" href="#a144255b0e7e1761a2df19c8f0cfec997">GetCurrentMapName</a> () const</td></tr>
+<tr class="memitem:a0ee41b12f6ac76fd7f77d7d5062b2aad" id="r_a0ee41b12f6ac76fd7f77d7d5062b2aad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0ee41b12f6ac76fd7f77d7d5062b2aad">HandleSpectatorTargetDied</a> (FGameplayTag Channel, const struct <a class="el" href="struct_f_d_t_player_death_message.html">FDTPlayerDeathMessage</a> &amp;Message)</td></tr>
+<tr class="memdesc:a0ee41b12f6ac76fd7f77d7d5062b2aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server-side: called when any player dies.  <br /></td></tr>
+<tr class="memitem:a68bae2ed693133df5ee6e2822efe5e28" id="r_a68bae2ed693133df5ee6e2822efe5e28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a68bae2ed693133df5ee6e2822efe5e28">LoadAndSendSaveData</a> ()</td></tr>
+<tr class="memdesc:a68bae2ed693133df5ee6e2822efe5e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to load local save and send to server.  <br /></td></tr>
+<tr class="memitem:a3200745c0cd869726018d678b6caac05" id="r_a3200745c0cd869726018d678b6caac05"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3200745c0cd869726018d678b6caac05">SendSaveDataInChunks</a> (const TArray&lt; uint8 &gt; &amp;SaveGameBytes)</td></tr>
+<tr class="memdesc:a3200745c0cd869726018d678b6caac05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to send chunked save data to server.  <br /></td></tr>
+<tr class="memitem:afac8cebb0df3144d9711de786bc50bf4" id="r_afac8cebb0df3144d9711de786bc50bf4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afac8cebb0df3144d9711de786bc50bf4">SendNextSaveChunk</a> ()</td></tr>
+<tr class="memdesc:afac8cebb0df3144d9711de786bc50bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer callback to send next chunk.  <br /></td></tr>
+<tr class="memitem:a617b78263205b3c6baba4f752e37f64c" id="r_a617b78263205b3c6baba4f752e37f64c"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a617b78263205b3c6baba4f752e37f64c template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#a617b78263205b3c6baba4f752e37f64c">PushWidgetToLayer</a> (TSubclassOf&lt; T &gt; WidgetClass, FGameplayTag LayerTag)</td></tr>
+<tr class="memdesc:a617b78263205b3c6baba4f752e37f64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a widget class onto a UI layer for the local player.  <br /></td></tr>
+<tr class="memitem:ac64ad33d90fd57eb10e320c27fb362ef" id="r_ac64ad33d90fd57eb10e320c27fb362ef"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ac64ad33d90fd57eb10e320c27fb362ef template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac64ad33d90fd57eb10e320c27fb362ef">ToggleWidgetOnLayer</a> (TObjectPtr&lt; T &gt; &amp;ActiveWidget, TSubclassOf&lt; T &gt; WidgetClass, FGameplayTag LayerTag)</td></tr>
+<tr class="memdesc:ac64ad33d90fd57eb10e320c27fb362ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle a widget on a UI layer.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4d3f47ed47e08f5d56ab2b70e866330e" id="r_a4d3f47ed47e08f5d56ab2b70e866330e"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_death_overlay_widget.html">UDTDeathOverlayWidget</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4d3f47ed47e08f5d56ab2b70e866330e">ActiveDeathOverlayWidget</a></td></tr>
+<tr class="memdesc:a4d3f47ed47e08f5d56ab2b70e866330e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently displayed death overlay widget — covers both respawn countdown and mortal spectating (client only).  <br /></td></tr>
+<tr class="memitem:a32c0db9af3b9ff92c7839eb77ceed5e5" id="r_a32c0db9af3b9ff92c7839eb77ceed5e5"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_escape_widget.html">UDTEscapeWidget</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a32c0db9af3b9ff92c7839eb77ceed5e5">ActiveEscapeWidget</a></td></tr>
+<tr class="memdesc:a32c0db9af3b9ff92c7839eb77ceed5e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active escape menu widget, if currently pushed (client only).  <br /></td></tr>
+<tr class="memitem:af1cf6a11b84e2a13966f742ee9ca7095" id="r_af1cf6a11b84e2a13966f742ee9ca7095"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_character_overview_widget.html">UDTCharacterOverviewWidget</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af1cf6a11b84e2a13966f742ee9ca7095">ActiveCharacterOverviewWidget</a></td></tr>
+<tr class="memdesc:af1cf6a11b84e2a13966f742ee9ca7095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active character overview widget, if currently pushed (client only).  <br /></td></tr>
+<tr class="memitem:a3e19b420805ae6c1c7199a0936143b87" id="r_a3e19b420805ae6c1c7199a0936143b87"><td class="memItemLeft">TWeakObjectPtr&lt; APlayerState &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3e19b420805ae6c1c7199a0936143b87">CurrentSpectatorTarget</a></td></tr>
+<tr class="memdesc:a3e19b420805ae6c1c7199a0936143b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Player state currently being spectated (client only).  <br /></td></tr>
+<tr class="memitem:ae10286b3009e97b87cf1da605a5c99e2" id="r_ae10286b3009e97b87cf1da605a5c99e2"><td class="memItemLeft">TMap&lt; int32, TArray&lt; uint8 &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae10286b3009e97b87cf1da605a5c99e2">ReceivedChunks</a></td></tr>
+<tr class="memdesc:ae10286b3009e97b87cf1da605a5c99e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chunk assembly (SERVER ONLY).  <br /></td></tr>
+<tr class="memitem:ae6e6d66b5ad60a10a4a2230dc87b69c2" id="r_ae6e6d66b5ad60a10a4a2230dc87b69c2"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#ae6e6d66b5ad60a10a4a2230dc87b69c2">ExpectedTotalChunks</a> = 0</td></tr>
+<tr class="memitem:a93973b3d71a961435b0f2cdff8d81de8" id="r_a93973b3d71a961435b0f2cdff8d81de8"><td class="memItemLeft">TArray&lt; uint8 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a93973b3d71a961435b0f2cdff8d81de8">PendingSaveGameBytes</a></td></tr>
+<tr class="memdesc:a93973b3d71a961435b0f2cdff8d81de8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chunk sending state (CLIENT ONLY).  <br /></td></tr>
+<tr class="memitem:a141b3cee303c957e700fda2415ab793f" id="r_a141b3cee303c957e700fda2415ab793f"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a141b3cee303c957e700fda2415ab793f">CurrentChunkIndex</a> = 0</td></tr>
+<tr class="memitem:a7c06f7d3fac453e0b8de5c39ff9917d1" id="r_a7c06f7d3fac453e0b8de5c39ff9917d1"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a7c06f7d3fac453e0b8de5c39ff9917d1">TotalSaveChunks</a> = 0</td></tr>
+<tr class="memitem:ab8bdde6bbd205f9c0a9bbc0422979f8b" id="r_ab8bdde6bbd205f9c0a9bbc0422979f8b"><td class="memItemLeft">FTimerHandle&#160;</td><td class="memItemRight"><a class="el" href="#ab8bdde6bbd205f9c0a9bbc0422979f8b">ChunkSendTimer</a></td></tr>
+<tr class="memitem:a9650f6307e239d2b24962795e753e962" id="r_a9650f6307e239d2b24962795e753e962"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9650f6307e239d2b24962795e753e962">bSaveDataRequested</a> = false</td></tr>
+<tr class="memdesc:a9650f6307e239d2b24962795e753e962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to track if save data has been requested (CLIENT ONLY).  <br /></td></tr>
+<tr class="memitem:a930e8592900ca7e56c8b3c82e53497ff" id="r_a930e8592900ca7e56c8b3c82e53497ff"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a930e8592900ca7e56c8b3c82e53497ff">bIsSpectatingDead</a> = false</td></tr>
+<tr class="memdesc:a930e8592900ca7e56c8b3c82e53497ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">True on the client when this controller is spectating after a mortal death.  <br /></td></tr>
+<tr class="memitem:a533ca71dc3fb16ce6598a5c22abe2a7c" id="r_a533ca71dc3fb16ce6598a5c22abe2a7c"><td class="memItemLeft">FGameplayMessageListenerHandle&#160;</td><td class="memItemRight"><a class="el" href="#a533ca71dc3fb16ce6598a5c22abe2a7c">SpectatorDeathListenerHandle</a></td></tr>
+<tr class="memdesc:a533ca71dc3fb16ce6598a5c22abe2a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Listener handle for the player-death message — registered on authority in BeginPlay.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base Player Controller class for Dark Tower. </p>
@@ -314,6 +360,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00056">56</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8cpp_source.html#l00814">HandleSpectatorTargetDied()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00243">SpectatorDeathListenerHandle</a>.</p>
 
 </div>
 </div>
@@ -463,7 +511,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a64a1c30a081c9fd54dbc1613d3358222">Client_ShowDungeonSummary()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a64a1c30a081c9fd54dbc1613d3358222">Client_ShowDungeonSummary()</a>, and <a class="el" href="_d_t_gameplay_game_mode_8cpp_source.html#l00255">ADTGameplayGameMode::CompleteDungeonFloor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a64a1c30a081c9fd54dbc1613d3358222">Client_ShowDungeonSummary()</a>, <a class="el" href="_d_t_gameplay_game_mode_8cpp_source.html#l00255">ADTGameplayGameMode::CompleteDungeonFloor()</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00207">ADTPortal::OnOverlapTimerComplete()</a>.</p>
 
 </div>
 </div>
@@ -486,7 +534,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#ad7c31c14b2d43bbc56a751a2bb942a65">Client_ShowHostMapSetup()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ad7c31c14b2d43bbc56a751a2bb942a65">Client_ShowHostMapSetup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ad7c31c14b2d43bbc56a751a2bb942a65">Client_ShowHostMapSetup()</a>, and <a class="el" href="_d_t_portal_8cpp_source.html#l00207">ADTPortal::OnOverlapTimerComplete()</a>.</p>
 
 </div>
 </div>
@@ -592,6 +640,39 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00069">69</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00243">SpectatorDeathListenerHandle</a>.</p>
+
+</div>
+</div>
+<a id="a144255b0e7e1761a2df19c8f0cfec997" name="a144255b0e7e1761a2df19c8f0cfec997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a144255b0e7e1761a2df19c8f0cfec997">&#9670;&#160;</a></span>GetCurrentMapName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FString ADTPlayerController::GetCurrentMapName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00840">840</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_data_types_8h_source.html#l00074">MapName</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00147">IsInDefaultLobbyMap()</a>.</p>
+
 </div>
 </div>
 <a id="aaf37ac36969672cd391662a0338ccead" name="aaf37ac36969672cd391662a0338ccead"></a>
@@ -688,6 +769,137 @@ Protected Attributes</h2></td></tr>
 <p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00122">GetPlayerBuildSystemComponent()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00183">PlayerBuildSystemComponent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8h_source.html#l00122">GetPlayerBuildSystemComponent()</a>, and <a class="el" href="_d_t_gameplay_game_mode_8cpp_source.html#l00163">ADTGameplayGameMode::InitSeamlessTravelPlayer()</a>.</p>
+
+</div>
+</div>
+<a id="ae5806325d183e53e266d3fb45f235c9e" name="ae5806325d183e53e266d3fb45f235c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5806325d183e53e266d3fb45f235c9e">&#9670;&#160;</a></span>HandleCharacterOverviewAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::HandleCharacterOverviewAction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00800">800</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00220">ActiveCharacterOverviewWidget</a>, <a class="el" href="_d_t_game_settings_8h_source.html#l00056">UDTGameSettings::GetCharacterOverviewWidget()</a>, <a class="el" href="_d_t_game_settings_8cpp_source.html#l00010">UDTGameSettings::GetDTGameSettings()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00283">ToggleWidgetOnLayer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
+
+</div>
+</div>
+<a id="ae41acb7b872ad086371939f2ca8ae3f2" name="ae41acb7b872ad086371939f2ca8ae3f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae41acb7b872ad086371939f2ca8ae3f2">&#9670;&#160;</a></span>HandleEscapeAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::HandleEscapeAction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00786">786</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00216">ActiveEscapeWidget</a>, <a class="el" href="_d_t_game_settings_8cpp_source.html#l00010">UDTGameSettings::GetDTGameSettings()</a>, <a class="el" href="_d_t_game_settings_8h_source.html#l00053">UDTGameSettings::GetEscapeWidgetClass()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00267">PushWidgetToLayer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
+
+</div>
+</div>
+<a id="aca0df1604bf79e408d56d4a54c18a05d" name="aca0df1604bf79e408d56d4a54c18a05d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca0df1604bf79e408d56d4a54c18a05d">&#9670;&#160;</a></span>HandleHostMapSetupAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::HandleHostMapSetupAction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00781">781</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8cpp_source.html#l00210">OpenDefaultLobbyHostMapSetup()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
+
+</div>
+</div>
+<a id="a0ee41b12f6ac76fd7f77d7d5062b2aad" name="a0ee41b12f6ac76fd7f77d7d5062b2aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ee41b12f6ac76fd7f77d7d5062b2aad">&#9670;&#160;</a></span>HandleSpectatorTargetDied()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::HandleSpectatorTargetDied </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>Channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="struct_f_d_t_player_death_message.html">FDTPlayerDeathMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Server-side: called when any player dies. </p>
+<p>If this controller is spectating the dead player, auto-cycles to the next alive target. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00814">814</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_message_types_8h_source.html#l00253">FDTPlayerDeathMessage::DeadPlayerState</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00056">BeginPlay()</a>.</p>
 
 </div>
 </div>
@@ -838,7 +1050,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00045">45</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00210">OpenDefaultLobbyHostMapSetup()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00154">ShowHostMapSetup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_portal_8cpp_source.html#l00207">ADTPortal::OnOverlapTimerComplete()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00210">OpenDefaultLobbyHostMapSetup()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00154">ShowHostMapSetup()</a>.</p>
 
 </div>
 </div>
@@ -859,7 +1071,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00147">147</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_game_settings_8h_source.html#l00041">UDTGameSettings::GetDefaultLobbyMapName()</a>, and <a class="el" href="_d_t_game_settings_8cpp_source.html#l00010">UDTGameSettings::GetDTGameSettings()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_controller_8cpp_source.html#l00840">GetCurrentMapName()</a>, <a class="el" href="_d_t_game_settings_8h_source.html#l00041">UDTGameSettings::GetDefaultLobbyMapName()</a>, and <a class="el" href="_d_t_game_settings_8cpp_source.html#l00010">UDTGameSettings::GetDTGameSettings()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00210">OpenDefaultLobbyHostMapSetup()</a>.</p>
 
@@ -890,9 +1102,42 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00092">92</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00092">IsSpectatingDead()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00240">bIsSpectatingDead</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00092">IsSpectatingDead()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8h_source.html#l00092">IsSpectatingDead()</a>.</p>
+
+</div>
+</div>
+<a id="a68bae2ed693133df5ee6e2822efe5e28" name="a68bae2ed693133df5ee6e2822efe5e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68bae2ed693133df5ee6e2822efe5e28">&#9670;&#160;</a></span>LoadAndSendSaveData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::LoadAndSendSaveData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper to load local save and send to server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00405">405</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_save_subsystem_8cpp_source.html#l00038">UDTSaveSubsystem::DoesSaveExist()</a>, <a class="el" href="_d_t_save_subsystem_8cpp_source.html#l00069">UDTSaveSubsystem::GetCurrentSlotName()</a>, <a class="el" href="_d_t_save_subsystem_8cpp_source.html#l00082">UDTSaveSubsystem::GetCurrentUserIndex()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00456">SendSaveDataInChunks()</a>, <a class="el" href="_d_t_save_game_8cpp_source.html#l00019">UDTSaveGame::SerializeSaveGame()</a>, and <a class="el" href="#a7809b96fd6474b62157cd6325307ca4f">Server_SaveDataTransferComplete()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00379">OnRep_PlayerState()</a>.</p>
 
 </div>
 </div>
@@ -1002,6 +1247,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00379">379</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00237">bSaveDataRequested</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00405">LoadAndSendSaveData()</a>.</p>
+
 </div>
 </div>
 <a id="a9a82f66b6a64b05f43f12f50ef71cdc8" name="a9a82f66b6a64b05f43f12f50ef71cdc8"></a>
@@ -1022,6 +1269,8 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00210">210</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_data_types_8h_source.html#l00057">Campaign</a>, <a class="el" href="_data_types_8h_source.html#l00139">FDTHostRequest::EntryPoint</a>, <a class="el" href="_data_types_8h_source.html#l00142">FDTHostRequest::InitialTab</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00045">IsHost()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00147">IsInDefaultLobbyMap()</a>, <a class="el" href="_data_types_8h_source.html#l00049">LobbyHotkey</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00154">ShowHostMapSetup()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00781">HandleHostMapSetupAction()</a>.</p>
 
 </div>
 </div>
@@ -1096,6 +1345,46 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a617b78263205b3c6baba4f752e37f64c" name="a617b78263205b3c6baba4f752e37f64c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a617b78263205b3c6baba4f752e37f64c">&#9670;&#160;</a></span>PushWidgetToLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * ADTPlayerController::PushWidgetToLayer </td>
+          <td>(</td>
+          <td class="paramtype">TSubclassOf&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>WidgetClass</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>LayerTag</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Push a widget class onto a UI layer for the local player. </p>
+<p>Returns the typed widget, or nullptr on failure. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00267">267</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00267">PushWidgetToLayer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00786">HandleEscapeAction()</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00267">PushWidgetToLayer()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00283">ToggleWidgetOnLayer()</a>.</p>
+
+</div>
+</div>
 <a id="a1350ed553edef9b6ca66287cb8a73a3f" name="a1350ed553edef9b6ca66287cb8a73a3f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1350ed553edef9b6ca66287cb8a73a3f">&#9670;&#160;</a></span>SavePlayerData()</h2>
 
@@ -1116,6 +1405,72 @@ Protected Attributes</h2></td></tr>
 <p class="reference">References <a class="el" href="_d_t_player_state_8h_source.html#l00086">ADTPlayerState::IsSaveInitialized()</a>, and <a class="el" href="_d_t_save_subsystem_8cpp_source.html#l00100">UDTSaveSubsystem::SaveCurrentSlot()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_game_mode_8cpp_source.html#l00042">ADTGameMode::Logout()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00298">PreClientTravel()</a>.</p>
+
+</div>
+</div>
+<a id="afac8cebb0df3144d9711de786bc50bf4" name="afac8cebb0df3144d9711de786bc50bf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afac8cebb0df3144d9711de786bc50bf4">&#9670;&#160;</a></span>SendNextSaveChunk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::SendNextSaveChunk </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Timer callback to send next chunk. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00472">472</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00234">ChunkSendTimer</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00232">CurrentChunkIndex</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00231">PendingSaveGameBytes</a>, <a class="el" href="#a41a57693eada08eaa4f5c2e8949305e4">Server_ReceiveSaveDataChunk()</a>, <a class="el" href="#a7809b96fd6474b62157cd6325307ca4f">Server_SaveDataTransferComplete()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00233">TotalSaveChunks</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00456">SendSaveDataInChunks()</a>.</p>
+
+</div>
+</div>
+<a id="a3200745c0cd869726018d678b6caac05" name="a3200745c0cd869726018d678b6caac05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3200745c0cd869726018d678b6caac05">&#9670;&#160;</a></span>SendSaveDataInChunks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::SendSaveDataInChunks </td>
+          <td>(</td>
+          <td class="paramtype">const TArray&lt; uint8 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>SaveGameBytes</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper to send chunked save data to server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00456">456</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00234">ChunkSendTimer</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00232">CurrentChunkIndex</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00231">PendingSaveGameBytes</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00472">SendNextSaveChunk()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00233">TotalSaveChunks</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00405">LoadAndSendSaveData()</a>.</p>
 
 </div>
 </div>
@@ -1193,7 +1548,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a41a57693eada08eaa4f5c2e8949305e4">Server_ReceiveSaveDataChunk()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a41a57693eada08eaa4f5c2e8949305e4">Server_ReceiveSaveDataChunk()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00472">SendNextSaveChunk()</a>, and <a class="el" href="#a41a57693eada08eaa4f5c2e8949305e4">Server_ReceiveSaveDataChunk()</a>.</p>
 
 </div>
 </div>
@@ -1216,7 +1571,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#ad745f3445da285392ae07845f3d981dd">Server_RequestContinue()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ad745f3445da285392ae07845f3d981dd">Server_RequestContinue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00109">UDTMapSummaryWidget::HandleContinueClicked()</a>, and <a class="el" href="#ad745f3445da285392ae07845f3d981dd">Server_RequestContinue()</a>.</p>
 
 </div>
 </div>
@@ -1239,7 +1594,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#ae6ddb1727d88235a999ae4bb27f1a361">Server_RequestRestart()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ae6ddb1727d88235a999ae4bb27f1a361">Server_RequestRestart()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00121">UDTMapSummaryWidget::HandleRestartClicked()</a>, and <a class="el" href="#ae6ddb1727d88235a999ae4bb27f1a361">Server_RequestRestart()</a>.</p>
 
 </div>
 </div>
@@ -1262,7 +1617,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#add8d234e01ee70bacea310b3d6dd2d15">Server_RequestReturnToTown()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#add8d234e01ee70bacea310b3d6dd2d15">Server_RequestReturnToTown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00133">UDTMapSummaryWidget::HandleReturnToTownClicked()</a>, and <a class="el" href="#add8d234e01ee70bacea310b3d6dd2d15">Server_RequestReturnToTown()</a>.</p>
 
 </div>
 </div>
@@ -1308,7 +1663,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a7809b96fd6474b62157cd6325307ca4f">Server_SaveDataTransferComplete()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a7809b96fd6474b62157cd6325307ca4f">Server_SaveDataTransferComplete()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00405">LoadAndSendSaveData()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00472">SendNextSaveChunk()</a>, and <a class="el" href="#a7809b96fd6474b62157cd6325307ca4f">Server_SaveDataTransferComplete()</a>.</p>
 
 </div>
 </div>
@@ -1331,7 +1686,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a714d277ae440e9d962e7ed6a3f53fe35">Server_UpdateHostedRunPreview()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a714d277ae440e9d962e7ed6a3f53fe35">Server_UpdateHostedRunPreview()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a714d277ae440e9d962e7ed6a3f53fe35">Server_UpdateHostedRunPreview()</a>, and <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00183">UDTMapSetupWidget::UpdateHostConfig()</a>.</p>
 
 </div>
 </div>
@@ -1360,7 +1715,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">75</a> of file <a class="el" href="_d_t_player_controller_8cpp_source.html">DTPlayerController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00176">CharacterOverviewAction</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00167">DefaultMappingContexts</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00173">EscapeAction</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00170">HostMapSetupAction</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00343">Input_AbilityInputTagPressed()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00352">Input_AbilityInputTagReleased()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00370">Input_TargetCancel()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00361">Input_TargetConfirm()</a>, <a class="el" href="_d_t_input_config_8h_source.html#l00021">FDTInputAction::InputAction</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00180">InputConfig</a>, and <a class="el" href="_d_t_input_config_8h_source.html#l00024">FDTInputAction::InputTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00176">CharacterOverviewAction</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00167">DefaultMappingContexts</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00173">EscapeAction</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00800">HandleCharacterOverviewAction()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00786">HandleEscapeAction()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00781">HandleHostMapSetupAction()</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00170">HostMapSetupAction</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00343">Input_AbilityInputTagPressed()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00352">Input_AbilityInputTagReleased()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00370">Input_TargetCancel()</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00361">Input_TargetConfirm()</a>, <a class="el" href="_d_t_input_config_8h_source.html#l00021">FDTInputAction::InputAction</a>, <a class="el" href="_d_t_player_controller_8h_source.html#l00180">InputConfig</a>, and <a class="el" href="_d_t_input_config_8h_source.html#l00024">FDTInputAction::InputTag</a>.</p>
 
 </div>
 </div>
@@ -1384,6 +1739,51 @@ Protected Attributes</h2></td></tr>
 <p class="reference">References <a class="el" href="_data_types_8h_source.html#l00057">Campaign</a>, <a class="el" href="_data_types_8h_source.html#l00148">FDTHostRequest::Config</a>, <a class="el" href="_data_types_8h_source.html#l00059">Endgame</a>, <a class="el" href="_d_t_game_settings_8cpp_source.html#l00010">UDTGameSettings::GetDTGameSettings()</a>, <a class="el" href="_d_t_game_settings_8h_source.html#l00047">UDTGameSettings::GetHostMapSetupWidgetClass()</a>, <a class="el" href="_d_t_map_setup_widget_8cpp_source.html#l00017">UDTMapSetupWidget::InitializeFromRequest()</a>, <a class="el" href="_data_types_8h_source.html#l00142">FDTHostRequest::InitialTab</a>, <a class="el" href="_d_t_player_controller_8cpp_source.html#l00045">IsHost()</a>, <a class="el" href="_data_types_8h_source.html#l00117">FDTHostConfig::ModeDefinitionTag</a>, and <a class="el" href="_data_types_8h_source.html#l00108">FDTHostConfig::StartingFloor</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00210">OpenDefaultLobbyHostMapSetup()</a>.</p>
+
+</div>
+</div>
+<a id="ac64ad33d90fd57eb10e320c27fb362ef" name="ac64ad33d90fd57eb10e320c27fb362ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac64ad33d90fd57eb10e320c27fb362ef">&#9670;&#160;</a></span>ToggleWidgetOnLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTPlayerController::ToggleWidgetOnLayer </td>
+          <td>(</td>
+          <td class="paramtype">TObjectPtr&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ActiveWidget</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TSubclassOf&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>WidgetClass</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>LayerTag</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Toggle a widget on a UI layer. </p>
+<p>If ActiveWidget is valid (already pushed), pops it and clears the pointer. Otherwise pushes WidgetClass and stores the result in ActiveWidget. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00283">283</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_player_controller_8h_source.html#l00267">PushWidgetToLayer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00800">HandleCharacterOverviewAction()</a>.</p>
 
 </div>
 </div>
@@ -1420,6 +1820,144 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="af1cf6a11b84e2a13966f742ee9ca7095" name="af1cf6a11b84e2a13966f742ee9ca7095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1cf6a11b84e2a13966f742ee9ca7095">&#9670;&#160;</a></span>ActiveCharacterOverviewWidget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_character_overview_widget.html">UDTCharacterOverviewWidget</a>&gt; ADTPlayerController::ActiveCharacterOverviewWidget</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Active character overview widget, if currently pushed (client only). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00220">220</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00800">HandleCharacterOverviewAction()</a>.</p>
+
+</div>
+</div>
+<a id="a4d3f47ed47e08f5d56ab2b70e866330e" name="a4d3f47ed47e08f5d56ab2b70e866330e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3f47ed47e08f5d56ab2b70e866330e">&#9670;&#160;</a></span>ActiveDeathOverlayWidget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_death_overlay_widget.html">UDTDeathOverlayWidget</a>&gt; ADTPlayerController::ActiveDeathOverlayWidget</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Currently displayed death overlay widget — covers both respawn countdown and mortal spectating (client only). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00212">212</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+</div>
+</div>
+<a id="a32c0db9af3b9ff92c7839eb77ceed5e5" name="a32c0db9af3b9ff92c7839eb77ceed5e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c0db9af3b9ff92c7839eb77ceed5e5">&#9670;&#160;</a></span>ActiveEscapeWidget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_escape_widget.html">UDTEscapeWidget</a>&gt; ADTPlayerController::ActiveEscapeWidget</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Active escape menu widget, if currently pushed (client only). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00216">216</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00786">HandleEscapeAction()</a>.</p>
+
+</div>
+</div>
+<a id="a930e8592900ca7e56c8b3c82e53497ff" name="a930e8592900ca7e56c8b3c82e53497ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a930e8592900ca7e56c8b3c82e53497ff">&#9670;&#160;</a></span>bIsSpectatingDead</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ADTPlayerController::bIsSpectatingDead = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True on the client when this controller is spectating after a mortal death. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00240">240</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8h_source.html#l00092">IsSpectatingDead()</a>.</p>
+
+</div>
+</div>
+<a id="a9650f6307e239d2b24962795e753e962" name="a9650f6307e239d2b24962795e753e962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9650f6307e239d2b24962795e753e962">&#9670;&#160;</a></span>bSaveDataRequested</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ADTPlayerController::bSaveDataRequested = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to track if save data has been requested (CLIENT ONLY). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00237">237</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00379">OnRep_PlayerState()</a>.</p>
+
+</div>
+</div>
 <a id="ac57a534f563c3a61dbc849cccef8e7db" name="ac57a534f563c3a61dbc849cccef8e7db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac57a534f563c3a61dbc849cccef8e7db">&#9670;&#160;</a></span>CharacterOverviewAction</h2>
 
@@ -1443,6 +1981,84 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00176">176</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
+
+</div>
+</div>
+<a id="ab8bdde6bbd205f9c0a9bbc0422979f8b" name="ab8bdde6bbd205f9c0a9bbc0422979f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8bdde6bbd205f9c0a9bbc0422979f8b">&#9670;&#160;</a></span>ChunkSendTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTimerHandle ADTPlayerController::ChunkSendTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00234">234</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00472">SendNextSaveChunk()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00456">SendSaveDataInChunks()</a>.</p>
+
+</div>
+</div>
+<a id="a141b3cee303c957e700fda2415ab793f" name="a141b3cee303c957e700fda2415ab793f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a141b3cee303c957e700fda2415ab793f">&#9670;&#160;</a></span>CurrentChunkIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 ADTPlayerController::CurrentChunkIndex = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00232">232</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00472">SendNextSaveChunk()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00456">SendSaveDataInChunks()</a>.</p>
+
+</div>
+</div>
+<a id="a3e19b420805ae6c1c7199a0936143b87" name="a3e19b420805ae6c1c7199a0936143b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e19b420805ae6c1c7199a0936143b87">&#9670;&#160;</a></span>CurrentSpectatorTarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TWeakObjectPtr&lt;APlayerState&gt; ADTPlayerController::CurrentSpectatorTarget</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Player state currently being spectated (client only). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00224">224</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
 </div>
 </div>
@@ -1497,6 +2113,30 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00173">173</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00075">SetupInputComponent()</a>.</p>
+
+</div>
+</div>
+<a id="ae6e6d66b5ad60a10a4a2230dc87b69c2" name="ae6e6d66b5ad60a10a4a2230dc87b69c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e6d66b5ad60a10a4a2230dc87b69c2">&#9670;&#160;</a></span>ExpectedTotalChunks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 ADTPlayerController::ExpectedTotalChunks = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00228">228</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
 </div>
 </div>
@@ -1573,6 +2213,34 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a93973b3d71a961435b0f2cdff8d81de8" name="a93973b3d71a961435b0f2cdff8d81de8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93973b3d71a961435b0f2cdff8d81de8">&#9670;&#160;</a></span>PendingSaveGameBytes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;uint8&gt; ADTPlayerController::PendingSaveGameBytes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Chunk sending state (CLIENT ONLY). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00231">231</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00472">SendNextSaveChunk()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00456">SendSaveDataInChunks()</a>.</p>
+
+</div>
+</div>
 <a id="a9aae3935610582f6033c9f430bf1763b" name="a9aae3935610582f6033c9f430bf1763b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9aae3935610582f6033c9f430bf1763b">&#9670;&#160;</a></span>PlayerBuildSystemComponent</h2>
 
@@ -1596,6 +2264,86 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00183">183</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00038">ADTPlayerController()</a>, and <a class="el" href="_d_t_player_controller_8h_source.html#l00122">GetPlayerBuildSystemComponent()</a>.</p>
+
+</div>
+</div>
+<a id="ae10286b3009e97b87cf1da605a5c99e2" name="ae10286b3009e97b87cf1da605a5c99e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae10286b3009e97b87cf1da605a5c99e2">&#9670;&#160;</a></span>ReceivedChunks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMap&lt;int32, TArray&lt;uint8&gt; &gt; ADTPlayerController::ReceivedChunks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Chunk assembly (SERVER ONLY). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00227">227</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+</div>
+</div>
+<a id="a533ca71dc3fb16ce6598a5c22abe2a7c" name="a533ca71dc3fb16ce6598a5c22abe2a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533ca71dc3fb16ce6598a5c22abe2a7c">&#9670;&#160;</a></span>SpectatorDeathListenerHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayMessageListenerHandle ADTPlayerController::SpectatorDeathListenerHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Listener handle for the player-death message — registered on authority in BeginPlay. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00243">243</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00056">BeginPlay()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00069">EndPlay()</a>.</p>
+
+</div>
+</div>
+<a id="a7c06f7d3fac453e0b8de5c39ff9917d1" name="a7c06f7d3fac453e0b8de5c39ff9917d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c06f7d3fac453e0b8de5c39ff9917d1">&#9670;&#160;</a></span>TotalSaveChunks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 ADTPlayerController::TotalSaveChunks = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_player_controller_8h_source.html#l00233">233</a> of file <a class="el" href="_d_t_player_controller_8h_source.html">DTPlayerController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_player_controller_8cpp_source.html#l00472">SendNextSaveChunk()</a>, and <a class="el" href="_d_t_player_controller_8cpp_source.html#l00456">SendSaveDataInChunks()</a>.</p>
 
 </div>
 </div>

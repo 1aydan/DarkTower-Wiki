@@ -156,6 +156,15 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0ce4da75d27d4ce23305e51d75ecf81e" id="r_a0ce4da75d27d4ce23305e51d75ecf81e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a0ce4da75d27d4ce23305e51d75ecf81e">OnInitialized</a> () override</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a26642e97ae0d15a8086dd905f6267e37" id="r_a26642e97ae0d15a8086dd905f6267e37"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a26642e97ae0d15a8086dd905f6267e37">RebuildMonitorOptions</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a62bc6b793ccd5fcbdadce15114ccbb1f" id="r_a62bc6b793ccd5fcbdadce15114ccbb1f"><td class="memItemLeft">TArray&lt; FText &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a62bc6b793ccd5fcbdadce15114ccbb1f">MonitorOptions</a></td></tr>
+<tr class="memitem:a7169c601cff23a98ea2df8af2c310205" id="r_a7169c601cff23a98ea2df8af2c310205"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a7169c601cff23a98ea2df8af2c310205">InitialMonitorIndex</a> = 0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Discrete setting that enumerates connected displays and lets the player choose which monitor the game will use when running in Fullscreen or Windowed Fullscreen. </p>
@@ -207,7 +216,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00042">42</a> of file <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html">DTSettingValueDiscrete_Monitor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00224">UDTSettingsLocal::GetPreferredMonitorIndex()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00224">UDTSettingsLocal::GetPreferredMonitorIndex()</a>, and <a class="el" href="_d_t_setting_value_discrete___monitor_8h_source.html#l00039">MonitorOptions</a>.</p>
 
 </div>
 </div>
@@ -236,6 +245,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00048">48</a> of file <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html">DTSettingValueDiscrete_Monitor.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_setting_value_discrete___monitor_8h_source.html#l00039">MonitorOptions</a>.</p>
+
 </div>
 </div>
 <a id="a0ce4da75d27d4ce23305e51d75ecf81e" name="a0ce4da75d27d4ce23305e51d75ecf81e"></a>
@@ -262,6 +273,39 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00014">14</a> of file <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html">DTSettingValueDiscrete_Monitor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00053">RebuildMonitorOptions()</a>.</p>
+
+</div>
+</div>
+<a id="a26642e97ae0d15a8086dd905f6267e37" name="a26642e97ae0d15a8086dd905f6267e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26642e97ae0d15a8086dd905f6267e37">&#9670;&#160;</a></span>RebuildMonitorOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTSettingValueDiscrete_Monitor::RebuildMonitorOptions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00053">53</a> of file <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html">DTSettingValueDiscrete_Monitor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_setting_value_discrete___monitor_8h_source.html#l00039">MonitorOptions</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00014">OnInitialized()</a>.</p>
 
 </div>
 </div>
@@ -319,7 +363,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00030">30</a> of file <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html">DTSettingValueDiscrete_Monitor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00035">SetDiscreteOptionByIndex()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_setting_value_discrete___monitor_8h_source.html#l00040">InitialMonitorIndex</a>, and <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00035">SetDiscreteOptionByIndex()</a>.</p>
 
 </div>
 </div>
@@ -348,7 +392,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00035">35</a> of file <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html">DTSettingValueDiscrete_Monitor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00229">UDTSettingsLocal::SetPreferredMonitorIndex()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>, <a class="el" href="_d_t_setting_value_discrete___monitor_8h_source.html#l00039">MonitorOptions</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00229">UDTSettingsLocal::SetPreferredMonitorIndex()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00025">ResetToDefault()</a>, and <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00030">RestoreToInitial()</a>.</p>
 
@@ -379,7 +423,60 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00020">20</a> of file <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html">DTSettingValueDiscrete_Monitor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>, and <a class="el" href="_d_t_settings_local_8cpp_source.html#l00224">UDTSettingsLocal::GetPreferredMonitorIndex()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00224">UDTSettingsLocal::GetPreferredMonitorIndex()</a>, and <a class="el" href="_d_t_setting_value_discrete___monitor_8h_source.html#l00040">InitialMonitorIndex</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a7169c601cff23a98ea2df8af2c310205" name="a7169c601cff23a98ea2df8af2c310205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7169c601cff23a98ea2df8af2c310205">&#9670;&#160;</a></span>InitialMonitorIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTSettingValueDiscrete_Monitor::InitialMonitorIndex = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_setting_value_discrete___monitor_8h_source.html#l00040">40</a> of file <a class="el" href="_d_t_setting_value_discrete___monitor_8h_source.html">DTSettingValueDiscrete_Monitor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00030">RestoreToInitial()</a>, and <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00020">StoreInitial()</a>.</p>
+
+</div>
+</div>
+<a id="a62bc6b793ccd5fcbdadce15114ccbb1f" name="a62bc6b793ccd5fcbdadce15114ccbb1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62bc6b793ccd5fcbdadce15114ccbb1f">&#9670;&#160;</a></span>MonitorOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;FText&gt; UDTSettingValueDiscrete_Monitor::MonitorOptions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_setting_value_discrete___monitor_8h_source.html#l00039">39</a> of file <a class="el" href="_d_t_setting_value_discrete___monitor_8h_source.html">DTSettingValueDiscrete_Monitor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00042">GetDiscreteOptionIndex()</a>, <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00048">GetDiscreteOptions()</a>, <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00053">RebuildMonitorOptions()</a>, and <a class="el" href="_d_t_setting_value_discrete___monitor_8cpp_source.html#l00035">SetDiscreteOptionByIndex()</a>.</p>
 
 </div>
 </div>

@@ -16,7 +16,12 @@ var class_u_d_t_settings_list_entry_setting___keyboard_input =
     [ "OnSettingChanged", "class_u_d_t_settings_list_entry_setting___keyboard_input.html#acfcee9ee4d298ef389a236347cee21ea", null ],
     [ "Refresh", "class_u_d_t_settings_list_entry_setting___keyboard_input.html#a5d9b0160a57431302229265bda32a7fe", null ],
     [ "SetSetting", "class_u_d_t_settings_list_entry_setting___keyboard_input.html#aec417d906b0b75529f0ae1036757c3fc", null ],
+    [ "Button_Clear", "class_u_d_t_settings_list_entry_setting___keyboard_input.html#aee0387bd4141306a13ac8ff4db507a43", null ],
+    [ "Button_PrimaryKey", "class_u_d_t_settings_list_entry_setting___keyboard_input.html#a23b5e581c8fc47e3401b1c96d6fc3a10", null ],
+    [ "Button_ResetToDefault", "class_u_d_t_settings_list_entry_setting___keyboard_input.html#ad009ffd88fe85d9b37a1e07fca0c3769", null ],
+    [ "Button_SecondaryKey", "class_u_d_t_settings_list_entry_setting___keyboard_input.html#a0cc611c50c43491fed86366203136048", null ],
     [ "KeyAlreadyBoundWarningPanelClass", "class_u_d_t_settings_list_entry_setting___keyboard_input.html#a283209c8e2d35529057b577d39cfd18f", null ],
     [ "KeyboardInputSetting", "class_u_d_t_settings_list_entry_setting___keyboard_input.html#af31ba74747def60c1ddd6c5bf5f51258", null ],
+    [ "OriginalKeyToBind", "class_u_d_t_settings_list_entry_setting___keyboard_input.html#a7ebb33e41d04b386d1f6c7f3be2d1a0d", null ],
     [ "PressAnyKeyPanelClass", "class_u_d_t_settings_list_entry_setting___keyboard_input.html#a6194713dc555a849c48098c072e72e0c", null ]
 ];

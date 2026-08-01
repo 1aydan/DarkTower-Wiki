@@ -160,26 +160,27 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_quest_sub
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    FGameplayMessageListenerParams&lt;FDTVerbMessage&gt; ListenerParams;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    ListenerParams.MatchType = EGameplayMessageMatch::PartialMatch;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    ListenerParams.SetMessageReceivedCallback(<span class="keyword">this</span>, &amp;UDTQuestSubsystem::HandleVerbMessage);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    VerbMessageListenerHandle = MessageSubsystem.RegisterListener&lt;<a class="code hl_struct" href="struct_f_d_t_verb_message.html">FDTVerbMessage</a>&gt;(DTGameplayTags::TAG_EVENT, ListenerParams);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    ListenerParams.SetMessageReceivedCallback(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_d_t_quest_subsystem.html#af1e246c4f48be3e51a583c5d2288bb41">UDTQuestSubsystem::HandleVerbMessage</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_variable" href="class_u_d_t_quest_subsystem.html#a6c03815d8b0aeadd6c3d66e31f6ec370">VerbMessageListenerHandle</a> = MessageSubsystem.RegisterListener&lt;<a class="code hl_struct" href="struct_f_d_t_verb_message.html">FDTVerbMessage</a>&gt;(DTGameplayTags::TAG_EVENT, ListenerParams);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
 </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_u_d_t_quest_subsystem.html#a8ab3c2a9b974532a2b5e7177e19b3249">   33</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_quest_subsystem.html#a8ab3c2a9b974532a2b5e7177e19b3249">UDTQuestSubsystem::Deinitialize</a>()</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">if</span> (VerbMessageListenerHandle.IsValid() &amp;&amp; UGameplayMessageSubsystem::HasInstance(<span class="keyword">this</span>))</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_quest_subsystem.html#a6c03815d8b0aeadd6c3d66e31f6ec370">VerbMessageListenerHandle</a>.IsValid() &amp;&amp; UGameplayMessageSubsystem::HasInstance(<span class="keyword">this</span>))</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        VerbMessageListenerHandle.Unregister();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_variable" href="class_u_d_t_quest_subsystem.html#a6c03815d8b0aeadd6c3d66e31f6ec370">VerbMessageListenerHandle</a>.Unregister();</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    VerbMessageListenerHandle = FGameplayMessageListenerHandle();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_variable" href="class_u_d_t_quest_subsystem.html#a6c03815d8b0aeadd6c3d66e31f6ec370">VerbMessageListenerHandle</a> = FGameplayMessageListenerHandle();</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    Super::Deinitialize();</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> UDTQuestSubsystem::HandleVerbMessage(<span class="keyword">const</span> FGameplayTag Channel, <span class="keyword">const</span> <a class="code hl_struct" href="struct_f_d_t_verb_message.html">FDTVerbMessage</a>&amp; Message)</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_u_d_t_quest_subsystem.html#af1e246c4f48be3e51a583c5d2288bb41">   45</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_quest_subsystem.html#af1e246c4f48be3e51a583c5d2288bb41">UDTQuestSubsystem::HandleVerbMessage</a>(<span class="keyword">const</span> FGameplayTag Channel, <span class="keyword">const</span> <a class="code hl_struct" href="struct_f_d_t_verb_message.html">FDTVerbMessage</a>&amp; Message)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    FQuestEventData EventData;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    EventData.EventTag = Channel;</div>
@@ -206,12 +207,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_quest_sub
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    ProcessQuestEvent(EventData, OwningPlayerState);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
+</div>
 <div class="ttc" id="a_d_t_gameplay_tags_8h_html"><div class="ttname"><a href="_d_t_gameplay_tags_8h.html">DTGameplayTags.h</a></div></div>
 <div class="ttc" id="a_d_t_message_types_8h_html"><div class="ttname"><a href="_d_t_message_types_8h.html">DTMessageTypes.h</a></div></div>
 <div class="ttc" id="a_d_t_quest_subsystem_8h_html"><div class="ttname"><a href="_d_t_quest_subsystem_8h.html">DTQuestSubsystem.h</a></div></div>
 <div class="ttc" id="a_d_t_verb_message_helpers_8h_html"><div class="ttname"><a href="_d_t_verb_message_helpers_8h.html">DTVerbMessageHelpers.h</a></div></div>
 <div class="ttc" id="aclass_u_d_t_quest_subsystem_html_a13e6e1de6e7d1c0b14e8afc13c94126f"><div class="ttname"><a href="class_u_d_t_quest_subsystem.html#a13e6e1de6e7d1c0b14e8afc13c94126f">UDTQuestSubsystem::Initialize</a></div><div class="ttdeci">virtual void Initialize(FSubsystemCollectionBase &amp;Collection) override</div><div class="ttdef"><b>Definition</b> <a href="#l00010">DTQuestSubsystem.cpp:10</a></div></div>
+<div class="ttc" id="aclass_u_d_t_quest_subsystem_html_a6c03815d8b0aeadd6c3d66e31f6ec370"><div class="ttname"><a href="class_u_d_t_quest_subsystem.html#a6c03815d8b0aeadd6c3d66e31f6ec370">UDTQuestSubsystem::VerbMessageListenerHandle</a></div><div class="ttdeci">FGameplayMessageListenerHandle VerbMessageListenerHandle</div><div class="ttdef"><b>Definition</b> <a href="_d_t_quest_subsystem_8h_source.html#l00027">DTQuestSubsystem.h:27</a></div></div>
 <div class="ttc" id="aclass_u_d_t_quest_subsystem_html_a8ab3c2a9b974532a2b5e7177e19b3249"><div class="ttname"><a href="class_u_d_t_quest_subsystem.html#a8ab3c2a9b974532a2b5e7177e19b3249">UDTQuestSubsystem::Deinitialize</a></div><div class="ttdeci">virtual void Deinitialize() override</div><div class="ttdef"><b>Definition</b> <a href="#l00033">DTQuestSubsystem.cpp:33</a></div></div>
+<div class="ttc" id="aclass_u_d_t_quest_subsystem_html_af1e246c4f48be3e51a583c5d2288bb41"><div class="ttname"><a href="class_u_d_t_quest_subsystem.html#af1e246c4f48be3e51a583c5d2288bb41">UDTQuestSubsystem::HandleVerbMessage</a></div><div class="ttdeci">void HandleVerbMessage(FGameplayTag Channel, const FDTVerbMessage &amp;Message)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">DTQuestSubsystem.cpp:45</a></div></div>
 <div class="ttc" id="aclass_u_d_t_verb_message_helpers_html_abe20405e4ed52412da14047d5b835d4a"><div class="ttname"><a href="class_u_d_t_verb_message_helpers.html#abe20405e4ed52412da14047d5b835d4a">UDTVerbMessageHelpers::GetPlayerStateFromObject</a></div><div class="ttdeci">static APlayerState * GetPlayerStateFromObject(UObject *Object)</div><div class="ttdef"><b>Definition</b> <a href="_d_t_verb_message_helpers_8cpp_source.html#l00020">DTVerbMessageHelpers.cpp:20</a></div></div>
 <div class="ttc" id="astruct_f_d_t_verb_message_html"><div class="ttname"><a href="struct_f_d_t_verb_message.html">FDTVerbMessage</a></div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00129">DTMessageTypes.h:130</a></div></div>
 <div class="ttc" id="astruct_f_d_t_verb_message_html_a1f0cc785ccd286c48a3d4bf0b2ea33d0"><div class="ttname"><a href="struct_f_d_t_verb_message.html#a1f0cc785ccd286c48a3d4bf0b2ea33d0">FDTVerbMessage::Magnitude</a></div><div class="ttdeci">double Magnitude</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00152">DTMessageTypes.h:152</a></div></div>

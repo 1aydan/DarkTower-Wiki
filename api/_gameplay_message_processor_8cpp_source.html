@@ -158,11 +158,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_gameplay_mess
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// Remove any listener handles</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    UGameplayMessageSubsystem&amp; MessageSubsystem = UGameplayMessageSubsystem::Get(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">for</span> (FGameplayMessageListenerHandle&amp; Handle : ListenerHandles)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">for</span> (FGameplayMessageListenerHandle&amp; Handle : <a class="code hl_variable" href="class_u_gameplay_message_processor.html#a1fd6ad516572b90ec9eb1d9e86ee7d6e">ListenerHandles</a>)</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        MessageSubsystem.UnregisterListener(Handle);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    ListenerHandles.Empty();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_variable" href="class_u_gameplay_message_processor.html#a1fd6ad516572b90ec9eb1d9e86ee7d6e">ListenerHandles</a>.Empty();</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
 </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_gameplay_mess
 <div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_u_gameplay_message_processor.html#ae7d606ca0506dca575d22453dd378622">   41</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_gameplay_message_processor.html#ae7d606ca0506dca575d22453dd378622">UGameplayMessageProcessor::AddListenerHandle</a>(FGameplayMessageListenerHandle&amp;&amp; Handle)</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    ListenerHandles.Add(MoveTemp(Handle));</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_variable" href="class_u_gameplay_message_processor.html#a1fd6ad516572b90ec9eb1d9e86ee7d6e">ListenerHandles</a>.Add(MoveTemp(Handle));</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
 </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
@@ -203,6 +203,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_gameplay_mess
 <div class="ttc" id="a_gameplay_message_processor_8h_html"><div class="ttname"><a href="_gameplay_message_processor_8h.html">GameplayMessageProcessor.h</a></div></div>
 <div class="ttc" id="aclass_u_gameplay_message_processor_html_a0cbdbb9f626ac337e21f8439c1365d8f"><div class="ttname"><a href="class_u_gameplay_message_processor.html#a0cbdbb9f626ac337e21f8439c1365d8f">UGameplayMessageProcessor::EndPlay</a></div><div class="ttdeci">virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override</div><div class="ttdef"><b>Definition</b> <a href="#l00017">GameplayMessageProcessor.cpp:17</a></div></div>
 <div class="ttc" id="aclass_u_gameplay_message_processor_html_a143aaa2cf065c6b2041e5ab86de291b1"><div class="ttname"><a href="class_u_gameplay_message_processor.html#a143aaa2cf065c6b2041e5ab86de291b1">UGameplayMessageProcessor::GetServerTime</a></div><div class="ttdeci">double GetServerTime() const</div><div class="ttdef"><b>Definition</b> <a href="#l00046">GameplayMessageProcessor.cpp:46</a></div></div>
+<div class="ttc" id="aclass_u_gameplay_message_processor_html_a1fd6ad516572b90ec9eb1d9e86ee7d6e"><div class="ttname"><a href="class_u_gameplay_message_processor.html#a1fd6ad516572b90ec9eb1d9e86ee7d6e">UGameplayMessageProcessor::ListenerHandles</a></div><div class="ttdeci">TArray&lt; FGameplayMessageListenerHandle &gt; ListenerHandles</div><div class="ttdef"><b>Definition</b> <a href="_gameplay_message_processor_8h_source.html#l00042">GameplayMessageProcessor.h:42</a></div></div>
 <div class="ttc" id="aclass_u_gameplay_message_processor_html_a5b7f06d20278d2f285fdfa420c2a16ae"><div class="ttname"><a href="class_u_gameplay_message_processor.html#a5b7f06d20278d2f285fdfa420c2a16ae">UGameplayMessageProcessor::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="#l00010">GameplayMessageProcessor.cpp:10</a></div></div>
 <div class="ttc" id="aclass_u_gameplay_message_processor_html_a5fe9462fd2da3465230be359faeb8da3"><div class="ttname"><a href="class_u_gameplay_message_processor.html#a5fe9462fd2da3465230be359faeb8da3">UGameplayMessageProcessor::StopListening</a></div><div class="ttdeci">virtual void StopListening()</div><div class="ttdef"><b>Definition</b> <a href="#l00037">GameplayMessageProcessor.cpp:37</a></div></div>
 <div class="ttc" id="aclass_u_gameplay_message_processor_html_a6cff6e7d185c5d88402245c80e1be8a9"><div class="ttname"><a href="class_u_gameplay_message_processor.html#a6cff6e7d185c5d88402245c80e1be8a9">UGameplayMessageProcessor::StartListening</a></div><div class="ttdeci">virtual void StartListening()</div><div class="ttdef"><b>Definition</b> <a href="#l00032">GameplayMessageProcessor.cpp:32</a></div></div>

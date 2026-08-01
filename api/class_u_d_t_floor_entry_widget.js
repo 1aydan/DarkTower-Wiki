@@ -6,5 +6,6 @@ var class_u_d_t_floor_entry_widget =
     [ "OnFloorEntryInitialized", "class_u_d_t_floor_entry_widget.html#a7d2d2d2eed0d00e252b5b74fd3956416", null ],
     [ "Select", "class_u_d_t_floor_entry_widget.html#a0499213010f4b69fad7f919e8d40902c", null ],
     [ "Btn_Select", "class_u_d_t_floor_entry_widget.html#a80527c85f48e1efacacf0cac21709c4b", null ],
+    [ "FloorInfo", "class_u_d_t_floor_entry_widget.html#af9602dd036d237ea0db6b8d8acf41b1e", null ],
     [ "OnSelected", "class_u_d_t_floor_entry_widget.html#ac2d34d9077a489c12b6714f10c366036", null ]
 ];

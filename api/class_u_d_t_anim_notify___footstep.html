@@ -169,6 +169,11 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:ae50515790ca27200fe376c5ad47d3fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overall volume scale for this notify, multiplied by the per-surface volume.  <br /></td></tr>
 <tr class="memitem:a9497f3f849fc6fc6736b705ad343dda5" id="r_a9497f3f849fc6fc6736b705ad343dda5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9497f3f849fc6fc6736b705ad343dda5">bDrawDebug</a> = false</td></tr>
 <tr class="memdesc:a9497f3f849fc6fc6736b705ad343dda5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the ground trace for a short time when authoring/debugging.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a2e1386f50c4fbf4fdd3fe5fa12438e0d" id="r_a2e1386f50c4fbf4fdd3fe5fa12438e0d"><td class="memItemLeft"><a class="el" href="class_u_d_t_footstep_effect_set.html">UDTFootstepEffectSet</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a2e1386f50c4fbf4fdd3fe5fa12438e0d">ResolveEffectSet</a> (AActor *Owner) const</td></tr>
+<tr class="memdesc:a2e1386f50c4fbf4fdd3fe5fa12438e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves the effect set for the owner: the <a class="el" href="class_a_d_t_character.html" title="Base non player character class for Dark Tower.">ADTCharacter</a>'s <a class="el" href="class_u_d_t_character_data.html" title="Per-archetype character data, shared across the character Blueprints.">UDTCharacterData</a> first, then DefaultEffectSet.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Cosmetic footstep notify with surface-material support. </p>
@@ -284,7 +289,40 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_anim_notify___footstep_8cpp_source.html#l00021">21</a> of file <a class="el" href="_d_t_anim_notify___footstep_8cpp_source.html">DTAnimNotify_Footstep.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00062">bDrawDebug</a>, <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00034">FootSocket</a>, <a class="el" href="_d_t_footstep_effect_set_8cpp_source.html#l00063">UDTFootstepEffectSet::GetEffectForSurface()</a>, <a class="el" href="_d_t_footstep_effect_set_8cpp_source.html#l00034">FDTFootstepEffect::GetRandomParticles()</a>, <a class="el" href="_d_t_footstep_effect_set_8cpp_source.html#l00005">FDTFootstepEffect::GetRandomSound()</a>, <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00045">FDTFootstepEffect::PitchMultiplier</a>, <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00050">TraceChannel</a>, <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00042">TraceDistance</a>, <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00046">TraceStartHeight</a>, <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00041">FDTFootstepEffect::VolumeMultiplier</a>, and <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00058">VolumeMultiplier</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00062">bDrawDebug</a>, <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00034">FootSocket</a>, <a class="el" href="_d_t_footstep_effect_set_8cpp_source.html#l00063">UDTFootstepEffectSet::GetEffectForSurface()</a>, <a class="el" href="_d_t_footstep_effect_set_8cpp_source.html#l00034">FDTFootstepEffect::GetRandomParticles()</a>, <a class="el" href="_d_t_footstep_effect_set_8cpp_source.html#l00005">FDTFootstepEffect::GetRandomSound()</a>, <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00045">FDTFootstepEffect::PitchMultiplier</a>, <a class="el" href="_d_t_anim_notify___footstep_8cpp_source.html#l00113">ResolveEffectSet()</a>, <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00050">TraceChannel</a>, <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00042">TraceDistance</a>, <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00046">TraceStartHeight</a>, <a class="el" href="_d_t_footstep_effect_set_8h_source.html#l00041">FDTFootstepEffect::VolumeMultiplier</a>, and <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00058">VolumeMultiplier</a>.</p>
+
+</div>
+</div>
+<a id="a2e1386f50c4fbf4fdd3fe5fa12438e0d" name="a2e1386f50c4fbf4fdd3fe5fa12438e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1386f50c4fbf4fdd3fe5fa12438e0d">&#9670;&#160;</a></span>ResolveEffectSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_footstep_effect_set.html">UDTFootstepEffectSet</a> * UDTAnimNotify_Footstep::ResolveEffectSet </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>Owner</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolves the effect set for the owner: the <a class="el" href="class_a_d_t_character.html" title="Base non player character class for Dark Tower.">ADTCharacter</a>'s <a class="el" href="class_u_d_t_character_data.html" title="Per-archetype character data, shared across the character Blueprints.">UDTCharacterData</a> first, then DefaultEffectSet. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_anim_notify___footstep_8cpp_source.html#l00113">113</a> of file <a class="el" href="_d_t_anim_notify___footstep_8cpp_source.html">DTAnimNotify_Footstep.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00054">DefaultEffectSet</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_anim_notify___footstep_8cpp_source.html#l00021">Notify()</a>.</p>
 
 </div>
 </div>
@@ -340,6 +378,8 @@ Protected Attributes</h2></td></tr>
 <p>Effect set used when the owning actor does not implement IDTFootstepProvider (or returns null). </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_anim_notify___footstep_8h_source.html#l00054">54</a> of file <a class="el" href="_d_t_anim_notify___footstep_8h_source.html">DTAnimNotify_Footstep.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_anim_notify___footstep_8cpp_source.html#l00113">ResolveEffectSet()</a>.</p>
 
 </div>
 </div>

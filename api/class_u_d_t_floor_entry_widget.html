@@ -164,6 +164,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a80527c85f48e1efacacf0cac21709c4b" id="r_a80527c85f48e1efacacf0cac21709c4b"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_button.html">UDTButton</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a80527c85f48e1efacacf0cac21709c4b">Btn_Select</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af9602dd036d237ea0db6b8d8acf41b1e" id="r_af9602dd036d237ea0db6b8d8acf41b1e"><td class="memItemLeft"><a class="el" href="struct_f_d_t_floor_entry_info.html">FDTFloorEntryInfo</a>&#160;</td><td class="memItemRight"><a class="el" href="#af9602dd036d237ea0db6b8d8acf41b1e">FloorInfo</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic floor button entry. </p>
@@ -195,7 +199,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_floor_entry_widget_8h_source.html#l00031">31</a> of file <a class="el" href="_d_t_floor_entry_widget_8h_source.html">DTFloorEntryWidget.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_floor_entry_widget_8h_source.html#l00031">GetFloorInfo()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_floor_entry_widget_8h_source.html#l00047">FloorInfo</a>, and <a class="el" href="_d_t_floor_entry_widget_8h_source.html#l00031">GetFloorInfo()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_floor_entry_widget_8h_source.html#l00031">GetFloorInfo()</a>.</p>
 
@@ -218,7 +222,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_floor_entry_widget_8cpp_source.html#l00017">17</a> of file <a class="el" href="_d_t_floor_entry_widget_8cpp_source.html">DTFloorEntryWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="#a7d2d2d2eed0d00e252b5b74fd3956416">OnFloorEntryInitialized()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_floor_entry_widget_8h_source.html#l00047">FloorInfo</a>, and <a class="el" href="#a7d2d2d2eed0d00e252b5b74fd3956416">OnFloorEntryInitialized()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00221">UDTCampaignTabWidget::RebuildFloorEntries()</a>.</p>
 
 </div>
 </div>
@@ -330,6 +336,32 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="af9602dd036d237ea0db6b8d8acf41b1e" name="af9602dd036d237ea0db6b8d8acf41b1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9602dd036d237ea0db6b8d8acf41b1e">&#9670;&#160;</a></span>FloorInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_d_t_floor_entry_info.html">FDTFloorEntryInfo</a> UDTFloorEntryWidget::FloorInfo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_floor_entry_widget_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_floor_entry_widget_8h_source.html">DTFloorEntryWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_floor_entry_widget_8h_source.html#l00031">GetFloorInfo()</a>, and <a class="el" href="_d_t_floor_entry_widget_8cpp_source.html#l00017">InitializeEntry()</a>.</p>
+
+</div>
+</div>
 <a id="ac2d34d9077a489c12b6714f10c366036" name="ac2d34d9077a489c12b6714f10c366036"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac2d34d9077a489c12b6714f10c366036">&#9670;&#160;</a></span>OnSelected</h2>
 
@@ -343,6 +375,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_floor_entry_widget_8h_source.html#l00025">25</a> of file <a class="el" href="_d_t_floor_entry_widget_8h_source.html">DTFloorEntryWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00221">UDTCampaignTabWidget::RebuildFloorEntries()</a>.</p>
 
 </div>
 </div>

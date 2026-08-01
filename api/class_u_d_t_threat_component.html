@@ -167,6 +167,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a95d671c4f35acf4751f48d175e65f853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decay every entry by DecayRatePerSecond and drop entries that reach zero.  <br /></td></tr>
 <tr class="memitem:a070295aa3be276f62490c2c8cc3b364d" id="r_a070295aa3be276f62490c2c8cc3b364d"><td class="memItemLeft">AActor *&#160;</td><td class="memItemRight"><a class="el" href="#a070295aa3be276f62490c2c8cc3b364d">SelectTargetByThreat</a> (AActor *CurrentTarget)</td></tr>
 <tr class="memdesc:a070295aa3be276f62490c2c8cc3b364d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the table and return the actor this AI should target.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7edb0f032cf6b3976a073adadd636edf" id="r_a7edb0f032cf6b3976a073adadd636edf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7edb0f032cf6b3976a073adadd636edf">PruneInvalidEntries</a> ()</td></tr>
+<tr class="memdesc:a7edb0f032cf6b3976a073adadd636edf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes entries whose actor is invalid, dead, or beyond MaxThreatRange.  <br /></td></tr>
+<tr class="memitem:a60f2732df18d3cbe59b2f3996550393d" id="r_a60f2732df18d3cbe59b2f3996550393d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a60f2732df18d3cbe59b2f3996550393d">ShouldDebug</a> (int32 MinLevel) const</td></tr>
+<tr class="memdesc:a60f2732df18d3cbe59b2f3996550393d"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when DT.AI.DebugThreat is at least MinLevel.  <br /></td></tr>
+<tr class="memitem:a49c11511d8f38de389b109067b6e25e9" id="r_a49c11511d8f38de389b109067b6e25e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a49c11511d8f38de389b109067b6e25e9">DrawDebugThreat</a> (float Lifetime) const</td></tr>
+<tr class="memdesc:a49c11511d8f38de389b109067b6e25e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the threat table, current target and overtake distance above the owning AI.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae0717361b394c576f1fc76f63c4e4086" id="r_ae0717361b394c576f1fc76f63c4e4086"><td class="memItemLeft"><a class="el" href="struct_f_d_t_a_i_threat_config.html">FDTAIThreatConfig</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae0717361b394c576f1fc76f63c4e4086">Config</a></td></tr>
+<tr class="memdesc:ae0717361b394c576f1fc76f63c4e4086"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active tuning, pushed from the possessed character's config.  <br /></td></tr>
+<tr class="memitem:a1ac14b7c6742cf2f4f9847de2a3e9f20" id="r_a1ac14b7c6742cf2f4f9847de2a3e9f20"><td class="memItemLeft">TMap&lt; TWeakObjectPtr&lt; AActor &gt;, float &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1ac14b7c6742cf2f4f9847de2a3e9f20">ThreatTable</a></td></tr>
+<tr class="memdesc:a1ac14b7c6742cf2f4f9847de2a3e9f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Threat per actor.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Server-authoritative aggro system for AI controllers. </p>
@@ -204,7 +220,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8cpp_source.html#l00024">24</a> of file <a class="el" href="_d_t_threat_component_8cpp_source.html">DTThreatComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00021">Instigator</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00021">Instigator</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00189">ShouldDebug()</a>, and <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
 
 </div>
 </div>
@@ -238,7 +254,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8cpp_source.html#l00044">44</a> of file <a class="el" href="_d_t_threat_component_8cpp_source.html">DTThreatComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00021">Instigator</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00083">Config</a>, <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00021">Instigator</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00189">ShouldDebug()</a>, and <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
 
 </div>
 </div>
@@ -261,6 +277,47 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8cpp_source.html#l00095">95</a> of file <a class="el" href="_d_t_threat_component_8cpp_source.html">DTThreatComponent.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
+
+</div>
+</div>
+<a id="a49c11511d8f38de389b109067b6e25e9" name="a49c11511d8f38de389b109067b6e25e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49c11511d8f38de389b109067b6e25e9">&#9670;&#160;</a></span>DrawDebugThreat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTThreatComponent::DrawDebugThreat </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Lifetime</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws the threat table, current target and overtake distance above the owning AI. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Lifetime</td><td>How long the drawn primitives persist, normally the AI update interval </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8cpp_source.html#l00199">199</a> of file <a class="el" href="_d_t_threat_component_8cpp_source.html">DTThreatComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00083">Config</a>, <a class="el" href="_d_t_targeting_types_8h_source.html#l00029">CurrentTarget</a>, <a class="el" href="_d_t_targeting_component_8h_source.html#l00054">UDTTargetingComponent::GetCurrentTarget()</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00054">ADTAIController::GetTargetingComponent()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00066">GetThreat()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00189">ShouldDebug()</a>, and <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8cpp_source.html#l00108">TickDecay()</a>.</p>
+
 </div>
 </div>
 <a id="ad7cb9bb291ded4f126d909af35dcd93c" name="ad7cb9bb291ded4f126d909af35dcd93c"></a>
@@ -282,7 +339,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8cpp_source.html#l00066">66</a> of file <a class="el" href="_d_t_threat_component_8cpp_source.html">DTThreatComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8cpp_source.html#l00131">SelectTargetByThreat()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8cpp_source.html#l00199">DrawDebugThreat()</a>, and <a class="el" href="_d_t_threat_component_8cpp_source.html#l00131">SelectTargetByThreat()</a>.</p>
 
 </div>
 </div>
@@ -304,6 +363,8 @@ Public Member Functions</h2></td></tr>
 <p>Get the actor with the highest threat, or null if the table is empty. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8cpp_source.html#l00077">77</a> of file <a class="el" href="_d_t_threat_component_8cpp_source.html">DTThreatComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8cpp_source.html#l00131">SelectTargetByThreat()</a>.</p>
 
@@ -337,7 +398,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8h_source.html#l00052">52</a> of file <a class="el" href="_d_t_threat_component_8h_source.html">DTThreatComponent.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00052">HasEntryFor()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00052">HasEntryFor()</a>, and <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8h_source.html#l00052">HasEntryFor()</a>.</p>
 
@@ -370,9 +431,42 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8h_source.html#l00048">48</a> of file <a class="el" href="_d_t_threat_component_8h_source.html">DTThreatComponent.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00048">HasThreatEntries()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00048">HasThreatEntries()</a>, and <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8h_source.html#l00048">HasThreatEntries()</a>.</p>
+
+</div>
+</div>
+<a id="a7edb0f032cf6b3976a073adadd636edf" name="a7edb0f032cf6b3976a073adadd636edf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7edb0f032cf6b3976a073adadd636edf">&#9670;&#160;</a></span>PruneInvalidEntries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTThreatComponent::PruneInvalidEntries </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes entries whose actor is invalid, dead, or beyond MaxThreatRange. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8cpp_source.html#l00162">162</a> of file <a class="el" href="_d_t_threat_component_8cpp_source.html">DTThreatComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00083">Config</a>, and <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8cpp_source.html#l00131">SelectTargetByThreat()</a>.</p>
 
 </div>
 </div>
@@ -394,6 +488,8 @@ Public Member Functions</h2></td></tr>
 <p>Empty the entire threat table. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8cpp_source.html#l00103">103</a> of file <a class="el" href="_d_t_threat_component_8cpp_source.html">DTThreatComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
 
 </div>
 </div>
@@ -423,7 +519,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8cpp_source.html#l00131">131</a> of file <a class="el" href="_d_t_threat_component_8cpp_source.html">DTThreatComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_targeting_types_8h_source.html#l00029">CurrentTarget</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00066">GetThreat()</a>, and <a class="el" href="_d_t_threat_component_8cpp_source.html#l00077">GetTopThreatActor()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00083">Config</a>, <a class="el" href="_d_t_targeting_types_8h_source.html#l00029">CurrentTarget</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00066">GetThreat()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00077">GetTopThreatActor()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00162">PruneInvalidEntries()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00189">ShouldDebug()</a>, and <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
 
 </div>
 </div>
@@ -455,9 +551,48 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8h_source.html#l00063">63</a> of file <a class="el" href="_d_t_threat_component_8h_source.html">DTThreatComponent.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00063">SetConfig()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00083">Config</a>, and <a class="el" href="_d_t_threat_component_8h_source.html#l00063">SetConfig()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8h_source.html#l00063">SetConfig()</a>.</p>
+
+</div>
+</div>
+<a id="a60f2732df18d3cbe59b2f3996550393d" name="a60f2732df18d3cbe59b2f3996550393d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f2732df18d3cbe59b2f3996550393d">&#9670;&#160;</a></span>ShouldDebug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTThreatComponent::ShouldDebug </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>MinLevel</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True when DT.AI.DebugThreat is at least MinLevel. </p>
+<p>Always false in shipping. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">MinLevel</td><td>Minimum debug level required </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8cpp_source.html#l00189">189</a> of file <a class="el" href="_d_t_threat_component_8cpp_source.html">DTThreatComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_threat_component_8cpp.html#a1a602a8fe51ffa87b20caecdccf6078a">CVarDTAIDebugThreat()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8cpp_source.html#l00024">AddThreat()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00044">ApplyTaunt()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00199">DrawDebugThreat()</a>, and <a class="el" href="_d_t_threat_component_8cpp_source.html#l00131">SelectTargetByThreat()</a>.</p>
 
 </div>
 </div>
@@ -485,6 +620,66 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8cpp_source.html#l00108">108</a> of file <a class="el" href="_d_t_threat_component_8cpp_source.html">DTThreatComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_threat_component_8h_source.html#l00083">Config</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00199">DrawDebugThreat()</a>, and <a class="el" href="_d_t_threat_component_8h_source.html#l00086">ThreatTable</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ae0717361b394c576f1fc76f63c4e4086" name="ae0717361b394c576f1fc76f63c4e4086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0717361b394c576f1fc76f63c4e4086">&#9670;&#160;</a></span>Config</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_d_t_a_i_threat_config.html">FDTAIThreatConfig</a> UDTThreatComponent::Config</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Active tuning, pushed from the possessed character's config. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8h_source.html#l00083">83</a> of file <a class="el" href="_d_t_threat_component_8h_source.html">DTThreatComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8cpp_source.html#l00044">ApplyTaunt()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00199">DrawDebugThreat()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00162">PruneInvalidEntries()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00131">SelectTargetByThreat()</a>, <a class="el" href="_d_t_threat_component_8h_source.html#l00063">SetConfig()</a>, and <a class="el" href="_d_t_threat_component_8cpp_source.html#l00108">TickDecay()</a>.</p>
+
+</div>
+</div>
+<a id="a1ac14b7c6742cf2f4f9847de2a3e9f20" name="a1ac14b7c6742cf2f4f9847de2a3e9f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ac14b7c6742cf2f4f9847de2a3e9f20">&#9670;&#160;</a></span>ThreatTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMap&lt;TWeakObjectPtr&lt;AActor&gt;, float&gt; UDTThreatComponent::ThreatTable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Threat per actor. </p>
+<p>Weak keys so dead/destroyed actors are never pinned; pruned during evaluation. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_threat_component_8h_source.html#l00086">86</a> of file <a class="el" href="_d_t_threat_component_8h_source.html">DTThreatComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8cpp_source.html#l00024">AddThreat()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00044">ApplyTaunt()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00095">ClearThreat()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00199">DrawDebugThreat()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00066">GetThreat()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00077">GetTopThreatActor()</a>, <a class="el" href="_d_t_threat_component_8h_source.html#l00052">HasEntryFor()</a>, <a class="el" href="_d_t_threat_component_8h_source.html#l00048">HasThreatEntries()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00162">PruneInvalidEntries()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00103">ResetThreat()</a>, <a class="el" href="_d_t_threat_component_8cpp_source.html#l00131">SelectTargetByThreat()</a>, and <a class="el" href="_d_t_threat_component_8cpp_source.html#l00108">TickDecay()</a>.</p>
 
 </div>
 </div>

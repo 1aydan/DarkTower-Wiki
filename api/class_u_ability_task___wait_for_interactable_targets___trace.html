@@ -143,6 +143,26 @@ Inheritance diagram for UAbilityTask_WaitForInteractableTargets_Trace:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aee161c6f9e9e26f8b2a5b88b4a19d7c9" id="r_aee161c6f9e9e26f8b2a5b88b4a19d7c9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aee161c6f9e9e26f8b2a5b88b4a19d7c9">Activate</a> () override</td></tr>
+<tr class="memitem:a308aa802b915241a215cd9d0d2bc14b6" id="r_a308aa802b915241a215cd9d0d2bc14b6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a308aa802b915241a215cd9d0d2bc14b6">OnDestroy</a> (bool AbilityEnded) override</td></tr>
+<tr class="memitem:a9dc99b3d049e8d494f177f12cce5a949" id="r_a9dc99b3d049e8d494f177f12cce5a949"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9dc99b3d049e8d494f177f12cce5a949">PerformTrace</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a68370dd92df74ee8b092dbeab3756330" id="r_a68370dd92df74ee8b092dbeab3756330"><td class="memItemLeft">static <a class="el" href="class_u_ability_task___wait_for_interactable_targets___trace.html">UAbilityTask_WaitForInteractableTargets_Trace</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a68370dd92df74ee8b092dbeab3756330">WaitForInteractableTargets_Trace</a> (UGameplayAbility *OwningAbility, <a class="el" href="struct_f_interaction_query.html">FInteractionQuery</a> InteractionQuery, FCollisionProfileName TraceProfile, FGameplayAbilityTargetingLocationInfo StartLocation, float InteractionScanRange=500, float InteractionScanRate=0.100, bool bShowDebug=false)</td></tr>
+<tr class="memdesc:a68370dd92df74ee8b092dbeab3756330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait until we trace new set of interactables.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6d19d7288ec415d58beff66a07d3acd1" id="r_a6d19d7288ec415d58beff66a07d3acd1"><td class="memItemLeft"><a class="el" href="struct_f_interaction_query.html">FInteractionQuery</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6d19d7288ec415d58beff66a07d3acd1">InteractionQuery</a></td></tr>
+<tr class="memitem:a61cd82753b3f863a7dcd2a809176ddf3" id="r_a61cd82753b3f863a7dcd2a809176ddf3"><td class="memItemLeft">FGameplayAbilityTargetingLocationInfo&#160;</td><td class="memItemRight"><a class="el" href="#a61cd82753b3f863a7dcd2a809176ddf3">StartLocation</a></td></tr>
+<tr class="memitem:a18db877bb09ef948da7a3c9da7ae7ba9" id="r_a18db877bb09ef948da7a3c9da7ae7ba9"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a18db877bb09ef948da7a3c9da7ae7ba9">InteractionScanRange</a> = 500</td></tr>
+<tr class="memitem:ae6129799aa7be2631a7588dc123717a2" id="r_ae6129799aa7be2631a7588dc123717a2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ae6129799aa7be2631a7588dc123717a2">InteractionScanRate</a> = 0.100f</td></tr>
+<tr class="memitem:a831532c8fd7ee3902a383d5fe0ac9857" id="r_a831532c8fd7ee3902a383d5fe0ac9857"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a831532c8fd7ee3902a383d5fe0ac9857">bShowDebug</a> = false</td></tr>
+<tr class="memitem:ae3f7ba4d4f016b5f84d0f3791c8a3d99" id="r_ae3f7ba4d4f016b5f84d0f3791c8a3d99"><td class="memItemLeft">FTimerHandle&#160;</td><td class="memItemRight"><a class="el" href="#ae3f7ba4d4f016b5f84d0f3791c8a3d99">TimerHandle</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_u_ability_task___wait_for_interactable_targets"><td colspan="2">Public Attributes inherited from <a class="el" href="class_u_ability_task___wait_for_interactable_targets.html">UAbilityTask_WaitForInteractableTargets</a></td></tr>
@@ -161,7 +181,313 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00015">15</a> of file <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html">AbilityTask_WaitForInteractableTargets_Trace.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aee161c6f9e9e26f8b2a5b88b4a19d7c9" name="aee161c6f9e9e26f8b2a5b88b4a19d7c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee161c6f9e9e26f8b2a5b88b4a19d7c9">&#9670;&#160;</a></span>Activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UAbilityTask_WaitForInteractableTargets_Trace::Activate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel private">private</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00031">31</a> of file <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html">AbilityTask_WaitForInteractableTargets_Trace.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00038">InteractionScanRate</a>, and <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00041">TimerHandle</a>.</p>
+
+</div>
+</div>
+<a id="a308aa802b915241a215cd9d0d2bc14b6" name="a308aa802b915241a215cd9d0d2bc14b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a308aa802b915241a215cd9d0d2bc14b6">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UAbilityTask_WaitForInteractableTargets_Trace::OnDestroy </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>AbilityEnded</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel private">private</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00039">39</a> of file <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html">AbilityTask_WaitForInteractableTargets_Trace.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00041">TimerHandle</a>.</p>
+
+</div>
+</div>
+<a id="a9dc99b3d049e8d494f177f12cce5a949" name="a9dc99b3d049e8d494f177f12cce5a949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc99b3d049e8d494f177f12cce5a949">&#9670;&#160;</a></span>PerformTrace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UAbilityTask_WaitForInteractableTargets_Trace::PerformTrace </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00049">49</a> of file <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html">AbilityTask_WaitForInteractableTargets_Trace.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_interaction_statics_8cpp_source.html#l00058">UInteractionStatics::AppendInteractableTargetsFromOverlapResults()</a>, <a class="el" href="_d_t_collision_channels_8h_source.html#l00029">DT_TraceChannel_Interaction</a>, <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00032">InteractionQuery</a>, <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00037">InteractionScanRange</a>, and <a class="el" href="_ability_task___wait_for_interactable_targets_8cpp_source.html#l00108">UAbilityTask_WaitForInteractableTargets::UpdateInteractableOptions()</a>.</p>
+
+</div>
+</div>
+<a id="a68370dd92df74ee8b092dbeab3756330" name="a68370dd92df74ee8b092dbeab3756330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68370dd92df74ee8b092dbeab3756330">&#9670;&#160;</a></span>WaitForInteractableTargets_Trace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_ability_task___wait_for_interactable_targets___trace.html">UAbilityTask_WaitForInteractableTargets_Trace</a> * UAbilityTask_WaitForInteractableTargets_Trace::WaitForInteractableTargets_Trace </td>
+          <td>(</td>
+          <td class="paramtype">UGameplayAbility *</td>          <td class="paramname"><span class="paramname"><em>OwningAbility</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_f_interaction_query.html">FInteractionQuery</a></td>          <td class="paramname"><span class="paramname"><em>InteractionQuery</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FCollisionProfileName</td>          <td class="paramname"><span class="paramname"><em>TraceProfile</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGameplayAbilityTargetingLocationInfo</td>          <td class="paramname"><span class="paramname"><em>StartLocation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>InteractionScanRange</em></span><span class="paramdefsep"> = </span><span class="paramdefval">500</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>InteractionScanRate</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.100</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bShowDebug</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wait until we trace new set of interactables. </p>
+<p>This task automatically loops. </p>
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00018">18</a> of file <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html">AbilityTask_WaitForInteractableTargets_Trace.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00039">bShowDebug</a>, <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00032">InteractionQuery</a>, <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00037">InteractionScanRange</a>, <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00038">InteractionScanRate</a>, <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00035">StartLocation</a>, and <a class="el" href="_ability_task___wait_for_interactable_targets_8h_source.html#l00040">UAbilityTask_WaitForInteractableTargets::TraceProfile</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a831532c8fd7ee3902a383d5fe0ac9857" name="a831532c8fd7ee3902a383d5fe0ac9857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a831532c8fd7ee3902a383d5fe0ac9857">&#9670;&#160;</a></span>bShowDebug</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UAbilityTask_WaitForInteractableTargets_Trace::bShowDebug = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00039">39</a> of file <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html">AbilityTask_WaitForInteractableTargets_Trace.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00018">WaitForInteractableTargets_Trace()</a>.</p>
+
+</div>
+</div>
+<a id="a6d19d7288ec415d58beff66a07d3acd1" name="a6d19d7288ec415d58beff66a07d3acd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d19d7288ec415d58beff66a07d3acd1">&#9670;&#160;</a></span>InteractionQuery</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_interaction_query.html">FInteractionQuery</a> UAbilityTask_WaitForInteractableTargets_Trace::InteractionQuery</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00032">32</a> of file <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html">AbilityTask_WaitForInteractableTargets_Trace.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00049">PerformTrace()</a>, and <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00018">WaitForInteractableTargets_Trace()</a>.</p>
+
+</div>
+</div>
+<a id="a18db877bb09ef948da7a3c9da7ae7ba9" name="a18db877bb09ef948da7a3c9da7ae7ba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18db877bb09ef948da7a3c9da7ae7ba9">&#9670;&#160;</a></span>InteractionScanRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UAbilityTask_WaitForInteractableTargets_Trace::InteractionScanRange = 500</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00037">37</a> of file <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html">AbilityTask_WaitForInteractableTargets_Trace.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00049">PerformTrace()</a>, and <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00018">WaitForInteractableTargets_Trace()</a>.</p>
+
+</div>
+</div>
+<a id="ae6129799aa7be2631a7588dc123717a2" name="ae6129799aa7be2631a7588dc123717a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6129799aa7be2631a7588dc123717a2">&#9670;&#160;</a></span>InteractionScanRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UAbilityTask_WaitForInteractableTargets_Trace::InteractionScanRate = 0.100f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00038">38</a> of file <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html">AbilityTask_WaitForInteractableTargets_Trace.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00031">Activate()</a>, and <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00018">WaitForInteractableTargets_Trace()</a>.</p>
+
+</div>
+</div>
+<a id="a61cd82753b3f863a7dcd2a809176ddf3" name="a61cd82753b3f863a7dcd2a809176ddf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61cd82753b3f863a7dcd2a809176ddf3">&#9670;&#160;</a></span>StartLocation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayAbilityTargetingLocationInfo UAbilityTask_WaitForInteractableTargets_Trace::StartLocation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00035">35</a> of file <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html">AbilityTask_WaitForInteractableTargets_Trace.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00018">WaitForInteractableTargets_Trace()</a>.</p>
+
+</div>
+</div>
+<a id="ae3f7ba4d4f016b5f84d0f3791c8a3d99" name="ae3f7ba4d4f016b5f84d0f3791c8a3d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3f7ba4d4f016b5f84d0f3791c8a3d99">&#9670;&#160;</a></span>TimerHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTimerHandle UAbilityTask_WaitForInteractableTargets_Trace::TimerHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html#l00041">41</a> of file <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html">AbilityTask_WaitForInteractableTargets_Trace.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00031">Activate()</a>, and <a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html#l00039">OnDestroy()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>F:/Work/SecondShift/DarkTower/Source/DarkTower/Public/AbilitySystem/Tasks/<a class="el" href="_ability_task___wait_for_interactable_targets___trace_8h_source.html">AbilityTask_WaitForInteractableTargets_Trace.h</a></li>
 <li>F:/Work/SecondShift/DarkTower/Source/DarkTower/Private/AbilitySystem/Tasks/<a class="el" href="_ability_task___wait_for_interactable_targets___trace_8cpp_source.html">AbilityTask_WaitForInteractableTargets_Trace.cpp</a></li>
 </ul>

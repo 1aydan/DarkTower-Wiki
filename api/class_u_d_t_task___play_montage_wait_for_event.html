@@ -170,6 +170,35 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:af548cda45710e5d0569a99846ea1240d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ability task was explicitly cancelled by another ability.  <br /></td></tr>
 <tr class="memitem:a9feecdc64d09831d75878e5ee37df9b0" id="r_a9feecdc64d09831d75878e5ee37df9b0"><td class="memItemLeft">FDTPlayMontageAndWaitForEventDelegate&#160;</td><td class="memItemRight"><a class="el" href="#a9feecdc64d09831d75878e5ee37df9b0">EventReceived</a></td></tr>
 <tr class="memdesc:a9feecdc64d09831d75878e5ee37df9b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">One of the triggering gameplay events happened.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a790ee7c32a2a39c136dd64220df31615" id="r_a790ee7c32a2a39c136dd64220df31615"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a790ee7c32a2a39c136dd64220df31615">StopPlayingMontage</a> () const</td></tr>
+<tr class="memdesc:a790ee7c32a2a39c136dd64220df31615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the ability is playing a montage and stops that montage, returns true if a montage was stopped, false if not.  <br /></td></tr>
+<tr class="memitem:aa3e3ffb6eda2772bde40f8bf418ffd71" id="r_aa3e3ffb6eda2772bde40f8bf418ffd71"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa3e3ffb6eda2772bde40f8bf418ffd71">OnMontageBlendingOut</a> (UAnimMontage *Montage, bool bInterrupted) const</td></tr>
+<tr class="memitem:ac703edbdab1a3d8a7763ea0a437ee92a" id="r_ac703edbdab1a3d8a7763ea0a437ee92a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac703edbdab1a3d8a7763ea0a437ee92a">OnAbilityCancelled</a> () const</td></tr>
+<tr class="memitem:a645be8f951d0f99770222af3269e3403" id="r_a645be8f951d0f99770222af3269e3403"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a645be8f951d0f99770222af3269e3403">OnMontageEnded</a> (UAnimMontage *Montage, bool bInterrupted)</td></tr>
+<tr class="memitem:a55f9421a6e96188e532b9984e8d72677" id="r_a55f9421a6e96188e532b9984e8d72677"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a55f9421a6e96188e532b9984e8d72677">OnGameplayEvent</a> (FGameplayTag EventTag, const FGameplayEventData *Payload) const</td></tr>
+<tr class="memitem:a3583296d5e5a6066102268dfd2625a2c" id="r_a3583296d5e5a6066102268dfd2625a2c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3583296d5e5a6066102268dfd2625a2c">OnServerSyncEventReceived</a> (FGameplayTag EventTag, FGameplayEventData EventData) const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9eb2dcb7d380d3fa1a5fbe70a91651a0" id="r_a9eb2dcb7d380d3fa1a5fbe70a91651a0"><td class="memItemLeft">TObjectPtr&lt; UAnimMontage &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9eb2dcb7d380d3fa1a5fbe70a91651a0">MontageToPlay</a></td></tr>
+<tr class="memdesc:a9eb2dcb7d380d3fa1a5fbe70a91651a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Montage that is playing.  <br /></td></tr>
+<tr class="memitem:ac089a18bf56459047f59fdff3bc56cd0" id="r_ac089a18bf56459047f59fdff3bc56cd0"><td class="memItemLeft">FGameplayTagContainer&#160;</td><td class="memItemRight"><a class="el" href="#ac089a18bf56459047f59fdff3bc56cd0">EventTags</a></td></tr>
+<tr class="memdesc:ac089a18bf56459047f59fdff3bc56cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of tags to match against gameplay events.  <br /></td></tr>
+<tr class="memitem:abee3a4ea38b8668ce25380fab487cd61" id="r_abee3a4ea38b8668ce25380fab487cd61"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#abee3a4ea38b8668ce25380fab487cd61">Rate</a> = 1.0f</td></tr>
+<tr class="memdesc:abee3a4ea38b8668ce25380fab487cd61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Playback rate.  <br /></td></tr>
+<tr class="memitem:abd0e345048868da4d8a8750914c97d2a" id="r_abd0e345048868da4d8a8750914c97d2a"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#abd0e345048868da4d8a8750914c97d2a">StartSection</a></td></tr>
+<tr class="memdesc:abd0e345048868da4d8a8750914c97d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Section to start montage from.  <br /></td></tr>
+<tr class="memitem:ae6ccf3a3c522a85de4e883b850e34549" id="r_ae6ccf3a3c522a85de4e883b850e34549"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ae6ccf3a3c522a85de4e883b850e34549">AnimRootMotionTranslationScale</a></td></tr>
+<tr class="memdesc:ae6ccf3a3c522a85de4e883b850e34549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies how root motion movement to apply.  <br /></td></tr>
+<tr class="memitem:a4c37c774531b0f2b9d85d1bbd6501185" id="r_a4c37c774531b0f2b9d85d1bbd6501185"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4c37c774531b0f2b9d85d1bbd6501185">bStopWhenAbilityEnds</a> = true</td></tr>
+<tr class="memdesc:a4c37c774531b0f2b9d85d1bbd6501185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the montage should be aborted if the ability ends.  <br /></td></tr>
+<tr class="memitem:af708fb68009d94a3f7bae4bbe1d4966a" id="r_af708fb68009d94a3f7bae4bbe1d4966a"><td class="memItemLeft">FOnMontageBlendingOutStarted&#160;</td><td class="memItemRight"><a class="el" href="#af708fb68009d94a3f7bae4bbe1d4966a">BlendingOutDelegate</a></td></tr>
+<tr class="memitem:a8a4b90353fe1faf94f52d62b3ef41795" id="r_a8a4b90353fe1faf94f52d62b3ef41795"><td class="memItemLeft">FOnMontageEnded&#160;</td><td class="memItemRight"><a class="el" href="#a8a4b90353fe1faf94f52d62b3ef41795">MontageEndedDelegate</a></td></tr>
+<tr class="memitem:a9f0c2050f3418656ba6ca3bc30cfc458" id="r_a9f0c2050f3418656ba6ca3bc30cfc458"><td class="memItemLeft">FDelegateHandle&#160;</td><td class="memItemRight"><a class="el" href="#a9f0c2050f3418656ba6ca3bc30cfc458">CancelledHandle</a></td></tr>
+<tr class="memitem:a97af93873d3b12082d34dbf0532179f5" id="r_a97af93873d3b12082d34dbf0532179f5"><td class="memItemLeft">FDelegateHandle&#160;</td><td class="memItemRight"><a class="el" href="#a97af93873d3b12082d34dbf0532179f5">EventHandle</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Combines PlayMontageAndWait and WaitForEvent into one task: plays a montage and fires EventReceived for any gameplay event matching EventTags while it plays. </p>
@@ -224,7 +253,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">17</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html">DTTask_PlayMontageWaitForEvent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00046">OnCancelled</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00098">AnimRootMotionTranslationScale</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00113">BlendingOutDelegate</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00115">CancelledHandle</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00116">EventHandle</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00086">EventTags</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00114">MontageEndedDelegate</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00082">MontageToPlay</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00228">OnAbilityCancelled()</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00046">OnCancelled</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00253">OnGameplayEvent()</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00195">OnMontageBlendingOut()</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00240">OnMontageEnded()</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00090">Rate</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00094">StartSection</a>.</p>
 
 </div>
 </div>
@@ -253,6 +282,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00083">83</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html">DTTask_PlayMontageWaitForEvent.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00228">OnAbilityCancelled()</a>.</p>
+
 </div>
 </div>
 <a id="a9fa1b18cd334ae13cf7e8e5102a91ca6" name="a9fa1b18cd334ae13cf7e8e5102a91ca6"></a>
@@ -280,6 +311,39 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00091">91</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html">DTTask_PlayMontageWaitForEvent.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00082">MontageToPlay</a>.</p>
+
+</div>
+</div>
+<a id="ac703edbdab1a3d8a7763ea0a437ee92a" name="ac703edbdab1a3d8a7763ea0a437ee92a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac703edbdab1a3d8a7763ea0a437ee92a">&#9670;&#160;</a></span>OnAbilityCancelled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTask_PlayMontageWaitForEvent::OnAbilityCancelled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00228">228</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html">DTTask_PlayMontageWaitForEvent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00046">OnCancelled</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00159">StopPlayingMontage()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00083">ExternalCancel()</a>.</p>
+
 </div>
 </div>
 <a id="acbb9ed52212fb5db00476666e3c7c714" name="acbb9ed52212fb5db00476666e3c7c714"></a>
@@ -306,6 +370,148 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00108">108</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html">DTTask_PlayMontageWaitForEvent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00102">bStopWhenAbilityEnds</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00115">CancelledHandle</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00116">EventHandle</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00086">EventTags</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00159">StopPlayingMontage()</a>.</p>
+
+</div>
+</div>
+<a id="a55f9421a6e96188e532b9984e8d72677" name="a55f9421a6e96188e532b9984e8d72677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55f9421a6e96188e532b9984e8d72677">&#9670;&#160;</a></span>OnGameplayEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTask_PlayMontageWaitForEvent::OnGameplayEvent </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>EventTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FGameplayEventData *</td>          <td class="paramname"><span class="paramname"><em>Payload</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00253">253</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html">DTTask_PlayMontageWaitForEvent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00018">OnlyServerWait</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00270">OnServerSyncEventReceived()</a>, <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00039">UDTAbilityTask_NetworkSyncPoint::OnSyncDelegate</a>, and <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00023">UDTAbilityTask_NetworkSyncPoint::WaitNetSync()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>.</p>
+
+</div>
+</div>
+<a id="aa3e3ffb6eda2772bde40f8bf418ffd71" name="aa3e3ffb6eda2772bde40f8bf418ffd71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3e3ffb6eda2772bde40f8bf418ffd71">&#9670;&#160;</a></span>OnMontageBlendingOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTask_PlayMontageWaitForEvent::OnMontageBlendingOut </td>
+          <td>(</td>
+          <td class="paramtype">UAnimMontage *</td>          <td class="paramname"><span class="paramname"><em>Montage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bInterrupted</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00195">195</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html">DTTask_PlayMontageWaitForEvent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00082">MontageToPlay</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00038">OnBlendOut</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00042">OnInterrupted</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>.</p>
+
+</div>
+</div>
+<a id="a645be8f951d0f99770222af3269e3403" name="a645be8f951d0f99770222af3269e3403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a645be8f951d0f99770222af3269e3403">&#9670;&#160;</a></span>OnMontageEnded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTask_PlayMontageWaitForEvent::OnMontageEnded </td>
+          <td>(</td>
+          <td class="paramtype">UAnimMontage *</td>          <td class="paramname"><span class="paramname"><em>Montage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bInterrupted</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00240">240</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html">DTTask_PlayMontageWaitForEvent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00034">OnCompleted</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>.</p>
+
+</div>
+</div>
+<a id="a3583296d5e5a6066102268dfd2625a2c" name="a3583296d5e5a6066102268dfd2625a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3583296d5e5a6066102268dfd2625a2c">&#9670;&#160;</a></span>OnServerSyncEventReceived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTTask_PlayMontageWaitForEvent::OnServerSyncEventReceived </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>EventTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGameplayEventData</td>          <td class="paramname"><span class="paramname"><em>EventData</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00270">270</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html">DTTask_PlayMontageWaitForEvent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00050">EventReceived</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00253">OnGameplayEvent()</a>.</p>
 
 </div>
 </div>
@@ -383,7 +589,40 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00138">138</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html">DTTask_PlayMontageWaitForEvent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00012">UDTTask_PlayMontageWaitForEvent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00098">AnimRootMotionTranslationScale</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00102">bStopWhenAbilityEnds</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00086">EventTags</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00082">MontageToPlay</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00090">Rate</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00094">StartSection</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00012">UDTTask_PlayMontageWaitForEvent()</a>.</p>
+
+</div>
+</div>
+<a id="a790ee7c32a2a39c136dd64220df31615" name="a790ee7c32a2a39c136dd64220df31615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a790ee7c32a2a39c136dd64220df31615">&#9670;&#160;</a></span>StopPlayingMontage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTTask_PlayMontageWaitForEvent::StopPlayingMontage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the ability is playing a montage and stops that montage, returns true if a montage was stopped, false if not. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00159">159</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html">DTTask_PlayMontageWaitForEvent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00082">MontageToPlay</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00228">OnAbilityCancelled()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00108">OnDestroy()</a>.</p>
 
 </div>
 </div>
@@ -411,6 +650,140 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ae6ccf3a3c522a85de4e883b850e34549" name="ae6ccf3a3c522a85de4e883b850e34549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ccf3a3c522a85de4e883b850e34549">&#9670;&#160;</a></span>AnimRootMotionTranslationScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTTask_PlayMontageWaitForEvent::AnimRootMotionTranslationScale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Modifies how root motion movement to apply. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00098">98</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00138">PlayMontageAndWaitForEvent()</a>.</p>
+
+</div>
+</div>
+<a id="af708fb68009d94a3f7bae4bbe1d4966a" name="af708fb68009d94a3f7bae4bbe1d4966a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af708fb68009d94a3f7bae4bbe1d4966a">&#9670;&#160;</a></span>BlendingOutDelegate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FOnMontageBlendingOutStarted UDTTask_PlayMontageWaitForEvent::BlendingOutDelegate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00113">113</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>.</p>
+
+</div>
+</div>
+<a id="a4c37c774531b0f2b9d85d1bbd6501185" name="a4c37c774531b0f2b9d85d1bbd6501185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c37c774531b0f2b9d85d1bbd6501185">&#9670;&#160;</a></span>bStopWhenAbilityEnds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTTask_PlayMontageWaitForEvent::bStopWhenAbilityEnds = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether the montage should be aborted if the ability ends. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00102">102</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00108">OnDestroy()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00138">PlayMontageAndWaitForEvent()</a>.</p>
+
+</div>
+</div>
+<a id="a9f0c2050f3418656ba6ca3bc30cfc458" name="a9f0c2050f3418656ba6ca3bc30cfc458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0c2050f3418656ba6ca3bc30cfc458">&#9670;&#160;</a></span>CancelledHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDelegateHandle UDTTask_PlayMontageWaitForEvent::CancelledHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00115">115</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00108">OnDestroy()</a>.</p>
+
+</div>
+</div>
+<a id="a97af93873d3b12082d34dbf0532179f5" name="a97af93873d3b12082d34dbf0532179f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97af93873d3b12082d34dbf0532179f5">&#9670;&#160;</a></span>EventHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDelegateHandle UDTTask_PlayMontageWaitForEvent::EventHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00116">116</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00108">OnDestroy()</a>.</p>
+
+</div>
+</div>
 <a id="a9feecdc64d09831d75878e5ee37df9b0" name="a9feecdc64d09831d75878e5ee37df9b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9feecdc64d09831d75878e5ee37df9b0">&#9670;&#160;</a></span>EventReceived</h2>
 
@@ -426,6 +799,90 @@ Public Attributes</h2></td></tr>
 <p>One of the triggering gameplay events happened. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00050">50</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00270">OnServerSyncEventReceived()</a>.</p>
+
+</div>
+</div>
+<a id="ac089a18bf56459047f59fdff3bc56cd0" name="ac089a18bf56459047f59fdff3bc56cd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac089a18bf56459047f59fdff3bc56cd0">&#9670;&#160;</a></span>EventTags</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayTagContainer UDTTask_PlayMontageWaitForEvent::EventTags</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of tags to match against gameplay events. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00086">86</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00108">OnDestroy()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00138">PlayMontageAndWaitForEvent()</a>.</p>
+
+</div>
+</div>
+<a id="a8a4b90353fe1faf94f52d62b3ef41795" name="a8a4b90353fe1faf94f52d62b3ef41795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4b90353fe1faf94f52d62b3ef41795">&#9670;&#160;</a></span>MontageEndedDelegate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FOnMontageEnded UDTTask_PlayMontageWaitForEvent::MontageEndedDelegate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00114">114</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>.</p>
+
+</div>
+</div>
+<a id="a9eb2dcb7d380d3fa1a5fbe70a91651a0" name="a9eb2dcb7d380d3fa1a5fbe70a91651a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eb2dcb7d380d3fa1a5fbe70a91651a0">&#9670;&#160;</a></span>MontageToPlay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UAnimMontage&gt; UDTTask_PlayMontageWaitForEvent::MontageToPlay</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Montage that is playing. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00082">82</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00091">GetDebugString()</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00195">OnMontageBlendingOut()</a>, <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00138">PlayMontageAndWaitForEvent()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00159">StopPlayingMontage()</a>.</p>
 
 </div>
 </div>
@@ -445,7 +902,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00038">38</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00131">UnbindAllDelegate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00195">OnMontageBlendingOut()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00131">UnbindAllDelegate()</a>.</p>
 
 </div>
 </div>
@@ -465,7 +922,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00046">46</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00228">OnAbilityCancelled()</a>.</p>
 
 </div>
 </div>
@@ -485,7 +942,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00034">34</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00131">UnbindAllDelegate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00240">OnMontageEnded()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00131">UnbindAllDelegate()</a>.</p>
 
 </div>
 </div>
@@ -505,7 +962,63 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00042">42</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00131">UnbindAllDelegate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00195">OnMontageBlendingOut()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00131">UnbindAllDelegate()</a>.</p>
+
+</div>
+</div>
+<a id="abee3a4ea38b8668ce25380fab487cd61" name="abee3a4ea38b8668ce25380fab487cd61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee3a4ea38b8668ce25380fab487cd61">&#9670;&#160;</a></span>Rate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UDTTask_PlayMontageWaitForEvent::Rate = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Playback rate. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00090">90</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00138">PlayMontageAndWaitForEvent()</a>.</p>
+
+</div>
+</div>
+<a id="abd0e345048868da4d8a8750914c97d2a" name="abd0e345048868da4d8a8750914c97d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd0e345048868da4d8a8750914c97d2a">&#9670;&#160;</a></span>StartSection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FName UDTTask_PlayMontageWaitForEvent::StartSection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Section to start montage from. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html#l00094">94</a> of file <a class="el" href="_d_t_task___play_montage_wait_for_event_8h_source.html">DTTask_PlayMontageWaitForEvent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00017">Activate()</a>, and <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00138">PlayMontageAndWaitForEvent()</a>.</p>
 
 </div>
 </div>

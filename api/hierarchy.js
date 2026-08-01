@@ -201,6 +201,7 @@ var hierarchy =
     [ "FLootRarityData", "struct_f_loot_rarity_data.html", null ],
     [ "FLootSourceEntry", "struct_f_loot_source_entry.html", null ],
     [ "FMeleeAttackParams", "struct_f_melee_attack_params.html", null ],
+    [ "ADTAbilityActor::FPendingAttributeReplication", "struct_a_d_t_ability_actor_1_1_f_pending_attribute_replication.html", null ],
     [ "FPlayerProgressionSaveData", "struct_f_player_progression_save_data.html", null ],
     [ "FProjectileSpawnData", "struct_f_projectile_spawn_data.html", null ],
     [ "FRarityAffixConfig", "struct_f_rarity_affix_config.html", null ],

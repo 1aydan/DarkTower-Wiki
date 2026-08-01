@@ -172,6 +172,11 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a0c6b5952941ec1e44f19fe98ae6a68e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to automatically hide the nameplate after health changes.  <br /></td></tr>
 <tr class="memitem:ab725a0b339eca9c0e94cac2ae1dd18d8" id="r_ab725a0b339eca9c0e94cac2ae1dd18d8"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab725a0b339eca9c0e94cac2ae1dd18d8">AutoHideDelay</a> = 3.0f</td></tr>
 <tr class="memdesc:ab725a0b339eca9c0e94cac2ae1dd18d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time in seconds before hiding the nameplate after health changes.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af0d2c4c2802205fd6a8517ac016e4a31" id="r_af0d2c4c2802205fd6a8517ac016e4a31"><td class="memItemLeft">FTimerHandle&#160;</td><td class="memItemRight"><a class="el" href="#af0d2c4c2802205fd6a8517ac016e4a31">AutoHideTimerHandle</a></td></tr>
+<tr class="memdesc:af0d2c4c2802205fd6a8517ac016e4a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer handle for auto-hiding the nameplate.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Nameplate widget class. </p>
@@ -320,7 +325,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00031">31</a> of file <a class="el" href="_d_t_nameplate_widget_8cpp_source.html">DTNameplateWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_nameplate_widget_8h_source.html#l00034">AB_HealthBar</a>, <a class="el" href="_d_t_nameplate_widget_8h_source.html#l00045">AutoHideDelay</a>, <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00078">CanAutoHide()</a>, <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00073">HideNameplate()</a>, and <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00052">OnHealthChanged()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_nameplate_widget_8h_source.html#l00034">AB_HealthBar</a>, <a class="el" href="_d_t_nameplate_widget_8h_source.html#l00045">AutoHideDelay</a>, <a class="el" href="_d_t_nameplate_widget_8h_source.html#l00063">AutoHideTimerHandle</a>, <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00078">CanAutoHide()</a>, <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00073">HideNameplate()</a>, and <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00052">OnHealthChanged()</a>.</p>
 
 </div>
 </div>
@@ -387,7 +392,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00052">52</a> of file <a class="el" href="_d_t_nameplate_widget_8cpp_source.html">DTNameplateWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_nameplate_widget_8h_source.html#l00045">AutoHideDelay</a>, <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00078">CanAutoHide()</a>, and <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00073">HideNameplate()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_nameplate_widget_8h_source.html#l00045">AutoHideDelay</a>, <a class="el" href="_d_t_nameplate_widget_8h_source.html#l00063">AutoHideTimerHandle</a>, <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00078">CanAutoHide()</a>, and <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00073">HideNameplate()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00031">NativeConstruct()</a>.</p>
 
@@ -466,6 +471,34 @@ Protected Attributes</h2></td></tr>
 <p>Time in seconds before hiding the nameplate after health changes. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_nameplate_widget_8h_source.html#l00045">45</a> of file <a class="el" href="_d_t_nameplate_widget_8h_source.html">DTNameplateWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00031">NativeConstruct()</a>, and <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00052">OnHealthChanged()</a>.</p>
+
+</div>
+</div>
+<a id="af0d2c4c2802205fd6a8517ac016e4a31" name="af0d2c4c2802205fd6a8517ac016e4a31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0d2c4c2802205fd6a8517ac016e4a31">&#9670;&#160;</a></span>AutoHideTimerHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FTimerHandle UDTNameplateWidget::AutoHideTimerHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Timer handle for auto-hiding the nameplate. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_nameplate_widget_8h_source.html#l00063">63</a> of file <a class="el" href="_d_t_nameplate_widget_8h_source.html">DTNameplateWidget.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00031">NativeConstruct()</a>, and <a class="el" href="_d_t_nameplate_widget_8cpp_source.html#l00052">OnHealthChanged()</a>.</p>
 

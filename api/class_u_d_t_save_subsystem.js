@@ -2,6 +2,7 @@ var class_u_d_t_save_subsystem =
 [
     [ "UDTSaveSubsystem", "class_u_d_t_save_subsystem.html#a7a0cb4ed7abc33412acb109613df0956", null ],
     [ "ApplySaveGameForCurrentPlayer", "class_u_d_t_save_subsystem.html#a11f553b3887f955d7fb26a640b465bc4", null ],
+    [ "BuildSlotName", "class_u_d_t_save_subsystem.html#a72abf76dfffcb77c8e05b9034b4cdd7d", null ],
     [ "CreateNewSaveGame", "class_u_d_t_save_subsystem.html#aa742a6a8532357d119e0a4489261fd5b", null ],
     [ "Deinitialize", "class_u_d_t_save_subsystem.html#a23c52f27776d59aa867f3ae903c81a95", null ],
     [ "DeleteSave", "class_u_d_t_save_subsystem.html#a23a6a26d77a245128aa364ff9d303691", null ],
@@ -9,6 +10,7 @@ var class_u_d_t_save_subsystem =
     [ "GetCurrentSaveGame", "class_u_d_t_save_subsystem.html#ad5e62ee38d08ba2667da05f80a72c0ff", null ],
     [ "GetCurrentSlotName", "class_u_d_t_save_subsystem.html#a0b5f65fe1892d9f65f7b2896744a2ab7", null ],
     [ "GetCurrentUserIndex", "class_u_d_t_save_subsystem.html#a975e970d11598012cfdf8e683ece03d8", null ],
+    [ "GetLocalPlayerState", "class_u_d_t_save_subsystem.html#a423c9ff40b5c7d1b73aaf4e8b6df849e", null ],
     [ "LoadCurrentSlot", "class_u_d_t_save_subsystem.html#aeef7b204473d21c16b1e9d3708f64b73", null ],
     [ "OnLoadFinished", "class_u_d_t_save_subsystem.html#a0ccce46d329cf84399f70ef23b8241f8", null ],
     [ "OnSaveFinished", "class_u_d_t_save_subsystem.html#a103376f1b3ca1e6a7e44c44a49119b66", null ],

@@ -6,7 +6,8 @@ var searchData=
   ['unlockedfloors_3',['UnlockedFloors',['../struct_f_d_t_biome_entry_info.html#abd52e854be74e6f937b0c1bb6a3b4ff6',1,'FDTBiomeEntryInfo']]],
   ['unlockpointsrequired_4',['UnlockPointsRequired',['../class_u_d_t_skill_tree_node_definition.html#a293060950da3a621182209e8bd6c10a5',1,'UDTSkillTreeNodeDefinition']]],
   ['updatevisualstimerhandle_5',['UpdateVisualsTimerHandle',['../class_u_d_t_ability_widget.html#ae2059ce391f016797575e03589c96b15',1,'UDTAbilityWidget']]],
-  ['userindex_6',['UserIndex',['../class_u_d_t_save_game.html#a3218bcafec814ef797da83f57534e273',1,'UDTSaveGame']]],
-  ['usermix_7',['UserMix',['../class_u_d_t_audio_mix_effects_subsystem.html#aa755c2ed3c77a7b1cdbaf68943b66c8e',1,'UDTAudioMixEffectsSubsystem']]],
-  ['usersettingssoundmix_8',['UserSettingsSoundMix',['../class_u_d_t_audio_settings.html#a280d9cb3eec79dde65d2084b826ebf72',1,'UDTAudioSettings']]]
+  ['userchosendeviceprofilesuffix_6',['UserChosenDeviceProfileSuffix',['../class_u_d_t_settings_local.html#a992b96bfc23f87fcf66f73a15a558dc4',1,'UDTSettingsLocal']]],
+  ['userindex_7',['UserIndex',['../class_u_d_t_save_game.html#a3218bcafec814ef797da83f57534e273',1,'UDTSaveGame']]],
+  ['usermix_8',['UserMix',['../class_u_d_t_audio_mix_effects_subsystem.html#aa755c2ed3c77a7b1cdbaf68943b66c8e',1,'UDTAudioMixEffectsSubsystem']]],
+  ['usersettingssoundmix_9',['UserSettingsSoundMix',['../class_u_d_t_audio_settings.html#a280d9cb3eec79dde65d2084b826ebf72',1,'UDTAudioSettings::UserSettingsSoundMix'],['../class_u_d_t_settings_local.html#ac57e5b77e6323ef692edbf0f6c786278',1,'UDTSettingsLocal::UserSettingsSoundMix']]]
 ];

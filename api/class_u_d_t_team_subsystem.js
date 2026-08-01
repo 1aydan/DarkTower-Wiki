@@ -13,10 +13,20 @@ var class_u_d_t_team_subsystem =
     [ "GetAllActorsOnTeam", "class_u_d_t_team_subsystem.html#a677a740d58e391b6742d05570606c96e", null ],
     [ "GetAllAllies", "class_u_d_t_team_subsystem.html#a23974d1116265ad3165a7479c798ab4a", null ],
     [ "GetAllEnemies", "class_u_d_t_team_subsystem.html#aef48e35f839d05d2e1efc5bdb9b8b7af", null ],
+    [ "GetAllTeamAgents", "class_u_d_t_team_subsystem.html#acecae6346daf221824cc624bfc135eb9", null ],
+    [ "GetTeamAgentInterface", "class_u_d_t_team_subsystem.html#a820fa04deb71750062738fbd55f786cb", null ],
     [ "GetTeamAttitude", "class_u_d_t_team_subsystem.html#a2d7024474a23cf9f58390abdd6cbefb8", null ],
+    [ "HasLineOfSight", "class_u_d_t_team_subsystem.html#a76f50302455c2688397a2afb6850ba25", null ],
     [ "Initialize", "class_u_d_t_team_subsystem.html#a364a286e32c53692193e2f18b9df142c", null ],
+    [ "IsActorFacingActorInternal", "class_u_d_t_team_subsystem.html#ac96d606c7ee1e27e52b4a0a09c8b409f", null ],
     [ "IsActorOnTeam", "class_u_d_t_team_subsystem.html#a0fbc6df01a2ebbc8175c15b8c53d1ca4", null ],
+    [ "IsWithinDistance", "class_u_d_t_team_subsystem.html#a0633129153624c1bb15474eb0fea4b4e", null ],
+    [ "PassesQueryFlags", "class_u_d_t_team_subsystem.html#a3574274f1a03232aa464e3a88d709991", null ],
+    [ "QueryTeamActorsInternal", "class_u_d_t_team_subsystem.html#a7b05404046a28573248d60334e385dc0", null ],
     [ "RegisterTeamMember", "class_u_d_t_team_subsystem.html#a447684742abbe1c9f7fa722b51327cbe", null ],
     [ "UnregisterTeamMember", "class_u_d_t_team_subsystem.html#ab866d233c3117a3680217112fe337d34", null ],
-    [ "UpdateActorTeam", "class_u_d_t_team_subsystem.html#a236b4567ea6c176f1c1acc1cf6bad9f6", null ]
+    [ "UpdateActorTeam", "class_u_d_t_team_subsystem.html#a236b4567ea6c176f1c1acc1cf6bad9f6", null ],
+    [ "UpdateTeamCache", "class_u_d_t_team_subsystem.html#a28cf70a50d4e11a41bc5ffcc74ab4695", null ],
+    [ "RegisteredMembers", "class_u_d_t_team_subsystem.html#a10edaf8a6c673f089e81b95b7ffdaf3c", null ],
+    [ "TeamMemberCache", "class_u_d_t_team_subsystem.html#a66387dfcae1afb4d3021556664d79ca4", null ]
 ];

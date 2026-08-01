@@ -163,6 +163,18 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a02c69319aef9415511437fa6f4e21dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mesh component from owner if it is a Character.  <br /></td></tr>
 <tr class="memitem:aba6c28b9b98cbb9d2749ac77017f06af" id="r_aba6c28b9b98cbb9d2749ac77017f06af"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aba6c28b9b98cbb9d2749ac77017f06af">HandleMeshAnimInitialized</a> ()</td></tr>
 <tr class="memdesc:aba6c28b9b98cbb9d2749ac77017f06af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bound to the owner mesh's OnAnimInitialized — restores tracked layers after anim reinit.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7c733637771ce683bc20c3e5a779d120" id="r_a7c733637771ce683bc20c3e5a779d120"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7c733637771ce683bc20c3e5a779d120">LinkAnimLayers</a> ()</td></tr>
+<tr class="memdesc:a7c733637771ce683bc20c3e5a779d120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Links every LayerTypes anim instance on the owner mesh.  <br /></td></tr>
+<tr class="memitem:a3501a98290d35b537994a261b06d458c" id="r_a3501a98290d35b537994a261b06d458c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3501a98290d35b537994a261b06d458c">UnlinkAnimLayers</a> ()</td></tr>
+<tr class="memdesc:a3501a98290d35b537994a261b06d458c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlinks every LayerTypes anim instance from the owner mesh.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a09fbef48d63a630cb4fbf23ba1f0993d" id="r_a09fbef48d63a630cb4fbf23ba1f0993d"><td class="memItemLeft">TArray&lt; TSubclassOf&lt; UAnimInstance &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a09fbef48d63a630cb4fbf23ba1f0993d">LinkedLayers</a></td></tr>
+<tr class="memdesc:a09fbef48d63a630cb4fbf23ba1f0993d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every layer currently linked (BeginPlay LayerTypes + equipment layers), for re-linking after anim reinit.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Pawn component that links/unlinks anim layers on the owner character's mesh (e.g. </p>
@@ -195,7 +207,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00009">9</a> of file <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html">DTLinkAnimLayersComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>, and <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00080">HandleMeshAnimInitialized()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00080">HandleMeshAnimInitialized()</a>, and <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00095">LinkAnimLayers()</a>.</p>
 
 </div>
 </div>
@@ -224,7 +236,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00025">25</a> of file <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html">DTLinkAnimLayersComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>, and <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00080">HandleMeshAnimInitialized()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00080">HandleMeshAnimInitialized()</a>, and <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00108">UnlinkAnimLayers()</a>.</p>
 
 </div>
 </div>
@@ -255,7 +267,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">85</a> of file <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html">DTLinkAnimLayersComponent.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00009">BeginPlay()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00025">EndPlay()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00038">LinkAnimLayer()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00063">RelinkAnimLayers()</a>, and <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00053">UnlinkAnimLayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00009">BeginPlay()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00025">EndPlay()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00038">LinkAnimLayer()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00095">LinkAnimLayers()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00063">RelinkAnimLayers()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00053">UnlinkAnimLayer()</a>, and <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00108">UnlinkAnimLayers()</a>.</p>
 
 </div>
 </div>
@@ -317,7 +329,42 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00038">38</a> of file <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html">DTLinkAnimLayersComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>, and <a class="el" href="_d_t_link_anim_layers_component_8h_source.html#l00055">LinkedLayers</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00095">LinkAnimLayers()</a>.</p>
+
+</div>
+</div>
+<a id="a7c733637771ce683bc20c3e5a779d120" name="a7c733637771ce683bc20c3e5a779d120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c733637771ce683bc20c3e5a779d120">&#9670;&#160;</a></span>LinkAnimLayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTLinkAnimLayersComponent::LinkAnimLayers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Links every LayerTypes anim instance on the owner mesh. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00095">95</a> of file <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html">DTLinkAnimLayersComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>, <a class="el" href="_d_t_link_anim_layers_component_8h_source.html#l00020">LayerTypes</a>, and <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00038">LinkAnimLayer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00009">BeginPlay()</a>.</p>
 
 </div>
 </div>
@@ -341,7 +388,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00063">63</a> of file <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html">DTLinkAnimLayersComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>, and <a class="el" href="_d_t_link_anim_layers_component_8h_source.html#l00055">LinkedLayers</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00080">HandleMeshAnimInitialized()</a>.</p>
 
@@ -372,7 +419,42 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00053">53</a> of file <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html">DTLinkAnimLayersComponent.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>, and <a class="el" href="_d_t_link_anim_layers_component_8h_source.html#l00055">LinkedLayers</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00108">UnlinkAnimLayers()</a>.</p>
+
+</div>
+</div>
+<a id="a3501a98290d35b537994a261b06d458c" name="a3501a98290d35b537994a261b06d458c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3501a98290d35b537994a261b06d458c">&#9670;&#160;</a></span>UnlinkAnimLayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTLinkAnimLayersComponent::UnlinkAnimLayers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unlinks every LayerTypes anim instance from the owner mesh. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00108">108</a> of file <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html">DTLinkAnimLayersComponent.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00085">GetOwnerSkeletalMeshComponent()</a>, <a class="el" href="_d_t_link_anim_layers_component_8h_source.html#l00020">LayerTypes</a>, <a class="el" href="_d_t_link_anim_layers_component_8h_source.html#l00055">LinkedLayers</a>, and <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00053">UnlinkAnimLayer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00025">EndPlay()</a>.</p>
 
 </div>
 </div>
@@ -392,6 +474,36 @@ Protected Member Functions</h2></td></tr>
 <p>List of Anim Instance classes to link to the owner skeletal mesh component on BeginPlay. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_link_anim_layers_component_8h_source.html#l00020">20</a> of file <a class="el" href="_d_t_link_anim_layers_component_8h_source.html">DTLinkAnimLayersComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00095">LinkAnimLayers()</a>, and <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00108">UnlinkAnimLayers()</a>.</p>
+
+</div>
+</div>
+<a id="a09fbef48d63a630cb4fbf23ba1f0993d" name="a09fbef48d63a630cb4fbf23ba1f0993d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09fbef48d63a630cb4fbf23ba1f0993d">&#9670;&#160;</a></span>LinkedLayers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;TSubclassOf&lt;UAnimInstance&gt; &gt; UDTLinkAnimLayersComponent::LinkedLayers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Every layer currently linked (BeginPlay LayerTypes + equipment layers), for re-linking after anim reinit. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_link_anim_layers_component_8h_source.html#l00055">55</a> of file <a class="el" href="_d_t_link_anim_layers_component_8h_source.html">DTLinkAnimLayersComponent.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00038">LinkAnimLayer()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00063">RelinkAnimLayers()</a>, <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00053">UnlinkAnimLayer()</a>, and <a class="el" href="_d_t_link_anim_layers_component_8cpp_source.html#l00108">UnlinkAnimLayers()</a>.</p>
 
 </div>
 </div>

@@ -924,11 +924,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_s_d_t_skill_t
 <div class="foldopen" id="foldopen00795" data-start="{" data-end="}">
 <div class="line"><a id="l00795" name="l00795"></a><span class="lineno"><a class="line" href="class_s_d_t_skill_tree_graph_editor.html#a7b3c0aa8dc593ba3b91faeae3f9eb562">  795</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_s_d_t_skill_tree_graph_editor.html#a7b3c0aa8dc593ba3b91faeae3f9eb562">SDTSkillTreeGraphEditor::Construct</a>(<span class="keyword">const</span> FArguments&amp; InArgs, TSharedRef&lt;FDTSkillTreeAssetEditor&gt; InAssetEditor)</div>
 <div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>{</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>    AssetEditor = InAssetEditor;</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    SkillTreeDefinition = InArgs._SkillTreeDefinition;</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>    <a class="code hl_variable" href="class_s_d_t_skill_tree_graph_editor.html#aae8d002ad2c18c3716cbccbd2db9a541">AssetEditor</a> = InAssetEditor;</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    <a class="code hl_variable" href="class_s_d_t_skill_tree_graph_editor.html#a4840239dd059eb9d5ba526a36d1a43d4">SkillTreeDefinition</a> = InArgs._SkillTreeDefinition;</div>
 <div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>    ChildSlot</div>
 <div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    [</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>        BuildGraphContent()</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>        <a class="code hl_function" href="class_s_d_t_skill_tree_graph_editor.html#a72a245265f2520f7012fee64e813dcae">BuildGraphContent</a>()</div>
 <div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>    ];</div>
 <div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>}</div>
 </div>
@@ -936,23 +936,24 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_s_d_t_skill_t
 <div class="foldopen" id="foldopen00805" data-start="{" data-end="}">
 <div class="line"><a id="l00805" name="l00805"></a><span class="lineno"><a class="line" href="class_s_d_t_skill_tree_graph_editor.html#a91b0cfb7cdc092a0420963f2b52afd0d">  805</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_s_d_t_skill_tree_graph_editor.html#a91b0cfb7cdc092a0420963f2b52afd0d">SDTSkillTreeGraphEditor::RefreshGraph</a>()</div>
 <div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>{</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>    <span class="keywordflow">if</span> (GraphCanvasWidget.IsValid())</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_s_d_t_skill_tree_graph_editor.html#ac4820d0008d89edc19f1f5b5a918c417">GraphCanvasWidget</a>.IsValid())</div>
 <div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>    {</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>        StaticCastSharedPtr&lt;SDTSkillTreeGraphCanvas&gt;(GraphCanvasWidget)-&gt;Refresh();</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>        StaticCastSharedPtr&lt;SDTSkillTreeGraphCanvas&gt;(<a class="code hl_variable" href="class_s_d_t_skill_tree_graph_editor.html#ac4820d0008d89edc19f1f5b5a918c417">GraphCanvasWidget</a>)-&gt;Refresh();</div>
 <div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>    }</div>
 <div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span> </div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>    ChildSlot</div>
 <div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>    [</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>        BuildGraphContent()</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>        <a class="code hl_function" href="class_s_d_t_skill_tree_graph_editor.html#a72a245265f2520f7012fee64e813dcae">BuildGraphContent</a>()</div>
 <div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>    ];</div>
 <div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>}</div>
 </div>
 <div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span> </div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>TSharedRef&lt;SWidget&gt; SDTSkillTreeGraphEditor::BuildGraphContent()</div>
+<div class="foldopen" id="foldopen00819" data-start="{" data-end="}">
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno"><a class="line" href="class_s_d_t_skill_tree_graph_editor.html#a72a245265f2520f7012fee64e813dcae">  819</a></span>TSharedRef&lt;SWidget&gt; <a class="code hl_function" href="class_s_d_t_skill_tree_graph_editor.html#a72a245265f2520f7012fee64e813dcae">SDTSkillTreeGraphEditor::BuildGraphContent</a>()</div>
 <div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>{</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>    <span class="keyword">const</span> TSharedPtr&lt;FDTSkillTreeAssetEditor&gt; PinnedEditor = AssetEditor.Pin();</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    <span class="keywordflow">if</span> (!PinnedEditor.IsValid() || !SkillTreeDefinition.IsValid())</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>    <span class="keyword">const</span> TSharedPtr&lt;FDTSkillTreeAssetEditor&gt; PinnedEditor = <a class="code hl_variable" href="class_s_d_t_skill_tree_graph_editor.html#aae8d002ad2c18c3716cbccbd2db9a541">AssetEditor</a>.Pin();</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    <span class="keywordflow">if</span> (!PinnedEditor.IsValid() || !<a class="code hl_variable" href="class_s_d_t_skill_tree_graph_editor.html#a4840239dd059eb9d5ba526a36d1a43d4">SkillTreeDefinition</a>.IsValid())</div>
 <div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>    {</div>
 <div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>        <span class="keywordflow">return</span> SNew(SBorder)</div>
 <div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>            .Padding(16.0f)</div>
@@ -964,8 +965,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_s_d_t_skill_t
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span> </div>
 <div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>    <span class="keyword">const</span> TSharedRef&lt;SDTSkillTreeGraphCanvas&gt; Canvas = SNew(SDTSkillTreeGraphCanvas)</div>
 <div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>        .AssetEditor(PinnedEditor)</div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>        .SkillTreeDefinition(SkillTreeDefinition.Get());</div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>    GraphCanvasWidget = Canvas;</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>        .SkillTreeDefinition(<a class="code hl_variable" href="class_s_d_t_skill_tree_graph_editor.html#a4840239dd059eb9d5ba526a36d1a43d4">SkillTreeDefinition</a>.Get());</div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>    <a class="code hl_variable" href="class_s_d_t_skill_tree_graph_editor.html#ac4820d0008d89edc19f1f5b5a918c417">GraphCanvasWidget</a> = Canvas;</div>
 <div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span> </div>
 <div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>    <span class="keywordflow">return</span> SNew(SVerticalBox)</div>
 <div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>        + SVerticalBox::Slot()</div>
@@ -1064,6 +1065,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_s_d_t_skill_t
 <div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>            ]</div>
 <div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>        ];</div>
 <div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>}</div>
+</div>
 <div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span> </div>
 <div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span><span class="preprocessor">#undef LOCTEXT_NAMESPACE</span></div>
 <div class="ttc" id="a_d_t_message_types_8h_html_a2e04c3ea9a30426c43df4ba870a711fca6a061313d22e51e0f25b7cd4dc065233"><div class="ttname"><a href="_d_t_message_types_8h.html#a2e04c3ea9a30426c43df4ba870a711fca6a061313d22e51e0f25b7cd4dc065233">EDTNotificationAccumulationMode::Max</a></div><div class="ttdeci">@ Max</div><div class="ttdoc">Keep whichever numeric value is higher (new vs current accumulated value).</div><div class="ttdef"><b>Definition</b> <a href="_d_t_message_types_8h_source.html#l00055">DTMessageTypes.h:55</a></div></div>
@@ -1075,8 +1077,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_s_d_t_skill_t
 <div class="ttc" id="a_s_d_t_skill_tree_node_visual_8h_html"><div class="ttname"><a href="_s_d_t_skill_tree_node_visual_8h.html">SDTSkillTreeNodeVisual.h</a></div></div>
 <div class="ttc" id="aclass_f_d_t_skill_tree_asset_editor_html_a30e423b5b6a6123905d2a9e17db42120"><div class="ttname"><a href="class_f_d_t_skill_tree_asset_editor.html#a30e423b5b6a6123905d2a9e17db42120">FDTSkillTreeAssetEditor::HandleRebuildGraphLinks</a></div><div class="ttdeci">FReply HandleRebuildGraphLinks()</div><div class="ttdef"><b>Definition</b> <a href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00416">DTSkillTreeAssetEditor.cpp:416</a></div></div>
 <div class="ttc" id="aclass_f_d_t_skill_tree_asset_editor_html_a7f8d761029cb61e10fe808e1ddd98977"><div class="ttname"><a href="class_f_d_t_skill_tree_asset_editor.html#a7f8d761029cb61e10fe808e1ddd98977">FDTSkillTreeAssetEditor::HandleAutoLayoutGraphNodes</a></div><div class="ttdeci">FReply HandleAutoLayoutGraphNodes()</div><div class="ttdef"><b>Definition</b> <a href="_d_t_skill_tree_asset_editor_8cpp_source.html#l00402">DTSkillTreeAssetEditor.cpp:402</a></div></div>
+<div class="ttc" id="aclass_s_d_t_skill_tree_graph_editor_html_a4840239dd059eb9d5ba526a36d1a43d4"><div class="ttname"><a href="class_s_d_t_skill_tree_graph_editor.html#a4840239dd059eb9d5ba526a36d1a43d4">SDTSkillTreeGraphEditor::SkillTreeDefinition</a></div><div class="ttdeci">TWeakObjectPtr&lt; UDTSkillTreeDefinition &gt; SkillTreeDefinition</div><div class="ttdef"><b>Definition</b> <a href="_s_d_t_skill_tree_graph_editor_8h_source.html#l00023">SDTSkillTreeGraphEditor.h:23</a></div></div>
+<div class="ttc" id="aclass_s_d_t_skill_tree_graph_editor_html_a72a245265f2520f7012fee64e813dcae"><div class="ttname"><a href="class_s_d_t_skill_tree_graph_editor.html#a72a245265f2520f7012fee64e813dcae">SDTSkillTreeGraphEditor::BuildGraphContent</a></div><div class="ttdeci">TSharedRef&lt; SWidget &gt; BuildGraphContent()</div><div class="ttdef"><b>Definition</b> <a href="#l00819">SDTSkillTreeGraphEditor.cpp:819</a></div></div>
 <div class="ttc" id="aclass_s_d_t_skill_tree_graph_editor_html_a7b3c0aa8dc593ba3b91faeae3f9eb562"><div class="ttname"><a href="class_s_d_t_skill_tree_graph_editor.html#a7b3c0aa8dc593ba3b91faeae3f9eb562">SDTSkillTreeGraphEditor::Construct</a></div><div class="ttdeci">void Construct(const FArguments &amp;InArgs, TSharedRef&lt; FDTSkillTreeAssetEditor &gt; InAssetEditor)</div><div class="ttdef"><b>Definition</b> <a href="#l00795">SDTSkillTreeGraphEditor.cpp:795</a></div></div>
 <div class="ttc" id="aclass_s_d_t_skill_tree_graph_editor_html_a91b0cfb7cdc092a0420963f2b52afd0d"><div class="ttname"><a href="class_s_d_t_skill_tree_graph_editor.html#a91b0cfb7cdc092a0420963f2b52afd0d">SDTSkillTreeGraphEditor::RefreshGraph</a></div><div class="ttdeci">void RefreshGraph()</div><div class="ttdef"><b>Definition</b> <a href="#l00805">SDTSkillTreeGraphEditor.cpp:805</a></div></div>
+<div class="ttc" id="aclass_s_d_t_skill_tree_graph_editor_html_aae8d002ad2c18c3716cbccbd2db9a541"><div class="ttname"><a href="class_s_d_t_skill_tree_graph_editor.html#aae8d002ad2c18c3716cbccbd2db9a541">SDTSkillTreeGraphEditor::AssetEditor</a></div><div class="ttdeci">TWeakPtr&lt; FDTSkillTreeAssetEditor &gt; AssetEditor</div><div class="ttdef"><b>Definition</b> <a href="_s_d_t_skill_tree_graph_editor_8h_source.html#l00022">SDTSkillTreeGraphEditor.h:22</a></div></div>
+<div class="ttc" id="aclass_s_d_t_skill_tree_graph_editor_html_ac4820d0008d89edc19f1f5b5a918c417"><div class="ttname"><a href="class_s_d_t_skill_tree_graph_editor.html#ac4820d0008d89edc19f1f5b5a918c417">SDTSkillTreeGraphEditor::GraphCanvasWidget</a></div><div class="ttdeci">TSharedPtr&lt; SWidget &gt; GraphCanvasWidget</div><div class="ttdef"><b>Definition</b> <a href="_s_d_t_skill_tree_graph_editor_8h_source.html#l00024">SDTSkillTreeGraphEditor.h:24</a></div></div>
 <div class="ttc" id="aclass_s_d_t_skill_tree_node_visual_html"><div class="ttname"><a href="class_s_d_t_skill_tree_node_visual.html">SDTSkillTreeNodeVisual</a></div><div class="ttdef"><b>Definition</b> <a href="_s_d_t_skill_tree_node_visual_8h_source.html#l00008">SDTSkillTreeNodeVisual.h:9</a></div></div>
 <div class="ttc" id="aclass_u_d_t_skill_tree_definition_html"><div class="ttname"><a href="class_u_d_t_skill_tree_definition.html">UDTSkillTreeDefinition</a></div><div class="ttdoc">Data asset defining a single graph-authored skill tree (e.g., &quot;Berserker&quot;, &quot;Arcane&quot;).</div><div class="ttdef"><b>Definition</b> <a href="_d_t_skill_tree_definition_8h_source.html#l00017">DTSkillTreeDefinition.h:18</a></div></div>
 <div class="ttc" id="aclass_u_d_t_skill_tree_definition_html_a6ff2eaaa51358c5bb3e29a2f4e6cfc16"><div class="ttname"><a href="class_u_d_t_skill_tree_definition.html#a6ff2eaaa51358c5bb3e29a2f4e6cfc16">UDTSkillTreeDefinition::GetAllNodes</a></div><div class="ttdeci">void GetAllNodes(TArray&lt; FSkillTreeNode &gt; &amp;OutNodes) const</div><div class="ttdoc">Collect all authored node definitions.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_skill_tree_definition_8cpp_source.html#l00050">DTSkillTreeDefinition.cpp:50</a></div></div>

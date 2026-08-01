@@ -183,6 +183,29 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a7f1373eb45956acfc5e2275ff1b46ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after this drop absorbs another drop's amount (merge).  <br /></td></tr>
 <tr class="memitem:af98a0073941654ee3054413a891c8f06" id="r_af98a0073941654ee3054413a891c8f06"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af98a0073941654ee3054413a891c8f06">OnPickupVisual</a> (FVector Location, FGameplayTag InCurrencyType, int64 InAmount)</td></tr>
 <tr class="memdesc:af98a0073941654ee3054413a891c8f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on all clients when this drop is picked up (cosmetic feedback).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7ac0d4686bf6d9c9a5fd4a2ae09e2ca0" id="r_a7ac0d4686bf6d9c9a5fd4a2ae09e2ca0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7ac0d4686bf6d9c9a5fd4a2ae09e2ca0">ExecutePickup</a> ()</td></tr>
+<tr class="memdesc:a7ac0d4686bf6d9c9a5fd4a2ae09e2ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the actual pickup: deposit currency, fire cosmetic multicast, request deactivation.  <br /></td></tr>
+<tr class="memitem:aab885314fb80e0144e8e1cb43cb7f7bf" id="r_aab885314fb80e0144e8e1cb43cb7f7bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aab885314fb80e0144e8e1cb43cb7f7bf">Multicast_OnPickedUp</a> (FVector Location, FGameplayTag InCurrencyType, int64 InAmount)</td></tr>
+<tr class="memdesc:aab885314fb80e0144e8e1cb43cb7f7bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unreliable multicast for owning-client cosmetic feedback.  <br /></td></tr>
+<tr class="memitem:a4fb98bd574fb244b64e521e9023e5daa" id="r_a4fb98bd574fb244b64e521e9023e5daa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4fb98bd574fb244b64e521e9023e5daa">ApplyVisualTier</a> (const <a class="el" href="struct_f_currency_drop_visual_tier.html">FCurrencyDropVisualTier</a> *Tier)</td></tr>
+<tr class="memdesc:a4fb98bd574fb244b64e521e9023e5daa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply built-in static mesh from visual tier data.  <br /></td></tr>
+<tr class="memitem:a86186f3c79899599160f4351da253b8b" id="r_a86186f3c79899599160f4351da253b8b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a86186f3c79899599160f4351da253b8b">OnRep_CurrencyType</a> ()</td></tr>
+<tr class="memdesc:a86186f3c79899599160f4351da253b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Client-side: initialize visuals + tick when replicated CurrencyType arrives.  <br /></td></tr>
+<tr class="memitem:a016357d41e6c261b36502b374c975d62" id="r_a016357d41e6c261b36502b374c975d62"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a016357d41e6c261b36502b374c975d62">OnRep_DropState</a> ()</td></tr>
+<tr class="memdesc:a016357d41e6c261b36502b374c975d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Client-side: react to state transitions (PickedUp → hide actor + play VFX).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afa28b3e19c83cd4624720beed87966f9" id="r_afa28b3e19c83cd4624720beed87966f9"><td class="memItemLeft">FGameplayTag&#160;</td><td class="memItemRight"><a class="el" href="#afa28b3e19c83cd4624720beed87966f9">CurrencyType</a></td></tr>
+<tr class="memitem:a75dde4a17d708676fc679a11515c8c94" id="r_a75dde4a17d708676fc679a11515c8c94"><td class="memItemLeft">int64&#160;</td><td class="memItemRight"><a class="el" href="#a75dde4a17d708676fc679a11515c8c94">Amount</a> = 0</td></tr>
+<tr class="memitem:a2a06ea31b042a39dadafedc0aecc8909" id="r_a2a06ea31b042a39dadafedc0aecc8909"><td class="memItemLeft"><a class="el" href="_d_t_currency_drop_8h.html#ade8ded0c5159ef6b0cb1dc30fdd06910">EDTCurrencyDropState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2a06ea31b042a39dadafedc0aecc8909">DropState</a> = <a class="el" href="_d_t_currency_drop_8h.html#ade8ded0c5159ef6b0cb1dc30fdd06910ae488a232369c77a528c08970ad5a5b33">EDTCurrencyDropState::Pooled</a></td></tr>
+<tr class="memitem:a7d8889c0cc6952c12959637944b60961" id="r_a7d8889c0cc6952c12959637944b60961"><td class="memItemLeft">TWeakObjectPtr&lt; APlayerController &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7d8889c0cc6952c12959637944b60961">OwningPlayer</a></td></tr>
+<tr class="memitem:a8377b981ae2fe4e7aac2ade4a4d5b90a" id="r_a8377b981ae2fe4e7aac2ade4a4d5b90a"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a8377b981ae2fe4e7aac2ade4a4d5b90a">ActivationTime</a> = 0.0</td></tr>
+<tr class="memitem:add12679a2f98bb0f798817de29b26866" id="r_add12679a2f98bb0f798817de29b26866"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_currency_subsystem.html">UDTCurrencySubsystem</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#add12679a2f98bb0f798817de29b26866">OwningSubsystem</a></td></tr>
+<tr class="memdesc:add12679a2f98bb0f798817de29b26866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Owning subsystem (cached on Activate for fast access).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Lightweight currency drop actor. </p>
@@ -233,7 +256,9 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00173">173</a> of file <a class="el" href="_d_t_currency_drop_8cpp_source.html">DTCurrencyDrop.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_global_data_8h_source.html#l00041">UDTGlobalData::CurrencyGlobalData</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_currency_global_data_8cpp_source.html#l00020">UDTCurrencyGlobalData::GetVisualTierForAmount()</a>, and <a class="el" href="#a7f1373eb45956acfc5e2275ff1b46ba3">OnDropAmountChanged()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00137">Amount</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00239">ApplyVisualTier()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00041">UDTGlobalData::CurrencyGlobalData</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00134">CurrencyType</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_currency_global_data_8cpp_source.html#l00020">UDTCurrencyGlobalData::GetVisualTierForAmount()</a>, and <a class="el" href="#a7f1373eb45956acfc5e2275ff1b46ba3">OnDropAmountChanged()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00321">UDTCurrencySubsystem::RunMergePass()</a>.</p>
 
 </div>
 </div>
@@ -271,9 +296,42 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">86</a> of file <a class="el" href="_d_t_currency_drop_8cpp_source.html">DTCurrencyDrop.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_global_data_8h_source.html#l00041">UDTGlobalData::CurrencyGlobalData</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00076">DropMeshComponent</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00079">DropNiagaraComponent</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_currency_global_data_8cpp_source.html#l00020">UDTCurrencyGlobalData::GetVisualTierForAmount()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00025">Idle</a>, and <a class="el" href="#a788c16563b68808ced71baf4a56ec720">OnDropActivated()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00145">ActivationTime</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00137">Amount</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00239">ApplyVisualTier()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00041">UDTGlobalData::CurrencyGlobalData</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00134">CurrencyType</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00076">DropMeshComponent</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00079">DropNiagaraComponent</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00140">DropState</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_currency_global_data_8cpp_source.html#l00020">UDTCurrencyGlobalData::GetVisualTierForAmount()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00025">Idle</a>, <a class="el" href="#a788c16563b68808ced71baf4a56ec720">OnDropActivated()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00143">OwningPlayer</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00149">OwningSubsystem</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00098">UDTCurrencySubsystem::SpawnCurrencyDrop()</a>.</p>
+
+</div>
+</div>
+<a id="a4fb98bd574fb244b64e521e9023e5daa" name="a4fb98bd574fb244b64e521e9023e5daa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fb98bd574fb244b64e521e9023e5daa">&#9670;&#160;</a></span>ApplyVisualTier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTCurrencyDrop::ApplyVisualTier </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_currency_drop_visual_tier.html">FCurrencyDropVisualTier</a> *</td>          <td class="paramname"><span class="paramname"><em>Tier</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply built-in static mesh from visual tier data. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00239">239</a> of file <a class="el" href="_d_t_currency_drop_8cpp_source.html">DTCurrencyDrop.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_currency_types_8h_source.html#l00053">FCurrencyDropVisualTier::DropMaterial</a>, <a class="el" href="_d_t_currency_types_8h_source.html#l00049">FCurrencyDropVisualTier::DropMesh</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00076">DropMeshComponent</a>, and <a class="el" href="_d_t_currency_types_8h_source.html#l00057">FCurrencyDropVisualTier::MeshScale</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00173">AbsorbAmount()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, <a class="el" href="#aab885314fb80e0144e8e1cb43cb7f7bf">Multicast_OnPickedUp()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00052">OnRep_CurrencyType()</a>.</p>
 
 </div>
 </div>
@@ -297,9 +355,42 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00149">149</a> of file <a class="el" href="_d_t_currency_drop_8cpp_source.html">DTCurrencyDrop.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00076">DropMeshComponent</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00072">GraveyardZ</a>, <a class="el" href="#a9e77a4601495199cff9a502bdbefb319">OnDropDeactivated()</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00023">Pooled</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00145">ActivationTime</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00137">Amount</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00134">CurrencyType</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00076">DropMeshComponent</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00140">DropState</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00072">GraveyardZ</a>, <a class="el" href="#a9e77a4601495199cff9a502bdbefb319">OnDropDeactivated()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00143">OwningPlayer</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00023">Pooled</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00210">UDTCurrencySubsystem::ReleaseDrop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00223">UDTCurrencySubsystem::AcquireDrop()</a>, and <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00210">UDTCurrencySubsystem::ReleaseDrop()</a>.</p>
+
+</div>
+</div>
+<a id="a7ac0d4686bf6d9c9a5fd4a2ae09e2ca0" name="a7ac0d4686bf6d9c9a5fd4a2ae09e2ca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac0d4686bf6d9c9a5fd4a2ae09e2ca0">&#9670;&#160;</a></span>ExecutePickup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTCurrencyDrop::ExecutePickup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Execute the actual pickup: deposit currency, fire cosmetic multicast, request deactivation. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00199">199</a> of file <a class="el" href="_d_t_currency_drop_8cpp_source.html">DTCurrencyDrop.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00137">Amount</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00134">CurrencyType</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00140">DropState</a>, <a class="el" href="#aab885314fb80e0144e8e1cb43cb7f7bf">Multicast_OnPickedUp()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00143">OwningPlayer</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00149">OwningSubsystem</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00027">PickedUp</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00023">Pooled</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00189">ForcePickup()</a>, and <a class="el" href="#af98a0073941654ee3054413a891c8f06">OnPickupVisual()</a>.</p>
 
 </div>
 </div>
@@ -322,7 +413,9 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00189">189</a> of file <a class="el" href="_d_t_currency_drop_8cpp_source.html">DTCurrencyDrop.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00192">UDTCurrencySubsystem::ForcePickupAll()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00199">ExecutePickup()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00265">UDTCurrencySubsystem::EvictOldest()</a>, and <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00192">UDTCurrencySubsystem::ForcePickupAll()</a>.</p>
 
 </div>
 </div>
@@ -353,6 +446,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00069">69</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00145">ActivationTime</a>.</p>
+
 </div>
 </div>
 <a id="a12ff2bbb9b20929ab1af2ab62f176a66" name="a12ff2bbb9b20929ab1af2ab62f176a66"></a>
@@ -380,9 +475,9 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00060">60</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00060">GetAmount()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00137">Amount</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00060">GetAmount()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8h_source.html#l00060">GetAmount()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8h_source.html#l00060">GetAmount()</a>, and <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00321">UDTCurrencySubsystem::RunMergePass()</a>.</p>
 
 </div>
 </div>
@@ -411,9 +506,9 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00057">57</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00057">GetCurrencyType()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00134">CurrencyType</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00057">GetCurrencyType()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8h_source.html#l00057">GetCurrencyType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8h_source.html#l00057">GetCurrencyType()</a>, and <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00321">UDTCurrencySubsystem::RunMergePass()</a>.</p>
 
 </div>
 </div>
@@ -442,9 +537,9 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00063">63</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00063">GetDropState()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00140">DropState</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00063">GetDropState()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8h_source.html#l00063">GetDropState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00440">UDTCurrencySubsystem::CleanupPickedUpDrops()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00063">GetDropState()</a>, and <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00321">UDTCurrencySubsystem::RunMergePass()</a>.</p>
 
 </div>
 </div>
@@ -473,7 +568,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00043">43</a> of file <a class="el" href="_d_t_currency_drop_8cpp_source.html">DTCurrencyDrop.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00019">ADTCurrencyDrop()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00019">ADTCurrencyDrop()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00137">Amount</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00134">CurrencyType</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00140">DropState</a>.</p>
 
 </div>
 </div>
@@ -502,9 +597,49 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00066">66</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00066">GetOwningPlayer()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00066">GetOwningPlayer()</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00143">OwningPlayer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00192">UDTCurrencySubsystem::ForcePickupAll()</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00066">GetOwningPlayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00192">UDTCurrencySubsystem::ForcePickupAll()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00066">GetOwningPlayer()</a>, and <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00321">UDTCurrencySubsystem::RunMergePass()</a>.</p>
+
+</div>
+</div>
+<a id="aab885314fb80e0144e8e1cb43cb7f7bf" name="aab885314fb80e0144e8e1cb43cb7f7bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab885314fb80e0144e8e1cb43cb7f7bf">&#9670;&#160;</a></span>Multicast_OnPickedUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTCurrencyDrop::Multicast_OnPickedUp </td>
+          <td>(</td>
+          <td class="paramtype">FVector</td>          <td class="paramname"><span class="paramname"><em>Location</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>InCurrencyType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64</td>          <td class="paramname"><span class="paramname"><em>InAmount</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unreliable multicast for owning-client cosmetic feedback. </p>
+
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00239">ApplyVisualTier()</a>, <a class="el" href="#aab885314fb80e0144e8e1cb43cb7f7bf">Multicast_OnPickedUp()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00052">OnRep_CurrencyType()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00077">OnRep_DropState()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00199">ExecutePickup()</a>, and <a class="el" href="#aab885314fb80e0144e8e1cb43cb7f7bf">Multicast_OnPickedUp()</a>.</p>
 
 </div>
 </div>
@@ -540,7 +675,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a788c16563b68808ced71baf4a56ec720">OnDropActivated()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, and <a class="el" href="#a788c16563b68808ced71baf4a56ec720">OnDropActivated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, <a class="el" href="#a788c16563b68808ced71baf4a56ec720">OnDropActivated()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00052">OnRep_CurrencyType()</a>.</p>
 
 </div>
 </div>
@@ -643,13 +778,157 @@ Protected Member Functions</h2></td></tr>
 <p>Called on all clients when this drop is picked up (cosmetic feedback). </p>
 <p>Override in Blueprint to spawn pickup VFX / play SFX. </p>
 
-<p class="reference">References <a class="el" href="#af98a0073941654ee3054413a891c8f06">OnPickupVisual()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00199">ExecutePickup()</a>, and <a class="el" href="#af98a0073941654ee3054413a891c8f06">OnPickupVisual()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#af98a0073941654ee3054413a891c8f06">OnPickupVisual()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#af98a0073941654ee3054413a891c8f06">OnPickupVisual()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00077">OnRep_DropState()</a>.</p>
+
+</div>
+</div>
+<a id="a86186f3c79899599160f4351da253b8b" name="a86186f3c79899599160f4351da253b8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86186f3c79899599160f4351da253b8b">&#9670;&#160;</a></span>OnRep_CurrencyType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTCurrencyDrop::OnRep_CurrencyType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Client-side: initialize visuals + tick when replicated CurrencyType arrives. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00052">52</a> of file <a class="el" href="_d_t_currency_drop_8cpp_source.html">DTCurrencyDrop.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00145">ActivationTime</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00137">Amount</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00239">ApplyVisualTier()</a>, <a class="el" href="_d_t_global_data_8h_source.html#l00041">UDTGlobalData::CurrencyGlobalData</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00134">CurrencyType</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00043">UDTBlueprintLibrary::GetGlobalDataFast()</a>, <a class="el" href="_d_t_currency_global_data_8cpp_source.html#l00020">UDTCurrencyGlobalData::GetVisualTierForAmount()</a>, <a class="el" href="#a788c16563b68808ced71baf4a56ec720">OnDropActivated()</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00149">OwningSubsystem</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#aab885314fb80e0144e8e1cb43cb7f7bf">Multicast_OnPickedUp()</a>.</p>
+
+</div>
+</div>
+<a id="a016357d41e6c261b36502b374c975d62" name="a016357d41e6c261b36502b374c975d62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a016357d41e6c261b36502b374c975d62">&#9670;&#160;</a></span>OnRep_DropState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADTCurrencyDrop::OnRep_DropState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Client-side: react to state transitions (PickedUp → hide actor + play VFX). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00077">77</a> of file <a class="el" href="_d_t_currency_drop_8cpp_source.html">DTCurrencyDrop.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_currency_drop_8h_source.html#l00137">Amount</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00134">CurrencyType</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00140">DropState</a>, <a class="el" href="#af98a0073941654ee3054413a891c8f06">OnPickupVisual()</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00027">PickedUp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#aab885314fb80e0144e8e1cb43cb7f7bf">Multicast_OnPickedUp()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a8377b981ae2fe4e7aac2ade4a4d5b90a" name="a8377b981ae2fe4e7aac2ade4a4d5b90a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8377b981ae2fe4e7aac2ade4a4d5b90a">&#9670;&#160;</a></span>ActivationTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ADTCurrencyDrop::ActivationTime = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00145">145</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00149">Deactivate()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00069">GetActivationTime()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00052">OnRep_CurrencyType()</a>.</p>
+
+</div>
+</div>
+<a id="a75dde4a17d708676fc679a11515c8c94" name="a75dde4a17d708676fc679a11515c8c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75dde4a17d708676fc679a11515c8c94">&#9670;&#160;</a></span>Amount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64 ADTCurrencyDrop::Amount = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00137">137</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00173">AbsorbAmount()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00149">Deactivate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00199">ExecutePickup()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00060">GetAmount()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00043">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00052">OnRep_CurrencyType()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00077">OnRep_DropState()</a>.</p>
+
+</div>
+</div>
+<a id="afa28b3e19c83cd4624720beed87966f9" name="afa28b3e19c83cd4624720beed87966f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa28b3e19c83cd4624720beed87966f9">&#9670;&#160;</a></span>CurrencyType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayTag ADTCurrencyDrop::CurrencyType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00134">134</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00173">AbsorbAmount()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00149">Deactivate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00199">ExecutePickup()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00057">GetCurrencyType()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00043">GetLifetimeReplicatedProps()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00052">OnRep_CurrencyType()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00077">OnRep_DropState()</a>.</p>
+
+</div>
+</div>
 <a id="ab9b874223d2e2130a118a204c147173f" name="ab9b874223d2e2130a118a204c147173f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9b874223d2e2130a118a204c147173f">&#9670;&#160;</a></span>DropMeshComponent</h2>
 
@@ -667,7 +946,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00076">76</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00019">ADTCurrencyDrop()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00149">Deactivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00019">ADTCurrencyDrop()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00239">ApplyVisualTier()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00149">Deactivate()</a>.</p>
 
 </div>
 </div>
@@ -686,6 +965,32 @@ Protected Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00079">79</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00019">ADTCurrencyDrop()</a>.</p>
+
+</div>
+</div>
+<a id="a2a06ea31b042a39dadafedc0aecc8909" name="a2a06ea31b042a39dadafedc0aecc8909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a06ea31b042a39dadafedc0aecc8909">&#9670;&#160;</a></span>DropState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_d_t_currency_drop_8h.html#ade8ded0c5159ef6b0cb1dc30fdd06910">EDTCurrencyDropState</a> ADTCurrencyDrop::DropState = <a class="el" href="_d_t_currency_drop_8h.html#ade8ded0c5159ef6b0cb1dc30fdd06910ae488a232369c77a528c08970ad5a5b33">EDTCurrencyDropState::Pooled</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00140">140</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00149">Deactivate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00199">ExecutePickup()</a>, <a class="el" href="_d_t_currency_drop_8h_source.html#l00063">GetDropState()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00043">GetLifetimeReplicatedProps()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00077">OnRep_DropState()</a>.</p>
 
 </div>
 </div>
@@ -713,7 +1018,61 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00072">72</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00149">Deactivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_subsystem_8cpp_source.html#l00223">UDTCurrencySubsystem::AcquireDrop()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00149">Deactivate()</a>.</p>
+
+</div>
+</div>
+<a id="a7d8889c0cc6952c12959637944b60961" name="a7d8889c0cc6952c12959637944b60961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d8889c0cc6952c12959637944b60961">&#9670;&#160;</a></span>OwningPlayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TWeakObjectPtr&lt;APlayerController&gt; ADTCurrencyDrop::OwningPlayer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00143">143</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00149">Deactivate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00199">ExecutePickup()</a>, and <a class="el" href="_d_t_currency_drop_8h_source.html#l00066">GetOwningPlayer()</a>.</p>
+
+</div>
+</div>
+<a id="add12679a2f98bb0f798817de29b26866" name="add12679a2f98bb0f798817de29b26866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add12679a2f98bb0f798817de29b26866">&#9670;&#160;</a></span>OwningSubsystem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_currency_subsystem.html">UDTCurrencySubsystem</a>&gt; ADTCurrencyDrop::OwningSubsystem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Owning subsystem (cached on Activate for fast access). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_currency_drop_8h_source.html#l00149">149</a> of file <a class="el" href="_d_t_currency_drop_8h_source.html">DTCurrencyDrop.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00086">Activate()</a>, <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00199">ExecutePickup()</a>, and <a class="el" href="_d_t_currency_drop_8cpp_source.html#l00052">OnRep_CurrencyType()</a>.</p>
 
 </div>
 </div>

@@ -183,6 +183,21 @@ Protected Attributes</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_u_d_t_activatable_widget"><td colspan="2">Protected Attributes inherited from <a class="el" href="class_u_d_t_activatable_widget.html">UDTActivatableWidget</a></td></tr>
 <tr class="memitem:ae6c13fde8552708ace4154d2ec97fa98 pro_attribs_class_u_d_t_activatable_widget" id="r_ae6c13fde8552708ace4154d2ec97fa98"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_activatable_widget.html#ae6c13fde8552708ace4154d2ec97fa98">bOverrideDefaultInputConfig</a> = false</td></tr>
 <tr class="memitem:a2396418f13f4c464c4c9264af27b7342 pro_attribs_class_u_d_t_activatable_widget" id="r_a2396418f13f4c464c4c9264af27b7342"><td class="memItemLeft">FUIInputConfig&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_activatable_widget.html#a2396418f13f4c464c4c9264af27b7342">InputConfig</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1f71f9bd80841702a2d7b5c8f5d19ef7" id="r_a1f71f9bd80841702a2d7b5c8f5d19ef7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1f71f9bd80841702a2d7b5c8f5d19ef7">HandleContinueClicked</a> () const</td></tr>
+<tr class="memitem:aa5affecaa33a9f4f414daff91e506c55" id="r_aa5affecaa33a9f4f414daff91e506c55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa5affecaa33a9f4f414daff91e506c55">HandleRestartClicked</a> () const</td></tr>
+<tr class="memitem:a392883589eeea26406f15eb99c035707" id="r_a392883589eeea26406f15eb99c035707"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a392883589eeea26406f15eb99c035707">HandleReturnToTownClicked</a> () const</td></tr>
+<tr class="memitem:a93a73339327d6a872bf7ba784e293d92" id="r_a93a73339327d6a872bf7ba784e293d92"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a93a73339327d6a872bf7ba784e293d92">ApplyHostClientState</a> ()</td></tr>
+<tr class="memdesc:a93a73339327d6a872bf7ba784e293d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies host vs client visibility state to buttons and waiting text.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af6d4faa1653da6188343daaebdbd304c" id="r_af6d4faa1653da6188343daaebdbd304c"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#af6d4faa1653da6188343daaebdbd304c">CompletedFloor</a> = 0</td></tr>
+<tr class="memitem:a143108d52ec65f89c40e44c160dc990d" id="r_a143108d52ec65f89c40e44c160dc990d"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#a143108d52ec65f89c40e44c160dc990d">DungeonSeed</a> = 0</td></tr>
+<tr class="memitem:abbe37d244a1f1170c09379cb15773c0c" id="r_abbe37d244a1f1170c09379cb15773c0c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abbe37d244a1f1170c09379cb15773c0c">bHostPlayer</a> = false</td></tr>
+<tr class="memitem:a2a3cd6a1595968ca952a9225c87076b8" id="r_a2a3cd6a1595968ca952a9225c87076b8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2a3cd6a1595968ca952a9225c87076b8">bRunFailed</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Full-screen summary widget shown when a dungeon floor is completed. </p>
@@ -210,6 +225,132 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a93a73339327d6a872bf7ba784e293d92" name="a93a73339327d6a872bf7ba784e293d92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93a73339327d6a872bf7ba784e293d92">&#9670;&#160;</a></span>ApplyHostClientState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTMapSummaryWidget::ApplyHostClientState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies host vs client visibility state to buttons and waiting text. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00087">87</a> of file <a class="el" href="_d_t_map_summary_widget_8cpp_source.html">DTMapSummaryWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00078">bHostPlayer</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00079">bRunFailed</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00049">BTN_Continue</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00052">BTN_Restart</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00055">BTN_ReturnToTown</a>, and <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00062">TXT_WaitingForHost</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00055">InitializeSummary()</a>.</p>
+
+</div>
+</div>
+<a id="a1f71f9bd80841702a2d7b5c8f5d19ef7" name="a1f71f9bd80841702a2d7b5c8f5d19ef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f71f9bd80841702a2d7b5c8f5d19ef7">&#9670;&#160;</a></span>HandleContinueClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTMapSummaryWidget::HandleContinueClicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00109">109</a> of file <a class="el" href="_d_t_map_summary_widget_8cpp_source.html">DTMapSummaryWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="class_a_d_t_player_controller.html#ad745f3445da285392ae07845f3d981dd">ADTPlayerController::Server_RequestContinue()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00015">NativeConstruct()</a>.</p>
+
+</div>
+</div>
+<a id="aa5affecaa33a9f4f414daff91e506c55" name="aa5affecaa33a9f4f414daff91e506c55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5affecaa33a9f4f414daff91e506c55">&#9670;&#160;</a></span>HandleRestartClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTMapSummaryWidget::HandleRestartClicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00121">121</a> of file <a class="el" href="_d_t_map_summary_widget_8cpp_source.html">DTMapSummaryWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00076">CompletedFloor</a>, and <a class="el" href="class_a_d_t_player_controller.html#ae6ddb1727d88235a999ae4bb27f1a361">ADTPlayerController::Server_RequestRestart()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00015">NativeConstruct()</a>.</p>
+
+</div>
+</div>
+<a id="a392883589eeea26406f15eb99c035707" name="a392883589eeea26406f15eb99c035707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a392883589eeea26406f15eb99c035707">&#9670;&#160;</a></span>HandleReturnToTownClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTMapSummaryWidget::HandleReturnToTownClicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00133">133</a> of file <a class="el" href="_d_t_map_summary_widget_8cpp_source.html">DTMapSummaryWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="class_a_d_t_player_controller.html#add8d234e01ee70bacea310b3d6dd2d15">ADTPlayerController::Server_RequestReturnToTown()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00015">NativeConstruct()</a>.</p>
+
+</div>
+</div>
 <a id="a854da20107419589965a1f8d175c59af" name="a854da20107419589965a1f8d175c59af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a854da20107419589965a1f8d175c59af">&#9670;&#160;</a></span>InitializeFailedRun()</h2>
 
@@ -234,7 +375,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00081">81</a> of file <a class="el" href="_d_t_map_summary_widget_8cpp_source.html">DTMapSummaryWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00055">InitializeSummary()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00079">bRunFailed</a>, and <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00055">InitializeSummary()</a>.</p>
 
 </div>
 </div>
@@ -262,7 +403,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00055">55</a> of file <a class="el" href="_d_t_map_summary_widget_8cpp_source.html">DTMapSummaryWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00070">FloorCompleteHeaderFormat</a>, <a class="el" href="#a73ad8a8dad4f1ea31f6cb8eb7e03d508">OnSummaryInitialized()</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00058">TXT_Header</a>, and <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00046">WGT_StatList</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00087">ApplyHostClientState()</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00078">bHostPlayer</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00076">CompletedFloor</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00077">DungeonSeed</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00070">FloorCompleteHeaderFormat</a>, <a class="el" href="#a73ad8a8dad4f1ea31f6cb8eb7e03d508">OnSummaryInitialized()</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00058">TXT_Header</a>, and <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00046">WGT_StatList</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00081">InitializeFailedRun()</a>.</p>
 
@@ -293,7 +434,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00039">39</a> of file <a class="el" href="_d_t_map_summary_widget_8h_source.html">DTMapSummaryWidget.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00039">IsRunFailed()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00079">bRunFailed</a>, and <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00039">IsRunFailed()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00039">IsRunFailed()</a>.</p>
 
@@ -324,7 +465,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00015">15</a> of file <a class="el" href="_d_t_map_summary_widget_8cpp_source.html">DTMapSummaryWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00049">BTN_Continue</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00052">BTN_Restart</a>, and <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00055">BTN_ReturnToTown</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00049">BTN_Continue</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00052">BTN_Restart</a>, <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00055">BTN_ReturnToTown</a>, <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00109">HandleContinueClicked()</a>, <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00121">HandleRestartClicked()</a>, and <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00133">HandleReturnToTownClicked()</a>.</p>
 
 </div>
 </div>
@@ -389,6 +530,58 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="abbe37d244a1f1170c09379cb15773c0c" name="abbe37d244a1f1170c09379cb15773c0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbe37d244a1f1170c09379cb15773c0c">&#9670;&#160;</a></span>bHostPlayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTMapSummaryWidget::bHostPlayer = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00078">78</a> of file <a class="el" href="_d_t_map_summary_widget_8h_source.html">DTMapSummaryWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00087">ApplyHostClientState()</a>, and <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00055">InitializeSummary()</a>.</p>
+
+</div>
+</div>
+<a id="a2a3cd6a1595968ca952a9225c87076b8" name="a2a3cd6a1595968ca952a9225c87076b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3cd6a1595968ca952a9225c87076b8">&#9670;&#160;</a></span>bRunFailed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTMapSummaryWidget::bRunFailed = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00079">79</a> of file <a class="el" href="_d_t_map_summary_widget_8h_source.html">DTMapSummaryWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00087">ApplyHostClientState()</a>, <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00081">InitializeFailedRun()</a>, and <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00039">IsRunFailed()</a>.</p>
+
+</div>
+</div>
 <a id="a8a1c715c766476a6035c50a5b9f41297" name="a8a1c715c766476a6035c50a5b9f41297"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a1c715c766476a6035c50a5b9f41297">&#9670;&#160;</a></span>BTN_Continue</h2>
 
@@ -411,7 +604,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00049">49</a> of file <a class="el" href="_d_t_map_summary_widget_8h_source.html">DTMapSummaryWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00015">NativeConstruct()</a>, and <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00035">NativeDestruct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00087">ApplyHostClientState()</a>, <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00015">NativeConstruct()</a>, and <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00035">NativeDestruct()</a>.</p>
 
 </div>
 </div>
@@ -437,7 +630,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00052">52</a> of file <a class="el" href="_d_t_map_summary_widget_8h_source.html">DTMapSummaryWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00015">NativeConstruct()</a>, and <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00035">NativeDestruct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00087">ApplyHostClientState()</a>, <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00015">NativeConstruct()</a>, and <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00035">NativeDestruct()</a>.</p>
 
 </div>
 </div>
@@ -463,7 +656,59 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00055">55</a> of file <a class="el" href="_d_t_map_summary_widget_8h_source.html">DTMapSummaryWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00015">NativeConstruct()</a>, and <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00035">NativeDestruct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00087">ApplyHostClientState()</a>, <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00015">NativeConstruct()</a>, and <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00035">NativeDestruct()</a>.</p>
+
+</div>
+</div>
+<a id="af6d4faa1653da6188343daaebdbd304c" name="af6d4faa1653da6188343daaebdbd304c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d4faa1653da6188343daaebdbd304c">&#9670;&#160;</a></span>CompletedFloor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTMapSummaryWidget::CompletedFloor = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00076">76</a> of file <a class="el" href="_d_t_map_summary_widget_8h_source.html">DTMapSummaryWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00121">HandleRestartClicked()</a>, and <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00055">InitializeSummary()</a>.</p>
+
+</div>
+</div>
+<a id="a143108d52ec65f89c40e44c160dc990d" name="a143108d52ec65f89c40e44c160dc990d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a143108d52ec65f89c40e44c160dc990d">&#9670;&#160;</a></span>DungeonSeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTMapSummaryWidget::DungeonSeed = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00077">77</a> of file <a class="el" href="_d_t_map_summary_widget_8h_source.html">DTMapSummaryWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00055">InitializeSummary()</a>.</p>
 
 </div>
 </div>
@@ -545,6 +790,8 @@ Protected Attributes</h2></td></tr>
 <p>Shown to non-host clients while waiting for the host to make a decision. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_map_summary_widget_8h_source.html#l00062">62</a> of file <a class="el" href="_d_t_map_summary_widget_8h_source.html">DTMapSummaryWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_map_summary_widget_8cpp_source.html#l00087">ApplyHostClientState()</a>.</p>
 
 </div>
 </div>

@@ -15,6 +15,10 @@ var class_u_d_t_gameplay_ability___melee =
     [ "OnMeleeHitActor", "class_u_d_t_gameplay_ability___melee.html#a220d6df7756756b01515c61bfa8e7db6", null ],
     [ "ProcessMeleeHits", "class_u_d_t_gameplay_ability___melee.html#a1e134fdec49dace715ab1583c832fb8d", null ],
     [ "SendTargetDataToServer", "class_u_d_t_gameplay_ability___melee.html#a15e2d589ab3bdf15ea86d454ca54a51a", null ],
+    [ "bHasCurrentHitboxParams", "class_u_d_t_gameplay_ability___melee.html#a1eddb2f20d224c9973087f5e9c2c1a26", null ],
+    [ "CurrentHitboxParams", "class_u_d_t_gameplay_ability___melee.html#afe113739de1bc31d1f99da2fb5585a5f", null ],
     [ "DamageEventTag", "class_u_d_t_gameplay_ability___melee.html#ab4d077a3b2c4f1996a0204e7d4e3c878", null ],
-    [ "MeleeAttackParams", "class_u_d_t_gameplay_ability___melee.html#a4f24364ae3cda7e3b3ec475c06063cf1", null ]
+    [ "DamageEventTask", "class_u_d_t_gameplay_ability___melee.html#a73373e64fcdc039e9be8da7e977cc802", null ],
+    [ "MeleeAttackParams", "class_u_d_t_gameplay_ability___melee.html#a4f24364ae3cda7e3b3ec475c06063cf1", null ],
+    [ "TargetDataDelegateHandle", "class_u_d_t_gameplay_ability___melee.html#afd65f218e6913e0755cc742d09b461fe", null ]
 ];

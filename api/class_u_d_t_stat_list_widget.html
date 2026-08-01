@@ -177,6 +177,21 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a7a274004c8acfa550fd957f87781b2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional stat whitelist.  <br /></td></tr>
 <tr class="memitem:a1d28dc6f2604d2ddf179ead89356f474" id="r_a1d28dc6f2604d2ddf179ead89356f474"><td class="memItemLeft">TArray&lt; TObjectPtr&lt; <a class="el" href="class_u_d_t_stat_list_item_data.html">UDTStatListItemData</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1d28dc6f2604d2ddf179ead89356f474">StatItems</a></td></tr>
 <tr class="memdesc:a1d28dc6f2604d2ddf179ead89356f474"><td class="mdescLeft">&#160;</td><td class="mdescRight">All currently active list item objects.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aab903688a14c8d6ff69e2da7d44a2627" id="r_aab903688a14c8d6ff69e2da7d44a2627"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aab903688a14c8d6ff69e2da7d44a2627">HandleStatChanged</a> (FGameplayTag StatTag, double NewNumericValue, double DeltaNumericValue)</td></tr>
+<tr class="memitem:a72cb4637214d56e89b59cc90ea8acbbf" id="r_a72cb4637214d56e89b59cc90ea8acbbf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a72cb4637214d56e89b59cc90ea8acbbf">HandleWorldStatChanged</a> (FGameplayTag StatTag, double NewNumericValue, double DeltaNumericValue)</td></tr>
+<tr class="memitem:a70d5590f0ffa01591a75b4f97f3ddbc3" id="r_a70d5590f0ffa01591a75b4f97f3ddbc3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a70d5590f0ffa01591a75b4f97f3ddbc3">HandleItemClicked</a> (UObject *Item)</td></tr>
+<tr class="memitem:a6f5b6148b9d9b2e2b9c33baecebae174" id="r_a6f5b6148b9d9b2e2b9c33baecebae174"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6f5b6148b9d9b2e2b9c33baecebae174">BindStatDelegates</a> ()</td></tr>
+<tr class="memitem:a94741a45347e1dabdc6197309da7ee84" id="r_a94741a45347e1dabdc6197309da7ee84"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a94741a45347e1dabdc6197309da7ee84">UnbindStatDelegates</a> ()</td></tr>
+<tr class="memitem:a9d6c3b01d8458ba8c84613d4d8ee4a6b" id="r_a9d6c3b01d8458ba8c84613d4d8ee4a6b"><td class="memItemLeft"><a class="el" href="class_a_d_t_player_state.html">ADTPlayerState</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9d6c3b01d8458ba8c84613d4d8ee4a6b">ResolvePlayerState</a> () const</td></tr>
+<tr class="memitem:a4c6609b3844d00cb742558c3b5045a7d" id="r_a4c6609b3844d00cb742558c3b5045a7d"><td class="memItemLeft">UStatSubsystem *&#160;</td><td class="memItemRight"><a class="el" href="#a4c6609b3844d00cb742558c3b5045a7d">ResolveStatSubsystem</a> () const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a80c29b8df019bee77e7dddfbf43fd218" id="r_a80c29b8df019bee77e7dddfbf43fd218"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a80c29b8df019bee77e7dddfbf43fd218">bStatDelegatesBound</a> = false</td></tr>
+<tr class="memitem:a0bf17fbf2387c891ee491b67124ad5b0" id="r_a0bf17fbf2387c891ee491b67124ad5b0"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0bf17fbf2387c891ee491b67124ad5b0">bWorldStatDelegatesBound</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Container widget for an interactive stat list driven by a DataTable. </p>
@@ -204,6 +219,37 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a6f5b6148b9d9b2e2b9c33baecebae174" name="a6f5b6148b9d9b2e2b9c33baecebae174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f5b6148b9d9b2e2b9c33baecebae174">&#9670;&#160;</a></span>BindStatDelegates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTStatListWidget::BindStatDelegates </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00185">185</a> of file <a class="el" href="_d_t_stat_list_widget_8cpp_source.html">DTStatListWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00076">bStatDelegatesBound</a>, <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00077">bWorldStatDelegatesBound</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00149">HandleStatChanged()</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00163">HandleWorldStatChanged()</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00241">ResolvePlayerState()</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00251">ResolveStatSubsystem()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00017">NativeConstruct()</a>.</p>
+
+</div>
+</div>
 <a id="a05bfad34f87dc038cfbbfc8a67e2fa01" name="a05bfad34f87dc038cfbbfc8a67e2fa01"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05bfad34f87dc038cfbbfc8a67e2fa01">&#9670;&#160;</a></span>FindItemForStat()</h2>
 
@@ -224,6 +270,119 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00137">137</a> of file <a class="el" href="_d_t_stat_list_widget_8cpp_source.html">DTStatListWidget.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, and <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00058">StatItems</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00149">HandleStatChanged()</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00163">HandleWorldStatChanged()</a>.</p>
+
+</div>
+</div>
+<a id="a70d5590f0ffa01591a75b4f97f3ddbc3" name="a70d5590f0ffa01591a75b4f97f3ddbc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d5590f0ffa01591a75b4f97f3ddbc3">&#9670;&#160;</a></span>HandleItemClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTStatListWidget::HandleItemClicked </td>
+          <td>(</td>
+          <td class="paramtype">UObject *</td>          <td class="paramname"><span class="paramname"><em>Item</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00177">177</a> of file <a class="el" href="_d_t_stat_list_widget_8cpp_source.html">DTStatListWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, and <a class="el" href="#a26b6f2c3727df1e91c6cd32fb25bb6be">OnStatItemClicked()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00017">NativeConstruct()</a>.</p>
+
+</div>
+</div>
+<a id="aab903688a14c8d6ff69e2da7d44a2627" name="aab903688a14c8d6ff69e2da7d44a2627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab903688a14c8d6ff69e2da7d44a2627">&#9670;&#160;</a></span>HandleStatChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTStatListWidget::HandleStatChanged </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>StatTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>NewNumericValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>DeltaNumericValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00149">149</a> of file <a class="el" href="_d_t_stat_list_widget_8cpp_source.html">DTStatListWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00137">FindItemForStat()</a>, <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, and <a class="el" href="#a3b067055d653995eab4884932e6c4c3c">OnStatItemValueUpdated()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00185">BindStatDelegates()</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00212">UnbindStatDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="a72cb4637214d56e89b59cc90ea8acbbf" name="a72cb4637214d56e89b59cc90ea8acbbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72cb4637214d56e89b59cc90ea8acbbf">&#9670;&#160;</a></span>HandleWorldStatChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTStatListWidget::HandleWorldStatChanged </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>StatTag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>NewNumericValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>DeltaNumericValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00163">163</a> of file <a class="el" href="_d_t_stat_list_widget_8cpp_source.html">DTStatListWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00137">FindItemForStat()</a>, <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, and <a class="el" href="#a3b067055d653995eab4884932e6c4c3c">OnStatItemValueUpdated()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00185">BindStatDelegates()</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00212">UnbindStatDelegates()</a>.</p>
 
 </div>
 </div>
@@ -252,7 +411,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00017">17</a> of file <a class="el" href="_d_t_stat_list_widget_8cpp_source.html">DTStatListWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00042">LV_StatList</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00042">RefreshStatList()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00185">BindStatDelegates()</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00177">HandleItemClicked()</a>, <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00042">LV_StatList</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00042">RefreshStatList()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a26b6f2c3727df1e91c6cd32fb25bb6be">OnStatItemClicked()</a>.</p>
 
@@ -283,7 +442,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00030">30</a> of file <a class="el" href="_d_t_stat_list_widget_8cpp_source.html">DTStatListWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00042">LV_StatList</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00042">LV_StatList</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00212">UnbindStatDelegates()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a26b6f2c3727df1e91c6cd32fb25bb6be">OnStatItemClicked()</a>.</p>
 
@@ -316,7 +475,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00017">NativeConstruct()</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00030">NativeDestruct()</a>, and <a class="el" href="#a26b6f2c3727df1e91c6cd32fb25bb6be">OnStatItemClicked()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a26b6f2c3727df1e91c6cd32fb25bb6be">OnStatItemClicked()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00177">HandleItemClicked()</a>, and <a class="el" href="#a26b6f2c3727df1e91c6cd32fb25bb6be">OnStatItemClicked()</a>.</p>
 
 </div>
 </div>
@@ -347,7 +506,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#a3b067055d653995eab4884932e6c4c3c">OnStatItemValueUpdated()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a3b067055d653995eab4884932e6c4c3c">OnStatItemValueUpdated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00149">HandleStatChanged()</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00163">HandleWorldStatChanged()</a>, and <a class="el" href="#a3b067055d653995eab4884932e6c4c3c">OnStatItemValueUpdated()</a>.</p>
 
 </div>
 </div>
@@ -402,9 +561,98 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00042">42</a> of file <a class="el" href="_d_t_stat_list_widget_8cpp_source.html">DTStatListWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00054">AllowedStats</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00084">UDTStatListItemData::CategoryTag</a>, <a class="el" href="_d_t_u_i_types_8cpp_source.html#l00005">UDTStatListItemData::CreateFromRow()</a>, <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00050">FilterCategories</a>, <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00042">LV_StatList</a>, <a class="el" href="#a432dffa9004f63c8f2fe5c61afa1bebd">OnStatListRefreshed()</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00092">UDTStatListItemData::SortOrder</a>, <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00046">StatDisplayTable</a>, and <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00058">StatItems</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00054">AllowedStats</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00084">UDTStatListItemData::CategoryTag</a>, <a class="el" href="_d_t_u_i_types_8cpp_source.html#l00005">UDTStatListItemData::CreateFromRow()</a>, <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00050">FilterCategories</a>, <a class="el" href="_d_t_loot_source_component_8h_source.html#l00024">Item</a>, <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00042">LV_StatList</a>, <a class="el" href="#a432dffa9004f63c8f2fe5c61afa1bebd">OnStatListRefreshed()</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00241">ResolvePlayerState()</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00251">ResolveStatSubsystem()</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00092">UDTStatListItemData::SortOrder</a>, <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00046">StatDisplayTable</a>, and <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00058">StatItems</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00017">NativeConstruct()</a>.</p>
+
+</div>
+</div>
+<a id="a9d6c3b01d8458ba8c84613d4d8ee4a6b" name="a9d6c3b01d8458ba8c84613d4d8ee4a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d6c3b01d8458ba8c84613d4d8ee4a6b">&#9670;&#160;</a></span>ResolvePlayerState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_d_t_player_state.html">ADTPlayerState</a> * UDTStatListWidget::ResolvePlayerState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00241">241</a> of file <a class="el" href="_d_t_stat_list_widget_8cpp_source.html">DTStatListWidget.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00185">BindStatDelegates()</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00042">RefreshStatList()</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00212">UnbindStatDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="a4c6609b3844d00cb742558c3b5045a7d" name="a4c6609b3844d00cb742558c3b5045a7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6609b3844d00cb742558c3b5045a7d">&#9670;&#160;</a></span>ResolveStatSubsystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UStatSubsystem * UDTStatListWidget::ResolveStatSubsystem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00251">251</a> of file <a class="el" href="_d_t_stat_list_widget_8cpp_source.html">DTStatListWidget.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00185">BindStatDelegates()</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00042">RefreshStatList()</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00212">UnbindStatDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="a94741a45347e1dabdc6197309da7ee84" name="a94741a45347e1dabdc6197309da7ee84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94741a45347e1dabdc6197309da7ee84">&#9670;&#160;</a></span>UnbindStatDelegates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTStatListWidget::UnbindStatDelegates </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00212">212</a> of file <a class="el" href="_d_t_stat_list_widget_8cpp_source.html">DTStatListWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00076">bStatDelegatesBound</a>, <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00077">bWorldStatDelegatesBound</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00149">HandleStatChanged()</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00163">HandleWorldStatChanged()</a>, <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00241">ResolvePlayerState()</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00251">ResolveStatSubsystem()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00030">NativeDestruct()</a>.</p>
 
 </div>
 </div>
@@ -435,6 +683,58 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00054">54</a> of file <a class="el" href="_d_t_stat_list_widget_8h_source.html">DTStatListWidget.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00042">RefreshStatList()</a>.</p>
+
+</div>
+</div>
+<a id="a80c29b8df019bee77e7dddfbf43fd218" name="a80c29b8df019bee77e7dddfbf43fd218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80c29b8df019bee77e7dddfbf43fd218">&#9670;&#160;</a></span>bStatDelegatesBound</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTStatListWidget::bStatDelegatesBound = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00076">76</a> of file <a class="el" href="_d_t_stat_list_widget_8h_source.html">DTStatListWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00185">BindStatDelegates()</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00212">UnbindStatDelegates()</a>.</p>
+
+</div>
+</div>
+<a id="a0bf17fbf2387c891ee491b67124ad5b0" name="a0bf17fbf2387c891ee491b67124ad5b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bf17fbf2387c891ee491b67124ad5b0">&#9670;&#160;</a></span>bWorldStatDelegatesBound</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTStatListWidget::bWorldStatDelegatesBound = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_stat_list_widget_8h_source.html#l00077">77</a> of file <a class="el" href="_d_t_stat_list_widget_8h_source.html">DTStatListWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00185">BindStatDelegates()</a>, and <a class="el" href="_d_t_stat_list_widget_8cpp_source.html#l00212">UnbindStatDelegates()</a>.</p>
 
 </div>
 </div>

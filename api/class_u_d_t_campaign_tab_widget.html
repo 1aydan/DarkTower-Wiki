@@ -206,12 +206,65 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a2bdd46bbc4e97650a0d3630b10d71a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blueprint widget class instantiated once per floor inside WB_FloorContainer.  <br /></td></tr>
 <tr class="memitem:a83cea24f8f7f45a053fdddbb9f6cdc9e" id="r_a83cea24f8f7f45a053fdddbb9f6cdc9e"><td class="memItemLeft">TSubclassOf&lt; <a class="el" href="class_u_d_t_biome_entry_widget.html">UDTBiomeEntryWidget</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a83cea24f8f7f45a053fdddbb9f6cdc9e">BiomeEntryWidgetClass</a></td></tr>
 <tr class="memdesc:a83cea24f8f7f45a053fdddbb9f6cdc9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blueprint widget class instantiated once per biome inside WB_BiomeContainer.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae7be8075d850ec6abce60b6873a6584b" id="r_ae7be8075d850ec6abce60b6873a6584b"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#ae7be8075d850ec6abce60b6873a6584b">GetCampaignTotalFloorCount</a> (const <a class="el" href="class_u_d_t_campaign_definition.html">UDTCampaignDefinition</a> *CampaignData) const</td></tr>
+<tr class="memitem:a6eef59534bdc7d0e1c7590d3be5b0f4c" id="r_a6eef59534bdc7d0e1c7590d3be5b0f4c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6eef59534bdc7d0e1c7590d3be5b0f4c">Refresh</a> ()</td></tr>
+<tr class="memdesc:a6eef59534bdc7d0e1c7590d3be5b0f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates all bound widgets from current pending config state.  <br /></td></tr>
+<tr class="memitem:a4cb23c7b36ea772842ffd8693d29eba5" id="r_a4cb23c7b36ea772842ffd8693d29eba5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4cb23c7b36ea772842ffd8693d29eba5">RebuildFloorEntries</a> ()</td></tr>
+<tr class="memdesc:a4cb23c7b36ea772842ffd8693d29eba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuild the per-floor entries inside WB_FloorContainer from GetFloorsForSelectedBiome.  <br /></td></tr>
+<tr class="memitem:a09468f10c13094492f1da1cf2be4e4a0" id="r_a09468f10c13094492f1da1cf2be4e4a0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a09468f10c13094492f1da1cf2be4e4a0">RebuildBiomeEntries</a> ()</td></tr>
+<tr class="memdesc:a09468f10c13094492f1da1cf2be4e4a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuild the per-biome entries inside WB_BiomeContainer from GetBiomeInfos.  <br /></td></tr>
+<tr class="memitem:aa0414e099cb3596e6cfc22c6e5a4ce98" id="r_aa0414e099cb3596e6cfc22c6e5a4ce98"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa0414e099cb3596e6cfc22c6e5a4ce98">ClampSelectedBiomeIndex</a> ()</td></tr>
+<tr class="memdesc:aa0414e099cb3596e6cfc22c6e5a4ce98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamp SelectedBiomeIndex to a valid range for the current campaign data.  <br /></td></tr>
+<tr class="memitem:a18b5af1102d50d5dcc493854ae58850e" id="r_a18b5af1102d50d5dcc493854ae58850e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a18b5af1102d50d5dcc493854ae58850e">HandleMortalModeChanged</a> (bool bIsChecked)</td></tr>
+<tr class="memitem:a5b989adacd6c72f94bdf4aedc895f3f2" id="r_a5b989adacd6c72f94bdf4aedc895f3f2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5b989adacd6c72f94bdf4aedc895f3f2">HandleFloorEntrySelected</a> (<a class="el" href="class_u_d_t_floor_entry_widget.html">UDTFloorEntryWidget</a> *Entry, <a class="el" href="struct_f_d_t_floor_entry_info.html">FDTFloorEntryInfo</a> FloorInfo)</td></tr>
+<tr class="memitem:a6624e617f9333815c4a69b98aaf11936" id="r_a6624e617f9333815c4a69b98aaf11936"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6624e617f9333815c4a69b98aaf11936">HandleBiomeEntrySelected</a> (<a class="el" href="class_u_d_t_biome_entry_widget.html">UDTBiomeEntryWidget</a> *Entry, <a class="el" href="struct_f_d_t_biome_entry_info.html">FDTBiomeEntryInfo</a> BiomeInfo)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab83dea4e6a42ee7464bf3df4e5cf0723" id="r_ab83dea4e6a42ee7464bf3df4e5cf0723"><td class="memItemLeft">int32&#160;</td><td class="memItemRight"><a class="el" href="#ab83dea4e6a42ee7464bf3df4e5cf0723">SelectedBiomeIndex</a> = INDEX_NONE</td></tr>
+<tr class="memdesc:ab83dea4e6a42ee7464bf3df4e5cf0723"><td class="mdescLeft">&#160;</td><td class="mdescRight">0-based index of the biome shown in the middle column.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tab panel for the Campaign game mode. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00021">21</a> of file <a class="el" href="_d_t_campaign_tab_widget_8h_source.html">DTCampaignTabWidget.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aa0414e099cb3596e6cfc22c6e5a4ce98" name="aa0414e099cb3596e6cfc22c6e5a4ce98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0414e099cb3596e6cfc22c6e5a4ce98">&#9670;&#160;</a></span>ClampSelectedBiomeIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCampaignTabWidget::ClampSelectedBiomeIndex </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clamp SelectedBiomeIndex to a valid range for the current campaign data. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00135">135</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_campaign_definition_8h_source.html#l00019">UDTCampaignDefinition::Biomes</a>, <a class="el" href="_d_t_campaign_definition_8h_source.html#l00016">UDTCampaignDefinition::FloorsPerBiome</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00014">GetCampaignData()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00102">GetCurrentFloor()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00158">SelectedBiomeIndex</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00156">NativeConstruct()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00169">NativeOnConfigChanged()</a>, and <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>.</p>
+
+</div>
+</div>
 <a id="a2b18a90a343417de68be06536d8a29a5" name="a2b18a90a343417de68be06536d8a29a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b18a90a343417de68be06536d8a29a5">&#9670;&#160;</a></span>GetBiomeInfos()</h2>
 
@@ -232,7 +285,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00019">19</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_u_i_types_8h_source.html#l00129">FDTBiomeEntryInfo::BiomeIndex</a>, <a class="el" href="_d_t_campaign_definition_8h_source.html#l00019">UDTCampaignDefinition::Biomes</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00155">FDTBiomeEntryInfo::bIsSelected</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00125">FDTBiomeEntryInfo::DisplayName</a>, <a class="el" href="_d_t_biome_definition_8h_source.html#l00020">UDTBiomeDefinition::DisplayName</a>, <a class="el" href="_d_t_campaign_definition_8h_source.html#l00016">UDTCampaignDefinition::FloorsPerBiome</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00014">GetCampaignData()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00090">GetMaxUnlockedFloor()</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00136">FDTBiomeEntryInfo::GlobalFloorStart</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00151">FDTBiomeEntryInfo::PreviewImage</a>, <a class="el" href="_d_t_biome_definition_8h_source.html#l00023">UDTBiomeDefinition::PreviewImage</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00140">FDTBiomeEntryInfo::TotalFloors</a>, and <a class="el" href="_d_t_u_i_types_8h_source.html#l00147">FDTBiomeEntryInfo::UnlockedFloors</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_u_i_types_8h_source.html#l00129">FDTBiomeEntryInfo::BiomeIndex</a>, <a class="el" href="_d_t_campaign_definition_8h_source.html#l00019">UDTCampaignDefinition::Biomes</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00155">FDTBiomeEntryInfo::bIsSelected</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00125">FDTBiomeEntryInfo::DisplayName</a>, <a class="el" href="_d_t_biome_definition_8h_source.html#l00020">UDTBiomeDefinition::DisplayName</a>, <a class="el" href="_d_t_campaign_definition_8h_source.html#l00016">UDTCampaignDefinition::FloorsPerBiome</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00014">GetCampaignData()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00090">GetMaxUnlockedFloor()</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00136">FDTBiomeEntryInfo::GlobalFloorStart</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00151">FDTBiomeEntryInfo::PreviewImage</a>, <a class="el" href="_d_t_biome_definition_8h_source.html#l00023">UDTBiomeDefinition::PreviewImage</a>, <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00158">SelectedBiomeIndex</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00140">FDTBiomeEntryInfo::TotalFloors</a>, and <a class="el" href="_d_t_u_i_types_8h_source.html#l00147">FDTBiomeEntryInfo::UnlockedFloors</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00249">RebuildBiomeEntries()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -257,7 +312,38 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_game_mode_tab_widget_8h_source.html#l00035">UDTGameModeTabWidget::GetGameModeDefinition()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00019">GetBiomeInfos()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00051">GetFloorsForSelectedBiome()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00090">GetMaxUnlockedFloor()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00115">SetSelectedBiomeIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00135">ClampSelectedBiomeIndex()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00019">GetBiomeInfos()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00051">GetFloorsForSelectedBiome()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00090">GetMaxUnlockedFloor()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00115">SetSelectedBiomeIndex()</a>.</p>
+
+</div>
+</div>
+<a id="ae7be8075d850ec6abce60b6873a6584b" name="ae7be8075d850ec6abce60b6873a6584b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7be8075d850ec6abce60b6873a6584b">&#9670;&#160;</a></span>GetCampaignTotalFloorCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTCampaignTabWidget::GetCampaignTotalFloorCount </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_u_d_t_campaign_definition.html">UDTCampaignDefinition</a> *</td>          <td class="paramname"><span class="paramname"><em>CampaignData</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00175">175</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_campaign_definition_8h_source.html#l00019">UDTCampaignDefinition::Biomes</a>, and <a class="el" href="_d_t_campaign_definition_8h_source.html#l00016">UDTCampaignDefinition::FloorsPerBiome</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00090">GetMaxUnlockedFloor()</a>, and <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>.</p>
 
 </div>
 </div>
@@ -282,7 +368,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00090">GetMaxUnlockedFloor()</a>, and <a class="el" href="_d_t_game_mode_tab_widget_8cpp_source.html#l00023">UDTGameModeTabWidget::GetPendingConfig()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00051">GetFloorsForSelectedBiome()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00135">ClampSelectedBiomeIndex()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00051">GetFloorsForSelectedBiome()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -306,7 +392,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00051">51</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_u_i_types_8h_source.html#l00176">FDTFloorEntryInfo::BiomeIndex</a>, <a class="el" href="_d_t_campaign_definition_8h_source.html#l00019">UDTCampaignDefinition::Biomes</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00184">FDTFloorEntryInfo::bIsCurrent</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00180">FDTFloorEntryInfo::bUnlocked</a>, <a class="el" href="_d_t_campaign_definition_8h_source.html#l00016">UDTCampaignDefinition::FloorsPerBiome</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00188">FDTFloorEntryInfo::FloorType</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00014">GetCampaignData()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00102">GetCurrentFloor()</a>, <a class="el" href="_d_t_biome_definition_8cpp_source.html#l00003">UDTBiomeDefinition::GetFloorDefinition()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00090">GetMaxUnlockedFloor()</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00168">FDTFloorEntryInfo::GlobalFloor</a>, and <a class="el" href="_d_t_u_i_types_8h_source.html#l00172">FDTFloorEntryInfo::LocalFloor</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_u_i_types_8h_source.html#l00176">FDTFloorEntryInfo::BiomeIndex</a>, <a class="el" href="_d_t_campaign_definition_8h_source.html#l00019">UDTCampaignDefinition::Biomes</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00184">FDTFloorEntryInfo::bIsCurrent</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00180">FDTFloorEntryInfo::bUnlocked</a>, <a class="el" href="_d_t_campaign_definition_8h_source.html#l00016">UDTCampaignDefinition::FloorsPerBiome</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00188">FDTFloorEntryInfo::FloorType</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00014">GetCampaignData()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00102">GetCurrentFloor()</a>, <a class="el" href="_d_t_biome_definition_8cpp_source.html#l00003">UDTBiomeDefinition::GetFloorDefinition()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00090">GetMaxUnlockedFloor()</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00168">FDTFloorEntryInfo::GlobalFloor</a>, <a class="el" href="_d_t_u_i_types_8h_source.html#l00172">FDTFloorEntryInfo::LocalFloor</a>, and <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00158">SelectedBiomeIndex</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00221">RebuildFloorEntries()</a>.</p>
 
 </div>
 </div>
@@ -330,9 +418,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00090">90</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00014">GetCampaignData()</a>, and <a class="el" href="_d_t_game_mode_tab_widget_8cpp_source.html#l00033">UDTGameModeTabWidget::GetHighestCompletedFloor()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00014">GetCampaignData()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00175">GetCampaignTotalFloorCount()</a>, and <a class="el" href="_d_t_game_mode_tab_widget_8cpp_source.html#l00033">UDTGameModeTabWidget::GetHighestCompletedFloor()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00019">GetBiomeInfos()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00102">GetCurrentFloor()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00051">GetFloorsForSelectedBiome()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00107">SelectFloor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00019">GetBiomeInfos()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00102">GetCurrentFloor()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00051">GetFloorsForSelectedBiome()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00107">SelectFloor()</a>.</p>
 
 </div>
 </div>
@@ -363,9 +451,110 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00058">58</a> of file <a class="el" href="_d_t_campaign_tab_widget_8h_source.html">DTCampaignTabWidget.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00058">GetSelectedBiomeIndex()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00058">GetSelectedBiomeIndex()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00158">SelectedBiomeIndex</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00058">GetSelectedBiomeIndex()</a>.</p>
+
+</div>
+</div>
+<a id="a6624e617f9333815c4a69b98aaf11936" name="a6624e617f9333815c4a69b98aaf11936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6624e617f9333815c4a69b98aaf11936">&#9670;&#160;</a></span>HandleBiomeEntrySelected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCampaignTabWidget::HandleBiomeEntrySelected </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_u_d_t_biome_entry_widget.html">UDTBiomeEntryWidget</a> *</td>          <td class="paramname"><span class="paramname"><em>Entry</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_f_d_t_biome_entry_info.html">FDTBiomeEntryInfo</a></td>          <td class="paramname"><span class="paramname"><em>BiomeInfo</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00292">292</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_u_i_types_8h_source.html#l00129">FDTBiomeEntryInfo::BiomeIndex</a>, <a class="el" href="#af57aa4f5818210eeef1440efdc3c5f9a">OnBiomeChanged()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00115">SetSelectedBiomeIndex()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>.</p>
+
+</div>
+</div>
+<a id="a5b989adacd6c72f94bdf4aedc895f3f2" name="a5b989adacd6c72f94bdf4aedc895f3f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b989adacd6c72f94bdf4aedc895f3f2">&#9670;&#160;</a></span>HandleFloorEntrySelected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCampaignTabWidget::HandleFloorEntrySelected </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_u_d_t_floor_entry_widget.html">UDTFloorEntryWidget</a> *</td>          <td class="paramname"><span class="paramname"><em>Entry</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_f_d_t_floor_entry_info.html">FDTFloorEntryInfo</a></td>          <td class="paramname"><span class="paramname"><em>FloorInfo</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00285">285</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_u_i_types_8h_source.html#l00168">FDTFloorEntryInfo::GlobalFloor</a>, <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00107">SelectFloor()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>.</p>
+
+</div>
+</div>
+<a id="a18b5af1102d50d5dcc493854ae58850e" name="a18b5af1102d50d5dcc493854ae58850e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b5af1102d50d5dcc493854ae58850e">&#9670;&#160;</a></span>HandleMortalModeChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCampaignTabWidget::HandleMortalModeChanged </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bIsChecked</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00277">277</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_game_mode_tab_widget_8h_source.html#l00032">UDTGameModeTabWidget::GetMapSetupWidget()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>.</p>
 
 </div>
 </div>
@@ -394,7 +583,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00156">156</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00101">CB_MortalMode</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00101">CB_MortalMode</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00135">ClampSelectedBiomeIndex()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -428,6 +617,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00169">169</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00135">ClampSelectedBiomeIndex()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="af57aa4f5818210eeef1440efdc3c5f9a" name="af57aa4f5818210eeef1440efdc3c5f9a"></a>
@@ -455,7 +646,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="#af57aa4f5818210eeef1440efdc3c5f9a">OnBiomeChanged()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#af57aa4f5818210eeef1440efdc3c5f9a">OnBiomeChanged()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00292">HandleBiomeEntrySelected()</a>, and <a class="el" href="#af57aa4f5818210eeef1440efdc3c5f9a">OnBiomeChanged()</a>.</p>
 
 </div>
 </div>
@@ -482,9 +673,108 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00135">ClampSelectedBiomeIndex()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00175">GetCampaignTotalFloorCount()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00292">HandleBiomeEntrySelected()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00285">HandleFloorEntrySelected()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00277">HandleMortalModeChanged()</a>, <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00249">RebuildBiomeEntries()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00221">RebuildFloorEntries()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00285">HandleFloorEntrySelected()</a>, and <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>.</p>
+
+</div>
+</div>
+<a id="a09468f10c13094492f1da1cf2be4e4a0" name="a09468f10c13094492f1da1cf2be4e4a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09468f10c13094492f1da1cf2be4e4a0">&#9670;&#160;</a></span>RebuildBiomeEntries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCampaignTabWidget::RebuildBiomeEntries </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rebuild the per-biome entries inside WB_BiomeContainer from GetBiomeInfos. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00249">249</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00125">BiomeEntryWidgetClass</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00019">GetBiomeInfos()</a>, <a class="el" href="_d_t_biome_entry_widget_8cpp_source.html#l00017">UDTBiomeEntryWidget::InitializeEntry()</a>, <a class="el" href="_d_t_biome_entry_widget_8h_source.html#l00026">UDTBiomeEntryWidget::OnSelected</a>, and <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00117">WB_BiomeContainer</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>.</p>
+
+</div>
+</div>
+<a id="a4cb23c7b36ea772842ffd8693d29eba5" name="a4cb23c7b36ea772842ffd8693d29eba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb23c7b36ea772842ffd8693d29eba5">&#9670;&#160;</a></span>RebuildFloorEntries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCampaignTabWidget::RebuildFloorEntries </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rebuild the per-floor entries inside WB_FloorContainer from GetFloorsForSelectedBiome. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00221">221</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00121">FloorEntryWidgetClass</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00051">GetFloorsForSelectedBiome()</a>, <a class="el" href="_d_t_floor_entry_widget_8cpp_source.html#l00017">UDTFloorEntryWidget::InitializeEntry()</a>, <a class="el" href="_d_t_floor_entry_widget_8h_source.html#l00025">UDTFloorEntryWidget::OnSelected</a>, and <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00109">WB_FloorContainer</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>.</p>
+
+</div>
+</div>
+<a id="a6eef59534bdc7d0e1c7590d3be5b0f4c" name="a6eef59534bdc7d0e1c7590d3be5b0f4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eef59534bdc7d0e1c7590d3be5b0f4c">&#9670;&#160;</a></span>Refresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTCampaignTabWidget::Refresh </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates all bound widgets from current pending config state. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">180</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00101">CB_MortalMode</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00019">GetBiomeInfos()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00102">GetCurrentFloor()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00090">GetMaxUnlockedFloor()</a>, <a class="el" href="_d_t_game_mode_tab_widget_8cpp_source.html#l00023">UDTGameModeTabWidget::GetPendingConfig()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00249">RebuildBiomeEntries()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00221">RebuildFloorEntries()</a>, <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00094">TXT_MaxFloor</a>, <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00087">TXT_SelectedFloor</a>, and <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00080">TXT_ZoneTitle</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00292">HandleBiomeEntrySelected()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00285">HandleFloorEntrySelected()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00156">NativeConstruct()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00169">NativeOnConfigChanged()</a>, <a class="el" href="#ae997bc749661891ea967b0e1b6325870">OnFloorChanged()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00115">SetSelectedBiomeIndex()</a>.</p>
 
 </div>
 </div>
@@ -510,6 +800,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_game_mode_tab_widget_8h_source.html#l00032">UDTGameModeTabWidget::GetMapSetupWidget()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00090">GetMaxUnlockedFloor()</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00285">HandleFloorEntrySelected()</a>.</p>
+
 </div>
 </div>
 <a id="a88a2b16e1b31c36a97a53d94f4c786c3" name="a88a2b16e1b31c36a97a53d94f4c786c3"></a>
@@ -532,7 +824,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00115">115</a> of file <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html">DTCampaignTabWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_campaign_definition_8h_source.html#l00019">UDTCampaignDefinition::Biomes</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00014">GetCampaignData()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_campaign_definition_8h_source.html#l00019">UDTCampaignDefinition::Biomes</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00014">GetCampaignData()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00158">SelectedBiomeIndex</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00292">HandleBiomeEntrySelected()</a>.</p>
 
 </div>
 </div>
@@ -561,6 +855,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00125">125</a> of file <a class="el" href="_d_t_campaign_tab_widget_8h_source.html">DTCampaignTabWidget.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00249">RebuildBiomeEntries()</a>.</p>
+
 </div>
 </div>
 <a id="a27f5994fc42153059c7951449e28c4ed" name="a27f5994fc42153059c7951449e28c4ed"></a>
@@ -588,7 +884,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00101">101</a> of file <a class="el" href="_d_t_campaign_tab_widget_8h_source.html">DTCampaignTabWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00156">NativeConstruct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00156">NativeConstruct()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -615,6 +911,37 @@ Protected Attributes</h2></td></tr>
 <p>Blueprint widget class instantiated once per floor inside WB_FloorContainer. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00121">121</a> of file <a class="el" href="_d_t_campaign_tab_widget_8h_source.html">DTCampaignTabWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00221">RebuildFloorEntries()</a>.</p>
+
+</div>
+</div>
+<a id="ab83dea4e6a42ee7464bf3df4e5cf0723" name="ab83dea4e6a42ee7464bf3df4e5cf0723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab83dea4e6a42ee7464bf3df4e5cf0723">&#9670;&#160;</a></span>SelectedBiomeIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 UDTCampaignTabWidget::SelectedBiomeIndex = INDEX_NONE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>0-based index of the biome shown in the middle column. </p>
+<p>-1 = unset (snap to current floor). </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00158">158</a> of file <a class="el" href="_d_t_campaign_tab_widget_8h_source.html">DTCampaignTabWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00135">ClampSelectedBiomeIndex()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00019">GetBiomeInfos()</a>, <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00051">GetFloorsForSelectedBiome()</a>, <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00058">GetSelectedBiomeIndex()</a>, and <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00115">SetSelectedBiomeIndex()</a>.</p>
 
 </div>
 </div>
@@ -643,6 +970,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00094">94</a> of file <a class="el" href="_d_t_campaign_tab_widget_8h_source.html">DTCampaignTabWidget.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="ae4d24085f69944c3456718e832fce788" name="ae4d24085f69944c3456718e832fce788"></a>
@@ -669,6 +998,8 @@ Protected Attributes</h2></td></tr>
 <p>"7"). Name the widget "TXT_SelectedFloor" in the UMG editor to auto-bind. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00087">87</a> of file <a class="el" href="_d_t_campaign_tab_widget_8h_source.html">DTCampaignTabWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -697,6 +1028,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_campaign_tab_widget_8h_source.html">DTCampaignTabWidget.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00180">Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="a45cbb9c919422a599ffb8393b9e9dfb3" name="a45cbb9c919422a599ffb8393b9e9dfb3"></a>
@@ -724,6 +1057,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00117">117</a> of file <a class="el" href="_d_t_campaign_tab_widget_8h_source.html">DTCampaignTabWidget.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00249">RebuildBiomeEntries()</a>.</p>
+
 </div>
 </div>
 <a id="a6adb39a49553627734cc96e55d96ec60" name="a6adb39a49553627734cc96e55d96ec60"></a>
@@ -750,6 +1085,8 @@ Protected Attributes</h2></td></tr>
 <p>Typically a UHorizontalBox or UUniformGridPanel. Name the widget "WB_FloorContainer" in the UMG editor to auto-bind. </p>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_campaign_tab_widget_8h_source.html#l00109">109</a> of file <a class="el" href="_d_t_campaign_tab_widget_8h_source.html">DTCampaignTabWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_campaign_tab_widget_8cpp_source.html#l00221">RebuildFloorEntries()</a>.</p>
 
 </div>
 </div>

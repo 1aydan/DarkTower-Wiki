@@ -13,6 +13,7 @@ var class_u_d_t_cheat_manager =
     [ "CompleteDungeon", "class_u_d_t_cheat_manager.html#ab6bed0b16a078e26e73898a95b9c2aa0", null ],
     [ "DamageSelf", "class_u_d_t_cheat_manager.html#a155961fb96725060d641eea2b9ad1c0a", null ],
     [ "DemiGod", "class_u_d_t_cheat_manager.html#a9031ce87ae48f1dc73ede2606dd66bba", null ],
+    [ "GetDTPlayerState", "class_u_d_t_cheat_manager.html#a5c3c121b126ad286654b0124e2d32931", null ],
     [ "GetPlayerCharacter", "class_u_d_t_cheat_manager.html#a07ae3388adc5757b8f12d433cdecd53c", null ],
     [ "God", "class_u_d_t_cheat_manager.html#a75ee1ba70b7b1e4ddc033a7cba16e456", null ],
     [ "KillAllEnemies", "class_u_d_t_cheat_manager.html#adb2fe972aafa644c42a0b6e1385d493d", null ],
@@ -29,6 +30,7 @@ var class_u_d_t_cheat_manager =
     [ "QuestAccept", "class_u_d_t_cheat_manager.html#a7c92de1123c99490ea3124f992294323", null ],
     [ "QuestComplete", "class_u_d_t_cheat_manager.html#a20813a831ef0fbca2ad19108cb354050", null ],
     [ "QuestFail", "class_u_d_t_cheat_manager.html#aebc80d461dab602f2995d1f0e9890e15", null ],
+    [ "ResolveTagFromString", "class_u_d_t_cheat_manager.html#ae36578560c49b64e7f37c5049f7e5d78", null ],
     [ "RespecAllTrees", "class_u_d_t_cheat_manager.html#a62c5cda7d0b9efbe4fad3939749ae453", null ],
     [ "RespecTree", "class_u_d_t_cheat_manager.html#a092ec8fb8a59274aba2c398f449365d0", null ],
     [ "SaveGame", "class_u_d_t_cheat_manager.html#a99a07e47c97ac5e4911a7a40e89dbf34", null ],
@@ -39,6 +41,7 @@ var class_u_d_t_cheat_manager =
     [ "SpawnLootByID", "class_u_d_t_cheat_manager.html#a654298c5ae3dfb83541fe9ad7043dc50", null ],
     [ "SpawnLootByName", "class_u_d_t_cheat_manager.html#aa382d4afa403367baf41459ac84263b2", null ],
     [ "SpawnLootByPhrase", "class_u_d_t_cheat_manager.html#acd0ae7ba8c3088f3be8e4c3751a82e22", null ],
+    [ "SpawnLootInternal", "class_u_d_t_cheat_manager.html#a616848f0b87ae16d2f22f5228a6a77d8", null ],
     [ "SpawnLootWithAffix", "class_u_d_t_cheat_manager.html#a145d33bfa14cccb79eb5282936c4cb08", null ],
     [ "TestLootGen", "class_u_d_t_cheat_manager.html#a86090bfa21655fc89d0f1836ef4c4791", null ]
 ];

@@ -192,6 +192,15 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a7a66ed3ef0be4e9bccb61190bfd174bd" id="r_a7a66ed3ef0be4e9bccb61190bfd174bd"><td class="memItemLeft">TObjectPtr&lt; UAISenseConfig_Team &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7a66ed3ef0be4e9bccb61190bfd174bd">TeamSenseConfig</a></td></tr>
 <tr class="memitem:ae9f9a37239a156f85f21effc9b2dfa8d" id="r_ae9f9a37239a156f85f21effc9b2dfa8d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ae9f9a37239a156f85f21effc9b2dfa8d">AIUpdateInterval</a> = 0.25f</td></tr>
 <tr class="memdesc:ae9f9a37239a156f85f21effc9b2dfa8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default AI logic update interval in seconds.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7cd22cc107f9d618d4102e265719aa1b" id="r_a7cd22cc107f9d618d4102e265719aa1b"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_a_d_t_a_i_character.html">ADTAICharacter</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7cd22cc107f9d618d4102e265719aa1b">AICharacter</a></td></tr>
+<tr class="memitem:ae9967ceb111e09aff0d2f37eaf5f3c92" id="r_ae9967ceb111e09aff0d2f37eaf5f3c92"><td class="memItemLeft">TArray&lt; AActor * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae9967ceb111e09aff0d2f37eaf5f3c92">PerceivedActors</a></td></tr>
+<tr class="memitem:a85e06e6c1c5527b73646970ff0ec8980" id="r_a85e06e6c1c5527b73646970ff0ec8980"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a85e06e6c1c5527b73646970ff0ec8980">LastAIUpdateTimeStamp</a> = 0.25f</td></tr>
+<tr class="memitem:a8d7d75e607acedd255d2becec1572d62" id="r_a8d7d75e607acedd255d2becec1572d62"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a8d7d75e607acedd255d2becec1572d62">LastTargetSelectionUpdateTime</a> = 0.0f</td></tr>
+<tr class="memitem:ae17fc3490080835e6e3af5e66d097d1f" id="r_ae17fc3490080835e6e3af5e66d097d1f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ae17fc3490080835e6e3af5e66d097d1f">LastTargetBroadcastTime</a> = -UE_BIG_NUMBER</td></tr>
+<tr class="memdesc:ae17fc3490080835e6e3af5e66d097d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">World time of the last ally target broadcast, used to honour MinBroadcastInterval.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -304,7 +313,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00257">257</a> of file <a class="el" href="_d_t_a_i_controller_8cpp_source.html">DTAIController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_types_8h_source.html#l00074">FDTAITargetBroadcastConfig::bBroadcastTargetToAllies</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00078">FDTAITargetBroadcastConfig::BroadcastRadius</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00082">FDTAITargetBroadcastConfig::BroadcastStrength</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00086">FDTAITargetBroadcastConfig::MinBroadcastInterval</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00024">Target</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00074">FDTAITargetBroadcastConfig::bBroadcastTargetToAllies</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00078">FDTAITargetBroadcastConfig::BroadcastRadius</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00082">FDTAITargetBroadcastConfig::BroadcastStrength</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00153">LastTargetBroadcastTime</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00086">FDTAITargetBroadcastConfig::MinBroadcastInterval</a>, and <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00024">Target</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00434">HandleTargetChanged()</a>.</p>
 
@@ -364,7 +373,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8h_source.html#l00045">45</a> of file <a class="el" href="_d_t_a_i_controller_8h_source.html">DTAIController.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00045">GetAICharacter()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00045">GetAICharacter()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8h_source.html#l00045">GetAICharacter()</a>.</p>
 
@@ -426,6 +435,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00480">480</a> of file <a class="el" href="_d_t_a_i_controller_8cpp_source.html">DTAIController.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>.</p>
+
 </div>
 </div>
 <a id="a4d5da5f92dc4788106d92cbc510db6d3" name="a4d5da5f92dc4788106d92cbc510db6d3"></a>
@@ -486,7 +497,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00054">GetTargetingComponent()</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00092">TargetingComponent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00351">ADTAICharacter::GetTargetingComponent()</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00054">GetTargetingComponent()</a>, <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00057">FDTTargetingEvaluator::Tick()</a>, and <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00010">FDTTargetingEvaluator::TreeStart()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_threat_component_8cpp_source.html#l00199">UDTThreatComponent::DrawDebugThreat()</a>, <a class="el" href="_d_t_a_i_character_8cpp_source.html#l00351">ADTAICharacter::GetTargetingComponent()</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00054">GetTargetingComponent()</a>, <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00057">FDTTargetingEvaluator::Tick()</a>, and <a class="el" href="_d_t_targeting_evaluator_8cpp_source.html#l00010">FDTTargetingEvaluator::TreeStart()</a>.</p>
 
 </div>
 </div>
@@ -557,7 +568,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00174">174</a> of file <a class="el" href="_d_t_a_i_controller_8cpp_source.html">DTAIController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_types_8h_source.html#l00103">FDTAIThreatConfig::bEnableThreat</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00107">FDTAIThreatConfig::DamageThreatMultiplier</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00103">FDTAIThreatConfig::bEnableThreat</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00107">FDTAIThreatConfig::DamageThreatMultiplier</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00110">OnPossess()</a>, and <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00153">OnUnPossess()</a>.</p>
 
@@ -627,7 +638,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00291">291</a> of file <a class="el" href="_d_t_a_i_controller_8cpp_source.html">DTAIController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_types_8h_source.html#l00103">FDTAIThreatConfig::bEnableThreat</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00138">UDTTeamSubsystem::GetTeamAttitude()</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00111">FDTAIThreatConfig::SightAggroThreat</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00103">FDTAIThreatConfig::bEnableThreat</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00138">UDTTeamSubsystem::GetTeamAttitude()</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00111">FDTAIThreatConfig::SightAggroThreat</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00365">OnTargetPerceptionUpdated()</a>.</p>
 
@@ -693,7 +704,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00329">329</a> of file <a class="el" href="_d_t_a_i_controller_8cpp_source.html">DTAIController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_types_8h_source.html#l00090">FDTAITargetBroadcastConfig::bAcceptAllyTargetBroadcasts</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00092">TargetingComponent</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>, <a class="el" href="_d_t_a_i_types_8h_source.html#l00090">FDTAITargetBroadcastConfig::bAcceptAllyTargetBroadcasts</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00147">PerceivedActors</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00092">TargetingComponent</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00365">OnTargetPerceptionUpdated()</a>.</p>
 
@@ -724,7 +735,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00110">110</a> of file <a class="el" href="_d_t_a_i_controller_8cpp_source.html">DTAIController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00217">ApplyPerceptionConfig()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00174">HandleDamageTaken()</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00133">UDTAbilityCoreComponent::OnDamage</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00089">StateTreeAIComponent</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00217">ApplyPerceptionConfig()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00174">HandleDamageTaken()</a>, <a class="el" href="_d_t_ability_core_component_8h_source.html#l00133">UDTAbilityCoreComponent::OnDamage</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00089">StateTreeAIComponent</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>.</p>
 
 </div>
 </div>
@@ -782,6 +793,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00449">449</a> of file <a class="el" href="_d_t_a_i_controller_8cpp_source.html">DTAIController.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00147">PerceivedActors</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00048">BeginPlay()</a>.</p>
 
 </div>
@@ -815,7 +828,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00365">365</a> of file <a class="el" href="_d_t_a_i_controller_8cpp_source.html">DTAIController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00311">HandleDamageUpdate()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00291">HandleSightUpdate()</a>, and <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00329">HandleTeamUpdate()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00311">HandleDamageUpdate()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00291">HandleSightUpdate()</a>, and <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00329">HandleTeamUpdate()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00048">BeginPlay()</a>.</p>
 
@@ -875,6 +888,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00466">466</a> of file <a class="el" href="_d_t_a_i_controller_8cpp_source.html">DTAIController.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>.</p>
+
 </div>
 </div>
 <a id="aaa2be8f590d9b627f26556b3765a37ab" name="aaa2be8f590d9b627f26556b3765a37ab"></a>
@@ -902,7 +917,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00082">82</a> of file <a class="el" href="_d_t_a_i_controller_8cpp_source.html">DTAIController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00108">AIUpdateInterval</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00082">Tick()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00190">UpdateBehaviorFromSignificance()</a>, and <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00403">UpdateTargetSelection()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00108">AIUpdateInterval</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00149">LastAIUpdateTimeStamp</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00082">Tick()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00190">UpdateBehaviorFromSignificance()</a>, and <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00403">UpdateTargetSelection()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00082">Tick()</a>.</p>
 
@@ -956,13 +971,39 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00403">403</a> of file <a class="el" href="_d_t_a_i_controller_8cpp_source.html">DTAIController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00092">TargetingComponent</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">AICharacter</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00147">PerceivedActors</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00092">TargetingComponent</a>, and <a class="el" href="_d_t_a_i_controller_8h_source.html#l00095">ThreatComponent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00311">HandleDamageUpdate()</a>, and <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00082">Tick()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a7cd22cc107f9d618d4102e265719aa1b" name="a7cd22cc107f9d618d4102e265719aa1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd22cc107f9d618d4102e265719aa1b">&#9670;&#160;</a></span>AICharacter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_a_d_t_a_i_character.html">ADTAICharacter</a>&gt; ADTAIController::AICharacter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8h_source.html#l00144">144</a> of file <a class="el" href="_d_t_a_i_controller_8h_source.html">DTAIController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00257">BroadcastTargetToAllies()</a>, <a class="el" href="_d_t_a_i_controller_8h_source.html#l00045">GetAICharacter()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00480">GetGenericTeamId()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00174">HandleDamageTaken()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00291">HandleSightUpdate()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00329">HandleTeamUpdate()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00110">OnPossess()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00449">OnTargetPerceptionInfoUpdated()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00365">OnTargetPerceptionUpdated()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00466">SetGenericTeamId()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00082">Tick()</a>, and <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00403">UpdateTargetSelection()</a>.</p>
+
+</div>
+</div>
 <a id="a461b51c50d69d921fba7dcfda0a1da54" name="a461b51c50d69d921fba7dcfda0a1da54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a461b51c50d69d921fba7dcfda0a1da54">&#9670;&#160;</a></span>AIDisableThreshold</h2>
 
@@ -1053,6 +1094,84 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a85e06e6c1c5527b73646970ff0ec8980" name="a85e06e6c1c5527b73646970ff0ec8980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e06e6c1c5527b73646970ff0ec8980">&#9670;&#160;</a></span>LastAIUpdateTimeStamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADTAIController::LastAIUpdateTimeStamp = 0.25f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8h_source.html#l00149">149</a> of file <a class="el" href="_d_t_a_i_controller_8h_source.html">DTAIController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00082">Tick()</a>.</p>
+
+</div>
+</div>
+<a id="ae17fc3490080835e6e3af5e66d097d1f" name="ae17fc3490080835e6e3af5e66d097d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae17fc3490080835e6e3af5e66d097d1f">&#9670;&#160;</a></span>LastTargetBroadcastTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADTAIController::LastTargetBroadcastTime = -UE_BIG_NUMBER</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>World time of the last ally target broadcast, used to honour MinBroadcastInterval. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8h_source.html#l00153">153</a> of file <a class="el" href="_d_t_a_i_controller_8h_source.html">DTAIController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00257">BroadcastTargetToAllies()</a>.</p>
+
+</div>
+</div>
+<a id="a8d7d75e607acedd255d2becec1572d62" name="a8d7d75e607acedd255d2becec1572d62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7d75e607acedd255d2becec1572d62">&#9670;&#160;</a></span>LastTargetSelectionUpdateTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADTAIController::LastTargetSelectionUpdateTime = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8h_source.html#l00150">150</a> of file <a class="el" href="_d_t_a_i_controller_8h_source.html">DTAIController.h</a>.</p>
+
+</div>
+</div>
 <a id="af9b182fe9a879f775d01b942ac6801ed" name="af9b182fe9a879f775d01b942ac6801ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9b182fe9a879f775d01b942ac6801ed">&#9670;&#160;</a></span>OnTargetUpdate</h2>
 
@@ -1070,6 +1189,32 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8h_source.html#l00042">42</a> of file <a class="el" href="_d_t_a_i_controller_8h_source.html">DTAIController.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00434">HandleTargetChanged()</a>.</p>
+
+</div>
+</div>
+<a id="ae9967ceb111e09aff0d2f37eaf5f3c92" name="ae9967ceb111e09aff0d2f37eaf5f3c92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9967ceb111e09aff0d2f37eaf5f3c92">&#9670;&#160;</a></span>PerceivedActors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;AActor*&gt; ADTAIController::PerceivedActors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_a_i_controller_8h_source.html#l00147">147</a> of file <a class="el" href="_d_t_a_i_controller_8h_source.html">DTAIController.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00329">HandleTeamUpdate()</a>, <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00449">OnTargetPerceptionInfoUpdated()</a>, and <a class="el" href="_d_t_a_i_controller_8cpp_source.html#l00403">UpdateTargetSelection()</a>.</p>
 
 </div>
 </div>

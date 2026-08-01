@@ -154,6 +154,10 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae7d606ca0506dca575d22453dd378622" id="r_ae7d606ca0506dca575d22453dd378622"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae7d606ca0506dca575d22453dd378622">AddListenerHandle</a> (FGameplayMessageListenerHandle &amp;&amp;Handle)</td></tr>
 <tr class="memitem:a143aaa2cf065c6b2041e5ab86de291b1" id="r_a143aaa2cf065c6b2041e5ab86de291b1"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a143aaa2cf065c6b2041e5ab86de291b1">GetServerTime</a> () const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1fd6ad516572b90ec9eb1d9e86ee7d6e" id="r_a1fd6ad516572b90ec9eb1d9e86ee7d6e"><td class="memItemLeft">TArray&lt; FGameplayMessageListenerHandle &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1fd6ad516572b90ec9eb1d9e86ee7d6e">ListenerHandles</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_u_gameplay_message_processor.html" title="UGameplayMessageProcessor.">UGameplayMessageProcessor</a>. </p>
@@ -186,6 +190,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_gameplay_message_processor_8cpp_source.html#l00041">41</a> of file <a class="el" href="_gameplay_message_processor_8cpp_source.html">GameplayMessageProcessor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_gameplay_message_processor_8h_source.html#l00042">ListenerHandles</a>.</p>
 
 </div>
 </div>
@@ -243,7 +249,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_gameplay_message_processor_8cpp_source.html#l00017">17</a> of file <a class="el" href="_gameplay_message_processor_8cpp_source.html">GameplayMessageProcessor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_gameplay_message_processor_8cpp_source.html#l00037">StopListening()</a>.</p>
+<p class="reference">References <a class="el" href="_gameplay_message_processor_8h_source.html#l00042">ListenerHandles</a>, and <a class="el" href="_gameplay_message_processor_8cpp_source.html#l00037">StopListening()</a>.</p>
 
 </div>
 </div>
@@ -329,6 +335,33 @@ Protected Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_gameplay_message_processor_8cpp_source.html#l00037">37</a> of file <a class="el" href="_gameplay_message_processor_8cpp_source.html">GameplayMessageProcessor.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_gameplay_message_processor_8cpp_source.html#l00017">EndPlay()</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a1fd6ad516572b90ec9eb1d9e86ee7d6e" name="a1fd6ad516572b90ec9eb1d9e86ee7d6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd6ad516572b90ec9eb1d9e86ee7d6e">&#9670;&#160;</a></span>ListenerHandles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;FGameplayMessageListenerHandle&gt; UGameplayMessageProcessor::ListenerHandles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_gameplay_message_processor_8h_source.html#l00042">42</a> of file <a class="el" href="_gameplay_message_processor_8h_source.html">GameplayMessageProcessor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_gameplay_message_processor_8cpp_source.html#l00041">AddListenerHandle()</a>, and <a class="el" href="_gameplay_message_processor_8cpp_source.html#l00017">EndPlay()</a>.</p>
 
 </div>
 </div>

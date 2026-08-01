@@ -224,14 +224,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    FTargetingRequestHandle Handle = CreateTargetingHandle(TargetingPreset, TArray&lt;AActor*&gt;());</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    FTargetingRequestHandle Handle = <a class="code hl_function" href="class_u_d_t_targeting_component.html#a923aee32c956928ce575aeeffa797291">CreateTargetingHandle</a>(TargetingPreset, TArray&lt;AActor*&gt;());</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> (!Handle.IsValid())</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_variable" href="class_u_d_t_targeting_component.html#a771534c79401d55628e09fc46937d611">OnTargetingComplete</a>.Broadcast(TArray&lt;AActor*&gt;(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    ExecuteTargetingHandleImmediate(Handle, bAutoSetFirstTarget);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_function" href="class_u_d_t_targeting_component.html#a15ae7e3aa590299b9861823dca36188a">ExecuteTargetingHandleImmediate</a>(Handle, bAutoSetFirstTarget);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
 </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
@@ -252,14 +252,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    FTargetingRequestHandle Handle = CreateTargetingHandle(TargetingPreset, InitialTargets);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    FTargetingRequestHandle Handle = <a class="code hl_function" href="class_u_d_t_targeting_component.html#a923aee32c956928ce575aeeffa797291">CreateTargetingHandle</a>(TargetingPreset, InitialTargets);</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">if</span> (!Handle.IsValid())</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    {</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_variable" href="class_u_d_t_targeting_component.html#a771534c79401d55628e09fc46937d611">OnTargetingComplete</a>.Broadcast(TArray&lt;AActor*&gt;(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    ExecuteTargetingHandleImmediate(Handle, bAutoSetFirstTarget);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_function" href="class_u_d_t_targeting_component.html#a15ae7e3aa590299b9861823dca36188a">ExecuteTargetingHandleImmediate</a>(Handle, bAutoSetFirstTarget);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
 </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
@@ -274,13 +274,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">return</span> InvalidHandle;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    FTargetingRequestHandle Handle = CreateTargetingHandle(TargetingPreset, TArray&lt;AActor*&gt;());</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    FTargetingRequestHandle Handle = <a class="code hl_function" href="class_u_d_t_targeting_component.html#a923aee32c956928ce575aeeffa797291">CreateTargetingHandle</a>(TargetingPreset, TArray&lt;AActor*&gt;());</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">if</span> (!Handle.IsValid())</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    {</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">return</span> InvalidHandle;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    ExecuteTargetingHandleAsync(Handle, bAutoSetFirstTarget);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <a class="code hl_function" href="class_u_d_t_targeting_component.html#a7890b404d5cde6c792ca90e23818ebc8">ExecuteTargetingHandleAsync</a>(Handle, bAutoSetFirstTarget);</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">return</span> Handle;</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>}</div>
 </div>
@@ -302,13 +302,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">return</span> InvalidHandle;</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    FTargetingRequestHandle Handle = CreateTargetingHandle(TargetingPreset, InitialTargets);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    FTargetingRequestHandle Handle = <a class="code hl_function" href="class_u_d_t_targeting_component.html#a923aee32c956928ce575aeeffa797291">CreateTargetingHandle</a>(TargetingPreset, InitialTargets);</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordflow">if</span> (!Handle.IsValid())</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    {</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">return</span> InvalidHandle;</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    }</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    ExecuteTargetingHandleAsync(Handle, bAutoSetFirstTarget);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_function" href="class_u_d_t_targeting_component.html#a7890b404d5cde6c792ca90e23818ebc8">ExecuteTargetingHandleAsync</a>(Handle, bAutoSetFirstTarget);</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordflow">return</span> Handle;</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>}</div>
 </div>
@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="foldopen" id="foldopen00186" data-start="{" data-end="}">
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#ae397b3c1e031a53040a0685ceb1de505">  186</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_targeting_component.html#ae397b3c1e031a53040a0685ceb1de505">UDTTargetingComponent::ExecutePresetImmediate</a>(UTargetingPreset* TargetingPreset, <span class="keyword">const</span> FTargetingRequestDelegate&amp; OnComplete)</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>{</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <a class="code hl_function" href="class_u_d_t_targeting_component.html#a423602d6730ab88df6165d27bd5188cb">ExecutePresetImmediateWithContext</a>(TargetingPreset, CreateSourceContext(), OnComplete);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <a class="code hl_function" href="class_u_d_t_targeting_component.html#a423602d6730ab88df6165d27bd5188cb">ExecutePresetImmediateWithContext</a>(TargetingPreset, <a class="code hl_function" href="class_u_d_t_targeting_component.html#ab8f00b4e6010ae15efdd9d33f628b2b1">CreateSourceContext</a>(), OnComplete);</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>}</div>
 </div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="foldopen" id="foldopen00247" data-start="{" data-end="}">
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#aa21a9390913b7c3b6389c34ff91b97bb">  247</a></span>FTargetingSourceContext <a class="code hl_function" href="class_u_d_t_targeting_component.html#aa21a9390913b7c3b6389c34ff91b97bb">UDTTargetingComponent::ResolveSourceContext</a>(<a class="code hl_enumeration" href="_d_t_targeting_types_8h.html#ace8325a03dcb17b5c149d38ffee1fd6f">EDTTargetSourceMode</a> Mode)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    FTargetingSourceContext Context = CreateSourceContext();</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    FTargetingSourceContext Context = <a class="code hl_function" href="class_u_d_t_targeting_component.html#ab8f00b4e6010ae15efdd9d33f628b2b1">CreateSourceContext</a>();</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    AActor* SourceActor = Context.SourceActor;</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keywordflow">if</span> (!SourceActor)</div>
@@ -429,7 +429,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    {</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        FVector <a class="code hl_enumvalue" href="_d_t_targeting_types_8h.html#ace8325a03dcb17b5c149d38ffee1fd6fa95b5f600be2d6eb4ef8717f680b4491b">AimLocation</a>;</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        FRotator AimRotation;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="keywordflow">if</span> (ResolveAimPoint(SourceActor, <a class="code hl_enumvalue" href="_d_t_targeting_types_8h.html#ace8325a03dcb17b5c149d38ffee1fd6fa95b5f600be2d6eb4ef8717f680b4491b">AimLocation</a>, AimRotation))</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="class_u_d_t_targeting_component.html#a28fa8d5fad738972d22a7cd4226e946c">ResolveAimPoint</a>(SourceActor, <a class="code hl_enumvalue" href="_d_t_targeting_types_8h.html#ace8325a03dcb17b5c149d38ffee1fd6fa95b5f600be2d6eb4ef8717f680b4491b">AimLocation</a>, AimRotation))</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        {</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            Context.SourceLocation = <a class="code hl_enumvalue" href="_d_t_targeting_types_8h.html#ace8325a03dcb17b5c149d38ffee1fd6fa95b5f600be2d6eb4ef8717f680b4491b">AimLocation</a>;</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        }</div>
@@ -451,7 +451,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>}</div>
 </div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="keywordtype">bool</span> UDTTargetingComponent::ResolveAimPoint(AActor* SourceActor, FVector&amp; OutLocation, FRotator&amp; OutRotation)<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00291" data-start="{" data-end="}">
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#a28fa8d5fad738972d22a7cd4226e946c">  291</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_u_d_t_targeting_component.html#a28fa8d5fad738972d22a7cd4226e946c">UDTTargetingComponent::ResolveAimPoint</a>(AActor* SourceActor, FVector&amp; OutLocation, FRotator&amp; OutRotation)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keywordflow">if</span> (!SourceActor)</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    {</div>
@@ -512,6 +513,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>}</div>
+</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
 <div class="foldopen" id="foldopen00353" data-start="{" data-end="}">
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#a681c0fcb0a698885993ff46c87c9c998">  353</a></span>UTargetingSubsystem* <a class="code hl_function" href="class_u_d_t_targeting_component.html#a681c0fcb0a698885993ff46c87c9c998">UDTTargetingComponent::GetTargetingSubsystem</a>()<span class="keyword"> const</span></div>
@@ -530,7 +532,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>}</div>
 </div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>FTargetingRequestHandle UDTTargetingComponent::CreateTargetingHandle(UTargetingPreset* TargetingPreset, <span class="keyword">const</span> TArray&lt;AActor*&gt;&amp; InitialTargets)<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00368" data-start="{" data-end="}">
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#a923aee32c956928ce575aeeffa797291">  368</a></span>FTargetingRequestHandle <a class="code hl_function" href="class_u_d_t_targeting_component.html#a923aee32c956928ce575aeeffa797291">UDTTargetingComponent::CreateTargetingHandle</a>(UTargetingPreset* TargetingPreset, <span class="keyword">const</span> TArray&lt;AActor*&gt;&amp; InitialTargets)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    FTargetingRequestHandle InvalidHandle;</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    </div>
@@ -550,7 +553,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    }</div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <span class="comment">// Create the source context</span></div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    FTargetingSourceContext SourceContext = CreateSourceContext();</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    FTargetingSourceContext SourceContext = <a class="code hl_function" href="class_u_d_t_targeting_component.html#ab8f00b4e6010ae15efdd9d33f628b2b1">CreateSourceContext</a>();</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    <span class="comment">// Create the targeting handle</span></div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    FTargetingRequestHandle Handle = UTargetingSubsystem::MakeTargetRequestHandle(PresetToUse, SourceContext);</div>
@@ -563,13 +566,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    <span class="comment">// Setup initial targets if provided</span></div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    <span class="keywordflow">if</span> (InitialTargets.Num() &gt; 0)</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    {</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>        SetupInitialTargetsForRequest(Handle, InitialTargets);</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>        <a class="code hl_function" href="class_u_d_t_targeting_component.html#ae1d2704acf47b5d1da36dcd95692b9ba">SetupInitialTargetsForRequest</a>(Handle, InitialTargets);</div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    }</div>
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    <span class="keywordflow">return</span> Handle;</div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>}</div>
+</div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span><span class="keywordtype">void</span> UDTTargetingComponent::ExecuteTargetingHandleImmediate(FTargetingRequestHandle Handle, <span class="keywordtype">bool</span> bAutoSetFirstTarget)</div>
+<div class="foldopen" id="foldopen00407" data-start="{" data-end="}">
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#a15ae7e3aa590299b9861823dca36188a">  407</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_targeting_component.html#a15ae7e3aa590299b9861823dca36188a">UDTTargetingComponent::ExecuteTargetingHandleImmediate</a>(FTargetingRequestHandle Handle, <span class="keywordtype">bool</span> bAutoSetFirstTarget)</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>{</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    <span class="keywordflow">if</span> (!Handle.IsValid())</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    {</div>
@@ -585,13 +590,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>    FTargetingRequestDelegate CompletionDelegate;</div>
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>    CompletionDelegate.BindLambda([<span class="keyword">this</span>, bAutoSetFirstTarget](FTargetingRequestHandle CompletedHandle)</div>
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>    {</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        HandleTargetingRequestComplete(CompletedHandle, bAutoSetFirstTarget);</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        <a class="code hl_function" href="class_u_d_t_targeting_component.html#a2a4ca97454b8d4237bbbb08cd4989fa3">HandleTargetingRequestComplete</a>(CompletedHandle, bAutoSetFirstTarget);</div>
 <div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>    });</div>
 <div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>    </div>
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>    Subsystem-&gt;ExecuteTargetingRequestWithHandle(Handle, CompletionDelegate);</div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>}</div>
+</div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span> </div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span><span class="keywordtype">void</span> UDTTargetingComponent::ExecuteTargetingHandleAsync(FTargetingRequestHandle Handle, <span class="keywordtype">bool</span> bAutoSetFirstTarget)</div>
+<div class="foldopen" id="foldopen00429" data-start="{" data-end="}">
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#a7890b404d5cde6c792ca90e23818ebc8">  429</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_targeting_component.html#a7890b404d5cde6c792ca90e23818ebc8">UDTTargetingComponent::ExecuteTargetingHandleAsync</a>(FTargetingRequestHandle Handle, <span class="keywordtype">bool</span> bAutoSetFirstTarget)</div>
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>{</div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>    <span class="keywordflow">if</span> (!Handle.IsValid())</div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    {</div>
@@ -611,15 +618,17 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>    FTargetingRequestDelegate CompletionDelegate;</div>
 <div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>    CompletionDelegate.BindLambda([<span class="keyword">this</span>, bAutoSetFirstTarget](FTargetingRequestHandle CompletedHandle)</div>
 <div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>    {</div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>        HandleTargetingRequestComplete(CompletedHandle, bAutoSetFirstTarget);</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>        <a class="code hl_function" href="class_u_d_t_targeting_component.html#a2a4ca97454b8d4237bbbb08cd4989fa3">HandleTargetingRequestComplete</a>(CompletedHandle, bAutoSetFirstTarget);</div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>        <a class="code hl_variable" href="class_u_d_t_targeting_component.html#aa5d0f75f077d34e870a980c68bcb3208">CurrentAsyncHandle</a> = FTargetingRequestHandle();</div>
 <div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>    });</div>
 <div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>    </div>
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>    Subsystem-&gt;StartAsyncTargetingRequestWithHandle(Handle, CompletionDelegate);</div>
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>    <a class="code hl_variable" href="class_u_d_t_targeting_component.html#aa5d0f75f077d34e870a980c68bcb3208">CurrentAsyncHandle</a> = Handle;</div>
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>}</div>
+</div>
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span> </div>
-<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>FTargetingSourceContext UDTTargetingComponent::CreateSourceContext()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00457" data-start="{" data-end="}">
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#ab8f00b4e6010ae15efdd9d33f628b2b1">  457</a></span>FTargetingSourceContext <a class="code hl_function" href="class_u_d_t_targeting_component.html#ab8f00b4e6010ae15efdd9d33f628b2b1">UDTTargetingComponent::CreateSourceContext</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>    FTargetingSourceContext SourceContext;</div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>    AActor* Owner = GetOwner();</div>
@@ -646,8 +655,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span>    </div>
 <div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span>    <span class="keywordflow">return</span> SourceContext;</div>
 <div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span>}</div>
+</div>
 <div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span> </div>
-<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span><span class="keywordtype">void</span> UDTTargetingComponent::SetupInitialTargetsForRequest(FTargetingRequestHandle RequestHandle, <span class="keyword">const</span> TArray&lt;AActor*&gt;&amp; InitialTargets)<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00485" data-start="{" data-end="}">
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#ae1d2704acf47b5d1da36dcd95692b9ba">  485</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_targeting_component.html#ae1d2704acf47b5d1da36dcd95692b9ba">UDTTargetingComponent::SetupInitialTargetsForRequest</a>(FTargetingRequestHandle RequestHandle, <span class="keyword">const</span> TArray&lt;AActor*&gt;&amp; InitialTargets)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>    <span class="keywordflow">if</span> (!RequestHandle.IsValid() || InitialTargets.Num() == 0)</div>
 <div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>    {</div>
@@ -676,8 +687,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>        }</div>
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    }</div>
 <div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>}</div>
+</div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span> </div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span><span class="keywordtype">void</span> UDTTargetingComponent::HandleTargetingRequestComplete(FTargetingRequestHandle TargetingHandle, <span class="keywordtype">bool</span> bAutoSetFirstTarget)</div>
+<div class="foldopen" id="foldopen00515" data-start="{" data-end="}">
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#a2a4ca97454b8d4237bbbb08cd4989fa3">  515</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_targeting_component.html#a2a4ca97454b8d4237bbbb08cd4989fa3">UDTTargetingComponent::HandleTargetingRequestComplete</a>(FTargetingRequestHandle TargetingHandle, <span class="keywordtype">bool</span> bAutoSetFirstTarget)</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>{</div>
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>    UTargetingSubsystem* Subsystem = <a class="code hl_function" href="class_u_d_t_targeting_component.html#a681c0fcb0a698885993ff46c87c9c998">GetTargetingSubsystem</a>();</div>
 <div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>    <span class="keywordflow">if</span> (!Subsystem)</div>
@@ -705,6 +718,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>    </div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>    <a class="code hl_variable" href="class_u_d_t_targeting_component.html#a771534c79401d55628e09fc46937d611">OnTargetingComplete</a>.Broadcast(FoundTargets, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>}</div>
+</div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span> </div>
 <div class="foldopen" id="foldopen00544" data-start="{" data-end="}">
 <div class="line"><a id="l00544" name="l00544"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#aada0a65c6a2ae8fa3717f3e2b5ff3f4e">  544</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_targeting_component.html#aada0a65c6a2ae8fa3717f3e2b5ff3f4e">UDTTargetingComponent::StartAutoTargeting</a>(<span class="keywordtype">float</span> UpdateInterval)</div>
@@ -721,7 +735,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>    </div>
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>    <span class="keywordflow">if</span> (UWorld* World = GetWorld())</div>
 <div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>    {</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>        World-&gt;GetTimerManager().SetTimer(AutoTargetingTimerHandle,<span class="keyword">this</span>, &amp;UDTTargetingComponent::UpdateAutoTargeting,Interval,<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>        World-&gt;GetTimerManager().SetTimer(<a class="code hl_variable" href="class_u_d_t_targeting_component.html#a7b45f052192a93f552ceb43552328e99">AutoTargetingTimerHandle</a>,<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_d_t_targeting_component.html#aaae0d44134322125463685ad87b11181">UDTTargetingComponent::UpdateAutoTargeting</a>,Interval,<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span> </div>
 <div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>        UE_LOG(LogDT, Log, TEXT(<span class="stringliteral">&quot;DTTargetingComponent::StartAutoTargeting - Started with interval %.2f seconds&quot;</span>), Interval);</div>
 <div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    }</div>
@@ -733,17 +747,18 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>{</div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>    <span class="keywordflow">if</span> (UWorld* World = GetWorld())</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    {</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        <span class="keywordflow">if</span> (AutoTargetingTimerHandle.IsValid())</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_targeting_component.html#a7b45f052192a93f552ceb43552328e99">AutoTargetingTimerHandle</a>.IsValid())</div>
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>        {</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>            World-&gt;GetTimerManager().ClearTimer(AutoTargetingTimerHandle);</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>            AutoTargetingTimerHandle.Invalidate();</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>            World-&gt;GetTimerManager().ClearTimer(<a class="code hl_variable" href="class_u_d_t_targeting_component.html#a7b45f052192a93f552ceb43552328e99">AutoTargetingTimerHandle</a>);</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>            <a class="code hl_variable" href="class_u_d_t_targeting_component.html#a7b45f052192a93f552ceb43552328e99">AutoTargetingTimerHandle</a>.Invalidate();</div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>            UE_LOG(LogDT, Log, TEXT(<span class="stringliteral">&quot;DTTargetingComponent::StopAutoTargeting - Stopped auto-targeting&quot;</span>));</div>
 <div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>        }</div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>    }</div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>}</div>
 </div>
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span> </div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span><span class="keywordtype">void</span> UDTTargetingComponent::UpdateAutoTargeting()</div>
+<div class="foldopen" id="foldopen00577" data-start="{" data-end="}">
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno"><a class="line" href="class_u_d_t_targeting_component.html#aaae0d44134322125463685ad87b11181">  577</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_targeting_component.html#aaae0d44134322125463685ad87b11181">UDTTargetingComponent::UpdateAutoTargeting</a>()</div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>{</div>
 <div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_d_t_targeting_component.html#a31d83d6e8c9c9fe0c6995c84a67160e6">DefaultTargetingPreset</a>)</div>
 <div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>    {</div>
@@ -780,6 +795,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>        <a class="code hl_function" href="class_u_d_t_targeting_component.html#a4b83735eb44a7ac6c9956522eb4ec164">ExecuteTargetingRequest</a>(<span class="keyword">nullptr</span>, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>    }</div>
 <div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>}</div>
+</div>
 <div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span> </div>
 <div class="ttc" id="a_d_t_gameplay_ability___passive_8h_html_aaf2b31560294404a6b1fc9af2d953422ac41a31890959544c6523af684561abe5"><div class="ttname"><a href="_d_t_gameplay_ability___passive_8h.html#aaf2b31560294404a6b1fc9af2d953422ac41a31890959544c6523af684561abe5">EDTPassiveEventRole::Target</a></div><div class="ttdeci">@ Target</div><div class="ttdoc">Only process when this passive&#39;s avatar is the event Target (it happened to me).</div><div class="ttdef"><b>Definition</b> <a href="_d_t_gameplay_ability___passive_8h_source.html#l00024">DTGameplayAbility_Passive.h:24</a></div></div>
 <div class="ttc" id="a_d_t_log_channels_8h_html"><div class="ttname"><a href="_d_t_log_channels_8h.html">DTLogChannels.h</a></div></div>
@@ -793,8 +809,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a0b7501537daac823d9d4d3adcbadb660"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a0b7501537daac823d9d4d3adcbadb660">UDTTargetingComponent::ExecuteAsyncTargetingRequest</a></div><div class="ttdeci">FTargetingRequestHandle ExecuteAsyncTargetingRequest(UTargetingPreset *TargetingPreset=nullptr, bool bAutoSetFirstTarget=true)</div><div class="ttdoc">Execute a targeting request to generate new targets asynchronously Uses traces/shapes defined in the ...</div><div class="ttdef"><b>Definition</b> <a href="#l00117">DTTargetingComponent.cpp:117</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a0f95f7eb81f42e6473befeaa1b09c0ac"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a0f95f7eb81f42e6473befeaa1b09c0ac">UDTTargetingComponent::ExecuteAsyncFilteringRequest</a></div><div class="ttdeci">FTargetingRequestHandle ExecuteAsyncFilteringRequest(const TArray&lt; AActor * &gt; &amp;InitialTargets, UTargetingPreset *TargetingPreset=nullptr, bool bAutoSetFirstTarget=true)</div><div class="ttdoc">Execute a filtering request on existing targets asynchronously Filters and sorts the provided targets...</div><div class="ttdef"><b>Definition</b> <a href="#l00137">DTTargetingComponent.cpp:137</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a13d51a7313ca91c12c9aed9ef5983119"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a13d51a7313ca91c12c9aed9ef5983119">UDTTargetingComponent::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="#l00019">DTTargetingComponent.cpp:19</a></div></div>
+<div class="ttc" id="aclass_u_d_t_targeting_component_html_a15ae7e3aa590299b9861823dca36188a"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a15ae7e3aa590299b9861823dca36188a">UDTTargetingComponent::ExecuteTargetingHandleImmediate</a></div><div class="ttdeci">void ExecuteTargetingHandleImmediate(FTargetingRequestHandle Handle, bool bAutoSetFirstTarget)</div><div class="ttdoc">Execute a targeting handle immediately (synchronous).</div><div class="ttdef"><b>Definition</b> <a href="#l00407">DTTargetingComponent.cpp:407</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a26e9e569f9935aa3fde586432faf74ac"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a26e9e569f9935aa3fde586432faf74ac">UDTTargetingComponent::StopAutoTargeting</a></div><div class="ttdeci">void StopAutoTargeting()</div><div class="ttdoc">Stop automatic targeting updates.</div><div class="ttdef"><b>Definition</b> <a href="#l00564">DTTargetingComponent.cpp:564</a></div></div>
+<div class="ttc" id="aclass_u_d_t_targeting_component_html_a28fa8d5fad738972d22a7cd4226e946c"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a28fa8d5fad738972d22a7cd4226e946c">UDTTargetingComponent::ResolveAimPoint</a></div><div class="ttdeci">bool ResolveAimPoint(AActor *SourceActor, FVector &amp;OutLocation, FRotator &amp;OutRotation) const</div><div class="ttdoc">Resolve the player aim (or AI focal) point for this component&#39;s owner.</div><div class="ttdef"><b>Definition</b> <a href="#l00291">DTTargetingComponent.cpp:291</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a2a130aacb73c3590d4da134a92976e48"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a2a130aacb73c3590d4da134a92976e48">UDTTargetingComponent::AutoTargetingUpdateInterval</a></div><div class="ttdeci">float AutoTargetingUpdateInterval</div><div class="ttdoc">How often to update targets when auto-targeting is enabled (in seconds).</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00203">DTTargetingComponent.h:203</a></div></div>
+<div class="ttc" id="aclass_u_d_t_targeting_component_html_a2a4ca97454b8d4237bbbb08cd4989fa3"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a2a4ca97454b8d4237bbbb08cd4989fa3">UDTTargetingComponent::HandleTargetingRequestComplete</a></div><div class="ttdeci">void HandleTargetingRequestComplete(FTargetingRequestHandle TargetingHandle, bool bAutoSetFirstTarget)</div><div class="ttdoc">Internal callback for when targeting request completes.</div><div class="ttdef"><b>Definition</b> <a href="#l00515">DTTargetingComponent.cpp:515</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a2df4e1b756e3f5c73f4145123d0b7aae"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a2df4e1b756e3f5c73f4145123d0b7aae">UDTTargetingComponent::EndPlay</a></div><div class="ttdeci">virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override</div><div class="ttdef"><b>Definition</b> <a href="#l00032">DTTargetingComponent.cpp:32</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a31d83d6e8c9c9fe0c6995c84a67160e6"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a31d83d6e8c9c9fe0c6995c84a67160e6">UDTTargetingComponent::DefaultTargetingPreset</a></div><div class="ttdeci">TObjectPtr&lt; UTargetingPreset &gt; DefaultTargetingPreset</div><div class="ttdoc">Default targeting preset to use for quick targeting requests.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00191">DTTargetingComponent.h:191</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a423602d6730ab88df6165d27bd5188cb"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a423602d6730ab88df6165d27bd5188cb">UDTTargetingComponent::ExecutePresetImmediateWithContext</a></div><div class="ttdeci">void ExecutePresetImmediateWithContext(UTargetingPreset *TargetingPreset, const FTargetingSourceContext &amp;SourceContext, const FTargetingRequestDelegate &amp;OnComplete)</div><div class="ttdoc">Build and immediately execute a targeting preset using an explicit, caller-supplied source context.</div><div class="ttdef"><b>Definition</b> <a href="#l00191">DTTargetingComponent.cpp:191</a></div></div>
@@ -805,9 +824,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a622d61c7007e0d9e838f89988807acaa"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a622d61c7007e0d9e838f89988807acaa">UDTTargetingComponent::OnTargetChanged</a></div><div class="ttdeci">FOnTargetChanged OnTargetChanged</div><div class="ttdoc">Delegate called when the target changes.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00034">DTTargetingComponent.h:34</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a681c0fcb0a698885993ff46c87c9c998"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a681c0fcb0a698885993ff46c87c9c998">UDTTargetingComponent::GetTargetingSubsystem</a></div><div class="ttdeci">UTargetingSubsystem * GetTargetingSubsystem() const</div><div class="ttdoc">Get the targeting subsystem.</div><div class="ttdef"><b>Definition</b> <a href="#l00353">DTTargetingComponent.cpp:353</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a771534c79401d55628e09fc46937d611"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a771534c79401d55628e09fc46937d611">UDTTargetingComponent::OnTargetingComplete</a></div><div class="ttdeci">FOnTargetingComplete OnTargetingComplete</div><div class="ttdoc">Delegate called when a targeting request completes.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00040">DTTargetingComponent.h:40</a></div></div>
+<div class="ttc" id="aclass_u_d_t_targeting_component_html_a7890b404d5cde6c792ca90e23818ebc8"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a7890b404d5cde6c792ca90e23818ebc8">UDTTargetingComponent::ExecuteTargetingHandleAsync</a></div><div class="ttdeci">void ExecuteTargetingHandleAsync(FTargetingRequestHandle Handle, bool bAutoSetFirstTarget)</div><div class="ttdoc">Execute a targeting handle asynchronously.</div><div class="ttdef"><b>Definition</b> <a href="#l00429">DTTargetingComponent.cpp:429</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a7aa0268917c0148c7d0176f55e09a4f4"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a7aa0268917c0148c7d0176f55e09a4f4">UDTTargetingComponent::bAutoStartTargeting</a></div><div class="ttdeci">bool bAutoStartTargeting</div><div class="ttdoc">If true, automatic targeting will start when the component begins play.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00197">DTTargetingComponent.h:197</a></div></div>
+<div class="ttc" id="aclass_u_d_t_targeting_component_html_a7b45f052192a93f552ceb43552328e99"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a7b45f052192a93f552ceb43552328e99">UDTTargetingComponent::AutoTargetingTimerHandle</a></div><div class="ttdeci">FTimerHandle AutoTargetingTimerHandle</div><div class="ttdoc">Timer handle for automatic targeting updates.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00312">DTTargetingComponent.h:312</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a7f06aff92ef37ae26101882c54c4335e"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a7f06aff92ef37ae26101882c54c4335e">UDTTargetingComponent::CancelAsyncTargetingRequest</a></div><div class="ttdeci">void CancelAsyncTargetingRequest(FTargetingRequestHandle &amp;TargetingHandle)</div><div class="ttdoc">Cancel an active async targeting request.</div><div class="ttdef"><b>Definition</b> <a href="#l00164">DTTargetingComponent.cpp:164</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a82d40b68b4bff84011f52f17781e3718"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a82d40b68b4bff84011f52f17781e3718">UDTTargetingComponent::ClearTarget</a></div><div class="ttdeci">void ClearTarget()</div><div class="ttdoc">Clear the current target.</div><div class="ttdef"><b>Definition</b> <a href="#l00066">DTTargetingComponent.cpp:66</a></div></div>
+<div class="ttc" id="aclass_u_d_t_targeting_component_html_a923aee32c956928ce575aeeffa797291"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a923aee32c956928ce575aeeffa797291">UDTTargetingComponent::CreateTargetingHandle</a></div><div class="ttdeci">FTargetingRequestHandle CreateTargetingHandle(UTargetingPreset *TargetingPreset, const TArray&lt; AActor * &gt; &amp;InitialTargets) const</div><div class="ttdoc">Create a targeting request handle with the given preset and optional initial targets.</div><div class="ttdef"><b>Definition</b> <a href="#l00368">DTTargetingComponent.cpp:368</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a9d0f14035e1cd4d86ffda4aac8b76f3c"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a9d0f14035e1cd4d86ffda4aac8b76f3c">UDTTargetingComponent::TargetingSubsystem</a></div><div class="ttdeci">TObjectPtr&lt; UTargetingSubsystem &gt; TargetingSubsystem</div><div class="ttdoc">Cached reference to the targeting subsystem.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00247">DTTargetingComponent.h:247</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_a9dbdba444329cb95bdb9f5a47ae3cf5c"><div class="ttname"><a href="class_u_d_t_targeting_component.html#a9dbdba444329cb95bdb9f5a47ae3cf5c">UDTTargetingComponent::LastFoundTargets</a></div><div class="ttdeci">TArray&lt; AActor * &gt; LastFoundTargets</div><div class="ttdoc">Last set of targets found from a targeting request.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00253">DTTargetingComponent.h:253</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_aa21a9390913b7c3b6389c34ff91b97bb"><div class="ttname"><a href="class_u_d_t_targeting_component.html#aa21a9390913b7c3b6389c34ff91b97bb">UDTTargetingComponent::ResolveSourceContext</a></div><div class="ttdeci">FTargetingSourceContext ResolveSourceContext(EDTTargetSourceMode Mode) const</div><div class="ttdoc">Resolve a targeting source context for this component&#39;s owner using the given source mode.</div><div class="ttdef"><b>Definition</b> <a href="#l00247">DTTargetingComponent.cpp:247</a></div></div>
@@ -815,10 +837,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_targeting
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_aa3d2c2d03e8967d4f0b98de54067a36f"><div class="ttname"><a href="class_u_d_t_targeting_component.html#aa3d2c2d03e8967d4f0b98de54067a36f">UDTTargetingComponent::AutoTargetingMaxDistance</a></div><div class="ttdeci">float AutoTargetingMaxDistance</div><div class="ttdoc">How far away is the current target allowed to be before auto-targeting will search for a new target.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00209">DTTargetingComponent.h:209</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_aa5d0f75f077d34e870a980c68bcb3208"><div class="ttname"><a href="class_u_d_t_targeting_component.html#aa5d0f75f077d34e870a980c68bcb3208">UDTTargetingComponent::CurrentAsyncHandle</a></div><div class="ttdeci">FTargetingRequestHandle CurrentAsyncHandle</div><div class="ttdoc">Active async targeting request handles.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00259">DTTargetingComponent.h:259</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_aa6f435c472bf68c05c62433e1427065b"><div class="ttname"><a href="class_u_d_t_targeting_component.html#aa6f435c472bf68c05c62433e1427065b">UDTTargetingComponent::UDTTargetingComponent</a></div><div class="ttdeci">UDTTargetingComponent()</div><div class="ttdef"><b>Definition</b> <a href="#l00014">DTTargetingComponent.cpp:14</a></div></div>
+<div class="ttc" id="aclass_u_d_t_targeting_component_html_aaae0d44134322125463685ad87b11181"><div class="ttname"><a href="class_u_d_t_targeting_component.html#aaae0d44134322125463685ad87b11181">UDTTargetingComponent::UpdateAutoTargeting</a></div><div class="ttdeci">void UpdateAutoTargeting()</div><div class="ttdoc">Periodic function called by the auto-targeting timer.</div><div class="ttdef"><b>Definition</b> <a href="#l00577">DTTargetingComponent.cpp:577</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_aada0a65c6a2ae8fa3717f3e2b5ff3f4e"><div class="ttname"><a href="class_u_d_t_targeting_component.html#aada0a65c6a2ae8fa3717f3e2b5ff3f4e">UDTTargetingComponent::StartAutoTargeting</a></div><div class="ttdeci">void StartAutoTargeting(float UpdateInterval=0.0f)</div><div class="ttdoc">Start automatic targeting updates Will periodically execute targeting requests to keep the target up ...</div><div class="ttdef"><b>Definition</b> <a href="#l00544">DTTargetingComponent.cpp:544</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_aafc0c5148410affc0b095ef0fce388a6"><div class="ttname"><a href="class_u_d_t_targeting_component.html#aafc0c5148410affc0b095ef0fce388a6">UDTTargetingComponent::MaxAimDistance</a></div><div class="ttdeci">float MaxAimDistance</div><div class="ttdoc">Maximum distance of the aim trace used to resolve a cast-at-location point.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00234">DTTargetingComponent.h:234</a></div></div>
+<div class="ttc" id="aclass_u_d_t_targeting_component_html_ab8f00b4e6010ae15efdd9d33f628b2b1"><div class="ttname"><a href="class_u_d_t_targeting_component.html#ab8f00b4e6010ae15efdd9d33f628b2b1">UDTTargetingComponent::CreateSourceContext</a></div><div class="ttdeci">FTargetingSourceContext CreateSourceContext() const</div><div class="ttdoc">Create a targeting source context for this component&#39;s owner.</div><div class="ttdef"><b>Definition</b> <a href="#l00457">DTTargetingComponent.cpp:457</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_ac148ea7be68fc5674cbe174e04615b8d"><div class="ttname"><a href="class_u_d_t_targeting_component.html#ac148ea7be68fc5674cbe174e04615b8d">UDTTargetingComponent::HasTarget</a></div><div class="ttdeci">bool HasTarget() const</div><div class="ttdoc">Check if we have a valid, living target.</div><div class="ttdef"><b>Definition</b> <a href="#l00061">DTTargetingComponent.cpp:61</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_ade78dc93e5804dfbee1f304bcca4a111"><div class="ttname"><a href="class_u_d_t_targeting_component.html#ade78dc93e5804dfbee1f304bcca4a111">UDTTargetingComponent::ExecuteFilteringRequest</a></div><div class="ttdeci">void ExecuteFilteringRequest(const TArray&lt; AActor * &gt; &amp;InitialTargets, UTargetingPreset *TargetingPreset=nullptr, bool bAutoSetFirstTarget=true)</div><div class="ttdoc">Execute a filtering request on existing targets (immediate, synchronous) Filters and sorts the provid...</div><div class="ttdef"><b>Definition</b> <a href="#l00091">DTTargetingComponent.cpp:91</a></div></div>
+<div class="ttc" id="aclass_u_d_t_targeting_component_html_ae1d2704acf47b5d1da36dcd95692b9ba"><div class="ttname"><a href="class_u_d_t_targeting_component.html#ae1d2704acf47b5d1da36dcd95692b9ba">UDTTargetingComponent::SetupInitialTargetsForRequest</a></div><div class="ttdeci">void SetupInitialTargetsForRequest(FTargetingRequestHandle RequestHandle, const TArray&lt; AActor * &gt; &amp;InitialTargets) const</div><div class="ttdoc">Setup initial targets for a targeting request handle Used when filtering existing targets rather than...</div><div class="ttdef"><b>Definition</b> <a href="#l00485">DTTargetingComponent.cpp:485</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_ae397b3c1e031a53040a0685ceb1de505"><div class="ttname"><a href="class_u_d_t_targeting_component.html#ae397b3c1e031a53040a0685ceb1de505">UDTTargetingComponent::ExecutePresetImmediate</a></div><div class="ttdeci">void ExecutePresetImmediate(UTargetingPreset *TargetingPreset, const FTargetingRequestDelegate &amp;OnComplete)</div><div class="ttdoc">Build and immediately execute a targeting preset, routing completion to the caller&#39;s delegate.</div><div class="ttdef"><b>Definition</b> <a href="#l00186">DTTargetingComponent.cpp:186</a></div></div>
 <div class="ttc" id="aclass_u_d_t_targeting_component_html_afce36a0620990e53588a40bc133b0fe2"><div class="ttname"><a href="class_u_d_t_targeting_component.html#afce36a0620990e53588a40bc133b0fe2">UDTTargetingComponent::bUseAsyncForAutoTargeting</a></div><div class="ttdeci">bool bUseAsyncForAutoTargeting</div><div class="ttdoc">If true, auto-targeting will use async requests instead of immediate execution.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_targeting_component_8h_source.html#l00215">DTTargetingComponent.h:215</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

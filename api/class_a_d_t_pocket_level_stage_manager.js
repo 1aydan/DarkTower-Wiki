@@ -9,9 +9,18 @@ var class_a_d_t_pocket_level_stage_manager =
     [ "RefreshPocketCaptureAlphaMask", "class_a_d_t_pocket_level_stage_manager.html#a35a2f253a101d3340be7ed315bd92187", null ],
     [ "SpawnActorInPocketLevel", "class_a_d_t_pocket_level_stage_manager.html#a50c6d53b27627ace8353800b367187b4", null ],
     [ "SpawnCharacterInPocketLevel", "class_a_d_t_pocket_level_stage_manager.html#a398f2f4e1accb581b958cd72b595bc1a", null ],
+    [ "ActorSpawnPointComponent", "class_a_d_t_pocket_level_stage_manager.html#aa6b81a7b574b812eba4021861dc0de5a", null ],
+    [ "bApplyingPreviewAnimation", "class_a_d_t_pocket_level_stage_manager.html#a049f206a79e303922d4ed4cebaf7ba63", null ],
+    [ "CameraComponent", "class_a_d_t_pocket_level_stage_manager.html#a4d01eb59adba365e91ec572ac50afd8d", null ],
+    [ "CurrentPreviewAnimation", "class_a_d_t_pocket_level_stage_manager.html#a4c7b704fb1b04f0446a20d46df5029e3", null ],
     [ "DefaultCharacterClass", "class_a_d_t_pocket_level_stage_manager.html#a7f5c1a3fc852a58272c1af12dc00becf", null ],
     [ "IdentifyingGameplayTag", "class_a_d_t_pocket_level_stage_manager.html#a047543c581547111432f136993598684", null ],
+    [ "OriginalStagedAnimation", "class_a_d_t_pocket_level_stage_manager.html#ad9a86b0daf322836a4599542a35d491c", null ],
+    [ "OriginalStagedAnimMode", "class_a_d_t_pocket_level_stage_manager.html#a229e080bca449f8b335711a2386dcf17", null ],
     [ "PocketCaptureClass", "class_a_d_t_pocket_level_stage_manager.html#ad27f1568e6552607d113f5e900134d38", null ],
     [ "PocketCaptureInst", "class_a_d_t_pocket_level_stage_manager.html#ae97633a94228489f4b398dc182a32f11", null ],
+    [ "PreviewSpawnedActors", "class_a_d_t_pocket_level_stage_manager.html#a566cfc55b375758333cb5f09e84eba89", null ],
+    [ "PreviewSpawnedComponents", "class_a_d_t_pocket_level_stage_manager.html#ab52685f91bc4c3dde0f5f033346d6fcc", null ],
+    [ "RootSceneComponent", "class_a_d_t_pocket_level_stage_manager.html#a5580bd52c642e75fc6d9ab978593a579", null ],
     [ "StagedCharacter", "class_a_d_t_pocket_level_stage_manager.html#a6f3f4af3c915903f42c4b3af0af4d99e", null ]
 ];

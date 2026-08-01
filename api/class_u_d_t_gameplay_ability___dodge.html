@@ -235,6 +235,11 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aec85904cd98702c11301b2262b135de5 pro_methods_class_u_d_t_gameplay_ability" id="r_aec85904cd98702c11301b2262b135de5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#aec85904cd98702c11301b2262b135de5">AbilityEnded</a> (UGameplayAbility *Ability)</td></tr>
 <tr class="memitem:a2f7cc11b17f45dd0ebbc5b2666755d57 pro_methods_class_u_d_t_gameplay_ability" id="r_a2f7cc11b17f45dd0ebbc5b2666755d57"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a2f7cc11b17f45dd0ebbc5b2666755d57">PreActivate</a> (const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, FOnGameplayAbilityEnded::FDelegate *OnGameplayAbilityEndedDelegate, const FGameplayEventData *TriggerEventData=nullptr) override</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a899d20bc0ceaa33a95473e8dd5e8544d" id="r_a899d20bc0ceaa33a95473e8dd5e8544d"><td class="memItemLeft">FActiveGameplayEffectHandle&#160;</td><td class="memItemRight"><a class="el" href="#a899d20bc0ceaa33a95473e8dd5e8544d">DodgeEffectHandle</a></td></tr>
+<tr class="memitem:a792f53a582c7714c8c2348f221423165" id="r_a792f53a582c7714c8c2348f221423165"><td class="memItemLeft">TMap&lt; TEnumAsByte&lt; ECollisionChannel &gt;, TEnumAsByte&lt; ECollisionResponse &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a792f53a582c7714c8c2348f221423165">CachedCollisionResponses</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_u_d_t_gameplay_ability"><td colspan="2">Protected Attributes inherited from <a class="el" href="class_u_d_t_gameplay_ability.html">UDTGameplayAbility</a></td></tr>
@@ -326,7 +331,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00027">27</a> of file <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html">DTGameplayAbility_Dodge.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00028">bDisableCollisionDuringDodge</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00025">bRequireGrounded</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00505">UDTGameplayAbility::CommitAbility()</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00034">DodgeEffect</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00031">DodgeIgnoredChannels</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00098">EndAbility()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00066">UDTGameplayAbility::GetAbilityMontageByIndex()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00701">UDTSettingsLocal::GetDodgeInMovementDirection()</a>, and <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00124">OnMontageEnded()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00028">bDisableCollisionDuringDodge</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00025">bRequireGrounded</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00047">CachedCollisionResponses</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00505">UDTGameplayAbility::CommitAbility()</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00034">DodgeEffect</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00044">DodgeEffectHandle</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00031">DodgeIgnoredChannels</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00098">EndAbility()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00145">UDTSettingsLocal::Get()</a>, <a class="el" href="_d_t_gameplay_ability_8cpp_source.html#l00066">UDTGameplayAbility::GetAbilityMontageByIndex()</a>, <a class="el" href="_d_t_settings_local_8cpp_source.html#l00701">UDTSettingsLocal::GetDodgeInMovementDirection()</a>, and <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00124">OnMontageEnded()</a>.</p>
 
 </div>
 </div>
@@ -376,7 +381,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00098">98</a> of file <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html">DTGameplayAbility_Dodge.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00028">bDisableCollisionDuringDodge</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00028">bDisableCollisionDuringDodge</a>, <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00047">CachedCollisionResponses</a>, and <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00044">DodgeEffectHandle</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00027">ActivateAbility()</a>, and <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00124">OnMontageEnded()</a>.</p>
 
@@ -450,6 +455,32 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a792f53a582c7714c8c2348f221423165" name="a792f53a582c7714c8c2348f221423165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a792f53a582c7714c8c2348f221423165">&#9670;&#160;</a></span>CachedCollisionResponses</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMap&lt;TEnumAsByte&lt;ECollisionChannel&gt;, TEnumAsByte&lt;ECollisionResponse&gt; &gt; UDTGameplayAbility_Dodge::CachedCollisionResponses</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html">DTGameplayAbility_Dodge.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00027">ActivateAbility()</a>, and <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00098">EndAbility()</a>.</p>
+
+</div>
+</div>
 <a id="ad678b3edfa59d9e660cde1dc0dd1ce20" name="ad678b3edfa59d9e660cde1dc0dd1ce20"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad678b3edfa59d9e660cde1dc0dd1ce20">&#9670;&#160;</a></span>DodgeEffect</h2>
 
@@ -465,6 +496,32 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00034">34</a> of file <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html">DTGameplayAbility_Dodge.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00027">ActivateAbility()</a>.</p>
+
+</div>
+</div>
+<a id="a899d20bc0ceaa33a95473e8dd5e8544d" name="a899d20bc0ceaa33a95473e8dd5e8544d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899d20bc0ceaa33a95473e8dd5e8544d">&#9670;&#160;</a></span>DodgeEffectHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FActiveGameplayEffectHandle UDTGameplayAbility_Dodge::DodgeEffectHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html#l00044">44</a> of file <a class="el" href="_d_t_gameplay_ability___dodge_8h_source.html">DTGameplayAbility_Dodge.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00027">ActivateAbility()</a>, and <a class="el" href="_d_t_gameplay_ability___dodge_8cpp_source.html#l00098">EndAbility()</a>.</p>
 
 </div>
 </div>

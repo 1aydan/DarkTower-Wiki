@@ -147,6 +147,14 @@ Inheritance diagram for UDTQuestSubsystem:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a13e6e1de6e7d1c0b14e8afc13c94126f" id="r_a13e6e1de6e7d1c0b14e8afc13c94126f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a13e6e1de6e7d1c0b14e8afc13c94126f">Initialize</a> (FSubsystemCollectionBase &amp;Collection) override</td></tr>
 <tr class="memitem:a8ab3c2a9b974532a2b5e7177e19b3249" id="r_a8ab3c2a9b974532a2b5e7177e19b3249"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8ab3c2a9b974532a2b5e7177e19b3249">Deinitialize</a> () override</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af1e246c4f48be3e51a583c5d2288bb41" id="r_af1e246c4f48be3e51a583c5d2288bb41"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af1e246c4f48be3e51a583c5d2288bb41">HandleVerbMessage</a> (FGameplayTag Channel, const <a class="el" href="struct_f_d_t_verb_message.html">FDTVerbMessage</a> &amp;Message)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6c03815d8b0aeadd6c3d66e31f6ec370" id="r_a6c03815d8b0aeadd6c3d66e31f6ec370"><td class="memItemLeft">FGameplayMessageListenerHandle&#160;</td><td class="memItemRight"><a class="el" href="#a6c03815d8b0aeadd6c3d66e31f6ec370">VerbMessageListenerHandle</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Project quest subsystem that bridges GameplayMessageRouter events into QuestSystem evaluation. </p>
@@ -178,6 +186,43 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_quest_subsystem_8cpp_source.html#l00033">33</a> of file <a class="el" href="_d_t_quest_subsystem_8cpp_source.html">DTQuestSubsystem.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_quest_subsystem_8h_source.html#l00027">VerbMessageListenerHandle</a>.</p>
+
+</div>
+</div>
+<a id="af1e246c4f48be3e51a583c5d2288bb41" name="af1e246c4f48be3e51a583c5d2288bb41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1e246c4f48be3e51a583c5d2288bb41">&#9670;&#160;</a></span>HandleVerbMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTQuestSubsystem::HandleVerbMessage </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>Channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_verb_message.html">FDTVerbMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_quest_subsystem_8cpp_source.html#l00045">45</a> of file <a class="el" href="_d_t_quest_subsystem_8cpp_source.html">DTQuestSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_verb_message_helpers_8cpp_source.html#l00020">UDTVerbMessageHelpers::GetPlayerStateFromObject()</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00137">FDTVerbMessage::Instigator</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00152">FDTVerbMessage::Magnitude</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00140">FDTVerbMessage::Target</a>, and <a class="el" href="_d_t_message_types_8h_source.html#l00134">FDTVerbMessage::Verb</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_subsystem_8cpp_source.html#l00010">Initialize()</a>.</p>
+
 </div>
 </div>
 <a id="a13e6e1de6e7d1c0b14e8afc13c94126f" name="a13e6e1de6e7d1c0b14e8afc13c94126f"></a>
@@ -204,6 +249,35 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_quest_subsystem_8cpp_source.html#l00010">10</a> of file <a class="el" href="_d_t_quest_subsystem_8cpp_source.html">DTQuestSubsystem.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_quest_subsystem_8cpp_source.html#l00045">HandleVerbMessage()</a>, and <a class="el" href="_d_t_quest_subsystem_8h_source.html#l00027">VerbMessageListenerHandle</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a6c03815d8b0aeadd6c3d66e31f6ec370" name="a6c03815d8b0aeadd6c3d66e31f6ec370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c03815d8b0aeadd6c3d66e31f6ec370">&#9670;&#160;</a></span>VerbMessageListenerHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayMessageListenerHandle UDTQuestSubsystem::VerbMessageListenerHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_quest_subsystem_8h_source.html#l00027">27</a> of file <a class="el" href="_d_t_quest_subsystem_8h_source.html">DTQuestSubsystem.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_quest_subsystem_8cpp_source.html#l00033">Deinitialize()</a>, and <a class="el" href="_d_t_quest_subsystem_8cpp_source.html#l00010">Initialize()</a>.</p>
 
 </div>
 </div>

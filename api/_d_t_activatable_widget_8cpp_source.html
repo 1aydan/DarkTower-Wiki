@@ -151,14 +151,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_activatab
 <div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_u_d_t_activatable_widget.html#a8d5056a931c7c18251ae82fdb4a28514">   16</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_activatable_widget.html#a8d5056a931c7c18251ae82fdb4a28514">UDTActivatableWidget::NativeDestruct</a>()</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">for</span> (FUIActionBindingHandle Handle : BindingHandles)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">for</span> (FUIActionBindingHandle Handle : <a class="code hl_variable" href="class_u_d_t_activatable_widget.html#a01a8f99723ac4d4482cbf0c10a529a37">BindingHandles</a>)</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (Handle.IsValid())</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            Handle.Unregister();</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    BindingHandles.Empty();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_variable" href="class_u_d_t_activatable_widget.html#a01a8f99723ac4d4482cbf0c10a529a37">BindingHandles</a>.Empty();</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    Super::NativeDestruct();</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_activatab
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    BindArgs.bDisplayInActionBar = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    BindingHandle.<a class="code hl_variable" href="struct_f_input_action_binding_handle.html#a119cbf973d82309fa5f44a64b62a393c">Handle</a> = RegisterUIActionBinding(BindArgs);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    BindingHandles.Add(BindingHandle.<a class="code hl_variable" href="struct_f_input_action_binding_handle.html#a119cbf973d82309fa5f44a64b62a393c">Handle</a>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_variable" href="class_u_d_t_activatable_widget.html#a01a8f99723ac4d4482cbf0c10a529a37">BindingHandles</a>.Add(BindingHandle.<a class="code hl_variable" href="struct_f_input_action_binding_handle.html#a119cbf973d82309fa5f44a64b62a393c">Handle</a>);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
 </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_activatab
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">if</span> (BindingHandle.<a class="code hl_variable" href="struct_f_input_action_binding_handle.html#a119cbf973d82309fa5f44a64b62a393c">Handle</a>.IsValid())</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    {</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        BindingHandle.<a class="code hl_variable" href="struct_f_input_action_binding_handle.html#a119cbf973d82309fa5f44a64b62a393c">Handle</a>.Unregister();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        BindingHandles.Remove(BindingHandle.<a class="code hl_variable" href="struct_f_input_action_binding_handle.html#a119cbf973d82309fa5f44a64b62a393c">Handle</a>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_variable" href="class_u_d_t_activatable_widget.html#a01a8f99723ac4d4482cbf0c10a529a37">BindingHandles</a>.Remove(BindingHandle.<a class="code hl_variable" href="struct_f_input_action_binding_handle.html#a119cbf973d82309fa5f44a64b62a393c">Handle</a>);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
 </div>
@@ -225,12 +225,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_activatab
 <div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_u_d_t_activatable_widget.html#a2ad63e8c86958f1aa277f5911eb2665b">   82</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_activatable_widget.html#a2ad63e8c86958f1aa277f5911eb2665b">UDTActivatableWidget::UnregisterAllBindings</a>()</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>{</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">for</span> (FUIActionBindingHandle Handle : BindingHandles)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">for</span> (FUIActionBindingHandle Handle : <a class="code hl_variable" href="class_u_d_t_activatable_widget.html#a01a8f99723ac4d4482cbf0c10a529a37">BindingHandles</a>)</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    {</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        Handle.Unregister();</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    BindingHandles.Empty();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_variable" href="class_u_d_t_activatable_widget.html#a01a8f99723ac4d4482cbf0c10a529a37">BindingHandles</a>.Empty();</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
 </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
@@ -251,6 +251,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_activatab
 <div class="ttc" id="a_d_t_hud_8h_html"><div class="ttname"><a href="_d_t_hud_8h.html">DTHud.h</a></div></div>
 <div class="ttc" id="aclass_a_d_t_hud_html"><div class="ttname"><a href="class_a_d_t_hud.html">ADTHud</a></div><div class="ttdoc">Base HUD class for Dark Tower.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_hud_8h_source.html#l00014">DTHud.h:15</a></div></div>
 <div class="ttc" id="aclass_u_d_t_activatable_widget_html"><div class="ttname"><a href="class_u_d_t_activatable_widget.html">UDTActivatableWidget</a></div><div class="ttdoc">Base class for all activatable widgets in Dark Tower.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_activatable_widget_8h_source.html#l00026">DTActivatableWidget.h:27</a></div></div>
+<div class="ttc" id="aclass_u_d_t_activatable_widget_html_a01a8f99723ac4d4482cbf0c10a529a37"><div class="ttname"><a href="class_u_d_t_activatable_widget.html#a01a8f99723ac4d4482cbf0c10a529a37">UDTActivatableWidget::BindingHandles</a></div><div class="ttdeci">TArray&lt; FUIActionBindingHandle &gt; BindingHandles</div><div class="ttdef"><b>Definition</b> <a href="_d_t_activatable_widget_8h_source.html#l00063">DTActivatableWidget.h:63</a></div></div>
 <div class="ttc" id="aclass_u_d_t_activatable_widget_html_a2396418f13f4c464c4c9264af27b7342"><div class="ttname"><a href="class_u_d_t_activatable_widget.html#a2396418f13f4c464c4c9264af27b7342">UDTActivatableWidget::InputConfig</a></div><div class="ttdeci">FUIInputConfig InputConfig</div><div class="ttdef"><b>Definition</b> <a href="_d_t_activatable_widget_8h_source.html#l00046">DTActivatableWidget.h:46</a></div></div>
 <div class="ttc" id="aclass_u_d_t_activatable_widget_html_a2ad63e8c86958f1aa277f5911eb2665b"><div class="ttname"><a href="class_u_d_t_activatable_widget.html#a2ad63e8c86958f1aa277f5911eb2665b">UDTActivatableWidget::UnregisterAllBindings</a></div><div class="ttdeci">void UnregisterAllBindings()</div><div class="ttdef"><b>Definition</b> <a href="#l00082">DTActivatableWidget.cpp:82</a></div></div>
 <div class="ttc" id="aclass_u_d_t_activatable_widget_html_a4b927201c15595c5d56e895397d25cc6"><div class="ttname"><a href="class_u_d_t_activatable_widget.html#a4b927201c15595c5d56e895397d25cc6">UDTActivatableWidget::UnregisterBinding</a></div><div class="ttdeci">void UnregisterBinding(FInputActionBindingHandle BindingHandle)</div><div class="ttdef"><b>Definition</b> <a href="#l00073">DTActivatableWidget.cpp:73</a></div></div>

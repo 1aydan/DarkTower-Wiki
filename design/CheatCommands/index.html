@@ -764,10 +764,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-adding-a-new-cheat" class="md-nav__link">
+  <a href="#10-console-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10. Adding a new cheat
+        10. Console variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Console variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dt-debug-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DT.* — debug visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-party-plugin-cvars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First-party plugin CVars
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inherited-lyra-cvars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inherited Lyra CVars
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-adding-a-new-cheat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Adding a new cheat
       
     </span>
   </a>
@@ -794,7 +844,9 @@
 <h1 id="cheat-commands">Cheat Commands<a class="headerlink" href="#cheat-commands" title="Permanent link">&para;</a></h1>
 <p>All DarkTower cheats live on <code>UDTCheatManager</code> (<code>Source/DarkTower/Public/Core/DTCheatManager.h</code>,
 implementation in <code>Source/DarkTower/Private/Core/DTCheatManager.cpp</code>). They are plain <code>exec</code> functions,
-so they are typed into the in-game console (<code>~</code>) during PIE or a development build.</p>
+so they are typed into the in-game console (<code>~</code>) during PIE or a development build. Section 10 covers the
+project's custom console variables, which are declared in the systems they debug rather than on the cheat
+manager.</p>
 <h2 id="1-using-the-console">1. Using the console<a class="headerlink" href="#1-using-the-console" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Open the console with <code>~</code> in PIE or a Development/Debug build. Cheat managers are not created in
@@ -1162,7 +1214,125 @@ for the underlying model.</p>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>ClearStats Player
 </code></pre></div>
 <hr />
-<h2 id="10-adding-a-new-cheat">10. Adding a new cheat<a class="headerlink" href="#10-adding-a-new-cheat" title="Permanent link">&para;</a></h2>
+<h2 id="10-console-variables">10. Console variables<a class="headerlink" href="#10-console-variables" title="Permanent link">&para;</a></h2>
+<p>Separate from the cheat manager, DarkTower registers a handful of debug CVars. Set them from the same
+console (<code>DT.Melee.DebugDraw 1</code>); type the name with no value to print the current value and help text.</p>
+<p>Everything under <code>DT.*</code> is registered <code>ECVF_Cheat</code> and wrapped in <code>#if !UE_BUILD_SHIPPING</code>, so these do
+not exist in a Shipping build. The debug draws happen wherever the code runs — AI and threat logic is
+server-side, so run those on the server/host.</p>
+<h3 id="dt-debug-visualization"><code>DT.*</code> — debug visualization<a class="headerlink" href="#dt-debug-visualization" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>CVar</th>
+<th>Type / default</th>
+<th>Description</th>
+<th>Declared in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DT.AI.DebugThreat</code></td>
+<td>int, <code>0</code></td>
+<td>AI threat tables (server only). <code>1</code> = draw each AI's threat table, current target and overtake distance. <code>2</code> = also log threat gains, taunts and target-switch decisions.</td>
+<td><a href="Source/DarkTower/Private/AI/DTThreatComponent.cpp:14">DTThreatComponent.cpp:14</a></td>
+</tr>
+<tr>
+<td><code>DT.Team.DebugQueries</code></td>
+<td>int, <code>0</code></td>
+<td><code>UDTTeamSubsystem</code> queries. <code>1</code> = draw source, search radius and lines to matched actors. <code>2</code> = also log per-actor reject reasons in <code>PassesQueryFlags</code>.</td>
+<td><a href="Source/DarkTower/Private/Systems/DTTeamSubsystem.cpp:11">DTTeamSubsystem.cpp:11</a></td>
+</tr>
+<tr>
+<td><code>DT.Team.DebugActor</code></td>
+<td>string, <code>""</code></td>
+<td>Filters the above: only queries whose source actor name contains this substring are drawn/logged. Empty = all.</td>
+<td><a href="Source/DarkTower/Private/Systems/DTTeamSubsystem.cpp:20">DTTeamSubsystem.cpp:20</a></td>
+</tr>
+<tr>
+<td><code>DT.Interaction.DebugDraw</code></td>
+<td>bool, <code>false</code></td>
+<td>Draws interaction range plus best (green) / loser (yellow) / blocked-or-too-far (red) markers with priority labels.</td>
+<td><a href="Source/DarkTower/Private/AbilitySystem/Tasks/AbilityTask_GrantNearbyInteraction.cpp:20">AbilityTask_GrantNearbyInteraction.cpp:20</a></td>
+</tr>
+<tr>
+<td><code>DT.Interaction.DebugRange</code></td>
+<td>float, <code>750</code></td>
+<td>Absolute debug-draw scan radius in cm for the above. Candidates inside it but out of interact range draw red <code>[FAR]</code>. Clamped to at least the real interaction range.</td>
+<td><a href="Source/DarkTower/Private/AbilitySystem/Tasks/AbilityTask_GrantNearbyInteraction.cpp:26">AbilityTask_GrantNearbyInteraction.cpp:26</a></td>
+</tr>
+<tr>
+<td><code>DT.Melee.DebugDraw</code></td>
+<td>bool, <code>false</code></td>
+<td>Draws hitbox debug shapes for every melee hit event, overriding each notify's per-notify <code>bDebug</code> flag.</td>
+<td><a href="Source/DarkTower/Private/AbilitySystem/Abilities/DTGameplayAbility_Melee.cpp:26">DTGameplayAbility_Melee.cpp:26</a></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>DT.AI.DebugThreat 2
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>DT.Team.DebugQueries 1
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>DT.Team.DebugActor Skeleton
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>DT.Melee.DebugDraw 1
+</code></pre></div>
+<h3 id="first-party-plugin-cvars">First-party plugin CVars<a class="headerlink" href="#first-party-plugin-cvars" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>CVar / command</th>
+<th>Type / default</th>
+<th>Description</th>
+<th>Declared in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DamageNumbers.Enabled</code></td>
+<td>bool, <code>true</code></td>
+<td>Master toggle for spawning damage numbers.</td>
+<td><code>Plugins/DamageNumbers/.../DamageNumberSubsystem.cpp</code></td>
+</tr>
+<tr>
+<td><code>DamageNumbers.UseAbbreviation</code></td>
+<td>bool, <code>false</code></td>
+<td><code>10,000</code> vs. abbreviated <code>10.00K</code>.</td>
+<td>same</td>
+</tr>
+<tr>
+<td><code>DamageNumbers.Accumulate</code></td>
+<td>bool, <code>false</code></td>
+<td>Accumulate hits on the same target into one number instead of spawning a new one per hit.</td>
+<td>same</td>
+</tr>
+<tr>
+<td><code>PSOForge.Start</code></td>
+<td>command</td>
+<td>Starts a PSOForge capture pass in the current world (run in a cooked build with <code>-logPSO</code>).</td>
+<td><code>Plugins/PSOForge/.../PSOForgeModule.cpp</code></td>
+</tr>
+<tr>
+<td><code>PSOForge.Stop</code></td>
+<td>command</td>
+<td>Cancels a running capture pass.</td>
+<td>same</td>
+</tr>
+<tr>
+<td><code>PSOForge.Status</code></td>
+<td>command</td>
+<td>Logs the current capture state.</td>
+<td>same</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>DamageNumbers.*</code> CVars are <code>ECVF_Default</code> (they exist in Shipping) because <code>UDTSettingsLocal</code>
+mirrors <code>UseAbbreviation</code> and <code>Accumulate</code> into them from the player-facing game settings. A console
+override therefore lasts until the corresponding setting is next applied.</p>
+<h3 id="inherited-lyra-cvars">Inherited Lyra CVars<a class="headerlink" href="#inherited-lyra-cvars" title="Permanent link">&para;</a></h3>
+<p><code>UDTSettingsShared</code> carries over Lyra's gamepad deadzone defaults: <code>gpad.DefaultLeftStickInnerDeadZone</code>
+and <code>gpad.DefaultRightStickInnerDeadZone</code> (float, <code>0.25</code>) in
+<a href="Source/DarkTower/Private/Settings/DTSettingsShared.cpp:17">DTSettingsShared.cpp:17</a>. These are defaults
+for new settings objects, not live overrides.</p>
+<hr />
+<h2 id="11-adding-a-new-cheat">11. Adding a new cheat<a class="headerlink" href="#11-adding-a-new-cheat" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Declare the <code>exec</code> function in <code>DTCheatManager.h</code> with a doc comment covering usage and each
    parameter. Mark it <code>BlueprintAuthorityOnly</code> unless it is purely a read/print command.</li>

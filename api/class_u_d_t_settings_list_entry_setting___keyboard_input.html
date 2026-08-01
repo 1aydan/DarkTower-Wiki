@@ -167,6 +167,14 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:af31ba74747def60c1ddd6c5bf5f51258" id="r_af31ba74747def60c1ddd6c5bf5f51258"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_setting_keyboard_input.html">UDTSettingKeyboardInput</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af31ba74747def60c1ddd6c5bf5f51258">KeyboardInputSetting</a></td></tr>
 <tr class="memitem:a6194713dc555a849c48098c072e72e0c" id="r_a6194713dc555a849c48098c072e72e0c"><td class="memItemLeft">TSubclassOf&lt; UGameSettingPressAnyKey &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6194713dc555a849c48098c072e72e0c">PressAnyKeyPanelClass</a></td></tr>
 <tr class="memitem:a283209c8e2d35529057b577d39cfd18f" id="r_a283209c8e2d35529057b577d39cfd18f"><td class="memItemLeft">TSubclassOf&lt; UKeyAlreadyBoundWarning &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a283209c8e2d35529057b577d39cfd18f">KeyAlreadyBoundWarningPanelClass</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7ebb33e41d04b386d1f6c7f3be2d1a0d" id="r_a7ebb33e41d04b386d1f6c7f3be2d1a0d"><td class="memItemLeft">FKey&#160;</td><td class="memItemRight"><a class="el" href="#a7ebb33e41d04b386d1f6c7f3be2d1a0d">OriginalKeyToBind</a> = EKeys::Invalid</td></tr>
+<tr class="memitem:a23b5e581c8fc47e3401b1c96d6fc3a10" id="r_a23b5e581c8fc47e3401b1c96d6fc3a10"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_button.html">UDTButton</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a23b5e581c8fc47e3401b1c96d6fc3a10">Button_PrimaryKey</a></td></tr>
+<tr class="memitem:a0cc611c50c43491fed86366203136048" id="r_a0cc611c50c43491fed86366203136048"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_button.html">UDTButton</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0cc611c50c43491fed86366203136048">Button_SecondaryKey</a></td></tr>
+<tr class="memitem:aee0387bd4141306a13ac8ff4db507a43" id="r_aee0387bd4141306a13ac8ff4db507a43"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_button.html">UDTButton</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aee0387bd4141306a13ac8ff4db507a43">Button_Clear</a></td></tr>
+<tr class="memitem:ad009ffd88fe85d9b37a1e07fca0c3769" id="r_ad009ffd88fe85d9b37a1e07fca0c3769"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_button.html">UDTButton</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad009ffd88fe85d9b37a1e07fca0c3769">Button_ResetToDefault</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -201,7 +209,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00075">75</a> of file <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html">DTSettingsListEntrySetting_KeyboardInput.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00061">KeyAlreadyBoundWarningPanelClass</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00055">KeyboardInputSetting</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00061">KeyAlreadyBoundWarningPanelClass</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00055">KeyboardInputSetting</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00051">OriginalKeyToBind</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00051">HandlePrimaryKeySelected()</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00057">HandleSecondaryKeySelected()</a>.</p>
 
@@ -319,7 +327,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00063">63</a> of file <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html">DTSettingsListEntrySetting_KeyboardInput.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00055">KeyboardInputSetting</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00055">KeyboardInputSetting</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00051">OriginalKeyToBind</a>.</p>
 
 </div>
 </div>
@@ -443,7 +451,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00069">69</a> of file <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html">DTSettingsListEntrySetting_KeyboardInput.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00055">KeyboardInputSetting</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00055">KeyboardInputSetting</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00051">OriginalKeyToBind</a>.</p>
 
 </div>
 </div>
@@ -563,6 +571,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00025">25</a> of file <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html">DTSettingsListEntrySetting_KeyboardInput.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00071">Button_Clear</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00065">Button_PrimaryKey</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00074">Button_ResetToDefault</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00068">Button_SecondaryKey</a>.</p>
+
 </div>
 </div>
 <a id="acfcee9ee4d298ef389a236347cee21ea" name="acfcee9ee4d298ef389a236347cee21ea"></a>
@@ -619,7 +629,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00140">140</a> of file <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html">DTSettingsListEntrySetting_KeyboardInput.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00055">KeyboardInputSetting</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00065">Button_PrimaryKey</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00074">Button_ResetToDefault</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00068">Button_SecondaryKey</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00055">KeyboardInputSetting</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00135">OnSettingChanged()</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00016">SetSetting()</a>.</p>
 
@@ -655,6 +665,110 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="aee0387bd4141306a13ac8ff4db507a43" name="aee0387bd4141306a13ac8ff4db507a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee0387bd4141306a13ac8ff4db507a43">&#9670;&#160;</a></span>Button_Clear</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_button.html">UDTButton</a>&gt; UDTSettingsListEntrySetting_KeyboardInput::Button_Clear</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html">DTSettingsListEntrySetting_KeyboardInput.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00025">NativeOnInitialized()</a>.</p>
+
+</div>
+</div>
+<a id="a23b5e581c8fc47e3401b1c96d6fc3a10" name="a23b5e581c8fc47e3401b1c96d6fc3a10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23b5e581c8fc47e3401b1c96d6fc3a10">&#9670;&#160;</a></span>Button_PrimaryKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_button.html">UDTButton</a>&gt; UDTSettingsListEntrySetting_KeyboardInput::Button_PrimaryKey</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00065">65</a> of file <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html">DTSettingsListEntrySetting_KeyboardInput.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00025">NativeOnInitialized()</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00140">Refresh()</a>.</p>
+
+</div>
+</div>
+<a id="ad009ffd88fe85d9b37a1e07fca0c3769" name="ad009ffd88fe85d9b37a1e07fca0c3769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad009ffd88fe85d9b37a1e07fca0c3769">&#9670;&#160;</a></span>Button_ResetToDefault</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_button.html">UDTButton</a>&gt; UDTSettingsListEntrySetting_KeyboardInput::Button_ResetToDefault</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00074">74</a> of file <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html">DTSettingsListEntrySetting_KeyboardInput.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00025">NativeOnInitialized()</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00140">Refresh()</a>.</p>
+
+</div>
+</div>
+<a id="a0cc611c50c43491fed86366203136048" name="a0cc611c50c43491fed86366203136048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cc611c50c43491fed86366203136048">&#9670;&#160;</a></span>Button_SecondaryKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_button.html">UDTButton</a>&gt; UDTSettingsListEntrySetting_KeyboardInput::Button_SecondaryKey</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00068">68</a> of file <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html">DTSettingsListEntrySetting_KeyboardInput.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00025">NativeOnInitialized()</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00140">Refresh()</a>.</p>
+
+</div>
+</div>
 <a id="a283209c8e2d35529057b577d39cfd18f" name="a283209c8e2d35529057b577d39cfd18f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a283209c8e2d35529057b577d39cfd18f">&#9670;&#160;</a></span>KeyAlreadyBoundWarningPanelClass</h2>
 
@@ -704,6 +818,32 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00055">55</a> of file <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html">DTSettingsListEntrySetting_KeyboardInput.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00075">ChangeBinding()</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00124">HandleClearClicked()</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00063">HandlePrimaryDuplicateKeySelected()</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00130">HandleResetToDefaultClicked()</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00069">HandleSecondaryDuplicateKeySelected()</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00162">NativeOnEntryReleased()</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00140">Refresh()</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00016">SetSetting()</a>.</p>
+
+</div>
+</div>
+<a id="a7ebb33e41d04b386d1f6c7f3be2d1a0d" name="a7ebb33e41d04b386d1f6c7f3be2d1a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebb33e41d04b386d1f6c7f3be2d1a0d">&#9670;&#160;</a></span>OriginalKeyToBind</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FKey UDTSettingsListEntrySetting_KeyboardInput::OriginalKeyToBind = EKeys::Invalid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html#l00051">51</a> of file <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8h_source.html">DTSettingsListEntrySetting_KeyboardInput.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00075">ChangeBinding()</a>, <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00063">HandlePrimaryDuplicateKeySelected()</a>, and <a class="el" href="_d_t_settings_list_entry_setting___keyboard_input_8cpp_source.html#l00069">HandleSecondaryDuplicateKeySelected()</a>.</p>
 
 </div>
 </div>

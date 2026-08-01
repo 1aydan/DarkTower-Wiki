@@ -14,6 +14,7 @@ var class_u_d_t_a_s_c_attribute_widget =
     [ "UnbindFromAttribute", "class_u_d_t_a_s_c_attribute_widget.html#a9f6b6ce44106698bd13489a08bd40ba1", null ],
     [ "UpdateDisplay", "class_u_d_t_a_s_c_attribute_widget.html#a028de42f8d1321b7a80c09fba6752026", null ],
     [ "UpdateDisplay_Implementation", "class_u_d_t_a_s_c_attribute_widget.html#ad13351b3387a1b58e414e5f93e6b8364", null ],
+    [ "AttributeDelegateHandles", "class_u_d_t_a_s_c_attribute_widget.html#a1b963109df53da12f11c5f0244b40477", null ],
     [ "BoundAttributes", "class_u_d_t_a_s_c_attribute_widget.html#a562ab6a0381ff6a13c9bdd0be29a1904", null ],
     [ "CurrentAttribute", "class_u_d_t_a_s_c_attribute_widget.html#a196529674da86a0b97e40801a2ece6ea", null ],
     [ "MaxAttribute", "class_u_d_t_a_s_c_attribute_widget.html#a581a0d16f44df02b45b41a0fcd552a07", null ],

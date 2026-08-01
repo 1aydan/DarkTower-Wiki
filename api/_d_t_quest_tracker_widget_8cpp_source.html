@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_quest_tra
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    Super::NativeConstruct();</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    BindQuestDelegates();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#af9a937ee993c0c9e53c70ed61566f69b">BindQuestDelegates</a>();</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#a68be69e31b480268a711b56659fa25b4">RefreshQuestTracker</a>();</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
 </div>
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_quest_tra
 <div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_u_d_t_quest_tracker_widget.html#a555c89bc66ed77a82eb310844ef36b48">   23</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#a555c89bc66ed77a82eb310844ef36b48">UDTQuestTrackerWidget::NativeDestruct</a>()</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    UnbindQuestDelegates();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#a83a7802586e8edce23a8c21c96c40de5">UnbindQuestDelegates</a>();</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    Super::NativeDestruct();</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_quest_tra
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_variable" href="class_u_d_t_quest_tracker_widget.html#a2207965b81777e1c372a5698c6676a15">CachedDisplayEntries</a>.Reset();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    UQuestSubsystem* QuestSubsystem = ResolveQuestSubsystem();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    UQuestSubsystem* QuestSubsystem = <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#aa59f267e8e77248a03e1731e3136eb46">ResolveQuestSubsystem</a>();</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">if</span> (!QuestSubsystem)</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#af940f7de4c7276eb816ebd7172d32407">OnQuestTrackerRefreshed</a>();</div>
@@ -179,10 +179,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_quest_tra
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    TArray&lt;FQuestData&gt; FilteredQuests;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> TArray&lt;FQuestData&gt; AllQuests = QuestSubsystem-&gt;GetAllTrackedQuests(ResolvePlayerState());</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> TArray&lt;FQuestData&gt; AllQuests = QuestSubsystem-&gt;GetAllTrackedQuests(<a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#afaf6fa959dff68cd76d2f28d1134b748">ResolvePlayerState</a>());</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FQuestData&amp; Entry : AllQuests)</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (ShouldIncludeEntry(Entry))</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#a327469acd2c4ebbcc2563f5a58c92b96">ShouldIncludeEntry</a>(Entry))</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            FilteredQuests.Add(Entry);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
@@ -209,48 +209,57 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_quest_tra
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
 </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">void</span> UDTQuestTrackerWidget::HandleQuestStateChanged(FGameplayTag QuestTag, EQuestState OldState, EQuestState NewState)</div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_u_d_t_quest_tracker_widget.html#ad520e33a87ba675dd992793a26e6ee3a">   71</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#ad520e33a87ba675dd992793a26e6ee3a">UDTQuestTrackerWidget::HandleQuestStateChanged</a>(FGameplayTag QuestTag, EQuestState OldState, EQuestState NewState)</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#a68be69e31b480268a711b56659fa25b4">RefreshQuestTracker</a>();</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">void</span> UDTQuestTrackerWidget::HandleQuestObjectiveProgress(FGameplayTag QuestTag, FGuid ObjectiveId, <span class="keywordtype">float</span> CurrentValue, <span class="keywordtype">float</span> TargetValue, EQuestObjectiveState State)</div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_u_d_t_quest_tracker_widget.html#a2b9017b15b6e5db3453f8e3d0a2f54f5">   76</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#a2b9017b15b6e5db3453f8e3d0a2f54f5">UDTQuestTrackerWidget::HandleQuestObjectiveProgress</a>(FGameplayTag QuestTag, FGuid ObjectiveId, <span class="keywordtype">float</span> CurrentValue, <span class="keywordtype">float</span> TargetValue, EQuestObjectiveState State)</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>{</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#a68be69e31b480268a711b56659fa25b4">RefreshQuestTracker</a>();</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keywordtype">void</span> UDTQuestTrackerWidget::BindQuestDelegates()</div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_u_d_t_quest_tracker_widget.html#af9a937ee993c0c9e53c70ed61566f69b">   81</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#af9a937ee993c0c9e53c70ed61566f69b">UDTQuestTrackerWidget::BindQuestDelegates</a>()</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>{</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">if</span> (bQuestDelegatesBound)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_d_t_quest_tracker_widget.html#adca9ecfa4ee86f445169ad7e198c5764">bQuestDelegatesBound</a>)</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">if</span> (UQuestSubsystem* QuestSubsystem = ResolveQuestSubsystem())</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">if</span> (UQuestSubsystem* QuestSubsystem = <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#aa59f267e8e77248a03e1731e3136eb46">ResolveQuestSubsystem</a>())</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        QuestSubsystem-&gt;OnQuestStateChanged.AddDynamic(<span class="keyword">this</span>, &amp;UDTQuestTrackerWidget::HandleQuestStateChanged);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        QuestSubsystem-&gt;OnQuestObjectiveProgress.AddDynamic(<span class="keyword">this</span>, &amp;UDTQuestTrackerWidget::HandleQuestObjectiveProgress);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        bQuestDelegatesBound = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        QuestSubsystem-&gt;OnQuestStateChanged.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#ad520e33a87ba675dd992793a26e6ee3a">UDTQuestTrackerWidget::HandleQuestStateChanged</a>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        QuestSubsystem-&gt;OnQuestObjectiveProgress.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#a2b9017b15b6e5db3453f8e3d0a2f54f5">UDTQuestTrackerWidget::HandleQuestObjectiveProgress</a>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_variable" href="class_u_d_t_quest_tracker_widget.html#adca9ecfa4ee86f445169ad7e198c5764">bQuestDelegatesBound</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keywordtype">void</span> UDTQuestTrackerWidget::UnbindQuestDelegates()</div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_u_d_t_quest_tracker_widget.html#a83a7802586e8edce23a8c21c96c40de5">   96</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#a83a7802586e8edce23a8c21c96c40de5">UDTQuestTrackerWidget::UnbindQuestDelegates</a>()</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>{</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span> (!bQuestDelegatesBound)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_d_t_quest_tracker_widget.html#adca9ecfa4ee86f445169ad7e198c5764">bQuestDelegatesBound</a>)</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">if</span> (UQuestSubsystem* QuestSubsystem = ResolveQuestSubsystem())</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">if</span> (UQuestSubsystem* QuestSubsystem = <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#aa59f267e8e77248a03e1731e3136eb46">ResolveQuestSubsystem</a>())</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        QuestSubsystem-&gt;OnQuestStateChanged.RemoveDynamic(<span class="keyword">this</span>, &amp;UDTQuestTrackerWidget::HandleQuestStateChanged);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        QuestSubsystem-&gt;OnQuestObjectiveProgress.RemoveDynamic(<span class="keyword">this</span>, &amp;UDTQuestTrackerWidget::HandleQuestObjectiveProgress);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        QuestSubsystem-&gt;OnQuestStateChanged.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#ad520e33a87ba675dd992793a26e6ee3a">UDTQuestTrackerWidget::HandleQuestStateChanged</a>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        QuestSubsystem-&gt;OnQuestObjectiveProgress.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#a2b9017b15b6e5db3453f8e3d0a2f54f5">UDTQuestTrackerWidget::HandleQuestObjectiveProgress</a>);</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    bQuestDelegatesBound = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_variable" href="class_u_d_t_quest_tracker_widget.html#adca9ecfa4ee86f445169ad7e198c5764">bQuestDelegatesBound</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
+</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="keywordtype">bool</span> UDTQuestTrackerWidget::ShouldIncludeEntry(<span class="keyword">const</span> FQuestData&amp; Entry)<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00112" data-start="{" data-end="}">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_u_d_t_quest_tracker_widget.html#a327469acd2c4ebbcc2563f5a58c92b96">  112</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#a327469acd2c4ebbcc2563f5a58c92b96">UDTQuestTrackerWidget::ShouldIncludeEntry</a>(<span class="keyword">const</span> FQuestData&amp; Entry)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">if</span> (Entry.State != EQuestState::Active)</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    {</div>
@@ -269,18 +278,22 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_quest_tra
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
+</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><a class="code hl_class" href="class_a_d_t_player_state.html">ADTPlayerState</a>* UDTQuestTrackerWidget::ResolvePlayerState()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_u_d_t_quest_tracker_widget.html#afaf6fa959dff68cd76d2f28d1134b748">  132</a></span><a class="code hl_class" href="class_a_d_t_player_state.html">ADTPlayerState</a>* <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#afaf6fa959dff68cd76d2f28d1134b748">UDTQuestTrackerWidget::ResolvePlayerState</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">if</span> (APlayerController* PlayerController = GetOwningPlayer())</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> PlayerController-&gt;GetPlayerState&lt;ADTPlayerState&gt;();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> PlayerController-&gt;GetPlayerState&lt;<a class="code hl_class" href="class_a_d_t_player_state.html">ADTPlayerState</a>&gt;();</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>}</div>
+</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>UQuestSubsystem* UDTQuestTrackerWidget::ResolveQuestSubsystem()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="class_u_d_t_quest_tracker_widget.html#aa59f267e8e77248a03e1731e3136eb46">  142</a></span>UQuestSubsystem* <a class="code hl_function" href="class_u_d_t_quest_tracker_widget.html#aa59f267e8e77248a03e1731e3136eb46">UDTQuestTrackerWidget::ResolveQuestSubsystem</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> UWorld* World = GetWorld())</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    {</div>
@@ -289,18 +302,27 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_d_t_quest_tra
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>}</div>
+</div>
 <div class="ttc" id="a_d_t_footstep_effect_set_8h_html_a66793cb4fc250d88cee6c066b9853518a92b09c7c48c520c3c55e497875da437c"><div class="ttname"><a href="_d_t_footstep_effect_set_8h.html#a66793cb4fc250d88cee6c066b9853518a92b09c7c48c520c3c55e497875da437c">EDTFoot::Right</a></div><div class="ttdeci">@ Right</div><div class="ttdef"><b>Definition</b> <a href="_d_t_footstep_effect_set_8h_source.html#l00019">DTFootstepEffectSet.h:19</a></div></div>
 <div class="ttc" id="a_d_t_footstep_effect_set_8h_html_a66793cb4fc250d88cee6c066b9853518a945d5e233cf7d6240f6b783b36a374ff"><div class="ttname"><a href="_d_t_footstep_effect_set_8h.html#a66793cb4fc250d88cee6c066b9853518a945d5e233cf7d6240f6b783b36a374ff">EDTFoot::Left</a></div><div class="ttdeci">@ Left</div><div class="ttdef"><b>Definition</b> <a href="_d_t_footstep_effect_set_8h_source.html#l00018">DTFootstepEffectSet.h:18</a></div></div>
 <div class="ttc" id="a_d_t_player_state_8h_html"><div class="ttname"><a href="_d_t_player_state_8h.html">DTPlayerState.h</a></div></div>
 <div class="ttc" id="a_d_t_quest_tracker_widget_8h_html"><div class="ttname"><a href="_d_t_quest_tracker_widget_8h.html">DTQuestTrackerWidget.h</a></div></div>
 <div class="ttc" id="aclass_a_d_t_player_state_html"><div class="ttname"><a href="class_a_d_t_player_state.html">ADTPlayerState</a></div><div class="ttdoc">Base Player State class for Dark Tower.</div><div class="ttdef"><b>Definition</b> <a href="_d_t_player_state_8h_source.html#l00037">DTPlayerState.h:38</a></div></div>
 <div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_a2207965b81777e1c372a5698c6676a15"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#a2207965b81777e1c372a5698c6676a15">UDTQuestTrackerWidget::CachedDisplayEntries</a></div><div class="ttdeci">TArray&lt; FQuestDisplayData &gt; CachedDisplayEntries</div><div class="ttdef"><b>Definition</b> <a href="_d_t_quest_tracker_widget_8h_source.html#l00044">DTQuestTrackerWidget.h:44</a></div></div>
+<div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_a2b9017b15b6e5db3453f8e3d0a2f54f5"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#a2b9017b15b6e5db3453f8e3d0a2f54f5">UDTQuestTrackerWidget::HandleQuestObjectiveProgress</a></div><div class="ttdeci">void HandleQuestObjectiveProgress(FGameplayTag QuestTag, FGuid ObjectiveId, float CurrentValue, float TargetValue, EQuestObjectiveState State)</div><div class="ttdef"><b>Definition</b> <a href="#l00076">DTQuestTrackerWidget.cpp:76</a></div></div>
+<div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_a327469acd2c4ebbcc2563f5a58c92b96"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#a327469acd2c4ebbcc2563f5a58c92b96">UDTQuestTrackerWidget::ShouldIncludeEntry</a></div><div class="ttdeci">bool ShouldIncludeEntry(const FQuestData &amp;Entry) const</div><div class="ttdef"><b>Definition</b> <a href="#l00112">DTQuestTrackerWidget.cpp:112</a></div></div>
 <div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_a555c89bc66ed77a82eb310844ef36b48"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#a555c89bc66ed77a82eb310844ef36b48">UDTQuestTrackerWidget::NativeDestruct</a></div><div class="ttdeci">virtual void NativeDestruct() override</div><div class="ttdef"><b>Definition</b> <a href="#l00023">DTQuestTrackerWidget.cpp:23</a></div></div>
 <div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_a583c5a2cbad3c38053cfaa7aa34139ef"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#a583c5a2cbad3c38053cfaa7aa34139ef">UDTQuestTrackerWidget::NativeConstruct</a></div><div class="ttdeci">virtual void NativeConstruct() override</div><div class="ttdef"><b>Definition</b> <a href="#l00015">DTQuestTrackerWidget.cpp:15</a></div></div>
 <div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_a68be69e31b480268a711b56659fa25b4"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#a68be69e31b480268a711b56659fa25b4">UDTQuestTrackerWidget::RefreshQuestTracker</a></div><div class="ttdeci">void RefreshQuestTracker()</div><div class="ttdef"><b>Definition</b> <a href="#l00030">DTQuestTrackerWidget.cpp:30</a></div></div>
 <div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_a6b66dc00be42808ecad450b91d56a147"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#a6b66dc00be42808ecad450b91d56a147">UDTQuestTrackerWidget::UDTQuestTrackerWidget</a></div><div class="ttdeci">UDTQuestTrackerWidget(const FObjectInitializer &amp;ObjectInitializer=FObjectInitializer::Get())</div><div class="ttdef"><b>Definition</b> <a href="#l00010">DTQuestTrackerWidget.cpp:10</a></div></div>
+<div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_a83a7802586e8edce23a8c21c96c40de5"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#a83a7802586e8edce23a8c21c96c40de5">UDTQuestTrackerWidget::UnbindQuestDelegates</a></div><div class="ttdeci">void UnbindQuestDelegates()</div><div class="ttdef"><b>Definition</b> <a href="#l00096">DTQuestTrackerWidget.cpp:96</a></div></div>
+<div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_aa59f267e8e77248a03e1731e3136eb46"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#aa59f267e8e77248a03e1731e3136eb46">UDTQuestTrackerWidget::ResolveQuestSubsystem</a></div><div class="ttdeci">UQuestSubsystem * ResolveQuestSubsystem() const</div><div class="ttdef"><b>Definition</b> <a href="#l00142">DTQuestTrackerWidget.cpp:142</a></div></div>
 <div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_ac1e89dc59afc519271c2158178fdec8c"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#ac1e89dc59afc519271c2158178fdec8c">UDTQuestTrackerWidget::bIncludeSharedQuests</a></div><div class="ttdeci">bool bIncludeSharedQuests</div><div class="ttdef"><b>Definition</b> <a href="_d_t_quest_tracker_widget_8h_source.html#l00041">DTQuestTrackerWidget.h:41</a></div></div>
+<div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_ad520e33a87ba675dd992793a26e6ee3a"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#ad520e33a87ba675dd992793a26e6ee3a">UDTQuestTrackerWidget::HandleQuestStateChanged</a></div><div class="ttdeci">void HandleQuestStateChanged(FGameplayTag QuestTag, EQuestState OldState, EQuestState NewState)</div><div class="ttdef"><b>Definition</b> <a href="#l00071">DTQuestTrackerWidget.cpp:71</a></div></div>
+<div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_adca9ecfa4ee86f445169ad7e198c5764"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#adca9ecfa4ee86f445169ad7e198c5764">UDTQuestTrackerWidget::bQuestDelegatesBound</a></div><div class="ttdeci">bool bQuestDelegatesBound</div><div class="ttdef"><b>Definition</b> <a href="_d_t_quest_tracker_widget_8h_source.html#l00047">DTQuestTrackerWidget.h:47</a></div></div>
 <div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_af940f7de4c7276eb816ebd7172d32407"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#af940f7de4c7276eb816ebd7172d32407">UDTQuestTrackerWidget::OnQuestTrackerRefreshed</a></div><div class="ttdeci">void OnQuestTrackerRefreshed()</div></div>
+<div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_af9a937ee993c0c9e53c70ed61566f69b"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#af9a937ee993c0c9e53c70ed61566f69b">UDTQuestTrackerWidget::BindQuestDelegates</a></div><div class="ttdeci">void BindQuestDelegates()</div><div class="ttdef"><b>Definition</b> <a href="#l00081">DTQuestTrackerWidget.cpp:81</a></div></div>
+<div class="ttc" id="aclass_u_d_t_quest_tracker_widget_html_afaf6fa959dff68cd76d2f28d1134b748"><div class="ttname"><a href="class_u_d_t_quest_tracker_widget.html#afaf6fa959dff68cd76d2f28d1134b748">UDTQuestTrackerWidget::ResolvePlayerState</a></div><div class="ttdeci">ADTPlayerState * ResolvePlayerState() const</div><div class="ttdef"><b>Definition</b> <a href="#l00132">DTQuestTrackerWidget.cpp:132</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

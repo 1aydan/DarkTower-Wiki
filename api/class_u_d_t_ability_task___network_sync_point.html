@@ -152,6 +152,23 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ad8f711fef3c0aef1fc08e7058db1e7fb" id="r_ad8f711fef3c0aef1fc08e7058db1e7fb"><td class="memItemLeft">EAbilityGenericReplicatedEvent::Type&#160;</td><td class="memItemRight"><a class="el" href="#ad8f711fef3c0aef1fc08e7058db1e7fb">ReplicatedEventToListenFor</a></td></tr>
 <tr class="memdesc:ad8f711fef3c0aef1fc08e7058db1e7fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event we replicate.  <br /></td></tr>
 <tr class="memitem:acc681a67a4a5a99218bd45247a228528" id="r_acc681a67a4a5a99218bd45247a228528"><td class="memItemLeft"><a class="el" href="_d_t_ability_task___network_sync_point_8h.html#a30b963182119208ff12c7bc01b4e04b8">EDTAbilityTaskNetSyncType</a>&#160;</td><td class="memItemRight"><a class="el" href="#acc681a67a4a5a99218bd45247a228528">SyncType</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a570ade72f232ed878fd8e5a89a9b08d8" id="r_a570ade72f232ed878fd8e5a89a9b08d8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a570ade72f232ed878fd8e5a89a9b08d8">DECLARE_MULTICAST_DELEGATE</a> (FDTNetworkSyncNativeDelegate)</td></tr>
+<tr class="memitem:a0fc2ebb605de13149b25a059f855de10" id="r_a0fc2ebb605de13149b25a059f855de10"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0fc2ebb605de13149b25a059f855de10">OnSignalCallback</a> ()</td></tr>
+<tr class="memitem:ac0f58a922d30f5e55a7491cbfd738b99" id="r_ac0f58a922d30f5e55a7491cbfd738b99"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac0f58a922d30f5e55a7491cbfd738b99">Activate</a> () override</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:ae46314d1a56cd8415c168d6ba75fe2e1" id="r_ae46314d1a56cd8415c168d6ba75fe2e1"><td class="memItemLeft">static <a class="el" href="class_u_d_t_ability_task___network_sync_point.html">UDTAbilityTask_NetworkSyncPoint</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae46314d1a56cd8415c168d6ba75fe2e1">WaitNetSync</a> (UGameplayAbility *OwningAbility, <a class="el" href="_d_t_ability_task___network_sync_point_8h.html#a30b963182119208ff12c7bc01b4e04b8">EDTAbilityTaskNetSyncType</a> SyncType)</td></tr>
+<tr class="memdesc:ae46314d1a56cd8415c168d6ba75fe2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronize execution flow between Client and Server.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aba4b8766a6c3b926b0e8c0098b89262f" id="r_aba4b8766a6c3b926b0e8c0098b89262f"><td class="memItemLeft">FDTNetworkSyncDelegate&#160;</td><td class="memItemRight"><a class="el" href="#aba4b8766a6c3b926b0e8c0098b89262f">OnSync</a></td></tr>
+<tr class="memitem:a207a79a87eea898e06c04ad866ebeec8" id="r_a207a79a87eea898e06c04ad866ebeec8"><td class="memItemLeft">FDTNetworkSyncNativeDelegate&#160;</td><td class="memItemRight"><a class="el" href="#a207a79a87eea898e06c04ad866ebeec8">OnSyncDelegate</a></td></tr>
+<tr class="memdesc:a207a79a87eea898e06c04ad866ebeec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Native delegate on sync.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic sync point for client/server (one can wait for a signal from the other). </p>
@@ -159,6 +176,95 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00029">29</a> of file <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html">DTAbilityTask_NetworkSyncPoint.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac0f58a922d30f5e55a7491cbfd738b99" name="ac0f58a922d30f5e55a7491cbfd738b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f58a922d30f5e55a7491cbfd738b99">&#9670;&#160;</a></span>Activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_NetworkSyncPoint::Activate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel private">private</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00030">30</a> of file <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html">DTAbilityTask_NetworkSyncPoint.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00021">OnlyClientWait</a>, <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00018">OnlyServerWait</a>, <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00013">OnSignalCallback()</a>, <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00056">ReplicatedEventToListenFor</a>, <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00075">SyncFinished()</a>, and <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00058">SyncType</a>.</p>
+
+</div>
+</div>
+<a id="a570ade72f232ed878fd8e5a89a9b08d8" name="a570ade72f232ed878fd8e5a89a9b08d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a570ade72f232ed878fd8e5a89a9b08d8">&#9670;&#160;</a></span>DECLARE_MULTICAST_DELEGATE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UDTAbilityTask_NetworkSyncPoint::DECLARE_MULTICAST_DELEGATE </td>
+          <td>(</td>
+          <td class="paramtype">FDTNetworkSyncNativeDelegate</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="#a570ade72f232ed878fd8e5a89a9b08d8">DECLARE_MULTICAST_DELEGATE()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a570ade72f232ed878fd8e5a89a9b08d8">DECLARE_MULTICAST_DELEGATE()</a>.</p>
+
+</div>
+</div>
+<a id="a0fc2ebb605de13149b25a059f855de10" name="a0fc2ebb605de13149b25a059f855de10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc2ebb605de13149b25a059f855de10">&#9670;&#160;</a></span>OnSignalCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAbilityTask_NetworkSyncPoint::OnSignalCallback </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00013">13</a> of file <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html">DTAbilityTask_NetworkSyncPoint.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00056">ReplicatedEventToListenFor</a>, and <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00075">SyncFinished()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00030">Activate()</a>.</p>
+
+</div>
+</div>
 <a id="a2e6d17bbd9949a33a970dcc1428e584a" name="a2e6d17bbd9949a33a970dcc1428e584a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2e6d17bbd9949a33a970dcc1428e584a">&#9670;&#160;</a></span>SyncFinished()</h2>
 
@@ -184,9 +290,105 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00075">75</a> of file <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html">DTAbilityTask_NetworkSyncPoint.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00036">OnSync</a>, and <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00039">OnSyncDelegate</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00030">Activate()</a>, and <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00013">OnSignalCallback()</a>.</p>
+
+</div>
+</div>
+<a id="ae46314d1a56cd8415c168d6ba75fe2e1" name="ae46314d1a56cd8415c168d6ba75fe2e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46314d1a56cd8415c168d6ba75fe2e1">&#9670;&#160;</a></span>WaitNetSync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_d_t_ability_task___network_sync_point.html">UDTAbilityTask_NetworkSyncPoint</a> * UDTAbilityTask_NetworkSyncPoint::WaitNetSync </td>
+          <td>(</td>
+          <td class="paramtype">UGameplayAbility *</td>          <td class="paramname"><span class="paramname"><em>OwningAbility</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_d_t_ability_task___network_sync_point_8h.html#a30b963182119208ff12c7bc01b4e04b8">EDTAbilityTaskNetSyncType</a></td>          <td class="paramname"><span class="paramname"><em>SyncType</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Synchronize execution flow between Client and Server. </p>
+<p>Depending on SyncType, the Client and Server will wait for the other to reach this node before continuing execution. The signal is ability-instance wide. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00023">23</a> of file <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html">DTAbilityTask_NetworkSyncPoint.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00058">SyncType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00253">UDTTask_PlayMontageWaitForEvent::OnGameplayEvent()</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="aba4b8766a6c3b926b0e8c0098b89262f" name="aba4b8766a6c3b926b0e8c0098b89262f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba4b8766a6c3b926b0e8c0098b89262f">&#9670;&#160;</a></span>OnSync</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTNetworkSyncDelegate UDTAbilityTask_NetworkSyncPoint::OnSync</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00036">36</a> of file <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html">DTAbilityTask_NetworkSyncPoint.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00075">SyncFinished()</a>.</p>
+
+</div>
+</div>
+<a id="a207a79a87eea898e06c04ad866ebeec8" name="a207a79a87eea898e06c04ad866ebeec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a207a79a87eea898e06c04ad866ebeec8">&#9670;&#160;</a></span>OnSyncDelegate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FDTNetworkSyncNativeDelegate UDTAbilityTask_NetworkSyncPoint::OnSyncDelegate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Native delegate on sync. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00039">39</a> of file <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html">DTAbilityTask_NetworkSyncPoint.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_task___play_montage_wait_for_event_8cpp_source.html#l00253">UDTTask_PlayMontageWaitForEvent::OnGameplayEvent()</a>, and <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00075">SyncFinished()</a>.</p>
+
+</div>
+</div>
 <a id="ad8f711fef3c0aef1fc08e7058db1e7fb" name="ad8f711fef3c0aef1fc08e7058db1e7fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8f711fef3c0aef1fc08e7058db1e7fb">&#9670;&#160;</a></span>ReplicatedEventToListenFor</h2>
 
@@ -211,6 +413,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00056">56</a> of file <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html">DTAbilityTask_NetworkSyncPoint.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00030">Activate()</a>, and <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00013">OnSignalCallback()</a>.</p>
+
 </div>
 </div>
 <a id="acc681a67a4a5a99218bd45247a228528" name="acc681a67a4a5a99218bd45247a228528"></a>
@@ -234,6 +438,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html#l00058">58</a> of file <a class="el" href="_d_t_ability_task___network_sync_point_8h_source.html">DTAbilityTask_NetworkSyncPoint.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00030">Activate()</a>, and <a class="el" href="_d_t_ability_task___network_sync_point_8cpp_source.html#l00023">WaitNetSync()</a>.</p>
 
 </div>
 </div>

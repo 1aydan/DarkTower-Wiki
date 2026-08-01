@@ -5,6 +5,8 @@ var class_a_d_t_player_state =
     [ "CanChangeInitState", "class_a_d_t_player_state.html#add154f6e9c828554627ebbf8e562081f", null ],
     [ "CheckDefaultInitialization", "class_a_d_t_player_state.html#a907bb6f25ca2ef558527af8e5ca84c5b", null ],
     [ "ClientInitialize", "class_a_d_t_player_state.html#aeee9f66d957b2cb8ba0f24f5d21efce0", null ],
+    [ "DelayedClientInit", "class_a_d_t_player_state.html#aa06d4c79ce4fe4940deeb7e6cf981afe", null ],
+    [ "DelayedInit", "class_a_d_t_player_state.html#ab92135ade80d81cdd8e37608eefbab3c", null ],
     [ "EndPlay", "class_a_d_t_player_state.html#a63aa1cc0ddb0fac03936f699b3a40ca4", null ],
     [ "GetAbilityCoreComponent_Implementation", "class_a_d_t_player_state.html#a0f757cfc6d00a9cafef4cc7d5ad088fc", null ],
     [ "GetAbilitySlotComponent", "class_a_d_t_player_state.html#ac7a580984b0a84349f46878a903bf74f", null ],

@@ -23,6 +23,7 @@ var class_u_d_t_ability_widget =
     [ "AbilityDefinition", "class_u_d_t_ability_widget.html#a5e4dcff2af70e0647490b3d8bea7e2fb", null ],
     [ "AbilitySlot", "class_u_d_t_ability_widget.html#a0c4e85aea9bf14d1050976cbeb7ef82b", null ],
     [ "AbilitySpec", "class_u_d_t_ability_widget.html#aecfde2f6bb365d44a4079dc29aa2cf47", null ],
+    [ "bIsInitialized", "class_u_d_t_ability_widget.html#ad24ac4278837035b160ae47f7f0d0fcf", null ],
     [ "CAW_AbilityInput", "class_u_d_t_ability_widget.html#af1a8be8fec7deef2ccd1e7d77078ac33", null ],
     [ "CooldownParameterName", "class_u_d_t_ability_widget.html#a4bec71b8858203c5fb8d82b62cdf450b", null ],
     [ "CurrentIsActive", "class_u_d_t_ability_widget.html#ac840049703296bc50b976ab79765287a", null ],

@@ -1,9 +1,12 @@
 var class_u_d_t_progression_data =
 [
+    [ "ApplyCampaignSettings", "class_u_d_t_progression_data.html#ac73df87307df5fa8a9fb7d89c9d84f67", null ],
+    [ "ApplyEndgameSettings", "class_u_d_t_progression_data.html#abd0752b39641762a8a2035a9d90751cb", null ],
     [ "BuildDungeonSettingsFromConfig", "class_u_d_t_progression_data.html#a006fc8f6b802db609d943ab01eda7833", null ],
     [ "FindGameModeDefinition", "class_u_d_t_progression_data.html#a4f5305c3b4a52d201c17561189e5dd9c", null ],
     [ "FindGameModeDefinitionOfType", "class_u_d_t_progression_data.html#ad99f759effa16222a239d31df29709b1", null ],
     [ "GetKillExperienceMultiplierForTargetTags", "class_u_d_t_progression_data.html#a8c493196fd4d766e867173e95507cf9d", null ],
+    [ "GetTravelMapName", "class_u_d_t_progression_data.html#a9f77007c8443658b61d1e045158ccbfa", null ],
     [ "GetXPToLevel", "class_u_d_t_progression_data.html#a4408f5a149bef84353391b41e2967050", null ],
     [ "GetXPToNextLevel", "class_u_d_t_progression_data.html#aa340ef7fac3b6e35cb5a8666e2c38b49", null ],
     [ "ResolveTravelMapNameForConfig", "class_u_d_t_progression_data.html#ad584734aa042c6828cda55c66f632f69", null ],

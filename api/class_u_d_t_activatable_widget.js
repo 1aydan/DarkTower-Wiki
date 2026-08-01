@@ -7,6 +7,7 @@ var class_u_d_t_activatable_widget =
     [ "RegisterBinding", "class_u_d_t_activatable_widget.html#ae0058c2ee2d4db4bd9579b9196da4832", null ],
     [ "UnregisterAllBindings", "class_u_d_t_activatable_widget.html#a2ad63e8c86958f1aa277f5911eb2665b", null ],
     [ "UnregisterBinding", "class_u_d_t_activatable_widget.html#a4b927201c15595c5d56e895397d25cc6", null ],
+    [ "BindingHandles", "class_u_d_t_activatable_widget.html#a01a8f99723ac4d4482cbf0c10a529a37", null ],
     [ "bOverrideDefaultInputConfig", "class_u_d_t_activatable_widget.html#ae6c13fde8552708ace4154d2ec97fa98", null ],
     [ "InputConfig", "class_u_d_t_activatable_widget.html#a2396418f13f4c464c4c9264af27b7342", null ]
 ];

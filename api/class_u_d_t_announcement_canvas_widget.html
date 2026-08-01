@@ -173,6 +173,22 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a6117dc0a0f88cd8b2fc44e9ee863e4da" id="r_a6117dc0a0f88cd8b2fc44e9ee863e4da"><td class="memItemLeft">TObjectPtr&lt; UPanelWidget &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6117dc0a0f88cd8b2fc44e9ee863e4da">AnnouncementContainer</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7ee164b1c42cb321806efe7dae3bddf7" id="r_a7ee164b1c42cb321806efe7dae3bddf7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7ee164b1c42cb321806efe7dae3bddf7">HandleAnnouncementMessage</a> (FGameplayTag Channel, const <a class="el" href="struct_f_d_t_announcement_message.html">FDTAnnouncementMessage</a> &amp;Message)</td></tr>
+<tr class="memitem:a16d6f1571f058efb6454005930adf845" id="r_a16d6f1571f058efb6454005930adf845"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a16d6f1571f058efb6454005930adf845">ProcessQueue</a> ()</td></tr>
+<tr class="memitem:ae951e9d403d531ea1daa6b01827c81fc" id="r_ae951e9d403d531ea1daa6b01827c81fc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae951e9d403d531ea1daa6b01827c81fc">ShowAnnouncement</a> (const <a class="el" href="struct_f_d_t_announcement_message.html">FDTAnnouncementMessage</a> &amp;Message, float EffectiveLifetime)</td></tr>
+<tr class="memitem:a45937543cfe8ba1f8ef7d3cb807975c1" id="r_a45937543cfe8ba1f8ef7d3cb807975c1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a45937543cfe8ba1f8ef7d3cb807975c1">BeginExpireAnnouncement</a> ()</td></tr>
+<tr class="memitem:ad947f021f3e1cdb98f53ed3ecfa1e059" id="r_ad947f021f3e1cdb98f53ed3ecfa1e059"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad947f021f3e1cdb98f53ed3ecfa1e059">RemoveActiveAnnouncement</a> ()</td></tr>
+<tr class="memitem:a4669e1387161f357b05d3f0027f13c73" id="r_a4669e1387161f357b05d3f0027f13c73"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4669e1387161f357b05d3f0027f13c73">OnAnnouncementReadyForRemoval</a> ()</td></tr>
+<tr class="memitem:aec85a4cb62f71ecf8912781fe516828e" id="r_aec85a4cb62f71ecf8912781fe516828e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aec85a4cb62f71ecf8912781fe516828e">EnqueueSorted</a> (const <a class="el" href="struct_f_d_t_queued_announcement.html">FDTQueuedAnnouncement</a> &amp;Queued)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a67978f1ec8a33d9933894fe347faf4b3" id="r_a67978f1ec8a33d9933894fe347faf4b3"><td class="memItemLeft">FGameplayMessageListenerHandle&#160;</td><td class="memItemRight"><a class="el" href="#a67978f1ec8a33d9933894fe347faf4b3">MessageListenerHandle</a></td></tr>
+<tr class="memitem:a0588b56187042a48c594dfdecb094078" id="r_a0588b56187042a48c594dfdecb094078"><td class="memItemLeft"><a class="el" href="struct_f_d_t_active_announcement.html">FDTActiveAnnouncement</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0588b56187042a48c594dfdecb094078">ActiveAnnouncement</a></td></tr>
+<tr class="memitem:a82c5c0d7712628aa9320a756e190ef3c" id="r_a82c5c0d7712628aa9320a756e190ef3c"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_d_t_queued_announcement.html">FDTQueuedAnnouncement</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a82c5c0d7712628aa9320a756e190ef3c">PendingQueue</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Canvas for one-at-a-time center-screen announcements. </p>
@@ -203,6 +219,37 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a45937543cfe8ba1f8ef7d3cb807975c1" name="a45937543cfe8ba1f8ef7d3cb807975c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45937543cfe8ba1f8ef7d3cb807975c1">&#9670;&#160;</a></span>BeginExpireAnnouncement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAnnouncementCanvasWidget::BeginExpireAnnouncement </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00200">200</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00090">ActiveAnnouncement</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00044">NativeTick()</a>.</p>
+
+</div>
+</div>
 <a id="af4b8326c81a59783e3c5b1a93f4473dc" name="af4b8326c81a59783e3c5b1a93f4473dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4b8326c81a59783e3c5b1a93f4473dc">&#9670;&#160;</a></span>ClearAll()</h2>
 
@@ -220,7 +267,75 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00122">122</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00090">ActiveAnnouncement</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00092">PendingQueue</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00036">NativeDestruct()</a>.</p>
+
+</div>
+</div>
+<a id="aec85a4cb62f71ecf8912781fe516828e" name="aec85a4cb62f71ecf8912781fe516828e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec85a4cb62f71ecf8912781fe516828e">&#9670;&#160;</a></span>EnqueueSorted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAnnouncementCanvasWidget::EnqueueSorted </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_queued_announcement.html">FDTQueuedAnnouncement</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Queued</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00229">229</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_message_types_8h_source.html#l00337">FDTQueuedAnnouncement::Message</a>, <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00092">PendingQueue</a>, and <a class="el" href="_d_t_message_types_8h_source.html#l00320">FDTAnnouncementMessage::Priority</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00135">HandleAnnouncementMessage()</a>.</p>
+
+</div>
+</div>
+<a id="a7ee164b1c42cb321806efe7dae3bddf7" name="a7ee164b1c42cb321806efe7dae3bddf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ee164b1c42cb321806efe7dae3bddf7">&#9670;&#160;</a></span>HandleAnnouncementMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAnnouncementCanvasWidget::HandleAnnouncementMessage </td>
+          <td>(</td>
+          <td class="paramtype">FGameplayTag</td>          <td class="paramname"><span class="paramname"><em>Channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_announcement_message.html">FDTAnnouncementMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00135">135</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00090">ActiveAnnouncement</a>, <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00058">DefaultDisplayDuration</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00340">FDTQueuedAnnouncement::EffectiveLifetime</a>, <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00229">EnqueueSorted()</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00324">FDTAnnouncementMessage::LifetimeOverride</a>, <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00064">MaxQueueSize</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00337">FDTQueuedAnnouncement::Message</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00328">FDTAnnouncementMessage::OwningPlayer</a>, <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00092">PendingQueue</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00172">ShowAnnouncement()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00117">PostAnnouncementDirect()</a>.</p>
 
 </div>
 </div>
@@ -340,7 +455,38 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00044">44</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00061">HideAnimationDuration</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00090">ActiveAnnouncement</a>, <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00200">BeginExpireAnnouncement()</a>, <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00061">HideAnimationDuration</a>, <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00160">ProcessQueue()</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00212">RemoveActiveAnnouncement()</a>.</p>
+
+</div>
+</div>
+<a id="a4669e1387161f357b05d3f0027f13c73" name="a4669e1387161f357b05d3f0027f13c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4669e1387161f357b05d3f0027f13c73">&#9670;&#160;</a></span>OnAnnouncementReadyForRemoval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAnnouncementCanvasWidget::OnAnnouncementReadyForRemoval </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00224">224</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00212">RemoveActiveAnnouncement()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00172">ShowAnnouncement()</a>.</p>
 
 </div>
 </div>
@@ -361,7 +507,104 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00117">117</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00052">ChannelTag</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00052">ChannelTag</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00135">HandleAnnouncementMessage()</a>.</p>
+
+</div>
+</div>
+<a id="a16d6f1571f058efb6454005930adf845" name="a16d6f1571f058efb6454005930adf845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16d6f1571f058efb6454005930adf845">&#9670;&#160;</a></span>ProcessQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAnnouncementCanvasWidget::ProcessQueue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00160">160</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00090">ActiveAnnouncement</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00340">FDTQueuedAnnouncement::EffectiveLifetime</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00337">FDTQueuedAnnouncement::Message</a>, <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00092">PendingQueue</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00172">ShowAnnouncement()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00044">NativeTick()</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00212">RemoveActiveAnnouncement()</a>.</p>
+
+</div>
+</div>
+<a id="ad947f021f3e1cdb98f53ed3ecfa1e059" name="ad947f021f3e1cdb98f53ed3ecfa1e059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad947f021f3e1cdb98f53ed3ecfa1e059">&#9670;&#160;</a></span>RemoveActiveAnnouncement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAnnouncementCanvasWidget::RemoveActiveAnnouncement </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00212">212</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00090">ActiveAnnouncement</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00160">ProcessQueue()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00044">NativeTick()</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00224">OnAnnouncementReadyForRemoval()</a>.</p>
+
+</div>
+</div>
+<a id="ae951e9d403d531ea1daa6b01827c81fc" name="ae951e9d403d531ea1daa6b01827c81fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae951e9d403d531ea1daa6b01827c81fc">&#9670;&#160;</a></span>ShowAnnouncement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTAnnouncementCanvasWidget::ShowAnnouncement </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_f_d_t_announcement_message.html">FDTAnnouncementMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>EffectiveLifetime</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00172">172</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00090">ActiveAnnouncement</a>, <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00071">AnnouncementContainer</a>, <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00055">AnnouncementWidgetClass</a>, <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00224">OnAnnouncementReadyForRemoval()</a>, <a class="el" href="_d_t_announcement_widget_8h_source.html#l00030">UDTAnnouncementWidget::OnReadyForRemoval</a>, <a class="el" href="_d_t_message_types_8h_source.html#l00320">FDTAnnouncementMessage::Priority</a>, <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00031">UDTAnnouncementWidget::ResetAnnouncement()</a>, and <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00007">UDTAnnouncementWidget::ShowAnnouncement()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00135">HandleAnnouncementMessage()</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00160">ProcessQueue()</a>.</p>
 
 </div>
 </div>
@@ -382,7 +625,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00074">74</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00052">ChannelTag</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00013">UDTAnnouncementCanvasWidget()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00052">ChannelTag</a>, <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00087">MessageListenerHandle</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00013">UDTAnnouncementCanvasWidget()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00026">NativeConstruct()</a>.</p>
 
@@ -405,11 +648,39 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00109">109</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html">DTAnnouncementCanvasWidget.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00087">MessageListenerHandle</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00036">NativeDestruct()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a0588b56187042a48c594dfdecb094078" name="a0588b56187042a48c594dfdecb094078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0588b56187042a48c594dfdecb094078">&#9670;&#160;</a></span>ActiveAnnouncement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_f_d_t_active_announcement.html">FDTActiveAnnouncement</a> UDTAnnouncementCanvasWidget::ActiveAnnouncement</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00090">90</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html">DTAnnouncementCanvasWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00200">BeginExpireAnnouncement()</a>, <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00122">ClearAll()</a>, <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00135">HandleAnnouncementMessage()</a>, <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00044">NativeTick()</a>, <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00160">ProcessQueue()</a>, <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00212">RemoveActiveAnnouncement()</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00172">ShowAnnouncement()</a>.</p>
+
+</div>
+</div>
 <a id="a6117dc0a0f88cd8b2fc44e9ee863e4da" name="a6117dc0a0f88cd8b2fc44e9ee863e4da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6117dc0a0f88cd8b2fc44e9ee863e4da">&#9670;&#160;</a></span>AnnouncementContainer</h2>
 
@@ -432,7 +703,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html">DTAnnouncementCanvasWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00019">NativeOnInitialized()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00019">NativeOnInitialized()</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00172">ShowAnnouncement()</a>.</p>
 
 </div>
 </div>
@@ -449,6 +720,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00055">55</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html">DTAnnouncementCanvasWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00172">ShowAnnouncement()</a>.</p>
 
 </div>
 </div>
@@ -502,6 +775,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00058">58</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html">DTAnnouncementCanvasWidget.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00135">HandleAnnouncementMessage()</a>.</p>
+
 </div>
 </div>
 <a id="abae570c9128f0682df7efb92c1091f9f" name="abae570c9128f0682df7efb92c1091f9f"></a>
@@ -535,6 +810,60 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00064">64</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html">DTAnnouncementCanvasWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00135">HandleAnnouncementMessage()</a>.</p>
+
+</div>
+</div>
+<a id="a67978f1ec8a33d9933894fe347faf4b3" name="a67978f1ec8a33d9933894fe347faf4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67978f1ec8a33d9933894fe347faf4b3">&#9670;&#160;</a></span>MessageListenerHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FGameplayMessageListenerHandle UDTAnnouncementCanvasWidget::MessageListenerHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00087">87</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html">DTAnnouncementCanvasWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00074">SubscribeToChannel()</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00109">UnsubscribeFromChannel()</a>.</p>
+
+</div>
+</div>
+<a id="a82c5c0d7712628aa9320a756e190ef3c" name="a82c5c0d7712628aa9320a756e190ef3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82c5c0d7712628aa9320a756e190ef3c">&#9670;&#160;</a></span>PendingQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_d_t_queued_announcement.html">FDTQueuedAnnouncement</a>&gt; UDTAnnouncementCanvasWidget::PendingQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html#l00092">92</a> of file <a class="el" href="_d_t_announcement_canvas_widget_8h_source.html">DTAnnouncementCanvasWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00122">ClearAll()</a>, <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00229">EnqueueSorted()</a>, <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00135">HandleAnnouncementMessage()</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00160">ProcessQueue()</a>.</p>
 
 </div>
 </div>

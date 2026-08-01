@@ -166,6 +166,10 @@ Public Attributes</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ae8a2e5d3a1f612cfee29caa685616640" id="r_ae8a2e5d3a1f612cfee29caa685616640"><td class="memItemLeft">TObjectPtr&lt; UWidgetAnimation &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae8a2e5d3a1f612cfee29caa685616640">Anim_Show</a></td></tr>
 <tr class="memitem:a0b75a54dd15b3424864bd5041a6bb89b" id="r_a0b75a54dd15b3424864bd5041a6bb89b"><td class="memItemLeft">TObjectPtr&lt; UWidgetAnimation &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0b75a54dd15b3424864bd5041a6bb89b">Anim_Hide</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a42afea8ccd66c22929e4d1c788acc2cc" id="r_a42afea8ccd66c22929e4d1c788acc2cc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a42afea8ccd66c22929e4d1c788acc2cc">bReadyForRemovalFired</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Single center-screen announcement widget. </p>
@@ -294,7 +298,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00038">38</a> of file <a class="el" href="_d_t_announcement_widget_8cpp_source.html">DTAnnouncementWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_announcement_widget_8h_source.html#l00030">OnReadyForRemoval</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_announcement_widget_8h_source.html#l00055">bReadyForRemovalFired</a>, and <a class="el" href="_d_t_announcement_widget_8h_source.html#l00030">OnReadyForRemoval</a>.</p>
 
 </div>
 </div>
@@ -315,7 +319,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00031">31</a> of file <a class="el" href="_d_t_announcement_widget_8cpp_source.html">DTAnnouncementWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_announcement_widget_8h_source.html#l00030">OnReadyForRemoval</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_announcement_widget_8h_source.html#l00055">bReadyForRemovalFired</a>, and <a class="el" href="_d_t_announcement_widget_8h_source.html#l00030">OnReadyForRemoval</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00172">UDTAnnouncementCanvasWidget::ShowAnnouncement()</a>.</p>
 
 </div>
 </div>
@@ -336,7 +342,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00007">7</a> of file <a class="el" href="_d_t_announcement_widget_8cpp_source.html">DTAnnouncementWidget.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_announcement_widget_8h_source.html#l00049">Anim_Show</a>, <a class="el" href="#a9ade7c7eb658e149c056e5ed3f85979d">BP_PlayShowAnimation()</a>, and <a class="el" href="#a2e5712145f0120dd30471dcd00c5dd42">BP_Show()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_announcement_widget_8h_source.html#l00049">Anim_Show</a>, <a class="el" href="#a9ade7c7eb658e149c056e5ed3f85979d">BP_PlayShowAnimation()</a>, <a class="el" href="#a2e5712145f0120dd30471dcd00c5dd42">BP_Show()</a>, and <a class="el" href="_d_t_announcement_widget_8h_source.html#l00055">bReadyForRemovalFired</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00172">UDTAnnouncementCanvasWidget::ShowAnnouncement()</a>.</p>
 
 </div>
 </div>
@@ -409,6 +417,32 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a42afea8ccd66c22929e4d1c788acc2cc" name="a42afea8ccd66c22929e4d1c788acc2cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42afea8ccd66c22929e4d1c788acc2cc">&#9670;&#160;</a></span>bReadyForRemovalFired</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTAnnouncementWidget::bReadyForRemovalFired = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_announcement_widget_8h_source.html#l00055">55</a> of file <a class="el" href="_d_t_announcement_widget_8h_source.html">DTAnnouncementWidget.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00038">NotifyReadyForRemoval()</a>, <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00031">ResetAnnouncement()</a>, and <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00007">ShowAnnouncement()</a>.</p>
+
+</div>
+</div>
 <a id="ae5d08667b2197517c4e6328810d5bd08" name="ae5d08667b2197517c4e6328810d5bd08"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5d08667b2197517c4e6328810d5bd08">&#9670;&#160;</a></span>OnReadyForRemoval</h2>
 
@@ -423,7 +457,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_announcement_widget_8h_source.html#l00030">30</a> of file <a class="el" href="_d_t_announcement_widget_8h_source.html">DTAnnouncementWidget.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00038">NotifyReadyForRemoval()</a>, and <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00031">ResetAnnouncement()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00038">NotifyReadyForRemoval()</a>, <a class="el" href="_d_t_announcement_widget_8cpp_source.html#l00031">ResetAnnouncement()</a>, and <a class="el" href="_d_t_announcement_canvas_widget_8cpp_source.html#l00172">UDTAnnouncementCanvasWidget::ShowAnnouncement()</a>.</p>
 
 </div>
 </div>

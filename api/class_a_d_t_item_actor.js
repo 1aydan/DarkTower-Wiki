@@ -36,5 +36,6 @@ var class_a_d_t_item_actor =
     [ "OnInteractionFocusChanged", "class_a_d_t_item_actor.html#a11c5bc97c5d1c1c12c7715bcd45c8732", null ],
     [ "OwningPlayer", "class_a_d_t_item_actor.html#a1b247f01255f82c07c9d438a61950321", null ],
     [ "PhysicsSleepTime", "class_a_d_t_item_actor.html#a64c363631c0b9f0a7c86a5b5d39f08d0", null ],
+    [ "PhysicsSleepTimerHandle", "class_a_d_t_item_actor.html#af586b4a536bfd3de55a568a3dac04fa0", null ],
     [ "VisibilityType", "class_a_d_t_item_actor.html#ae29aa7f0beb1302f2cf875b2e0f0ae01", null ]
 ];

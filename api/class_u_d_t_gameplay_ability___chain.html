@@ -287,6 +287,25 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aec85904cd98702c11301b2262b135de5 pro_methods_class_u_d_t_gameplay_ability" id="r_aec85904cd98702c11301b2262b135de5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#aec85904cd98702c11301b2262b135de5">AbilityEnded</a> (UGameplayAbility *Ability)</td></tr>
 <tr class="memitem:a2f7cc11b17f45dd0ebbc5b2666755d57 pro_methods_class_u_d_t_gameplay_ability" id="r_a2f7cc11b17f45dd0ebbc5b2666755d57"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_u_d_t_gameplay_ability.html#a2f7cc11b17f45dd0ebbc5b2666755d57">PreActivate</a> (const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, FOnGameplayAbilityEnded::FDelegate *OnGameplayAbilityEndedDelegate, const FGameplayEventData *TriggerEventData=nullptr) override</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0461c818f9caaf267c0b2e7cb939d609" id="r_a0461c818f9caaf267c0b2e7cb939d609"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0461c818f9caaf267c0b2e7cb939d609">StartChainTask</a> ()</td></tr>
+<tr class="memitem:a473b7d63fb97e98939b3a55e4b9f2079" id="r_a473b7d63fb97e98939b3a55e4b9f2079"><td class="memItemLeft">USceneComponent *&#160;</td><td class="memItemRight"><a class="el" href="#a473b7d63fb97e98939b3a55e4b9f2079">GetChainStartPoint</a> (FName &amp;OutSocketName, FVector &amp;OutStartLocation) const</td></tr>
+<tr class="memitem:a48fd73467c17f3ce4482c95c3d0bda09" id="r_a48fd73467c17f3ce4482c95c3d0bda09"><td class="memItemLeft">FVector&#160;</td><td class="memItemRight"><a class="el" href="#a48fd73467c17f3ce4482c95c3d0bda09">GetChainEndPoint</a> (const FVector &amp;Start, const FVector &amp;Direction, const TArray&lt; AActor * &gt; &amp;ActorsToIgnore) const</td></tr>
+<tr class="memitem:a7f998f87ca0e17de0b1e0b8becc19e3f" id="r_a7f998f87ca0e17de0b1e0b8becc19e3f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7f998f87ca0e17de0b1e0b8becc19e3f">IsValidChainTarget</a> (AActor *Target, const FVector &amp;SourceLocation) const</td></tr>
+<tr class="memitem:aa740d1007f9e2b6840a91f1f7637bf94" id="r_aa740d1007f9e2b6840a91f1f7637bf94"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa740d1007f9e2b6840a91f1f7637bf94">UpdateChainTargets</a> ()</td></tr>
+<tr class="memitem:a3b6305f5cfec6fea66f1fd4165a9cff7" id="r_a3b6305f5cfec6fea66f1fd4165a9cff7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3b6305f5cfec6fea66f1fd4165a9cff7">PullTarget</a> (int32 ChainIndex, int32 TargetIndex, const <a class="el" href="struct_f_chain_trace.html">FChainTrace</a> &amp;Chain, const <a class="el" href="struct_f_chain_target.html">FChainTarget</a> &amp;PullTarget)</td></tr>
+<tr class="memitem:a61cfe2dd45570bd85d2f7c3f971b9b47" id="r_a61cfe2dd45570bd85d2f7c3f971b9b47"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a61cfe2dd45570bd85d2f7c3f971b9b47">HandleChainTargetPull</a> (int32 ChainIndex, int32 TargetIndex)</td></tr>
+<tr class="memitem:a7b6516f3615f39d8f93702373d70ee17" id="r_a7b6516f3615f39d8f93702373d70ee17"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7b6516f3615f39d8f93702373d70ee17">HandleChainTaskFinished</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6af117f54ddb3aed384c69d708280b7f" id="r_a6af117f54ddb3aed384c69d708280b7f"><td class="memItemLeft">TObjectPtr&lt; AActor &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6af117f54ddb3aed384c69d708280b7f">ActiveCaster</a> = nullptr</td></tr>
+<tr class="memitem:a4b529e0066b119db5e42ab27db6cbdbd" id="r_a4b529e0066b119db5e42ab27db6cbdbd"><td class="memItemLeft">TObjectPtr&lt; <a class="el" href="class_u_d_t_ability_task___update_chain.html">UDTAbilityTask_UpdateChain</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4b529e0066b119db5e42ab27db6cbdbd">ActiveChainTask</a> = nullptr</td></tr>
+<tr class="memitem:a82f6a7e28b723faba84cddbfcbca7396" id="r_a82f6a7e28b723faba84cddbfcbca7396"><td class="memItemLeft">TObjectPtr&lt; USceneComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a82f6a7e28b723faba84cddbfcbca7396">ActiveChainAttachComponent</a> = nullptr</td></tr>
+<tr class="memitem:aea51fbba7cfe8d3302eec9d893b687c7" id="r_aea51fbba7cfe8d3302eec9d893b687c7"><td class="memItemLeft">TArray&lt; <a class="el" href="struct_f_chain_trace.html">FChainTrace</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aea51fbba7cfe8d3302eec9d893b687c7">ActiveChainTraces</a></td></tr>
+<tr class="memitem:a0a2cb5143c59f850a220aed78b4661f2" id="r_a0a2cb5143c59f850a220aed78b4661f2"><td class="memItemLeft">FName&#160;</td><td class="memItemRight"><a class="el" href="#a0a2cb5143c59f850a220aed78b4661f2">ActiveChainAttachSocketName</a> = NAME_None</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_u_d_t_gameplay_ability___spell"><td colspan="2">Protected Attributes inherited from <a class="el" href="class_u_d_t_gameplay_ability___spell.html">UDTGameplayAbility_Spell</a></td></tr>
@@ -367,7 +386,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00024">24</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html">DTGameplayAbility_Chain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00038">EndAbility()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00114">ActiveCaster</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00038">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a4aeb210882a4f118205bb9c10feb964c">GetChainAmount()</a>.</p>
 
@@ -419,7 +438,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00038">38</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html">DTGameplayAbility_Chain.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00024">DoSpellEffect_Implementation()</a>, and <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00114">ActiveCaster</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00120">ActiveChainAttachComponent</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00125">ActiveChainAttachSocketName</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00117">ActiveChainTask</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00123">ActiveChainTraces</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00024">DoSpellEffect_Implementation()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00253">HandleChainTaskFinished()</a>, and <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>.</p>
 
 </div>
 </div>
@@ -440,7 +461,183 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00024">DoSpellEffect_Implementation()</a>, and <a class="el" href="#a4aeb210882a4f118205bb9c10feb964c">GetChainAmount()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a4aeb210882a4f118205bb9c10feb964c">GetChainAmount()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a4aeb210882a4f118205bb9c10feb964c">GetChainAmount()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
+
+</div>
+</div>
+<a id="a48fd73467c17f3ce4482c95c3d0bda09" name="a48fd73467c17f3ce4482c95c3d0bda09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48fd73467c17f3ce4482c95c3d0bda09">&#9670;&#160;</a></span>GetChainEndPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FVector UDTGameplayAbility_Chain::GetChainEndPoint </td>
+          <td>(</td>
+          <td class="paramtype">const FVector &amp;</td>          <td class="paramname"><span class="paramname"><em>Start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FVector &amp;</td>          <td class="paramname"><span class="paramname"><em>Direction</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TArray&lt; AActor * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ActorsToIgnore</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00126">126</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html">DTGameplayAbility_Chain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00038">DebugTraceType</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00047">EndTraceObjectTypes</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00029">Range</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
+
+</div>
+</div>
+<a id="a473b7d63fb97e98939b3a55e4b9f2079" name="a473b7d63fb97e98939b3a55e4b9f2079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a473b7d63fb97e98939b3a55e4b9f2079">&#9670;&#160;</a></span>GetChainStartPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">USceneComponent * UDTGameplayAbility_Chain::GetChainStartPoint </td>
+          <td>(</td>
+          <td class="paramtype">FName &amp;</td>          <td class="paramname"><span class="paramname"><em>OutSocketName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FVector &amp;</td>          <td class="paramname"><span class="paramname"><em>OutStartLocation</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00098">98</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html">DTGameplayAbility_Chain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00114">ActiveCaster</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00083">PullPointSocketName</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
+
+</div>
+</div>
+<a id="a61cfe2dd45570bd85d2f7c3f971b9b47" name="a61cfe2dd45570bd85d2f7c3f971b9b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61cfe2dd45570bd85d2f7c3f971b9b47">&#9670;&#160;</a></span>HandleChainTargetPull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Chain::HandleChainTargetPull </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>TargetIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00243">243</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html">DTGameplayAbility_Chain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00123">ActiveChainTraces</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00260">PullTarget()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>.</p>
+
+</div>
+</div>
+<a id="a7b6516f3615f39d8f93702373d70ee17" name="a7b6516f3615f39d8f93702373d70ee17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6516f3615f39d8f93702373d70ee17">&#9670;&#160;</a></span>HandleChainTaskFinished()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Chain::HandleChainTaskFinished </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00253">253</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html">DTGameplayAbility_Chain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00117">ActiveChainTask</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00038">EndAbility()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>.</p>
+
+</div>
+</div>
+<a id="a7f998f87ca0e17de0b1e0b8becc19e3f" name="a7f998f87ca0e17de0b1e0b8becc19e3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f998f87ca0e17de0b1e0b8becc19e3f">&#9670;&#160;</a></span>IsValidChainTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTGameplayAbility_Chain::IsValidChainTarget </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>Target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FVector &amp;</td>          <td class="paramname"><span class="paramname"><em>SourceLocation</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00139">139</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html">DTGameplayAbility_Chain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00114">ActiveCaster</a>, <a class="el" href="_d_t_team_subsystem_8cpp_source.html#l00230">UDTTeamSubsystem::DoesActorPassTeamQuery()</a>, <a class="el" href="_d_t_team_subsystem_8h_source.html#l00049">FTeamQueryParams::OverrideLocation</a>, <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00024">Target</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00050">TeamQueryParams</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00260">PullTarget()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
 
 </div>
 </div>
@@ -544,13 +741,250 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00038">EndAbility()</a>, and <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00038">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00126">GetChainEndPoint()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00098">GetChainStartPoint()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00243">HandleChainTargetPull()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00253">HandleChainTaskFinished()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00139">IsValidChainTarget()</a>, <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00260">PullTarget()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00260">PullTarget()</a>.</p>
+
+</div>
+</div>
+<a id="a3b6305f5cfec6fea66f1fd4165a9cff7" name="a3b6305f5cfec6fea66f1fd4165a9cff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6305f5cfec6fea66f1fd4165a9cff7">&#9670;&#160;</a></span>PullTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UDTGameplayAbility_Chain::PullTarget </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>ChainIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>TargetIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_f_chain_trace.html">FChainTrace</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Chain</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_f_chain_target.html">FChainTarget</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>PullTarget</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00260">260</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html">DTGameplayAbility_Chain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00114">ActiveCaster</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00047">FChainTrace::Direction</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00029">FChainTarget::DistanceAlongChain</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00026">FChainTarget::HookLocation</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00139">IsValidChainTarget()</a>, <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00080">PullStopDistance</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00077">PullStrength</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00041">FChainTrace::Start</a>, and <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00023">FChainTarget::Target</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00243">HandleChainTargetPull()</a>, <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
+
+</div>
+</div>
+<a id="a0461c818f9caaf267c0b2e7cb939d609" name="a0461c818f9caaf267c0b2e7cb939d609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0461c818f9caaf267c0b2e7cb939d609">&#9670;&#160;</a></span>StartChainTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Chain::StartChainTask </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">59</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html">DTGameplayAbility_Chain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00120">ActiveChainAttachComponent</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00125">ActiveChainAttachSocketName</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00117">ActiveChainTask</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00123">ActiveChainTraces</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00068">bWaitForRetractNotify</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00059">ChainEndParameterName</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00065">ChainRetractDuration</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00071">ChainRetractNotifyTag</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00056">ChainStartParameterName</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00074">ChainTravelSpeed</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00053">ChainVFX</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00062">ChainVFXHoldDuration</a>, and <a class="el" href="_d_t_ability_task___update_chain_8cpp_source.html#l00017">UDTAbilityTask_UpdateChain::UpdateChain()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00024">DoSpellEffect_Implementation()</a>, and <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>.</p>
+
+</div>
+</div>
+<a id="aa740d1007f9e2b6840a91f1f7637bf94" name="aa740d1007f9e2b6840a91f1f7637bf94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa740d1007f9e2b6840a91f1f7637bf94">&#9670;&#160;</a></span>UpdateChainTargets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDTGameplayAbility_Chain::UpdateChainTargets </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">158</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html">DTGameplayAbility_Chain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00114">ActiveCaster</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00120">ActiveChainAttachComponent</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00125">ActiveChainAttachSocketName</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00123">ActiveChainTraces</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00038">DebugTraceType</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00047">FChainTrace::Direction</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00029">FChainTarget::DistanceAlongChain</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00044">FChainTrace::End</a>, <a class="el" href="#a4aeb210882a4f118205bb9c10feb964c">GetChainAmount()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00126">GetChainEndPoint()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00098">GetChainStartPoint()</a>, <a class="el" href="_d_t_blueprint_library_8cpp_source.html#l00418">UDTBlueprintLibrary::GetSpreadDirections()</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00032">FChainTarget::Hit</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00026">FChainTarget::HookLocation</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00139">IsValidChainTarget()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00260">PullTarget()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00032">SpreadDegrees</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00041">FChainTrace::Start</a>, <a class="el" href="_d_t_gameplay_ability___passive_8h_source.html#l00024">Target</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00023">FChainTarget::Target</a>, <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00044">TargetObjectTypes</a>, <a class="el" href="_d_t_ability_task___update_chain_8h_source.html#l00050">FChainTrace::Targets</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00041">TraceRadius</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00024">DoSpellEffect_Implementation()</a>, and <a class="el" href="#a54ce8712ba332b4b6e6da86cc155c39a">K2_OnChainTargetPulled()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a6af117f54ddb3aed384c69d708280b7f" name="a6af117f54ddb3aed384c69d708280b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af117f54ddb3aed384c69d708280b7f">&#9670;&#160;</a></span>ActiveCaster</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;AActor&gt; UDTGameplayAbility_Chain::ActiveCaster = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00114">114</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00024">DoSpellEffect_Implementation()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00038">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00098">GetChainStartPoint()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00139">IsValidChainTarget()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00260">PullTarget()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
+
+</div>
+</div>
+<a id="a82f6a7e28b723faba84cddbfcbca7396" name="a82f6a7e28b723faba84cddbfcbca7396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f6a7e28b723faba84cddbfcbca7396">&#9670;&#160;</a></span>ActiveChainAttachComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;USceneComponent&gt; UDTGameplayAbility_Chain::ActiveChainAttachComponent = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00120">120</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00038">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
+
+</div>
+</div>
+<a id="a0a2cb5143c59f850a220aed78b4661f2" name="a0a2cb5143c59f850a220aed78b4661f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2cb5143c59f850a220aed78b4661f2">&#9670;&#160;</a></span>ActiveChainAttachSocketName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FName UDTGameplayAbility_Chain::ActiveChainAttachSocketName = NAME_None</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00125">125</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00038">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
+
+</div>
+</div>
+<a id="a4b529e0066b119db5e42ab27db6cbdbd" name="a4b529e0066b119db5e42ab27db6cbdbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b529e0066b119db5e42ab27db6cbdbd">&#9670;&#160;</a></span>ActiveChainTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;<a class="el" href="class_u_d_t_ability_task___update_chain.html">UDTAbilityTask_UpdateChain</a>&gt; UDTGameplayAbility_Chain::ActiveChainTask = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00117">117</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00038">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00253">HandleChainTaskFinished()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>.</p>
+
+</div>
+</div>
+<a id="aea51fbba7cfe8d3302eec9d893b687c7" name="aea51fbba7cfe8d3302eec9d893b687c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea51fbba7cfe8d3302eec9d893b687c7">&#9670;&#160;</a></span>ActiveChainTraces</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;<a class="el" href="struct_f_chain_trace.html">FChainTrace</a>&gt; UDTGameplayAbility_Chain::ActiveChainTraces</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00123">123</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00038">EndAbility()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00243">HandleChainTargetPull()</a>, <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
+
+</div>
+</div>
 <a id="a2213c3d03a35c7f6d1bf00ee1081ecb2" name="a2213c3d03a35c7f6d1bf00ee1081ecb2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2213c3d03a35c7f6d1bf00ee1081ecb2">&#9670;&#160;</a></span>bWaitForRetractNotify</h2>
 
@@ -564,6 +998,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00068">68</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>.</p>
 
 </div>
 </div>
@@ -597,6 +1033,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00059">59</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>.</p>
+
 </div>
 </div>
 <a id="a5e2746e887e6e5429f4ae6d7fad9027c" name="a5e2746e887e6e5429f4ae6d7fad9027c"></a>
@@ -612,6 +1050,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00065">65</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>.</p>
 
 </div>
 </div>
@@ -629,6 +1069,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>.</p>
+
 </div>
 </div>
 <a id="a4e20a7c1ddc08ea01244b216f8215ce6" name="a4e20a7c1ddc08ea01244b216f8215ce6"></a>
@@ -644,6 +1086,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00056">56</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>.</p>
 
 </div>
 </div>
@@ -661,6 +1105,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00074">74</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>.</p>
+
 </div>
 </div>
 <a id="a82b8851696289ef0c652a8d0af26076a" name="a82b8851696289ef0c652a8d0af26076a"></a>
@@ -676,6 +1122,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00053">53</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>.</p>
 
 </div>
 </div>
@@ -693,6 +1141,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00062">62</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00059">StartChainTask()</a>.</p>
+
 </div>
 </div>
 <a id="a54fadb12856b10249981a843ebd2b3d2" name="a54fadb12856b10249981a843ebd2b3d2"></a>
@@ -708,6 +1158,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00038">38</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00126">GetChainEndPoint()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
 
 </div>
 </div>
@@ -725,7 +1177,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00047">47</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00015">UDTGameplayAbility_Chain()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00126">GetChainEndPoint()</a>, and <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00015">UDTGameplayAbility_Chain()</a>.</p>
 
 </div>
 </div>
@@ -743,6 +1195,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00083">83</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00098">GetChainStartPoint()</a>.</p>
+
 </div>
 </div>
 <a id="a04efee436ed3f19dac11bb19e34bd2cc" name="a04efee436ed3f19dac11bb19e34bd2cc"></a>
@@ -758,6 +1212,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00080">80</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00260">PullTarget()</a>.</p>
 
 </div>
 </div>
@@ -775,6 +1231,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00077">77</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00260">PullTarget()</a>.</p>
+
 </div>
 </div>
 <a id="acd0353b6b8bcab51013c1bea32669e50" name="acd0353b6b8bcab51013c1bea32669e50"></a>
@@ -790,6 +1248,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00029">29</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00126">GetChainEndPoint()</a>.</p>
 
 </div>
 </div>
@@ -807,6 +1267,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00032">32</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
+
 </div>
 </div>
 <a id="af25aa7190c0b00b55c14c532be8181c2" name="af25aa7190c0b00b55c14c532be8181c2"></a>
@@ -822,6 +1284,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00044">44</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
 
 </div>
 </div>
@@ -839,6 +1303,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00050">50</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00139">IsValidChainTarget()</a>.</p>
+
 </div>
 </div>
 <a id="a0cb85f5278339a18ed296b434ab50f12" name="a0cb85f5278339a18ed296b434ab50f12"></a>
@@ -854,6 +1320,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html#l00041">41</a> of file <a class="el" href="_d_t_gameplay_ability___chain_8h_source.html">DTGameplayAbility_Chain.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_gameplay_ability___chain_8cpp_source.html#l00158">UpdateChainTargets()</a>.</p>
 
 </div>
 </div>

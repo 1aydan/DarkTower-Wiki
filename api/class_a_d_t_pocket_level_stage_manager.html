@@ -164,6 +164,20 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a259778460783de245c300508c1e8ff78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bound to the staged mesh's OnAnimInitialized: Mutable pushes a newly generated mesh after every customization update, which rebuilds the AnimInstance and drops the single-node preview animation — re-apply it.  <br /></td></tr>
 <tr class="memitem:a44e2b25fcb0f3d0f714fcb143fa05d7c" id="r_a44e2b25fcb0f3d0f714fcb143fa05d7c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44e2b25fcb0f3d0f714fcb143fa05d7c">ApplyPreviewAnimation</a> ()</td></tr>
 <tr class="memdesc:a44e2b25fcb0f3d0f714fcb143fa05d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays CurrentPreviewAnimation on the staged mesh, or restores the original anim mode.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5580bd52c642e75fc6d9ab978593a579" id="r_a5580bd52c642e75fc6d9ab978593a579"><td class="memItemLeft">TObjectPtr&lt; USceneComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5580bd52c642e75fc6d9ab978593a579">RootSceneComponent</a></td></tr>
+<tr class="memitem:aa6b81a7b574b812eba4021861dc0de5a" id="r_aa6b81a7b574b812eba4021861dc0de5a"><td class="memItemLeft">TObjectPtr&lt; USceneComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa6b81a7b574b812eba4021861dc0de5a">ActorSpawnPointComponent</a></td></tr>
+<tr class="memitem:a4d01eb59adba365e91ec572ac50afd8d" id="r_a4d01eb59adba365e91ec572ac50afd8d"><td class="memItemLeft">TObjectPtr&lt; UCameraComponent &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4d01eb59adba365e91ec572ac50afd8d">CameraComponent</a></td></tr>
+<tr class="memitem:a566cfc55b375758333cb5f09e84eba89" id="r_a566cfc55b375758333cb5f09e84eba89"><td class="memItemLeft">TArray&lt; TObjectPtr&lt; AActor &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a566cfc55b375758333cb5f09e84eba89">PreviewSpawnedActors</a></td></tr>
+<tr class="memitem:ab52685f91bc4c3dde0f5f033346d6fcc" id="r_ab52685f91bc4c3dde0f5f033346d6fcc"><td class="memItemLeft">TArray&lt; TObjectPtr&lt; USceneComponent &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab52685f91bc4c3dde0f5f033346d6fcc">PreviewSpawnedComponents</a></td></tr>
+<tr class="memitem:a229e080bca449f8b335711a2386dcf17" id="r_a229e080bca449f8b335711a2386dcf17"><td class="memItemLeft">TEnumAsByte&lt; EAnimationMode::Type &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a229e080bca449f8b335711a2386dcf17">OriginalStagedAnimMode</a> = EAnimationMode::AnimationBlueprint</td></tr>
+<tr class="memitem:ad9a86b0daf322836a4599542a35d491c" id="r_ad9a86b0daf322836a4599542a35d491c"><td class="memItemLeft">TObjectPtr&lt; UAnimationAsset &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad9a86b0daf322836a4599542a35d491c">OriginalStagedAnimation</a></td></tr>
+<tr class="memitem:a4c7b704fb1b04f0446a20d46df5029e3" id="r_a4c7b704fb1b04f0446a20d46df5029e3"><td class="memItemLeft">TObjectPtr&lt; UAnimationAsset &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4c7b704fb1b04f0446a20d46df5029e3">CurrentPreviewAnimation</a></td></tr>
+<tr class="memdesc:a4c7b704fb1b04f0446a20d46df5029e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The animation the staged character should currently play (weapon preview idle), null = original mode.  <br /></td></tr>
+<tr class="memitem:a049f206a79e303922d4ed4cebaf7ba63" id="r_a049f206a79e303922d4ed4cebaf7ba63"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a049f206a79e303922d4ed4cebaf7ba63">bApplyingPreviewAnimation</a> = false</td></tr>
+<tr class="memdesc:a049f206a79e303922d4ed4cebaf7ba63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-entrancy guard: applying the animation can itself reinitialize the AnimInstance.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -186,6 +200,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00014">14</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html">DTPocketLevelStageManager.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00073">ActorSpawnPointComponent</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00076">CameraComponent</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00070">RootSceneComponent</a>.</p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -206,7 +222,9 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00134">134</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html">DTPocketLevelStageManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00312">ApplyPreviewAnimation()</a>, <a class="el" href="_d_t_equipment_component_8h_source.html#l00071">UDTEquipmentComponent::GetActiveWeaponSlot()</a>, <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00536">UDTEquipmentComponent::IsActiveWeaponOneHanded()</a>, <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00531">UDTEquipmentComponent::IsOffHandSlot()</a>, <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00522">UDTEquipmentComponent::IsWeaponSlot()</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00051">RefreshPocketCaptureAlphaMask()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00040">StagedCharacter</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00312">ApplyPreviewAnimation()</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00091">CurrentPreviewAnimation</a>, <a class="el" href="_d_t_equipment_component_8h_source.html#l00071">UDTEquipmentComponent::GetActiveWeaponSlot()</a>, <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00536">UDTEquipmentComponent::IsActiveWeaponOneHanded()</a>, <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00531">UDTEquipmentComponent::IsOffHandSlot()</a>, <a class="el" href="_d_t_equipment_component_8cpp_source.html#l00522">UDTEquipmentComponent::IsWeaponSlot()</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00079">PreviewSpawnedActors</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00082">PreviewSpawnedComponents</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00051">RefreshPocketCaptureAlphaMask()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00040">StagedCharacter</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00113">UDTCharacterPreviewWidget::OnInventoryLevelReady()</a>.</p>
 
 </div>
 </div>
@@ -237,7 +255,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00312">312</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html">DTPocketLevelStageManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00040">StagedCharacter</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00094">bApplyingPreviewAnimation</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00091">CurrentPreviewAnimation</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00087">OriginalStagedAnimation</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00084">OriginalStagedAnimMode</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00040">StagedCharacter</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00134">ApplyEquipmentToStagedCharacter()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00307">HandleStagedMeshAnimInitialized()</a>.</p>
 
@@ -290,6 +308,8 @@ Protected Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00046">46</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html">DTPocketLevelStageManager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00037">PocketCaptureInst</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00113">UDTCharacterPreviewWidget::OnInventoryLevelReady()</a>.</p>
 
 </div>
 </div>
@@ -351,7 +371,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00051">51</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html">DTPocketLevelStageManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00037">PocketCaptureInst</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00040">StagedCharacter</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00037">PocketCaptureInst</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00079">PreviewSpawnedActors</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00040">StagedCharacter</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00134">ApplyEquipmentToStagedCharacter()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00075">SpawnCharacterInPocketLevel()</a>.</p>
 
@@ -386,6 +406,8 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00344">344</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html">DTPocketLevelStageManager.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00073">ActorSpawnPointComponent</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00075">SpawnCharacterInPocketLevel()</a>.</p>
 
 </div>
@@ -407,11 +429,121 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00075">75</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html">DTPocketLevelStageManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00034">DefaultCharacterClass</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00307">HandleStagedMeshAnimInitialized()</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00051">RefreshPocketCaptureAlphaMask()</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00344">SpawnActorInPocketLevel()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00040">StagedCharacter</a>.</p>
+<p class="reference">References <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00091">CurrentPreviewAnimation</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00034">DefaultCharacterClass</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00307">HandleStagedMeshAnimInitialized()</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00087">OriginalStagedAnimation</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00084">OriginalStagedAnimMode</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00079">PreviewSpawnedActors</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00082">PreviewSpawnedComponents</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00051">RefreshPocketCaptureAlphaMask()</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00344">SpawnActorInPocketLevel()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00040">StagedCharacter</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_character_preview_widget_8cpp_source.html#l00113">UDTCharacterPreviewWidget::OnInventoryLevelReady()</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="aa6b81a7b574b812eba4021861dc0de5a" name="aa6b81a7b574b812eba4021861dc0de5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b81a7b574b812eba4021861dc0de5a">&#9670;&#160;</a></span>ActorSpawnPointComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;USceneComponent&gt; ADTPocketLevelStageManager::ActorSpawnPointComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00073">73</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html">DTPocketLevelStageManager.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00014">ADTPocketLevelStageManager()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00344">SpawnActorInPocketLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a049f206a79e303922d4ed4cebaf7ba63" name="a049f206a79e303922d4ed4cebaf7ba63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a049f206a79e303922d4ed4cebaf7ba63">&#9670;&#160;</a></span>bApplyingPreviewAnimation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ADTPocketLevelStageManager::bApplyingPreviewAnimation = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Re-entrancy guard: applying the animation can itself reinitialize the AnimInstance. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00094">94</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html">DTPocketLevelStageManager.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00312">ApplyPreviewAnimation()</a>.</p>
+
+</div>
+</div>
+<a id="a4d01eb59adba365e91ec572ac50afd8d" name="a4d01eb59adba365e91ec572ac50afd8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d01eb59adba365e91ec572ac50afd8d">&#9670;&#160;</a></span>CameraComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UCameraComponent&gt; ADTPocketLevelStageManager::CameraComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00076">76</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html">DTPocketLevelStageManager.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00014">ADTPocketLevelStageManager()</a>.</p>
+
+</div>
+</div>
+<a id="a4c7b704fb1b04f0446a20d46df5029e3" name="a4c7b704fb1b04f0446a20d46df5029e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7b704fb1b04f0446a20d46df5029e3">&#9670;&#160;</a></span>CurrentPreviewAnimation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UAnimationAsset&gt; ADTPocketLevelStageManager::CurrentPreviewAnimation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The animation the staged character should currently play (weapon preview idle), null = original mode. </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00091">91</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html">DTPocketLevelStageManager.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00134">ApplyEquipmentToStagedCharacter()</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00312">ApplyPreviewAnimation()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00075">SpawnCharacterInPocketLevel()</a>.</p>
+
+</div>
+</div>
 <a id="a7f5c1a3fc852a58272c1af12dc00becf" name="a7f5c1a3fc852a58272c1af12dc00becf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f5c1a3fc852a58272c1af12dc00becf">&#9670;&#160;</a></span>DefaultCharacterClass</h2>
 
@@ -443,6 +575,58 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00031">31</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html">DTPocketLevelStageManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ad9a86b0daf322836a4599542a35d491c" name="ad9a86b0daf322836a4599542a35d491c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9a86b0daf322836a4599542a35d491c">&#9670;&#160;</a></span>OriginalStagedAnimation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;UAnimationAsset&gt; ADTPocketLevelStageManager::OriginalStagedAnimation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00087">87</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html">DTPocketLevelStageManager.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00312">ApplyPreviewAnimation()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00075">SpawnCharacterInPocketLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a229e080bca449f8b335711a2386dcf17" name="a229e080bca449f8b335711a2386dcf17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229e080bca449f8b335711a2386dcf17">&#9670;&#160;</a></span>OriginalStagedAnimMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEnumAsByte&lt;EAnimationMode::Type&gt; ADTPocketLevelStageManager::OriginalStagedAnimMode = EAnimationMode::AnimationBlueprint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00084">84</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html">DTPocketLevelStageManager.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00312">ApplyPreviewAnimation()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00075">SpawnCharacterInPocketLevel()</a>.</p>
 
 </div>
 </div>
@@ -479,6 +663,84 @@ Protected Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00037">37</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html">DTPocketLevelStageManager.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00036">BeginPlay()</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00046">GetPocketCapture()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00051">RefreshPocketCaptureAlphaMask()</a>.</p>
+
+</div>
+</div>
+<a id="a566cfc55b375758333cb5f09e84eba89" name="a566cfc55b375758333cb5f09e84eba89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a566cfc55b375758333cb5f09e84eba89">&#9670;&#160;</a></span>PreviewSpawnedActors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;TObjectPtr&lt;AActor&gt; &gt; ADTPocketLevelStageManager::PreviewSpawnedActors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00079">79</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html">DTPocketLevelStageManager.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00134">ApplyEquipmentToStagedCharacter()</a>, <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00051">RefreshPocketCaptureAlphaMask()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00075">SpawnCharacterInPocketLevel()</a>.</p>
+
+</div>
+</div>
+<a id="ab52685f91bc4c3dde0f5f033346d6fcc" name="ab52685f91bc4c3dde0f5f033346d6fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab52685f91bc4c3dde0f5f033346d6fcc">&#9670;&#160;</a></span>PreviewSpawnedComponents</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TArray&lt;TObjectPtr&lt;USceneComponent&gt; &gt; ADTPocketLevelStageManager::PreviewSpawnedComponents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00082">82</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html">DTPocketLevelStageManager.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00134">ApplyEquipmentToStagedCharacter()</a>, and <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00075">SpawnCharacterInPocketLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a5580bd52c642e75fc6d9ab978593a579" name="a5580bd52c642e75fc6d9ab978593a579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5580bd52c642e75fc6d9ab978593a579">&#9670;&#160;</a></span>RootSceneComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TObjectPtr&lt;USceneComponent&gt; ADTPocketLevelStageManager::RootSceneComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html#l00070">70</a> of file <a class="el" href="_d_t_pocket_level_stage_manager_8h_source.html">DTPocketLevelStageManager.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_d_t_pocket_level_stage_manager_8cpp_source.html#l00014">ADTPocketLevelStageManager()</a>.</p>
 
 </div>
 </div>

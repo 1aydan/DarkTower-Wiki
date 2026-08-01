@@ -6,5 +6,8 @@ var struct_f_d_t_verb_message_replication =
     [ "PostReplicatedAdd", "struct_f_d_t_verb_message_replication.html#a87315811e8856d778c86f0c617131904", null ],
     [ "PostReplicatedChange", "struct_f_d_t_verb_message_replication.html#ae2d0fcc3b5f1fb77fb3bf165730ee3ab", null ],
     [ "PreReplicatedRemove", "struct_f_d_t_verb_message_replication.html#aeb3c2c2fb5057ddee15ccce258066f9c", null ],
-    [ "SetOwner", "struct_f_d_t_verb_message_replication.html#ad5d37e425d0d3dd4aaeabdb5bac5e10c", null ]
+    [ "RebroadcastMessage", "struct_f_d_t_verb_message_replication.html#a59e749ac751ef929577b22768ffff613", null ],
+    [ "SetOwner", "struct_f_d_t_verb_message_replication.html#ad5d37e425d0d3dd4aaeabdb5bac5e10c", null ],
+    [ "CurrentMessages", "struct_f_d_t_verb_message_replication.html#ae1c6c2fdd724455509796ced0f6c78b3", null ],
+    [ "Owner", "struct_f_d_t_verb_message_replication.html#ac81d85e61211c78844bbb51fa7470659", null ]
 ];

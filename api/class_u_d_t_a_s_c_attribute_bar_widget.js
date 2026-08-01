@@ -1,5 +1,6 @@
 var class_u_d_t_a_s_c_attribute_bar_widget =
 [
+    [ "FormatValue", "class_u_d_t_a_s_c_attribute_bar_widget.html#a298f5a11d6af56dc7dbdace315606f91", null ],
     [ "GetBarFillMID", "class_u_d_t_a_s_c_attribute_bar_widget.html#a8b3f35794616294a4c975e5f71951375", null ],
     [ "NativeConstruct", "class_u_d_t_a_s_c_attribute_bar_widget.html#ad22bd6baa40c9ea20ebd37b2ee35eeb4", null ],
     [ "NativeOnInitialized", "class_u_d_t_a_s_c_attribute_bar_widget.html#a3d0bcada47582831ce332ac27d310f39", null ],
@@ -7,6 +8,7 @@ var class_u_d_t_a_s_c_attribute_bar_widget =
     [ "UpdateDisplay_Implementation", "class_u_d_t_a_s_c_attribute_bar_widget.html#af5db04e886b4e4d61e68761c5593d92e", null ],
     [ "BarFillColor", "class_u_d_t_a_s_c_attribute_bar_widget.html#a4f29f249eb7b4238348226e3f4881f49", null ],
     [ "BarFillMaterial", "class_u_d_t_a_s_c_attribute_bar_widget.html#a04c73901ef797e3405ef5835af1dd039", null ],
+    [ "BarFillMID", "class_u_d_t_a_s_c_attribute_bar_widget.html#a7d5534c9be4198adc69043305f7004e0", null ],
     [ "BarFillParameterName", "class_u_d_t_a_s_c_attribute_bar_widget.html#a6f54d82206f8c23a38e88ffe0a28a0a5", null ],
     [ "BarSegmentParameterName", "class_u_d_t_a_s_c_attribute_bar_widget.html#a433d444cb78cebfd87073b4baa043001", null ],
     [ "BarStyle", "class_u_d_t_a_s_c_attribute_bar_widget.html#a2da997902695151f3ebe174fd192080b", null ],

@@ -11,5 +11,6 @@ var class_u_d_t_announcement_widget =
     [ "Anim_Hide", "class_u_d_t_announcement_widget.html#a0b75a54dd15b3424864bd5041a6bb89b", null ],
     [ "Anim_Show", "class_u_d_t_announcement_widget.html#ae8a2e5d3a1f612cfee29caa685616640", null ],
     [ "bManualHideControl", "class_u_d_t_announcement_widget.html#a055129c02acbcdb6514557c8bf497f3c", null ],
+    [ "bReadyForRemovalFired", "class_u_d_t_announcement_widget.html#a42afea8ccd66c22929e4d1c788acc2cc", null ],
     [ "OnReadyForRemoval", "class_u_d_t_announcement_widget.html#ae5d08667b2197517c4e6328810d5bd08", null ]
 ];
