@@ -2,42 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://1aydan.github.io/DarkTower-Wiki/</loc>
-         <lastmod>2026-08-01</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://1aydan.github.io/DarkTower-Wiki/design/</loc>
-         <lastmod>2026-08-01</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://1aydan.github.io/DarkTower-Wiki/design/AbilityEventSystem/</loc>
-         <lastmod>2026-08-01</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://1aydan.github.io/DarkTower-Wiki/design/CheatCommands/</loc>
-         <lastmod>2026-08-01</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://1aydan.github.io/DarkTower-Wiki/design/CombatPipeline/</loc>
-         <lastmod>2026-08-01</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://1aydan.github.io/DarkTower-Wiki/design/Loot_and_Combat_Tuning_Guide/</loc>
-         <lastmod>2026-08-01</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://1aydan.github.io/DarkTower-Wiki/design/QuestSystem/</loc>
-         <lastmod>2026-08-01</lastmod>
-    </url>
-    <url>
-         <loc>https://1aydan.github.io/DarkTower-Wiki/design/SkillTreeSystemAudit/</loc>
-         <lastmod>2026-08-01</lastmod>
-    </url>
-    <url>
-         <loc>https://1aydan.github.io/DarkTower-Wiki/design/SkillTreeTooltipAuthoring/</loc>
-         <lastmod>2026-08-01</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://1aydan.github.io/DarkTower-Wiki/design/StatSystem/</loc>
-         <lastmod>2026-08-01</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
 </urlset>
